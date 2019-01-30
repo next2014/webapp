@@ -1,0 +1,141 @@
+//modal
+.modal{
+   .modal-dialog{
+        margin:0;
+       .modal-content{
+           position: absolute;
+           bottom: -16px;
+           border-radius:0;
+           border:0;
+           .lkgoumai{
+              bottom:-16px;
+           }
+           .modal-header1{
+               position: relative;
+               padding: 1rem;
+               border-bottom: 1px solid #e9ecef;
+               border-top-left-radius: 0.3rem;
+               border-top-right-radius: 0.3rem;
+               .del{
+                   position: absolute;
+                   left: 20px;
+                   top: 20px;
+                   color: #999;
+                   font-size: 18px;
+               }
+               .close{
+                   font-size:32px!important;
+                   position: absolute;
+                   right:15px;
+                   top:5px;
+                   color:#999;
+               }
+               img{
+                   position: absolute;
+                   left:25px;
+                   top:-15px;
+                   border:5px solid #fff;
+                   background:#fff;
+               }
+               h5{
+                   width: 70%;
+                   margin-left: 6.5rem;
+                   font-size:18px;
+                   color:#ee0a3b;
+                   em{
+                      font-style: normal;
+                   }
+                   .xj{
+                      font-size:12px;
+                      color: #999;
+                   }
+               }
+               p{
+                 width:70%;
+                 margin-left: 6.5rem;
+                 margin-bottom:0;
+                 padding-right:10px;
+               }
+           }
+           .modal-body{
+               height:380px;
+               overflow: hidden;
+               .col{
+                    text-align: center;
+                    border-radius: 5px;
+               }
+               h6{
+                   color:#999;
+                   font-size:16px;
+                   margin:7px 0;
+               }
+               .btn-group-toggle{
+                  max-height: 250px;
+                  overflow: scroll;
+                  .btn{
+                    font-size:12px;
+                  }
+               }
+               p{
+                 margin-bottom:0;
+                 &.price{
+                    font-size:32px;
+                 }
+               }
+               .item{
+                   display: flex;
+                   align-items: center;
+                   i{
+                       color:#ddd;
+                   }
+                   .address_name_phone{
+                       padding-left:30px;
+                   }
+               }
+               //编辑地址的名称栏
+               .form-group{
+                   display: flex;
+                   align-items: center;
+                   border:0;
+                   margin-bottom: 0;
+                   padding:5px 0;
+                   .col-form-label{
+                       width:40%;
+                       padding:0;
+                       text-align: right;
+                       line-height:18px;
+                       font-size:14px;
+                   }
+                   .form-control{
+                       width:60%;
+                       border:0;
+                       padding:0;
+                   }
+                   em{
+                    color: #dc3545;
+                    font-style:normal;
+                   }
+               }
+               //收货地址
+               .coupontwo{
+                   max-height:380px;
+                   overflow: scroll;
+               }
+               //优惠券
+               .yhquan{
+                   max-height:380px;
+                   overflow: scroll;
+               }            
+           }
+           .modal-footer{
+               button{
+                   border-radius:0;
+                   &.btn{
+                       font-size:14px;
+                       height:40px;
+                   }
+               }
+           }   
+       }
+   }
+}

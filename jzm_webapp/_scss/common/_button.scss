@@ -1,0 +1,136 @@
+.mod_sign{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:rem(21);
+    border-radius: rem(15);
+    color:$red;
+    font-size:$font-12;
+    border:1px solid $red;
+    @include sizePtblr(0,9);
+ }
+ .mod_com{
+    margin-right:rem(21);
+    border-radius: rem(15);
+    color:$blue-deep;
+    font-size:$font-16;
+    border:1px solid $gray-300;
+ }
+ .btn-primary{
+    background-color:$orange-font;
+    color:$white!important;
+    border:0;
+    &:hover{
+      color: #fff;
+      background-color: #da5904;
+      border-color: #fff;
+    }
+  }
+ .btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #da5904;
+    border-color: #fff;
+ }
+ .btn-secondary{
+    background-color:$blue-light;
+    color: $white!important;
+    border:0!important;
+    &:hover{
+      color: #fff;
+      background-color: #0f78bc;
+      border-color: #fff;
+    }
+  }
+ .btn-secondary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #0f78bc;
+    border-color: #fff;
+ }
+.accNumBtn{
+  a{
+    color:$white;
+  }
+}
+.mod_bot_btn{
+   margin:rem(32.2);
+   a{
+     display: block;
+     text-decoration: none;
+   }
+}
+
+.btn-outline-primary,.btn-outline-danger,.btn-outline-secondary{
+  padding: 0 5px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.btn-outline-primary{
+  background-color: #DDEDF6;
+}
+.btn-outline-danger{
+  background-color: #FEF4F5;
+}
+.btn-outline-secondary{
+  background-color: #eeeeee;
+}
+.mod{
+  &_btn{
+    &_blue{
+     background-color:$blue-deep;
+     border-color:$blue-deep;
+    }
+  }
+}
+//底部按钮
+.mod_pos{
+  &_btn{
+      position: fixed;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      display:flex;
+      font-size:$font-14;
+      z-index:99;
+      background:$white;
+      &_air,&_rea{
+          width:50%;
+          text-align: center;
+          height:rem(144.9);
+          line-height:rem(144.9);
+          border:0;
+          color:$white;
+          a{
+            display: block;
+            text-decoration:none;
+          }
+      }
+      &_air{
+          background: $blue-deep;
+          a{
+           color:$white!important;
+          }
+      }
+      &_rea{
+          border:1px solid $blue-deep;
+          a{
+           color:$blue-deep!important;
+          }
+      }
+      a{
+          border-bottom:1px solid $gray-200;
+          &.dropdown-item{
+           height: 40px;
+           line-height: 25px;
+           font-size:$font-14;
+          }
+          &:last-child{
+           border-bottom:0;
+          }
+      }
+      .dropdown-divider{
+          margin:0;
+      }
+      .dropdown-menu{
+          padding:0!important;
+      }
+  }
+}

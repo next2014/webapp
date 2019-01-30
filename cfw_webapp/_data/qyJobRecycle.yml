@@ -1,0 +1,26 @@
+- dep: IT部
+  pos: Java开发
+  start: 2018-08-03
+  end: 2018-11-03
+  deltime: 2018-09-30
+  rednum: 0
+  acpnum: 0 
+  id: s1
+
+- dep: 市场部
+  pos: 销售员
+  start: 2018-08-03
+  end: 2018-11-03
+  deltime: 2018-09-30
+  rednum: 0
+  acpnum: 0 
+  id: s2
+
+- dep: 企划部
+  pos: 策划经理
+  start: 2018-08-03
+  end: 2018-11-03
+  deltime: 2018-09-30
+  rednum: 0
+  acpnum: 0 
+  id: s3

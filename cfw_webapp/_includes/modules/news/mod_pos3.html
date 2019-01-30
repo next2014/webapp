@@ -1,0 +1,26 @@
+<div class="weui-cells">
+    {% for new in site.data.news %}
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="{{ new.imgurl1 }}" alt="qylogo" class="qylogo" /></div>
+            <div class="weui-cell__bd">
+                    <h6><a href="../../newsReply.html">{{ new.title }}</a></h6>
+                    <p><a href="../../companyDetail.html"><small>{{ new.comname }}</small></a></p>
+                    <p><small class="text-black-50"><span>{{ site.time | date_to_xmlschem }}</span> <span class="btn btn-outline-primary">{{ new.status }}</span></small></p>
+            </div>
+            <div class="weui-cell__ft">
+                <span class="btn btn-primary btn-sm text-white">删除</span>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="{{ new.imgurl1 }}" alt="qylogo" class="qylogo" /></div>
+            <div class="weui-cell__bd">
+                    <h6><a href="../../newsReply.html">{{ new.title }}</a></h6>
+                    <p><a href="../../companyDetail.html"><small>{{ new.comname }}</small></a></p>
+                    <p><small class="text-black-50"><span>{{ site.time | date_to_xmlschem }}</span> <span class="btn btn-outline-danger">{{ new.status1 }}</span></small></p>
+            </div>
+            <div class="weui-cell__ft">
+                <span class="btn btn-primary btn-sm text-white">删除</span>
+            </div>
+        </div>
+  {% endfor %}
+</div>

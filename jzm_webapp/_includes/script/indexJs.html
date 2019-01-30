@@ -1,0 +1,20 @@
+<script src="js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="js/layer.m.js" language="javascript"></script>
+<script src="js/public.js" language="javascript"></script>
+<link rel="stylesheet" href="css/swiper.min.css" type="text/css" />
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    var myimgswiper = new Swiper('#imgswiper', {
+        direction: 'horizontal',
+        autoplay: true,
+        loop: true
+    });
+    var mySwiper = new Swiper('#navswiper', {
+        direction: 'horizontal',
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+});
+</script>

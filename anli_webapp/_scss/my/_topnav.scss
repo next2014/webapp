@@ -1,0 +1,44 @@
+//小屏导航
+.s-ms-fright{
+    position: absolute;
+    right:10px;
+    top: 0;
+    bottom: 0;
+    height: 60px;
+    svg{
+      color: $bd-white;
+    }
+  }
+
+//小屏LOGO
+@media (max-width: 575.98px) { 
+    .navbar-brand {
+      align-items: left;
+      img{
+        margin-left:10px;
+      }
+    }
+}
+@media (max-width: 575.98px) { 
+    .bd-masthead{
+        padding: 1rem 15px!important;
+        h1{
+          font-size: 2rem;
+        }
+    }
+}
+@media (max-width: 575.98px) { 
+    .drag-target{
+        display: none;
+    }
+}
+//大屏
+@media (min-width: 768px){
+    .navbar-brand{
+        display: flex;
+        align-items: center;
+    }
+    .navbar{
+        align-items: center;
+    }
+}

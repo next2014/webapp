@@ -1,0 +1,22 @@
+.mineFavPosition{
+    background-color:$pgbg;
+    height: 100vh;
+    margin-top:rem(161);
+    .weui-form-preview__label{
+        text-align: left;
+        text-align-last: auto;
+    }
+    .weui-form-preview{
+        margin-bottom:rem(64.4);
+    }
+    .weui-form-preview__item{
+        h2{
+          color:$gray-800;
+          line-height: 25px;
+        }
+     }
+     .btn-sm{
+         font-size: 12px;
+         padding: 5px 10px;
+     }
+}

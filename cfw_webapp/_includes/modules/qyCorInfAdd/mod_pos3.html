@@ -1,0 +1,37 @@
+<div class="mod_pos_item pr-0" hidden>
+		<div class="weui-cells">
+			{% for fuli in site.data.qyCorInfFuliEdit %}
+			<div class="weui-cell weui-cells_checkbox">
+				<label class="weui-check__label d-flex align-items-center w-100" for="{{ fuli.id }}">
+						<div class="weui-cell__hd">
+								<input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{ fuli.id }}">
+								<i class="weui-icon-checked"></i>
+						</div>
+						<div class="weui-cell__bd text-left">
+								<h2>{{ fuli.title }}</h2>
+						</div>
+				</label> 
+			</div>
+			{% endfor %}
+		</div>
+		<!-- 底部按钮 -->
+		<section class="mod_pos_btn bg-light">
+			<div class="d-flex justify-content-between w-100">
+				<div class="weui-cells_checkbox">
+						<label class="weui-cell weui-check__label pl-2" id="qSelect">
+								<div class="weui-cell__hd">
+										<input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+										<i class="weui-icon-checked"></i>
+								</div>
+								<p>全部</p>
+						</label>
+				</div>
+				<div class="d-flex justify-content-center align-items-center p-1">
+						<!-- <a href="qyCorInfConAdd.html" class="btn btn-primary mr-1">上一步</a> -->
+						<!-- <a href="qyCorInf.html" class="btn btn-secondary mr-1">保存</a> -->
+						<input onclick="javascript:showComInfoAdress();" class="btn btn-primary mr-1" value="上一步" id="saveEduBtn" type="button">
+						<input onclick="javascript:save();" class="btn btn-secondary mr-1" value="保存" id="saveEduBtn"	type="button"> 
+				</div>
+			</div>
+		</section>
+</div>

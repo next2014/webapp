@@ -1,0 +1,41 @@
+---
+layout: default
+title: 案例展示
+---
+<!-- <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar justify-content-center s-none">
+    <a class="navbar-brand mr-0 mr-md-3 p-0" href="javascript:;">欧美城技术研发团队</a>
+    {% include common/menu.html %}
+</header> -->
+<div id="toolbar" class="halo-nav h-bg">
+    <div class="title">欧美城技术研发团队</div>
+    <button class="btn btn-link bd-search-docs-toggle d-md-none s-ms-fright" type="button" id="open-right"
+        data-activates="slide-out"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+            focusable="false" role="img">
+            <title>Menu</title>
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22" />
+        </svg>
+    </button>
+</div>
+{% include common/right_menu.html %}
+<div class="container mt-5 p-3">
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link p-2 active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">PC端开发</a>
+        <a class="nav-item nav-link p-2" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">手机端开发</a>
+        <a class="nav-item nav-link p-2" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">全景图开发</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            {% include product/anli_1.html %}
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            {% include product/anli_2.html %}
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            {% include product/anli_3.html %}
+        </div>
+    </div>
+</div>
+<hr class="w-100 m-0">
+{% include common/footer.html %}

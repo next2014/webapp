@@ -1,0 +1,38 @@
+.positionDetail{
+    background:$pgbg;
+    margin-top:rem(161);
+    margin-bottom:rem(144.9);
+    .posContent{
+        overflow: hidden;
+    }
+}
+.mod_det{
+    &_right{
+        position: absolute;
+        right: 0;
+        top: 20%;
+    }
+    .mod_pos_item_text{
+       &:first-child{
+           padding-bottom:rem(32.4);
+           border-bottom:1px solid $line;
+       }
+       a{
+         position: relative;
+         margin-top:rem(32.2);
+       }
+    }
+}
+
+.mod_add{
+    .mod_pos_item_text{
+        line-height:rem(64.4);
+        p{
+          width:90%;
+        }
+        a{
+          display: flex;
+          align-items: center;
+        }
+     }
+}

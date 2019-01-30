@@ -1,0 +1,16 @@
+/*暂无样式*/
+.wap_member_no{width:100%; padding:200px 0 80px 0; text-align:center; display:block; line-height:30px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0); position:relative;color:#999;
+}
+.wap_member_no:before{width:130px;height:130px; display:block;content:''; font-size:100px; position:absolute;top:50px;left:50%; margin-left:-65px;color:#d8dbdd; background:url(../images/yun_wap_no.png) no-repeat; background-size:100%}
+.wap_mb_no_sr{background:#f60;color:#fff;width:125px;height:40px;line-height:40px;border-radius:2px;text-align:center;display:block;margin:0 auto;margin-top:10px;}
+.wap_mb_no_sr:hover{background:#F80;}
+.wap_member_no_tip{ font-size:14px;color:#666}
+.wap_member_no_tip_other{ font-size:12px;}
+.wap_member_nosearch{width:100%; padding:200px 0 80px 0; text-align:center; display:block; font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;transform: translate(0, 0); position:relative; font-size:14px;color:#999;  }
+.wap_member_nosearch:before{width:160px;height:160px; display:block;content:''; font-size:100px; position:absolute;top:50px;left:50%; margin-left:-80px;color:#d8dbdd; background:url(../images/yun_wap_nosearch.png) no-repeat; background-size:100%}
+    

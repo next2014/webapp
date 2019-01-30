@@ -1,0 +1,47 @@
+<section class="mod_pos_list">
+    {% for hom in site.data.home %}
+        <div class="mod_pos_item">
+            <!-- 职位地点经验学历 -->
+            <a href="{{ hom.url }}" class="mod_pos_item_text">
+                <h2 class="text-truncate">{{ hom.posname }}</h2>
+                <p class="mod_pos_item_mes text-truncate">
+                    <span>经验不限</span>
+                    <span>中专</span>
+                </p>
+                <ul class="mod_pos_item_ind">
+                    <li>惠城区</li>
+                    <li>惠阳区</li>
+                    <li>惠东</li>
+                </ul>
+                <!-- <ul class="mod_pos_item_ind">
+                    {% for ind in hom.mpii %}
+                        <li>{{ind.title}}</li>
+                    {% endfor %}
+                </ul> -->
+            </a>
+            <!-- 企业LOGO名性质 -->
+            <a href="{{ hom.comurl}}" class="mod_pos_item_text pt-2">
+                <div class="mod_pos_item_text_pic">
+                    <img src="static/images/logo_default.png">
+                </div>
+                <h2 class="text-truncate pt-1">{{ hom.comname }}</h2>
+                <p class="mod_pos_item_mes text-truncate">
+                    {% for edu in hom.tru %}
+                       <span>{{ edu.title }}</span>
+                    {% endfor %}
+                </p>
+            </a>
+            <!-- 时间|钱 -->
+            <div class="mod_pos_item_salary">
+                <p class="mod_pos_item_salary_mon">{{ hom.minMoney }}-{{hom.maxMoney}}K</p>
+                <p class="mod_pos_item_salary_data">{{ hom.data }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+<section class="mod_pos_title">
+    <h2>- 最新名企职位 -</h2>
+</section>
+<section class="mod_pos_list">
+        <div class="lists"></div>
+</section>

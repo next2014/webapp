@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="../static/css/tweenLoad.css">
+<script src="../static/js/tweenLoad.min.js"></script>
+<script>
+$(function(){
+    // 页数
+    var page = 0;
+    // dropload
+    var dropload = $('.weui-panel__bd').dropload({
+        scrollArea : window,
+        domDown : {
+            domClass   : 'dropload-down',
+            domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
+            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+            domNoData  : '<div class="dropload-noData">暂无数据</div>'
+        },
+        distance: 2000,//拉升距离
+        loadDownFn : function(me){
+            $.ajax({
+                type: 'GET',
+                url: '../static/json/more2.json',
+                dataType: 'json',
+                success: function(data){
+                    var result = '';
+                    for(var i = 0; i < data.lists.length; i++){
+                            result += '<a href="qyResumeView.html" class="weui-media-box">'
+                                       +'<div class="weui-media-box__hd">'
+                                           +'<img class="weui-media-box__thumb" src="'+data.lists[i].imgurl+'" alt="">'
+                                       +'</div>'
+                                       +'<div class="weui-media-box__bd">'
+                                                +'<div class="weui-media-box__title">'
+                                                    +'<h4>'+data.lists[i].name+'</h4>'
+                                                    +'<span class="d-inline-block mr-1" tabindex="0" data-toggle="tooltip" data-animation="true" title="已查看简历！">'
+                                                      +'<button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>阅</button>'
+                                                    +'</span>'
+                                                    +'<span class="d-inline-block mr-1" tabindex="0" data-toggle="tooltip" data-animation="true" title="已查看简历联系方式！">'
+                                                      +'<button class="btn btn-warning" style="pointer-events: none;" type="button" disabled>载</button>'
+                                                    +'</span>'
+                                                    +'<span class="d-inline-block mr-1" tabindex="0" data-toggle="tooltip" data-animation="true" title="简历属于微信简历！">'
+                                                      +'<button class="btn btn-success" style="pointer-events: none;" type="button" disabled>'
+                                                      +'<i class="fa fa-weixin"></i>'
+                                                      +'</button>'
+                                                    +'</span>'
+                                                    +'<span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-animation="true" title="简历附有个人照片！">'
+                                                      +'<button class="btn btn-info" style="pointer-events: none;" type="button" disabled>'
+                                                      +'<i class="fa fa-image "></i>'
+                                                      +'</button>'
+                                                    +'</span>'
+                                                +'</div>'
+                                                +'<ul class="weui-media-box__info">'
+                                                    +'<li class="weui-media-box__info__meta text-warning">'+data.lists[i].sex+'</li>'
+                                                    +'<li class="weui-media-box__info__meta weui-media-box__info__meta_extra"">'+data.lists[i].old+'岁</li>'
+                                                    +'<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">经验'+data.lists[i].emp+'年</li>'
+                                                    +'<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">'+data.lists[i].edu+'</li>'  
+                                                +'</ul>'
+                                                +'<p class="weui-cells__tips">期望工作地点：'+data.lists[i].city+'</p>'
+                                                +'<p class="weui-cells__tips">{{ site.time | date_to_xmlschem }} 更新</p>'
+                                         +'</div>'
+                                       +'</a>';
+                        }
+                    // 如果没有数据
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        $('.lists').append(result);
+                        // 每次数据加载完，必须重置
+                        me.resetload();
+                        // 重置页数，重新获取loadDownFn的数据
+                        page = 0;
+                        // 解锁loadDownFn里锁定的情况
+                        me.unlock();
+                        me.noData(false);
+                    },1000);
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    dropload.resetload();
+                }
+            });
+        }
+    });
+});
+</script>
+<script>
+	//高级筛选展开收起效果 qySearchList
+    var $mpiBtn = $('.showBtn');
+    var $mpiInd = $('.showHight');
+	var $mpiInd1 = $('.editShowHight');
+    var editShowHeight = "0";
+    var showHeight = "530";
+    var hBanner = $('.mod_pos_item_text').innerHeight();
+	var cbHeight = hBanner - 50;
+	// 固定筛选时滚动效果
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= cbHeight) {
+            $(".qySearchSelech").addClass('mod_pos_hig');
+            $(".qySearchSelech .mod_pos_item_ind").attr('style','display:none');
+        }else{
+            $(".qySearchSelech").removeClass('mod_pos_hig');
+            $(".qySearchSelech .mod_pos_item_ind").removeAttr('style','display:none'); 
+        }
+	});
+    $mpiBtn.on('click',function(){
+        if($mpiInd.height() == showHeight){
+            $mpiInd.height('auto');
+            $('.showBtn i').attr("class","fa fa-angle-double-down");
+        }else{
+            $mpiInd.height(showHeight);
+            $('.showBtn i').attr("class","fa fa-angle-double-up");
+        }
+        if($mpiInd1.height() == editShowHeight){
+            $mpiInd1.height('auto');
+            $('.showBtn span').html('<i class="fa fa-angle-double-down"></i> 开展搜索条件');
+            $(".qySearchList").addClass('mod_pos_hix');
+            $('.qySearchSelech').addClass('mod_pos_his');
+            $('.qySearchSelech').scroll(function () {
+                var scroll = $('.qySearchSelech').scrollTop();
+                if (scroll >= cbHeight) {
+                    $(".qySearchSelech .mod_pos_item_text").addClass('mod_pos_hig');
+                    $(".qySearchSelech .mod_pos_item_ind").attr('style','display:none');
+                }else{
+                    $(".qySearchSelech .mod_pos_item_text").removeClass('mod_pos_hig');
+                    $(".qySearchSelech .mod_pos_item_ind").removeAttr('style','display:none');
+                }
+            });
+        }else{
+            $mpiInd1.height(editShowHeight);
+            $('.showBtn span').html('<i class="fa fa-angle-double-up"></i> 隐藏搜索条件');
+            $(".qySearchList").removeClass('mod_pos_hix');
+            $('.qySearchSelech').removeClass('mod_pos_his');
+        }
+	});
+</script>

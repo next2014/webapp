@@ -1,0 +1,117 @@
+---
+layout: default
+title: 我的
+---
+<!-- Content area -->
+<div class="body_wap">
+    <div class="yun_usermember_topbg">
+        <span class="yun_com_member_index_set">
+            <a class="yun_com_member_index_set_icon" href="m_accountSet.html"></a>
+        </span>
+        <a class="yun_user_membersysnews" href="m_news.html"><i class="yun_com_membersysnews_n" id="sysmsgnum"></i></a>
+    </div>
+    <div class="yun_usermember_info">
+        <div class="yun_usermember_info_box">
+            <div class="yun_usermember_info_box_c">
+                <div class="yun_usermember_info_cont">
+                    <!-- <div class="yun_usermember_qd">
+                        <a href="javascript:void(0);" onclick="sign();"><span class="yun_usermember_qdbth">签到</span></a>
+                    </div> -->
+                    <div class="yun_usermember_info_photo">
+                        <a href="m_photoEdit.html">
+                            <img src="images/14947989259.PNG" border="0" onerror="showImgDelay(this,&#39;images/14947989259.PNG&#39;,2);">
+                        </a>
+                    </div>
+                    <!-- 账户设置 -->
+                    <a href="m_accountSet.html">
+                        <div class="yun_usermember_info_name">13433598652</div>
+                    </a>
+                    <div class="yun_usermember_info_rz">
+                        <a href="yz_moblie.html"><span class="yun_usermember_info_rz_s yun_usermember_info_rz_s_cur"><i class="rz_icon rz_iconsj"></i>已认证</span></a>
+                        <a href="yz_email.html"><span class="yun_usermember_info_rz_s "><i class="rz_icon rz_iconyx"></i>未绑定</span></a>
+                        <a href="yz_idcard.html"> <span class="yun_usermember_info_rz_s "><i class="rz_icon rz_iconsm"></i>未实名</span></a>
+                    </div>
+                </div>
+                <ul class="yun_usermember_tj">
+                    <li><a href="m_interview.html"><span class="yun_usermember_tj_n" id="yqnum">0</span> 面试通知</a></li>
+                    <li><a href="m_appRecord.html"><span class="yun_usermember_tj_n" id="sq_jobnum">1</span> 申请记录</a></li>
+                    <li><a href="m_collecRecord.html"><span class="yun_usermember_tj_n" id="fav_jobnum">1</span> 收藏记录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="yun_usermember_nav">
+        <li>
+            <a href="resume.html"><i class="yun_usermember_nav_icon"></i>简历管理</a>
+        </li>
+        <li>
+            <a href="m_info.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconinfo"></i>基本资料<span class="yun_mnav_tip">完善基本资料</span></a>
+        </li>
+    </ul>
+    <ul class="yun_usermember_nav">
+        <li>
+            <a href="m_jobcolumn.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconjob"></i>职位管理</a>
+        </li>
+        <!-- <li>
+            <a href="m_CollecAtt.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconsc"></i>收藏&amp;关注</a>
+        </li> -->
+        <li>
+            <a href="m_PartTime.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconjz"></i>兼职管理</a>
+        </li>
+        <!-- <li>
+            <a href="m_BountyPosition.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconsj"></i>赏金职位</a>
+        </li> -->
+    </ul>
+    <!-- <ul class="yun_usermember_nav">
+        <li>
+            <a href="m_financial.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconcw"></i>财务管理</a>
+        </li>
+    </ul> -->
+    <ul class="yun_usermember_nav" style="padding-bottom:20px;">
+        <li>
+            <a href="m_accountSet.html"><i class="yun_usermember_nav_icon yun_usermember_nav_iconzh"></i>账户设置</a>
+        </li>
+    </ul>
+
+    <!--编辑基本信息引导匡-->
+    <div id="yingdaoone" style="width:100%;height:100%; background:rgba(51,51,51,0.6); position:fixed;left:0px;top:0px; z-index:100000;display:none;">
+        <div style="width:100%; position:absolute;left:0px;top:140px;">
+            <div style="padding:20px;">
+                <div class="index_yd_box">
+                    <div class="index_yd_box_h1">亲，你还没有填写基本信息</div>
+                    <div class="user_resume_index_tip_p">
+                        <a href="" class="user_resume_index_tip_sub">编辑</a>
+                    </div>
+                    <div class="user_resume_index_tip_p2">
+                        <a href="javascript:Close_yd(&#39;yingdaoone&#39;);" class="user_resume_index_tip_p2_a">下次再说</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        function Close_yd(id) {
+            $("#" + id).hide();
+        }
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        //简历刷新
+        if (document.getElementById("refresh")) {
+            document.getElementById("refresh").addEventListener('tap', function () {
+                $.get(wapurl + "member/index.php?c=resumeset&update=1078", function (data) {
+                    layermsg(data ? '刷新成功！' : '刷新失败！', 2, function () {
+                        mui.openWindow({
+                            url: wapurl + "member/",
+                        });
+                    });
+                });
+            });
+        }
+        function fidcard() {
+            layermsg('请先完成身份认证！', 2, function () {
+                location.href = 'index.php?c=idcard';
+            });
+        }
+    </script>

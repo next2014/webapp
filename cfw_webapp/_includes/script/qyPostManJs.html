@@ -1,0 +1,20 @@
+<script>
+    // 全选
+    function clickAll(){
+        $('.checkOne').prop("checked",$(".checkAll").prop("checked"));
+    }
+    // 单选
+    function clickOne(){
+        var allChecked = true;
+        $(".checkOne").each(function(){
+             if($(this).prop("checked") == false){
+                 allChecked = false;
+             };
+        });
+        if(allChecked){
+             $(".checkAll").prop("checked",true);
+        }else{
+             $(".checkAll").prop("checked",false);
+        }
+    }
+</script>

@@ -1,0 +1,36 @@
+.mineJobSearch{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    margin-bottom:rem(64.4);
+    .weui-form-preview__bd{
+       ul{
+           text-align: left;
+       }
+       li{
+           a{
+             text-decoration: none;
+             color:$gray-500;
+           }
+       }
+    }
+    .weui-form-preview__title{
+        float: left;
+        text-align: left;
+        width:75%;
+        font-size:$font-16;
+        color:$gray-800;
+    }
+    .weui-form-preview__rtext{
+        text-align: right;
+        float:right;
+        width:25%;
+        line-height: 20px;
+    }
+    .weui-form-preview__item{
+        display: flex;
+        align-items: center;
+    }
+    .weui-form-preview{
+        margin-bottom: rem(64.4);
+    }
+}

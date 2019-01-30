@@ -1,0 +1,13 @@
+<div class="weui-cells">
+    {% for new in site.data.news_1 %}
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <h4><a href="companyDetail.html">{{ new.posname }}</a></h4>
+                <section>
+                      <a href="mineResumeView.html" class="qzUser">{{ new.name }}</a>
+                      <span>查看 <em>{{ new.num }}</em> 次</span> | <span>{{ site.time | date_to_xmlschem }}</span>
+                </section>
+            </div>
+        </div>
+      {% endfor %}
+</div>

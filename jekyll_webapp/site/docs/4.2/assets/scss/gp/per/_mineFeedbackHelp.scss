@@ -1,0 +1,59 @@
+.mineFeedbackHelp{
+    background-color:$pgbg;
+    height: 100vh;
+    margin-top:rem(161);
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px 0;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+      }
+      .weui-cells{
+        &:before{
+           border-top:0;
+        }
+        &:last-child{
+          &:after{
+            border-bottom:0;
+          }
+        }
+        a{
+          text-decoration: none;
+        }
+      }
+      .weui-cell__bd{
+          text-align: right;
+          padding-right:rem(96.6);
+          color:$gray-600;
+      }
+      .mod_pos_item{
+           &:first-child{
+               border-top:0;
+           }
+           padding-top:0;
+           padding-bottom:0;
+      }
+      .weui-input{
+          text-align: right;
+      }
+      .weui-form-preview__ft{
+        line-height:40px;
+      }
+      .weui-form-preview__bd{
+        text-align: left;
+        .weui-form-preview__item{
+          color:$gray-800;
+        }
+        .weui-media-box__title{
+            font-size:$font-14;
+            span{
+              color:$blue-deep;
+            }
+        }
+     }
+     .weui-media-box:before{
+        left:0;
+     }
+}

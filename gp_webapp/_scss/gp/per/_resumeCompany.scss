@@ -1,0 +1,23 @@
+.resumeCompany{
+    background-color:$white;
+    margin-top:rem(161);
+    margin-bottom:rem(161);
+    padding:8% 4%;
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px 0;
+        color:$gray-600;
+        &:before{
+            left:0;
+        }
+    }
+    .weui-cells{
+        &:before{
+            border-top:0;
+        }  
+    }
+    .weui-input{
+        text-align:left;
+        color: $select;
+    }
+}

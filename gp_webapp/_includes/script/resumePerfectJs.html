@@ -1,0 +1,67 @@
+<script src="static/js/city-picker.min.js"></script>
+<script>
+    $("#Curlocat").cityPicker({
+        title: "现所在地",
+        onChange: function (picker, values, displayValues) {
+        console.log(values, displayValues);
+        }
+    });
+</script>
+<script>
+    // 定义工作时间 及 学习时间
+    var $date = $("#date");  //开始工作时间
+    var $date1 = $("#date1");//结束工作时间
+    var $date2 = $("#date2");//入学时间
+    var $date3 = $("#date3");//毕业时间
+    var $dateP = [$date,$date1,$date2,$date3];
+    for(var i=0;i<$dateP.length;i++){
+        console.log(i+" "+$dateP[i]);//测试数组的index
+        $dateP[i].calendar({
+            value: ['2016-12-12'], //初始化时间
+            dateFormat: 'yyyy年mm月dd日',
+            // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。
+            //只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+        });
+    }
+</script>
+<script>
+    $("#userType").select({
+        title: "用户类型",
+        items: [
+            {
+                title: "社会人士",
+                value: "001",
+            },
+            {
+                title: "应届毕业生",
+                value: "002"
+            }
+        ]
+    });
+    $("#userType1").select({
+        title: "企业性质",
+        items: [
+            {
+                title: "民营企业",
+                value: "001",
+            },
+            {
+                title: "私有企业",
+                value: "002"
+            }
+        ]
+    });
+    $("#userType2").select({
+        title: "行业领域",
+        items: [
+            {
+                title: "IT技术",
+                value: "001",
+            },
+            {
+                title: "市场营销",
+                value: "002"
+            }
+        ]
+    });
+</script>

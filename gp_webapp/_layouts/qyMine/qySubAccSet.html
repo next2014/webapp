@@ -1,0 +1,49 @@
+---
+layout: pages
+title: 子账号新增
+---
+<div class="qySubAccSet">
+    <!--S 简历列表 -->
+    <div class="weui-cells">
+      {% for sub in site.data.qySubAccSet %}
+         <div class="weui-cell weui-cells_checkbox">
+           <label class="weui-check__label d-flex align-items-center w-100" for="{{sub.id}}">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{sub.id}}">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+	                <p>登录账号：{{ sub.acc }}</p>
+	                <p>当前状态：<i class="fa fa-check text-primary"></i></p>
+	                <p>管理职位：<i class="fa fa-check text-primary"></i>{{ sub.pos }}</p>
+	                <p>管理简历：<i class="fa fa-close text-danger"></i>{{ sub.manres }}</p>
+                    <p>查看简历：<i class="fa fa-check text-primary"></i>{{ sub.redres }}</p>
+                </div>
+            </label> 
+            <div class="weui-cell_ft d-flex">
+                <a href="qySubAccSetEdit.html" class="btn btn-primary btn-sm mr-2">修改</a>
+            </div>
+         </div>
+       {% endfor %}
+    </div>
+    <!--E 简历列表 -->
+    <!-- 底部按钮 -->
+    <section class="mod_pos_btn bg-light">
+     <div class="d-flex justify-content-between w-100">
+        <div class="weui-cells_checkbox">
+            <label class="weui-cell weui-check__label" id="qSelect">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <p>全部</p>
+            </label>
+        </div>
+        <div class="d-flex justify-content-center align-items-center p-1">
+            <a href="qySubAccSetCreate.html" class="btn btn-info mr-1">新增</a>
+            <a href="javascript:;" class="btn btn-secondary mr-1">启用</a>
+            <a href="javascript:;" class="btn btn-danger">禁用</a>
+        </div>
+     </div>
+    </section>
+</div>

@@ -1,0 +1,29 @@
+.mineAccNumEdit{
+    background-color:$pgbg;
+    height: 100vh;
+    margin-top:rem(161);
+    margin-bottom:rem(161);
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px 10px;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+      }
+      .weui-cells{
+        &:before{
+           border-top:0;
+        }  
+      }
+      .weui-cell__ft{
+        .weui-vcode-img{
+            height:35px;
+        }
+        .weui-vcode-btn{
+            height:35px;
+            line-height:35px;
+            padding:0;
+        }
+      }
+}

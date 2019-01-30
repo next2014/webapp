@@ -1,0 +1,92 @@
+- title: 社会保险
+  id: s1
+
+- title: 法定节假日
+  id: s2
+
+- title: 双休
+  id: s3
+
+- title: 带年假
+  id: s4
+
+- title: 年终双薪
+  id: s5
+
+- title: 年终奖
+  id: s6
+
+- title: 定期体检
+  id: s7
+
+- title: 员工旅游员工培训
+  id: s8
+
+- title: 节日福利
+  id: s9
+
+- title: 住房公积金
+  id: s10
+
+- title: 全勤奖
+  id: s11
+
+- title: 周末双休
+  id: s12
+
+- title: 包吃
+  id: s13
+
+- title: 包住
+  id: s14
+
+- title: 年终分红
+  id: s15
+
+- title: 班车接送
+  id: s16
+
+- title: 餐补
+  id: s17
+
+- title: 交通补贴
+  id: s18
+
+- title: 伙食补贴
+  id: s19
+
+- title: 住房补贴
+  id: s20
+  
+- title: 特困补贴
+  id: s21
+
+- title: 服装补贴
+  id: s22
+
+- title: 子女教育补贴
+  id: s23
+
+- title: 水电费补贴
+  id: s24
+
+- title: 取暖补贴
+  id: s25
+
+- title: 降温补贴
+  id: s26
+
+- title: 洗理补贴
+  id: s27
+
+- title: 弹性工作
+  id: s28
+
+- title: 加班补贴
+  id: s29
+
+- title: 出差补贴
+  id: s30
+
+- title: 绩效奖
+  id: s31

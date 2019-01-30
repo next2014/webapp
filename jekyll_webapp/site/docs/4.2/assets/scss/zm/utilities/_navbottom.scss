@@ -1,0 +1,44 @@
+//底部购买导航
+.steps-controllers {
+      display: flex;
+      z-index:10;
+      background-color: #fff;
+      bottom:-1px;
+      a{
+        color:#666;
+        display:block;
+        text-decoration:none;
+        color:#666;
+        text-align: center;
+        position: relative;
+        flex-grow: 1;
+        padding:5px 0 0;
+        line-height: 13px;
+        i{
+          font-size:1.5em;
+          position: relative;
+        }
+        &.active{
+          i{
+          color:#ef3239
+          }
+          span{
+          color:#ef3239;
+          }
+        }
+        span{
+          font-size:0.7rem;
+          display: block;
+          height:18px;
+          line-height:18px;
+          &.dot{
+            width:25px;
+            height:1;
+            line-height:0.5;
+            position: absolute;
+            right: -20px;
+            top: -8px;
+          }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+//搜素页
+.indexSeach{
+    background:$pgbg;
+    margin-top: rem(161);
+    min-height:rem(2382.8);
+}
+
+//搜索历史
+.his_sea{
+    @include sizePtblr(64.4,64.4);
+    @include clearfix();
+    position: relative;
+    &_tit{
+      margin-bottom:rem(32.2);
+      font-size:$font-16;
+    }
+    &_con{
+      li{
+        display:block;
+        float: left;
+        background:$white;
+        border:1px solid $gray-200;
+        border-radius:rem(16.1);
+        font-size:$font-14;
+        box-sizing: border-box;
+        @include sizeMargin(0,16.1,16.1,0);
+        @include sizePtblr(16.1,32.2);
+        &:last-child{
+           margin-right:0;
+        }
+        a{
+          text-decoration: none;
+        }
+        i{
+          color:$blue-deep;
+          margin-left:rem(16.1);
+        }
+      }
+    }
+    &_ico{
+      position: absolute;
+      top: rem(32.2);
+      right: rem(64.4);
+    }
+}
+

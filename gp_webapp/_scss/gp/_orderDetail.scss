@@ -1,0 +1,107 @@
+/* -------------------------------------------order-detail------------------------------------------- */
+.o_de{
+	background: #fff;
+	box-shadow: 0 0 3px #ccc;
+	border-radius:0.2rem;
+	margin:10px;
+}
+.o_de .de_btn{
+	width: 95%;
+	height: auto;
+	overflow: hidden;
+	margin:0 auto;
+}
+.o_de ul li{
+	width: 95%;
+	padding:0.5rem 0.34rem;
+	margin:0 auto;
+	border-bottom: 1px solid #d5d5d5;
+	font-size: 0.6rem;
+}
+.o_de ul li span{
+	width: 30%;
+	color:#666;
+	display: inline-block;
+}
+.o_de ul li i{
+	font-style: normal;
+	color:#666;
+	width: 66%;
+}
+.o_de .o_con{
+	width: 95%;
+	background: #fff4e9;
+	margin:0.6rem auto;
+	border-radius: 0.2rem;
+	border-bottom: 0;
+}
+.o_con .o_head{
+	padding:0.1rem 0.5rem;
+	width: 50%;
+    text-align:center;
+	background: #fff;
+	border: 1px solid #ff7f8e;
+	border-radius: 1rem;
+	color:#ff2a43;
+	
+}
+
+.o_con .o_head i{
+	color:#ff2a43;
+
+}
+
+.layui-table td, .layui-table th{
+	padding:10px!important;
+}
+
+
+/*------列表----*/
+.o_con .layui-table tr{
+	background-color: #fff;
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+.o_con .layui-table th{
+	font-size: 0.6rem;
+}
+.o_con .layui-table td{
+	font-size: 0.56rem;
+	color:#ffa10d;
+}
+
+.o_de .no_bor{ 
+	color:#008fea;
+	padding:0.1rem 0;
+	border-bottom: 0;
+}
+.o_de ul li.no_bor i{
+	color:#008fea;
+}
+/*------列表2----*/
+.o_de .d_con{
+	background: #fff;
+}
+.d_con .d_head{
+	width: 36%;
+	text-align: center;
+	background: #bd8438;
+	color:#fff;
+}
+
+.d_con .layui-table tr{
+	height: 1rem;
+	line-height: 1rem;
+}
+.o_de .last_btn{
+	width:50%;
+	height: auto;
+	margin:0.1rem auto;
+	padding-bottom:0.6rem;
+
+	overflow: hidden;
+	
+}
+.o_de .last_btn button{
+	width: 100%;
+}

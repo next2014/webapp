@@ -1,0 +1,56 @@
+<!-- <div class="mod_int mod_int_tab_fix">
+    <a href="javascript:;" class="mod_int_tab active" data-toggle="dropdown">
+        <span class="mod_int_tab_set">职位筛选</span><i class="fa fa-sort-down"></i>
+    </a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="javascript:;">综合</a>
+        <a class="dropdown-item" href="javascript:;">新品</a>
+        <a class="dropdown-item" href="javascript:;">评价</a>
+    </div>
+    <a href="javascript:;" class="mod_int_tab">
+        <span class="mod_int_tab_set">区域筛选</span><i class="fa fa-sort-down"></i>
+    </a>
+</div> -->
+<!-- <div class="mod_int mod_int_tab_fix">
+    <a href="javascript:;" class="mod_int_tab active open-popup" data-target="#full">
+        <span class="mod_int_tab_set">职位筛选</span><i class="fa fa-sort-down"></i>
+    </a>
+    <a href="javascript:;" class="mod_int_tab">
+        <span class="mod_int_tab_set">区域筛选</span><i class="fa fa-sort-down"></i>
+    </a>
+</div> -->
+<div class="weui-tab">
+    <div class="weui-navbar">
+        <a class="weui-navbar__item weui-bar__item--on" href="#tab1">选项一</a>
+        <a class="weui-navbar__item" href="#tab2">选项二</a>
+        <a class="weui-navbar__item" href="#tab3">选项三</a>
+    </div>
+    <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <h1>页面一</h1>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item">
+            <h1>页面二</h1>
+        </div>
+        <div id="tab3" class="weui-tab__bd-item">
+            <h1>页面三</h1>
+        </div>
+    </div>
+</div>
+<div class="mod-tab">
+    {% include components/tabs/tab.html %}
+    <div class="mod_pos1">
+        <div id="#tab1" class="weui-tab__bd-item mod_pos_tab--active">
+            {% include modules/company/mod_pos4.html %}
+        </div>
+        <div id="#tab2" class="weui-tab__bd-item">
+            {% include modules/company/mod_pos1.html %}
+        </div>
+        <div id="#tab3" class="weui-tab__bd-item">
+            {% include modules/company/mod_pos2.html %}
+        </div>
+        <div id="#tab4" class="weui-tab__bd-item">
+            {% include modules/company/mod_pos3.html %}
+        </div>  
+    </div>
+</div>

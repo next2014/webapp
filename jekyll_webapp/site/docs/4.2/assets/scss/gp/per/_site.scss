@@ -1,0 +1,23 @@
+.site{
+    background-color:$pgbg;
+    height: 100vh;
+    margin-bottom:rem(161);
+    .page__bd{
+         @include sizePadding(32.2, 32.2, 0, 32.2);
+    }
+    .weui-cells{
+        border-radius: 5px;
+        border:1px solid $gray-200;
+        &:before{
+            border-top:0;
+        }
+        &:after{
+            border-bottom:0;
+        }
+    }
+    .button_sp_area{
+        a{
+          text-decoration: none;
+        }
+    }
+}

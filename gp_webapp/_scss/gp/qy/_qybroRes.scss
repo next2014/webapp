@@ -1,0 +1,25 @@
+.qybroRes{
+	  background-color:$pgbg;
+    margin-top:rem(161);
+    overflow: hidden;
+    .weui-cells{
+      a{
+         text-decoration: none;
+      }
+    }
+    .weui-cell__bd{
+       p{
+         font-size:$font-14;
+       }
+       h2{
+          font-size:$font-16;
+          height:rem(112.7);
+          line-height:rem(112.7);
+       }
+    }
+    .weui-cells{
+       &:before{
+    	 border-top:0;
+       }
+    }
+}

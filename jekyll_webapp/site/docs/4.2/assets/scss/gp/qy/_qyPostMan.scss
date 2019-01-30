@@ -1,0 +1,70 @@
+.qyPostMan{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    margin-bottom:rem(161);
+    .mod_pos_item{
+        border:0;
+        padding:0;
+     }
+    .weui-cells{
+        &:before{
+            border-top:0;
+        }
+    }
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+     }
+    .weui-cell_select{
+      .weui-cell__bd{
+        padding-right: rem(48.3)!important;
+      }
+    }
+    .weui-cell__bd{
+    //   padding-right: rem(64.4);
+      color:$gray-600;
+      h6{
+         color:$gray-500;
+      }
+      p{
+        line-height: 15px;
+        margin: 5px 0;
+        color:$gray-800
+      }
+      small{
+        color:$gray-500;
+      }
+      a{
+        text-decoration: none;
+        display: block;
+      }
+      span{
+         color:$gray-800
+      }
+    }
+    .weui-label{
+       width:85px;
+    }
+    .weui-cells_checkbox{
+       h2{
+        font-size:$font-16;
+        margin-right:10px;
+       }
+    }
+    .form-check{
+        line-height:15px;
+    }
+    .form-check-input{
+        margin-top:2px;
+        margin-left: -0.8rem;
+    }
+}
+.weui-picker-modal{
+    .weui-cells_radio{
+        margin-bottom:50px;
+    }
+}

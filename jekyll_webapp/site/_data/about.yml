@@ -1,0 +1,95 @@
+- title: About
+  name: 关于欧美城
+  index: One
+  pages:
+    - title: intro
+      name: 欧美城 ▪ 全国联盟介绍
+    - title: rczp
+      name: 人才招聘
+    - title: content
+      name: 联系我们
+    - title: hzomc
+      name: 欧美城文化小镇（惠州）
+    - title: stomc
+      name: 欧美城文化小镇（汕头）
+    - title: drawbook
+      name: 欧美城文化小镇宣传画册
+      
+- title: Project
+  name: 文化主题项目
+  index: Two
+  pages:
+    - title: Themes1
+      name: 赛车文化主题
+    - title: Themes2
+      name: 影视文化主题
+    - title: Themes3
+      name: 演艺文化主题
+    - title: Themes4
+      name: 婚博文化主题
+    - title: Themes5
+      name: 花海艺术文化主题
+    - title: Themes6
+      name: 娱乐文化主题
+    - title: Themes7
+      name: 儿童科普主题
+    - title: Themes8
+      name: 海洋文化主题
+    - title: Themes9
+      name: 餐饮文化主题
+    - title: Themes10
+      name: 体育文化主题
+    - title: Themes11
+      name: 商学院
+    - title: Themes12
+      name: 文化交流平台
+    - title: Themes13
+      name: 慈善公益
+      
+- title: News
+  name: 欧美城新闻
+  index: Three
+  pages:
+    - title: hdmessage
+      name: 欧美城活动资讯
+    - title: zycar
+      name: 欧美城振业汽车
+    - title: hbcenter
+      name: 欧美城婚博中心
+    - title: hdcmessage
+      name: 汕头活动城资讯
+    - title: glcar
+      name: 欧美城格林披治卡丁车馆
+    - title: glsport
+      name: 格林披治体育
+
+- title: Project
+  name: 文化主题项目
+  subject:
+    - title: a01
+      name: 赛车文化主题
+    - title: a02
+      name: 影视文化主题
+    - title: a03
+      name: 演艺文化主题
+    - title: a04
+      name: 婚博文化主题
+    - title: a05
+      name: 花海艺术文化主题
+    - title: a06
+      name: 娱乐文化主题
+    - title: a07
+      name: 儿童科普主题
+    - title: a08
+      name: 海洋文化主题
+    - title: a09
+      name: 餐饮文化主题
+    - title: a10
+      name: 体育文化主题
+    - title: a11
+      name: 商学院
+    - title: a12
+      name: 文化交流平台
+    - title: a13
+      name: 慈善公益
+      

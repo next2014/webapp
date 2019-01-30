@@ -1,0 +1,21 @@
+.infoTer{
+	margin-top:rem(161);
+	p{
+		color:$gray-600;
+	}
+}
+
+.inf-tit{
+		 border-bottom:1px solid $line;
+		 margin-bottom:rem(32.2);
+		 h1{
+			 margin-bottom:rem(32.2)!important;
+		 }
+		 p{
+			 margin-bottom: 0;
+			 font-size:$font-14;
+			 color:$gray-600;
+			 display: block;
+			 text-indent:0!important;
+		 }
+}

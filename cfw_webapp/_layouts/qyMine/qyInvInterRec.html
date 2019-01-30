@@ -1,0 +1,46 @@
+---
+layout: pages
+title: 邀请记录
+---
+<div class="qyPostMan">
+    <!--S 简历查找 -->
+    {% include modules/qyMine/qyTopSearch.html %}
+    <!--E 简历查找 -->
+    <!--S 简历列表 -->
+    <div class="weui-cells">
+        {% for inv in site.data.qyInvInter %}
+        <div class="weui-cell weui-cells_checkbox">
+            <label class="weui-check__label d-flex align-items-center" for="{{ inv.id }}">
+             <div class="weui-cell__hd">
+              <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{ inv.id }}">
+              <i class="weui-icon-checked"></i>
+              </div>
+            </label>
+            <div class="weui-cell__bd p-0 m-0">
+              <a href="qyResumeShou.html">
+                <h2><span class="mr-1 text-primary">{{ inv.dep }}</span> <span class="mr-1 text-warning">{{ inv.sex }}</span><span>{{ inv.edu }}</span></h2>
+                <p><span class="mr-2">{{ inv.sch }}</span><span>{{ inv.are }}</span></p>
+                <p><span>{{ inv.pos }}</span> | <span>{{ site.time }}</span></small></p>
+              </a>
+            </div>
+        </div>
+        {% endfor %}
+        <!--E 简历列表 -->
+        <!-- 底部按钮 -->
+        <section class="mod_pos_btn bg-light">
+            <div class="d-flex justify-content-between w-100">
+                <div class="weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" id="qSelect">
+                        <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+                                <i class="weui-icon-checked"></i>
+                        </div><p>全部</p>
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center p-1">
+                    <button type="button" class="btn btn-primary">删除</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

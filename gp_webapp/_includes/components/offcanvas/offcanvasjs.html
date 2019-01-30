@@ -1,0 +1,35 @@
+<!--筛选功能-->
+<script>
+$(function () {
+    'use strict'
+    $('[data-toggle="offcanvas"]').on('click', function () {
+      $('.offcanvas-collapse').removeClass('open');
+      $('.offcanvas-collapse').toggleClass('open');
+    });
+    $('[data-toggle="offcanvas1"]').on('click', function () {
+        $('.offcanvas-collapse').removeClass('open');
+        $('.offcanvas-collapse1').toggleClass('open');
+    });
+    $('[data-toggle="offcanvas2"]').on('click', function () {
+        $('.offcanvas-collapse').removeClass('open');
+        $('.offcanvas-collapse2').toggleClass('open');
+    });
+    $('[data-toggle="offcanvas3"]').on('click', function () {
+        $('.offcanvas-collapse').removeClass('open');
+        $('.offcanvas-collapse3').toggleClass('open');
+    });
+})
+</script>
+<script>
+$(function(){
+    $('.mod_pop ul li a').on('click',function(){//职位筛选多选项
+        $(this).toggleClass('active');
+    });
+    $('.pinpai ul li a').on('click',function(){//地区筛选多选项
+        $(this).toggleClass('active');
+    });
+    $('.intReset').on('click',function(){//重置
+        $('.mod_pop ul li a').removeClass('active');
+    });
+})
+</script>

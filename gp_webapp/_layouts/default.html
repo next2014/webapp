@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>
+        {{ page.title | smartify }} · 欧美城
+    </title>
+    {% include head.html %}
+</head>
+<body>
+    {% include common/header.html %}
+    {{ content }}
+    {% if page.layout == "index" or page.layout == "ticketList" or page.layout == "shoppingNew" %}
+       {% include common/menu.html %}
+    {% endif %}
+</body>
+   {% include script.html %}
+</html>

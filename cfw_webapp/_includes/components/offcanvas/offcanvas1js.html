@@ -1,0 +1,59 @@
+<script src="http://192.168.3.12:8888/touch/public/sea.js?v=1.0.2.2" id="firstSeajs"></script>
+<script type="text/javascript" src="http://192.168.3.12:8888/touch/public/jslib/jobbaidu.ui.selector2.js"></script> 
+<script>
+$('#slider2').slider();
+</script>
+<script>
+    $(function () {
+        'use strict'
+        $('[data-toggle="offcanvas4"]').on('click', function () {
+            $('.offcanvas-collapse').removeClass('open');
+            $('.offcanvas-collapse4').toggleClass('open');
+        });
+        $('[data-toggle="offcanvas4"]').on('click',function(){
+            $(".offcanvas1 i").toggleClass('fa-sort-up');
+        });
+        $('.offcanvas0').on('click', function () {
+            $('.offcanvas-collapse4').removeClass('open');
+        });
+    })
+</script>
+<script>
+    $(function(){
+        //   var itemData = [{$sal,$sex,$exp,$exp,$edu,$nat}];
+        //   var $item = $('.mod_pop_item li a');
+          var $sal = $('.mod_pop_sal li a'); 
+          var $sex = $('.mod_pop_sex li a');
+          var $exp = $('.mod_pop_exp li a');
+          var $edu = $('.mod_pop_edu li a');
+          var $nat = $('.mod_pop_nat li a');
+          $sal.on('click',function(){
+            $sal.removeClass('active');
+            $(this).toggleClass('active');
+          });
+          $sex.on('click',function(){
+            $sex.removeClass('active');
+            $(this).toggleClass('active');
+          });
+          $exp.on('click',function(){
+            $exp.removeClass('active');
+            $(this).toggleClass('active');
+          });
+          $edu.on('click',function(){
+            $edu.removeClass('active');
+            $(this).toggleClass('active');
+          });
+          $nat.on('click',function(){
+            $nat.removeClass('active');
+            $(this).toggleClass('active');
+          });
+          $('.intReset').on('click',function(){//重置
+            $('.mod_pop ul li a').removeClass('active');
+          });
+    })
+</script>
+<script>
+seajs.use( [ "http://192.168.3.12:8888//touch/public/action/index.js" ], function(index) {
+    index.initSearch();
+})
+</script>

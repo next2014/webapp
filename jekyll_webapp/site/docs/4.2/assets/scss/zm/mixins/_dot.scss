@@ -1,0 +1,17 @@
+//小红点|显示数量
+.dot{
+    line-height: 0.5rem;
+    border-radius:0.6rem;
+    color:#fff!important;
+    padding:2px;
+    background-color:  #f43530;
+    font-weight: normal;
+    border:1px solid #fff;
+    text-align:center;
+    padding: 0.3rem;
+    display: inline-block;
+    position:absolute;
+    top: -.2em;
+    right: 1em;
+    width: auto;
+ }

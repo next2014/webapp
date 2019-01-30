@@ -1,0 +1,39 @@
+.mod{
+    &_btn{
+        &_blue{
+            background-color:$blue-deep;
+            border-color:$blue-deep;
+        }
+    }
+}
+
+.mod_sign{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:rem(21);
+    border-radius: rem(15);
+    color:$red;
+    font-size:$font-12;
+    border:1px solid $red;
+    @include sizePtblr(0,9);
+ }
+
+ .mod_com{
+    margin-right:rem(21);
+    border-radius: rem(15);
+    color:$blue-deep;
+    font-size:$font-16;
+    border:1px solid $gray-300;
+ }
+
+ .btn-primary:hover{
+    color: #fff;
+    background-color: #da5904;
+    border-color: #fff;
+ }
+
+ .btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #da5904;
+    border-color: #fff;
+ }

@@ -1,0 +1,37 @@
+.qyRecRes{
+	background:$pgbg;
+	margin-top:rem(161);
+	.weui-media-box__hd{
+			img{
+				width:60px;
+				height:60px;
+				margin-right: .8em;
+				border-radius: 30px;
+			}
+	}
+	.weui-media-box__info{
+			margin-top:0!important;
+	}
+	.weui-cells__tips{
+			padding-left:0!important;
+			padding-right:0!important;
+			margin-top:0!important;
+	}
+	.weui-media-box {
+			display: flex;
+			border-bottom:1px solid $line;
+	}
+	.weui-panel__bd{
+			a{
+				text-decoration:none;
+			}
+	}
+	.weui-panel{
+    &:before{
+			border-top:0;
+		}
+		&:after{
+			border-bottom:1px solid $line;
+		}
+	}
+}

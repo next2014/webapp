@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include docs-navbar.html %}
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          {% include docs-sidebar.html %}
+        </div>
+        {% if page.toc %}
+           <!-- <div class="d-none d-xl-block col-xl-2 bd-toc">
+            {{ content | toc_only }}
+           </div> -->
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <h5 class="font-weight-bold border-bottom border-warning mb-3 pb-3">最新资讯</h5>
+            <ul class="list-unstyled">
+              {% for new in site.data.news %}
+                <li class="media pb-3 mb-3 border-bottom">
+                    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/about/{{ new.newImg }}" width="84" height="62" class="mr-3" alt="">
+                    <div class="media-body">  <a href="{{new.url}}">
+                      <h5 class="mt-0 mb-1 text-truncate">{{ new.title }}</h5>
+                      {{ new.content }}</a>
+                  </div>
+                </li>
+               {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-3 bd-content" role="main">
+          <h4 class="bd-title" id="content">{{ page.title | smartify }}</h4>
+          <p class="bd-lead">{{ page.description | smartify }}</p>
+          {{ content }}
+        </main>
+      </div>
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

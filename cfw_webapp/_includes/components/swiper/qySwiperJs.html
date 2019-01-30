@@ -1,0 +1,24 @@
+<script src="../static/js/swiper.js"></script>
+<script type="text/javascript">
+    var swiper1 = new Swiper('.swiper-container1',{//招聘广告
+        directon: 'horizontal',//水平滑动
+        speed:300,//滑动速度
+        loop:true,
+        autoplay:{//自动切换时间
+          delay:2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+            el:'.swiper-pagination',
+            dynamicBullets: true,
+        }
+    });
+    var announcementSwiper = new Swiper('.announcement', {
+        direction: 'vertical',
+		loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    })
+</script>

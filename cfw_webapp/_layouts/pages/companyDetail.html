@@ -1,0 +1,56 @@
+---
+layout: default
+title: 公司详情
+---
+<div class="companyDetail">
+        <!-- 职位详情 -->
+        <div class="mod_det">
+        <div class="mod_pos_item">
+            <div class="mod_pos_pic">
+                <img src="static/images/logo_default.png">
+            </div>
+            <h2 class="text-truncate pt-1 pb-1">富海人才</h2>
+            <p class="mod_pos_item_mes text-truncate"><span>2000人以上</span><span>生产、制造、加工</span></p>
+        </div>
+        </div>
+        <!-- 公司详情 -->
+        <div class="weui-tab">
+         <div class="mod_int weui-navbar">
+                <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
+                <span class="mod_int_tab_text">企业简介</span>
+                <div class="bottom_line"></div>
+                </a>
+                <a class="mod_int_tab weui-navbar__item p-0" href="#tab2">
+                <span class="mod_int_tab_text">招聘职位</span>
+                <div class="bottom_line"></div>
+                </a>
+                <a class="mod_int_tab weui-navbar__item p-0" href="#tab3">
+                <span class="mod_int_tab_text">职位分类</span>
+                <div class="bottom_line"></div>
+                </a>
+                <a class="mod_int_tab weui-navbar__item p-0" href="#tab4">
+                <span class="mod_int_tab_text">企业相册</span>
+                <div class="bottom_line"></div>
+                </a>
+         </div>
+         <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+              {% include modules/company/mod_pos4.html %}
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+              {% include modules/company/mod_pos1.html %}
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+              {% include modules/company/mod_pos2.html %}
+            </div>
+            <div id="tab4" class="weui-tab__bd-item">
+              {% include modules/company/mod_pos3.html %}
+            </div>
+         </div>
+        </div>
+        <!-- 底部按钮 -->
+        <section class="mod_pos_btn">
+          <div class="mod_pos_btn_air"><a href="javascript:;">投递简历</a></div>
+          <div class="mod_pos_btn_rea"><a href="javascript:;">收藏职位</a></div>
+        </section>
+</div>

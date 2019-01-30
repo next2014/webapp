@@ -1,0 +1,265 @@
+.home{
+   background:$pgbg;
+   margin-bottom:rem(161);
+}
+ 
+ //招聘公告
+.mod_bbs{
+    overflow: hidden; 
+    &_msg{
+        @include sizeMargin(0,0,42,0);
+        @include sizePadding(0,32.2,0,230);
+        @extend %bgColor;
+        position: relative;
+        border-bottom:1px solid $line;
+        height:rem(128.8);
+        overflow: hidden;
+        &:before{
+            position: absolute;
+            left: rem(20);
+            top:0;
+            content: '';
+            @include sizeWH(200,128.8);
+            background: url(../images/headline.png) center no-repeat;
+            background-size: 100%; 
+        }
+        &_list{
+            height: rem(144.9);
+            overflow: hidden;
+        }
+        &_text{
+            color: #333;
+            font-size:$font-14;
+        }
+    }
+ }
+
+ //推荐好职位
+.mod_pos{
+    &_title{
+        color:#ddd;
+        h2{
+          @include sizePtblr(48.3,0);
+          @include sizeMtblr(0,3.22);
+          background-color:$pgbg;
+          text-align: center;
+          font-size: $font-16;
+          color:$gray-600;
+        }
+    }
+    &_list{
+        color:#ddd;
+        a{
+          color:$gray-font;
+          text-decoration: none;
+          display: block;
+        }
+    }
+    &_item{
+        color:$gray-font;
+        position: relative;
+        border-top:1px solid $line;
+        border-bottom:1px solid $line;
+        overflow: hidden;
+        @include sizePtblr(32.2,48.3);
+        @include sizeMargin(0,0,32.2,0);
+        @extend %bgColor;
+        &_text{
+            color: #aeaeae;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            h2{
+               width:70%;
+               font-size:$font-16;
+               color:$gray-900;
+               @include sizePadding(0,0,19.32,0);
+            }
+            p{
+               font-size:$font-14;
+            }
+            &_pic{
+               float: left;
+               @include sizeMargin(0,32.2,0,0);
+               img{
+                 width:50px;
+                 height:50px;
+               }
+            }
+            @include clearfix();
+        }
+        &_mes{
+           font-size:$font-12;
+           span{
+              border-right:1px solid $gray-200;
+              display: block;
+              float: left;
+            //   line-height:rem(41.86);
+              @include sizePtblr(0,16.1);
+              &:first-child{
+                  padding-left:0;
+              }
+              &:last-child{
+                  border-right:0;
+              }
+           }
+        }
+        &_ind{
+          overflow:hidden;
+          li{
+            display:block;
+            float: left;
+            font-size:$font-12;
+            background-color:$gray-100;
+            @include sizePtblr(6.44,12.88);
+            @include sizeMargin(16.1,16.1,0,0);
+            border-radius:rem(9.66);
+            justify-content: space-around;
+            flex-grow: 1;
+            &:last-child{
+                margin-right:0;
+            }
+          }
+          @include clearfix();
+        }
+        &_salary{
+           position: absolute;
+           top: rem(32.2);
+           right: rem(48.3);
+           text-align: right;
+           font-size:$font-14;
+           &_mon{
+               text-align: right!important;
+               color:$orange-font !important;
+               font-size:$font-16;
+           }
+           &_data{
+               text-align: right!important;
+               color:$gray-font;
+           }
+           p{
+            font-size:$font-14;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            word-wrap: break-word;
+            word-break: break-all;
+            line-height: rem(57.96);
+          }
+        }
+        &_tit{
+          h2{
+            height:rem(120);
+            line-height:rem(96.6);
+            font-size:$font-14;
+            border-bottom:1px solid $line;
+            margin-bottom:rem(32.2);
+            color:$gray-800;
+            i{
+              margin-right:rem(16.1);
+            }
+          }
+        }
+        &_btn,&_btn1{
+          margin-top:rem(32.2);
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          i{
+              font-size:$font-12;
+          }
+        }
+        &_img{
+           width:100%;
+           text-align: center;
+        }
+    }
+    &_sub{
+        @include sizePadding(8.05,8.05,8.05,8.05);
+        background:$white;
+        border-bottom:$line;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:1px solid $line;
+        div{
+          padding:0;
+          text-align: center;
+        }
+        li{
+          float: left;
+          a{
+              display: block;
+              @include sizeMargin(16.1,16.1,16.1,16.1);
+              @include sizePadding(8.05,16.1,8.05,16.1);
+              background:$white;
+              text-decoration:none;
+              border-radius:rem(8.05);
+              font-size:$font-14;
+              border:1px solid $gray-300;
+              &.active{
+                  background:$blue-deep;
+                  color:$white;
+              }
+           }
+         }
+        &_right{
+          a{
+            @include sizePadding(8.05,32.2,8.05,32.2);
+            font-size:$font-14;
+            color:$white!important;
+           }
+        }
+    }
+    &_flex{
+        display:flex;
+        justify-content:space-between;
+        align-items: stretch;
+    }
+    &_pic{
+        float: left;
+        @include sizeMargin(0,32.2,0,0);
+        img{
+            width:50px;
+            height:50px;
+        }
+    }
+    &_map{
+       background-color:$gray-100;
+    }
+    &_add{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:rem(32.2);
+        color:$gray-font;
+        border-bottom:1px solid $line;
+        i{
+           margin-right:rem(32.2);
+        }
+    }
+}
+
+//企业高级搜索
+.mod_pos{
+    &_hig{
+        position: fixed!important;
+        top:rem(161);
+        z-index:98;
+        width:100%;
+        background:$pgbg;
+    }
+    &_his{
+        z-index: 1000;
+        width: 100%;
+        max-height: rem(2012.5);
+        overflow: scroll;
+    }
+    &_hix{
+        position: fixed!important;
+        top:0;
+        z-index:999;
+        width:100%;
+        background:$pgbg;
+    }
+}

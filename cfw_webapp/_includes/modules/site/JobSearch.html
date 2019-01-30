@@ -1,0 +1,19 @@
+{% for jobs in site.data.jobsearch %}
+<div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+        <div class="weui-form-preview__item">
+            <div class="weui-form-preview__title">
+                <a href="{{ jobs.comurl }}">{{ jobs.comname }}</a></div>
+            <div class="weui-form-preview__rtext">
+                <p>展位</p>
+                <p class="text-warning">{{ jobs.num }}</p>
+            </div>
+        </div>
+        <ul>
+            {% for pos in jobs.postion %}
+              <li><a href="{{ pos.url }}">{{ pos.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endfor %}

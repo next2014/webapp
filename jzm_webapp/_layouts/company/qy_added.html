@@ -1,0 +1,231 @@
+---
+layout: pages
+title: 购买会员
+---
+<header>
+    <div class="header_bg bg3">
+        <a class="hd-lbtn mui-action-back" href="javascript:history.back()"><i class="header_top_l iconfont"></i></a>
+        <div class="header_h1">增值服务</div>
+    </div>
+</header>
+<link rel="stylesheet" href="../css/mui.picker.min.css" type="text/css" />
+<link rel="stylesheet" href="../css/style.css" type="text/css" />
+<script src="../js/compress.js" language="javascript"></script>
+<script>
+    mui.init();
+    var integral = '114';
+    var pro = '5';
+</script>
+<div id="app" class="mui-views">
+    <div class="mui-view">
+        <div class="mui-pages"></div>
+    </div>
+</div>
+<!--页面主结构结束-->
+<!--单页面开始-->
+<div id="main" class="mui-page">
+    <!--页面主内容区开始-->
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <section class="wap_member">
+                    <div class="clear"></div>
+                    <ul class="yun_m_tit_three">
+                        <li><a href="qy_rating.html">套餐会员</a></li>
+                        <li class="yun_m_tit_cur"><a href="qy_added.html">增值服务</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <!--增值包导航-->
+                    <div class="yun_added_tit" id="pack_header">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide  member_ms_added_cur">
+                                <a href="index.php?c=added&id=3">刷新服务包</a>
+                                <i class="Value_added_bg"></i>
+                            </li>
+                            <li class="swiper-slide  ">
+                                <a href="index.php?c=added&id=2">简历下载包</a>
+                                <i class="Value_added_bg"></i>
+                            </li>
+                            <li class="swiper-slide  ">
+                                <a href="index.php?c=added&id=4">全服务包</a>
+                                <i class="Value_added_bg"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="yun_added_box">
+                        <div class="clear"></div>
+                        <ul id="pack_type">
+                            <li class="value_added  value_added_cur">
+
+                                <div class="value_added_t">
+                                    <i class="value_added_t_c"></i>
+                                    <span class="value_added_t_c_n">
+                                        ￥9
+                                    </span>
+                                    <span style="font-size:12px;"> 尊享增值服务</span>
+                                </div>
+
+                                <div class="value_added_c">
+                                    <div class="value_added_sm">您将享受以下服务</div>
+
+                                    <div class="value_added_list">
+                                        <div class="value_added_list_c">刷新职位<i class="member_set_meal_mx_n">10</i>份</div>
+                                    </div>
+                                    <div class="value_added_list">
+                                        <div class="value_added_list_c">刷新兼职<i class="member_set_meal_mx_n">10</i>份</div>
+                                    </div>
+                                    <div class="value_added_sm">
+                                        此项增值服务
+                                        <span class="value_added_list_vip">
+                                            VIP会员仅需
+                                            <em class="com_dt_rage">
+                                                9
+
+
+
+                                            </em>元
+                                        </span>
+                                    </div>
+                                </div>
+                                <span id="serviceid" style="display: none;">3</span>
+                                <input type="hidden" id="server_price" value="9">
+                            </li>
+
+                            <input type="hidden" value="3" id="service_id" />
+                            <input type="hidden" id="r_price" value="9">
+                        </ul>
+
+
+                        <div class="member_set_meal_fk_fbox mt10">
+                            <div class="member_set_meal_fk">
+                                订单金额
+                                <span class="member_set_meal_fk_jg">￥
+                                    <span id="price">
+                                        9 </span>
+                                </span>
+                            </div>
+
+
+                            <div class="spread_box" style="border-bottom:1px solid #eee">
+                                积分抵扣
+                                <div class="spread_box_hs">当前共有
+                                    <font color="#3399FF"> 114 </font>
+                                    积分 (1元=10积分)
+                                </div>
+                                <div class="mui-switch mui-switch-mini" id="integral_switch_rating" style="position: absolute;right: 10px;top: 15px;">
+                                    <div class="mui-switch-handle"></div>
+                                </div>
+                                <div class="spread_box_hs_sl" id="spread_integral_box" style="display:none;">
+                                    积分抵扣数量：
+                                    <input type="text" onkeyup="checkNum('114','5');" oninput="myFunction(this)" value=""
+                                        class="member_set_meal_dk" placeholder="" id="integral_pay" name="integral_pay">
+                                </div>
+                            </div>
+                            <div class="spread_box_yfmoney">
+                                应付金额： <span class="spread_box_yfmoney_n">￥ <span id="order_price">
+                                        9 </span></span>
+                            </div>
+
+                        </div>
+
+                        <form action="" method="post" onsubmit="return pay_form();" id="paymentform">
+                            <div class="member_set_meal_fk_fbox mt10">
+                                <div class="member_set_meal_fk_fs member_set_meal_fk_fs_wx" onclick="paycheck('wxpay');">
+                                    <i class="wxpay member_set_meal_fk_xz"></i>微信支付
+                                </div>
+                                <div class="member_set_meal_fk_fs member_set_meal_fk_fs_zfb" onclick="paycheck('alipay');">
+                                    <i class="alipay member_set_meal_fk_xz"></i>支付宝
+                                </div>
+                            </div>
+                            <input type="hidden" value="3" id="id" name="comservice" />
+                            <input type="hidden" value="" id="paytype" name="paytype" />
+                            <input type="hidden" value="" id="dkjf" name="dkjf" />
+                            <input type="hidden" value="9" id="vip_price" name="price" />
+                            <div class="member_set_meal_fk_zf">
+                                <input type="submit" class="member_set_meal_fk_zf_bth" style="border:none" value="确认支付">
+                            </div>
+                        </form>
+                        <div class="member_set_meal_fk_zf" style="display: none;" id="integral_buy">
+                            <input type="button" class="member_set_meal_fk_zf_bth" style="border:none;color:white"
+                                value="确认支付" onclick="integral_add_buy();">
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <!--页面主内容区结束-->
+</div>
+<!--单页面结束-->
+<!--单页面结束-->
+<div id="couponhtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-card">
+                    <div class="mui-input-row mui-radio mui-left">
+                        <label>暂不使用</label>
+                        <input name="coupons" type="radio" id="coupon0" value="0">
+                        <input type="hidden" id="0" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/mui.picker.min.js" language="javascript"></script>
+<script src="../js/mui.view.js" language="javascript"></script>
+<script language="javascript">
+    mui.init();
+    var viewApi = mui('#app').view({
+        defaultPage: '#main'
+    });
+
+    var view = viewApi.view;
+    (function ($) {
+        //初始化单页的区域滚动
+        mui('.mui-scroll-wrapper').scroll();
+        //处理view的后退与webview后退
+        var oldBack = $.back;
+        $.back = function () {
+            if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+                viewApi.back();
+            } else { //执行webview后退
+                oldBack();
+            }
+        };
+        view.addEventListener('pageBeforeBack', function (e) {
+            var coupon = '',
+                couponid = '';
+            $('.coupon').each(function (i, arr) {
+                if (arr.checked == true) {
+                    coupon = arr.dataset.name;
+                    couponid = arr.value;
+                }
+            });
+            if (coupon) {
+                document.getElementById('couponshow').innerText = coupon;
+                document.getElementById('coupon').value = couponid;
+            } else {
+                document.getElementById('couponshow').innerText = '暂不使用';
+                document.getElementById('coupon').value = '';
+            }
+        });
+    })(mui);
+    $(document).ready(function () {
+        if (document.getElementById('main')) {
+            document.getElementById('main').addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+        }
+    })
+    window.onload = function () {
+        var mySwiper1 = new Swiper('#pack_header', {
+            freeMode: true,
+            slidesPerView: 'auto',
+            hashnav: true
+        });
+    }
+</script>
+<script src="../js/pay.js" language="javascript"></script>

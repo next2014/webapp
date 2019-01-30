@@ -1,0 +1,706 @@
+--- 
+layout: pages 
+title: 基本信息 
+---
+<!-- <script src="../js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="../js/public.js" language="javascript"></script>
+<script src="../js/mui.picker.js" language="javascript "></script>
+<script src="../js/mui.poppicker.js" language="javascript "></script>
+<script src="../js/reg_ajax.js" charset="utf-8" language="javascript"></script>
+<script src="../js/mui.min.js" language="javascript"></script>
+<script src="../js/mui.view.js" language="javascript"></script>
+<script src="../js/binding.js" language="javascript"></script>
+<script src="../js/compress.js" language="javascript"></script>  -->
+<header>
+    <div class="header_bg bg3">
+        <a class="hd-lbtn mui-action-back" href="javascript:history.back()"><i class="header_top_l iconfont"></i></a>
+        <div class="header_h1">基本信息</div>
+    </div>
+</header>
+<div style="display:none" id="gwshow">
+    <div class="wap_gw_box" style="top:-150px;">
+        <div class="wap_gw_t">招聘顾问</div>
+        <div class="wap_gw">
+            <div class="wap_gw_pic"><img src="../images/14937863721.PNG" style="width:50px;height:50px"></div>
+            <div class="wap_gw_kf_name"> 网站客服</div>
+            <div class="wap_gw_kf_fw">专业为您服务！</div>
+            <div class="wap_gw_pic_q">
+                <a target='_blank' href=''><img border='0' src='http://wpa.qq.com/pa?p=1:3384573415:12' alt='点击这里给我发消息'></a>
+            </div>
+        </div>
+        <div class="wap_gw_tel">
+            <div class="wap_gw_tel_n">电话：18026630116</div>
+            <div class="wap_gw_tel_p">手机：18026630116</div>
+            <div class="wap_gw_tel_w">微信：职日猫科技</div>
+            <div class="wap_gw_tel_q">Q &nbsp;Q：3384573415</div>
+            <div class="wap_gw_tel_bd"><a href="tel:18026630116"><i class="wap_gw_tel_bd_icon"></i>拨打电话</a></div>
+        </div>
+    </div>
+</div>
+<script>
+    function gwshow() {
+        var gwshow = $("#gwshow").html();
+        layer.open({
+            type: 1,
+            shadeClose: true,
+            content: gwshow
+        });
+    }
+    function addjobnum() {
+        return mui.toast('发布职位数量不足');
+    }
+</script>
+<link rel="stylesheet" href="../css/mui.picker.min.css" type="text/css">
+<link rel="stylesheet" href="../css/mui.poppicker.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/umeditor.min.css" type="text/css">
+<link rel="stylesheet" href="../css/cropper.css" type="text/css">
+<script src="../js/cropper.js" language="javascript"></script>
+<script src="../js/compress.js" language="javascript"></script>
+<div id="app" class="mui-views">
+    <div class="mui-view">
+        <div class="mui-pages"></div>
+    </div>
+</div>
+<!--页面主结构结束-->
+<!--单页面开始-->
+<div id="main" class="mui-page">
+    <!--页面主内容区开始-->
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="yunset_list">
+                    <li>
+                        <a href="#logohtml" class="yunset_list_max">
+                            <span class="yunset_list_name">企业logo</span>
+                            <span class="yunset_list_tx "><img id="logopic" src="" onerror="showImgDelay(this,'https://www.zhirimao.com/data/logo/20170418/14906489056.PNG',2);"
+                                    style="border-radius:0px; width:40px;height:40px;"></span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="yunset_list mt15">
+                    <li class="yunset_list_text"><span class="yunset_list_name">企业全称 </span><span class="yunset_list_commentary">
+                            <input type="text" name="name" id='name' value="" placeholder="请填写企业全称">
+                        </span>
+                    </li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">企业简称</span>
+                        <span class="yunset_list_commentary">
+                            <input type="text" name="shortname" id='shortname' value="" placeholder="请填写企业简称">
+                        </span>
+                    </li>
+                </ul>
+                <ul class="yunset_list mt15">
+                    <li class="yunset_list_select"><span class="yunset_list_name">从事行业</span><span class="yunset_list_commentary">
+                            <button id='hyPicker' class="mui-btn mui-btn-block" type='button' data-hy="">请选择</button>
+                            <input type="hidden" id="hy" name="hy" value="">
+                        </span></li>
+                    <li class="yunset_list_select"><span class="yunset_list_name">企业性质</span><span class="yunset_list_commentary">
+                            <button id='prComPicker' class="mui-btn mui-btn-block" type='button' data-pr="">请选择</button>
+                            <input type="hidden" id="pr" name="pr" value="">
+                        </span></li>
+                    <li class="yunset_list_select"><span class="yunset_list_name">企业规模</span><span class="yunset_list_commentary">
+                            <button id='munComPicker' class="mui-btn mui-btn-block" type='button' data-mun="">请选择</button>
+                            <input type="hidden" id="mun" name="mun" value="">
+                        </span></li>
+                    <li class="yunset_list_select"><span class="yunset_list_name">所在地</span><span class="yunset_list_commentary">
+                            <button id='cityPicker' class="mui-btn mui-btn-block" type='button' data-provinceid=""
+                                data-cityid="" data-three_cityid="">请选择</button>
+                            <input type="hidden" id="provinceid" name="provinceid" value="">
+                            <input type="hidden" id="cityid" name="cityid" value="">
+                            <input type="hidden" id="three_cityid" name="three_cityid" value="">
+                        </span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">公司地址</span><span class="yunset_list_commentary">
+                            <input type="text" name="address" id='address' value="" placeholder="请填写公司地址">
+                        </span></li>
+                </ul>
+
+                <ul class="yunset_list mt15">
+                    <li class="yunset_list_text"><span class="yunset_list_name">联 系 人</span><span class="yunset_list_commentary">
+                            <input type="text" name="linkman" id='linkman' value="" placeholder="请填写联系人"></span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">联系手机</span><span class="yunset_list_commentary">
+                            <input type="text" name="linktel" id="linktel" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"
+                                class="" placeholder="请填写手机号码">
+
+                        </span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">固定电话</span><span class="yunset_list_commentary">
+                            <input type="text" name="linkphone" id="linkphone" value="" onkeyup="this.value=this.value.replace(/[^0-9-]/g,'')"
+                                class="" placeholder="请填写固定电话">
+                        </span></li>
+                </ul>
+                <ul class="yunset_list mt15">
+                    <li>
+                        <a href="#contenthtml" id="contenteditor" class="">
+                            <span class="yunset_list_name">企业简介</span>
+                            <span class="yunset_list_commentary yunset_list_js" id="contentshow"></span>
+                        </a>
+                    </li>
+                    <textarea class="textAreaMsg tip contenttext" id="content" name="content" placeholder="请输入企业简介描述500字以内"></textarea>
+                    <!-- <textarea style="display:none" id="contenttext"></textarea> -->
+                </ul>
+                <div class="yunset_bth_box" style="background: transparent; border: none; padding:0px; padding-bottom:30px;">
+                    <a href="#addnexthtml" class="yun_wap_info_brief_tit_bc addnext">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="addnexthtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="yunset_list mt15">
+                    <li>
+                        <a href="#welfarehtml"><span class="yunset_list_name">公司福利</span><span class="yunset_list_commentary yunset_list_js" id="welfareshow">请选择</span></a>
+                    </li>
+                    <li class="yunset_list_text">
+                        <span class="yunset_list_name">企业邮箱</span>
+                        <span class="yunset_list_commentary">
+                            <div class=""><input type="text" name="linkmail" id="linkmail" value="494864068@qq.com" class="" placeholder="请填写联系邮箱，用于接受简历"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="yunset_list_name" style="width:150px">公司二维码<em class="yunset_xttip">(选填)</em></span>
+                        <span class="yunset_list_commentary " id="previewshow">
+                            <img id="previewimg" src="../images/yun_m_ewm.png" onerror="showImgDelay(this,'../images/yun_m_ewm.png',2);" style="border-radius:0px;width:20px;height:20px;">
+                        </span>
+                        <div class="yunset_list_file">
+                            <input type="file" id="pic" name="pic" onchange="previewImage(this,'preview')" accept="image/*" />
+                        </div>
+                        <input type='hidden' name='preview' value='' id='preview'>
+                    </li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">企业网址<em class="yunset_xttip">(选填)</em></span><span
+                            class="yunset_list_commentary">
+                            <input type="text" name="website" id="website" value="" placeholder="请填写企业网址" style="width:95%">
+                        </span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name" style="width:150px">联系人职位<em class="yunset_xttip">(选填)</em></span><span
+                            class="yunset_list_commentary">
+                            <input type="text" name="linkjob" id="linkjob" value="" placeholder="请填写联系人职位">
+                        </span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name" style="width:150px">联系人QQ<em class="yunset_xttip">(选填)</em></span><span
+                            class="yunset_list_commentary">
+                            <input type="text" name="linkqq" id="linkqq" value="" placeholder="请填写联系人QQ">
+                        </span></li>
+                    <li class="yunset_list_text"><span class="yunset_list_name">公交站点<em class="yunset_xttip">(选填)</em></span><span
+                            class="yunset_list_commentary">
+                            <input type="text" name="busstops" id="busstops" value="" placeholder="请填写公交站点">
+                        </span></li>
+                </ul>
+                <ul class="yunset_list mt15">
+                    <li><span class="yunset_list_name">创办时间<em class="yunset_xttip">(选填)</em></span><span class="yunset_list_commentary">
+                            <button id='sdatePicker' data-options='{"type":"date","value":"2018-1-1","beginYear":1900,"endYear":2018}'
+                                class="btn mui-btn mui-btn-block" type="button">请选择创办时间</button>
+                            <input type="hidden" id="sdate" name="sdate" value="">
+                        </span></li>
+
+                    <li>
+                        <a href="#moneyhtml">
+                            <span class="yunset_list_name">注册资金<em class="yunset_xttip">(选填)</em></span>
+                            <span class="yunset_list_commentary" id="moneyshow">
+                                请填写注册资金
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="yunset_bth_box"> <button id="infosubmit" type="button" class="mui-btn mui-btn-block mui-btn-primary">保 存</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--页面主内容区结束-->
+</div>
+<!--单页面结束-->
+<!-- <div id="contenthtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="yun_wap_info_brief">
+                    <div class="yun_wap_info_brief_c">
+                        <div class="yun_wap_addresume_box_nexttit"> 企业简介 </div>
+                        <textarea class="textAreaMsg tip contenttext" id="content" name="content" placeholder="请输入企业简介描述500字以内"></textarea>
+                    </div>
+                    <a class="yun_wap_info_brief_tit_bc mui-action-back">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="welfarehtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="yun_info_fl">
+                    <div class="yun_info_fl_c">
+                        <div class="yun_wap_addresume_box_nexttit">福利待遇</div>
+                        
+                        <form class="" id="addwelfarelist">
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>法定节假日 </label>
+                                    <input name="welfare[]" value="98" type="checkbox" class="welfare" data-name="法定节假日">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>休假制度 </label>
+                                    <input name="welfare[]" value="97" type="checkbox" class="welfare" data-name="休假制度">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>奖励计划 </label>
+                                    <input name="welfare[]" value="95" type="checkbox" class="welfare" data-name="奖励计划">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>年终奖金 </label>
+                                    <input name="welfare[]" value="94" type="checkbox" class="welfare" data-name="年终奖金">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>综合补贴 </label>
+                                    <input name="welfare[]" value="93" type="checkbox" class="welfare" data-name="综合补贴">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>包吃住 </label>
+                                    <input name="welfare[]" value="92" type="checkbox" class="welfare" data-name="包吃住">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>五险一金 </label>
+                                    <input name="welfare[]" value="91" type="checkbox" class="welfare" data-name="五险一金">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>三险一金 </label>
+                                    <input name="welfare[]" value="90" type="checkbox" class="welfare" data-name="三险一金">
+                                </div>
+                            </div>
+                            <div class="yun_info_fl_list">
+                                <div class="mui-input-row mui-checkbox">
+                                    <label>销售奖金 </label>
+                                    <input name="welfare[]" value="96" type="checkbox" class="welfare" data-name="销售奖金">
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="yun_info_fl_zdy_tip">您也可以自定义福利</div>
+                        <div class="yun_info_fl_zdy"><input type="text" value="" class="" tabindex="1000" id="addwelfare" placeholder="请输入福利名称">
+                            <div class="yun_info_fl_zdy_tj"> <button type="button" class="addwelfarebox">+ 添加福利</button></div>
+                        </div>
+                        <div class="">
+                            <a class="yun_wap_info_brief_tit_bc mui-action-back">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="moneyhtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="yun_info_fl">
+                    <div class="yun_info_fl_c">
+                        <div class="yun_wap_addresume_box_nexttit">注册资金</div>
+                        <div class="yun_info_fl_zj">
+                            <div class="yun_info_fl_zj_c"> <button id='moneytypeComPicker' class="mui-btn mui-btn-block"
+                                    type='button' data-moneytype="1">人民币</button><input type="hidden" id="moneytype"
+                                    name="moneytype" value="1"></div>
+                            <input type="text" id="money" name="money" value="" class="yun_wap_addtel_a" onKeyUp="this.value=this.value.replace(/[^0-9]/g,'')"
+                                placeholder="注册资金">
+                            <span class="yun_info_fl_zj_dw moneyname">万元</span>
+                        </div>
+                        <a class="yun_wap_info_brief_tit_bc mui-action-back">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="logohtml" class="mui-page">
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="photo_i_box_v">
+                    <div id="showResult">
+                        <div id="changeAvatar" class="photo_i_box">
+                            <img src="" onerror="showImgDelay(this,'../images/14906489056.PNG',2);" width="120" height="120">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="photo_xz"><input id="image" type="file" accept="image/*" />选择上传logo</div>
+                        <div class="yunset_identity_msg"><i class="yunset_identity_msg_icon"></i>选择上传logo点击提交按钮即可上传</div>
+                        <div class="photo_tj">
+                            <input type='hidden' name="txt" id="uimage" value="">
+                            <input name="submit" type="button" onclick="photo()" value="提交" class="yunset_bth" />
+                        </div>
+                    </div>
+                    <div id="showEdit" style="display: none;width:100%;height: 100%;position: absolute;top:0;left: 0;z-index: 9;">
+                        <div class="photo_cz_bth">
+                            <button class="mui-btn" data-mui-style="fab" id='cancleBtn'>取消</button>
+                            <button class="mui-btn" data-mui-style="fab" onclick="javascript:$('#report > image').cropper('rotate',90)">旋转</button>
+                            <div class="photo_cz_bth_qd">
+                                <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id='confirmBtn'>确定</button>
+                            </div>
+                        </div>
+                        <div id="report"><img src="" alt="Picture" id="readyimg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    weburl = " ";
+    var formData = new FormData(),
+        newuploadpic;
+</script>
+<script src="../js/mui.picker.min.js" language="javascript"></script>
+<script src="../js/mui.poppicker.js" language="javascript"></script>
+<script src="../js/city.cache.js" language="javascript"></script>
+<script src="../js/mui.view.js" language="javascript"></script>
+<script src="../js/umeditor.config.js"></script>
+<script src="../js/umeditor.min.js"></script>
+<script src="../js/cominfo.js" language="javascript"></script>
+<script src="../js/category.js" language="javascript"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        if (document.getElementById('main')) {
+            document.getElementById('main').addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+        }
+        if (document.getElementById('addnexthtml')) {
+            document.getElementById('addnexthtml').addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+        }
+    })
+    var hyData = [];
+    ''
+    hyData.push({
+        value: '35',
+        text: '互联网/电子商务'
+    })
+    ''
+    hyData.push({
+        value: '837',
+        text: 'IT服务（系统/数据/维护）'
+    })
+    ''
+    hyData.push({
+        value: '835',
+        text: '计算机软件/硬件'
+    })
+    ''
+    hyData.push({
+        value: '862',
+        text: '交通/运输/物流'
+    })
+    ''
+    hyData.push({
+        value: '861',
+        text: '航空/航天研究与制造'
+    })
+    ''
+    hyData.push({
+        value: '860',
+        text: '医疗设备/器械'
+    })
+    ''
+    hyData.push({
+        value: '859',
+        text: '医药/生物工程'
+    })
+    ''
+    hyData.push({
+        value: '858',
+        text: '办公用品及设备'
+    })
+    ''
+    hyData.push({
+        value: '857',
+        text: '印刷/包装/造纸'
+    })
+    ''
+    hyData.push({
+        value: '856',
+        text: '仪器仪表及工业自动化'
+    })
+    ''
+    hyData.push({
+        value: '855',
+        text: '加工制造（原料加工/模具）'
+    })
+    ''
+    hyData.push({
+        value: '854',
+        text: '大型设备/机电设备/重工业'
+    })
+    ''
+    hyData.push({
+        value: '864',
+        text: '医疗/护理/美容/保健'
+    })
+    ''
+    hyData.push({
+        value: '865',
+        text: '酒店/餐饮'
+    })
+    ''
+    hyData.push({
+        value: '866',
+        text: '旅游/度假'
+    })
+    ''
+    hyData.push({
+        value: '875',
+        text: '农/林/牧/渔'
+    })
+    ''
+    hyData.push({
+        value: '874',
+        text: '学术/科研'
+    })
+    ''
+    hyData.push({
+        value: '873',
+        text: '政府/公共事业/非盈利机构'
+    })
+    ''
+    hyData.push({
+        value: '872',
+        text: '环保'
+    })
+    ''
+    hyData.push({
+        value: '871',
+        text: '电气/电力/水利'
+    })
+    ''
+    hyData.push({
+        value: '870',
+        text: '石油/石化/化工'
+    })
+    ''
+    hyData.push({
+        value: '869',
+        text: '能源/矿产/采掘/冶炼'
+    })
+    ''
+    hyData.push({
+        value: '868',
+        text: '娱乐/体育/休闲'
+    })
+    ''
+    hyData.push({
+        value: '867',
+        text: '媒体/出版/影视/文化传播'
+    })
+    ''
+    hyData.push({
+        value: '853',
+        text: '汽车/摩托车'
+    })
+    ''
+    hyData.push({
+        value: '852',
+        text: '工艺美术/收藏品/奢侈品'
+    })
+    ''
+    hyData.push({
+        value: '45',
+        text: '网络游戏'
+    })
+    ''
+    hyData.push({
+        value: '44',
+        text: '通信/电信/网络设备'
+    })
+    ''
+    hyData.push({
+        value: '43',
+        text: '通信/电信运营、增值服务'
+    })
+    ''
+    hyData.push({
+        value: '42',
+        text: '电子技术/半导体/集成电路'
+    })
+    ''
+    hyData.push({
+        value: '41',
+        text: '基金/证券/期货/投资'
+    })
+    ''
+    hyData.push({
+        value: '40',
+        text: '金融/保险/银行'
+    })
+    ''
+    hyData.push({
+        value: '38',
+        text: '信托/担保/拍卖/典当'
+    })
+    ''
+    hyData.push({
+        value: '37',
+        text: '房地产/建筑/建材/工程'
+    })
+    ''
+    hyData.push({
+        value: '36',
+        text: '家居/室内设计/装饰装潢'
+    })
+    ''
+    hyData.push({
+        value: '839',
+        text: '物业管理/商业中心'
+    })
+    ''
+    hyData.push({
+        value: '840',
+        text: '专业服务/咨询(财会/法律/人力资源等)'
+    })
+    ''
+    hyData.push({
+        value: '841',
+        text: '广告/会展/公关'
+    })
+    ''
+    hyData.push({
+        value: '850',
+        text: '教育/培训'
+    })
+    ''
+    hyData.push({
+        value: '849',
+        text: '租赁服务'
+    })
+    ''
+    hyData.push({
+        value: '848',
+        text: '零售/批发'
+    })
+    ''
+    hyData.push({
+        value: '847',
+        text: '贸易/进出口'
+    })
+    ''
+    hyData.push({
+        value: '846',
+        text: '耐用消费品（服饰/纺织/皮革/家具/家电）'
+    })
+    ''
+    hyData.push({
+        value: '845',
+        text: '快速消费品（食品/饮料/烟酒/日化）'
+    })
+    ''
+    hyData.push({
+        value: '844',
+        text: '外包服务'
+    })
+    ''
+    hyData.push({
+        value: '843',
+        text: '检验/检测/认证'
+    })
+    ''
+    hyData.push({
+        value: '842',
+        text: '中介服务'
+    })
+    ''
+    hyData.push({
+        value: '878',
+        text: '其他'
+    })
+    ''
+    var prData = [];
+    ''
+    prData.push({
+        value: '20',
+        text: '外资企业'
+    })
+    ''
+    prData.push({
+        value: '21',
+        text: '合资企业'
+    })
+    ''
+    prData.push({
+        value: '23',
+        text: '民营企业'
+    })
+    ''
+    prData.push({
+        value: '24',
+        text: '股份制企业'
+    })
+    ''
+    prData.push({
+        value: '25',
+        text: '集体企业'
+    })
+    ''
+    prData.push({
+        value: '79',
+        text: '上市公司'
+    })
+    ''
+    prData.push({
+        value: '80',
+        text: '国家机关'
+    })
+    ''
+    prData.push({
+        value: '81',
+        text: '事业单位'
+    })
+    ''
+    prData.push({
+        value: '82',
+        text: '其他'
+    })
+    ''
+    var munData = [];
+    ''
+    munData.push({
+        value: '27',
+        text: '10人以下'
+    })
+    ''
+    munData.push({
+        value: '28',
+        text: '10-50人'
+    })
+    ''
+    munData.push({
+        value: '29',
+        text: '50-200人'
+    })
+    ''
+    munData.push({
+        value: '30',
+        text: '200-500人'
+    })
+    ''
+    munData.push({
+        value: '31',
+        text: '500-1000人'
+    })
+    ''
+    munData.push({
+        value: '32',
+        text: '1000人以上'
+    })
+    ''
+</script>

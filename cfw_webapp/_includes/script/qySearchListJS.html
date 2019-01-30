@@ -1,0 +1,16 @@
+ <script>
+$(function() {
+    var hBanner = $('.mod_pos_item_text').innerHeight();
+    var cbHeight = hBanner - 50;
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= cbHeight) {
+            $(".qySearchSelech").addClass('mod_pos_hig');
+            // $(".mod_pos_item_ind").attr('style','display:none');
+        }else{
+            $(".qySearchSelech").removeClass('mod_pos_hig');
+            // $(".mod_pos_item_ind").removeAttr('style','display:none'); 
+        }
+    });
+});
+</script>

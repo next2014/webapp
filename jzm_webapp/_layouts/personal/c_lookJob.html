@@ -1,0 +1,53 @@
+---
+layout: default
+title: 职位浏览记录
+---
+<div class="body_wap">
+    <header class="header_h">
+        <div class="header_fixed">
+            <div class="header">
+                <div class="header_userbg bg3">
+                    <a class="hd-lbtn" href="javascript:history.back();"><i class="header_top_l iconfont"></i></a>
+                    <div class="header_h1">职位浏览记录</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main_member_cot_box">
+        <div class="wap_member_comp_h1"><span>浏览的职位</span></div>
+        <div class="com_member_hr">
+            <div class="com_member_hr_name">
+                <a href="c_job_view.html" class="wap_member_com_name  com_member_hr_cblue">教师</a>
+                <span class="com_member_hr_date">
+                    <span class="wap_member_post_list_zt ap_member_post_list_zt_gq">招聘中</span>
+                </span>
+            </div>
+            <div class="user_member_box">
+                <div class="com_member_hr_p1"><a href="c_company_show.html">惠州新爱婴早教下埔中心</a></div>
+                <div class="com_member_hr_p1"><span class="member_c9">地区：</span>广东-惠州&nbsp;&nbsp;&nbsp;<span class="member_c9">薪资：</span><span class="wap_member_msg_p1_cf">面议</span></div>
+                <div class="com_member_hr_p1"><span class="member_c9">浏览时间：</span>2018-11-21</div>
+            </div>
+            <div class="com_member_hr_cz">
+                <a href="javascript:void(0)" onclick="layer_del(&#39;确定要删除？&#39;, &#39;index.html&#39;);" class="yun_member_hr_bth">删除</a>
+                <a href="c_job_view.html" class="yun_member_hr_bth">查看详情</a>
+            </div>
+        </div>
+    </div>
+    <div class="pages">
+        <a href="index.php?c=look_job&amp;page=1">上一页</a>
+        <select onchange="toPages()" id="pageChange">
+            <option value="index.php?c=look_job&amp;page=1" selected="selected">1</option>
+            <option value="index.php?c=look_job&amp;page=2">2</option>
+        </select>
+        <a href="index.php?c=look_job&amp;page=2">下一页</a><em>共2页</em>
+        <script>
+            function toPages(url) {
+                var obj = document.getElementById("pageChange");
+                window.location.href = obj.options[obj.selectedIndex].value;
+            }
+        </script>
+    </div>
+</div>
+<div id="hm_t_undefined" class="hm-t-container">
+    <div class="hm-t-go-top" style="display: none;"></div>
+</div>

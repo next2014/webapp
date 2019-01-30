@@ -1,0 +1,77 @@
+//eTicket
+
+.OR_all{
+	padding:0.5rem;
+}
+.hy-wrap {
+	box-shadow: 0 0 5px #999;
+}
+.hy-qcode {
+	width: 100%;
+	margin:1rem auto;
+    text-align: center;
+}
+.hy-qcode img {
+	width: 80%;
+}
+.or_main{
+	width: 99.5%!important;
+	padding:20px!important;
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: #dedede;
+	border-left-color: #dedede;
+	border-right-color: #dedede;
+	border-top:0; 
+}
+.or_main h3{
+	line-height:1rem;
+	margin:0; 
+	padding:0;
+}
+.or_main h3 label{
+	font-size:0.7rem;
+	color:#ffa10d;
+	font-weight:normal;
+}
+.or_main h3 span{
+	font-size:0.7rem;
+	color:#ffa10d;
+}
+.or_main p{
+	color: #90918F;
+	font-size: 1rem;
+	line-height: 1.8;
+	text-align: justify;
+}
+.row .hy-button {
+	min-width: 0;
+	font-size:0.6rem;
+}
+.code_head {
+	width: 100%;
+	height:auto;
+	margin: 0 auto;
+	position: relative;
+}
+.code_head img {
+	width: 100%;
+ }
+.code_head span {
+	width: 60%;
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	font-size:1rem;
+	color: #fff;
+	text-align: center;
+}
+.col-6{
+	padding: 0;
+}
+.col-6:first-child{
+    padding-right:10px;
+}
+.col-6:last-child{
+    padding-left:10px;
+}

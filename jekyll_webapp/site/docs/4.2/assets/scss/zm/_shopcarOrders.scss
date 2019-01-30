@@ -1,0 +1,238 @@
+//公共borderTop
+%borderTop {
+   border-top:10px solid #f8f9fa;
+}
+%bottomBtn {
+    padding:0;
+    text-align: center;
+    display: block;
+    color:#fff;
+    background-color: #ef3239;
+    height:45px;
+    line-height:45px;
+    text-decoration:none;
+}
+
+
+//订单页面
+.shopcarOrders{
+     margin-top:51px;
+     margin-bottom:60px;
+     font-size:85%;
+     i{
+       color: #999;
+     }
+     .youJian{
+        color: #ddd;
+        display: block;
+        text-align: center;
+     }
+     .item{
+         display: flex;
+         align-items: center; 
+        p{
+            margin-bottom:0;
+            color: #999;
+            strong{
+              color:#333;
+            }
+         }
+         small{
+            font-size:12px;
+            color:#999;
+         }
+     }
+     .item1{
+       h2{
+          font-size:16px;
+       }
+       p{
+         margin-bottom:0;
+         small{
+             font-size:14px;
+         }
+         &.price{
+              font-size:18px;
+              em{
+                 font-style: normal;
+              }
+         }
+       }
+        small{
+           color:#999;
+        }
+     }
+     //收货地址
+     .jsAddr{
+        position: relative;
+        .btn{
+          font-size:12px;
+          padding:0 10px;
+        }
+        p{
+          &:last-child{
+            margin-bottom:0;
+            font-size:14px;
+            color: #333;
+          }
+        }
+        .dizi{
+          i{
+            color: #999;
+          }
+        }
+        .address_border{
+            // padding-bottom: 5px;
+            // background: #fff url(../img/addressBorder.png);
+            // background-size: 64px 7px;
+            height: 2px;
+            background-repeat: repeat-x;
+            background-size: 60px 10px;
+            background-image: linear-gradient(45deg,#FCD0C9 20%,#fff 20%,#fff 35%,#C7E6F7 35%,#C7E6F7 65%,#fff 65%,#fff 80%,#FCD0C9 80%);
+        }
+        .newAddress-text{
+            font-size:18px;
+            color: #dc3545;
+        }
+        a{
+          text-decoration:none;
+        }
+    }
+    //跟换收货地址
+    .select-Addr-btn{
+        a{
+            @extend %bottomBtn;
+        }
+    }
+
+    //钱包
+    .lkgoumai{
+        a{
+          @extend %bottomBtn;
+        }
+    }
+
+    //支付方式
+    .paymentMethod{
+        @extend %borderTop;
+    }
+
+    //订单信息
+    .info{
+        @extend %borderTop;
+        .giveMessage{
+           background-color:#efefef;
+           input{
+             border-radius:30px;
+           }
+        }
+       .item{
+        .proCon{
+            h2{
+                font-size:16px;
+            }
+            small{
+                font-size:12px;
+            }
+            p{
+                margin-bottom:0;
+                i{
+                    width: 15px;
+                    height:15px;
+                    line-height:15px;
+                    display: block;
+                    font-size:10px;
+                }
+                span{
+                    color: #999;
+                    font-size:12px; 
+                }
+                .price{
+                    font-size:20px;
+                }
+            }
+        }
+        .guige{
+            span{
+                color:#999;
+            }
+          }
+        p{
+            margin-bottom:0;
+         }
+         small{
+            color:#999;
+         }
+        }
+    }
+
+    //优惠券和钱包
+   .bondMoney{
+        @extend %borderTop;
+    }
+
+    //商品金额及运费
+    .amountFreight{
+         @extend %borderTop;
+         .item{
+             em{
+                 font-style: normal;
+             }
+             small{
+                 color:#999;
+             }
+         }
+    }
+
+    //提交订单
+    .gwCarJiesuan{
+        width: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        position: fixed;
+        bottom:0;
+        .d-flex{
+            width:100%;
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            .price{
+              color:#999;
+              em{
+                font-size:22px;
+                font-style: normal;
+                color:#dc3545;
+              }
+            }
+            .total{
+                p{
+                 font-size: 12px;
+                   span{
+                    font-size:18px;
+                   }
+                }
+            }
+            .jiesuan {
+                display: block;
+                width: 35%;
+                padding:1.5% 0;
+                font-size: 16px;
+                line-height: 2.2rem;
+                text-align: center;
+                background-color: #ef3239;
+                background-size: 100% 100%;
+                height: 100%;
+                a{
+                    color:#fff;
+                    text-decoration:none;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    //编辑收货地址和新建地址
+    .selectCity{
+        position: relative;
+    }
+}

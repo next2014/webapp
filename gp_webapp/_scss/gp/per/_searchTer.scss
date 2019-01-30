@@ -1,0 +1,182 @@
+//搜素页
+.searchTer{
+    background:$pgbg;
+    margin-top: rem(289.8);
+    min-height:rem(2382.8);
+    margin-bottom:rem(161);
+}
+//职位筛选
+.mod{
+    &_pop{
+      padding:rem(48.3);
+      @include sizePtblr(0,48.3);
+      &_tit{
+          font-size:$font-14;
+          height:rem(128.8);
+          line-height:rem(128.8);
+          span{
+              color:$blue-deep;
+          }
+      }
+      @include clearfix();
+      &_item{
+          li{
+             float: left;
+             a{
+                 display: block;
+                 @include sizeMargin(0,32.2,32.2,0);
+                 @include sizePadding(8.05,32.2,8.05,32.2);
+                 background:$white;
+                 text-decoration:none;
+                 border-radius:rem(8.05);
+                 font-size:$font-14;
+                 border:1px solid $gray-300;
+                 &.active{
+                     background:$blue-deep;
+                     color:$white;
+                     border:1px solid $blue-deep;
+                 }
+             }
+           }
+           @include clearfix();
+        }
+    }
+  }
+
+
+%offcanvas-collapse{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right:0;
+    width: 100%;
+    overflow-y: auto;
+    visibility: hidden;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+    &.open {
+        left: 0;
+        visibility: visible;
+    }
+    .offcanvas-collapse-bg{
+        width:90%;
+        margin-left:10%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0; 
+        z-index: 1100;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2), inset 0 0 0 rgba(0, 0, 0, 0.2);
+        ul{
+          padding:0;
+          li{
+            list-style-type: none;
+          }
+        }
+        .btn-bottom{
+            width: 90%;
+            position: fixed;
+            bottom: 0;
+            .btn{
+              border-radius:0;
+            }
+        }
+        h2{
+            height:rem(112.7);
+            line-height:rem(112.7);
+            font-size:$font-14;
+            color:$gray-800;
+            margin-bottom:0;
+        }
+        .form-control{
+            line-height:1.2;
+        }
+        a{
+            text-decoration: none;
+            .more{
+                height:rem(112.7);
+                line-height:rem(112.7);
+                color:#999;
+            }
+        }
+    }
+}
+
+//地区筛选
+.offcanvas-collapse,.offcanvas-collapse3,.offcanvas-collapse4 {
+    @extend %offcanvas-collapse;
+    z-index: 1050;
+}
+.offcanvas-collapse1 {
+    @extend %offcanvas-collapse;
+    z-index: 1060;
+    #accordion{
+       height:96%;
+       overflow: scroll;
+      .btn{
+         width:100%;
+         text-align: left;
+       }
+      .btn-link{
+         &:hover{
+              text-decoration: none;
+         }
+         &:active{
+            text-decoration: none;
+         }
+      }
+    }
+    .collapse {
+        li{
+          i{
+            color:#999;
+          }
+        }
+    }
+}
+.offcanvas-collapse2{
+    @extend %offcanvas-collapse;
+    z-index: 1060;
+    .pinpai{
+        height: 94%;
+        overflow: scroll;
+        ul{
+          height: 94%;
+          overflow: scroll;
+          padding-bottom: 20px;
+          li{
+            text-align: center;
+            padding:0;
+            a{
+                display: block;
+                margin:5px;
+                padding:5px;
+                background:#eee;
+                text-decoration:none;
+                border-radius:5px;
+                &.active{
+                    background: #dc3545;
+                    border-color: #dc3545;
+                    color:#fff;
+                }
+              }
+           }
+        }
+    }
+}
+//职业筛选
+.offcanvas-collapse4{
+     top:96px!important;
+    .offcanvas-collapse-bg{
+        width:100%!important;
+        top: 96px!important;
+        max-height:rem(2511.6);
+        overflow: scroll;
+        padding-bottom:rem(135.24);
+        .btn-bottom{
+            width:100%!important;
+        }
+    }
+}

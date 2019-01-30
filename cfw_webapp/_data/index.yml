@@ -1,0 +1,44 @@
+- name: 刘亦菲
+  sex: 男
+  old: 38
+  emp: 15
+  edu: 大学
+  city: 惠城区
+  sch: 辽宁阜新工业学校
+  imgurl: ../static/images/avatar_default_boy.png
+
+- name: baba
+  sex: 女
+  old: 18
+  emp: 10
+  edu: 高中
+  city: 惠城区
+  sch: 辽宁阜新工业学校
+  imgurl: ../static/images/avatar_default_girl.png
+
+- name: babg
+  sex: 男
+  old: 20
+  emp: 15
+  edu: 初中
+  city: 惠城区
+  sch: 辽宁阜新工业学校
+  imgurl: ../static/images/avatar_default_boy.png
+
+- name: babg
+  sex: 女
+  old: 20
+  emp: 15
+  edu: 小学
+  city: 惠城区
+  sch: 辽宁阜新工业学校
+  imgurl: ../static/images/avatar_default_girl.png
+
+- name: babg
+  sex: 男
+  old: 20
+  emp: 15
+  edu: 中专
+  city: 惠城区
+  sch: 辽宁阜新工业学校
+  imgurl: ../static/images/avatar_default_boy.png

@@ -1,0 +1,78 @@
+ //智能推荐和订阅
+ .mod{
+    &_tab{
+        border-top:1px solid $line;
+    }
+    &_int{
+        @extend %bgColor;
+        display: flex;
+        align-items: center;
+        font-size:$font-16;
+        color:$gray-600;
+        border-bottom:1px solid $line;
+        a{
+            text-decoration: none;
+        }
+        &_tab{
+            &.weui-bar__item--on{
+               color:$blue-deep;
+               position: relative;
+               .bottom_line{
+                    height:rem(9.66);
+                    width: 20.5%;
+                    margin: 0 auto;
+                    background:$blue-deep;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+               }
+            }
+            &_text{
+                max-width:90%;
+                height:rem(144.9);
+                line-height:rem(144.9);
+                margin:0 auto;
+                display: block;
+                font-size:$font-14;
+            }
+            &_set{
+                max-width:90%;
+                height:rem(144.9);
+                line-height:rem(144.9);
+                margin:0 auto;
+                margin-right:rem(16.1);
+                vertical-align: middle;
+            }
+            &_fix{
+                width:100%;
+                position: fixed;
+                top:rem(161);
+                left:0;
+                z-index:9;
+                a{
+                  width: 33.33%;
+                  text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// .mod_int_tab{
+//     &.weui-bar__item--on{
+//       color: #0f78bc;
+//       position: relative;
+//       .bottom_line{
+//           height: 0.15094rem;
+//           width: 20.5%;
+//           margin: 0 auto;
+//           background: #0f78bc;
+//           position: absolute;
+//           left: 0;
+//           right: 0;
+//           bottom: 0;
+//       }
+//     }
+// }
+  

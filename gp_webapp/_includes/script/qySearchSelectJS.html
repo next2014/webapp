@@ -1,0 +1,18 @@
+<script>
+    var $mpiBtn = $('.showBtn');
+    var $mpiInd = $('.showHight');
+    var showHeight = "530";
+    var $mpiInd1 = $('.editShowHight');
+    var hBanner = $('.mod_pos_item_text').innerHeight();
+    var cbHeight = hBanner - 50;
+    var editShowHeight = "0";
+    $mpiBtn.on('click',function(){
+        if($mpiInd.height() == showHeight){
+            $mpiInd.height('auto');
+            $('.showBtn i').attr("class","fa fa-angle-double-down");
+        }else{
+            $mpiInd.height(showHeight);
+            $('.showBtn i').attr("class","fa fa-angle-double-up");
+        }
+    });
+ </script>

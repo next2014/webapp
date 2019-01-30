@@ -1,0 +1,18 @@
+---
+layout: pages
+title: 浏览简历
+---
+<div class="qybroRes">
+  <div class="weui-cells">
+	{% for brores in site.data.qybroRes %}
+	<a href="qyResumeView.html" class="weui-cell">
+	 <div class="weui-cell__bd">
+		<h2>{{ brores.name }}</h2>
+		<p>
+		  <span>浏览 <em>{{ brores.rednum }}</em> 次</span> | <span>{{ brores.reddata }}</span> | <span><em>{{ brores.status }}</em></span>
+		</p>
+	 </div>
+	</a>
+	{% endfor %}
+  </div>
+</div>

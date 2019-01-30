@@ -1,0 +1,41 @@
+.index{
+    background:$pgbg;
+    margin-bottom:rem(161);
+    .weui-media-box__hd{
+        img{
+          width:60px;
+          height:60px;
+          margin-right: .8em;
+          border-radius: 30px;
+        }
+    }
+    .weui-media-box__info{
+        margin-top:0!important;
+    }
+    .weui-cells__tips{
+        padding-left:0!important;
+        padding-right:0!important;
+        margin-top:0!important;
+    }
+    .weui-media-box {
+        display: flex;
+    }
+    .weui-panel__bd{
+        a{
+          text-decoration:none;
+        }
+    }
+    .ind_rel_btn{
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    }
+    .prolistContent{
+      .weui-cells__title{
+         padding-top:0;
+         margin-top:rem(32.2);
+         margin-bottom:rem(32.2);
+      }
+    }
+    .mod_bbs_msg{
+        margin-bottom: 0;
+    }
+}

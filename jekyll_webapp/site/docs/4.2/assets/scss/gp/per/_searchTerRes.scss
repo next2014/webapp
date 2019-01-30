@@ -1,0 +1,31 @@
+.searchTerRes{
+    background:$pgbg;
+    margin-top: rem(161);
+    min-height:rem(2382.8);
+}
+
+.mod_ser{
+    background:$white;
+    &_list{
+      li{
+        height:rem(128.8);
+        line-height:rem(128.8);
+        font-size:$font-14;
+        border-bottom:1px solid $line;
+        color:$gray-600;
+        @include sizeMtblr(0,64.4);
+        span{
+           color:$blue-deep;
+        }
+        i{
+           margin-right:rem(16.1);
+           color:$gray-400;
+        }
+        a{
+           display: block;
+           color:$gray-600;
+           text-decoration:none;
+        }
+      }
+    }
+}

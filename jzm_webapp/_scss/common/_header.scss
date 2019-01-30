@@ -1,0 +1,45 @@
+
+.header{
+  &_h{
+    width:100%;
+    height:55px;
+  }
+  &_fixed{
+    width:100%;
+    height:55px; 
+    position:fixed;
+    left:0px;
+    top:0px; 
+    z-index:10000000;
+  }
+  &_bg{
+    width:100%;
+    height:55px;
+    background:#3366cc; 
+    position:relative; 
+    z-index:10;
+  }
+  &_userbg{
+    width:100%;
+    height:55px; 
+    position:relative; 
+    z-index:10;
+    background:linear-gradient(90deg, #000051, #af477e);
+  }
+  &_fx{
+    &_search{
+      width:70%; 
+      margin:0 auto;
+    }
+  }
+  &_p{
+    &_z{
+      width:70%;
+      color: #fff; 
+      text-align:center; 
+      height:55px;
+      line-height: 55px;
+      font-size: 18px;
+    }
+  }
+}

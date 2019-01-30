@@ -1,0 +1,36 @@
+.mineDelivery{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    .weui-navbar{
+        position: fixed;
+        top: 50px;
+    }
+    .weui-media-box__info{
+        margin-top:10px;
+        padding-bottom:0;
+    }
+    .weui-form-preview__label{
+        font-size:$font-16;
+        color:$gray-800;
+    }
+    .weui-form-preview__item{
+        display: flex;
+        justify-content: space-between;
+    }
+    .weui-form-preview__bd{
+        padding:10px;
+        a{
+          text-decoration: none;
+        }
+    }
+    .weui-form-preview{
+        margin-bottom:rem(48.3);
+    }
+    .bPage{
+        padding-left:rem(32.2);
+        padding-right:rem(32.2);
+        padding-bottom:rem(64.4);
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,22 @@
+<div class="pro_sea">
+    <div class="pro_sea_pin">
+        <ul class="row">
+            <li><a class="active">网页设计</a></li>
+            <li><a>前端开发</a></li>
+            <li><a>平面设计</a></li>
+        </ul>
+    </div>
+</div>
+{% for xc in site.data.qyXc %}
+<div class="mod_pos_item">
+    <img src="{{ xc.imgUrl }}" class="mod_pos_item_img"/>
+    <div class="mod_pos_flex mt-1">
+      <p class="mod_pos_item_ind" style="height:25px">
+         {{ xc.title }}	
+      </p>
+      <span class="mod_pos_item_btn">
+        <i class="fa fa-angle-down"></i>
+      </span>
+    </div>
+</div>
+{% endfor %}

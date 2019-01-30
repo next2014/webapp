@@ -1,0 +1,70 @@
+.news{
+    background-color:$pgbg;
+    margin-top: rem(161);
+    margin-bottom: rem(161);
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+     }
+    .weui-cell__bd{
+      color:$gray-600;
+      h4{
+         font-size:$font-16;
+         color:$gray-800;
+      }
+      h6{
+        font-size:$font-16;
+        color:$gray-800;
+      }
+      p{
+        line-height: 15px;
+        margin: 5px 0;
+      }
+      small{
+        font-size:$font-14;
+        color:$gray-500;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+    .weui-cell__ft{
+        span{
+            font-size:$font-14;
+        }
+    }
+    .weui-navbar{
+        position: fixed;
+        top: 50px;
+        &+.weui-tab__bd{
+            padding-top:45px;
+        }
+    }
+    .mod_pos_item{
+        border:0;
+        padding:0;
+     }
+     .qzUser{
+         color:$orange-font;
+         text-decoration: underline;
+         margin-right:5px;
+     }
+     .qylogo{
+        width:60px;
+        margin-right:10px;
+        display:block
+    }
+}
+.news_rep{
+    line-height:20px;
+    color:$gray-800;
+    font-size:$font-14;
+    &_con{
+        line-height:20px;
+        font-size:$font-12;
+    }
+}

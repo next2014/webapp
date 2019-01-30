@@ -1,0 +1,34 @@
+//专属推荐
+.zsTj{
+    background-color: #eee;
+    font-size:14px;
+    .title{
+        font-size:16px;
+    }
+    .pro{
+        .zsTjTitle{
+            background-color: #fff;
+            h2{
+                font-size:16px;
+                a{
+                   text-decoration: none;
+                   &:active{
+                       color:#ef3239;
+                   }
+                }
+            }
+            .overflow{
+                overflow: hidden;
+            }
+            del{
+               font-size: 12px;
+               color:#666;
+            }
+        }
+        .zsTjImages{
+            img{
+                width:100%;
+            }
+        }
+    }
+}

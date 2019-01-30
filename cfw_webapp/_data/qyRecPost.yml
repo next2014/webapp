@@ -1,0 +1,21 @@
+- dep: IT部
+  pos: Java开发
+  sex: 男
+  old: 30
+  edu: 大专
+  phonenum: 13400000000
+  applydate: 2018-08-03
+  applynum: 0
+  status: 待处理
+  id: s1
+
+- dep: IT部
+  pos: Java开发
+  sex: 男
+  old: 30
+  edu: 大专
+  phonenum: 13400000000
+  applydate: 2018-08-03
+  applynum: 0
+  status: 已邀请
+  id: s2

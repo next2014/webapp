@@ -1,0 +1,59 @@
+body{
+	&.jobBg{
+		background: url(../images/jobBg1.png) no-repeat;
+		background-size:100%;
+	}	
+}
+.status{
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100vh;
+	 a{
+		 display: block;
+		 text-decoration: none;
+	 }
+}
+.sta{
+	&_tit{
+		h4{
+			font-size:$font-20;
+			margin-bottom:0;
+		}
+		small{
+			color:$gray-500;
+		}
+		&_box{
+			text-align: center;
+			display: block;
+			p{
+				width: 120px;
+				margin:0 auto;
+			}
+		}
+	}
+}
+@media (min-width: 320px) {
+    .sta_tit_box{
+				img{
+					width: 120px;
+			 		height: 120px;
+			   }
+	  }
+}
+@media (min-width: 375px) {
+	 .sta_tit_box{
+			 img{
+				 width: 150px;
+				 height: 150px;
+				}
+	  }
+}
+@media (min-width: 414px) {
+	 .sta_tit_box{
+			 img{
+				 width: 170px;
+				 height: 170px;
+				}
+  	}
+}

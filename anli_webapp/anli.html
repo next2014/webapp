@@ -1,0 +1,31 @@
+---
+layout: default
+title: 案例展示
+---
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar justify-content-center">
+    <a class="navbar-brand mr-0 mr-md-3 p-0" href="javascript:;">欧美城技术研发团队</a>
+    {% include common/menu.html %}
+    {% include common/right_menu.html %}
+</header>
+<div class="container p-5">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">PC端项目开发</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">手机移动端项目开发</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">全景图拍摄与制作</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            {% include product/anli_1.html %}
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            {% include product/anli_2.html %}
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            {% include product/anli_3.html %}
+        </div>
+    </div>
+</div>
+<hr class="w-100 m-0">
+{% include common/footer.html %}

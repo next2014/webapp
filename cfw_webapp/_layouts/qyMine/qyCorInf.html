@@ -1,0 +1,39 @@
+---
+layout: pages
+title: 企业资料
+---
+<div class="qyCorInf">
+    <div class="weui-tab">
+        <div class="mod_int weui-navbar">
+            <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
+                <span class="mod_int_tab_text">企业资料</span>
+                <div class="bottom_line"></div>
+            </a>
+            <a class="mod_int_tab weui-navbar__item p-0" href="#tab2">
+                <span class="mod_int_tab_text">部门管理</span>
+                <div class="bottom_line"></div>
+            </a>
+            <a class="mod_int_tab weui-navbar__item p-0" href="#tab3">
+                <span class="mod_int_tab_text">企业相册</span>
+                <div class="bottom_line"></div>
+            </a>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+               {% include modules/qyCorInf/mod_pos1.html %}
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+               {% include modules/qyCorInf/mod_pos2.html %}
+            </div> 
+            <div id="tab3" class="weui-tab__bd-item">
+               {% include modules/qyCorInf/mod_pos3.html %}
+            </div> 
+        </div>
+    </div>
+    <!-- 企业资料编辑-->
+    {% include modules/qyCorInf/mod_pos1_edit.html %}
+    <!-- 企业联系编辑 -->
+    {% include modules/qyCorInf/mod_pos2_edit.html %}
+    <!-- 企业福利编辑 -->
+    {% include modules/qyCorInf/mod_pos3_edit.html %}
+</div>

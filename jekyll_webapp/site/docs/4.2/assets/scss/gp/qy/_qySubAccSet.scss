@@ -1,0 +1,67 @@
+.qySubAccSet{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    margin-bottom:rem(161);
+    overflow: hidden;
+    .mod_pos_item{
+        border:0;
+        padding:0;
+        margin-bottom:0;
+     }
+    .weui-cells{
+        &:before{
+            border-top:0;
+        }
+    }
+    .weui-cell{
+        font-size:$font-14;
+        padding:10px;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+     }
+    .weui-cell__bd{
+      padding-right:0;
+      color:$gray-600;
+      h6{
+         color:$gray-500;
+      }
+      p{
+        line-height: 15px;
+        margin: 5px 0;
+        color:$gray-800
+      }
+      small{
+        color:$gray-500;
+      }
+      a{
+        text-decoration: none;
+      }
+      span{
+         color:$gray-800
+      }
+    }
+    .weui-label{
+       width:100%;
+    }
+    .weui-cells_checkbox{
+       h2{
+        font-size:$font-14;
+        margin-right:10px;
+       }
+       a{
+         color:#fff;
+       }
+    }
+    .form-check{
+        line-height:15px;
+    }
+    .form-check-input{
+        margin-top:2px;
+        margin-left: -1rem;
+    }
+    .btn{
+       color:$white;
+    }
+}

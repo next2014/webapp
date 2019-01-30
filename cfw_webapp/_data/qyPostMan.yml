@@ -1,0 +1,44 @@
+- dep: IT部
+  pos: Java开发
+  status: 待审核
+  status1: 审核通过
+  cretadata: 2018-08-03
+  updata: 2018-11-03
+  id: 6
+  pid: 1
+
+- dep: 企划部门
+  pos: 文案策划
+  status: 待审核
+  status1: 审核通过
+  cretadata: 2018-08-03
+  updata: 2018-11-03
+  id: 7
+  pid: 2
+
+- dep: 家政事业中心
+  pos: 育婴师培训老师
+  status: 待审核
+  status1: 审核通过
+  cretadata: 2018-08-03
+  updata: 2018-11-03
+  id: 8
+  pid: 3
+
+- dep: 教育培训事业中心
+  pos: 讲师
+  status: 待审核
+  status1: 审核通过
+  cretadata: 2018-08-03
+  updata: 2018-11-03
+  id: 9
+  pid: 4
+
+- dep: 市场扩展部门
+  pos: 销售员
+  status: 待审核
+  status1: 审核通过
+  cretadata: 2018-08-03
+  updata: 2018-11-03
+  id: 10
+  pid: 5

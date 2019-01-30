@@ -1,0 +1,48 @@
+---
+layout: pages
+title: 职位回收站
+---
+<div class="qyPostMan">
+    <!--S 简历查找 -->
+    {% include modules/qyMine/qyTopSearch.html %}
+    <!--E 简历查找 -->
+    <!--S 简历列表 -->
+    <div class="weui-cells">
+        {% for jobrec in site.data.qyJobRecycle %}
+        <div class="weui-cell weui-cells_checkbox">
+            <label class="weui-check__label d-flex align-items-center w-100" for="{{ jobrec.id }}">
+            <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{ jobrec.id }}">
+                    <i class="weui-icon-checked"></i>
+            </div>
+            <div class="weui-cell__bd p-0 m-0">
+                    <div>
+                        <h2>{{ jobrec.pos }}</h2> <span class="text-primary">{{ jobrec.dep }}</span> 
+                    </div>
+                    <p><span>浏览 <em>{{ jobrec.rednum }} </em>次</span> | <span>已收<em> {{ jobrec.acpnum }} </em>简历</span> | <span>状态 <i class="fa fa-close text-danger"></i></span></p>
+                    <p><span>起止日期：{{ jobrec.start }} ~ {{ jobrec.end }}</span></p>
+                    <p><span>删除时间：{{ jobrec.deltime }}</span></small></p>
+            </div>
+            </label> 
+        </div>
+        {% endfor %}
+        <!--E 简历列表 -->
+        <!-- 底部按钮 -->
+        <section class="mod_pos_btn bg-light">
+            <div class="d-flex justify-content-between w-100">
+                <div class="weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" id="qSelect">
+                        <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+                                <i class="weui-icon-checked"></i>
+                        </div><p>全部</p>
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center p-1">
+                    <button type="button" class="btn btn-secondary mr-2">恢复职位</button>
+                    <button type="button" class="btn btn-primary">清空职位</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

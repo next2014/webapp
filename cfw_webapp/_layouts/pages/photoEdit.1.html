@@ -1,0 +1,40 @@
+---
+layout: pages
+title: 个人头像
+---
+<link rel="stylesheet" href="../static/css/yun_wap_member.css" type="text/css" />
+<link rel="stylesheet" href="../static/css/cropper.css" type="text/css">
+<div class="photoEdit">
+    <div class="verify">
+        <div class="photo_i_box_v">
+            <div class="photo_i_box_v_c">
+                <div id="showResult">
+                    <div id="changeAvatar" class="photo_i_box">
+                        <img src="../static/images/profile-photos/5.png" width="120" height="120">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="photo_xz">
+                        <input id="image" type="file" accept="image/*">选择上传头像
+                    </div>
+                    <div class="yunset_identity_msg"><i class="yunset_identity_msg_icon"></i>选择上传头像点击提交按钮即可上传</div>
+                </div>
+                <div id="showEdit" style="display: none;width:100%;height: 100%;position: absolute;top:0;left: 0;z-index: 9;">
+                    <div class="photo_cz_bth">
+                        <button class="mui-btn" data-mui-style="fab" id="cancleBtn">取消</button>
+                        <button class="mui-btn" data-mui-style="fab" onclick="javascript:$(&#39;#readyimg&#39;).cropper(&#39;rotate&#39;,90)">旋转</button>
+                        <div class="photo_cz_bth_qd">
+                            <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id="confirmBtn">确定</button>
+                        </div>
+                    </div>
+                    <div id="report">
+                        <img src=" alt="Picture" id="readyimg">
+                    </div>
+                </div>
+            </div>
+            <div class="photo_tj">
+                <input type="hidden" name="txt" id="uimage" value="">
+                <input name="submit" type="button" onclick="photo()" value="提交" class="yunset_bth">
+            </div>
+        </div>
+    </div>
+</div>

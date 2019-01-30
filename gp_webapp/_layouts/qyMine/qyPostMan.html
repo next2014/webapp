@@ -1,0 +1,78 @@
+---
+layout: pages
+title: 职位管理
+---
+<div class="qyPostMan">
+    <!--S 简历查找 -->
+      {% include modules/qyMine/qyTopSearch.html %}
+    <!--E 简历查找 -->
+    <!--S 简历列表 -->
+    <div class="weui-cells">
+      {% for pm1 in site.data.qyPostMan %}
+      <div class="weui-cell weui-cells_checkbox">
+        <label class="weui-check__label d-flex align-items-center" for="{{pm1.pid}}">
+            <div class="weui-cell__hd">
+                <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{pm1.pid}}">
+                <i class="weui-icon-checked"></i>
+            </div>
+        </label> 
+        <div class="weui-cell__bd">
+            <h2>{{ pm1.dep }}</h2>
+            <p>{{ pm1.pos }}</p>
+            <p><small><em class="text-primary">{{ pm1.status1 }}</em> | <span>{{ pm1.cretadata }} ~ {{ pm1.updata }}</span></small></p>
+        </div>
+        <div class="weui-cell_ft d-flex">
+            <a href="qyPostManEdit.html" class="btn btn-primary btn-sm mr-2">修改</a>
+            <a href="qySearch.html" class="btn btn-secondary btn-sm">搜索</a>
+        </div>
+      </div>
+      {% endfor %}
+      {% for pm in site.data.qyPostMan %}
+         <div class="weui-cell weui-cells_checkbox">
+            <label class="weui-check__label d-flex align-items-center" for="{{pm.id}}">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{pm.id}}">
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label> 
+            <div class="weui-cell__bd">
+                <h2>{{ pm.dep }}</h2>
+                <p>{{ pm.pos }}</p>
+                <p><small><em>{{ pm.status }}</em> | <span>{{ pm.cretadata }} ~ {{ pm.updata }}</span></small></p>
+            </div>
+            <div class="weui-cell_ft d-flex">
+                <a href="qyPostManEdit.html" class="btn btn-primary btn-sm mr-2">修改</a>
+                <a href="qySearch.html" class="btn btn-secondary btn-sm">搜索</a>
+            </div>
+         </div>
+       {% endfor %}
+    </div>
+    <!--E 简历列表 -->
+    <!-- 底部按钮 -->
+    <section class="mod_pos_btn bg-light">
+     <div class="d-flex justify-content-between w-100">
+        <div class="weui-cells_checkbox">
+            <label class="weui-cell weui-check__label" id="qSelect">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <p>全部</p>
+            </label>
+        </div>
+        <div class="d-flex justify-content-center p-1">
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        点击操作
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">刷新职位</a>
+                    <a class="dropdown-item" href="#">重新发布</a>
+                    <a class="dropdown-item" href="#">停止招聘</a>
+                    <a class="dropdown-item" href="#">删除职位</a>
+                </div>
+            </div>
+        </div>
+     </div>
+    </section>
+</div>

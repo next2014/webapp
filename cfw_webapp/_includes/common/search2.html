@@ -1,0 +1,183 @@
+{% if page.layout == "pages/subscribe" or page.layout == "pages/positionDetail" 
+or page.layout == "pages/companyDetail" or page.layout == "pages/companyAddr" 
+or page.layout == "mine/mineResume" or page.layout == "mine/mineSetCenter" 
+or page.layout == "mine/mineResumeEdit" or page.layout == "mine/mineBasicInfoEdit" 
+or page.layout == "mine/mineBasicInfoEdit" or page.layout == "mine/mineJobHuntingEdit" 
+or page.layout == "mine/minWorkExpEdit" or page.layout == "mine/minWorkExpAdd" 
+or page.layout == "mine/mineEduExpEdit" or page.layout == "mine/mineEduExpAdd" 
+or page.layout == "mine/mineTraExpEdit" or page.layout == "mine/mineTraExpAdd" 
+or page.layout == "mine/mineLanSkiEdit" or page.layout == "mine/mineLanSkiAdd" 
+or page.layout == "mine/mineTalentEdit" or page.layout == "mine/mineTalentAdd" 
+or page.layout == "mine/mineEvaEdit" or page.layout == "mine/mineEvaAdd" 
+or page.layout == "mine/mineFindJob" or page.layout == "mine/mineDelivery" %}
+<header class="search">
+<div class="search_header search_bg_Ter">
+  <div class="search_header_box">
+        {% if page.layout == "pages/subscribe" or page.layout == "pages/positionDetail" or page.layout == "pages/companyDetail" 
+        or page.layout == "pages/companyAddr" or page.layout == "mine/mineResume" 
+        or page.layout == "mine/mineResumeEdit" or page.layout == "mine/mineBasicInfoEdit" 
+        or page.layout == "mine/mineFindJob" or page.layout == "mine/mineDelivery" 
+        or page.layout == "mine/mineSetCenter"%}
+         <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+        {% endif %}
+        {% if page.layout == "mine/mineBasicInfoEdit" or page.layout == "mine/mineJobHuntingEdit" 
+        or page.layout == "mine/minWorkExpEdit" or page.layout == "mine/minWorkExpAdd" 
+        or page.layout == "mine/mineEduExpEdit" or page.layout == "mine/mineEduExpAdd" 
+        or page.layout == "mine/mineTraExpEdit" or page.layout == "mine/mineTraExpAdd" 
+        or page.layout == "mine/mineLanSkiEdit" or page.layout == "mine/mineLanSkiAdd" 
+        or page.layout == "mine/mineTalentEdit" or page.layout == "mine/mineTalentAdd" 
+        or page.layout == "mine/mineEvaEdit" or page.layout == "mine/mineEvaAdd" %}
+         <div class="search_left"></div>
+        {% endif %}
+             <div class="search_center">
+              <a href="javascript:">
+            {% if page.layout == "pages/subscribe" or page.layout == "pages/positionDetail" or page.layout == "pages/companyDetail" %}
+                {% if page.layout == "pages/subscribe" %}职位订阅
+                {% else page.layout == "pages/positionDetail" %}职位详情
+                {% else %}富海招聘
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineResume" or page.layout == "mine/mineResumeEdit" or page.layout == "mine/mineBasicInfoEdit" %}
+                {% if page.layout == "mine/mineResume" %}简历
+                {% else page.layout == "mine/mineResumeEdit" %}简历编辑
+                {% else page.layout == "mine/mineBasicInfoEdit" %}编辑基本资料
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineBasicInfoEdit" or page.layout == "mine/mineJobHuntingEdit" %}
+                {% if page.layout == "mine/mineBasicInfoEdit" %}编辑基本资料
+                {% else page.layout == "mine/mineJobHuntingEdit" %}求职意向
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/minWorkExpEdit" or page.layout == "mine/minWorkExpAdd" %}
+                {% if page.layout == "mine/minWorkExpEdit" %}编辑工作经验
+                {% else page.layout == "mine/minWorkExpAdd" %}添加工作经验
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineEduExpEdit" or page.layout == "mine/mineEduExpAdd" %}
+                {% if page.layout == "mine/mineEduExpEdit" %}编辑教育经历
+                {% else page.layout == "mine/mineEduExpAdd" %}添加教育经历
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineTraExpEdit" or page.layout == "mine/mineTraExpAdd" %}
+                {% if page.layout == "mine/mineTraExpEdit" %} 编辑培训经历
+                {% else page.layout == "mine/mineTraExpAdd" %}添加培训经历
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineLanSkiEdit" or page.layout == "mine/mineLanSkiAdd" %}
+                {% if page.layout == "mine/mineLanSkiEdit" %}编辑语言能力
+                {% else page.layout == "mine/mineLanSkiAdd" %}添加语言能力
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineTalentEdit" or page.layout == "mine/mineTalentAdd" %}
+                {% if page.layout == "mine/mineTalentEdit" %}编辑技能专长
+                {% else page.layout == "mine/mineTalentAdd" %}添加技能专长
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineEvaEdit" or page.layout == "mine/mineEvaAdd" %}
+                {% if page.layout == "mine/mineEvaEdit" %}编辑自我评价
+                {% else page.layout == "mine/mineEvaAdd" %}添加自我评价
+                {% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineFindJob" %}身份切换{% endif %}
+            {% if page.layout == "mine/mineDelivery" %}投递记录{% endif %}
+            {% if page.layout == "mine/mineSetCenter" %}设置中心{% endif %}
+            {% if page.layout == "pages/companyAddr" %}工作地址{% endif %}
+             </a></div>
+            {% if page.layout == "pages/subscribe" or page.layout == "pages/positionDetail" or page.layout == "pages/companyDetail" 
+             or page.layout == "pages/companyAddr" or page.layout == "mine/mineResume" 
+             or page.layout == "mine/mineBasicInfoEdit" 
+             or page.layout == "mine/mineFindJob" or page.layout == "mine/mineDelivery" 
+             or page.layout == "mine/mineBasicInfoEdit" or page.layout == "mine/mineJobHuntingEdit" 
+             or page.layout == "mine/minWorkExpEdit" or page.layout == "mine/minWorkExpAdd" 
+             or page.layout == "mine/mineEduExpEdit" or page.layout == "mine/mineEduExpAdd" 
+             or page.layout == "mine/mineTraExpEdit" or page.layout == "mine/mineTraExpAdd" 
+             or page.layout == "mine/mineLanSkiEdit" or page.layout == "mine/mineLanSkiAdd" 
+             or page.layout == "mine/mineTalentEdit" or page.layout == "mine/mineTalentAdd" 
+             or page.layout == "mine/mineEvaEdit" or page.layout == "mine/mineEvaAdd" 
+             or page.layout == "mine/mineSetCenter" %}
+              <div class="search_right w-5"></div>
+            {% endif %}
+            {% if page.layout == "mine/mineResumeEdit" %}
+               <div class="search_right w-5"><a href="mineResumeView.html">预览</a></div>
+            {% endif %}
+     </div>
+ </div>
+</header>
+{% endif %}
+{% if page.layout == "home" %}
+<header class="search">
+  <div class="search_header search_bg">
+    <div class="search_header_box search_header_focusing">
+         <div class="search_left"><i class="fa fa-angle-left fa-lg"></i><a href="javascript:">返回</a></div>
+         <a href="search.html" class="search_header_box_input">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="搜索职位/公司/商区"/>
+         </a>
+         <div class="search_right"><a href="javascript:">搜索</a></div>
+    </div>
+  </div>
+</header>
+{% endif %}
+{% if page.layout == "logReg/forgetPassword" or page.layout == "mine/mineResumeView" 
+or page.layout == "logReg/qqbinding" or page.layout == "logReg/wxbinding" 
+or page.layout == "mine/mineAccNumEdit" or page.layout == "mine/minePasswordEdit" 
+or page.layout == "mine/mineEmailEdit" %}
+<header class="search">
+<div class="search_header">
+  <div class="search_header_box">
+        <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> 返回</a></div>
+        <div class="search_center">
+          <a href="javascript:">
+            {% if page.layout == "logReg/forgetPassword" %}找回密码{% endif %}
+            {% if page.layout == "mine/mineResumeView" %}简历预览{% endif %}
+            {% if page.layout == "logReg/qqbinding" or page.layout == "logReg/wxbinding" %}
+            {% if page.layout == "logReg/qqbinding" %} QQ绑定账号
+            {% else page.layout == "logReg/wxbinding" %}微信绑定账号
+            {% else %}富海招聘{% endif %}
+            {% endif %}
+            {% if page.layout == "mine/mineAccNumEdit" %}修改账号{% endif %}
+            {% if page.layout == "mine/minePasswordEdit" %}修改登录密码{% endif %}
+            {% if page.layout == "mine/mineEmailEdit" %}修改邮箱{% endif %}
+           </a></div>
+        <div class="search_right w-5"></div>
+   </div>
+</div>
+</header>
+{% endif %}
+{% if page.layout == "mine/mineJobSearch" %}
+<header class="search">
+    <div class="search_header search_bg_Ter">
+        <div class="search_header_box">
+            <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+            <div class="search_center"><a href="javascript:"> 08-04 周六 </a></div>
+            <div class="search_right">
+                <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入职位……" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endif %}
+{% if page.layout == "pages/search" or page.layout == "pages/searchTer" or page.layout == "pages/searchTerRes" %}
+<header class="search">
+ <div class="search_header search_bg_Ter">
+    <div class="search_header_box">
+     <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a></div>   
+      {% if page.layout == "pages/searchTerRes" %}
+       <a href="searchTer.html" class="search_header_box_input">
+      {% else %}
+      <a href="searchTerRes.html" class="search_header_box_input">
+         {% endif %}
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="搜索职位/公司/商区"/>
+      </a>
+      {% if page.layout == "pages/search" %}
+     <div class="search_right"><a href="javascript:void(0)" class="btn btn-secondary btn-sm">搜索</a></div>
+     {% endif %}
+   </div>
+  </div>
+</header>
+{% endif %}

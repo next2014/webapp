@@ -1,0 +1,98 @@
+{% if page.layout == "qyMine/qySearchSelect" or page.layout == "qyMine/qybroRes"  
+or page.layout == "qyMine/qyPostMan" or page.layout == "qyMine/qyRecPos" 
+or page.layout == "qyMine/qyEntTalPoo" or page.layout == "qyMine/qyInvInterRec" 
+or page.layout == "qyMine/qyJobRecycle" or page.layout == "qyMine/qySubAccSet" 
+or page.layout == "qyMine/qyPostJob" or page.layout == "qyMine/qyCorInf" 
+or page.layout == "qyMine/qyCorInfFuliEdit" or page.layout == "qyMine/qyInvInter" 
+or page.layout == "qyMine/qyLogEdit" or page.layout == "qyMine/qyMineCorRes" 
+or page.layout == "qyMine/qyNews" or page.layout == "qyMine/qyPostJobAdd"
+or page.layout == "qyMine/qyPostJobEdit" or page.layout == "qyMine/qyPostJobNext" 
+or page.layout == "qyMine/qyPostJobSes" or page.layout == "qyMine/qyPostManEdit" 
+or page.layout == "qyMine/qyRecDownLoad" or page.layout == "qyMine/qyResumeShou" 
+or page.layout == "qyMine/qyResumeView" or page.layout == "qyMine/qySetCen" %}
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+    <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+    <div class="search_center"><a href="javascript:">
+    {% if page.layout == "qyMine/qySearchSelect" %}搜索4000w+优质候选人{% endif %}
+    {% if page.layout == "qyMine/qySubAccSet" %}子账号设置{% endif %}
+    {% if page.layout == "qyMine/qyPostJob" %}发布职位{% endif %}
+    {% if page.layout == "qyMine/qyPostMan" %}职位管理{% endif %}
+    {% if page.layout == "qyMine/qyRecPos" %}已收职位{% endif %}
+    {% if page.layout == "qyMine/qyEntTalPoo" %}企业人才库{% endif %}
+    {% if page.layout == "qyMine/qyInvInterRec" %}邀请记录{% endif %}
+    {% if page.layout == "qyMine/qyJobRecycle" %}职位回收站{% endif %}
+    {% if page.layout == "qyMine/qybroRes" %}浏览简历{% endif %}
+    {% if page.layout == "qyMine/qyCorInf" %}企业资料{% endif %}
+    {% if page.layout == "qyMine/qyCorInf" %}公司福利{% endif %}
+    {% if page.layout == "qyMine/qyInvInter" %}邀请记录{% endif %}
+    {% if page.layout == "qyMine/qyLogEdit" %}设置中心{% endif %}
+    {% if page.layout == "qyMine/qyMineCorRes" %}08-04 周六{% endif %}
+    {% if page.layout == "qyMine/qyNews" %}我的消息{% endif %}
+    {% if page.layout == "qyMine/qyPostJobAdd" %}新增部门{% endif %}
+    {% if page.layout == "qyMine/qyPostJobEdit" %}编辑部门{% endif %}
+    {% if page.layout == "qyMine/qyPostJobNext" or page.layout == "qyMine/qyPostJobSes" %}招聘职位{% endif %}
+    {% if page.layout == "qyMine/qyPostManEdit" %}职位编辑{% endif %}
+    {% if page.layout == "qyMine/qyRecDownLoad" %}简历下载情况{% endif %}
+    {% if page.layout == "qyMine/qyResumeShou" %}富海人才-查看已收简历{% endif %}
+    {% if page.layout == "qyMine/qyResumeView" %}求职简历{% endif %}
+    {% if page.layout == "qyMine/qySetCen" %}设置中心{% endif %}
+    </a></div>
+    {% if page.layout == "qyMine/qyPostMan" or page.layout == "qyMine/qyRecPos" 
+    or page.layout == "qyMine/qyEntTalPoo" or page.layout == "qyMine/qyInvInterRec" 
+    or page.layout == "qyMine/qyJobRecycle" or page.layout == "qyMine/qySubAccSet" %}
+    <div class="search_right w-5"><a href="javascript:;" id="mod_pos_item_btn"><i class="fa fa-search"></i></a></div>
+    {% endif %}
+    {% if page.layout == "qyMine/qySearchSelect" or page.layout == "qyMine/qySubAccSet" 
+    or page.layout == "qyMine/qyPostJob" or page.layout == "qyMine/qybroRes" 
+    or page.layout == "qyMine/qyCorInf" or page.layout == "qyMine/qyCorInfFuliEdit" 
+    or page.layout == "qyMine/qyInvInter" or  page.layout == "qyMine/qyLogEdit" 
+    or page.layout == "qyMine/qyMineCorRes" or page.layout == "qyMine/qyNews" 
+    or page.layout == "qyMine/qyPostJobAdd" or page.layout == "qyMine/qyPostJobEdit" 
+    or page.layout == "qyMine/qyPostJobNext" or page.layout == "qyMine/qyPostJobSes"
+    or page.layout == "qyMine/qyPostManEdit" or page.layout == "qyMine/qyRecDownLoad" 
+    or page.layout == "qyMine/qyResumeShou" or page.layout == "qyMine/qyResumeView" 
+    or page.layout == "qyMine/qySetCen" %}
+    <div class="search_right w-5"></div>
+    {% endif %}
+    </div>
+  </div>
+</header>
+{% endif %}
+{% if page.layout == "qyMine/qySearchList" %}
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+     <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i>返回</a></div>
+      <div class="search_header_box_input">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="搜索4000w+优质候选人"/>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
+{% if page.layout == "qyMine/index" %}
+<header class="search">
+  <div class="search_header_box">
+  <a href="qySearchSelect.html" class="search_header_box_input">
+    <i class="fa fa-search"></i><span>搜索4000w+优质候选人</span></a></div>
+</header>
+{% endif %}
+{% if page.layout == "qyMine/qySearch" %}
+  <div class="weui-search-bar search_bg_Ter" id="searchBar">
+      <form class="weui-search-bar__form" action="#">
+          <div class="weui-search-bar__box">
+              <i class="weui-icon-search"></i>
+              <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索4000w+优质候选人" required="">
+              <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+          </div>
+          <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+            <i class="weui-icon-search"></i>
+              <span>搜索4000w+优质候选人</span>
+          </label>
+      </form>
+      <a href="javascript:history.back()" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+  </div>
+{% endif %}

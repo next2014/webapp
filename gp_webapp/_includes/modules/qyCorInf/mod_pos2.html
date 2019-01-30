@@ -1,0 +1,21 @@
+<!-- 部门管理 -->
+<div class="weui-cells depMan">
+  {% for depman in site.data.qydepMan %}
+     <div class="weui-cell">
+        <div class="weui-cell__bd w-75">
+            <h2>{{ depman.dep }}</h2>
+            <p>{{ depman.name }}</p>
+            <p><small>{{ depman.email }} | <em>{{ depman.phnum }}</em></small></p>
+        </div> 
+        <div class="weui-cell_ft d-flex">
+            <a href="qyPostJobEdit.html" class="btn btn-primary btn-sm mr-2">修改</a>
+            <a href="qySearch.html" class="btn btn-secondary btn-sm">删除</a>
+        </div>
+     </div>
+   {% endfor %}
+</div>
+<!-- 底部按钮 -->
+<section class="mod_pos_btn">
+    <div class="mod_pos_btn_air"><a href="qyPostJobAdd.html">添加部门</a></div>
+    <div class="mod_pos_btn_rea"><a href="qyPostJob.html">发布职位</a></div>
+</section>

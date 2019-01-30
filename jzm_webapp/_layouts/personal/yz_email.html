@@ -1,0 +1,36 @@
+---
+layout: default
+title: 邮箱验证
+---
+<div class="body_wap">
+    <header class="header_h">
+        <div class="header_fixed">
+            <div class="header">
+                <div class="header_userbg bg3">
+                    <a class="hd-lbtn " href=""><i class="header_top_l iconfont"></i></a>
+                    <div class="header_h1">邮箱认证</div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="wap_member">
+        <ul class="yunset_password mt15">
+            <li><span class="yunset_password_mname">邮&nbsp;&nbsp;箱</span>
+                <div class="yunset_sj_box_y">
+                    <input type="text" class="yunset_sjtext" name="email" id="emailval" value="" placeholder="请输入邮箱">
+                </div>
+            </li>
+            <li><span class="yunset_password_mname">验证码</span>
+                <div class=".yunset_sj_box_y">
+                    <input type="text" name="authcode" class="yunset_sjtext" placeholder="请输入验证码">
+                    <img id="vcode_img" src="images/authcode.inc.jpg" class="yunset_sj_boxyzm">
+                </div>
+            </li>
+        </ul>
+        <div class="yunset_bth_box">
+            <input type="button" value="发送验证邮箱" class="yunset_bth">
+        </div>
+        <input type="hidden" id="send" value="0">
+    </section>
+</div>

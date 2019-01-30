@@ -1,0 +1,26 @@
+---
+layout: pages
+title: 企业招聘会
+---
+<div class="site">
+  <div class="topAd">
+      <img src="../static/images/x1.png"/>
+  </div>
+ {% for sit in site.data.site %}
+   <div class="page__bd"> 
+        <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">{{ sit.data }}</div>
+            <div class="weui-cell__ft">
+                <div class="button_sp_area pt-1">
+                   <a href="../../{{ sit.posUrl }}" class="weui-btn weui-btn_mini weui-btn_primary p-1">职位查询</a>
+                   <a href="qyMineCorRes.html" class="weui-btn weui-btn_mini weui-btn_default p-1 m-0 ml-2">企业预订</a>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+  {% endfor %}
+<!-- 暂时没有预告信息 -->
+<!-- {% include common/proInfo.html %} -->
+</div>

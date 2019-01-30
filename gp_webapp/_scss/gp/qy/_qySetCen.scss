@@ -1,0 +1,60 @@
+.qySetCen{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px 0;
+        color:$gray-600;
+        &:before{
+           left:0;
+        }
+    }
+    .weui-cells{
+      &:before{
+          border-top:0;
+      }
+      &:last-child{
+        &:after{
+          border-bottom:0;
+        }
+      }
+      a{
+        text-decoration: none;
+        overflow: hidden;
+        &.accNumBtn{
+          display: block;
+        }
+      }
+    }
+    .weui-cell__bd{
+      padding-right:rem(48.3);
+    }
+    .mod_pos_item{
+          &:first-child{
+              border-top:0;
+          }
+          padding-top:0;
+          padding-bottom:0;
+          margin-bottom:0;
+    }
+    .mod_pos_btn{
+      background-color:$gray-100;
+    }
+    .bangding{
+      li{
+        float: left;
+        text-align: center;
+        margin-right:10px;
+        &:last-child{
+            margin:0;
+        }
+        img{
+          width:40px;
+          height:40px;
+        }
+        p{
+          line-height:15px;
+        }
+      }
+    }
+}

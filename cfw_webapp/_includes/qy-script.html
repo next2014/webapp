@@ -1,0 +1,142 @@
+<script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+ </script>
+{% if page.layout == "pages/ordersDetail" %}
+    {% include script/ordersDetailJs.html %}
+{% endif %}
+{% if page.layout == "pages/photoEdit" or page.layout == "pages/pubBarrier" 
+or page.layout == "pages/envManagement" or page.layout == "pages/secService" 
+or page.layout == "pages/taskRelease" %}
+    <script src="../static/js/weui.min.js"></script>
+    <script src="../static/js/gallery.js"></script>
+{% endif %}
+{% if page.layout == "pages/photoEdit" %}
+    {% include script/qyLogEditJs.html %}
+{% endif %}
+{% if page.layout == "pages/pubBarrier"or page.layout == "pages/envManagement" 
+or page.layout == "pages/secService" or page.layout == "pages/taskRelease" %}
+     {% include script/pubBarrierJs.html %}
+{% endif %}
+{% if page.layout == "pages/attPunch" %}
+    <script>
+        $("#date2").calendar({
+        value: ['2018-12-12'],
+        dateFormat: 'yyyy年mm月dd日'
+        });
+    </script>
+{% endif %}
+{% if page.layout == "pages/myAttPunch" %}
+    <script>
+        $("#date2").calendar({
+        value: ['2018-12'],
+        dateFormat: 'yyyy年mm月'
+        });
+    </script>
+{% endif %}
+{% if page.layout == "pages/ordersDetail" %}
+<script>
+    $(document).on("click", "#show-prompt", function() {
+        $.prompt({
+        title: '加急',
+        onOK: function(text) {
+            $.alert("您加急内容是:"+text, "加急成功");
+        },
+        onCancel: function() {
+            $.toast('取消加急!', 'cancel');
+        },
+            input: '输入加急内容'
+        });
+        });
+        $(document).on("click", "#show-prompt1", function() {
+        $.prompt({
+        title: '加急',
+        onOK: function(text) {
+            $.alert("您追记内容是:"+text, "追记成功");
+        },
+        onCancel: function() {
+            $.toast('取消追记!', 'cancel');
+        },
+            input: '输入追记内容'
+        });
+        });
+</script>
+{% endif %}
+{% if page.layout == "pages/leaveRequest" %}
+    <script>
+    $("#leaveType").picker({
+        title: "请选择请假类型",
+        cols: [
+        {
+            textAlign: 'center',
+            values: ['无薪病假', '事假', '调休假', '年休假', '产假', '产前检查假']
+        }
+        ]
+    });
+    </script>
+{% endif %}
+{% if page.layout == "pages/receive" %}
+<script>
+    $("#receive").picker({
+        title: "选择网点",
+        cols: [
+        {
+            textAlign: 'center',
+            values: ['江北金龙大道', '东平加油站', '桥东市场']
+        }
+        ]
+    });
+</script>
+{% endif %}
+{% if page.layout == "pages/pubBarrier" or page.layout == "pages/envManagement" 
+or page.layout == "pages/secService" or page.layout == "pages/taskRelease" %}
+<script>
+    $("#typeServer").picker({
+        title: "服务分类",
+        cols: [
+        {
+          textAlign: 'center',
+          values: ['灯具类', '门窗累', '土建类', '门禁类', '电梯类', '暖通空调类', '消防设施类', '网络通讯类', '其他类', '整改施工管理', '二次装修管理服务']
+        }
+       ]
+    });
+    $("#area").picker({
+        title: "选择网点",
+        cols: [
+         {
+           textAlign: 'center',
+           values: ['惠城', '惠东', '惠阳']
+         }
+       ]
+    });
+    $("#emergencyLevel").picker({
+        title: "紧急程度",
+        cols: [
+         {
+           textAlign: 'center',
+           values: ['一般', '加急', '很急']
+         }
+       ]
+    });
+</script>
+{% endif %}
+{% if page.layout == "pages/taskRelease" %}
+<script>
+    $("#questPerson").picker({
+        title: "任务下达人",
+        cols: [
+        {
+            textAlign: 'center',
+            values: ['郑思廷', '郑小姐', '郑先生']
+        }
+        ]
+    });
+</script>
+{% endif %}

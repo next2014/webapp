@@ -1,0 +1,138 @@
+---
+layout: home
+---
+<div class="slider carousel">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/banner/01.jpg" class="d-block w-100" alt=""></div>
+        <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/banner/02.jpg" class="d-block w-100" alt=""></div>
+        <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/banner/03.jpg" class="d-block w-100" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<main class="bd-masthead omcHome" id="content" role="main">
+   <div class="container p-0">
+    <!-- S about -->
+    <div class="align-items-center">
+        <!-- big size show title-->
+        <h1 class="mb-4 mt-4 bd-text-purple-bright d-none d-md-flex">关于我们&nbsp;<small class="text-black-50">about us</small></h1>
+        <!-- small size show title -->
+        <h4 class="mb-2 mt-4 bd-text-purple-bright text-center s-none card-title">关于我们
+            <p class="mb-0"><small>About us</small></p><i class="mb-3"></i></h4>
+        <p class="lead text-justify">　　欧美城文化（北京）股份有限公司由振业集团投资并创立，2012 年启动 并创立"欧美城文化小镇"项目，通过资源集成，
+            打造全体验式实体平台 的现代服务业、文化创意园区和高新科技企业孵化基地，为相关产业链条 提供孵化服务。 <br/>
+            　　2015年全国中小股份转让系统挂牌上市，证券简称：欧美城，证券代码：430173。总部设在首都北京，进行联盟合作招商、品牌和商业模式输出，的"互联网+实体平台"新型商业模式。 
+            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/intro/" class="about-more"><small class="text-muted">更多详情</small></a>
+        </p>
+    </div>
+    <!-- E about -->
+    <!-- <div id="dplayer"></div> -->
+    <div class="s-none">
+        <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=s0826jm4m6l" allowFullScreen="true" width="100%" height="200px"></iframe>
+    </div>
+    <!-- S subject -->
+    <!-- 主题项目 -->
+    <div class="card-deck pt-0 mb-5 s-none">
+        <h4 class="mb-2 mt-4 bd-text-purple-bright text-center card-title">主题项目
+            <p class="mb-0"><small>Thematic items</small></p><i class="mb-3"></i></h4>
+        <div class="swiper-container1 topAd">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/project/a04.png" class="d-block w-100" alt=""></div>
+                <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/project/a02.png" class="d-block w-100" alt=""></div>
+                <div class="swiper-slide"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/project/a03.png" class="d-block w-100" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- E subject -->
+    <!-- small show new -->
+    <!-- S news -->
+    <div class="s-none mb-5 subject">
+        <!-- small size show title -->
+        <h4 class="mb-2 mt-4 bd-text-purple-bright text-center s-none card-title">新闻中心
+            <p class="mb-0"><small>News center</small></p><i class="mb-3"></i></h4>
+        <ul class="nav nav-tabs subject-ul" id="myTab" role="tablist">
+            <li class="nav-item subject-li col p-0">
+                <a class="nav-link text-center pl-0 pr-0 pt-2 pb-2 active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                    欧美城资讯</a>
+            </li>
+            <li class="nav-item subject-li col p-0">
+                <a class="nav-link text-center pl-0 pr-0 pt-2 pb-2" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    婚博馆资讯</a>
+            </li>
+            <li class="nav-item subject-li col p-0">
+                <a class="nav-link text-center pl-0 pr-0 pt-2 pb-2" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    卡丁车馆资讯</a>
+            </li>
+        </ul>
+        <div class="card card-body tab-content border-top-0 rounded-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                {% for new in site.data.message %}
+                    <div class="media hdm">
+                        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/about/{{ new.newImg }}" class="hdm-pic mr-3" alt="">
+                        <div class="media-body w-50">
+                            <h5 class="mt-0 text-truncate"">{{ new.title }}</h5>
+                            {{ new.content }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                {% for new in site.data.message %}
+                    <div class="media hdm">
+                        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/about/{{ new.newImg }}" class="hdm-pic mr-3" alt="">
+                        <div class="media-body w-50">
+                            <h5 class="mt-0 text-truncate"">{{ new.title }}</h5>
+                            {{ new.content }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                {% for new in site.data.message %}
+                    <div class="media hdm">
+                        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/about/{{ new.newImg }}" class="hdm-pic mr-3" alt="">
+                        <div class="media-body w-50">
+                            <h5 class="mt-0 text-truncate"">{{ new.title }}</h5>
+                            {{ new.content }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/news/hdmessage/" class="about-more border-top pt-3"><small class="text-muted">更多详情</small></a>
+        </div>
+    </div>
+    <!-- E news -->
+    <!-- small show firendLinks -->
+    <!-- S firendLinks -->
+    <div class="s-none mb-5 subject">
+        <!-- small size show title -->
+        <h4 class="mb-2 mt-4 bd-text-purple-bright text-center s-none card-title">友情链接
+            <p class="mb-0"><small>Friendship link</small></p><i class="mb-3"></i></h4>
+        <div class="logo row">
+            <div class="col-3">
+                <img class="img-fluid mx-auto p-1" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/home/logo/1.png" width="80" height="80" alt=""/></div>
+            <div class="col-3">
+                <img class="img-fluid mx-auto p-1" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/home/logo/2.png" width="80" height="80" alt=""/></div>
+            <div class="col-3">
+                <img class="img-fluid mx-auto p-1" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/home/logo/3.png" width="80" height="80" alt=""/></div>
+            <div class="col-3">
+                <img class="img-fluid mx-auto p-1" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/home/logo/4.png" width="80" height="80" alt=""/></div>
+        </div>
+    </div>
+    <!-- E firendLinks -->
+    <!-- small show content -->
+    <!-- S content -->
+    <div class="s-none contact">
+        <!-- small size show title -->
+        <h4 class="mb-2 mt-4 bd-text-purple-bright text-center s-none card-title">联系我们
+            <p class="mb-0"><small>Content us</small></p><i class="mb-3"></i></h4>
+        <div class="container text-center">
+            <strong>0752-2888688</strong>
+            <p class="mb-0"><img class="img-fluid mx-auto border" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/home/code/hz-m.png" width="120" height="120" alt=""/></p>
+        </div>
+    </div>
+    <!-- E content -->
+   </div>
+   <div class="bgImg" style="background: url(docs/4.2/assets/img/01.png) no-repeat;opacity:.1;"></div>
+</main>

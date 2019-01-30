@@ -1,0 +1,51 @@
+<script>
+$(document).on("click", "#show-actions", function() {
+    $.actions({
+    title: "切换身份",
+    actions: [
+        {
+            text: "我要找工作",
+            className: "color-primary",
+            onClick: function() {
+                window.location.href="mineFindJob.html"
+            }
+        },
+        {
+            text: "我要招人",
+            className: "color-primary",
+            onClick: function() {
+                window.location.href="mineFindJob.html"
+            }
+        }
+      ]
+    });
+});
+$(document).on("click", "#show-actions1", function() {
+    $.actions({
+    title: "账号绑定",
+    actions: [
+        {
+            text: "绑定QQ账号",
+            className: "color-primary",
+            onClick: function() {
+                $.alert("完成绑定", "绑定QQ账号");
+            }
+        },
+        {
+            text: "绑定微信账号",
+            className: "color-primary",
+            onClick: function() {
+                $.alert("完成绑定", "绑定微信账号");
+            }
+        },
+        {
+            text: "绑定微博账号",
+            className: "color-primary",
+            onClick: function() {
+                $.alert("完成绑定", "绑定微博账号");
+            } 
+        }
+      ]
+    });
+});
+</script>

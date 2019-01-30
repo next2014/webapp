@@ -1,0 +1,63 @@
+---
+layout: pages
+title: 企业招聘
+---
+<div class="index">
+    <!-- S 轮播 -->
+    {% include components/swiper/qySwiper.html %}
+    <!-- E 轮播 -->
+
+    <!-- S 招聘公告 -->
+    <div class="mod_bbs">
+        <section class="mod_bbs_msg">
+            {% include components/swiper/swiper1.html %}
+        </section>
+    </div>
+    <!-- E 招聘公告 -->
+    
+    <!-- S 个人简历 -->
+    <div class="prolistContent">
+        <h2 class="weui-cells__title text-primary">简历列表</h2>
+        <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__bd">
+                <div class="lists">
+                        <a href="qyResumeView.html" class="weui-media-box">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="../static/images/avatar_default_boy.png" alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                                <div class="weui-media-box__title">
+                                <h4>黄小姐</h4>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-animation="true" title="已查看简历！">
+                                <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>阅</button>
+                                </span>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-animation="true" title="已查看简历联系方式！">
+                                <button class="btn btn-warning" style="pointer-events: none;" type="button" disabled>载</button>
+                                </span>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-animation="true" title="简历属于微信简历！">
+                                <button class="btn btn-success" style="pointer-events: none;" type="button" disabled>
+                                <i class="fa fa-weixin"></i>
+                                </button>
+                                </span>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-animation="true" title="简历附有个人照片！">
+                                <button class="btn btn-info" style="pointer-events: none;" type="button" disabled>
+                                <i class="fa fa-image "></i>
+                                </button>
+                                </span>
+                                </div>
+                                <ul class="weui-media-box__info">
+                                    <li class="weui-media-box__info__meta text-warning">男</li>
+                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra"">23岁</li>
+                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">经验10年</li>
+                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">高中</li>
+                                </ul>
+                                <p class="weui-cells__tips">期望工作地点：惠城区</p>
+                                <p class="weui-cells__tips">2018-10-29 10：36 更新</p>
+                        </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E 个人简历 -->
+</div>

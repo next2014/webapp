@@ -1,0 +1,43 @@
+.qySearchList{
+    background-color:$pgbg;
+    margin-top:rem(161);
+    .editShowHight{
+        height:0;
+    }
+    .showBtn{
+        .weui-btn{
+           line-height: 30px;
+        }
+    }
+
+}
+.weui-media-box__title{
+   h4{
+     float: left;
+     margin-right: 10px;
+     margin-top: 5px;
+     margin-bottom: 5px;
+   }
+   button{
+       padding:0 5px;
+   }
+   span{
+     line-height:1;
+     font-size:$font-12
+   }
+}
+@media (min-width: 320px) {
+  .mod_pos_his {
+    max-height: 500px;
+   }
+}
+@media (min-width: 375px) {
+  .mod_pos_his {
+    max-height: 627px;
+   }
+}
+@media (min-width: 414px) { 
+  .mod_pos_his {
+    max-height: 680px;
+   }
+}

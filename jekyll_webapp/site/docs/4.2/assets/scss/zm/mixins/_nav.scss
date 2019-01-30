@@ -1,0 +1,45 @@
+//优惠券
+//积分
+//商品详情
+//订单
+.nav-tabs{
+    border:0;
+    background-color: #fff;
+    border-bottom:1px solid #eee;
+    a{
+       color:#999999;
+       text-decoration: none;
+       &.nav-link{
+           height:40px;
+           line-height:40px;
+           border:0;
+           padding:0;
+           text-align: center;
+           &.active{
+               border-bottom:1px solid #F23030;
+               color: #F23030;
+           }
+       }
+    }
+}
+
+//钱包
+//营销中心  
+.nav-pills{
+    background-color: #F05C3A;
+    li{
+        a{
+        color: #fff;
+        margin:5px;
+        &.nav-link {
+            border-radius:20px;
+            padding:5px;
+            &.active{
+            background-color: #fff;
+            color: #F05C3A;
+            // border-bottom:2px solid #F05C3A;
+            }
+        } 
+        }
+    }
+}

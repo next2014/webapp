@@ -1,0 +1,28 @@
+---
+layout: default
+title: 选择票种
+---
+<div class="home">
+	<div class="index_all">
+		<!-- S 轮播 -->
+		{% include components/swiper/swiper.html %}
+		<!-- E 轮播 -->
+		<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
+		<!-- <div class="content">
+			<ul class="lists" id="ticket"></ul>
+		</div> -->
+	    <ul id="ticket">
+			{% for ticket in site.data.ticket %}
+			<li class="lists" onclick="javascript: window.location.href =&#39;pages/ticketDetailsNew.html&#39;">
+				<div class="in_fl tic_img">
+					<img src="{{ticket.GetImage}}" alt=" ">
+				</div>
+				<div class="in_fr">
+					<h2><a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}</h2>
+					<span class="dol d-block mt-1">¥<em>{{ticket.GetPrick}}</em></span>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

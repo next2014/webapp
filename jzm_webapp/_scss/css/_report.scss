@@ -1,0 +1,67 @@
+/*举报*/
+.report_box{ padding:0px 10px 10px 10px;}
+.report_box_h1{width:100%;height:43px; line-height:43px;border-bottom:1px solid #eee; background:#f8f8f8; position:relative}
+.report_box_h1_s{ font-size:15px; padding-left:10px; display:inline-block}
+.report_box_h1_qx{ position:absolute;right:5px;top:5px;}
+.report_box_h1_qx input{ background:none;border:none;}
+.report_jobbox{width:250px; padding:10px 20px;}
+.report_job_ly_tip{ padding-top:10px;}
+.report_job_ly{ display:inline-block; padding:4px 13px;border:1px solid #eee; margin-right:8px; margin-top:13px; cursor:pointer;border-radius:3px;}
+.report_job_ly_cur{border:1px solid #f00;color:#f00}
+.report_job_textarea_box{ padding:10px 0 0 0;height:80px;}
+.report_job_textarea_box textarea{width:98%;height:70px;border:1px solid #eee; padding:5px;border-radius:3px; margin:0; font-size:14px;}
+.report_job_yz{ padding-top:15px;}
+.report_job_text{height:36px; line-height:36px;border:1px solid #eee; padding-left:10px;width:150px;}
+.report_job_bth_box{width:100%; text-align:center; padding-top:20px;}
+.report_job_bth{width:200px;height:40px; background:#f60;color:#fff;border-radius:3px;color:#fff; cursor:pointer;border:none; font-size:16px;}
+.report_box_tit{ padding:10px 0;}
+.report_box_text{width:80px;height:30px; line-height:30px;border:1px solid #ddd; float:left}
+.report_box_yz_name{ float:left; line-height:35px;}
+.report_box_yz{width:100%;height:35px; padding-top:10px;}
+.report_box_yz_img{ margin:0px 2px; vertical-align:middle}
+.report_box_yz input{width: 100px; text-indent:5px; margin:0; padding:0; font-size:12px;height: 35px;line-height: 35px;border: 1px solid #eee;}
+.consultation_box{ padding:10px 10px 10px 10px;}
+.consultation_box textarea{width:98%;height:70px;border:1px solid #eee; padding:5px;border-radius:3px; margin:0; font-size:14px;}
+.report_box_bth .login_button_jb{width:100%;height:40px;background:-webkit-gradient(linear,left top, left bottom, from(#f60),to(#f60));border:none;color:#fff;border-radius:3px; margin:0; padding:0; font-size:16px;}
+.report_box_bth .login_button_qx{width:80px;height:35px;background:-webkit-gradient(linear,left top, left bottom, from(#ddd),to(#ddd));border:none;color:#333;border-radius:3px;}
+.report_box_bth{width:100%; text-align:center; padding:15px  0 5px 0;display: inline-block;}
+.login_button_jb{width:80px;height:30px;background:-webkit-gradient(linear,left top, left bottom, from(#f60),to(#f60));border:none;color:#fff;border-radius:3px; margin-right:10px;}
+.login_button_qx{width:80px;height:30px;background:-webkit-gradient(linear,left top, left bottom, from(#ddd),to(#ddd));border:none;color:#333;border-radius:3px;}
+.menu_p1_tx{ display:block; float:left;margin-top:10px; padding-right:8px;_padding-right:4px;}
+.menu_p1_tx img{ width:28px; height:28px;border-radius:50%;}
+.job_list_tj{width:28px;height:15px; line-height:15px; text-align:center; display:inline-block;  font-size:12px;border:1px solid #efc816;color:#efc816;border-radius:3px; font-weight:normal}
+.sub_infor_b{width:28px;height:28px;background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#eee));border:none;border-radius:5px;box-shadow:none;text-align:center;line-height:28px;}
+.yun_wap_share_tip_p{color:#fff; font-size:17px; padding-left:20px; padding-top:20px;  }
+.yun_wap_share_tip_icon{width:128px;height:128px; background:url(../images/yun_wap_fxicon.png) no-repeat; display:block; background-size:100%;right:0px;top:0px; }
+.yun_wap_share_tip_i{width:30px;height:30px; display:inline-block; background:url(../images/yun_wap_share_tip_fx.png) no-repeat; background-size:100%; vertical-align:middle; margin:0px 8px}
+.yun_wap_share_tip_i2{width:30px;height:30px; display:inline-block; background:url(../images/yun_wap_share_tip_fx2.png) no-repeat; background-size:100%; vertical-align:middle; margin:0px 8px;}
+.yun_wap_share_tip_i3{width:26px;height:26px; display:inline-block; background:url(../images/yun_wap_share_tip_fx3.png) no-repeat; background-size:100%; vertical-align:middle; margin:0px 8px;}
+.yun_wap_share_tip_i4{width:30px;height:30px; display:inline-block; background:url(../images/yun_wap_share_tip_fx4.png) no-repeat; background-size:100%; vertical-align:middle; margin:0px 8px;}
+.yun_wap_share_n{ font-style:italic; margin-right:5px; display:inline-block; font-family:Georgia,"Times New Roman",Times,serif; font-size:20px;}
+.yun_wap_share_tip_wxicon{width:90%;height:250px; background:url(../images/yun_wap_fxicon.png) no-repeat center center;background-size:100%; display:block; position:absolute;right:10px;top:10px;}
+.yun_wap_share_tip_wxicon_more{width:30px;height:30px; background:url(../images/yun_wap_share_more.png) no-repeat;background-size:100%; display:block; position:absolute;right:15px;top:10px}
+.yun_wap_share_tip_wxp{width:100%;color:#fff; font-size:20px; padding-top:20px; position:absolute;top:170px;left:0px; text-align:center}
+#totop{position:fixed;bottom:100px;right:10px;z-index:9999999;width:40px; cursor:pointer; display:none;}
+*html #totop{position:absolute;cursor:pointer;right:10px; display:none;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-112+"px")}
+#totop a{display:block;outline:none;width:40px;height:40px; background:url(../images/zd.png) no-repeat; background-size:100%; opacity:0.4}
+#totop a.cur{background:url(../image/zd.png) no-repeat; background-size:100%; opacity:0.4}
+.job_jz_tips_sq_bth_top{ position:absolute;right:10px;bottom:10px;}
+.m_info_yl{color:#fff; padding-left:20px;}
+.look_user_tel{width:100%; text-align:center; padding:20px 0;}
+.look_user_tel a{color:#f60;}
+/* Direction Nav */
+.flex-direction-nav {display:none;}
+/* Control Nav */
+.flex-control-nav {display:none;}
+.slides {width:100%; clear:both}
+.slides li{width:100%;max-height:130px; overflow:hidden}
+.slides li img{ height:130px}
+.reg_xybox{width:100%; margin:0 auto}
+.reg_xybox_tit{width:100%;height:45px; line-height:45px; background:#09F;color:#fff; position:relative}
+.reg_xybox_tit_s{font-weight:bold; padding-left:10px;}
+.reg_xybox_tit_a{color:#fff; position:absolute;right:20px;top:0px; line-height:40px;}
+.reg_xybox_p{height:350px; padding:10px; background:#fff; overflow:auto; margin:0 auto}
+.user_content_pl{padding:0px 10px 10px 10px;}
+.user_ct_pl_bx{padding:10px 0px;border-bottom:1px solid #e9e9e9;}
+.user_ct_pl_more{width:100%;height:45px;line-height:45px;text-align:center;}
+.user_ct_pl_more a{color:#288ee0;}

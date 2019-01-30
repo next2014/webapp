@@ -1,0 +1,78 @@
+---
+layout: pages
+title: 公共报障
+---
+<div class="pubBarrier">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">服务分类</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请选择服务分类" id="typeServer">
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title"></div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">区域选择</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="区域选择" id="area">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">地址</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" placeholder="请填写地址信息">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">维保详情</label>
+            </div>
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请做简要描述" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">上传照片</label>
+            </div>
+            <div class="weui-cell__bd">
+                <div class="weui-cell" id="uploader">
+                    <div class="weui-cell__bd">
+                        <div class="weui-uploader">
+                            <!-- <div class="weui-uploader__hd">
+                                <p class="weui-uploader__title">图片上传</p>
+                                <div class="weui-uploader__info"><span id="uploadCount">0</span>/5</div>
+                            </div> -->
+                            <div class="weui-uploader__bd">
+                                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                                <div class="weui-uploader__input-box">
+                                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">紧急程度</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请选择紧急程度" id="emergencyLevel">
+            </div>
+        </div>
+    </div>
+    <!-- 底部按钮 -->
+    <section class="mod_pos_btn">
+        <div class="mod_pos_btn_air w-100"><a href="">提交</a></div>
+    </section>
+</div>

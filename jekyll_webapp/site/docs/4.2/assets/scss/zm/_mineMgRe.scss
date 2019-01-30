@@ -1,0 +1,46 @@
+.mineMgRe{
+    margin-top:54px;
+
+    .prolistContent{
+        overflow: hidden;
+        .lists{
+          .mix{
+             border-bottom: 10px solid #f8f9fa;
+             .dingdanNum{
+                 border-bottom:1px solid #eee;
+                 h2{
+                    font-size:14px;
+                    margin-bottom:0;
+                    strong{
+                        color: #F05C3A;
+                        font-weight: normal;
+                    }
+                 }
+             }
+          }
+        }
+        .pic{
+          text-align: center;
+           img{
+              width:30px;
+              height:30px;
+           }
+        }
+        .con{
+           h2{
+             font-size:12px;
+             margin-bottom:0;
+           }
+           small{
+             opacity: .6;
+           }
+        }
+        .pri{
+            em{
+                font-style: normal;
+                color: #F05C3A;
+            }
+         }
+
+    }
+}

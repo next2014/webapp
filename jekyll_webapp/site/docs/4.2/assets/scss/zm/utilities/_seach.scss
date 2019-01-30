@@ -1,0 +1,60 @@
+//顶部搜索
+.bd-navbar {
+    min-height:auto;
+    background-color: #F05C3A;
+    // box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+    .title{
+        line-height:52px;
+        color:#fff;
+        font-size:16px
+    }
+    .row{
+       margin:0;
+      .code{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         i{
+            font-size:20px;
+            color: snow;
+            line-height:52px;
+          }
+       }
+       .input-group-text{
+          background-color:#fff;
+          padding:0;
+          width:40px;
+          border-right:0;
+          i{
+              font-size:20px;
+              margin:0 auto;
+              color:#ddd;
+          }
+       }
+       .form-control{
+          border-left:0;
+          padding-left:5px;
+          padding-right:0;
+       }
+       .editIcon{
+         text-align:center;
+         span{
+            line-height:55px;
+            font-size: 14px;
+            color:#eee;
+         }
+         i{
+           color: snow;
+           line-height:52px;
+         }
+        }
+       .editIcon1{
+          text-align:center;
+          i{
+              color: snow;
+              line-height:52px;
+              font-size:18px;
+          }
+      }
+    }
+}

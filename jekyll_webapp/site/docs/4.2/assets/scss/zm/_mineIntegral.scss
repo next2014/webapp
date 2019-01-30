@@ -1,0 +1,91 @@
+.mineIntegral{
+    margin-top:51px;
+    font-size: 85%;
+    background: #f8f8f8;
+
+    .mineWallet_date{
+        background-color: #F05C3A;
+        li{
+         a{
+           color: #fff;
+           margin:5px;
+           &.nav-link {
+             border-radius:20px;
+             padding:5px;
+             &.active{
+               background-color: #fff;
+               color: #F05C3A;
+               // border-bottom:2px solid #F05C3A;
+             }
+           } 
+         }
+        }
+     }
+ 
+     .walletbag{
+        padding:20px 15px;
+        margin-bottom:0;
+        position: relative;
+        li{
+         list-style-type:none;
+         text-align: center;
+         .wa_set{
+           position: absolute;
+           top:15px;
+           right:15px;
+         }
+         &.wa_total_ba{
+             font-size:12px;
+             color: #999;
+         }
+         &.wa_total{
+             color: #999;
+             em{
+               font-size:20px;
+               color:#F05C3A;
+               font-style: normal;
+             }
+             i{
+               color: #999;
+               vertical-align: middle;
+             }
+         }
+         &.wa_total_inex{
+             em{
+               color: #F05C3A;
+               padding:0 2px;
+               font-style: normal;
+             }
+         }
+        }
+     }
+     
+     .prolistContent{
+       overflow: hidden;
+       .pic{
+         text-align: center;
+          img{
+             width:30px;
+             height:30px;
+          }
+       }
+       .con{
+          h2{
+            font-size:12px;
+            margin-bottom:0;
+          }
+          small{
+            opacity: .6;
+          }
+       }
+       .pri{
+          color: #999;
+          em{
+             font-style: normal;
+             color: #F05C3A;
+          }
+        }
+    }
+  
+
+}

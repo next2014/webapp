@@ -1,0 +1,837 @@
+---
+layout: default
+---
+<div id="app" class="mui-views">
+    <div class="mui-view">
+        <div class="mui-navbar"></div>
+        <div class="mui-pages"></div>
+    </div>
+</div>
+<!--单页面开始-->
+<div id="main" class="mui-page">
+    <div class="mui-navbar-inner mui-bar mui-bar-nav mui-navbar-center">
+        <div class="body_wap">
+            <header class="header_h">
+                <div class="header_fixed">
+                    <div class="header">
+                        <div class="header_bg  bg3">
+                            <a class="hd-lbtn" href="javascript:history.back();"><i class="header_top_l"></i></a>
+                            <div class="header_h1">
+                                <div class="header_fx_search">
+                                    <a href="#searchhtml">
+                                        <div class="formFiled">
+                                            <input type="text" value="" name="keyword" class="input_search searchnew"
+                                                placeholder="请输入职位关键字,如：会计...">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="mui-content pos_tab">
+        <div class="mui-row">
+            <div class="mui-col-sm-6 mui-col-xs-12">
+                <li class="mui-table-view-cell">
+                    <a href="position.html" class="active">
+                        全职
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-sm-6 mui-col-xs-12">
+                <li class="mui-table-view-cell">
+                    <a href="c_part.html">
+                        兼职
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!--页面主内容区开始-->
+    <div class="mui-page-content" style="top:40px">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <section>
+                    <div class="searchOptions clearfix">
+                        <ul class="searchOptions_list">
+                            <!-- <li class="grade popup" data-pop="grade">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">
+                                    <span class="job_ov">
+                                        区域
+                                    </span>
+                                    <i class="searchOptions_icon"></i>
+                                </a>
+                            </li> -->
+
+                            <li class="grade popup">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">
+                                    <span class="job_ov" id='showCityPicker'>区域</span>
+                                    <i class="searchOptions_icon"></i>
+                                </a>
+                            </li>
+
+                            <!-- <li class="Category popup" data-pop="Category">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">
+                                    <span class="job_ov">职能</span>
+                                    <i class="searchOptions_icon"></i>
+                                </a>
+                            </li> -->
+                            <li class="grade popup">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">
+                                    <span class="job_ov" id='showJobPicker'>职能</span>
+                                    <i class="searchOptions_icon"></i>
+                                </a>
+                            </li>
+
+                            <li class="Sort popup" data-pop="Sort">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">
+                                    <span class="job_ov">经验</span>
+                                    <i class="searchOptions_icon  "></i>
+                                </a>
+                            </li>
+                            <li class="Gengduoj popup" data-pop="Gengduoj" style="border:none">
+                                <a href="javascript:void(0);" class="searchOptions_list_a">更多<i class="searchOptions_icon"></i></a>
+                            </li>
+                            <input type="hidden" id="searchurl" value="c=job" />
+                            <input type="hidden" id="waptype" value="1" />
+                        </ul>
+                    </div>
+                </section>
+                <div class="clear"></div>
+                <section>
+                    <div class="warp_content clear">
+                        <div class="job_list_content">
+                            <!-----竞价置顶---------->
+                            <div class="job_list_box">
+                                <a href="c_job_view.html">
+                                    <div class="yunwap_jobname">
+                                        <h3>厨师长 </h3><span class="yunwap_jobtime" style="color:#f00">置顶</span>
+                                    </div>
+                                    <div class="yunwap_job_info"><span class="yunwap_job_info_s yunwap_job_city">广东-惠州</span>
+                                    </div>
+                                    <div class="yunwap_jobxz">￥2800-3400 <span class="yunwap_job_sq">申请</span></div>
+                                </a>
+                                <div class="yunwap_jobcom">
+                                    <a href="c_company_show.html">
+                                        <div class="yunwap_jobcomlogo"><img src="https://dummyimage.com/40x40/ff6600/fff.png&text=logo"
+                                                width="40" height="40"></div>
+                                        <div class="yunwap_jobcom_name">
+                                            必胜客 </div>
+
+                                        <div class="yunwap_jobcom_info">外资企业<span class="yunwap_jobcom_info_line">|</span>1000人以上<span
+                                                class="yunwap_jobcom_info_line">|</span>酒店/餐饮</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-----竞价置顶end---------->
+                            <div class="job_list_box">
+                                <a href="c_job_view.html">
+                                    <div class="yunwap_jobname">
+                                        <h3>包吃住普工 </h3><span class="yunwap_jobtime">16:25</span>
+                                    </div>
+                                    <div class="yunwap_job_info"><span class="yunwap_job_info_s yunwap_job_city">广东-惠州</span>
+                                        <span class="yunwap_job_info_s yunwap_job_xl">不限学历</span> <span class="yunwap_job_info_s yunwap_job_jy">不限经验</span>
+                                    </div>
+                                    <div class="yunwap_jobxz">￥4000-6000 <span class="yunwap_job_sq">申请</span></div>
+                                </a>
+                                <div class="yunwap_jobcom">
+                                    <a href="c_company_show.html">
+                                        <div class="yunwap_jobcomlogo"><img src="https://dummyimage.com/40x40/ff6600/fff.png&text=logo"
+                                                width="40" height="40"></div>
+                                        <div class="yunwap_jobcom_name">深圳张玉堂 </div>
+                                        <div class="yunwap_jobfl_box">
+                                            <span class="yunwap_jobfl">法定节假日</span> <span class="yunwap_jobfl">休假制度</span>
+                                            <span class="yunwap_jobfl">奖励计划</span> <span class="yunwap_jobfl">综合补贴</span>
+                                            <span class="yunwap_jobfl">包吃住</span></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="job_list_box"> <i class="yun_wap_tj">推荐</i>
+                                <a href="c_job_view.html">
+                                    <div class="yunwap_jobname">
+                                        <h3>
+                                            <font color='red'>市场营销</font> <i class="yun_wap_jp">急招</i>
+                                        </h3><span class="yunwap_jobtime">14:35</span>
+                                    </div>
+                                    <div class="yunwap_job_info"><span class="yunwap_job_info_s yunwap_job_city">广东-惠州</span>
+                                        <span class="yunwap_job_info_s yunwap_job_xl">不限学历</span> <span class="yunwap_job_info_s yunwap_job_jy">不限经验</span>
+                                    </div>
+                                    <div class="yunwap_jobxz">￥面议 <span class="yunwap_job_sq">申请</span></div>
+                                </a>
+                                <div class="yunwap_jobcom">
+                                    <a href="c_company_show.html">
+                                        <div class="yunwap_jobcomlogo"><img src="https://dummyimage.com/40x40/ff6600/fff.png&text=logo"
+                                                width="40" height="40"></div>
+                                        <div class="yunwap_jobcom_name">职日猫 <i class="job_qy_rz_icon"></i> </div>
+                                        <div class="yunwap_jobcom_info">股份制企业<span class="yunwap_jobcom_info_line">|</span>10-50人<span
+                                                class="yunwap_jobcom_info_line">|</span>专业服务/咨询(财会/法律/人力资源等)</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="job_list_box">
+                                <a href="c_job_view.html">
+                                    <div class="yunwap_jobname">
+                                        <h3>校缘班服服饰诚招校内 </h3><span class="yunwap_jobtime"> 10:25
+                                        </span>
+                                    </div>
+                                    <div class="yunwap_job_info"><span class="yunwap_job_info_s yunwap_job_city">广东-惠州</span>
+                                        <span class="yunwap_job_info_s yunwap_job_xl">不限学历</span> <span class="yunwap_job_info_s yunwap_job_jy">不限经验</span>
+                                    </div>
+                                    <div class="yunwap_jobxz">￥面议 <span class="yunwap_job_sq">申请</span></div>
+                                </a>
+                                <div class="yunwap_jobcom">
+                                    <a href="c_company_show.html">
+                                        <div class="yunwap_jobcomlogo"><img src="https://dummyimage.com/40x40/ff6600/fff.png&text=logo"
+                                                width="40" height="40"></div>
+                                        <div class="yunwap_jobcom_name">深圳市校缘服饰有限公司 </div>
+                                        <div class="yunwap_jobcom_info">民营企业<span class="yunwap_jobcom_info_line">|</span>10人以下<span
+                                                class="yunwap_jobcom_info_line">|</span>零售/批发</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="job_list_box">
+                                <a href="c_job_view.html">
+                                    <div class="yunwap_jobname">
+                                        <h3>市场营销实习生 </h3><span class="yunwap_jobtime"> 10:23
+                                        </span>
+                                    </div>
+                                    <div class="yunwap_job_info"><span class="yunwap_job_info_s yunwap_job_city">广东-惠州</span>
+                                        <span class="yunwap_job_info_s yunwap_job_xl">中专学历</span> <span class="yunwap_job_info_s yunwap_job_jy">不限经验</span>
+                                    </div>
+                                    <div class="yunwap_jobxz">￥3000-6000 <span class="yunwap_job_sq">申请</span></div>
+                                </a>
+                                <div class="yunwap_jobcom">
+                                    <a href="c_company_show.html">
+                                        <div class="yunwap_jobcomlogo"><img src="https://dummyimage.com/40x40/ff6600/fff.png&text=logo"
+                                                width="40" height="40"></div>
+                                        <div class="yunwap_jobcom_name">缔薇尚品 <i class="job_qy_rz_icon"></i> </div>
+                                        <div class="yunwap_jobfl_box">
+                                            <span class="yunwap_jobfl">包住</span> <span class="yunwap_jobfl">带薪年假</span>
+                                            <span class="yunwap_jobfl">法定节假日</span> <span class="yunwap_jobfl">奖励计划</span>
+                                            <span class="yunwap_jobfl">五险一金</span> <span class="yunwap_jobfl">销售奖金</span></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--单页面结束-->
+<script>
+    mui.init();
+    var viewApi = mui('#app').view({
+        defaultPage: '#main'
+    });
+    //初始化单页的区域滚动
+    mui('.mui-scroll-wrapper').scroll({
+        scrollY: true, //是否竖向滚动
+        scrollX: false, //是否横向滚动
+        startX: 0, //初始化时滚动至x
+        startY: 0, //初始化时滚动至y
+        indicators: false, //是否显示滚动条
+        deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+        // bounce: true //是否启用回弹
+    });
+    var view = viewApi.view;
+    (function ($) {
+        //处理view的后退与webview后退
+        var oldBack = $.back;
+        $.back = function () {
+            if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+                viewApi.back();
+            } else { //执行webview后退
+                oldBack();
+            }
+        };
+    })(mui);
+    $(document).ready(function () {
+        $("#search").val();
+        $(".searchOptions_list li a").removeClass("search_h1_box_cur_list");
+    });
+    $(".searchnew").on('tap', function () {
+        $('body').removeAttr('style');
+        $('.popshow').removeClass('grade-w-roll');
+        $('.popshow').removeAttr('style');
+        $('.popshow').removeClass('popshow');
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#resume").submit(function (e) {
+            var min = $("#minresume").val();
+            var max = $("#maxresume").val();
+            if (min && max && parseInt(max) < parseInt(min)) {
+                $("#minresume").val(max);
+                $("#maxresume").val(min);
+            }
+        });
+    });
+    $(document).ready(function () {
+        $("#job").submit(function (e) {
+            var min = $("#minjob").val();
+            var max = $("#maxjob").val();
+            if (min && max && parseInt(max) < parseInt(min)) {
+                $("#minjob").val(max);
+                $("#maxjob").val(min);
+            }
+        });
+    });
+</script>
+
+<!-- Category职位类别 -->
+<div class="Category-eject">
+    <ul class="Category-w" id="jobone">
+        <li class="qc35" onclick="Categorytw('35','IT/互联网/通信','jobone')">IT/互联网/通信</li>
+        <li class="qc36" onclick="Categorytw('36','销售/客服/市场','jobone')">销售/客服/市场</li>
+        <li class="qc839" onclick="Categorytw('839','生产/制造/生物/制药/医疗器械','jobone')">生产/制造/生物/制药/医疗器械</li>
+        <li class="qc44" onclick="Categorytw('44','服务业','jobone')">服务业</li>
+        <li class="qc45" onclick="Categorytw('45','能源/环保/科研/农业','jobone')">能源/环保/科研/农业</li>
+        <li class="qc38" onclick="Categorytw('38','贸易/交通/采购/物流','jobone')">贸易/交通/采购/物流</li>
+        <li class="qc39" onclick="Categorytw('39','项目/质量/高级管理','jobone')">项目/质量/高级管理</li>
+        <li class="qc40" onclick="Categorytw('40','设计/传媒/印刷/艺术','jobone')">设计/传媒/印刷/艺术</li>
+        <li class="qc41" onclick="Categorytw('41','建筑/房地产/物业管理','jobone')">建筑/房地产/物业管理</li>
+        <li class="qc42" onclick="Categorytw('42','财务/人力资源/行政','jobone')">财务/人力资源/行政</li>
+        <li class="qc37" onclick="Categorytw('37','金融/银行/保险','jobone')">金融/银行/保险</li>
+        <li class="qc43" onclick="Categorytw('43','咨询/法律/教育/翻译','jobone')">咨询/法律/教育/翻译</li>
+        <li class="qc836" onclick="Categorytw('836','兼职/实习/社工/其他','jobone')">兼职/实习/社工/其他</li>
+    </ul>
+    <ul class="Category-t" id="jobone_son">
+    </ul>
+    <ul class="Category-s" id="job_post">
+    </ul>
+</div>
+<!-- End Category -->
+
+<!-- Substation 分站地区-->
+<div class="Substation-eject Substation-height">
+    <ul class="Substation-Substation" id="Substation-Substation">
+        <li>
+            <a href="#">全部</a>
+        </li>
+    </ul>
+</div>
+<!-- End Substation -->
+
+<!-- Sortexp 找人才工作经验-->
+<div class="Sortexp-eject Sortexp-height">
+    <ul class="Sortexp-Sortexp" id="Sortexp-Sortexp">
+    </ul>
+</div>
+<!-- End Sortexp -->
+
+<!-- Gengduoj 找工作更多-->
+<div class="Gengduoj-eject">
+    <form action="" method="get" id="job">
+        <input type="hidden" name="c" value="job">
+        <ul class="Gengduoj-w" id="Gengduoj">
+            <div class="job_list_chlose ">
+                <span class="job_list_chlose_a"><a href=""><i class="job_list_chlose_c">所有职位</i></a></span>
+                <span>
+                    <a class="search_icon" href=""><i class="job_list_chlose_c">紧急职位</i></a>
+                </span>
+                <span>
+                    <a class="search_icon" href=""><i class="job_list_chlose_c">推荐职位</i></a>
+                </span>
+                <input type="hidden" value="1" id="search">
+            </div>
+            <li tab_name="Gengduohy">
+                <a href="javascript:void(0);">行业类别<em id="gdjhy">&nbsp;&nbsp;</em></a>
+            </li>
+            <li tab_name="Gengduopr">
+                <a href="javascript:void(0);">公司性质<em id="gdjpr">&nbsp;&nbsp;</em></a>
+            </li>
+            <li tab_name="Gengduonum">
+                <a href="javascript:void(0);">公司规模<em id="gdjnum">&nbsp;&nbsp;</em></a>
+            </li>
+            <li tab_name="Gengduoedu">
+                <a href="javascript:void(0);">学历要求<em id="gdjedu">&nbsp;&nbsp;</em></a>
+            </li>
+            <li tab_name="Gengduouptime">
+                <a href="javascript:void(0);">更新日期<em id="gdjuptime">&nbsp;&nbsp;</em></a>
+            </li>
+            <li>薪资待遇
+                <span class="salary_text_box"><input type="text" size="5" name="minsalary" id="minjob" placeholder="1999"
+                        value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)" class="salary_text"></span>
+                <span> - </span>
+                <span class="salary_text_box"><input type="text" size="5" name="maxsalary" id="maxjob" placeholder="2999"
+                        value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)" class="salary_text"></span>
+            </li>
+            <li>
+                <input type="hidden" name="hy" id="gdjhyi" value="">
+                <input type="hidden" name="pr" id="gdjpri" value="">
+                <input type="hidden" name="num" id="gdjnumi" value="">
+                <input type="hidden" name="edu" id="gdjedui" value="">
+                <input type="hidden" name="uptime" id="gdjuptimei" value="">
+                <div class="search_chlosebth_box"><input type="submit" value="确定" class=""><a href="" class="search_chlosebth_box_qk">清空所有</a></div>
+            </li>
+        </ul>
+    </form>
+    <ul class="Gengduoj-t" id="Gengduohy" style="display:block;">
+        <li tab_name="gdjhy" data="35">互联网/电子商务</li>
+        <li tab_name="gdjhy" data="837">IT服务（系统/数据/维护）</li>
+        <li tab_name="gdjhy" data="835">计算机软件/硬件</li>
+        <li tab_name="gdjhy" data="862">交通/运输/物流</li>
+        <li tab_name="gdjhy" data="861">航空/航天研究与制造</li>
+        <li tab_name="gdjhy" data="860">医疗设备/器械</li>
+        <li tab_name="gdjhy" data="859">医药/生物工程</li>
+        <li tab_name="gdjhy" data="858">办公用品及设备</li>
+        <li tab_name="gdjhy" data="857">印刷/包装/造纸</li>
+        <li tab_name="gdjhy" data="856">仪器仪表及工业自动化</li>
+        <li tab_name="gdjhy" data="855">加工制造（原料加工/模具）</li>
+        <li tab_name="gdjhy" data="854">大型设备/机电设备/重工业</li>
+        <li tab_name="gdjhy" data="864">医疗/护理/美容/保健</li>
+        <li tab_name="gdjhy" data="865">酒店/餐饮</li>
+        <li tab_name="gdjhy" data="866">旅游/度假</li>
+        <li tab_name="gdjhy" data="875">农/林/牧/渔</li>
+        <li tab_name="gdjhy" data="874">学术/科研</li>
+        <li tab_name="gdjhy" data="873">政府/公共事业/非盈利机构</li>
+        <li tab_name="gdjhy" data="872">环保</li>
+        <li tab_name="gdjhy" data="871">电气/电力/水利</li>
+        <li tab_name="gdjhy" data="870">石油/石化/化工</li>
+        <li tab_name="gdjhy" data="869">能源/矿产/采掘/冶炼</li>
+        <li tab_name="gdjhy" data="868">娱乐/体育/休闲</li>
+        <li tab_name="gdjhy" data="867">媒体/出版/影视/文化传播</li>
+        <li tab_name="gdjhy" data="853">汽车/摩托车</li>
+        <li tab_name="gdjhy" data="852">工艺美术/收藏品/奢侈品</li>
+        <li tab_name="gdjhy" data="45">网络游戏</li>
+        <li tab_name="gdjhy" data="44">通信/电信/网络设备</li>
+        <li tab_name="gdjhy" data="43">通信/电信运营、增值服务</li>
+        <li tab_name="gdjhy" data="42">电子技术/半导体/集成电路</li>
+        <li tab_name="gdjhy" data="41">基金/证券/期货/投资</li>
+        <li tab_name="gdjhy" data="40">金融/保险/银行</li>
+        <li tab_name="gdjhy" data="38">信托/担保/拍卖/典当</li>
+        <li tab_name="gdjhy" data="37">房地产/建筑/建材/工程</li>
+        <li tab_name="gdjhy" data="36">家居/室内设计/装饰装潢</li>
+        <li tab_name="gdjhy" data="839">物业管理/商业中心</li>
+        <li tab_name="gdjhy" data="840">专业服务/咨询(财会/法律/人力资源等)</li>
+        <li tab_name="gdjhy" data="841">广告/会展/公关</li>
+        <li tab_name="gdjhy" data="850">教育/培训</li>
+        <li tab_name="gdjhy" data="849">租赁服务</li>
+        <li tab_name="gdjhy" data="848">零售/批发</li>
+        <li tab_name="gdjhy" data="847">贸易/进出口</li>
+        <li tab_name="gdjhy" data="846">耐用消费品（服饰/纺织/皮革/家具/家电）</li>
+        <li tab_name="gdjhy" data="845">快速消费品（食品/饮料/烟酒/日化）</li>
+        <li tab_name="gdjhy" data="844">外包服务</li>
+        <li tab_name="gdjhy" data="843">检验/检测/认证</li>
+        <li tab_name="gdjhy" data="842">中介服务</li>
+        <li tab_name="gdjhy" data="878">其他</li>
+    </ul>
+    <ul class="Gengduoj-t" id="Gengduopr" style="display:none;">
+        <li tab_name="gdjpr" data="20">外资企业</li>
+        <li tab_name="gdjpr" data="21">合资企业</li>
+        <li tab_name="gdjpr" data="23">民营企业</li>
+        <li tab_name="gdjpr" data="24">股份制企业</li>
+        <li tab_name="gdjpr" data="25">集体企业</li>
+        <li tab_name="gdjpr" data="79">上市公司</li>
+        <li tab_name="gdjpr" data="80">国家机关</li>
+        <li tab_name="gdjpr" data="81">事业单位</li>
+        <li tab_name="gdjpr" data="82">其他</li>
+    </ul>
+    <ul class="Gengduoj-t" id="Gengduonum" style="display:none;">
+        <li tab_name="gdjnum" data="27">10人以下</li>
+        <li tab_name="gdjnum" data="28">10-50人</li>
+        <li tab_name="gdjnum" data="29">50-200人</li>
+        <li tab_name="gdjnum" data="30">200-500人</li>
+        <li tab_name="gdjnum" data="31">500-1000人</li>
+        <li tab_name="gdjnum" data="32">1000人以上</li>
+    </ul>
+    <ul class="Gengduoj-t" id="Gengduoedu" style="display:none;">
+        <li tab_name="gdjedu" data="65">不限</li>
+        <li tab_name="gdjedu" data="66">高中</li>
+        <li tab_name="gdjedu" data="67">中专</li>
+        <li tab_name="gdjedu" data="68">大专</li>
+        <li tab_name="gdjedu" data="69">本科</li>
+        <li tab_name="gdjedu" data="70">硕士</li>
+        <li tab_name="gdjedu" data="71">博士</li>
+    </ul>
+    <ul class="Gengduoj-t" id="Gengduouptime" style="display:none;">
+        <li tab_name="gdjuptime" data="1">今天</li>
+        <li tab_name="gdjuptime" data="3">最近3天</li>
+        <li tab_name="gdjuptime" data="7">最近7天</li>
+        <li tab_name="gdjuptime" data="30">最近一个月</li>
+        <li tab_name="gdjuptime" data="90">最近三个月</li>
+    </ul>
+</div>
+<!-- End Gengduoj -->
+
+<!-- Sort 找工作经验-->
+<div class="Sort-eject Sort-height">
+    <ul class="Sort-Sort" id="Sort-Sort">
+        <li onclick="check_city_li('127','exp')">
+            <a href="javascript:void(0)">不限</a>
+        </li>
+        <li onclick="check_city_li('12','exp')">
+            <a href="javascript:void(0)">应届毕业生</a>
+        </li>
+        <li onclick="check_city_li('13','exp')">
+            <a href="javascript:void(0)">1年以上</a>
+        </li>
+        <li onclick="check_city_li('14','exp')">
+            <a href="javascript:void(0)">2年以上</a>
+        </li>
+        <li onclick="check_city_li('15','exp')">
+            <a href="javascript:void(0)">3年以上</a>
+        </li>
+        <li onclick="check_city_li('16','exp')">
+            <a href="javascript:void(0)">5年以上</a>
+        </li>
+        <li onclick="check_city_li('17','exp')">
+            <a href="javascript:void(0)">8年以上</a>
+        </li>
+        <li onclick="check_city_li('18','exp')">
+            <a href="javascript:void(0)">10年以上</a>
+        </li>
+    </ul>
+</div>
+<!-- End Sort -->
+
+<!-- Sorthy 行业弹出框-->
+<div class="Sorthy-eject Sorthy-height">
+    <ul class="Sorthy-Sorthy" id="Sorthy-Sorthy">
+        <li>
+            <a href="">互联网/电子商务</a>
+        </li>
+        <li>
+            <a href="">IT服务（系统/数据/维护）</a>
+        </li>
+        <li>
+            <a href="">计算机软件/硬件</a>
+        </li>
+        <li>
+            <a href="">交通/运输/物流</a>
+        </li>
+        <li>
+            <a href="">家居/室内设计/装饰装潢</a>
+        </li>
+        <li>
+            <a href="">物业管理/商业中心</a>
+        </li>
+        <li>
+            <a href="">专业服务/咨询(财会/法律/人力资源等)</a>
+        </li>
+        <li>
+            <a href="">广告/会展/公关</a>
+        </li>
+        <li>
+            <a href="">教育/培训</a>
+        </li>
+        <li>
+            <a href="">租赁服务</a>
+        </li>
+        <li>
+            <a href="">零售/批发</a>
+        </li>
+        <li>
+            <a href="">贸易/进出口</a>
+        </li>
+        <li>
+            <a href="">耐用消费品（服饰/纺织/皮革/家具/家电）</a>
+        </li>
+        <li>
+            <a href="">快速消费品（食品/饮料/烟酒/日化）</a>
+        </li>
+        <li>
+            <a href="">外包服务</a>
+        </li>
+        <li>
+            <a href="">检验/检测/认证</a>
+        </li>
+        <li>
+            <a href="">中介服务</a>
+        </li>
+        <li>
+            <a href="">其他</a>
+        </li>
+    </ul>
+</div>
+<!-- End Sorthy -->
+
+<!-- Sortpr 企业性质弹出框-->
+<div class="Sortpr-eject Sortpr-height">
+    <ul class="Sortpr-Sortpr" id="Sortpr-Sortpr">
+        <li><a href="">外资企业</a></li>
+        <li><a href="">合资企业</a></li>
+        <li><a href="">民营企业</a></li>
+        <li><a href="">股份制企业</a></li>
+        <li><a href="">集体企业</a></li>
+        <li><a href="">上市公司</a></li>
+        <li><a href="">国家机关</a></li>
+        <li><a href="">事业单位</a></li>
+        <li><a href="">其他</a></li>
+    </ul>
+</div>
+<!-- End Sortpr -->
+
+<!-- Sortmun 企业规模弹出框-->
+<div class="Sortmun-eject Sortmun-height">
+    <ul class="Sortmun-Sortmun" id="Sortmun-Sortmun">
+        <li>
+            <a href="">10人以下</a>
+        </li>
+        <li>
+            <a href="">10-50人</a>
+        </li>
+        <li>
+            <a href="">50-200人</a>
+        </li>
+        <li>
+            <a href="">200-500人</a>
+        </li>
+        <li>
+            <a href="">500-1000人</a>
+        </li>
+        <li>
+            <a href="">1000人以上</a>
+        </li>
+    </ul>
+</div>
+<!-- End Sortmun -->
+
+<!-- Sorttype 兼职类型弹出框-->
+<div class="Sorttype-eject Sorttype-height">
+    <ul class="Sorttype-Sorttype" id="Sorttype-Sorttype">
+    </ul>
+</div>
+<!-- End Sorttype -->
+<!-- Sortcycle 结算周期弹出框-->
+<div class="Sortcycle-eject Sortcycle-height">
+    <ul class="Sortcycle-Sortcycle" id="Sortcycle-Sortcycle">
+    </ul>
+</div>
+<!-- End Sortcycle -->
+
+<!-- wap商城商品类别 -->
+<div class="redeem-eject">
+    <ul class="redeem-w" id="nid">
+    </ul>
+    <ul class="redeem-t" id="tnid">
+    </ul>
+
+</div>
+<!-- End redeem -->
+<div id="searchhtml" class="mui-page">
+    <div class="mui-navbar-inner mui-bar mui-bar-nav">
+        <div class="body_wap">
+            <header class="header_h">
+                <div class="header_fixed">
+                    <div class="header">
+                        <div class="header_bg  bg3">
+                            <a class="hd-lbtn mui-action-back" href=""><i class="header_top_l"></i></a>
+                            <div class="header_h1">
+                                <div class="header_p_z">职位搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="mui-page-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="search_body">
+                    <div class="wap_search_header">
+                        <form method="get" action="#">
+                            <input type="hidden" id="type" name="c" value="job" />
+                            <div class="wap_search_text">
+                                <input type="text" value="" onkeyup="this.value = this.value.replace(/[,]/g,'');" id="input_search"
+                                    name="keyword" class="" placeholder="请输入职位关键字，如：会计...">
+                            </div>
+                            <div class="wap_search_bth">
+                                <input type="submit" value="搜职位" class="">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="search_history">
+                        <div class="search_history_tite">
+                            <span class="search_history_li">历史搜索</span>
+                            <span class="search_history_shi" style="display:none" id="clearhistory">
+
+                            </span>
+                        </div>
+                        <div class="search_history_tag_box" id="historylist">
+                            <div class="search_history_no">
+                                暂无历史~
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search_history">
+                        <div class="search_history_tit">热门搜索</div>
+                        <div class="search_history_tag_box">
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">兼职</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">设计</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">文员</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#000000">教育</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">销售</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">老师</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">专员</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">助理</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">客服</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">会计</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">工程师</font>
+                                </a>
+                            </div>
+                            <div class="search_history_tag">
+                                <a href="#">
+                                    <font color="#">西点师</font>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function clearhis(type) {
+        $.post("index.php?c=search&a=del", {
+            type: type
+        }, function (data) {
+            if (data) {
+                layer.open({
+                    content: "历史已清除！",
+                    time: 2,
+                    end: function () {
+                        window.location.href = data;
+                    }
+                });
+                return false;
+            } else {
+                layer.open({
+                    content: "操作失败！",
+                    time: 2,
+                    end: 8
+                });
+                return false;
+            }
+        });
+    }
+    $(document).ready(function () {
+        var type = $("#type").val();
+        $.post("index.html", {
+            type: type
+        }, function (data) {
+            if (data) {
+                var data = eval('(' + data + ')');
+                if (data.hisid) {
+                    $("#clearhistory").html("<a href='javascript:void(0);' onclick=\"clearhis('" + data.hisid + "')\">清除历史</a>");
+                    $("#clearhistory").show();
+                }
+                if (data.list) {
+                    var html = '';
+                    $.each(data.list, function () {
+                        html += "<div class=\"search_history_tag\"> <a href=\"" + this.url + "\">" + this.key_name + "</a></div>";
+                    });
+                    $("#historylist").html(html);
+                }
+            }
+        });
+    });
+</script>
+
+<div id="hm_t_undefined" class="hm-t-container">
+    <div class="hm-t-go-top" style="display: none;"></div>
+</div>
+
+<script src="../js/mui.picker.min.js" language="javascript"></script>
+<script src="../js/mui.poppicker.js" language="javascript"></script>
+<script src="../js/city.cache.js" language="javascript"></script>
+<script src="../js/mui.view.js" language="javascript"></script>
+<script src="../js/umeditor.config.js"></script>
+<script src="../js/umeditor.min.js"></script>
+<script src="../js/cominfo.js" language="javascript"></script>
+<script src="../js/category.js" language="javascript"></script>
+
+<script src="../js/job.cache.js" language="javascript"></script>
+<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/job.data.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    (function ($, doc) {
+        $.init();
+        $.ready(function () {
+            /**
+             * 获取对象属性的值
+             * @param {Object} obj 对象
+             * @param {String} param 属性名
+             */
+            var _getParam = function (obj, param) {
+                return obj[param] || '';
+            };
+            // 选择区域
+            var cityPicker3 = new $.PopPicker({ layer: 3 });
+            cityPicker3.setData(cityData3);
+            var showCityPickerButton = doc.getElementById('showCityPicker');
+            showCityPickerButton.addEventListener('tap', function (event) {
+                cityPicker3.show(function (items) {
+                    location.href = "position.html?=" + _getParam(items[0], 'value') + " " + _getParam(items[1], 'value') + " " + _getParam(items[2], 'value');
+                });
+            }, false);
+            // 选择职能
+            var JobPicker = new $.PopPicker({ layer: 3 });
+            JobPicker.setData(jobData);
+            var showJobPickerButton = doc.getElementById('showJobPicker');
+            showJobPickerButton.addEventListener('tap', function (event) {
+                JobPicker.show(function (items) {
+                    location.href = "position.html?=" + _getParam(items[0], 'value') + " " + _getParam(items[1], 'value') + " " + _getParam(items[2], 'value');
+                });
+            }, false);
+        });
+    })(mui, document);
+</script>

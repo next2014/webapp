@@ -1,0 +1,107 @@
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-3 ml-3" href="javascript:;" aria-label="Bootstrap">
+     <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/logo.png" height="35" />
+  </a>
+  
+  <!-- <button class="btn btn-link bd-search-docs-toggle d-md-none s-ms-fright" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"> -->
+  <button class="btn btn-link bd-search-docs-toggle d-md-none s-ms-fright" type="button" id="open-right" data-activates="slide-out">
+      {%- include icons/menu.svg width="30" height="30" -%}
+  </button>
+
+  <div class="bd-links collapse">
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/intro/">关于我们</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/anli/">文化主题项目</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/news/hdmessage">欧美城新闻</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://www.neeq.com.cn/disclosure/announcement.html?companyCode=430173">投资者专栏</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/xgzz/index">相关资质</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/content">联系我们</a>
+          </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Right Sidebar -->
+<ul id="slide-out" class="side-nav d-md-none list-group">
+    <li class="list-group-item border-0 rounded-0 active">
+        <a href="{{ site.baseurl }}/" class="d-flex justify-content-between align-items-center">首页
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+    <li class="list-group-item border-0 rounded-0">
+        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/intro/" class="d-flex justify-content-between align-items-center">关于我们
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+    <li class="list-group-item border-0 rounded-0">
+        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/anli/" class="d-flex justify-content-between align-items-center">文化主题项目
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+    <li class="list-group-item border-0 rounded-0">
+        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/news/hdmessage" class="d-flex justify-content-between align-items-center">欧美城新闻
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+    <li class="list-group-item border-0 rounded-0">
+        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/xgzz/index" class="d-flex justify-content-between align-items-center">相关资质
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+    <li class="list-group-item border-0 rounded-0">
+        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/content" class="d-flex justify-content-between align-items-center">联系我们
+            {%- include icons/left_arrow.svg -%}</a>
+    </li>
+</ul>
+
+<!-- <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v{{ site.docs_version }}
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/">Latest (4.2.x)</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.1/">v4.1.3</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.0</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="{{ site.baseurl }}/docs/versions/">All versions</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
+        {%- include icons/github.svg class="navbar-nav-svg" -%}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
+        {%- include icons/twitter.svg class="navbar-nav-svg" -%}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="{{ site.slack }}/" target="_blank" rel="noopener" aria-label="Slack">
+        {%- include icons/slack.svg class="navbar-nav-svg" -%}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="{{ site.opencollective }}/" target="_blank" rel="noopener" aria-label="Open Collective">
+        {%- include icons/opencollective.svg class="navbar-nav-svg" -%}
+      </a>
+    </li>
+  </ul>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="javascript:;">联系我们</a> -->
+</header>

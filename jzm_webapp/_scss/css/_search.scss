@@ -1,0 +1,68 @@
+/*搜索页*/
+.wap_search_header{ padding:10px 90px 10px 10px; position:relative}
+.wap_search_text{border:1px solid #eee; padding:2px 2px 2px 30px; background:#fff; position:relative;border-radius:3px;}
+.wap_search_text:after{width:20px;height:20px; background:url(../images/yun_wap_fotnav_user.png) no-repeat; background-size:100%;content:''; position:absolute;left:5px;top:8px;  display:inline-block}
+.wap_search_text input{width:100%;height:30px; line-height:30px; margin:0; padding:0;border:none; font-size:14px;}
+.wap_search_bth{width:70px; position:absolute;right:10px;top:12px;}
+.wap_search_bth input{ width:70px;height:32px;border:none;margin:0; padding:0; background:#f60;}
+.search_history{ background: #fff;border-bottom:1px solid #eee; margin-bottom: 10px;padding:10px; }
+.search_history_tit{border-bottom:1px dashed #eeeeee;padding-bottom:10px;font-weight: bold;}
+.search_history_tite{border-bottom:1px dashed #eeeeee;padding-bottom:10px;}
+.search_history_tag{ display:inline-block; background: #f8f8f8; margin-right: 10px; margin-top: 10px;border-radius:4px;font-size: 24rpx; padding:6px 10px;}
+.search_history_li{font-weight: bold;}
+.search_history_shi{right:10px;position:absolute;border:1px solid #eeeeee;background:#eeeeee;padding:2px 5px;font-size:13px;}
+.search_history_no{width:100%; text-align:center; padding:20px 0 20px 0;color:#999; font-size:12px;}
+.passport-progress {padding-bottom: 10px;width:98%;margin:0 auto;padding-top:10px;text-align:center;}
+.passport-progress ul {border-radius: 5px;overflow: hidden;list-style: none;}
+.passport-progress ul li.currents {background-color: #fff2e3;color:#ff6000;}
+.passport-progress ul li {width:32%;background-color: #f7f7f7;text-align: center;font-size: 14px;line-height: 31px;position: relative;font-size:12px;display:inline-block;}
+.passport-progress ul li em {position: absolute;left: -16px;top: 0;width: 32px;height: 31px;background:url(../images/you_icon.png) no-repeat;}
+.currents span{border:1px solid #ff6000;border-radius:50%;padding:0 5px;margin-right:5px;background:#ff6000;color:#fff;}
+.currents_er span{border:1px solid #999999;border-radius:50%;padding:0 5px;margin-right:5px;background:#999999;color:#fff;}
+.account {padding-top: 10px;margin:0 auto;}
+.account_td1 {width:80%;height: 42px;margin:0 auto;}
+.dropdowbox1 {display: none;position: absolute;left: -1px;top: 40px;z-index: 20;}
+.input_295_34 {width:100%;padding-left: 10px;height: 45px;border: 1px #DDD solid;line-height: 45px;border-radius: 3px;font-size:14px;position:relative;}
+.input_295_34.select_input{ background-repeat: no-repeat;background-position: right 10px;background-color: white;color: #666;cursor: pointer;}
+.input_295_35{width:60%;padding-left: 10px;height: 45px;border: 1px #DDD solid;line-height: 45px;border-radius: 3px;font-size:14px;}
+.code .input_295_35{width:60%;padding-left: 10px;height: 45px;border: 1px #DDD solid;line-height: 45px;border-radius: 3px;font-size:14px;}
+.code .btn_yellow {text-decoration: none;text-align: center;color:#757575;background-color: #eeeeee;font-size: 14px;cursor: pointer;border-radius: 4px;line-height: 44px;height: 44px;border: 1px #eeeeee solid;padding:0 8px;width:38%;}
+.btn_yellow {text-decoration: none;text-align: center;color: #fff;background-color: #eeeeee;font-size: 14px;cursor: pointer;border-radius: 4px;line-height: 44px;height:44px;border: 1px #eeeeee solid;padding:0 8px;width:38%;}
+.dropdow_inner1 {position: relative;width: 293px;height: auto;border: 1px solid #DDD;color: #333;background: white;cursor: auto;}
+.dropdow_inner1 .nav_box li {margin: 0;}
+.dropdow_inner1 .nav_box li a {display: block;float: none;height: 20px;line-height: 20px;padding: 6px 10px;text-decoration: none;color: #333;}
+.mobileshow {display: block;}
+.selecttip{font-size: 12px;padding-top: 10px;padding-bottom: 10px;color:#666666;width:78%;margin:0 auto;}
+.td2 {width: 260px;height: 37px;margin-top: 8px;margin-bottom: 8px;padding-top: 6px;}
+.code {width:100%;position: relative;overflow: hidden;margin-top:20px;}
+.codebtn {width: 113px;height: 50px;}
+.codebtn .btn_yellow {width: 113px;padding: 0px;height: 42px;line-height: 42px;border-radius: 0px 4px 4px 0px;}
+.btnbox {padding-left: 45px;margin-top: 20px;height: 50px;}
+.btn_reg {display: block;text-decoration: none;text-align: center;color: white;background-color: #5F8DC9;font-size: 14px;cursor: pointer;border-radius: 4px;border: 0px;width: 295px;height: 40px;line-height: 40px;letter-spacing: 8px;}
+.password_tip {padding: 30px 10px 10px 10px;line-height: 25px; position: relative;}
+.password_tip_t {font-size: 14px;color: #f60;}
+.password_tip_tel { font-size: 18px; padding-top: 10px;color: #f60;}
+.password_tip_tel_link { position: absolute;right: 10px;top: 50px; border-left: 1px solid #ddd; padding-left: 20px;}
+.password_tip_tel_link a { color: #2f90f3;}
+.verification{width:80%;margin:0 auto;margin-top:10px;}
+.verification_shen{line-height: 24px;color: #333;}
+.verification_shen_mi{font-weight: bold;}
+.c_orange{color:#fd753e;}
+.verification_zhang{text-decoration:none;margin-left:10px;}
+.verification_self{color: #333;margin-bottom: 0px;margin-top:10px;}
+.verification_min_xin{display: block;line-height: 20px;font-size: 14px;font-weight: bold;color: #333;margin-bottom: 10px;margin-top:10px;}
+.ef{width: 400px;height: 40px;line-height: 40px;}
+.duan_ef{width: 281px;padding-right: 37px;height: 45px;line-height: 45px;}
+.p_but{width: 114px;height: 44px;line-height: 44px;margin-right: 0;color: #FF6000;background-color: #FFF2E3;border-color: #FFB865;border:none;}
+.btnbox_bu{margin-top:20px;}
+.p_but_xia{display: inline-block;width: 403px;height: 45px;line-height: 45px;font-size: 14px;color: white;text-align: center;cursor: pointer;background-color: #5F8DC9;border: 1px solid #5F8DC9;}
+.reset{width:80%;margin:0 auto;}
+.reset .reset_chong_zhi{width:100%;height: 45px;line-height: 45px;font-size:14px;}
+.reset_que{width:80%;margin:0 auto;margin-top:20px;}
+.reset_que .reset_chong_zhi{width:100%;height: 40px;line-height: 45px;font-size:14px;}
+.safety {width:80%;margin:0 auto;margin-top:5px;}
+.slist_dan{border: 1px #fff solid;height: 35px;line-height:35px;font-size: 12px;text-align: center;background-color: #EEE;color: #666;width:32%;display:inline-block;}
+.reset_btnbox{margin:0 auto;width: 80%;margin-top:20px;}
+.reset_btnbox input{display: inline-block;width: 100%;height: 45px;font-size: 14px;color: white;text-align: center;cursor: pointer;background-color: #ff6000;border: 1px solid #ff6000;}
+.reset_btnbox_xia{margin:0 auto;width: 80%;margin-top:5px;}
+.reset_btnbox_xia input{display: inline-block;width: 100%;height: 45px;font-size: 14px;color: white;text-align: center;cursor: pointer;background-color: #ff6000;border: 1px solid #ff6000;}

@@ -1,0 +1,23 @@
+.page404 {
+    background:$pgbg;
+    min-height:178vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:$gray-600;
+    img{
+       width:rem(483);
+       height:100%;
+    }
+    h1 {
+        margin: rem(16.1) 0 rem(32.2) 0;
+        line-height: 1;
+        letter-spacing: -1px;
+        font-size:3em;
+    }
+    p{
+       font-size:$font-20;
+    }
+  }
+  

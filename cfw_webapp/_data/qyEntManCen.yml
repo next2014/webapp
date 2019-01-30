@@ -1,0 +1,27 @@
+- title: 面试邀请
+  num: 0
+  url: qyInvInterRec.html
+
+- title: 我的消息
+  num: 0
+  url: qyNews.html
+
+- title: 职位回收站
+  num: 0
+  url: qyJobRecycle.html
+
+- title: 谁看过我的职位
+  num: 0
+  url: qyNews.html#tab2
+
+- title: 浏览的简历
+  num: 0
+  url: qybroRes.html
+
+- title: 推荐的简历
+  num: 0
+  url: qyRecRes.html
+
+- title: 简历下载情况
+  num: 0
+  url: qyRecDownLoad.html

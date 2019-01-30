@@ -1,0 +1,193 @@
+.qyCorInf{
+    background-color:$pgbg;
+    margin-top: rem(161);
+    padding-bottom:rem(80.5);
+    .weui-cell{
+        font-size:$font-14;
+        color:$gray-600;
+        background-color:$white;
+        // border:1px solid $gray-200;
+        position: relative;
+        &:before{
+           left:0;
+          //  border-top:0!important;
+        }
+        a{
+          text-decoration: none;
+          &.weui-btn_mini{
+            position: absolute;
+            right:0;
+            top:0;
+            padding:0 5px;
+            color:$blue-deep;
+            background-color: transparent;
+            border:0;
+            &:after{
+               border:0;
+            }
+          }
+        }
+     }
+     .weui-cells{
+        background-color: transparent;
+        position: relative;
+        &:before{
+           border-top:0;
+        }
+        &:last-child{
+          &:after{
+            border-bottom:0;
+          }
+        }
+     }
+     .weui-uploader__input-box{
+        margin-bottom: 4px;
+     }
+     .weui-cells__title{
+         padding:0 5px;
+         @include sizeMtblr(32.2,0);
+     }
+     .weui-cell__bd{
+       position: relative;
+       ul,p{
+         width:100%;
+       }
+       li{
+         line-height:rem(96.6);
+       }
+       span{
+         color:$gray-600;
+       }
+       strong{
+         font-weight: normal;
+         color:$gray-800;
+       }
+     }
+     .weui-btn-area{
+       background-color:$white;
+       color: #6c757d;
+       background-color: #fff;
+       border: 1px solid #e9ecef;
+       font-size:$font-16;
+       padding:rem(32.2);
+       text-align: center;
+       a{
+         font-size:$font-14;
+         text-decoration: none;
+         &:hover{
+           color:$white;
+         }
+       }
+       i{
+         color:$blue-deep;
+         margin-right:5px;
+       }
+     }
+     .ed_btn{
+       position: absolute;
+       top:5px;
+       right:0;
+       a{
+         color:$blue-deep;
+         &:first-child{
+           margin-right:10px;
+         }
+       }
+     }
+     .AddBtn{
+       a{
+         font-size:$font-14;
+       }
+       i{
+         color:$blue-deep;
+         margin-right:5px;
+       }
+     }
+     /*公司福利*/
+     .comWelfare{
+         li{
+            display: block;
+            float: left;
+            margin:0 5px 5px 0;
+            padding:0 8px;
+            border:1px solid #fff;
+            &.haveCheck{
+              background:$blue-light;
+              border: 1px solid #eee;
+              span,i{
+                color:$white;
+              }
+            }
+         }
+     }
+     .depMan{
+         .weui-cell{
+           border:0;
+           border-bottom:1px solid $gray-200;
+           a{
+             color:$white;
+           }
+         }
+     }
+
+     .weui-loadmore{
+        position:absolute;
+        top:200px;
+        width:100%;
+        z-index: -1;
+     }
+}
+
+.weui-cell {
+    position: relative;
+    .row {
+        position: relative;
+        .col {
+            padding-left: 32px;
+            border-left: 2px solid #eee;
+            float: left;
+            box-sizing: border-box;
+            padding-right:0;
+            display: flex;
+        }
+    }
+    .contact {
+        position: relative;
+        padding: 0 0 10px 0;
+        img{
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        h6{
+            font-size: $font-16;
+            color:$gray-600;
+            margin-bottom:rem(16.1);
+        }
+        p {
+            margin: 1px 0 0;
+            color:$gray-500;
+            font-size:$font-12;
+        }
+        i {
+            font-size: inherit;
+        }
+        span {
+            font-size:$font-14;
+            color: $gray-800;
+        }
+    }
+    .dot {
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        position: absolute;
+        top: 6px;
+        left: -42px;
+        border-radius: 50%;
+        border: 4px solid $blue-deep;
+    }
+}

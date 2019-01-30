@@ -1,0 +1,75 @@
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+{%- if jekyll.environment == "production" -%}
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.min.js" integrity="{{ site.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+{%- else -%}
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.js"></script>
+{%- endif -%}
+
+{%- if page.layout == "docs" -%}
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+{%- endif -%}
+
+{%- if jekyll.environment == "production" -%}
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/docs.min.js"></script>
+{%- else -%}
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery-2.1.0.min.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery.smoothState.min.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/materialize.min.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/functions.js"></script>
+  <script src="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js"></script>
+  <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+{%- endif -%}
+<script>
+  const dp = new DPlayer({
+      container: document.getElementById('dplayer'),
+      screenshot: true,
+      video: {
+          url: 'http://pkel1ed28.bkt.clouddn.com/demo.mp4',
+          pic: 'demo.png',
+          thumbnails: 'demo.png'
+      },
+      danmaku: {
+          id: 'demo',
+          api: 'https://api.prprpr.me/dplayer/'
+      }
+  });
+</script>
+<script type="text/javascript">
+  var swiper = new Swiper('.swiper-container',{
+      directon:'horizontal',//水平滑动
+      speed:300,//滑动速度
+      loop:true,
+      autoplay:{//自动切换时间
+          delay:2000,
+          disableOnInteraction: false,
+      },
+      pagination: {
+          el:'.swiper-pagination',
+          dynamicBullets: true,
+      }
+  });
+  var swiper1 = new Swiper('.swiper-container1', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      directon:'horizontal',//水平滑动
+      speed:300,//滑动速度
+      loop:true,
+      autoplay:{//自动切换时间
+          delay:3000,
+          disableOnInteraction: false,
+      },
+      pagination: {
+          el:'.swiper-pagination1',
+          dynamicBullets: false,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+  });
+  swiper1.el.onmouseover = function(){
+    mySwiper1.autoplay.stop();
+  }
+</script>

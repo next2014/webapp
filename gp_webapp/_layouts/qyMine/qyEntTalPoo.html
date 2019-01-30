@@ -1,0 +1,69 @@
+---
+layout: pages
+title: 企业人才库
+---
+<div class="qyEntTalPoo">
+    <!--S 简历查找 -->
+    {% include modules/qyMine/qyTopSearch.html %}
+    <!--E 简历查找 -->
+    <!--S 简历列表 -->
+    <div class="weui-cells">
+        {% for ent in site.data.qyEntTalPoo %}
+        <div class="weui-cell weui-cells_checkbox">
+            <label class="weui-check__label d-flex align-items-center" for="{{ ent.id }}">
+              <div class="weui-cell__hd">
+                <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="{{ ent.id }}">
+                <i class="weui-icon-checked"></i>
+               </div>
+            </label>
+            <div class="weui-cell__bd w-75">
+               <a href="qyResumeShou.html">
+                <h2>
+                  <span class="text-primary">{{ ent.name }}</span> <span class="text-warning">{{ ent.sex }}</span> <span>{{ ent.old }}</span> <span> {{ ent.edu }}</span>
+                  <em><i class="fa fa-search-plus "></i></em>
+                </h2>
+                <p class="pos_zy">{{ ent.pos }}</p>
+                <p class="pos_sch">{{ ent.sch }}</p>
+                <div class="pos_at">
+                  <ul class="pos_at_num">
+                    <li>应聘</li>
+                    <li><em>{{ ent.applynum }}</em></li>
+                    <li>次</li>
+                  </ul>
+                  <span class="pos_at_tim">{{ site.time }}</span>
+                </div>
+               </a> 
+            </div>
+            <div class="weui-cell_ft w-30">
+                <a href="qyEntTalPos.html" class="btn btn-light btn-sm w-100">已安排职位</a>
+                <a href="qyEntTalPos.html" class="btn btn-secondary btn-sm w-100">安排职位</a>
+            </div>
+        </div>
+        {% endfor %}
+        <!--E 简历列表 -->
+        <!-- 底部按钮 -->
+        <section class="mod_pos_btn bg-light">
+            <div class="d-flex justify-content-between w-100">
+                <div class="weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" id="qSelect">
+                        <div class="weui-cell__hd">
+                          <input type="checkbox" class="weui-check checkAll" onclick="clickAll()">
+                          <i class="weui-icon-checked"></i>
+                        </div><p>全部</p>
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center p-1">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">点击操作</button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">查看选项简历</a>
+                          <a class="dropdown-item" href="#">重发简历</a>
+                          <a class="dropdown-item" href="#">转发简历</a>
+                          <a class="dropdown-item" href="#">彻底删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

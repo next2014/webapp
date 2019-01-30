@@ -1,0 +1,64 @@
+- category: 文化项目
+  anli:
+    - name: 欧美城在线
+      title: a01
+      url: a01
+      content: 产品介绍
+    - name: 活动成
+      title: a02
+      url: a02
+      content: 产品介绍
+    - name: 商务平台
+      title: a03
+      url: a03
+      content: 产品介绍
+    - name: 小程序模版 
+      title: a04
+      url: a04
+      content: 产品介绍
+    - name: 企业官网模板
+      title: a05
+      url: a05
+      content: 产品介绍
+    - name: 企业OA系统模板
+      title: a06
+      url: a06
+      content: 产品介绍
+    - name: VR全景技术展示
+      title: a07
+      url: a07
+      content: 产品介绍
+    - name: 其他案例展示
+      title: a08
+      url: a08
+      content: 产品介绍
+
+# - category: Framework
+#   description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
+#   examples:
+#     - name: "Starter template"
+#       description: "Nothing but the basics: compiled CSS and JavaScript."
+#     - name: Grid
+#       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+#     - name: Jumbotron
+#       description: "Build around the jumbotron with a navbar and some basic grid columns."
+
+# - category: Navbars
+#   description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
+#   examples:
+#     - name: Navbars
+#       description: "Demonstration of all responsive and container options for the navbar."
+#     - name: Navbar static
+#       description: "Single navbar example of a static top navbar along with some additional content."
+#     - name: Navbar fixed
+#       description: "Single navbar example with a fixed top navbar along with some additional content."
+#     - name: Navbar bottom
+#       description: "Single navbar example with a bottom navbar along with some additional content."
+
+# - category: Experiments
+#   description: "Examples that focus on future-friendly features or techniques."
+#   examples:
+#     - name: Floating labels
+#       description: "Beautifully simple forms with floating labels over your inputs."
+#     - name: Offcanvas
+#       description: "Turn your expandable navbar into a sliding offcanvas menu."

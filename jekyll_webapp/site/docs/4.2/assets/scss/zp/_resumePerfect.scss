@@ -1,0 +1,51 @@
+.resumePerfect{
+    background-color:$white;
+    margin-top:rem(161);
+    margin-bottom:rem(161);
+    padding:4%;
+    .weui-cell{
+        font-size:$font-14;
+        padding:15px 0;
+        color:$gray-600;
+        &:before{
+            left:0;
+        }
+    }
+    .weui-cells{
+        &:before{
+            border-top:0;
+        }  
+    }
+    .weui-input{
+        text-align:left;
+        color: $select;
+    }
+    .page__hd {
+        padding: 20px 0;
+        position: relative;
+    }
+    .page__title{
+        font-size:$font-18;
+    }
+}
+
+.weui-popup__container{
+    z-index:1000!important;
+}
+.weui-popup__modal{
+    z-index:1002!important;
+}
+
+.weui-cells__tips{
+   i{
+     font-size:$font-14;
+     color: $gray-600;
+   }
+   a{
+    &.open-popup{
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+    }
+   }
+}

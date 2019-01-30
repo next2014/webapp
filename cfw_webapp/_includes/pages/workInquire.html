@@ -1,0 +1,97 @@
+<div id="stamp" class='weui-popup__container popup-bottom'>
+  <div class="weui-popup__overlay"></div>
+  <div class="weui-popup__modal">
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <a href="javascript:;" class="picker-button close-popup">确定</a>
+        <h1 class="title">类型</h1>
+      </div>
+    </div>
+    <div class="modal-content popBottom">
+        {% for str in site.data.stramp %}
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">{{ str.project }}</div>
+          </a>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+<div id="data" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">日期</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+        <div class="p-2">
+            <div class="weui-cell">
+               <input class="weui-input text-center" type="datetime-local" placeholder="请选择请假开始时间">
+            </div>
+            <div class="weui-cell">
+              <input class="weui-input text-center" type="datetime-local" placeholder="请选择请假结束时间">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="status" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">状态</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          {% for str in site.data.status %}
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">{{ str.status }}</div>
+            </a>
+          {% endfor %}
+      </div>
+    </div>
+</div>
+<div id="timeOut" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">超时情况</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">全部</div>
+          </a>
+          <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">超时</div>
+          </a>
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">未超时</div>
+          </a>
+      </div>
+    </div>
+</div>
+<div id="project" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">项目</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          {% for str in site.data.stramp %}
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">{{ str.project }}</div>
+            </a>
+          {% endfor %}
+      </div>
+    </div>
+</div>

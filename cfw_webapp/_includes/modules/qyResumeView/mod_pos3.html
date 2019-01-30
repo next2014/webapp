@@ -1,0 +1,207 @@
+<!-- 企业 查看求职简历 中文版 -->
+<!-- 添加备注 -->
+<div class="weui-cells">
+    <div class="weui-cell weui-cells_checkbox">
+        <label class="weui-check__label d-flex align-items-center w-100" for="s11">
+            <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check checkOne" onclick="clickOne()" id="s11">
+                    <i class="weui-icon-checked"></i>
+                    <!-- <p class="text-center"><small>选中</small></p> -->
+            </div>
+            <div class="weui-cell__bd p-0 m-0">
+                <p class="weui-cells__title p-0 m-0">简历编号：488648 <em>待审核</em></p>
+                <p class="weui-cells__title p-0 m-0">更新时间：{{ site.time | date_to_xmlschem }}</p>
+            </div>
+        </label> 
+        <div class="weui-cell__ft">
+            <span class="btn btn-primary btn-sm">添加备注</span>
+        </div>
+    </div>
+</div>
+<!-- 显示头像 -->
+<!-- 基本信息 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">基本信息</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text bg-primary">
+            <div class="floating-avatar z-depth-1">
+                <img src="../static/images/avatar_default_girl.png" class="rounded-circle" alt="">
+            </div>
+            <div class="weui-media-box__bd text-truncate mt-2">
+                <h4 class="weui-media-box__title"><span>李舒婷</span> - <span>女</span> - <span>24岁</span> - <span>本科</span></h4>
+            </div>
+        </div>
+        <div class="weui-media-box weui-media-box_text">
+           <ul>
+            <li class="text-info"><span>应聘职位：</span>C#工程师</li>
+            <li class="text-info"><span>应聘时间：</span>{{ site.time | date_to_xmlschem }}</li>
+            <li><span>现所在地：</span>广东省惠州市惠城区</li>
+            <li><span>户　　籍：</span>广东省惠州市</li>
+            <li><span>婚　　姻：</span>未婚</li>
+            <li><span>户　　籍：</span>汉族</li>
+            <li><span>身　　高：</span>未婚</li>
+            <li><span>最高学历：</span>大专</li>
+            <li><span>毕业院校：</span>广州白云学院</li>
+            <li><span>专　　业： </span>模具设计与数控技术</li>
+            <li><span>简历类型：</span>社会人士</li>
+            <li><span>工作年限：</span>8年工作经验</li>
+            <li><span>移动电话：</span><span class="reShow">13800000000</span><span class="reNone">***********</span></li>
+            <li><span>电子邮箱：</span><span class="reShow">8484848@qq.com</span><span class="reNone">***********</span></li>
+           </ul>
+        </div>
+    </div>
+</div>
+<!-- 求职意向 -->
+<div class="weui-panel weui-panel_access">
+ <div class="weui-panel__hd">求职意向</div>
+  <div class="weui-panel__bd">
+    <div class="weui-media-box weui-media-box_text">
+      <ul>
+        <li><span>求职类型：</span>全职</li>
+        <li><span>期望薪资：</span>面议</li>
+        <li><span>期望城市：</span>广东省惠州市</li>
+        <li><span>到岗时间：</span>随时到岗</li>
+        <li><span>期望岗位：</span><br/>工业/工厂类计划员/调度员<br/>工业/工厂类生产管理主管/督导<br/>工业/工厂类生产管理办事员</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 工作经历 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">工作经历</div>
+    <div class="weui-panel__bd">
+     <div class="weui-media-box weui-media-box_text">
+      <div class="container activity">
+        <div class="row">
+          <div class="col">
+            <div class="contact">
+              <div class="dot z-depth-1"></div>
+              <ul>
+                <li><span>2018.07</span>-<span>2018.08</span></li>
+                <li><span>富海人才有限公司</span> / <span>网页设计师</span></li>
+              </ul>
+              <p>负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <div class="contact">
+                <div class="dot z-depth-1"></div>
+                <ul>
+                    <li><span>2018.07</span>-<span>2018.08</span></li>
+                    <li><span>富海人才有限公司</span> / <span>网页设计师</span></li>
+                </ul>
+                <p>负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发负责招聘网移动端开发</p>
+            </div>
+            </div>
+        </div>
+       </div>
+     </div>
+    </div>
+</div>
+<!-- 教育经历 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">教育经历</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text">
+            <div class="container activity">
+                <div class="row">
+                    <div class="col">
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <ul>
+                                <li><span>2018.07</span>-<span>2018.08</span></li>
+                                <li><span>富海学院</span> / <span>视觉传达</span></li>
+                                <li><span>初中</span>/ <span>统招</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <ul>
+                                <li><span>2018.07</span>-<span>2018.08</span></li>
+                                <li><span>富海学院</span> / <span>视觉传达</span></li>
+                                <li><span>初中</span>/ <span>统招</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 培训经历 -->
+<div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">培训经历</div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box weui-media-box_text">
+                 <div class="container activity">
+                    <div class="row">
+                      <div class="col">
+                        <div class="contact">
+                          <div class="dot z-depth-1"></div>
+                          <ul>
+                            <li><span>2018.07</span>-<span>2018.08</span></li>
+                            <li><span>富海培训机构</span> / <span>Java开发</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="contact">
+                                <div class="dot z-depth-1"></div>
+                                <ul>
+                                    <li><span>2018.07</span>-<span>2018.08</span></li>
+                                    <li><span>富海培训机构</span> / <span>Java开发</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+</div>
+<!-- 语言能力 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">语言能力</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text">
+            <ul>
+                <li><span>普通话水平：</span>流利</li>
+                <li><span>粤语水平：</span>流利</li>
+                <li><span>英语水平：</span>良好/获得CET-4等级，属于非英语专业</li>
+                <li><span>第二外语：</span>日语/一般</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 技能专长 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">技能专长</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text">
+            <p class="weui-media-box__desc">骂人，打架，飙车，抽烟</p>
+        </div>
+    </div>
+</div>
+<!-- 自我评价 -->
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">自我评价</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text">
+            <p class="weui-media-box__desc">五官端正，走路挺直，外表平平。</p>
+        </div>
+    </div>
+</div>
+<!-- 底部按钮 -->
+<section class="mod_pos_btn">
+    <div class="mod_pos_btn_air w-100"><a href="javascript:;">查看联系方式</a></div>
+    <div class="mod_pos_btn_air" hidden><a href="qyEntTalPoo.html">放入人才库</a></div>
+    <div class="mod_pos_btn_rea" hidden><a href="javascript:;">下载简历</a></div>
+    <div class="mod_pos_btn_rea" hidden><a href="javascript:;">打印简历</a></div>
+</section>

@@ -1,0 +1,211 @@
+---
+layout: default
+title: 培训经历
+---
+<div class="body_wap">
+        <header class="header_h">
+            <div class="header_fixed">
+                <div class="header">
+                    <div class="header_userbg bg3">
+                        <a class="hd-lbtn mui-action-back" href="javascript:history.back()"><i class="header_top_l iconfont"></i></a>
+                        <div class="header_h1">培训经历</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <link rel="stylesheet" href="css/mui.picker.min.css" type="text/css">
+        <link rel="stylesheet" href="css/mui.poppicker.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/umeditor.min.css" type="text/css">
+        <script src="js/umeditor.config.js"></script>
+        <script src="js/umeditor.min.js"></script>
+        <script src="js/compress.js" language="javascript"></script>
+        <style>
+            .yun_wap_addresume_box_control_text {
+                border: 1px solid #ddd;
+            }
+            .yun_wap_addresume_texttextAreaMsg {
+                width: 100%;
+                height: 60px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                outline: none;
+                ;
+            }
+        </style>
+        <div id="app" class="mui-views">
+            <div class="mui-view">
+                <div class="mui-pages">
+                    <div id="main" class="mui-page mui-page-center">
+                        <!--页面主内容区开始-->
+                        <div class="mui-page-content">
+                            <div class="mui-scroll-wrapper" data-scroll="2">
+                                <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                                    <div class="resume-cont">
+                                        <div class="">
+                                            <ul class="yunset_list mt15">
+                                                <li class="yunset_list_text"><span class="yunset_list_name">培训中心</span>
+                                                    <span class="yunset_list_commentary"><input type="text" name="name" id="name" value="dddd" placeholder="请输入培训中心"></span></li>
+                                                <li class="yunset_list_text"><span class="yunset_list_name">培训方向</span>
+                                                    <span class="yunset_list_commentary"><input type="text" name="title" id="title" value="dd" placeholder="请输入培训方向"></span></li>
+                                            </ul>
+                                            <ul class="yunset_list mt15">
+                                                <li><span class="yunset_list_name">开始时间</span> <span class="yunset_list_commentary"><button
+                                                            id="sdatePicker" data-options="{&quot;type&quot;:&quot;month&quot;,&quot;value&quot;:&quot;2018-11&quot;,&quot;beginYear&quot;:1955,&quot;endYear&quot;:2018}"
+                                                            class="btn mui-btn mui-btn-block">2018-11</button>
+                                                        <input type="hidden" id="sdate" name="sdate" value="2018-11"></span>
+                                                </li>
+                                                <li><span class="yunset_list_name">结束时间</span> <span class="yunset_list_commentary"><button
+                                                            id="edatePicker" data-options="{&quot;type&quot;:&quot;month&quot;,&quot;value&quot;:&quot;2018-12&quot;,&quot;beginYear&quot;:1955,&quot;endYear&quot;:2018}"
+                                                            class="btn mui-btn mui-btn-block">2018-12</button>
+                                                        <input type="hidden" id="edate" name="edate" value="2018-12"></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="yunset_list mt15">
+                                                <li>
+                                                    <a href="#contenthtml"><span class="yunset_list_name">培训描述</span>
+                                                        <span class="yunset_list_commentary" id="contentshow">dddd</span></a>
+                                                </li>
+                                            </ul>
+                                            <div class="yunset_bth_box">
+                                                <input type="hidden" id="table" value="project">
+                                                <input type="hidden" id="eid" value="1084">
+                                                <input type="hidden" id="id" value="37">
+                                                <button id="submit" type="button" class="mui-btn mui-btn-block mui-btn-primary">保 存</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mui-scrollbar mui-scrollbar-vertical">
+                                    <div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: none; height: 558px; transform: translate3d(0px, 0px, 0px) translateZ(0px);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--页面主内容区结束-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--页面主结构结束-->
+        <!--单页面开始-->
+
+        <!--单页面结束-->
+        <div id="contenthtml" class="mui-page">
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper" data-scroll="3">
+                    <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                        <div class="yun_wap_addresume_box_group">
+                            <div class="yun_wap_addresume_box_control_text">
+                                <textarea name="content" id="content" style="height:200px;" class="yun_wap_addresume_texttextAreaMsg ">dddd</textarea>
+                            </div>
+                            <a class="yun_wap_info_brief_tit_bc mui-action-back">确定</a>
+                        </div>
+                    </div>
+                    <div class="mui-scrollbar mui-scrollbar-vertical">
+                        <div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: none; height: 8px; transform: translate3d(0px, -8px, 0px) translateZ(0px);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/mui.picker.min.js" language="javascript"></script>
+        <script src="js/mui.poppicker.js" language="javascript"></script>
+        <script src="js/mui.view.js" language="javascript"></script>
+        <script src="js/resume.js" language="javascript"></script>
+        <script>
+            var formData = new FormData(),
+                newuploadpic;
+
+            var eduData = [];
+            ''
+            eduData.push({
+                value: '9',
+                text: '高中以下'
+            })
+            ''
+            eduData.push({
+                value: '12',
+                text: '高中'
+            })
+            ''
+            eduData.push({
+                value: '13',
+                text: '中专'
+            })
+            ''
+            eduData.push({
+                value: '14',
+                text: '大专'
+            })
+            ''
+            eduData.push({
+                value: '15',
+                text: '本科'
+            })
+            ''
+            eduData.push({
+                value: '16',
+                text: '硕士'
+            })
+            ''
+            eduData.push({
+                value: '17',
+                text: '博士'
+            })
+            ''
+            mui.init();
+            var viewApi = mui('#app').view({
+                defaultPage: '#main'
+            });
+            //初始化单页的区域滚动
+            mui('.mui-scroll-wrapper').scroll({
+                scrollY: true, //是否竖向滚动
+                scrollX: false, //是否横向滚动
+                startX: 0, //初始化时滚动至x
+                startY: 0, //初始化时滚动至y
+                indicators: true, //是否显示滚动条
+                deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+                // bounce: true //是否启用回弹
+            });
+            var view = viewApi.view;
+            var oldBack = mui.back;
+            mui.back = function () {
+                if (viewApi.canBack()) {
+                    viewApi.back();
+                } else {
+                    oldBack();
+                }
+            };
+            view.addEventListener('pageBack', function (e) {
+                if (e.detail.page.id == 'contenthtml') {
+                    if (document.getElementById('content')) {
+                        document.getElementById('contentshow').innerText = document.getElementById('content').value.replace(/<\/?.+?>/g, "").replace(/ /g, "");
+                    }
+                }
+
+            });
+            mui('.totoday').each(function () {
+                this.addEventListener('toggle', function (event) {
+                    if (event.detail.isActive) {
+                        document.getElementById('edatePicker').disabled = true;
+                        document.getElementById('edatePicker').innerText = "2018-11"
+                        document.getElementById('totoday').value = 1;
+                    } else {
+                        document.getElementById('totoday').value = '';
+                        document.getElementById('edatePicker').disabled = false;
+                        document.getElementById('edatePicker').innerText = "请选择离职时间"
+                    }
+                });
+            });
+            $(function () {
+                var submit = document.getElementById('submit');
+                submit.addEventListener('tap', kresume, false)
+            });
+    //上传图片
+        </script>
+       <script src="js/publicselect.js" language="javascript"></script>
+</div>
+<div id="hm_t_undefined" class="hm-t-container">
+    <div class="hm-t-go-top" style="display: none;"></div>
+</div>

@@ -1,0 +1,91 @@
+- posname: Java Web开发工程师
+  mpim: 
+    - title: 东莞
+    - title: 东坑
+    - title: 经验不限
+    - title: 中专
+  mpii:
+    - title: 金融
+    - title: 银行
+    - title: 架构师
+    - title: 全栈
+    - title: 资深
+  comname: 富海人才
+  tru: 
+    - title: 教育企业
+    - title: 500人以上
+    - title: 计算机软件
+  minMoney: 8
+  maxMoney: 16
+  data: 07月12日
+  url: positionDetail.html
+  comurl: companyDetail.html
+
+- posname: 网页设计师
+  mpim: 
+    - title: 惠州
+    - title: 惠城区
+    - title: 经验不限
+    - title: 本科
+  mpii:
+    - title: 金融
+    - title: 银行
+    - title: 架构师
+    - title: 全栈
+    - title: 资深
+  comname: 富海人才
+  tru: 
+    - title: 教育企业
+    - title: 500人以上
+    - title: 计算机软件
+  minMoney: 8
+  maxMoney: 16
+  data: 07月12日
+  url: positionDetail.html
+  comurl: companyDetail.html
+
+- posname: 网页设计师
+  mpim: 
+    - title: 惠州
+    - title: 惠城区
+    - title: 经验不限
+    - title: 本科
+  mpii:
+    - title: 金融
+    - title: 银行
+    - title: 架构师
+    - title: 全栈
+    - title: 资深
+  comname: 富海人才
+  tru: 
+    - title: 教育企业
+    - title: 500人以上
+    - title: 计算机软件
+  minMoney: 8
+  maxMoney: 16
+  data: 07月12日
+  url: positionDetail.html
+  comurl: companyDetail.html
+  
+- posname: 网页设计师
+  mpim: 
+    - title: 惠州
+    - title: 惠城区
+    - title: 经验不限
+    - title: 本科
+  mpii:
+    - title: 金融
+    - title: 银行
+    - title: 架构师
+    - title: 全栈
+    - title: 资深
+  comname: 富海人才
+  tru: 
+    - title: 教育企业
+    - title: 500人以上
+    - title: 计算机软件
+  minMoney: 8
+  maxMoney: 16
+  data: 07月12日
+  url: positionDetail.html
+  comurl: companyDetail.html

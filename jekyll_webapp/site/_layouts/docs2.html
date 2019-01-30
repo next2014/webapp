@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include docs-navbar.html %}
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          {% include docs-sidebar.html %}
+        </div>
+        {% if page.toc %}
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <h5 class="font-weight-bold border-bottom border-warning mb-3 pb-3">最新案例</h5>
+            <div class="accordion" id="accordionExample">
+                {% for new in site.data.anliright %}
+                  <div class="card">
+                    <div class="card-header" id="heading{{new.index}}">
+                      <h6 class="mb-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse{{ new.index }}" aria-expanded="true" aria-controls="collapse{{ new.index }}">
+                        {{ new.title }}{%- include icons/down.svg -%}
+                      </h6>
+                    </div>
+                    <div id="collapse{{ new.index }}" class="collapse" aria-labelledby="heading{{ new.index }}" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/about/{{ new.newImg }}" width="100%" alt="">
+                          <p class="pt-2">{{ new.content }}</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-3 bd-content" role="main">
+          <!-- <h4 class="bd-title" id="content">{{ page.title | smartify }}</h4> -->
+          <!-- <p class="bd-lead">{{ page.description | smartify }}</p> -->
+          {{ content }}
+        </main>
+      </div>
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

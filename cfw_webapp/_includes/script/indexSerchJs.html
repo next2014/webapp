@@ -1,0 +1,51 @@
+<script>
+        //高级筛选展开收起效果 qySearchList
+        var $mpiBtn = $('.showBtn');
+        var $mpiInd = $('.showHight');
+        var $mpiInd1 = $('.editShowHight');
+        var editShowHeight = "0";
+        var showHeight = "530";
+        var hBanner = $('.mod_pos_item_text').innerHeight();
+        var cbHeight = hBanner - 50;
+        // 固定筛选时滚动效果
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= cbHeight) {
+                $(".qySearchSelech").addClass('mod_pos_hig');
+                $(".qySearchSelech .mod_pos_item_ind").attr('style','display:none');
+            }else{
+                $(".qySearchSelech").removeClass('mod_pos_hig');
+                $(".qySearchSelech .mod_pos_item_ind").removeAttr('style','display:none'); 
+            }
+        });
+        $mpiBtn.on('click',function(){
+            if($mpiInd.height() == showHeight){
+                $mpiInd.height('auto');
+                $('.showBtn i').attr("class","fa fa-angle-double-down");
+            }else{
+                $mpiInd.height(showHeight);
+                $('.showBtn i').attr("class","fa fa-angle-double-up");
+            }
+            if($mpiInd1.height() == editShowHeight){
+                $mpiInd1.height('auto');
+                $('.showBtn span').html('<i class="fa fa-angle-double-down"></i> 开展搜索条件');
+                $(".qySearchList").addClass('mod_pos_hix');
+                $('.qySearchSelech').addClass('mod_pos_his');
+                $('.qySearchSelech').scroll(function () {
+                    var scroll = $('.qySearchSelech').scrollTop();
+                    if (scroll >= cbHeight) {
+                        $(".qySearchSelech .mod_pos_item_text").addClass('mod_pos_hig');
+                        $(".qySearchSelech .mod_pos_item_ind").attr('style','display:none');
+                    }else{
+                        $(".qySearchSelech .mod_pos_item_text").removeClass('mod_pos_hig');
+                        $(".qySearchSelech .mod_pos_item_ind").removeAttr('style','display:none');
+                    }
+                });
+            }else{
+                $mpiInd1.height(editShowHeight);
+                $('.showBtn span').html('<i class="fa fa-angle-double-up"></i> 隐藏搜索条件');
+                $(".qySearchList").removeClass('mod_pos_hix');
+                $('.qySearchSelech').removeClass('mod_pos_his');
+            }
+        });
+    </script>

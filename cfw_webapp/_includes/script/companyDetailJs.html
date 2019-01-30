@@ -1,0 +1,14 @@
+<script>
+    $(function () {
+        var hBanner = $('.mod_pos_item').innerHeight();
+        var cbHeight = hBanner - 50;
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= cbHeight) {
+                $(".weui-tab").addClass('mod_pos_hig');
+            }else{
+                $(".weui-tab").removeClass('mod_pos_hig');
+            }
+        });
+    });
+</script>

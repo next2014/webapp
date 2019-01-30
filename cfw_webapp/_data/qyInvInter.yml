@@ -1,0 +1,23 @@
+- dep: IT部
+  pos: Java开发
+  sex: 男
+  edu: 大专
+  sch: 广西大学
+  are: 广东省惠州市
+  id: s1
+
+- dep: 市场部
+  pos: 销售总监
+  sex: 男
+  edu: 大专
+  sch: 广西大学
+  are: 广东省东莞
+  id: s2
+
+- dep: 企划部
+  pos: 策划经理
+  sex: 男
+  edu: 大专
+  sch: 广西大学
+  are: 广东省广州
+  id: s3

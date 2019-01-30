@@ -1,0 +1,122 @@
+{% if page.layout == "pages/workInquire" or page.layout == "pages/contactList" 
+or page.layout == "pages/photoEdit" or page.layout == "pages/recommend" 
+or page.layout == "pages/set" or page.layout == "pages/warehouse" 
+or page.layout == "pages/workEntry" or page.layout == "pages/sendReceive" 
+or page.layout == "pages/receive" or page.layout == "pages/send" 
+or page.layout == "pages/intAnnounce" or page.layout == "pages/matApp" 
+or page.layout == "pages/assetUse" or page.layout == "pages/redFlush" 
+or page.layout == "pages/retirement" or page.layout == "pages/retAssets" 
+or page.layout == "pages/pubBarrier" or page.layout == "pages/envManagement" 
+or page.layout == "pages/secService" or page.layout == "pages/taskRelease" 
+or page.layout == "pages/valetOrder" or page.layout == "pages/report" 
+or page.layout == "pages/attPunch" or page.layout == "pages/proApproval" 
+or page.layout == "pages/workOrder" or page.layout == "pages/about" 
+or page.layout == "pages/passwordEdit" or page.layout == "pages/news" 
+or page.layout == "pages/personalInfo" or page.layout == "pages/ordersDetail" 
+or page.layout == "pages/matAppEdit" or page.layout == "pages/leaveRequest" 
+or page.layout == "pages/myAttPunch" or page.layout == "pages/workOutPunch" 
+or page.layout == "pages/waitEeview" or page.layout == "pages/initiate" %}
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+      {% if page.layout == "pages/workInquire" or page.layout == "pages/contactList" 
+      or page.layout == "pages/photoEdit" or page.layout == "pages/recommend" 
+      or page.layout == "pages/set" or page.layout == "pages/warehouse" 
+      or page.layout == "pages/workEntry" or page.layout == "pages/sendReceive" 
+      or page.layout == "pages/receive" or page.layout == "pages/send" 
+      or page.layout == "pages/intAnnounce" or page.layout == "pages/matApp" 
+      or page.layout == "pages/assetUse" or page.layout == "pages/redFlush" 
+      or page.layout == "pages/retirement" or page.layout == "pages/retAssets" 
+      or page.layout == "pages/pubBarrier" or page.layout == "pages/envManagement" 
+      or page.layout == "pages/secService" or page.layout == "pages/taskRelease" 
+      or page.layout == "pages/valetOrder" or page.layout == "pages/report" 
+      or page.layout == "pages/myAttPunch" or page.layout == "pages/proApproval" 
+      or page.layout == "pages/workOrder" or page.layout == "pages/about" 
+      or page.layout == "pages/passwordEdit" or page.layout == "pages/news" 
+      or page.layout == "pages/personalInfo" or page.layout == "pages/ordersDetail" 
+      or page.layout == "pages/matAppEdit" or page.layout == "pages/leaveRequest" 
+      or page.layout == "pages/workOutPunch" or page.layout == "pages/waitEeview" 
+      or page.layout == "pages/initiate" %}
+          <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      {% endif %}
+      {% if page.layout == "pages/attPunch" %}
+         <div class="search_left w-10" style="padding-right:7%"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      {% endif %}
+      <div class="search_center">
+        <a href="javascript:">
+          {% if page.layout == "pages/workInquire" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/contactList" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/photoEdit" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/recommend" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/set" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/warehouse" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/workEntry" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/sendReceive" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/receive" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/send" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/intAnnounce" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/matApp" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/assetUse" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/redFlush" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/retirement" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/retAssets" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/pubBarrier" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/envManagement" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/secService" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/taskRelease" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/valetOrder" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/report" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/attPunch" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/proApproval" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/workOrder" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/about" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/passwordEdit" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/news" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/personalInfo" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/ordersDetail" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/matAppEdit" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/leaveRequest" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/myAttPunch" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/workOutPunch" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/waitEeview" %}{{page.title}}{% endif %}
+          {% if page.layout == "pages/initiate" %}{{page.title}}{% endif %}
+        </a>
+      </div>
+      {% if page.layout == "pages/workInquire" or page.layout == "pages/contactList" 
+      or page.layout == "pages/photoEdit" or page.layout == "pages/recommend" 
+      or page.layout == "pages/set" or page.layout == "pages/warehouse" 
+      or page.layout == "pages/workEntry" or page.layout == "pages/sendReceive" 
+      or page.layout == "pages/receive" or page.layout == "pages/send" 
+      or page.layout == "pages/intAnnounce" or page.layout == "pages/assetUse" 
+      or page.layout == "pages/retirement" or page.layout == "pages/retAssets" 
+      or page.layout == "pages/pubBarrier" or page.layout == "pages/envManagement" 
+      or page.layout == "pages/secService" or page.layout == "pages/taskRelease" 
+      or page.layout == "pages/valetOrder" or page.layout == "pages/report" 
+      or page.layout == "pages/myAttPunch" or page.layout == "pages/proApproval" 
+      or page.layout == "pages/workOrder" or page.layout == "pages/about" 
+      or page.layout == "pages/passwordEdit" or page.layout == "pages/news" 
+      or page.layout == "pages/personalInfo" or page.layout == "pages/redFlush" 
+      or page.layout == "pages/ordersDetail" or page.layout == "pages/matAppEdit" 
+      or page.layout == "pages/leaveRequest" or page.layout == "pages/workOutPunch" 
+      or page.layout == "pages/waitEeview" or page.layout == "pages/initiate" %}
+          <div class="search_right w-2"></div>
+      {% endif %}
+      {% if page.layout == "pages/matApp" %}
+          <div class="search_right w-2">
+            <!-- <div class="btn-group">
+                <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</span>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="pages/sendReceive.html" class="dropdown-item">我的物料</a>
+                    <a href="pages/sendReceive.html" class="dropdown-item">申请记录</a>
+                    <a href="pages/sendReceive.html" class="dropdown-item">采购申请</a>
+                </div>
+            </div> -->
+          </div>
+      {% endif %}
+      {% if page.layout == "pages/attPunch" %}
+          <div class="search_right w-10" style="font-size:14px;"><a href="myAttPunch.html">我的考勤</a></div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+{% endif %}

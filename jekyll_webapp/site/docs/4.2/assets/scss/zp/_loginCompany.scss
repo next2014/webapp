@@ -1,0 +1,16 @@
+.loginCompany{
+    padding:8%;
+    .weui-cell{
+      font-size:$font-14;
+      padding:15px 0;
+      color:$gray-600;
+      &:before{
+         left:0;
+      }
+    }
+    .weui-cells{
+      &:before{
+         border-top:0;
+      }  
+    }
+}

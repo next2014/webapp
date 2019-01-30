@@ -1,0 +1,17 @@
+---
+layout: pages
+title: 简历下载情况
+---
+<div class="qybroRes">
+  <div class="weui-cells">
+    {% for dow in site.data.qyRecDownLoad %}
+    <a href="qyResumeView.html" class="weui-cell">
+      <div class="weui-cell__bd">
+        <h2>{{ dow.name }}</h2>
+        <p>{{ dow.ip }}</p>
+        <p><span>{{ dow.redata }}</span> | <span>查看联系方式 <i class="fa fa-check text-primary"></i></span></p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

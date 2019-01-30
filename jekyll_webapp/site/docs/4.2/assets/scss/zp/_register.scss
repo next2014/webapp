@@ -1,0 +1,124 @@
+.register{
+    background-color:$white;
+    padding:8%;
+    .weui-cell{
+      font-size:$font-14;
+      padding:15px 0;
+      color:$gray-600;
+      &:before{
+         left:0;
+      }
+    }
+    .weui-cells{
+      &:before{
+         border-top:0;
+      }  
+    }
+    .weui-cell__ft{
+        position: absolute;
+        right:0;
+    }
+    .page__hd {
+        padding: 20px 0;
+        position: relative;
+    }
+    .page__title{
+        font-size:$font-18;
+    }
+}
+
+.weui-agree {
+    display: block;
+    padding: .5em 0!important;
+    font-size: 13px;
+}
+
+.weui-agree__checkbox {
+    appearance: none;
+    outline: 0;
+    font-size: 0;
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    vertical-align: 0;
+    top: 2px;
+}
+.weui-agree__checkbox:checked:before {
+    font-family: weui;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    speak: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: inherit;
+    content: "\EA08";
+    color: #0f78bc;
+    font-size: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-48%) scale(.73);
+}
+
+.demos-header{
+    background-color:#0f78bc;
+    position: relative;
+    i{
+      position: absolute;
+      right:15px;
+      top:20px;
+      color:#fff;
+    }
+}
+
+.demos-second-title {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0 15%;
+    height:60px;
+    line-height:60px;
+}
+
+
+.weui-agree__text a{
+    &.goRegister{
+        color: $blue-deep;
+        font-size:$font-14;
+    }
+}
+
+.ruleProtocol{
+    text-align: center;
+    color:$gray-400;
+    margin-top:rem(32.2);
+    position: absolute;
+    bottom:10px;
+    width: 84%;
+    span{
+       color:$gray-500;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .userLogin{
+        margin-top: 50px;
+        margin-bottom:20px;
+        bottom: 0!important;
+        position: relative!important;
+        width: 100%!important;
+    }
+    .ruleProtocol{
+        margin-top: 20px;
+        position: relative!important;
+        width: 100%!important;
+    }
+}

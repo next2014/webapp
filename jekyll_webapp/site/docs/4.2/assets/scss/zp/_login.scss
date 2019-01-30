@@ -1,0 +1,87 @@
+.login{
+   padding:8%;
+   .weui-cell{
+     font-size:$font-14;
+     padding:15px 0;
+     color:$gray-600;
+     &:before{
+        left:0;
+     }
+   }
+   .weui-cells{
+     &:before{
+        border-top:0;
+     }  
+   }
+   .page__hd {
+        padding: 20px 0;
+        position: relative;
+        h6{
+           font-size:$font-12;
+           &:first-child{
+              margin-bottom: rem(32.2);
+              font-size: $font-16;
+           }
+        }
+    }
+    .page__title{
+        font-size:$font-18;
+    }
+    .weui-tab{
+        margin-top:rem(161);
+    }
+    .weui-tab__bd{
+        .weui-tab__bd-item{
+            padding:8%;
+        }
+    }
+    .weui-cell__ft {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.demos-sub-title{
+    text-align: center;
+    color:$gray-600;
+    font-size: 14px;
+}
+
+.placeholder{
+    width: 50px;
+    text-align: center;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 45px;
+}
+
+.userLogin{
+    position: absolute;
+    bottom:40px;
+    width:84%;
+    a{
+      display: block;
+    }
+}
+
+.weui-btn-area a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.weui-cells__tips{
+    a{
+      text-decoration: none;
+      padding:0 10px;
+      &.goRegister{
+        color: $blue-deep;
+      }
+    }
+}
+
+.sline{
+    width:1px;
+    height:12px;
+    background-color:$gray-300;
+    display: block;
+}

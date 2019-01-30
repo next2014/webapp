@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+    {% include script.html %}
+</head>
+<body class="mui-ios mui-ios-11 mui-ios-11-0">
+    {{ content }}
+    {% include common/menu.html %}
+</body>
+{% if page.layout == "home" %}
+  {% include script/indexJS.html %}
+{% endif %}
+{% if page.layout == "personal/c_login" %}
+   {% include script/commonJS.html %}
+{% endif %}
+</html>

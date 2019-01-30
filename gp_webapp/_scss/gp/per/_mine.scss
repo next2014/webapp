@@ -1,0 +1,137 @@
+.mine{
+    background-color:$pgbg;
+    height: 100vh;
+    .weui-cell{
+      font-size:$font-14;
+      padding:15px 0;
+      color:$gray-600;
+      &:before{
+         left:0;
+      }
+    }
+    .weui-cells{
+      &:before{
+         border-top:0;
+      }
+      &:last-child{
+        &:after{
+          border-bottom:0;
+        }
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+    .weui-cell__bd{
+        text-align: right;
+        padding-right:rem(96.6);
+        color:$gray-600;
+        p{
+          color:$gray-500;
+        }
+        &:after{
+           top:55%;
+        }
+    }
+    .weui-cell_select{
+        .weui-cell__bd{
+            &:after{
+               top:55%;
+            }
+        }
+    }
+    .weui-flex{
+        @include sizeMtblr(32.2,0);
+        a{
+            text-decoration: none;
+        }
+    }
+    .weui-label{
+       display: flex;
+       width:100%;
+       align-items: center;
+       font-size:$font-14;
+       color:$gray-600;
+       i{
+          color:$white;
+          background-color:$blue-light;
+          width: 25px;
+          height: 25px;
+          line-height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right:rem(16.1);
+          font-size:$font-14;
+          border-radius:20px;
+       }  
+    }
+    .weui-tabbar__icon{
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:$gray-600;
+        font-size:$font-24;
+    }
+    .mod_pos_item{
+         &:first-child{
+             border-top:0;
+         }
+         &:last-child{
+             margin-bottom:rem(161);
+         }
+         padding-top:0;
+         padding-bottom:0;
+    }
+    .page__hd{
+        padding:rem(64.4);
+        position: relative;
+        background-color:$white;
+        a{
+          color:$gray-800;
+          text-decoration:none;
+          @include sizePtblr(9.05,16.1);
+        }
+    }
+    .page__title{
+        font-size:$font-16;
+        margin-bottom:rem(16.1);
+    }
+    .weui-tabbar__label{
+        font-size: $font-14;
+        color: $gray-600;
+    }
+}
+
+.page__desc{
+    color: #888;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom:5px;
+}
+.page__img{
+    width:auto;
+    height:auto;
+    position: absolute;
+    right:5%;
+    top:20%;
+    img{
+       width:60px;
+       height:60px;
+    }
+}
+.weui-flex__item{
+    text-align: center;
+}
+
+.weui-img-badge{
+    display:inline-block;
+    position:relative;
+    span{
+        position: absolute;
+        top: -15px;
+        right: -35px;
+        border-bottom-left-radius: 0!important;
+    }
+}

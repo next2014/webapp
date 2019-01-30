@@ -1,0 +1,13 @@
+<div class="weui-cells">
+    {% for new in site.data.news_2 %}
+      <div class="weui-cell">
+          <div class="weui-cell__bd pr-0 mr-0">
+              <h4><span class="mr-2">{{ new.comname }}</span><small>{{ new.posname }}</small></h4>
+              <section>
+               <small><a href="mineResumeView.html" class="text-danger">{{ new.name }}</a></small> 
+               <small>查看 <em>{{ new.num }}</em> 次</span> | <span>2018-12-10 09:41</small>
+              </section>
+          </div>
+      </div>
+    {% endfor %}
+</div>

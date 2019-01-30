@@ -1,0 +1,12 @@
+.proApproval{
+    @extend %bgColorMt;
+    .weui-grids{
+      background-color: $white;
+      a{
+        text-decoration: none;
+       }
+     }
+   .bgColorWhite{
+     background-color: $white;
+   }
+}
