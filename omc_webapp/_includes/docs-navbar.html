@@ -1,37 +1,37 @@
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-3 ml-3" href="javascript:;" aria-label="Bootstrap">
-        {% if page.layout != "news" or page.layout != "about" or page.layout != "product" %}
+        {% if page.layout == "index" or page.layout == "news" or page.layout == "about" or page.layout == "product" or page.layout == "content" or page.layout == "intro" %}
         <img src="assets/img/logo.png" height="35" />
         {% else %}
-        <img src="../../assets/img/logo.png" height="35" />
+        <img src="../assets/img/logo.png" height="35" />
         {% endif %}
     </a>
     <button class="btn btn-link bd-search-docs-toggle d-md-none s-ms-fright" type="button" id="open-right" data-activates="slide-out">
         {%- include icons/menu.svg width="30" height="30" -%}
     </button>
     <div class="bd-links collapse">
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="intro.html">关于我们</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">文化主题项目</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">欧美城新闻</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="http://www.neeq.com.cn/disclosure/announcement.html?companyCode=430173">投资者专栏</a>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">首页</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="content.html">联系我们</a>
-          </li>
-        </ul>
-    </div>
+            <li class="nav-item">
+                <a class="nav-link" href="intro.html">关于我们</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product.html">文化主题项目</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news.html">欧美城新闻</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.neeq.com.cn/disclosure/announcement.html?companyCode=430173">投资者专栏</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="content.html">联系我们</a>
+            </li>
+            </ul>
+        </div>
     </div>
     <!-- Right Sidebar -->
     <ul id="slide-out" class="side-nav d-md-none list-group">

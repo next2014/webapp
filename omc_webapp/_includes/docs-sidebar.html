@@ -1,6 +1,6 @@
 <div class="bd-search d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
   <button class="btn btn-link bd-search-docs-toggle btn-block d-md-none p-0" type="button">
-    {% if page.layout != "news" or page.layout != "about" or page.layout != "product" %}
+    {% if page.layout == "index" or page.layout == "news" or page.layout == "about" or page.layout == "product" or page.layout == "content" or page.layout == "intro" %}
       <img src="assets/img/arrow-down.png" height="20" />
     {% else %}
       <img src="../assets/img/arrow-down.png" height="20" />
@@ -8,12 +8,19 @@
   </button>
 </div>
 <nav class="collapse bd-links pt-0" id="bd-docs-nav">
+  {% for group in site.data.about %}
     <div class="bd-toc-item active">
-        <div class="bd-toc-link text-danger">                         
-            关于欧美城 
+        <div class="bd-toc-link text-danger"> 
+            {{ group.name }} 
         </div>
         <ul class="nav bd-sidenav">
-            <li><a href="about/intro.html">欧美城 ▪ 全国联盟介绍</a></li>
+          {% for doc in group.pages %}
+          {%- assign doc_slug = doc.title | slugify -%}
+              <li{% unless active == nil %} class="{{ active }}" {% endunless %}>
+                <a href="../pages/{{ doc_slug }}.html">{{ doc.name }}</a>
+              </li>
+          {% endfor%}
         </ul>
-    </div>
+      </div>
+  {% endfor %}
 </nav>
