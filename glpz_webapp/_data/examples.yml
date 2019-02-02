@@ -1,0 +1,54 @@
+- category: 文化项目
+  examples:
+    - name: 赛车文化主题
+      title: a01
+      url: themes1
+      content: 产品介绍
+    - name: 影视文化主题
+      title: a02
+      url: themes2
+      content: 产品介绍
+    - name: 演艺文化主题
+      title: a03
+      url: themes3
+      content: 产品介绍
+    - name: 婚博文化主题
+      title: a04
+      url: themes4
+      content: 产品介绍
+    - name: 花海艺术文化主题
+      title: a05
+      url: themes5
+      content: 产品介绍
+    - name: 娱乐文化主题
+      title: a06
+      url: themes6
+      content: 产品介绍
+    - name: 儿童科普主题
+      title: a07
+      url: themes7
+      content: 产品介绍
+    - name: 海洋文化主题
+      title: a08
+      url: themes8
+      content: 产品介绍
+    - name: 餐饮文化主题
+      title: a09
+      url: themes9
+      content: 产品介绍
+    - name: 体育文化主题
+      title: a10
+      url: themes10
+      content: 产品介绍
+    - name: 商学院
+      title: a11
+      url: themes11
+      content: 产品介绍
+    - name: 文化交流平台
+      title: a12
+      url: themes12
+      content: 产品介绍
+    - name: 慈善公益
+      title: a13
+      url: themes13
+      content: 产品介绍
