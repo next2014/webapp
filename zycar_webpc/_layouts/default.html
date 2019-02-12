@@ -4,8 +4,11 @@
     {% include head.html %}
   </head>
   <body>
-    {{ content }}
-    {% include footer.html %}
+    <div style="width:1440px;margin:0 auto">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
     {% include scripts.html %}
   </body>
 </html>

@@ -1,0 +1,161 @@
+//in_btn
+.in_btn{
+	width: 100%;
+	height:auto;
+	position: fixed;
+	left:0;
+	bottom: 0;
+    z-index: 99;
+}
+.layui-btn-group{
+    z-index: 99;
+    width: 100%;
+    button{
+        height:rem(161);
+        width: 33.33%;
+        background:#dcdedd;
+        color:#333;
+        font-size: 0.6rem;
+        opacity: 1;
+        border-radius:0;
+        a{
+          display: block;
+          color:#fff;            
+        }
+        &.current{
+          background: #3fbbef;
+          color:#fff;
+        }
+    }
+}
+//底部按钮
+.ti_btn .layui-btn-group .layui-btn{
+	width: 30%;
+	line-height: 0.8rem;
+	background:#3fbbef;
+    color:#fff;
+}
+.ti_btn .layui-btn-group .btn-1{
+	background:#fff;
+	color:#999;
+	text-align: center;
+	border-right: 1px solid #b8b8b8;
+	width: 20%;
+	font-size: 0.5rem;
+	position: relative;
+}
+.ti_btn .layui-btn-group .btn-2{
+	border-right:0;
+}
+.ti_btn .layui-btn-group .btn-3{
+	background:#dcdedd;
+    color:#333;
+}
+.ti_btn .layui-btn-group .btn-1 span{
+	width: 0.8rem;
+	height:0.8rem;
+	display: block;
+	margin:0.15rem auto;
+	
+}
+.ti_btn .layui-btn-group .btn-1 i{
+	width: 0.6rem;
+	height:0.6rem;
+	background: #f00;
+	text-align: center;
+	line-height: 0.6rem;
+	font-style: normal;
+	border-radius: 50%;
+	color:#fff;
+	position: absolute;
+	left: 55%;
+	top: 8%;
+}
+
+
+/* ---------按钮--------- */
+.co_btn{
+	height:auto;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 1px 0 3px #999;
+	button{
+		width: 47%;
+		background: $blue-deep;
+		border: 1px solid $blue-deep;
+		color:#fff;
+		cursor: pointer;
+	}
+	.layui-btn-group{
+		.lb_next{
+			background: 0;
+			border: 1px solid #acacac;
+			color:#acacac;
+		}
+		.layui-btn{
+			&:first-child{
+				border-left: 1px solid #acacac;
+			}
+		}
+	}
+}
+.oupu{
+	.layui-btn{
+		background-color:#00abe7;
+	}
+}
+
+//底部按钮
+.mod_pos{
+  &_btn{
+      position: fixed;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      display:flex;
+      font-size:$font-14;
+      z-index:99;
+      background:$white;
+      &_air,&_rea{
+          width:50%;
+          text-align: center;
+          height:rem(144.9);
+          line-height:rem(144.9);
+          border:0;
+          color:$white;
+          a{
+            display: block;
+            text-decoration:none;
+          }
+      }
+      &_air{
+          background: $blue-deep;
+          a{
+           color:$white!important;
+          }
+      }
+      &_rea{
+          border:1px solid $blue-deep;
+          a{
+           color:$blue-deep!important;
+          }
+      }
+      a{
+          border-bottom:1px solid $gray-200;
+          &.dropdown-item{
+           height: 40px;
+           line-height: 25px;
+           font-size:$font-14;
+          }
+          &:last-child{
+           border-bottom:0;
+          }
+      }
+      .dropdown-divider{
+          margin:0;
+      }
+      .dropdown-menu{
+          padding:0!important;
+      }
+  }
+}
