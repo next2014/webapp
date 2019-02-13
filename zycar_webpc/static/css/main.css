@@ -129,7 +129,7 @@ sub{vertical-align:text-bottom}
 input,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
 legend{color:#000}
 #yui3-css-stamp.cssreset{display:none}
-.head{margin-right:auto;margin-left:auto;position:relative}
+.head{margin-right:auto;margin-left:auto;position:relative;height:82px}
 .head img{position:absolute;top:0;left:0;z-index:-1}
 .head .logo{float:left;margin-top:6px}
 .head .txt{float:right;width:600px;text-align:right;line-height:30px;color:#666}
