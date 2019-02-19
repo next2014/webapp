@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://cp.gd-ib.cn/Wx/Ticket/TicketList -->
+<html lang="en" style="font-size: 25.875px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="all">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="pragma" content="no-cach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="keywords" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>我的订单</title>
+    <link type="text/css" rel="stylesheet" href="./我的订单_files/cssreset.css">
+    <link type="text/css" rel="stylesheet" href="./我的订单_files/style.css">
+    <link type="text/css" rel="stylesheet" href="./我的订单_files/layui.css">
+<style>
+    html {
+        background: #f8fbff;
+    }
+</style>
+
+<link id="layuicss-laydate" rel="stylesheet" href="./我的订单_files/laydate.css" media="all">
+<link id="layuicss-layer" rel="stylesheet" href="./我的订单_files/layer.css" media="all">
+<link id="layuicss-skincodecss" rel="stylesheet" href="./我的订单_files/code.css" media="all">
+
+</head>
+
+
+
+
+<body>
+    <div class="order_all">
+        <h1>
+            
+            <span class="" onclick="subc(&#39;32&#39;)">已支付</span>
+            <span onclick="subc(&#39;33&#39;)" class="current">已取票</span>
+            <span onclick="subc(&#39;31&#39;)" class="">未支付</span>
+            <span onclick="subc(&#39;34&#39;)">已退票</span>
+        </h1>
+        <ul>
+            <li class="current" id="order"><dl>                                <dt class="fl">                                    <div class="up">                                        <p class="fl">                                            购买时间：                                            <span>2018-08-25 19:05:47</span>                                        </p> <i class="fr">已出票</i>                                    </div>                                    <p>订单信息：</p><p class="p_main">                                        <span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i>                                    </p><p>订单号：OE180825000345</p>                                </dt>                                <dd class="fr down">                                    <div class="fl">订单总额：<span>¥100</span></div>                                    <div class="fr"><a href="http://cp.gd-ib.cn/Wx/Ticket/OrderDetails?Code=8T10XWS2">查看订单</a></div>                                </dd>                            </dl></li>
+        </ul>
+        <a id="gd" style="text-align:center; margin-bottom:2rem; display:block;">没有更多</a>
+    </div>
+
+
+    <div class="in_btn">
+        <div class="layui-btn-group">
+            <button class="layui-btn " onclick="javascript: window.location.href = &#39;/Wx/&#39;">首 页</button>
+            <button class="layui-btn" onclick="javascript: window.location.href = &#39;/Wx/Ticket/ShoppingNew&#39;">购物车</button>
+            <button class="layui-btn current" onclick="javascript: window.location.href = &#39;/Wx/Ticket/TicketList&#39;">我的订单</button>
+        </div>
+    </div>
+    <!-- 出票成功 -->
+    <div class="out out_succ" id="message" style="display:none">
+        <div class="te_d">
+            <h1><span><img src="./我的订单_files/success.svg" alt=""></span>出票成功</h1>
+            <div class="de_btn">
+                <button class="fl layui-btn layui-btn-normal" onclick="selectOrder()">查看订单</button>
+                <button class="fr layui-btn layui-btn-warm" onclick="javascript: window.location.href = &#39;/Wx/&#39;">继续购票</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="./我的订单_files/jquery.min.js.下载"></script>
+<script src="./我的订单_files/political_WeCall.js.下载"></script>
+
+<script src="./我的订单_files/layui.all.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./我的订单_files/Help.js.下载"></script>
+<script>
+    $(function () {
+        $('.order_all span').click(function (e) {
+            $(this).addClass('current').siblings().removeClass('current');
+            //$('.order_all ul li').eq($(this).index()).show().siblings().hide();
+        });
+    })
+    var pagelistcount = 3, currentPage = 1, total = 0, state = '32', totalPage = 0;
+    var code = '';
+    $(function () {
+        page(0);
+        var type = getQueryString('type');
+        code = getQueryString('codes');
+        if (type == 'buy') {
+            $('#message').show();
+        }
+    })
+    function selectOrder() {
+        window.location.href = '/Wx/Ticket/OrderDetails?Code=' + code;
+    }
+
+    function subc(s) {
+        currentPage = 1;
+        state = s;
+        page(0);
+    }
+    function page(m) {
+        $.get('/Wx/Ticket/GetBooking', { pagelistcount: pagelistcount, currentPage: currentPage, state: state }, function (data) {
+            if (data.status == 'ok') {
+                if (data.total == '0') {
+                    $('#order').html('');
+                    $('#gd').html('无订单！');
+                } else {
+                    if (m == 0) {
+                        $('#order').html('');
+                    }
+                    total = parseInt(data.totalCount);
+                    totalPage = parseInt(data.totalPage);
+                    var html = '';
+                    $(data.datas).each(function () {
+                        var cz = '';
+                        switch (this.State) {
+                            case 30:
+                                break;
+                            case 31:
+                                cz += '<button onclick="javascript: window.location.href = \'/Wx/Ticket/JsApiPay?OrderNo=' + this.OrderNo + '\'">立即支付</button>';
+                                break;
+                            case 32:
+                                cz += '<a href="/Wx/Ticket/OrderDetails?Code=' + this.Code + '">查看订单</a><button onclick="javascript: window.location.href = \'/Wx/Q?code=' + this.Code + '\'">电子票</button>';
+                                break;
+                            case 33:
+                            case 34:
+                                cz += '<a href="/Wx/Ticket/OrderDetails?Code=' + this.Code + '">查看订单</a>';
+                                break;
+                        }
+                        html += '<dl>\
+                                <dt class="fl">\
+                                    <div class="up">\
+                                        <p class="fl">\
+                                            购买时间：\
+                                            <span>' + this.CreateTime + '</span>\
+                                        </p> <i class="fr">' + this.StateName + '</i>\
+                                    </div>\
+                                    <p>订单信息：</p>'
+                        var item = this.OnlineBookingItems;
+                        $(item).each(function () {
+                            var ks = eval(this.TourDate.replace(/\/Date\((\d+)\)\//gi, "new Date($1)")).Format('yyyy-MM-dd');
+                            var js = eval(this.LoseTime.replace(/\/Date\((\d+)\)\//gi, "new Date($1)")).Format('yyyy-MM-dd');
+                            var qj = '';
+                            if (ks == js) {
+                                qj = ks;
+                            } else {
+                                qj = ks + '至' + js;
+                            }
+                            html += '<p class="p_main">\
+                                        <span>' + this.TicketName + '</span><span>' + qj + '</span> <i>x' + this.Qty + '</i>\
+                                    </p>';
+                        })
+                        html += '<p>订单号：' + this.OrderNo + '</p>\
+                                </dt>\
+                                <dd class="fr down">\
+                                    <div class="fl">订单总额：<span>¥' + this.Amount + '</span></div>\
+                                    <div class="fr">' + cz + '</div>\
+                                </dd>\
+                            </dl>';
+                    })
+                    if (currentPage < totalPage) {
+                        $('#gd').html('更多');
+                    }
+                    else {
+                        $('#gd').html('没有更多');
+                    }
+                    $('#order').append(html);
+                }
+            } else {
+                alert('订单加载失败！');
+            }
+        })
+    }
+    $('#gd').click(function () {
+        if (currentPage < totalPage) {
+            currentPage++;
+            if (currentPage = totalPage) {
+                $('#gd').html('没有更多');
+            }
+            page(1);
+        }
+    })
+</script>
+
+</body></html>

@@ -1,0 +1,186 @@
+<html lang="en" style="font-size: 37.5px;" class="hairlines">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>“聚焦欧美城 享受生活”</title>
+
+		<link rel="stylesheet" href="css/font.css">
+		<link rel="stylesheet" href="css/ft-carousel.css">
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+		</style>
+
+		<link rel="stylesheet" href="css/layer.css" id="layuicss-skinlayercss">
+		<link rel="stylesheet" href="css/layui.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/normalize.min.css">
+		
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/rule.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/ft-carousel.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			
+			.example {
+				width: 100%;
+				height: 200px;
+				font-size: 40px;
+				text-align: center;
+				margin: 20px auto;
+				background-color: #464576;
+			}
+			
+			.carousel-item {
+				line-height: 336px;
+				color: #fff;
+				font-family: Arial Black
+			}
+			
+			
+		</style>
+		<script type="text/javascript">  
+          function countTime() {  
+              //获取当前时间  
+              var date = new Date();  
+              var now = date.getTime();  
+             //设置截止时间  
+             var str="2018/12/31 23:59:59";
+             var endDate = new Date(str); 
+             var end = endDate.getTime();  
+             
+             //时间差  
+             var leftTime = end-now; 
+             //定义变量 d,h,m,s保存倒计时的时间  
+             var d,h,m,s;  
+             if (leftTime>=0) {  
+                 d = Math.floor(leftTime/1000/60/60/24);  
+                 h = Math.floor(leftTime/1000/60/60%24);  
+                 m = Math.floor(leftTime/1000/60%60);  
+                 s = Math.floor(leftTime/1000%60);                     
+             }  
+             //将倒计时赋值到div中  
+             document.getElementById("_d").innerHTML = d+"天";  
+             document.getElementById("_h").innerHTML = h+"时";  
+             document.getElementById("_m").innerHTML = m+"分";  
+             document.getElementById("_s").innerHTML = s+"秒";  
+             //递归每秒调用countTime方法，显示动态时间效果  
+             setTimeout(countTime,1000);  
+   
+         }  
+   </script>
+	</head>
+
+	<body data-device="pc" style="font-size: 24px;" onload="countTime()">
+		<style>
+			.bg-color {
+				background: #5CACEE !important;
+			}
+			
+			.font-color {
+				color: #5CACEE !important;
+			}
+			
+			.border-color {
+				border-color: #5CACEE !important;
+			}
+		</style>
+		<link rel="stylesheet" href="css/common2.css">
+		<header>
+			<div class="example" style="margin: 0;padding: 0;">
+				<div class="ft-carousel" id="carousel_1">
+					<ul class="carousel-inner" style="list-style: none;">
+						<li class="carousel-item"><img src="img/1.jpg" width="100%" /></li>
+						<li class="carousel-item"><img src="img/2.jpg" width="100%" /></li>
+						<li class="carousel-item"><img src="img/3.jpg" width="100%" /></li>
+						<li class="carousel-item"><img src="img/4.jpg" width="100%" /></li>	
+					</ul>
+				</div>
+			</div>
+			<div class="count-info bg-color">
+				<div class="info">
+					<p class="type"><i class="iconfont icon-20-account"></i><span class="text">参赛数</span></p> <span class="num">3</span></div>
+				<div class="info">
+					<p class="type"><i class="iconfont icon-20-numbers"></i><span class="text">投票数</span></p> <span class="num">2</span></div>
+				<div class="info">
+					<p class="type"><i class="iconfont icon-20-views"></i><span class="text">访问量</span></p> <span class="num">33</span></div>
+			</div>
+			<p class="count-down"><i class="iconfont icon-time font-color"></i> 活动
+				<span class="text">结束</span>倒计时：
+				<span id="_d">00</span>  
+         		<span id="_h">00</span>  
+         		<span id="_m">00</span>  
+         		<span id="_s">00</span>  
+			</p>
+			<a href="apply.html" class="apply-btn bg-color border-color blink"><span class="text">我要报名</span></a>
+		</header>
+
+		<footer>
+			<div class="footer-navs bg-color">
+				<a href="index.html" class="link"><i class="iconfont icon-20-users"></i> <span class="text">首页</span></a>
+				<a href="tsort.html" class="link"><i class="iconfont icon-rank"></i> <span class="text">排行榜</span></a>
+				<a href="rule.html" class="link active"><i class="iconfont icon-20-rules-choosed"></i> <span class="text">活动说明</span></a>
+			</div>
+		</footer>
+		<div id="app" class="container">
+			<div class="rule-container">
+				<h4 class="title bg-color"><svg aria-hidden="true" class="icon"><use xlink:href="#icon-speaker"></use></svg>
+					活动说明
+				</h4>
+				<div class="content">
+					<p style="text-align: left;">“聚焦欧美城 享受生活”手机摄影比赛活动开始啦！</p>
+					<p style="text-align: left;">点击<span style="font-size: 20px; color: rgb(192, 0, 0);"><strong>【我要报名</strong><strong>】</strong></span>填写报名信息</p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">活动时间：9月15日00:00-9月24日23:59</p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">获奖公布：9月25日获奖名单公布，具体领奖方式将由工作人员电话联系</p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">活动规则：活动期间<strong><span style="font-size: 20px;">每天每个微信账号可投1张票</span></strong>，禁止网络刷票、水军群求助（系统自动监测刷票情况，一经发现立即<strong><span style="color: rgb(192, 0, 0); font-size: 20px;">取消资格</span></strong>！）</p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">奖品：</p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>一等奖（1名）：欧美城家庭四人年卡一张</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>二等奖（1名）：欧美城家庭四人套票一份</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>（含欧美城海洋世界门票4张，蜡像馆门票4张，攀岩一次体验票4张，使用有效期不限）</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>三等奖（2名）：欧美城海洋世界家庭四人套票一份</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>（含欧美城海洋世界门票四张，使用有效期不限制）</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>优秀奖（30名）：欧美城海洋世界门票一张</strong></span></p>
+					<p style="text-align: left;"><span style="font-size: 16px;"><strong>（使用有效期不限制）</strong></span></p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">地址：广东省惠州市惠城区小金口金龙大道99号</p>
+					<p style="text-align: left;">咨询电话：0752-2888688</p>
+					<p style="text-align: left;">主办方：惠州欧美城文化小镇</p>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;"><span style="color: rgb(227, 108, 9);">活动所有解释权归主办方所有。</span></p>
+					<p><br></p>
+				</div>
+			</div>
+		</div>
+		<br /><br /><br />
+		<script type="text/javascript">
+			$("#carousel_1").FtCarousel();
+
+			$("#carousel_2").FtCarousel({
+				index: 1,
+				auto: false
+			});
+
+			$("#carousel_3").FtCarousel({
+				index: 0,
+				auto: true,
+				time: 1000,
+				indicators: false,
+				buttons: true
+			});
+		</script>
+	</body>
+
+</html>

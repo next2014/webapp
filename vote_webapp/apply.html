@@ -1,0 +1,34 @@
+---
+layout: default
+title: 我要报名
+---
+<link rel="stylesheet" href="assets/css/apply.css">
+<div class="layui-form apply-form" style="width:100%">
+    <div class="layui-form-item"><label class="layui-form-label">姓名</label>
+        <div class="layui-input-block"><input type="text" name="" class="layui-input"></div>
+    </div>
+    <div class="layui-form-item"><label class="layui-form-label">描述</label>
+        <div class="layui-input-block"><textarea name="describe" class="layui-textarea"></textarea></div>
+    </div>
+    <div class="layui-form-item"><label class="layui-form-label">手机</label>
+        <div class="layui-input-block"><input type="number" name="" class="layui-input"></div>
+    </div>
+    <div class="layui-form-item"><label class="layui-form-label">地址</label>
+        <div class="layui-input-block"><input type="text" name="" class="layui-input"></div>
+    </div>
+    <div class="layui-form-item upload-item">
+        <p class="img-num">上传图片（1-3张）</p>
+        <div class="layui-input-block">
+            <div id="upload-btn" class="upload-btn webuploader-container">
+                <div class="webuploader-pick"><i class="iconfont icon-create"></i> <span class="text">添加图片</span></div>
+                <div>
+                    <label></label>
+                </div>
+            </div>
+            <input type="file" name="file" id="file" multiple="multiple" style="display:none;">
+        </div>
+    </div>
+    <div class="layui-form-item preview-item">
+        <button type="button" class="layui-btn layui-btn-primary apply-btn bg-color border-color">提交报名</button>
+    </div>
+</div>

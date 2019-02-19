@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://cp.gd-ib.cn/Wx/Ticket/ShoppingNew -->
+<html lang="en" style="font-size: 25.875px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="all">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="pragma" content="no-cach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="keywords" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>结算</title>
+    <link type="text/css" rel="stylesheet" href="./结算_files/cssreset.css">
+    <link type="text/css" rel="stylesheet" href="./结算_files/style.css">
+    <link type="text/css" rel="stylesheet" href="./结算_files/layui.css">
+    
+</head>
+<body>
+
+    <div class="index_all">
+        <ul id="ticket">
+            
+
+
+                    <li>
+                        <div class="fl in_fl shop_img">
+                            <img src="./结算_files/GetImage" alt="">
+                        </div>
+                        <div class="fr in_fr shop_r">
+                            <h2>【成人票】海洋世界平日票</h2>
+                            <p>价格：<span class="dol">¥80.00</span></p>
+                            <p>使用日期：<span>2018-11-25</span></p>
+                            <div>
+                                <div class="piao_type">
+                                    <a class="fl del" href="javascript:;" onclick="EditCount(&#39;20181125162429556&#39;,&#39;delete&#39;)">删除</a>
+                                    <div class="fr Choice">
+                                        <button class="fl" onclick="EditCount(&#39;20181125162429556&#39;,&#39;reduce&#39;)">-</button>
+                                        <input class="fl" id="20181125162429556" readonly="readonly" type="text" value="1">
+                                        <button class="fl current" onclick="EditCount(&#39;20181125162429556&#39;,&#39;add&#39;)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+        </ul>
+    </div>
+
+
+    <div class="in_btn ti_btn">
+        <div class="layui-btn-group">
+            <button class="layui-btn btn-1" onclick="javascript: window.location.href = &#39;/Wx/&#39;"><span><img src="./结算_files/home.svg" alt=""></span>首页</button>
+            <button class="layui-btn btn-1 btn-2" onclick="javascript: window.location.href = &#39;/Wx/Ticket/TicketList&#39;"><span><img src="./结算_files/ding.svg" alt=""></span>订单</button>
+            <button class="layui-btn" style="width:60%;" onclick="js()">结算</button>
+
+        </div>
+    </div>
+    <script src="./结算_files/jquery.min.js.下载"></script>
+    <script src="./结算_files/political_WeCall.js.下载"></script>
+    <script src="./结算_files/mobiscroll.jquery.min.js.下载"></script>
+    <script src="./结算_files/Help.js.下载"></script>
+    
+    <script>
+    $(function () {
+        /*------------------------------------index 底部按钮的切换-----------------------------*/
+        $('.in_btn button').click(function (e) {
+            $(this).addClass('current').siblings().removeClass('current');
+        });
+    })
+    function EditCount(m, type) {
+        if (type == 'delete') {
+            if (confirm("确定删除该商品?")) {
+                updateShopping(m, type);
+            }
+            else {
+                return false;
+            }
+            //confirm("确定删除该商品?", "", function (isConfirm) {
+            //    if (isConfirm) {
+
+            //    } else {
+            //        return false;
+            //    }
+            //}, { confirmButtonText: '确定', cancelButtonText: '取消', width: 200 });
+        }
+        else {
+            updateShopping(m, type);
+        }
+
+    }
+    var state = '1';
+    function updateShopping(m, type) {
+        var k = parseInt($('#' + m).val());
+        $.get('/Wx/Ticket/EditShopping', { Code: m, type: type }, function (data) {
+            var html = '';
+            if (data.state == '1') {
+                state = '1';
+                $(data.data).each(function () {
+                    html += '<li>\
+                        <div class="fl in_fl">\
+                            <img src="/Wx/Help/GetImage?ImageUrl=' + (this.Ticket == null ? "" : this.Ticket.ImageUrl) + '" alt="">\
+                        </div>\
+                        <div class="fr in_fr">\
+                            <h2>'+ this.TicketShow.Ticketby.Name + '</h2>\
+                            <p>价格：<span class="dol">¥'+ this.TicketShow.DiscountPrice + '</span></p>\
+                            <p>使用日期：<span>'+ (new Date(this.TourDate)).Format('yyyy-MM-dd') + '</span></p>\
+                            <div>\
+                                <div class="piao_type">\
+                                    <a class="fl del" onclick="EditCount(\'' + this.Code + '\',\'delete\')">删除</a>\
+                                    <div class="fr Choice">\
+                                        <button class="' + (this.Qty > 1 ? "fl current" : "fl") + '" onclick="EditCount(\'' + this.Code + '\',\'reduce\')">-</button>\
+                                        <input class="fl" id="' + this.Code + '" readonly="readonly" type="text" value="' + this.Qty + '">\
+                                        <button class="' + (this.Qty < 50 ? "fl current" : "fl") + '" onclick="EditCount(\'' + this.Code + '\',\'add\')">+</button>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </li>';
+                })
+            }
+            if (data.state == '2') {
+                state = '2';
+                html = '<li style="border:0; background:0; text-align:center; border-bottom:1px solid #ccc; border-radius:0;">购物车没有商品</li>';
+            }
+            $('#ticket').html(html);
+        })
+    }
+        function js() {
+            if (state == '1') {
+                window.location.href = '/Wx/Ticket/TicketConfirm?type=js';
+            }
+            else {
+                alert("您还没有选购任何商品！");
+            }
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

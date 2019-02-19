@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://cp.gd-ib.cn/Wx/Ticket/TicketConfirm?type=js -->
+<html lang="en" style="font-size: 25.875px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="all">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="pragma" content="no-cach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="keywords" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>欧美城微信自助购票</title>
+    <link type="text/css" rel="stylesheet" href="./欧美城微信自助购票_files/cssreset.css">
+    <link type="text/css" rel="stylesheet" href="./欧美城微信自助购票_files/style.css">
+    <link type="text/css" rel="stylesheet" href="./欧美城微信自助购票_files/layui.css">
+<style>
+    html {
+        background: #f8fbff;
+    }
+
+</style>
+<link id="layuicss-laydate" rel="stylesheet" href="./欧美城微信自助购票_files/laydate.css" media="all">
+<link id="layuicss-layer" rel="stylesheet" href="./欧美城微信自助购票_files/layer.css" media="all">
+<link id="layuicss-skincodecss" rel="stylesheet" href="./欧美城微信自助购票_files/code.css" media="all">
+</head>
+
+
+
+<body>
+
+    <div class="ti_cof">
+        <div class="ti_head">欧美城微信自助购买</div>
+        <ul>
+            <li>
+                <dl>
+                    <dt class="fl"><img src="./欧美城微信自助购票_files/GetImage" alt=""></dt>
+                    <dd class="fr">
+                        <h2>【成人票】海洋世界平日票</h2>
+                        <div class="l_time">使用日期：<span>2018-11-25</span></div>
+                        <div class="l_money"><span class="fl">¥80.00</span><i class="fr">X<span>1</span></i></div>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+
+        <!-- 手机验证 -->
+        <div class="phone">
+
+            <input type="text" class="layui-input inpu" name="title" id="Mobile" placeholder="请输入手机号码">
+            <div class="oupu">
+                <input type="text" id="Code" class="fl layui-input yan" value="">
+                <button class="fr layui-btn" onclick="getDynamicCode(this)">获取验证码</button>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <!-- 底部 -->
+    <div class="in_btn co_btn">
+        <!-- 阅读 -->
+        
+        <!-- 立减 -->
+        
+        <!-- 总价 .li_cu  .bag"-->
+        <ul class="yh ye">
+            <li>总价：<span>¥:80.00</span></li>
+            
+            <li>待支付：<span class="bag">¥:80.00</span></li>
+        </ul>
+
+        <div class="layui-btn-group">
+            <button class="fl lb_next" onclick="javascript :history.back(-1);">上一步</button>
+            <button class="fr" onclick="buy()">立即支付</button>
+        </div>
+    </div>
+
+    <!-- 弹出的内容 -->
+    <div id="test">
+        <i class="layui-icon">ဇ</i>
+        <div class="te_d">
+            
+            <p>内容一：</p>
+            <p>
+                </p><div>003jfkdjfvkj</div>
+                <div>003jfkdjfvkj</div>
+                <div>003jfkdjfvkj</div>
+                <div>003jfkdjfvkj</div>
+                <div>003jfkdjfvkj</div>
+                <div>003jfkdjfvkj</div>
+            <p></p>
+        </div>
+    </div>
+
+
+
+
+
+<script src="./欧美城微信自助购票_files/jquery.min.js.下载"></script>
+<script src="./欧美城微信自助购票_files/political_WeCall.js.下载"></script>
+
+<script src="./欧美城微信自助购票_files/layui.all.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    var token = $('<input name="__RequestVerificationToken" type="hidden" value="PwnZ5vXgCWrZHFOC_iRA-wVDYO2x4yW0Hzb-UGsE_bWJLeBz7cqCXj_ZbbnDT7fmWa7yypZFYA_I0qoWpNSCLUJz_CzuxRT0A0A_YbYQXkw1" />').val();
+    $(function () {
+        $('.bill').click(function (e) {
+            var tag = $('#text')
+
+            $('body').prepend(tag);
+
+            $('#test').hide().fadeIn();
+
+            $('#test i').click(function (e) {
+                $('#test').fadeOut();
+            });
+
+        });
+
+    })
+    function buy() {
+        //if (!$("#isok").is(":checked")) {
+        //    alert("你还没有同意预约协议！");
+        //    return;
+        //}
+        if ($('#Mobile').val() == '') {
+            alert('请先输入手机号码！');
+            return;
+        }
+        //if ($('#Code').val() == '') {
+        //    alert('请先输入验证码！');
+        //    return;
+        //}
+
+        $.post('/Wx/Ticket/SubmitOrder', {
+            type: 'js',
+            Mobile: $('#Mobile').val(),
+            Code: $('#Code').val(),
+            token: token
+        }, function (data) {
+            switch (data.Status) {
+                case 1:
+                    window.location.href = '/Wx/Ticket/JsApiPay?OrderNo=' + data.Message;
+                    break;
+                case 2:
+                    alert('您所购买的门票中有的已经下架了，请重新购买！');
+                    break;
+                case -1:
+                    alert('提交订单失败！');
+                    break;
+                case -2:
+                    alert(data.Message);
+                    break;
+            }
+        })
+
+    }
+    var clock = '', nums = 60, btn, isok = true;
+    function getDynamicCode(thisButton) { //获取动态码
+        if ($('#Mobile').val() == '') {
+            alert('请先输入手机号码！');
+            return false;
+        }
+        btn = thisButton;
+        if (isok) {
+            $(btn).attr('disabled', "true");//将按钮置为不可点击
+            isok = false;
+            $(btn).html(nums + '秒后重新获取');
+            clock = setInterval(doLoop, 1000); //一秒执行一次
+            sms();
+        }
+    }
+    function doLoop() {
+        nums--;
+        if (nums > 0) {
+            $(btn).html(nums + '秒后重新获取');
+        } else {
+            reset();
+        }
+    }
+    function sms() {
+        $.post('/Wx/Help/Smssf', { Tel: $('#Mobile').val(), token: token }, function (data) {
+            switch (data.Status) {
+                case 0:
+                    alert('短信发送失败！');
+                    reset();
+                    break;
+                case 1:
+                    //alert('短信发送成功！');
+                    break;
+                case 3:
+                    alert('验证码请求过于频繁，请稍后再试！');
+                    break;
+                case -1:
+                    alert('短信发送失败！');
+                    // swal(data.Message, '', 'error');
+                    break;
+            }
+        })
+    }
+    function reset() {
+        clearInterval(clock); //清除js定时器
+        $(btn).removeAttr('disabled');
+        isok = true;
+        $(btn).html('发送验证码');
+        nums = 60; //重置时间
+    }
+</script>
+
+</body></html>
