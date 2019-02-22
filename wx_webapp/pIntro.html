@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 惠州欧美城文化小镇
+title: 欧美城文化小镇
 ---
-<header class="p-3 bg-blue text-white text-center" style="background-color:#3fbbef;">欧美城全景图</header>
+<header class="p-3 bg-blue text-white text-center" style="background-color:#3fbbef;">欧美城项目介绍</header>
 <div class="p-3">
     <img src="assets/img/logo.png" class="w-100 mb-2" alt="">
     <img src="assets/img/fengxiang.png" class="w-100" alt="">
     <img src="assets/img/01.png" class="w-100" alt="">
 </div>
 {% for entry in site.data.examples %}
-  {% for example in entry.examples %}
-    {% if forloop.first %}<div class="container p-2 mt-2">{% endif %}
+  {% for example in entry.introduct %}
+    {% if forloop.first %}<div class="container p-2">{% endif %}
        <div class="Small shadow1 card mb-3 border-light">
           <a href="{{ example.url }}" class="p-2" style="color:#666;">
            <div class="d-flex align-items-center">
