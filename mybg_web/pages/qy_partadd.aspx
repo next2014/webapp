@@ -25,28 +25,27 @@
 	<link rel="stylesheet" href="../css/wap_tck.css" type="text/css">
     <link rel="stylesheet" href="../css/yun_wap_member.css" type="text/css" />
 	<link rel="stylesheet" href="../css/app.css" type="text/css" />
-</head>
-<script charset="utf-8" src="../js/s.js" language="javascript"></script>
-<script src="../js/hm.js" language="javascript"></script>
-<script src="../js/push.js" language="javascript"></script>
-<script src="../js/jquery-1.8.0.min.js" language="javascript"></script>
-<script src="../js/prefixfree.min.js" language="javascript"></script>
-<script src="../js/pack.js" type="text/javascript"></script>
-<script src="../js/layer.m.js" language="javascript"></script>
-<script src="../js/public.js" language="javascript"></script>
-<script src="../js/mui.picker.js" language="javascript "></script>
-<script src="../js/mui.poppicker.js" language="javascript "></script>
-<script src="../js/forgetpw.js" language="javascript "></script>
-<script src="../js/reg_ajax.js" charset="utf-8" language="javascript"></script>
-<script src="../js/gt.js" language="javascript"></script>
-<script src="../js/mobile.js" type="text/javascript "></script>
-<script src="../js/swiper.js"></script>
-<script src="../js/search.js" language="javascript"></script>
-<script src="../js/demo.js" language="javascript"></script>
-<script src="../js/mui.min.js" language="javascript"></script>
-<script src="../js/mui.view.js" language="javascript"></script>
-<script src="../js/binding.js" language="javascript"></script>
-<script src="../js/compress.js" language="javascript"></script>
+    <script charset="utf-8" src="../js/s.js" language="javascript"></script>
+    <script src="../js/hm.js" language="javascript"></script>
+    <script src="../js/push.js" language="javascript"></script>
+    <script src="../js/jquery-1.8.0.min.js" language="javascript"></script>
+    <script src="../js/prefixfree.min.js" language="javascript"></script>
+    <script src="../js/pack.js" type="text/javascript"></script>
+    <script src="../js/layer.m.js" language="javascript"></script>
+    <script src="../js/public.js" language="javascript"></script>
+    <script src="../js/mui.picker.js" language="javascript "></script>
+    <script src="../js/mui.poppicker.js" language="javascript "></script>
+    <script src="../js/forgetpw.js" language="javascript "></script>
+    <script src="../js/reg_ajax.js" charset="utf-8" language="javascript"></script>
+    <script src="../js/gt.js" language="javascript"></script>
+    <script src="../js/mobile.js" type="text/javascript "></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/search.js" language="javascript"></script>
+    <script src="../js/demo.js" language="javascript"></script>
+    <script src="../js/mui.min.js" language="javascript"></script>
+    <script src="../js/mui.view.js" language="javascript"></script>
+    <script src="../js/binding.js" language="javascript"></script>
+    <script src="../js/compress.js" language="javascript"></script>
     <script type="text/javascript">
         function UserAddVerify() {
             var Name = document.getElementById("name").value;
@@ -190,7 +189,7 @@
                 </ul>
                 <ul class="yunset_list">
                     <li>
-                        <a href="#datehtml" id="descriptioneditor"><span class="yunset_list_name">有&nbsp;&nbsp;效&nbsp;&nbsp;期</span><span
+                        <a href="#datehtml" id="descriptioneditor"><span class="yunset_list_name">工作时间</span><span
                                 class="yunset_list_commentary yunset_list_js" id="descriptionshow" runat="server">请填写</span></a>
                        
                     </li>
