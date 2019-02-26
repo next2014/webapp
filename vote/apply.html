@@ -1,34 +1,51 @@
 ---
-layout: default
+layout: pages
 title: 我要报名
 ---
 <link rel="stylesheet" href="assets/css/apply.css">
-<div class="layui-form apply-form" style="width:100%">
-    <div class="layui-form-item"><label class="layui-form-label">姓名</label>
-        <div class="layui-input-block"><input type="text" name="" class="layui-input"></div>
-    </div>
-    <div class="layui-form-item"><label class="layui-form-label">描述</label>
-        <div class="layui-input-block"><textarea name="describe" class="layui-textarea"></textarea></div>
-    </div>
-    <div class="layui-form-item"><label class="layui-form-label">手机</label>
-        <div class="layui-input-block"><input type="number" name="" class="layui-input"></div>
-    </div>
-    <div class="layui-form-item"><label class="layui-form-label">地址</label>
-        <div class="layui-input-block"><input type="text" name="" class="layui-input"></div>
-    </div>
-    <div class="layui-form-item upload-item">
-        <p class="img-num">上传图片（1-3张）</p>
-        <div class="layui-input-block">
-            <div id="upload-btn" class="upload-btn webuploader-container">
-                <div class="webuploader-pick"><i class="iconfont icon-create"></i> <span class="text">添加图片</span></div>
-                <div>
-                    <label></label>
+<form class="layui-form layui-form-pane1" action="" lay-filter="first" style="width:100%">
+<div class="container">
+    <div class="layui-form apply-form" style="width:100%">
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" lay-verify="required|name" required placeholder="请输姓名" autocomplete="off"  class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机</label>
+            <div class="layui-input-block">
+                <input type="tel" name="phone" lay-verify="required|number" lay-verType="tips" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-block">
+                <input type="address" name="address" lay-verify="required|address" required placeholder="请输具体地址" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">多图片上传</label>
+            <div class="layui-input-block">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn" id="test2" style="width:100%">多图片上传</button> 
+                    <div class="layui-upload-list" id="demo2"></div>
                 </div>
             </div>
-            <input type="file" name="file" id="file" multiple="multiple" style="display:none;">
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">请填描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="*" style="width:100%">立即提交</button>
+            </div>
         </div>
     </div>
-    <div class="layui-form-item preview-item">
-        <button type="button" class="layui-btn layui-btn-primary apply-btn bg-color border-color">提交报名</button>
-    </div>
 </div>
+</form>
+    
+    

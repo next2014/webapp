@@ -9,9 +9,7 @@
         if(confirm(msg) == true) {
             var test1 = $("#TP" + r).html();
             document.getElementById("TP" + r).innerHTML = test1 * 1 + 1;
-        } else {
-
-        }
+        } else {}
     }
 </script>
 <script type="text/javascript">
@@ -41,4 +39,56 @@
         //递归每秒调用countTime方法，显示动态时间效果  
         setTimeout(countTime, 1000);
     }
+</script>
+<script src="assets/js/layui.js"></script>
+<script>
+layui.use(['form', 'upload'],function () {
+    var $ = layui.jquery
+    var form = layui.form //获取form模块
+    ,upload = layui.upload; //获取upload模块
+
+    //自定义验证规则
+    form.verify({
+        address: function (value) {
+         if (value.length < 5) {
+            return '个人地址';
+         }
+        }
+    });
+    //初始赋值
+    form.val('first', {
+    'address': '测试地址'
+    , 'phone': 11111111111
+    , 'name': '小明'
+    , 'interest': 3
+    , 'like[write]': true
+    , 'desc': '投票说明'
+    });
+    //监听提交
+    form.on('submit(*)', function (data) {
+        console.log(data)
+        alert(JSON.stringify(data.field));
+        return false;
+    });
+  
+    upload({
+        elem: '#test2'
+        ,url: ''
+        ,multiple: true
+        ,number: 3
+        ,size: 1024
+        ,before: function(obj){
+            obj.preview(function(index, file, result){
+                $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
+            });
+        }
+        ,done: function(res){
+        //上传完毕
+        }
+        ,allDone: function(obj){
+        console.log(obj)
+        }
+    });
+
+});
 </script>

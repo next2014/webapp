@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html style="font-size: 35.8px;">
+<head>
+{% include head.html %}
+</head>
+<body data-device="pc" style="font-size: 12px;margin-left: auto;margin-right: auto;" onload="countTime()">
+<div class="votes">
+    {% include header.html %}
+    {{ content }}
+    {% include menu.html %}
+</div>
+{% include script.html %}
+{% include swiperjs.html %}
+</body>
+</html>

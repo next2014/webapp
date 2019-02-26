@@ -10,7 +10,6 @@
 
 .container .rule-container {
 	background-color: #ffffff;
-	width: 9rem;
 	box-sizing: border-box;
 	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.1);
 	margin-bottom: .85rem
@@ -111,12 +110,12 @@
 }
 
 .container .search {
-	width: 9rem;
+	width: 98%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-size: 14px;
-	margin-bottom: .85rem;
+	margin-bottom: .55rem;
 	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.1)
 }
 
@@ -143,8 +142,7 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 9rem;
-	margin-bottom: .14rem
+	margin-bottom: 1.5rem
 }
 
 .container .user-list .user {
@@ -163,7 +161,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: .2rem;
+	/* margin-bottom: .2rem; */
 	width: 100%
 }
 
@@ -178,7 +176,7 @@
 	top: 0;
 	left: 0;
 	font-size: 14px;
-	padding: .15rem .45rem;
+	padding: .15rem .35rem;
 	color: #ffffff;
 	text-align: center
 }
@@ -189,6 +187,7 @@
 	justify-content: center;
 	color: #ffffff;
 	font-size: 14px;
+	margin-top: .2rem;
 	margin-bottom: .2rem;
 	word-break: break-all;
 	padding: 0 .3rem;
@@ -221,9 +220,9 @@
 	height: 7.8rem
 } */
 
-.container .user-list .user.equi .link {
+/* .container .user-list .user.equi .link {
 	height: 5.36rem
-}
+} */
 
 .container .user-list .user.equi .link .img {
 	width: auto;

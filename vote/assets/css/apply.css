@@ -34,7 +34,7 @@
 	font-size: 14px;
 	padding: .5rem;
 	box-sizing: border-box;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.1)
 }
 
@@ -54,7 +54,9 @@
 	white-space: pre-wrap;
 	margin-right: .3rem;
 	text-align: left;
-	width: 57px
+	width: 57px;
+	margin-bottom: 0!important;
+	line-height:18px;
 }
 
 .container .apply-form .layui-form-item .layui-input-block {

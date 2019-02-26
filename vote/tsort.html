@@ -3,11 +3,14 @@ layout: default
 title: 排行榜
 ---
 <link rel="stylesheet" href="assets/css/sort.css">
+<a href="apply.html" class="layui-btn layui-btn-fluid">
+    <span class="text">我要报名</span>
+</a>
 <div class="sort-container" style="width:100%">
-    <h4 class="sort-title bg-color" style="width:100%">
+    <h4 class="sort-title layui-bg-red mt-2" style="width:100%">
         <svg aria-hidden="true" class="icon"><use xlink:href="#icon-rank-crown"></use></svg>排行榜
     </h4>
-    <table lay-skin="nob" class="layui-table sort-table sort-table" style="width:100%">
+    <table class="layui-table sort-table sort-table" lay-even lay-skin="line" lay-size="lg" style="width:100%">
         <tbody>
             <tr>
                 <td>
@@ -22,7 +25,7 @@ title: 排行榜
                     </svg>
                 </td>
                 <td claas="user-name"><img src="assets/img/5.jpg" alt="">
-                    <!----><span>张三</span></td>
+                <span>张三</span></td>
                 <td>1票</td>
             </tr>
             <tr>
@@ -38,7 +41,7 @@ title: 排行榜
                     </svg>
                 </td>
                 <td claas="user-name"><img src="assets/img/6.jpg" alt="">
-                    <!----><span>张三</span></td>
+                <span>张三</span></td>
                 <td>1票</td>
             </tr>
             <tr>
@@ -54,10 +57,10 @@ title: 排行榜
                     </svg>
                 </td>
                 <td claas="user-name"><img src="assets/img/7.jpg" alt="">
-                    <!----><span>张三</span></td>
+                <span>张三</span></td>
                 <td>0票</td>
             </tr>
         </tbody>
     </table>
-    <button type="button" class="load-more-btn no-more">没有更多了</button>
+    <button type="button" class="load-more-btn no-more" style="width:100%">没有更多了</button>
 </div>

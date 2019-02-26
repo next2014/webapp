@@ -14,7 +14,7 @@
 
 .container .sort-container {
 	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.1);
-	margin-bottom: .85rem
+	margin-bottom: 2rem
 }
 
 .container .sort-title {
@@ -22,8 +22,8 @@
 	color: #fff;
 	text-align: center;
 	width: 8.93rem;
-	height: 1.07rem;
-	line-height: 1.07rem;
+	height: 1.3rem;
+	line-height: 1.3rem;
 	position: relative
 }
 
@@ -31,8 +31,8 @@
 	position: absolute;
 	top: -18px;
 	left: -15px;
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 	transform: rotateZ(-5deg)
 }
 
@@ -97,12 +97,12 @@
 }
 
 .container .sort-table tbody tr td .icon {
-	width: 20px;
-	height: 20px
+	width: 30px;
+	height: 30px
 }
 
 .container .layui-table td {
-	padding: 9px 0 !important
+	padding: 0 !important
 }
 
 .container .load-more-btn {
