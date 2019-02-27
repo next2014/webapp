@@ -53,6 +53,34 @@
 	text-align: center
 }
 
+.layui-table tr td .icon {
+	width: 35px;
+	height: 35px;
+	margin:0 auto;
+}
+
+.layui-table tr td{
+    padding:.2rem 0!important;
+}
+
+.layui-table tr td:nth-child(1){
+	text-align: center;
+}
+.layui-table tr td:nth-last-child(1){
+	text-align: center;
+}
+.layui-table tr td img{
+	width: 40px;
+	height: 40px;
+	margin-right: .2rem;
+}
+
+.layui-table  tr td.user-name span{
+   padding:0 0.5rem;
+   display: block;
+}
+
+/* 
 .container .sort-table {
 	width: 9rem;
 	margin: 0
@@ -103,7 +131,7 @@
 
 .container .layui-table td {
 	padding: 0 !important
-}
+} */
 
 .container .load-more-btn {
 	width: 9rem;

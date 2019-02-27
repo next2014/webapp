@@ -5,7 +5,10 @@
 </head>
 <body data-device="pc" style="font-size: 12px;margin-left: auto;margin-right: auto;" onload="countTime()">
 <div class="votes">
-    {% include header.html %}
+    <header>
+        {% include swiper.html %}
+        {% include votesDate.html %}
+    </header>
     <div id="app" class="container">
       {{ content }}
     </div>

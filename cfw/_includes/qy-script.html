@@ -5,9 +5,9 @@
 <script src="../static/js/iconfont.js"></script>
 <script src="../static/js/fastclick.js"></script>
 <script>
-     $(function() {
-         FastClick.attach(document.body);
-     });
+    $(function() {
+        FastClick.attach(document.body);
+    });
  </script>
 {% if page.layout == "pages/ordersDetail" %}
     {% include script/ordersDetailJs.html %}
@@ -74,10 +74,10 @@ or page.layout == "pages/secService" or page.layout == "pages/taskRelease" %}
     $("#leaveType").picker({
         title: "请选择请假类型",
         cols: [
-        {
-            textAlign: 'center',
-            values: ['无薪病假', '事假', '调休假', '年休假', '产假', '产前检查假']
-        }
+            {
+                textAlign: 'center',
+                values: ['无薪病假', '事假', '调休假', '年休假', '产假', '产前检查假']
+            }
         ]
     });
     </script>
@@ -87,10 +87,10 @@ or page.layout == "pages/secService" or page.layout == "pages/taskRelease" %}
     $("#receive").picker({
         title: "选择网点",
         cols: [
-        {
-            textAlign: 'center',
-            values: ['江北金龙大道', '东平加油站', '桥东市场']
-        }
+            {
+                textAlign: 'center',
+                values: ['江北金龙大道', '东平加油站', '桥东市场']
+            }
         ]
     });
 </script>

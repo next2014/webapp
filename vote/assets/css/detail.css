@@ -24,12 +24,14 @@
 
 .container .detail-panel {
 	width: 9rem;
-	margin-bottom: .12rem;
+	margin-top: .5rem;
+	margin-bottom: 1.5rem;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .container .detail-panel .number {
@@ -39,7 +41,8 @@
 	font-size: 14px;
 	padding: .15rem .45rem;
 	color: #fff;
-	text-align: center
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .container .detail-panel .box {
