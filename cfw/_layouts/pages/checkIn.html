@@ -1,78 +1,67 @@
 ---
-layout: default
+layout: pages
 title: 签到
 ---
 <div class="checkIn">
-    <div class="weui-cells weui-cells_form">
-      <div class="weui-cell weui-cell_select">
+    <div class="weui-cells">
+        <div class="weui-cell">
             <div class="weui-cell__hd">
-               <label class="weui-label">服务分类</label>
+                <label class="weui-label text-center">序&nbsp;&nbsp;&nbsp;号</label>
             </div>
             <div class="weui-cell__bd">
-               <input class="weui-input" type="text" value="请选择服务分类" id="typeServer">
-            </div>
-      </div>
-    </div>
-    <div class="weui-cells__title"></div>
-    <div class="weui-cells weui-cells_form">
-        <div class="weui-cell weui-cell_select">
-            <div class="weui-cell__hd">
-                <label class="weui-label">区域选择</label>
-            </div>
-            <div class="weui-cell__bd">
-                <input class="weui-input" type="text" value="区域选择" id="area">
+                <input class="weui-input" type="text" value="1" id="ci_01" readonly="readonly">
             </div>
         </div>
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                <label class="weui-label">地址</label>
+                <label class="weui-label text-center">部&nbsp;&nbsp;&nbsp;门</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" placeholder="请填写地址信息">
+                <input class="weui-input" type="text" placeholder="请输入您所在部门" id="ci_02">
             </div>
         </div>
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                <label class="weui-label">维保详情</label>
+                <label class="weui-label text-center">姓&nbsp;&nbsp;&nbsp;名</label>
             </div>
             <div class="weui-cell__bd">
-                <textarea class="weui-textarea" placeholder="请做简要描述" rows="3"></textarea>
+                <input class="weui-input" type="text" placeholder="请输入您的姓名" id="ci_03">
             </div>
         </div>
         <div class="weui-cell">
             <div class="weui-cell__hd">
-                <label class="weui-label">上传照片</label>
+                <label class="weui-label text-center">日&nbsp;&nbsp;&nbsp;期</label>
             </div>
             <div class="weui-cell__bd">
-                <div class="weui-cell p-0" id="uploader">
-                    <div class="weui-cell__bd">
-                        <div class="weui-uploader">
-                            <!-- <div class="weui-uploader__hd">
-                                <p class="weui-uploader__title">图片上传</p>
-                                <div class="weui-uploader__info"><span id="uploadCount">0</span>/5</div>
-                            </div> -->
-                            <div class="weui-uploader__bd">
-                                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
-                                <div class="weui-uploader__input-box">
-                                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <input class="weui-input" type="text" placeholder="请选择日期" id="ci_04">
             </div>
         </div>
-        <div class="weui-cell weui-cell_select">
+        <div class="weui-cell">
             <div class="weui-cell__hd">
-                <label class="weui-label">紧急程度</label>
+                <label class="weui-label text-center">时&nbsp;&nbsp;&nbsp;间</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" value="请选择紧急程度" id="emergencyLevel">
+                <input class="weui-input" type="text" placeholder="请选择时间" id="ci_05">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label text-center">事&nbsp;&nbsp;&nbsp;由</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入事由" id="ci_06">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label text-center">审批人</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入审批人" id="ci_07">
             </div>
         </div>
     </div>
-    <!-- 底部按钮 -->
-    <section class="mod_pos_btn">
-        <div class="mod_pos_btn_air w-100"><a href="">提交</a></div>
-    </section>
+    <div class="weui-btn-area m-3">
+        <a class="weui-btn weui-btn_primary" href="javascript:">提 交</a>
+    </div>
 </div>
