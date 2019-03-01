@@ -3,6 +3,7 @@ layout: pages
 title: 签到
 ---
 <div class="checkIn">
+ <form action="checkIn.html" method="POST">
     <div class="weui-cells">
         <div class="weui-cell">
             <div class="weui-cell__hd">
@@ -12,12 +13,12 @@ title: 签到
                 <input class="weui-input" type="text" value="1" id="ci_01" readonly="readonly">
             </div>
         </div>
-        <div class="weui-cell">
+        <div class="weui-cell weui-cell_select">
             <div class="weui-cell__hd">
                 <label class="weui-label text-center">部&nbsp;&nbsp;&nbsp;门</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" placeholder="请输入您所在部门" id="ci_02">
+                <input class="weui-input" type="text" value="请输入您所在部门" id="bumen">
             </div>
         </div>
         <div class="weui-cell">
@@ -28,20 +29,12 @@ title: 签到
                 <input class="weui-input" type="text" placeholder="请输入您的姓名" id="ci_03">
             </div>
         </div>
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                <label class="weui-label text-center">日&nbsp;&nbsp;&nbsp;期</label>
-            </div>
-            <div class="weui-cell__bd">
-                <input class="weui-input" type="text" placeholder="请选择日期" id="ci_04">
-            </div>
-        </div>
-        <div class="weui-cell">
+        <div class="weui-cell weui-cell_select">
             <div class="weui-cell__hd">
                 <label class="weui-label text-center">时&nbsp;&nbsp;&nbsp;间</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" placeholder="请选择时间" id="ci_05">
+                <input class="weui-input" type="text" value="2019-03-01 12:00" id="checkin-time">
             </div>
         </div>
         <div class="weui-cell">
@@ -49,7 +42,7 @@ title: 签到
                 <label class="weui-label text-center">事&nbsp;&nbsp;&nbsp;由</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" placeholder="请输入事由" id="ci_06">
+                 <textarea class="weui-textarea" placeholder="请输入事由" rows="3"></textarea>
             </div>
         </div>
         <div class="weui-cell">
@@ -57,11 +50,12 @@ title: 签到
                 <label class="weui-label text-center">审批人</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" placeholder="请输入审批人" id="ci_07">
+                 <textarea class="weui-textarea" placeholder="请输入审批人" rows="3"></textarea>
             </div>
         </div>
     </div>
     <div class="weui-btn-area m-3">
-        <a class="weui-btn weui-btn_primary" href="javascript:">提 交</a>
+       <button type="submit" class="weui-btn weui-btn_primary">提 交</button>
     </div>
+ </form>
 </div>
