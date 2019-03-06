@@ -198,4 +198,20 @@ or page.layout == "pages/secService" or page.layout == "pages/taskRelease" %}
         }
       });
 </script>
+<script type="text/javascript">
+    $(function(){
+        var $tooltips = $('.js_tooltips');
+
+        $('#showTooltips').on('click', function(){
+            if ($tooltips.css('display') != 'none') return;
+
+            $('.page.cell').removeClass('slideIn');
+            
+            $tooltips.css('display', 'block');
+            setTimeout(function () {
+                $tooltips.css('display', 'none');
+            }, 2000);
+        });
+    });
+</script>
 {% endif %}

@@ -1984,6 +1984,9 @@ template {
     color:#fff!important;
     border-radius:5px
 }
+.subject{
+
+}
 .subject .subject-ul {
     background-color:#e9ecef
 }
@@ -2107,8 +2110,10 @@ template {
     }
     .hdm {
         display:-ms-flexbox;
-        display:flex;
         margin-bottom:15px
+    }
+    .hdm a{
+        display:flex;
     }
     .hdm:last-child {
         margin-bottom:0
@@ -2228,5 +2233,13 @@ template {
     font-size: 1rem!important;
     font-weight: 300;
   }
+
+.nav-tabs .nav-link{
+    color:#666;   
+}
+
+.omcHome a{
+    text-decoration: none;
+}
 
 /*# sourceMappingURL=docs.min.css.map */
