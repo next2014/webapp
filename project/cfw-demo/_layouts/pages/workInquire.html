@@ -1,0 +1,32 @@
+---
+layout: pages
+title: 工单查询
+---
+<div class="workInquire">
+    {% include components/search.html %}
+    {% for work in site.data.workInquire %}
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">{{ work.project }}</label>
+            <span class="btn btn-warning btn-sm">{{ work.status }}</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">{{ work.title }}</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">{{ work.name }}</label>
+                <span class="weui-form-preview__value"><a href="tel:{{ work.tel }}" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">{{ site.time }}</label>
+                <span class="weui-form-preview__value">{{ work.site }}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% include common/qy-res-menu.html %}
+{% include pages/workInquire.html %}

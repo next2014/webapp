@@ -1,0 +1,47 @@
+- project: 公共报障
+  status: 处理中
+  title: 维修洗手台柜门及更2个坏的水龙头
+  name: 梁先生
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城-海洋馆
+
+- project: 公共报障
+  status: 待派单
+  title: 维修洗手盆柜门腐烂
+  name: 梁先生
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城-格林披志
+
+- project: 任务下达
+  status: 待接单
+  title: 跟进景观桥旁水管改造施工
+  name: 梁先生
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城
+
+- project: 任务下达
+  status: 待支付
+  title: 今天我想吃顿美餐
+  name: 黄小姐
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城-会所
+
+- project: 任务下达
+  status: 待审核
+  title: 改造施工
+  name: 梁先生
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城-1号馆
+
+- project: 任务下达
+  status: 待评价
+  title: 跟进景观桥旁水管改造施工
+  name: 梁先生
+  tel: 13433598652
+  time: 17:30
+  site: 欧美城-2号馆

@@ -1,0 +1,55 @@
+---
+layout: pages
+title: 签到
+---
+<div class="checkIn">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">序&nbsp;&nbsp;&nbsp;号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="1" id="ci_01" readonly="readonly">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">部&nbsp;&nbsp;&nbsp;门</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请输入您所在部门" id="bumen">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">姓&nbsp;&nbsp;&nbsp;名</label></div>
+            <div class="weui-cell__bd">
+                 <input class="weui-input" type="text" placeholder="请输入您的姓名" id="ci_03">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">时&nbsp;&nbsp;&nbsp;间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-03-01 12:00" id="checkin-time">
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">事&nbsp;&nbsp;&nbsp;由</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入事由" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">审批人</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入审批人" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui-btn-area m-3">
+        <a class="weui-btn weui-btn_warn" href="javascript:" id="showTooltips">提 交</a>
+    </div>
+</div>

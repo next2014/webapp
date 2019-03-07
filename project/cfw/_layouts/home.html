@@ -1,28 +1,24 @@
 ---
 layout: default
-title: 待办
+title: 签到和请假管理
 ---
-<div class="home">
-    <!-- S 待办项 -->
-    <div class="weui-tab">
-     <div class="mod_int weui-navbar">
-        <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
-            <span class="mod_int_tab_text">待接单(<em>0</em>) <i class="fa fa-sort-down"></i></span>
-            <div class="bottom_line"></div>
+<div class="daily">
+    <div class="weui-grids">
+        <a href="pages/CheckIn.html" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="static/images/icon/24.png" alt="">
+            </div>
+            <p class="weui-grid__label">
+                签到
+            </p>
         </a>
-        <a class="mod_int_tab weui-navbar__item p-0" href="#tab2">
-            <span class="mod_int_tab_text">我的工单(<em>0</em>) <i class="fa fa-sort-down"></i></span>
-            <div class="bottom_line"></div>
+        <a href="pages/leave.html" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="static/images/icon/24.png" alt="">
+            </div>
+            <p class="weui-grid__label">
+                请假
+            </p>
         </a>
-     </div>
-     <div class="weui-tab__bd">
-       <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
-            {% include modules/home/orders.html %}
-       </div>
-       <div id="tab2" class="weui-tab__bd-item">
-            {% include modules/home/workOrder.html %}
-       </div> 
-     </div>
     </div>
-    <!-- E 待办项 -->
 </div>

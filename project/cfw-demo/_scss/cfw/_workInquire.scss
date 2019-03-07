@@ -1,0 +1,35 @@
+.workInquire{
+    @extend %bgColorMt;
+    margin-bottom: rem(161);
+    .weui-form-preview__hd{
+        a{
+           display: block;
+           text-decoration: none;
+        }
+    }
+}
+.placeholder {
+    padding: 5px 20px;
+    text-align: left;
+}
+.popBottom{
+    max-height:300px!important;
+    overflow:scroll!important;
+    a{
+      text-decoration: none;
+      &:hover{
+          color:$blue-light;
+      }
+    }
+}
+.tel{
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    float: right;
+    text-align: center;
+    border: 1px solid $gray-600;
+    border-radius: 50px;
+    color:$gray-600;
+}
