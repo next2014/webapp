@@ -1,24 +1,18 @@
 <!-- 底部导航 -->
-{% if page.layout == "home" or page.layout == "daily" or page.layout == "mine" %}
+{% if page.layout == "home" or page.layout == "daily" or page.layout == "mine" or page.layout == "leave" or page.layout == "checkIn" %}
 <nav class="menu">
     <a href="index.html" class="{% if page.layout == "home" %} active {% endif %}">
-        <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-_jilu"></use>
-        </svg>
-        <span>首页</span>
+        <i class="fa fa-home"></i><span>首页</span>
     </a>
-    <a href="daily.html" class="{% if page.layout == "daily" %} active {% endif %}">
-        <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-_kafei"></use>
-        </svg>
-        <span>考勤记录</span>
+    <a href="leaveSornd.html".html" class="{% if page.layout == "daily" or page.layout == "leaveSornd" %} active {% endif %}">
+        <i class="fa fa-calendar-check-o"></i><span>请假记录</span>
     </a>
-    <a href="mine.html" class="{% if page.layout == "mine" %} active {% endif %}">
-        <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-_geren"></use>
-        </svg>
-        <span>消息</span>
-        <!-- <em class="weui-badge weui-badge_dot"></em> -->
+    <a href="checkInSornd.html" class="{% if page.layout == "daily" or page.layout == "checkInSornd" %} active {% endif %}">
+        <i class="fa fa-calendar-check-o"></i><span>签到记录</span>
     </a>
-</nav>  
+    <a href="news.html" class="{% if page.layout == "mine" %} active {% endif %}">
+        <i class="fa fa-user-o"></i><span>消息</span>
+        <em class="weui-badge weui-badge_dot"></em>
+    </a>
+</nav>
 {% endif %}

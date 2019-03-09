@@ -821,7 +821,7 @@ a{text-decoration:none;color:#333}
 .inputSelect{width:100%;height:40px;font-size:.875em;color:#777;text-indent:5px;text-align:left;border:1px solid #778a99}
 .inputCheckbox,.inputRadio{width:100%;height:100%;border:none}
 .login_bth input{border:none;font-size:18px}
-.inputSubmit{width:100%;height:45px;background:-webkit-gradient(linear,0 0,0 100%,from(#5ab913),to(#5ab913));border:none;font-size:18px;color:#fff;cursor:pointer;-webkit-border-radius:3px;border-radius:3px;background-image:-moz-linear-gradient(top,#89c7f8,#1178c3)}
+.inputSubmit{width:100%;height:45px;background:-webkit-gradient(linear,0 0,0 100%,from(#bd8438),to(#bd8438));border:none;font-size:18px;color:#fff;cursor:pointer;-webkit-border-radius:3px;border-radius:3px;background-image:-moz-linear-gradient(top,#89c7f8,#1178c3)}
 .searchSubmit{width:100%;height:40px;background:-webkit-gradient(linear,0 0,0 100%,from(#46bc94),to(#46bc94));border:none;font-size:1em;color:#fff;cursor:pointer;position:relative;-webkit-border-radius:0 0 3px 3px;border-radius:0}
 .selectblock select{width:100%;height:40px;font-size:.875em;color:#777;text-indent:5px;text-align:left;border:1px solid #bdbdbd}
 .userloginreg{margin-bottom:10px;background:#fff;padding:10px 0;text-align:center}

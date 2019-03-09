@@ -80,7 +80,7 @@ button.weui-btn_plain-default,button.weui-btn_plain-primary,input.weui-btn_plain
 .weui-cells{background-color:#FFF;font-size:17px;overflow:hidden;position:relative}
 .weui-cells:before{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid #C7C7C7;color:#C7C7C7;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);-ms-transform:scaleY(.5);transform:scaleY(.5);z-index:2}
 .weui-cells:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #C7C7C7;color:#C7C7C7;-webkit-transform-origin:0 100%;-ms-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(.5);-ms-transform:scaleY(.5);transform:scaleY(.5);z-index:2}
-.weui-cells__title{margin-bottom:.5em;padding-left:15px;padding-right:15px;padding-top:10px;color:#999;font-size:14px}
+.weui-cells__title{margin-bottom:.5em;padding-left:15px;padding-right:15px;padding-top:10px;}
 .weui-cells__title+.weui-cells{margin-top:0}
 .weui-cells__tips{margin-top:.9em;color:#999;padding-left:15px;padding-right:15px;font-size:14px}
 .weui-cell{padding:10px 15px;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
