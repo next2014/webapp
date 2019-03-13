@@ -8,19 +8,85 @@
      $(function() {
          FastClick.attach(document.body);
      });
- </script>
-<script>
-    $("#leave_01").select({
-        title: "请假类型",
-        items: [
-            {
-                title: "事假",
-                value: "001",
-            },
-            {
-                title: "病假",
-                value: "002"
-            }
-        ]
+     $("#checkin-time").calendar({
+        value: ['2019-03-11'],
+        dateFormat: 'yyyy年mm月dd日'
     });
+ </script>
+{% if page.layout == "checkIn" %}
+    <script>
+    $("#bumen").picker({
+            title: "部门",
+            cols: [
+                {
+                    textAlign: 'center',
+                    values: ['市场部', '运营部', '策划部', '网络部', '工程部', '客服部', '财务部', '其他']
+                }
+            ]
+        });
+    </script>
+    <script>
+        // 约定正则
+        var regexp = {
+            regexp: {
+                IDNUM: /(?:^\d{15}$)|(?:^\d{18}$)|^\d{17}[\dXx]$/,
+                VCODE: /^.{4}$/
+            }
+        };
+
+        // 失去焦点时检测
+        weui.form.checkIfBlur('#form', regexp);
+
+        // 表单提交
+        document.querySelector('#formSubmitBtn').addEventListener('click', function () {
+            weui.form.validate('#form', function (error) {
+                console.log(error);
+                if (!error) {
+                    var loading = weui.loading('提交中...');
+                    setTimeout(function () {
+                        loading.hide();
+                        weui.toast('提交成功', 3000);
+                    }, 1500);
+                }
+            }, regexp);
+        });
+    </script>
+{% endif %}
+{% if page.layout == "leave" %}
+<script>
+  $("#leave-type").picker({
+      title: "请假类型",
+      cols: [
+          {
+              textAlign: 'center',
+              values: ['事假', '病假', '年休假', '产假', '节育假', '婚假', '丧假', '工伤假', '其他']
+          }
+      ]
+  });
+  $("#bumen").picker({
+      title: "部门",
+      cols: [
+          {
+              textAlign: 'center',
+              values: ['市场部', '运营部', '策划部', '网络部', '工程部', '客服部', '财务部', '其他']
+          }
+      ]
+  });
+  // 定义工作时间 及 学习时间
+  var $date = $("#leave-start");  //开始工作时间
+  var $date1 = $("#leave-end");//结束工作时间
+  var $date2 = $("#work-time");//入学时间
+  var $dateP = [$date,$date1,$date2];
+  for(var i=0;i<$dateP.length;i++){
+      console.log(i+" "+$dateP[i]);//测试数组的index
+      $dateP[i].datetimePicker({
+          title: '请假开始时间',
+          years: [2018, 2019],
+          monthes: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+          onChange: function (picker, values, displayValues) {
+            console.log(values);
+          }
+      });
+  }
 </script>
+{% endif %}

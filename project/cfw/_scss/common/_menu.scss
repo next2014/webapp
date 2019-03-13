@@ -9,7 +9,7 @@
 .menu{
   @include fixed-bottom;
   @include sizePadding(15,0,15,0);
-  // z-index:1000;
+  z-index:1000;
   background-color:$white;
   border-top: 1px solid $gray-200;
   display: flex;
@@ -29,12 +29,12 @@
     }
   }
   i{
-    font-size:$font-18;
+    font-size:$font-20;
     position: relative;
     margin:2px auto;
   }
   span{
-    font-size:$font-14;
+    font-size:$font-12;
     display: block;
   }
   a{
@@ -47,8 +47,7 @@
     color:$gray-600;
     position: relative;
     &.active{
-      // color:$blue-deep;
-      color:rgb(76, 145, 255);
+      color:$blue-deep;
     }
     em{
       position: absolute;

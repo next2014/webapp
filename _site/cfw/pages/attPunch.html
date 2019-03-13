@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>
+    考勤打卡 · 仓储系统
+  </title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <!-- 图标 -->
+  <link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+  <!-- jquery-weui -->
+  <link rel="stylesheet" href="../static/css/weui.css">
+  <link rel="stylesheet" href="../static/css/jquery-weui.css">
+  <link rel="stylesheet" href="../static/css/swiper.min.css">
+</head>
+
+<body>
+
+  <header class="search">
+    <div class="search_header search_bg_Ter_Whi">
+      <div class="search_header_box">
+        <div class="search_left w-10" style="padding-right:7%"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+        <div class="search_center"><a href="javascript:">考勤打卡</a></div>
+        <div class="search_right w-10" style="font-size:14px;"><a href="myAttPunch.html">我的考勤</a></div>
+      </div>
+    </div>
+  </header>
+  <div class="attPunch">
+    <div class="weui-cells">
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+          <svg class="icon mr-2 mt-1 text-success" aria-hidden="true">
+            <use xlink:href="#icon-riqi"></use>
+          </svg>
+        </div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="date2" type="text" value="2018年12月12日">
+        </div>
+        <div class="weui_cell_ft">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+    </div>
+    <div class="weui-cells">
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd pr-0 mr-0">
+          <h4><span class="mr-2">网络技术部</span><small>.Net后端工程师</small></h4>
+          <section>
+            <small><a href="mineResumeView.html" class="text-danger">黄先生</a></small>
+            <small>打卡 <em>0</em> 次</span> | <span>2018-12-10 09:41</small>
+          </section>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd pr-0 mr-0">
+          <h4><span class="mr-2">网络技术部</span><small>H5前端工程师</small></h4>
+          <section>
+            <small><a href="mineResumeView.html" class="text-danger">黄先生</a></small>
+            <small>打卡 <em>0</em> 次</span> | <span>2018-12-10 09:41</small>
+          </section>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd pr-0 mr-0">
+          <h4><span class="mr-2">网络技术部</span><small>网页设计</small></h4>
+          <section>
+            <small><a href="mineResumeView.html" class="text-danger">黄先生</a></small>
+            <small>打卡 <em>0</em> 次</span> | <span>2018-12-10 09:41</small>
+          </section>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd pr-0 mr-0">
+          <h4><span class="mr-2">网络技术部</span><small>网络平台运营</small></h4>
+          <section>
+            <small><a href="mineResumeView.html" class="text-danger">黄先生</a></small>
+            <small>打卡 <em>0</em> 次</span> | <span>2018-12-10 09:41</small>
+          </section>
+        </div>
+      </div>
+
+    </div>
+    <!-- 置顶部 -->
+    <!-- <div class="fixedBottom">
+        <div class="ind_rel_btn text-white rounded-circle float-right text-center p-1 bg-success">
+            <a href="workOutPunch.html" class="text-white">班外打卡</a>
+        </div>
+    </div> -->
+  </div>
+
+</body>
+<script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+  $(function () {
+    FastClick.attach(document.body);
+  });
+</script>
+
+
+
+
+
+<script>
+  $("#date2").calendar({
+    value: ['2018-12-12'],
+    dateFormat: 'yyyy年mm月dd日'
+  });
+</script>
+
+
+
+
+
+
+
+</html>

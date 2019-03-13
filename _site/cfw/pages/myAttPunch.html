@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    我的考勤 · 仓储系统                                                                                                                    
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="../static/css/weui.css">
+<link rel="stylesheet" href="../static/css/jquery-weui.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+   </head>
+   <body>
+      
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+      
+          <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      
+      
+      <div class="search_center">
+        <a href="javascript:">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          我的考勤
+          
+          
+          
+        </a>
+      </div>
+      
+          <div class="search_right w-2"></div>
+      
+      
+      
+    </div>
+  </div>
+</header>
+
+      <div class="myAttPunch">
+  <div class="weui-cells mb-2">
+   <div class="weui-cell weui-cell_select">
+      <div class="weui-cell__hd">
+        <svg class="icon mr-2 mt-1 text-success" aria-hidden="true">
+        <use xlink:href="#icon-riqi"></use>
+        </svg>
+      </div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" id="date2" type="text" value="2018年12月">
+      </div>
+   </div>
+  </div>
+  <div class="weui-cells mb-2">
+    <div class="weui-cell">
+     <div class="weui-cell__bd">考勤数据</div>
+     <!-- <div class="weui-cell__ft"><a href="javascript:;" class="text-info">查看打卡月历</a></div> -->
+    </div>
+    <div class="text-center p-2">
+        <div>0/0</div>
+        <div class="text-muted"><small>实际打卡数/当月应打卡次数</small></div>
+    </div>
+  </div>
+  <div class="weui-cells mb-2">
+    <div class="weui-cell">
+      <div class="weui-cell__bd">
+        <p>正常</p>
+      </div>
+      <div class="weui-cell__ft">0次</div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__bd">
+        <p>外勤</p>
+      </div>
+      <div class="weui-cell__ft">0次</div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__bd">
+        <p>缺卡</p>
+      </div>
+      <div class="weui-cell__ft">0次</div>
+    </div>
+  </div>
+  <div class="weui-cells mb-2">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>迟到</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计迟到0分钟</small></div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>早退</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计早退0分钟</small></div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>旷工</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计旷工0分钟</small></div>
+      </div>
+   </div>
+   <div class="weui-cells mb-2">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>请假</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计请假0分钟</small></div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>出差</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计出差0分钟</small></div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><p>班外</p></div>
+        <div class="weui-cell__bd text-right pr-4">0次</div>
+        <div class="weui-cell__ft"><small>累计班外0分钟</small></div>
+      </div>
+   </div>
+</div>
+      
+   </body>
+   <script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+ </script>
+
+
+
+
+
+
+    <script>
+        $("#date2").calendar({
+        value: ['2018-12'],
+        dateFormat: 'yyyy年mm月'
+        });
+    </script>
+
+
+
+
+
+
+</html>

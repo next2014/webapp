@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    请假申请 · 仓储系统                                                                                                                    
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="../static/css/weui.css">
+<link rel="stylesheet" href="../static/css/jquery-weui.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+   </head>
+   <body>
+      
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+      
+          <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      
+      
+      <div class="search_center">
+        <a href="javascript:">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          请假申请
+          
+          
+          
+          
+        </a>
+      </div>
+      
+          <div class="search_right w-2"></div>
+      
+      
+      
+    </div>
+  </div>
+</header>
+
+      <div class="leaveRequest">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假类型</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请选择请假类型" id="leaveType">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假开始时</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="datetime-local" placeholder="请选择请假开始时间">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假结束时</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="datetime-local" placeholder="请选择请假结束时间">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假原因</label>
+            </div>
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入请假原因" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">附件</label>
+            </div>
+            <div class="weui-cell__bd">
+                <!-- <i class="fa fa-paperclip"></i> -->
+                <input class="weui-input" type="file" placeholder="添加附件">
+            </div>
+        </div>
+    </div>
+    <!-- 底部按钮 -->
+    <section class="mod_pos_btn">
+     <div class="mod_pos_btn_air w-100"><a href="">提交</a></div>
+    </section>
+</div>
+      
+   </body>
+   <script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+ </script>
+
+
+
+
+
+
+
+
+    <script>
+    $("#leaveType").picker({
+        title: "请选择请假类型",
+        cols: [
+        {
+            textAlign: 'center',
+            values: ['无薪病假', '事假', '调休假', '年休假', '产假', '产前检查假']
+        }
+        ]
+    });
+    </script>
+
+
+
+
+</html>
