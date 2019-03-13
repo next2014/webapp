@@ -2,13 +2,13 @@
 {% if page.layout == "home" or page.layout == "daily" or page.layout == "mine" or page.layout == "leave" or page.layout == "checkIn" %}
 <nav class="menu">
     <a href="index.html" class="{% if page.layout == "home" %} active {% endif %}">
-        <i class="fa fa-calendar-check-o"></i><span>首页</span>
+        <i class="fa fa-home"></i><span>首页</span>
     </a>
     <a href="leaveSornd.html".html" class="{% if page.layout == "daily" or page.layout == "leaveSornd" %} active {% endif %}">
-        <i class="fa fa-coffee"></i><span>请假记录</span>
+        <i class="fa fa-pencil-square-o"></i><span>请假记录</span>
     </a>
     <a href="checkInSornd.html" class="{% if page.layout == "daily" or page.layout == "checkInSornd" %} active {% endif %}">
-        <i class="fa fa-coffee"></i><span>签到记录</span>
+        <i class="fa fa-pencil-square-o"></i><span>签到记录</span>
     </a>
     <a href="news.html" class="{% if page.layout == "mine" %} active {% endif %}">
         <i class="fa fa-user-o"></i><span>消息</span>

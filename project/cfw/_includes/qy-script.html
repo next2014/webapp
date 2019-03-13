@@ -12,27 +12,27 @@
 <script>
     $(document).on("click", "#show-prompt", function() {
         $.prompt({
-        title: '加急',
-        onOK: function(text) {
-            $.alert("您加急内容是:"+text, "加急成功");
-        },
-        onCancel: function() {
-            $.toast('取消加急!', 'cancel');
-        },
-            input: '输入加急内容'
-        });
+            title: '反馈',
+            onOK: function(text) {
+                $.alert("您反馈内容是:"+text, "成功反馈");
+            },
+            onCancel: function() {
+                $.toast('取消反馈!', 'cancel');
+            },
+                input: '输入反馈内容'
+            });
         });
         
         $(document).on("click", "#show-prompt1", function() {
         $.prompt({
-        title: '加急',
-        onOK: function(text) {
-            $.alert("您追记内容是:"+text, "追记成功");
-        },
-        onCancel: function() {
-            $.toast('取消追记!', 'cancel');
-        },
-            input: '输入追记内容'
+            title: '处理请假意见',
+            onOK: function(text) {
+                $.alert("您请假事由是:"+text, "成功请假");
+            },
+            onCancel: function() {
+                $.toast('取消意见!', 'cancel');
+            },
+                input: '输入请假事由'
         });
     });
 </script>
