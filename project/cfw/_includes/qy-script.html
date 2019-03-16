@@ -9,6 +9,15 @@
         FastClick.attach(document.body);
     });
  </script>
+ {% if page.layout == "pages/qy-leaveSornd" or page.layout == "pages/qy-checkInSornd" %}
+<script>
+    $("#checkin-time").calendar({
+        value: ['2019-03-11'],
+        dateFormat: 'yyyy年mm月dd日'
+    });
+</script>
+{% endif %}
+{% if page.layout == "pages/qy-leaveDail" %}
 <script>
     $(document).on("click", "#show-prompt", function() {
         $.prompt({
@@ -25,7 +34,7 @@
         
         $(document).on("click", "#show-prompt1", function() {
         $.prompt({
-            title: '处理请假意见',
+            title: '请假意见',
             onOK: function(text) {
                 $.alert("您请假事由是:"+text, "成功请假");
             },
@@ -36,3 +45,4 @@
         });
     });
 </script>
+{% endif %}

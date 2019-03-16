@@ -12,7 +12,7 @@ title: 考勤系统
     </div>
 </header>
 <div class="checkIn" id="form">
- <div id="form">
+    <div id="form">
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">序&nbsp;&nbsp;&nbsp;号</label></div>
@@ -22,10 +22,18 @@ title: 考勤系统
             </div>
             <div class="weui-cell weui-cell_select">
                 <div class="weui-cell__hd">
+                    <label class="weui-label">主&nbsp;&nbsp;&nbsp;题</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="string" value="请选择主题" id="zhuti" required pattern="">
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__hd">
                     <label class="weui-label">部&nbsp;&nbsp;&nbsp;门</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="string" value="请输入您所在部门" id="bumen" required pattern="">
+                    <input class="weui-input" type="string" value="请选择部门" id="bumen" required pattern="">
                 </div>
             </div>
             <div class="weui-cell">
@@ -51,16 +59,8 @@ title: 考勤系统
                 </div>
             </div>
         </div>
-        <div class="weui-cells__title">审批人</div>
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请输入审批人" rows="3"></textarea>
-                </div>
-            </div>
-        </div>
         <div class="weui-btn-area m-3">
             <a id="formSubmitBtn" class="weui-btn weui-btn_warn" href="javascript:">提 交</a>
-       </div>
-  </div>
+        </div>
+    </div>
 </div>

@@ -14,6 +14,7 @@
          }
          p{
            color:$gray-600;
+           line-height: 25px;
          }
        }
     }
@@ -36,12 +37,58 @@
    span{
      font-size: $font-16;
    }
+   a{
+     text-decoration: underline;
+   }
 }
 .leaveType{
+  color:#dee2e6;
   span{
     font-size: $font-16;
     &:last-child{
       color:#999;
     }
   }
+  small{
+    font-weight:normal;
+    font-size: 10px;
+  }
+}
+.status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: rem(161);
+  height: 100vh;
+  a{
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 15px 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    img{
+      width:60px;
+      height:60px
+    }
+  }
+}
+.sta{
+	&_tit{
+		h4{
+			font-size:$font-20;
+			margin-bottom:0;
+		}
+		small{
+			color:$gray-500;
+		}
+		&_box{
+			text-align: center;
+			display: block;
+			p{
+				width: 120px;
+				margin:0 auto;
+			}
+		}
+	}
 }

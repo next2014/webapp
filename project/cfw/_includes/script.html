@@ -15,7 +15,16 @@
  </script>
 {% if page.layout == "checkIn" %}
     <script>
-    $("#bumen").picker({
+        $("#zhuti").picker({
+            title: "主题活动",
+            cols: [
+                {
+                    textAlign: 'center',
+                    values: ['培训课', '节假日活动', '其他']
+                }
+            ]
+        });
+        $("#bumen").picker({
             title: "部门",
             cols: [
                 {
