@@ -37,7 +37,6 @@ exclude:
   - gulpfile.js
   - desktop.ini
   - posts
-  - src
   - README.md
   - Gemfile
   - Gemfile.lock

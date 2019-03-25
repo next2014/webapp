@@ -11,6 +11,7 @@ title: 考勤系统
         </div>
     </div>
 </header>
+<form class="layui-form layui-form-pane1" action="" lay-filter="first">
 <div class="leave">
     <div class="weui-cells weui-cells_form">
         <div class="weui-cell">
@@ -18,7 +19,7 @@ title: 考勤系统
                 <label class="weui-label">申请人</label>
             </div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="text" value="张小姐" id="ci_01">
+                <input class="weui-input" type="text" value="张小姐" id="ci_01" readonly="readonly">
             </div>
         </div>
         <div class="weui-cell">
@@ -82,7 +83,7 @@ title: 考勤系统
     <div class="weui-cells weui-cells_form">
         <div class="weui-cell">
             <div class="weui-cell__bd">
-               <textarea class="weui-textarea" placeholder="填写事由" rows="3"></textarea>
+               <textarea class="weui-textarea" placeholder="填写事由" rows="3" name="desc"></textarea>
             </div>
         </div>
     </div>
@@ -95,6 +96,7 @@ title: 考勤系统
         </p>      
     </div>
     <div class="weui-btn-area m-3">
-        <button type="submit" class="weui-btn weui-btn_warn">提 交</button>
+        <button type="submit" class="weui-btn weui-btn_warn" lay-submit lay-filter="*">提交</button>
     </div>
 </div>
+</form>

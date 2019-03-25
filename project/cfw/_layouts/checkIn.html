@@ -14,18 +14,12 @@ title: 考勤系统
 <div class="checkIn" id="form">
     <div id="form">
         <div class="weui-cells weui-cells_form">
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">序&nbsp;&nbsp;&nbsp;号</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" value="1" id="ci_01" readonly="readonly">
-                </div>
-            </div>
             <div class="weui-cell weui-cell_select">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">主&nbsp;&nbsp;&nbsp;题</label>
+                    <label class="weui-label">签到主题</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="string" value="请选择主题" id="zhuti" required pattern="">
+                    <input class="weui-input" type="string" value="请选择主题" id="zhuti">
                 </div>
             </div>
             <div class="weui-cell weui-cell_select">
@@ -33,13 +27,19 @@ title: 考勤系统
                     <label class="weui-label">部&nbsp;&nbsp;&nbsp;门</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="string" value="请选择部门" id="bumen" required pattern="">
+                    <input class="weui-input" type="string" value="请选择部门" id="bumen">
                 </div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">姓&nbsp;&nbsp;&nbsp;名</label></div>
                 <div class="weui-cell__bd">
-                        <input class="weui-input" type="text" placeholder="请输入您的姓名" id="ci_03" required pattern="" emptyTips="请输入您的姓名">
+                        <input class="weui-input" type="text" value="黄晓明" id="ci_03" readonly="readonly">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">编&nbsp;&nbsp;&nbsp;号</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" value="1811000" id="ci_01" readonly="readonly">
                 </div>
             </div>
             <div class="weui-cell weui-cell_select">

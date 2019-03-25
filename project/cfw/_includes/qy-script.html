@@ -31,18 +31,57 @@
                 input: '输入反馈内容'
             });
         });
-        
         $(document).on("click", "#show-prompt1", function() {
-        $.prompt({
-            title: '请假意见',
-            onOK: function(text) {
-                $.alert("您请假事由是:"+text, "成功请假");
-            },
-            onCancel: function() {
-                $.toast('取消意见!', 'cancel');
-            },
-                input: '输入请假事由'
-        });
-    });
+            $.prompt({
+              title: "审核人",
+              onOK: function(text) {
+                $.alert("请假审核成功");
+              },
+              onCancel: function() {
+                console.log("取消了");
+              }
+            });
+         });
+</script>
+{% endif %}
+{% if page.layout == "pages/qy-checkInDail" %}
+<script>
+ $("#in").select({
+        title: "审核人",
+        multi: true,
+        min: 2,
+        max: 3,
+        items: [
+          {
+            title: "黄晓明",
+            value: 1
+          },
+          {
+            title: "蔡小鸣",
+            value: 2
+          },
+          {
+            title: "钟小米",
+            value: 3
+          },
+          {
+            title: "梁山博",
+            value: 4
+          }
+        ],
+        beforeClose: function(values, titles) {
+          if(values.indexOf("4") !== -1) {
+            $.toast("不能选择梁山博", "cancel");
+            return false;
+          }
+          return true;
+        },
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function (d) {
+          console.log('close')
+        }
+      });
 </script>
 {% endif %}

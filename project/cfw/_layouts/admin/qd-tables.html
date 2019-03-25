@@ -12,21 +12,27 @@ title: 签到
     </ul>
 </div>
 <div class="page-content">
+    <div class="page-header">
+        <button class="btn btn-primary btn-sm" onclick="location.href='qd-add.html'">
+            <i class="menu-icon fa fa-plus white"></i> 添加签到
+        </button>
+    </div>
     <table id="simple-table" class="table  table-bordered table-hover">
         <thead>
             <tr>
-                <th class="center">
+                <th class="center" width="5%">
                     <label class="pos-rel">
                         <input type="checkbox" class="ace" />
                         <span class="lbl"></span>
                     </label>
                 </th>
-                <th>主题</th>
-                <th>部门</th>
-                <th>签到人</th>
-                <th>申请时间</th>
-                <th>事由</th>
-                <th>操作</th>
+                <th width="15%">主题</th>
+                <th width="5%">部门</th>
+                <th width="5%">签到人</th>
+                <th width="20%">申请时间</th>
+                <th width="20%">事由</th>
+                <th width="20%">状态</th>
+                <th width="10%">操作</th>
             </tr>
         </thead>
         <tbody>
@@ -37,18 +43,19 @@ title: 签到
                         <span class="lbl"></span>
                     </label>
                 </td>
-                <td>6666</td>
-                <td>8888</td>
+                <td>三八节活动</td>
+                <td>销售部</td>
                 <td>黄晓明</td>
-                <td>3,330</td>
-                <td>Feb 12</td>
+                <td>2019-03-04 08:55</td>
+                <td>三八节活动 负责现场执行</td>
+                <td><span class="text-danger">已审核</span></td>
                 <td>
                     <div class="hidden-sm hidden-xs btn-group">
                         <button class="btn btn-xs btn-success">
                             <i class="ace-icon fa fa-check bigger-120"></i>
                         </button>
 
-                        <button class="btn btn-xs btn-info">
+                        <button class="btn btn-xs btn-info" id="id-btn-dialog2">
                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                         </button>
 
@@ -91,4 +98,59 @@ title: 签到
             </tr>
         </tbody>
     </table>
+</div>
+<div id="dialog-confirm" class="hide">
+    <div class="row">
+        <div class="col-xs-12">
+            <form class="form-horizontal" role="form">
+                <div class="space-4"></div>
+                <div class="space-4"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 主题 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-field-1" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 部门 </label>
+                    <div class="col-sm-9">
+                        <input type="password" id="form-field-2" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 签到人 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-input-readonly" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-4"> 申请时间 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-field-4" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-5"> 事由 </label>
+                    <div class="col-sm-9">
+                        <div class="clearfix">
+                            <input type="text" id="form-field-5" value="" class="form-control" disabled/>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            Submit
+                        </button>
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="reset">
+                            <i class="ace-icon fa fa-undo bigger-110"></i>
+                            Reset
+                        </button>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+    </div>
 </div>

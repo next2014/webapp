@@ -13,6 +13,39 @@
         dateFormat: 'yyyy年mm月dd日'
     });
  </script>
+{% if page.layout == "leave" %}
+<link rel="stylesheet" href="src/css/layui.css">
+<script src="src/layui.js"></script>
+<script>
+layui.use('form', function () {
+    var form = layui.form;
+    //自定义验证规则
+    form.verify({
+    title: function (value) {
+        if (value.length < 5) {
+        return '标题也太短了吧';
+        }
+      }
+    });
+
+    //初始赋值
+    form.val('first', {
+    'title': '测试'
+    , 'interest': 3
+    , 'like[write]': true
+    , 'desc': '填写事由'
+    });
+
+    //监听提交
+    form.on('submit(*)', function (data) {
+    console.log(data)
+    alert(JSON.stringify(data.field));
+    return false;
+    });
+
+});
+</script>
+{% endif %}
 {% if page.layout == "checkIn" %}
     <script>
         $("#zhuti").picker({
