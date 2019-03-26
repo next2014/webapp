@@ -13,6 +13,63 @@
         dateFormat: 'yyyy年mm月dd日'
     });
  </script>
+{% if page.layout == "checkInSornd" or page.layout == "addCheckIn" or page.layout == "leaveSornd" or page.layout == "addLeave" %}
+ <link rel="stylesheet" href="src/css/layui.css">
+ <script src="src/layui.js"></script>
+ <script>
+ layui.use(['form', 'upload','layer','laydate'], function () {
+   var $ = layui.jquery
+    , form = layui.form
+    , upload = layui.upload
+    , laydate = layui.laydate
+    , layer = layui.layer;
+
+    //申请时间
+    laydate.render({
+        elem: '#apple' //指定元素
+        ,type: 'datetime'
+        ,theme: '#393D49'
+        //,range: true
+        ,trigger: 'click'
+    });
+
+    // function clickInbtn(){
+    //     layer.open({
+    //         type: 1,
+    //         title: '添加签到',
+    //         closeBtn: false,
+    //         shift: 2,
+    //         area: ['94%', '500px'],
+    //         shadeClose: true,
+    //         content: $("#add-main")
+    //     });
+    // }
+
+    $('#addCheckInSornd').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加签到',
+            closeBtn: false,
+            shift: 2,
+            area: ['94%', '500px'],
+            shadeClose: true,
+            content: $("#add-main")
+        });
+    });
+   
+    $('#addLeaveSornd').on('click', function(){
+        layer.open({
+            type: 2,
+            title: '添加请假',
+            area: ['94%', '500px'],
+            content: 'addLeave.html',
+            btn: ['确认', '取消']
+        });
+    });
+
+ });
+ </script>
+ {% endif %}
 {% if page.layout == "leave" %}
 <link rel="stylesheet" href="src/css/layui.css">
 <script src="src/layui.js"></script>

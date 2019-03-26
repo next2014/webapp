@@ -3,7 +3,7 @@ layout: default
 title: 签到记录
 ---
 <header class="search">
-    <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header search_bg_Ter_Whi border-0">
         <div class="search_header_box">
             <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a></div>
             <div class="search_center"><a href="javascript:"> 签到记录 </a></div>
@@ -11,9 +11,9 @@ title: 签到记录
         </div>
     </div>
 </header>
-<div class="attPunch">
+<div class="attPunch mb-5">
     <div class="weui-cells">
-        <div class="weui-cell mb-2">
+        <div class="weui-cell border-0">
             <div class="weui-cell__hd">
                 <svg class="icon mr-2 mt-1 text-success" aria-hidden="true">
                 <use xlink:href="#icon-riqi"></use>
@@ -27,9 +27,11 @@ title: 签到记录
             </div>
         </div>
     </div>
+    <div class="p-2">
+        <button type="submit" class="btn btn-danger btn-block p-2 m-0" id="addCheckInSornd">+ 添加签到</button>
+    </div>
     <div class="weui-cells">
-
-        <div class="weui-cell mb-2">
+        <div class="weui-cell mb-2 border-0">
             <div class="weui-cell__bd">
                 <a href="checkInDail.html">
                     <div class="leaveType">
@@ -79,4 +81,40 @@ title: 签到记录
         </div>
 
     </div>
+</div>
+
+<div id="add-main" style="display: none;">
+    <form class="layui-form" id="add-form" action="">
+        <div class="layui-form-item center" >
+        <label class="layui-form-label" style="width: 100px" >编号</label>
+        <div class="layui-input-block">
+        <input type="text" name="name" required value="" style="width: 240px" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+        </div>
+        </div>
+        <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px">签到主题</label>
+        <div class="layui-input-block">
+        <input type="text" name="type" required style="width: 240px" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+        </div>
+        </div>
+        <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 100px">部门</label>
+        <!-- <div class="layui-input-block">
+             <input type="text" name="value" required style="width: 240px" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+        </div> -->
+        <div class="layui-input-block">
+            <select name="interest" lay-filter="interest">
+                <option value="0">网络部</option>
+                <option value="1">市场部</option>
+                <option value="2">客服部</option>
+            </select>
+        </div>
+        </div>
+        <div class="layui-form-item">
+        <div class="layui-input-block">
+        <button class="layui-btn" lay-submit lay-filter="save" >立即提交</button>
+        <button type="reset" class="layui-btn layui-btn-primary" id="closeBtn" >重置</button>
+        </div>
+        </div> 
+    </form>  
 </div>
