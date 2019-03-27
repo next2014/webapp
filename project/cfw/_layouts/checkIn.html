@@ -12,55 +12,54 @@ title: 考勤系统
     </div>
 </header>
 <div class="checkIn" id="form">
-    <div id="form">
         <div class="weui-cells weui-cells_form">
-            <div class="weui-cell weui-cell_select">
-                <div class="weui-cell__hd">
-                    <label class="weui-label">签到主题</label>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">编&nbsp;&nbsp;&nbsp;号</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" value="1811000" id="ci_01" readonly="readonly">
+                    </div>
                 </div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="string" value="请选择主题" id="zhuti">
+                <div class="weui-cell weui-cell_select">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">签到主题</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="string" value="请选择主题" id="zhuti">
+                    </div>
                 </div>
-            </div>
-            <div class="weui-cell weui-cell_select">
-                <div class="weui-cell__hd">
-                    <label class="weui-label">部&nbsp;&nbsp;&nbsp;门</label>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">姓&nbsp;&nbsp;&nbsp;名</label></div>
+                    <div class="weui-cell__bd">
+                            <input class="weui-input" type="text" value="黄晓明" id="ci_03" readonly="readonly">
+                    </div>
                 </div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="string" value="请选择部门" id="bumen">
+                <div class="weui-cell weui-cell_select">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">部&nbsp;&nbsp;&nbsp;门</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="string" value="请选择部门" id="bumen">
+                    </div>
                 </div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">姓&nbsp;&nbsp;&nbsp;名</label></div>
-                <div class="weui-cell__bd">
-                        <input class="weui-input" type="text" value="黄晓明" id="ci_03" readonly="readonly">
-                </div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">编&nbsp;&nbsp;&nbsp;号</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" value="1811000" id="ci_01" readonly="readonly">
-                </div>
-            </div>
-            <div class="weui-cell weui-cell_select">
-                <div class="weui-cell__hd">
-                    <label class="weui-label">时&nbsp;&nbsp;&nbsp;间</label>
-                </div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" value="2019-03-01 12:00" id="checkin-time">
-                </div>
-            </div>
-        </div>
-        <div class="weui-cells__title">事&nbsp;&nbsp;&nbsp;由</div>
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请输入事由" rows="3"></textarea>
+                <div class="weui-cell weui-cell_select">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">时&nbsp;&nbsp;&nbsp;间</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <!-- <input class="weui-input" type="text" value="2019-03-01 12:00" id="checkin-time"> -->
+                        <input class="weui-input" id="time4" type="text" value="2012-12-12 上午8点">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="weui-btn-area m-3">
-            <a id="formSubmitBtn" class="weui-btn weui-btn_warn" href="javascript:">提 交</a>
-        </div>
-    </div>
+            <div class="weui-cells__title">事&nbsp;&nbsp;&nbsp;由</div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入事由" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-btn-area m-3">
+                <a id="formSubmitBtn" class="weui-btn weui-btn_warn" href="javascript:">提 交</a>
+            </div>
 </div>

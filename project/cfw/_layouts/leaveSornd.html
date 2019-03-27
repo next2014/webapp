@@ -154,3 +154,71 @@ title: 请假记录
         </div>
     </div>
 </div>
+
+
+<div id="add-main1" style="display: none;">
+     <form class="layui-form layui-form-pane1" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">申请人</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" lay-verify="required" required placeholder="请输入签到人" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">所属公司</label>
+            <div class="layui-input-block">
+                <input type="text" name="number" lay-verify="required" value="816002" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">部门</label>
+            <div class="layui-input-block">
+                <select name="interest" lay-filter="interest">
+                    <option value="0">网络部</option>
+                    <option value="1">市场部</option>
+                    <option value="2">客服部</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">职位</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" lay-verify="required" required placeholder="签到主题" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">请假时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" lay-verify="required" required placeholder="请选择请假时间" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">上班时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" lay-verify="required" required placeholder="请选择上班时间" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:100px;">请假类型</label>
+            <div class="layui-input-block">
+                <select name="interest" lay-filter="interest">
+                    <option value="0">年假</option>
+                    <option value="1">产假</option>
+                    <option value="2">工伤假</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label" style="width:100px;">事由</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary" id="closeBtn">关闭</button>
+            </div>
+        </div>
+     </form>
+</div>

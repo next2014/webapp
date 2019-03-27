@@ -12,6 +12,19 @@
         value: ['2019-03-11'],
         dateFormat: 'yyyy年mm月dd日'
     });
+    $("#time4").datetimePicker({
+        times: function () {
+          return [
+            {
+              values: ['上午8点', '下午2点', '晚上8点']
+            }
+          ];
+        },
+        max: '2022-12-12',
+        onChange: function (picker, values, displayValues) {
+          console.log(values);
+        }
+     });
  </script>
 {% if page.layout == "checkInSornd" or page.layout == "addCheckIn" or page.layout == "leaveSornd" or page.layout == "addLeave" %}
  <link rel="stylesheet" href="src/css/layui.css">
@@ -33,18 +46,6 @@
         ,trigger: 'click'
     });
 
-    // function clickInbtn(){
-    //     layer.open({
-    //         type: 1,
-    //         title: '添加签到',
-    //         closeBtn: false,
-    //         shift: 2,
-    //         area: ['94%', '500px'],
-    //         shadeClose: true,
-    //         content: $("#add-main")
-    //     });
-    // }
-
     $('#addCheckInSornd').on('click', function(){
         layer.open({
             type: 1,
@@ -59,50 +60,57 @@
    
     $('#addLeaveSornd').on('click', function(){
         layer.open({
-            type: 2,
+            type: 1,
             title: '添加请假',
+            closeBtn: false,
+            shift: 2,
             area: ['94%', '500px'],
-            content: 'addLeave.html',
-            btn: ['确认', '取消']
+            shadeClose: true,
+            content: $("#add-main1")
         });
     });
-
+   
+    //提交监听事件
+    form.on('submit(save)', function (data) {
+          params = data.field;
+          //alert(JSON.stringify(params))
+          submit($, params);
+          return false;
+        })
+        var obj = document.getElementById('closeBtn');
+        obj.addEventListener('click', function cancel() {
+          CloseWin();
+        });
  });
+ //提交
+ function submit($, params) {
+    $.post('${ctx}/golbal/add1', params, function (res) {
+        if (res.status == 1) {
+        layer.msg(res.message, { icon: 1 }, function (index) {
+            CloseWin();
+        })
+        } else if (res.status == 2) {
+        layer.msg(res.message, { icon: 0 }, function () {
+            parent.location.href = '${ctx}/golbal/main';
+            CloseWin();
+        })
+        } else {
+        layer.msg(res.message, { icon: 0 }, function () {
+            location.reload(); // 页面刷新
+            return false
+        })
+        }
+    }, 'json');
+    }
+    // debugger;
+    //关闭页面
+    function CloseWin() {
+    parent.location.reload(); // 父页面刷新
+    var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+    parent.layer.close(index); //再执行关闭 
+    }
  </script>
  {% endif %}
-{% if page.layout == "leave" %}
-<link rel="stylesheet" href="src/css/layui.css">
-<script src="src/layui.js"></script>
-<script>
-layui.use('form', function () {
-    var form = layui.form;
-    //自定义验证规则
-    form.verify({
-    title: function (value) {
-        if (value.length < 5) {
-        return '标题也太短了吧';
-        }
-      }
-    });
-
-    //初始赋值
-    form.val('first', {
-    'title': '测试'
-    , 'interest': 3
-    , 'like[write]': true
-    , 'desc': '填写事由'
-    });
-
-    //监听提交
-    form.on('submit(*)', function (data) {
-    console.log(data)
-    alert(JSON.stringify(data.field));
-    return false;
-    });
-
-});
-</script>
-{% endif %}
 {% if page.layout == "checkIn" %}
     <script>
         $("#zhuti").picker({
@@ -124,34 +132,64 @@ layui.use('form', function () {
             ]
         });
     </script>
-    <script>
-        // 约定正则
-        var regexp = {
-            regexp: {
-                IDNUM: /(?:^\d{15}$)|(?:^\d{18}$)|^\d{17}[\dXx]$/,
-                VCODE: /^.{4}$/
-            }
-        };
-
-        // 失去焦点时检测
-        weui.form.checkIfBlur('#form', regexp);
-
-        // 表单提交
-        document.querySelector('#formSubmitBtn').addEventListener('click', function () {
-            weui.form.validate('#form', function (error) {
-                console.log(error);
-                if (!error) {
-                    var loading = weui.loading('提交中...');
-                    setTimeout(function () {
-                        loading.hide();
-                        weui.toast('提交成功', 3000);
-                    }, 1500);
-                }
-            }, regexp);
-        });
-    </script>
 {% endif %}
 {% if page.layout == "leave" %}
+<link rel="stylesheet" href="src/css/layui.css">
+<script src="src/layui.js"></script>
+<script>
+layui.use('form', function () {
+    var form = layui.form;
+    //自定义验证规则
+    form.verify({
+    title: function (value) {
+        if (value.length < 5) {
+        return '标题也太短了吧';
+        }
+      }
+    });
+
+    //初始赋值
+    form.val('first', {
+    'title': ''
+    , 'interest': 3
+    , 'like[write]': true
+    , 'desc': '填写事由'
+    });
+
+    //监听提交
+    form.on('submit(*)', function (data) {
+    console.log(data)
+    layer.msg(
+        JSON.stringify(data.field)
+    ) 
+    // alert(JSON.stringify(data.field));
+    return false;
+    });
+
+   //提交
+   function submit($,params){
+     $.post('${ctx}/golbal/add1', params, function (res) {
+        if (res.status==1) {
+          layer.msg(res.message,{icon:1},function(index){
+            CloseWin();
+          }) 
+        }else if(res.status==2){
+          layer.msg(res.message,{icon:0},function(){
+            parent.location.href='${ctx}/golbal/main';
+            CloseWin();
+            })
+        }else{
+          layer.msg(res.message,{icon:0},function(){
+            location.reload(); // 页面刷新
+               return false
+          })
+        } 
+      }, 'json');
+    }
+
+
+});
+</script>
 <script>
   $("#leave-type").picker({
       title: "请假类型",

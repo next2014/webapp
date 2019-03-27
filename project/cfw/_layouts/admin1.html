@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include admin/admin-head.html %}
+</head>
+<body class="no-skin">
+{% include admin/admin-header.html %}
+<div class="main-container ace-save-state" id="main-container">
+    {% include admin/left_Sidebars.html %}
+    <div class="main-content">
+        <div class="main-content-inner">
+            {{ content }}
+        </div>
+    </div>
+    {% include admin/admin-footer.html %}
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+{% include admin/admin-script.html %}
+</body>
+</html>
