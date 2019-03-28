@@ -2,15 +2,15 @@
 layout: default
 title: 惠州欧美城文化小镇
 ---
-<div class="p-3 text-center">
+<div class="pl-2 pr-2 pt-2 pb-0 text-center">
     <img src="assets/img/logo.png" class="w-75 mb-2 mt-2" alt="">
     <img src="assets/img/fengxiang.png" class="w-100 mb-2" alt="">
     {% include swiper.html %}
 </div>
 {% for entry in site.data.examples %}
   {% for example in entry.examples %}
-    {% if forloop.first %}<div class="container p-2 mt-2 m-scene">{% endif %}
-       <div class="Small shadow1 card mb-3 border-light animated fadeinright delay-{{ example.index }}">
+    {% if forloop.first %}<div class="container p-2 m-scene">{% endif %}
+       <div class="Small shadow1 card mb-3 border-1 animated fadeinright delay-{{ example.index }}">
           <a href="{{ example.url }}" class="p-2" style="color:#666;">
            <div class="d-flex align-items-center">
                 <div class="col-5 pl-0">
@@ -27,8 +27,8 @@ title: 惠州欧美城文化小镇
   {% endfor %}
 {% endfor %}
 <div style="position:relative">
-    <div class="p-5 mt-5 text-center">
-        <p class="mb-5"><img class="img-fluid mx-auto border" src="assets/img/hz-m.png" width="120" height="120" alt=""/></p>
+    <div class="p-5 text-center">
+        <img class="img-fluid mx-auto border" src="assets/img/hz-m.png" width="120" height="120" alt=""/>
     </div>
     <div class="bgImg" style="background: url(assets/img/bg.png) no-repeat;opacity:0.65; background-size:100%; background-position: bottom"></div>
 </div>
