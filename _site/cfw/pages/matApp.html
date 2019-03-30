@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    物料申请 · 仓储系统                                                                                                                    
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="../static/css/weui.css">
+<link rel="stylesheet" href="../static/css/jquery-weui.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+   </head>
+   <body>
+      
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+      
+          <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      
+      
+      <div class="search_center">
+        <a href="javascript:">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          物料申请
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </a>
+      </div>
+      
+      
+          <div class="search_right w-2">
+            <!-- <div class="btn-group">
+                <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</span>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="pages/sendReceive.html" class="dropdown-item">我的物料</a>
+                    <a href="pages/sendReceive.html" class="dropdown-item">申请记录</a>
+                    <a href="pages/sendReceive.html" class="dropdown-item">采购申请</a>
+                </div>
+            </div> -->
+          </div>
+      
+      
+    </div>
+  </div>
+</header>
+
+      <div class="matApp">
+    <!-- 搜索物料 -->
+    
+
+<div class="weui-search-bar" id="searchBar">
+    <form class="weui-search-bar__form" action="#">
+        <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入客户手机号码/房号"
+                required="">
+            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+            <i class="weui-icon-search"></i>
+            <span>请输入物料/资产名称</span>
+        </label>
+    </form>
+    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+</div>
+
+
+     <header class="demos-header mt-2">
+        <h1 class="demos-title text-center">物料列表</h1>
+     </header>
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd weui-cell">
+            <div class="weui-cell__bd">独型灯泡</div>
+        </div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box weui-media-box_text">
+                <ul>
+                <li>
+                    <span>归属仓库：</span>
+                    <span>工程物料</span>
+                </li>
+                <li>
+                    <span>品牌：</span>
+                    <span>佛山照明</span>
+                </li>
+                <li>
+                    <span>型号：</span>
+                    <span>3W黄光</span>
+                </li>
+                <li>
+                    <span>单价：</span>
+                    <span>15</span>
+                </li>
+                <li>
+                    <span>库存：</span>
+                    <span>39个</span>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="weui-cell__ft mr-3">
+            <a href="matAppEdit.html" class="weui-btn weui-btn_mini weui-btn_primary">添加</a>
+        </div>
+    </div>
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd weui-cell">
+            <div class="weui-cell__bd">蝶型灯管</div>
+        </div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box weui-media-box_text">
+                <ul>
+                <li>
+                    <span>归属仓库：</span>
+                    <span>工程物料</span>
+                </li>
+                <li>
+                    <span>品牌：</span>
+                    <span>佛山照明</span>
+                </li>
+                <li>
+                    <span>型号：</span>
+                    <span>3W白光</span>
+                </li>
+                <li>
+                    <span>单价：</span>
+                    <span>15</span>
+                </li>
+                <li>
+                    <span>库存：</span>
+                    <span>1套</span>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="weui-cell__ft mr-3">
+            <a href="matAppEdit.html" class="weui-btn weui-btn_mini weui-btn_primary">添加</a>
+        </div>
+    </div>
+    
+    <!-- 底部按钮 -->
+    <section class="mod_pos_btn">
+        <div class="mod_pos_btn_air w-100"><a href="">提交</a></div>
+    </section>
+</div>
+      
+   </body>
+   <script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+</html>

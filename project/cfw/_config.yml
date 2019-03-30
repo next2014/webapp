@@ -37,11 +37,10 @@ exclude:
   - gulpfile.js
   - desktop.ini
   - posts
-  - src
   - README.md
   - Gemfile
   - Gemfile.lock
-  - js
+  - docs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

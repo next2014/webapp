@@ -1,0 +1,102 @@
+---
+layout: default
+title: 考勤系统
+---
+<header class="search">
+    <div class="search_header search_bg_Ter_Whi">
+        <div class="search_header_box">
+            <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a></div>
+            <div class="search_center"><a href="javascript:"> 请假 </a></div>
+            <div class="search_right w-2"><a href=""></a></div>
+        </div>
+    </div>
+</header>
+<form class="layui-form layui-form-pane1" action="" lay-filter="first">
+<div class="leave">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">申请人</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="张小姐" id="ci_01" readonly="readonly">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">所属公司</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="广东欧美城文化有限公司" id="ci_02">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">部 门</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="客服部" id="bumen">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">职 务</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="接待员" id="ci_04">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假开始时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-03-01 12:00" id="leave-start">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假结束时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-07-01 12:00" id="leave-end">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">上班时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-07-01 12:00" id="work-time">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假类别</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请选择请假类型" id="leave-type" >
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">事由</div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+               <textarea class="weui-textarea" placeholder="填写事由" rows="3" name="desc"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui-btn-area m-3">
+        <button type="submit" class="weui-btn weui-btn_warn" lay-submit lay-filter="*">提交</button>
+    </div>
+    <div class="weui-cells__tips">
+        <strong>备注：</strong><br/>
+        <p class="text-justify">
+            1) 广东欧美各部门负责人、子公司总经理（或负责人）请假、年休假，提报总裁办人力资源部，由常务副总裁审核后报总裁批准；<br/>
+            2) 广东欧美各部门员工请假、年休假由各部门负责人审批;<br/>
+            3) 各公司员工请假、年休假由各子公司总经理或负责人审批,员工请假10天以上报总裁办人力资源部审批。
+        </p>      
+    </div>
+</div>
+</form>

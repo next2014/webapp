@@ -1,0 +1,84 @@
+---
+layout: admin
+title: 补签到
+---
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">首页</a>
+        </li>
+        <li class="active">签到</li>
+    </ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <form role="form" class="form-horizontal" method="post" novalidate="novalidate">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 编号: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="bianhao" value="816002" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 签到主题: </label>
+                    <div class="col-sm-8">
+                        <select class="form-control" name="zhuti">
+                            <option value="0">礼仪培训</option>
+                            <option value="1">节假日活动</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 部门: </label>
+                    <div class="col-sm-8">
+                        <select class="form-control" name="bumen">
+                            <option value="0">市场部</option>
+                            <option value="1">网络部</option>
+                            <option value="2">采购部</option>
+                            <option value="3">客服部</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 签到人: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="qd" value="张晓明" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 申请时间: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="date" id="test6-2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 事由: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="shiyou" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right"> 类型: </label>
+                    <div class="col-sm-8">
+                        <select class="form-control" name="leixing">
+                            <option value="0">补签到</option>
+                            <option value="1">申请</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clearfix form-actions">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-info">
+                            <i class="ace-icon fa fa-check bigger-110"></i> 提交
+                        </button>
+                        <button type="reset" class="btn">
+                            <i class="ace-icon fa fa-undo bigger-110"></i> 重填
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div>

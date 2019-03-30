@@ -1,0 +1,22 @@
+.h-banner{position:relative;z-index:1}
+.h-banner .parallax{height:100%}
+.h-banner .parallax img{display:block}
+.h-banner .floating-button{position:absolute;bottom:-25px;right:20px}
+.accordion .card-header button{
+   padding:1rem;
+}
+@media (min-width: 300px) { 
+   .accordion{
+      min-height: 260px;
+   }
+}
+@media (min-width: 375px) { 
+   .accordion{
+      min-height: 290px;
+   }
+}
+@media (min-width: 414px) {
+   .accordion{
+      min-height: 320px;
+   }
+}

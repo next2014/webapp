@@ -55,6 +55,9 @@ h2,h6,p,ul,dl, ol, ul,label,.row{
 .w-70 {
   width: 70%!important;
 }
+.w-75 {
+  width: 75%!important;
+}
 
 .mt-50{
   margin-top:rem(161);
@@ -90,7 +93,7 @@ white-space: nowrap;
  background-color:$white;
 }
 %bgColorMt{
-  background-color:$pgbg;
+  // background-color:$pgbg;
   margin-top:rem(161);
   overflow: hidden;
 }

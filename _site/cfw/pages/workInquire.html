@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    工单查询 · 仓储系统                                                                                                                    
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="../static/css/weui.css">
+<link rel="stylesheet" href="../static/css/jquery-weui.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+   </head>
+   <body>
+      
+<header class="search">
+  <div class="search_header search_bg_Ter_Whi">
+    <div class="search_header_box">
+      
+          <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+      
+      
+      <div class="search_center">
+        <a href="javascript:">
+          工单查询
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </a>
+      </div>
+      
+          <div class="search_right w-2"></div>
+      
+      
+      
+    </div>
+  </div>
+</header>
+
+      <div class="workInquire">
+    
+<div class="weui-search-bar" id="searchBar">
+    <form class="weui-search-bar__form" action="#">
+        <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入客户手机号码/房号"
+                required="">
+            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+            <i class="weui-icon-search"></i>
+            <span>请输入客户手机号码/房号</span>
+        </label>
+    </form>
+    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+</div>
+
+
+
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">公共报障</label>
+            <span class="btn btn-warning btn-sm">处理中</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">维修洗手台柜门及更2个坏的水龙头</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">梁先生</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城-海洋馆</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">公共报障</label>
+            <span class="btn btn-warning btn-sm">待派单</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">维修洗手盆柜门腐烂</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">梁先生</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城-格林披志</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">任务下达</label>
+            <span class="btn btn-warning btn-sm">待接单</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">跟进景观桥旁水管改造施工</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">梁先生</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">任务下达</label>
+            <span class="btn btn-warning btn-sm">待支付</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">今天我想吃顿美餐</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">黄小姐</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城-会所</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">任务下达</label>
+            <span class="btn btn-warning btn-sm">待审核</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">改造施工</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">梁先生</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城-1号馆</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+          <a href="ordersDetail.html" class="weui-form-preview__item">
+            <label class="weui-form-preview__label">任务下达</label>
+            <span class="btn btn-warning btn-sm">待评价</span>
+          </a>
+        </div>
+        <div class="weui-form-preview__bd">
+            <a href="ordersDetail.html" class="weui-form-preview__item d-block">
+                <label class="weui-form-preview__label">跟进景观桥旁水管改造施工</label>
+            </a>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">梁先生</label>
+                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i class="fa fa-phone"></i></a></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">2019-02-25 16:18:07 +0800</label>
+                <span class="weui-form-preview__value">欧美城-2号馆</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- 底部导航 -->
+<nav class="menu resMenu">
+	<a href="javascript:;" data-target="#stamp" class="open-popup">
+		<span>类型</span>
+	</a>
+	<a href="javascript:;" data-target="#data" class="open-popup">
+		<span>日期</span>
+	</a>
+	<a href="javascript:;" data-target="#status" class="open-popup">
+		<span>状态</span>
+	</a>
+	<a href="javascript:;" data-target="#timeOut" class="open-popup">
+		<span>超时</span>
+	</a>
+	<a href="javascript:;" data-target="#project" class="open-popup">
+		<span>项目</span>
+  </a>
+</nav>
+<div id="stamp" class='weui-popup__container popup-bottom'>
+  <div class="weui-popup__overlay"></div>
+  <div class="weui-popup__modal">
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <a href="javascript:;" class="picker-button close-popup">确定</a>
+        <h1 class="title">类型</h1>
+      </div>
+    </div>
+    <div class="modal-content popBottom">
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">全部</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">投诉建议</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">公共报障</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">清洁绿化</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">小区安全</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">任务下达</div>
+          </a>
+        
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">清洁绿化</div>
+          </a>
+        
+    </div>
+  </div>
+</div>
+<div id="data" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">日期</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+        <div class="p-2">
+            <div class="weui-cell">
+               <input class="weui-input text-center" type="datetime-local" placeholder="请选择请假开始时间">
+            </div>
+            <div class="weui-cell">
+              <input class="weui-input text-center" type="datetime-local" placeholder="请选择请假结束时间">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="status" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">状态</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">处理中</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">待派单</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">待接单</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">待支付</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">待审核</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">待评价</div>
+            </a>
+          
+      </div>
+    </div>
+</div>
+<div id="timeOut" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">超时情况</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">全部</div>
+          </a>
+          <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">超时</div>
+          </a>
+          <a href="javascript:;" class="weui-flex__item">
+            <div class="placeholder">未超时</div>
+          </a>
+      </div>
+    </div>
+</div>
+<div id="project" class='weui-popup__container popup-bottom'>
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup">确定</a>
+          <h1 class="title">项目</h1>
+        </div>
+      </div>
+      <div class="modal-content popBottom">
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">全部</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">投诉建议</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">公共报障</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">清洁绿化</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">小区安全</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">任务下达</div>
+            </a>
+          
+            <a href="javascript:;" class="weui-flex__item">
+              <div class="placeholder">清洁绿化</div>
+            </a>
+          
+      </div>
+    </div>
+</div>
+      
+   </body>
+   <script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<script src="../static/js/iconfont.js"></script>
+<script src="../static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+</html>
