@@ -89,14 +89,14 @@
         //触发事件
         var active = {
             tpdata: function(){
-            layer.confirm('您是否确定投票？', {
-                title: '张三',
-                btn: ['确认','取消'] //按钮
-            }, function(){
-                layer.msg('成功投票', {icon: 1});
-            }, function(){
-                layer.msg('取消投票', {icon: 5});
-            });
+                layer.confirm('您是否确定投票？', {
+                    title: '张三',
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    layer.msg('成功投票', {icon: 1});
+                }, function(){
+                    layer.msg('取消投票', {icon: 5});
+                });
             }
         };
         $('.toupiao').on('click', function(){

@@ -1,77 +1,219 @@
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>layer-更懂你的web弹窗解决方案</title>
+  <title>使用layer弹窗和layui表单实现新增功能</title>
 
   <style>
-  html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
-  a,a:hover{ text-decoration:none;}
-  pre{font-family:'微软雅黑'}
-  .box{padding:20px; background-color:#fff; margin:50px 100px; border-radius:5px;}
-  .box a{padding-right:15px;}
-  #about_hide{display:none}
-  .layer_text{background-color:#fff; padding:20px;}
-  .layer_text p{margin-bottom: 10px; text-indent: 2em; line-height: 23px;}
-  .button{display:inline-block; *display:inline; *zoom:1; line-height:30px; padding:0 20px; background-color:#56B4DC; color:#fff; font-size:14px; border-radius:3px; cursor:pointer; font-weight:normal;}
-  .photos-demo img{width:200px;}
+    html {
+      background-color: #E3E3E3;
+      font-size: 14px;
+      color: #000;
+      font-family: '微软雅黑'
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+    }
+
+    pre {
+      font-family: '微软雅黑'
+    }
+
+    .box {
+      padding: 20px;
+      background-color: #fff;
+      margin: 50px 100px;
+      border-radius: 5px;
+    }
+
+    .box a {
+      padding-right: 15px;
+    }
+
+    #about_hide {
+      display: none
+    }
+
+    .layer_text {
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .layer_text p {
+      margin-bottom: 10px;
+      text-indent: 2em;
+      line-height: 23px;
+    }
+
+    .button {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      line-height: 30px;
+      padding: 0 20px;
+      background-color: #56B4DC;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    .photos-demo img {
+      width: 200px;
+    }
   </style>
-  
+
   <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
-  <script src="layer/layer.js"></script>
+  <!-- <script src="layer/layer.js"></script> -->
+
+  <link rel="stylesheet" href="src/css/layui.css">
+  <script src="src/layui.js"></script>
+
 </head>
 <body>
-<div class="box">
-<pre>
- @Name：layer-v<script>document.write(layer.v)</script> 弹层组件说明
- @Author：贤心
- @Site：<a href="http://layer.layui.com/"  target="_blank">http://layer.layui.com/</a>
+  <div class="box" style="text-align:center;padding:30px">
 
+    <div class="p-2">
+        <button type="submit" class="layui-btn layui-btn-primary" id="addCheckInSornd">+ layer弹窗加表单</button>
+    </div>
+    <div id="add-main" style="display:none;padding:30px">
+      <form class="layui-form" id="add-form" action="">
+        <div class="layui-form-item center">
+          <label class="layui-form-label">配置名称</label>
+          <div class="layui-input-block">
+            <input type="text" name="name" required value="" lay-verify="required" placeholder="请输入配置名称" style="width:90%"
+              autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">配置类型</label>
+          <div class="layui-input-block">
+            <input type="text" name="type" required lay-verify="required" placeholder="请输入配置类型" autocomplete="off" style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">配置值 </label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" placeholder="请输入配置值" autocomplete="off"  style="width:90%"
+              class="layui-input">
+            <!-- <input type="hidden" name="id" style="width: 240px" autocomplete="off" class="layui-input"> -->
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block" style="margin-left:50px">
+            <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary" id="closeBtn">重置</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      layui.use(['layer', 'form'], function () {
+        var layer = layui.layer,
+          $ = layui.jquery,
+          form = layui.form;
 
-<strong>【注意事项】</strong>
-一、使用时，请把文件夹layer整个放置在您站点的任何一个目录，只需引入layer.js即可，除jQuery外，其它文件无需再引入。
-二、如果您的js引入是通过合并处理或者您不想采用layer自动获取的绝对路径，您可以通过layer.config()来配置（详见官网API页）
-三、jquery需1.8+
-四、更多使用说明与演示，请参见layer官网。
-五、使用时请务必保留来源，请勿用于违反我国法律法规的web平台。
-六、layer遵循MIT开源协议，将永久性提供无偿服务。
-</pre>
-</div>
+        // function onAddBtn() {
+        //   //页面层-自定义
+        //   layer.open({
+        //     type: 1,
+        //     title: "新建配置",
+        //     closeBtn: false,
+        //     shift: 2,
+        //     area: ['400px', '300px'],
+        //     shadeClose: true,
+        //     // btn: ['新增', '取消'],
+        //     // btnAlign: 'c',
+        //     content: $("#add-main"),
+        //     success: function (layero, index) { },
+        //     yes: function () {
+        //     }
+        //   });
+        // }
 
-<div class="box" style="text-align:center">
-  <a href="http://layer.layui.com/" target="_blank">更多示例</a>
-  <a href="http://www.layui.com/doc/modules/layer.html" target="_blank">使用文档</a>
-  <a href="http://fly.layui.com/" id="suggest">交流反馈</a>
-  
-  <a href="javascript:;" id="about">关于</a>
-</div>
+        $('#addCheckInSornd').on('click', function(){
+            //页面层-自定义
+            layer.open({
+                type: 1,
+                title: "新建配置",
+                closeBtn: false,
+                shift: 2,
+                area: ['800px', '300px'],
+                shadeClose: true,
+                // btn: ['新增', '取消'],
+                // btnAlign: 'c',
+                content: $("#add-main"),
+                success: function (layero, index) { },
+                yes: function () {
+                }
+           });
+        });
 
-<script>
-;!function(){
-
-
-//页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
-layer.ready(function(){ 
-  layer.open({
-    type: 2,
-    title: '欢迎页',
-    maxmin: true,
-    area: ['800px', '500px'],
-    content: 'http://layer.layui.com/test/welcome.html',
-    end: function(){
-      layer.tips('Hi', '#about', {tips: 1})
-    }
-  });
-});
-
-//关于
-$('#about').on('click', function(){
-  layer.alert(layer.v + ' - 贤心出品 sentsin.com');
-});
-
-}();
-</script>
+        //表单验证
+        form.verify({
+          firstpwd: [/(.+){6,12}$/, '密码必须6到12位'],
+          secondpwd: function (value) {
+            if (value != $("#firstpwd").val()) {
+              $("#secondpwd").val("");
+              return '确认密码与密码不一致';
+            }
+          },
+          productCodes: function (value) {
+            if (value == '') {
+              return "请选择系统分配";
+            }
+          },
+          sysqx: function (value) {
+            if (value == '') {
+              return "请选择权限";
+            }
+          }
+        });
+        //提交监听事件
+        form.on('submit(save)', function (data) {
+          params = data.field;
+          //alert(JSON.stringify(params))
+          submit($, params);
+          return false;
+        })
+        var obj = document.getElementById('closeBtn');
+        obj.addEventListener('click', function cancel() {
+          CloseWin();
+        });
+      })
+      //提交
+      function submit($, params) {
+        $.post('${ctx}/golbal/add1', params, function (res) {
+          if (res.status == 1) {
+            layer.msg(res.message, { icon: 1 }, function (index) {
+              CloseWin();
+            })
+          } else if (res.status == 2) {
+            layer.msg(res.message, { icon: 0 }, function () {
+              parent.location.href = '${ctx}/golbal/main';
+              CloseWin();
+            })
+          } else {
+            layer.msg(res.message, { icon: 0 }, function () {
+              location.reload(); // 页面刷新
+              return false
+            })
+          }
+        }, 'json');
+      }
+      // debugger;
+      //关闭页面
+      function CloseWin() {
+        parent.location.reload(); // 父页面刷新
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭 
+      } 
+    </script>
 </body>
+
 </html>
