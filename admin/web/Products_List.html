@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>产品列表</title>
+<link rel="stylesheet" href="src/css/layui.css">
+<style>
+  body{padding: 20px; /*overflow-y: scroll;*/}
+  .layui-table-view{
+    margin:0;
+  }
+</style>
+</head>
+<body>
+  <script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+      <button class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add">添加产品分类</button>
+    </div>
+  </script>
+  <table id="test" lay-filter="test"></table>
+  <script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  </script>
+
+  <!-- 添加产品分类 -->
+  <div id="add-main" style="display:none;padding:30px">
+      <form class="layui-form" id="add-form" action="">
+        <div class="layui-form-item center">
+          <label class="layui-form-label">ID</label>
+          <div class="layui-input-block">
+            <input type="text" name="name" required lay-verify="required" value="10080" autocomplete="off" style="width:90%"
+             class="layui-input" readonly="readonly"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">用户名</label>
+          <div class="layui-input-block">
+            <input type="text" name="type" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">邮箱</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" placeholder="请输入邮箱地址" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">性别</label>
+          <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男">
+            <input type="radio" name="sex" value="女" title="女">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">城市</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" placeholder="请输入所在城市" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">签名</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" placeholder="请输入签名" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">积分</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="2000" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">ip</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="192.168.30.18" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">登入次数</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="10" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">加入时间</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="2019-04-09" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block" style="margin-left:50px">
+            <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary" id="closeBtn">重置</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  <!-- 编辑产品分类 -->
+  <div id="edit-main" style="display:none;padding:30px">
+      <form class="layui-form" id="add-form" action="">
+        <div class="layui-form-item center">
+          <label class="layui-form-label">ID</label>
+          <div class="layui-input-block">
+            <input type="text" name="name" required lay-verify="required" value="10080" autocomplete="off" style="width:90%"
+             class="layui-input" readonly="readonly"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">用户名</label>
+          <div class="layui-input-block">
+            <input type="text" name="type" required lay-verify="required" value="李白" autocomplete="off" style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">邮箱</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="xianxin@layui.com" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">性别</label>
+          <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男" checked>
+            <input type="radio" name="sex" value="女" title="女">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">城市</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="惠州市" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">签名</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="人生恰似一场修行" autocomplete="off"  style="width:90%"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">积分</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="2000" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">ip</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="192.168.30.18" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">登入次数</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="10" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">加入时间</label>
+          <div class="layui-input-block">
+            <input type="text" name="value" required lay-verify="required" value="2019-04-14" autocomplete="off"  style="width:90%"
+              class="layui-input" readonly="readonly">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block" style="margin-left:50px">
+            <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  <script src="src/layui.js" charset="utf-8"></script>
+  <script>
+  layui.use('table', function(){
+  var table = layui.table;
+  //return;
+  
+  //渲染
+  window.ins1 = table.render({
+    elem: '#test'
+    ,height: 600
+    // ,url: 'json/table/demo1.json'
+    ,title: '用户数据表'
+    , page: true //是否显示分页
+    , limits: [3, 5, 10]
+    , limit: 15 //每页默认显示的数量
+    ,toolbar: '#toolbarDemo'
+    ,id: 'testReload'
+    ,cols: [[
+      {type: 'checkbox', fixed: 'left'}
+      ,{field:'id', title:'ID', width:80, sort: true}
+      ,{field:'username', title:'用户名', width:120, sort: true}
+      ,{field:'email', title:'邮箱', width:150}
+      // ,{field:'username', title:'用户名', hide: true, width:120, edit: 'text', templet: '#usernameTpl'}
+      // ,{field:'email', title:'邮箱', hide: true, width:150, edit: 'text', templet: function(x){return '<em>'+ x.email +'</em>'}}
+      ,{field:'sex', title:'性别', width:80, edit: 'text', sort: true}
+      ,{field:'city', title:'城市', width:100}
+      ,{field:'sign', title:'签名'}
+      ,{field:'experience', title:'积分', width:80, sort: true}
+      ,{field:'ip', title:'IP', width:120}
+      ,{field:'logins', title:'登入次数', width:100, sort: true}
+      ,{field:'joinTime', title:'加入时间', width:120}
+      ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+    ]]
+    , data: [{
+          "id": "10001"
+          , "username": "杜甫"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "116"
+          , "ip": "192.168.0.8"
+          , "logins": "108"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10002"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "12"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10003"
+          , "username": "王勃"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "65"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10004"
+          , "username": "杜甫"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "666"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10005"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "86"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10006"
+          , "username": "杜甫"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "12"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10007"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "16"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10008"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "106"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10009"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "106"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10010"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "106"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10011"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "106"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }, {
+          "id": "10012"
+          , "username": "李白"
+          , "email": "xianxin@layui.com"
+          , "sex": "男"
+          , "city": "浙江杭州"
+          , "sign": "人生恰似一场修行"
+          , "experience": "106"
+          , "ip": "192.168.0.8"
+          , "logins": "106"
+          , "joinTime": "2016-10-14"
+        }]
+    // ,response: {
+    //   statusName: 'status'
+    //   ,statusCode: 200
+    // }
+    // ,parseData: function(res){
+    //   return {
+    //     "status": res.status
+    //     ,"msg": res.message
+    //     ,"count": res.total
+    //     ,"data": res.data.itme
+    //   };
+    // }
+  });
+
+  //监听行工具事件
+  table.on('tool(test)', function(obj){
+    var data = obj.data;
+    //console.log(obj)
+    if(obj.event === 'del'){
+      layer.confirm('真的删除行么', function(index){
+        obj.del();
+        layer.close(index);
+      });
+    } else if(obj.event === 'edit'){
+      //  layer.alert('编辑行：<br>'+ JSON.stringify(data))
+       layer.open({
+            type: 1,
+            title: "产品分类编辑",
+            closeBtn: 1,
+            shift: 2,
+            area: ['800px', '700px'],
+            shadeClose: true,
+            content: $("#edit-main"),
+            success: function (layero, index) { },
+                yes: function () {
+            }
+      });
+      // layer.prompt({
+      //   formType: 2
+      //   ,value: data.email
+      // }, function(value, index){
+      //   obj.update({
+      //     email: value
+      //   });
+      //   layer.close(index);
+      // });
+    } 
+
+  });
+
+  //监听排序
+  table.on('sort(test)', function(obj){
+    console.log(this)
+    //return;
+    layer.msg('服务端排序。order by '+ obj.field + ' ' + obj.type);
+    //服务端排序
+    table.reload('test', {
+      initSort: obj
+      //,page: {curr: 1} //重新从第一页开始
+      ,where: { //重新请求服务端
+        key: obj.field //排序字段
+        ,order: obj.type //排序方式
+      }
+    });
+  });
+  
+  //工具栏事件
+  table.on('toolbar(test)', function(obj){
+    var checkStatus = table.checkStatus(obj.config.id);
+    switch(obj.event){
+      case 'add':
+        // layer.msg('添加');
+        layer.open({
+            type: 1,
+            title: "添加产品分类",
+            closeBtn: 2,
+            shift: 2,
+            area: ['800px', '700px'],
+            shadeClose: true,
+            // btn: ['新增', '取消'],
+            // btnAlign: 'c',
+            content: $("#add-main"),
+            success: function (layero, index) { },
+                yes: function () {
+            }
+        });
+      break;
+      case 'update':
+        layer.msg('编辑');
+      break;
+      case 'delete':
+        layer.msg('删除');
+      break;
+      case 'getCheckData':
+        var data = checkStatus.data;
+        layer.alert(JSON.stringify(data));
+      break;
+      case 'getCheckLength':
+        var data = checkStatus.data;
+        layer.msg('选中了：'+ data.length + ' 个');
+      break;
+      case 'isAll':
+        layer.msg(checkStatus.isAll ? '全选': '未全选')
+      break;
+    };
+  });
+
+  
+  //监听排序
+  table.on('sort(test)', function(obj){
+    console.log(this)
+    
+    //return;
+    layer.msg('服务端排序。order by '+ obj.field + ' ' + obj.type);
+    //服务端排序
+    table.reload('test', {
+      initSort: obj
+      //,page: {curr: 1} //重新从第一页开始
+      ,where: { //重新请求服务端
+        key: obj.field //排序字段
+        ,order: obj.type //排序方式
+      }
+    });
+  });
+  
+  var $ = layui.jquery, active = {
+    // add: function(){
+    //   table.addRow('test')
+    // },
+    reload: function(){
+      var demoReload = $('#demoReload');
+      //执行重载
+      table.reload('testReload', {
+        page: {
+          curr: 1 //重新从第 1 页开始
+        }
+        ,where: {
+          key: {
+            id: demoReload.val()
+          }
+        }
+      });
+    }
+  };
+
+  $('.demoTable .layui-btn').on('click', function(){
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+
+});
+</script>
+</body>
+</html>
