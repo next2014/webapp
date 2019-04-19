@@ -1,0 +1,21 @@
+.intro h3,.price h3,.openTime h3{
+   width: 100%;
+   text-align: center;
+   height: 50px;
+   line-height: 50px;
+   font-size: 25px;
+   margin-bottom:0;
+}
+.price{
+    position: relative;
+}
+.piao h3{
+  width: 35%;
+  position: absolute;
+  top: 20px;
+  left: 33%;
+}
+hr{
+  border-color:#fff;
+  margin-top:2.3rem;
+}
