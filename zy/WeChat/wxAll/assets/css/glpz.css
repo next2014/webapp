@@ -1,3 +1,10 @@
+a, abbr, acronym, address, applet, area, article, aside, audio, b, base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, frame, frameset, h1, h2, h3, h4, h5, h6, header, hr, i, iframe, img, input, ins, kbd, keygen, label, legend, li, main, map, mark, menu, menuitem, meter, nav, noframes, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, section, select, small, source, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, track, tt, u, ul, var, video, wbr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+}
 .intro h3,.price h3,.openTime h3{
    width: 100%;
    text-align: center;
@@ -18,4 +25,101 @@
 hr{
   border-color:#fff;
   margin-top:2.3rem;
+}
+
+
+/*排行榜新版*/	
+.lfy_4panhang_btn{
+	background: none;
+}
+.lfy_4panhang_btn{
+	height: 0.7rem;
+}
+.ph_line{
+	width: 40%;
+	height: 2px;
+	background: #e54242;/*背景主题更换*/
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+}
+.rank_two{
+	width: 30%;
+	float: left;
+}
+.rank_one{
+	width: 40%;
+	float: left;
+	position: relative;
+}
+.rank_title{
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffc533;
+  text-align: center;
+  /* margin-top: 6px; */
+  float: left;
+  width: 100%;
+  margin-bottom: 6px;
+}
+.rank_img{
+	width: 60px;
+	margin:15px auto 0;
+	border-radius: 50%;
+}
+.rank_img img{
+	width: 60px;
+	height:60px;
+	border-radius: 50%;
+}
+.rank_img2{
+	width: 80px;
+	height: 80px;
+	background: #ffdf85;
+	margin:0 auto 0;
+	border-radius: 50%;
+}
+.rank_img2 img{
+	width: 80px;
+	height:80px;
+	border-radius: 50%;
+}
+.rank_box{
+	width: 100%;
+	margin: 0 auto;
+	/* margin-top: 10px; */
+  margin-bottom: 15px;
+  background: url(../img/glpz_img/paihang.png) no-repeat;
+  background-size: 99% 185px;
+  background-position: center;
+}
+.huangguan{
+  width: 50%;
+  position: absolute;
+  top: -9px;
+  left: 25%;
+  display: block;
+}
+.lfy_ph_number{
+	width: 20px;
+	float: right;
+  margin-top: 5%;
+  font-size: 14px;
+  color: #758697;
+
+}
+.rank_player_name{
+	text-align: center;
+	margin-top: 5px;
+	color: #758697;
+	font-size: 14px;
+}
+.rank_player_paio{
+	color: #e54242;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.rank_player_paio span{
+	color: #e54242;
 }
