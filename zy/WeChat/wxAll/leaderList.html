@@ -17,67 +17,43 @@ title: 卡丁车排行榜
             <ul class="shadow1 rank_box clearfix pt-5">
                 <li class="rank_two">
                     <div class="rank_img">
-                        <a href="leaderDetail.html"><img src="assets/img/glpz_img/1.png"></a>
+                        <a href="leaderDetail.html" class="d-block"><img src="assets/img/glpz_img/1.png"></a>
                     </div>
-                    <div class="rank_player_name"><strong>No.2</strong></div>
+                    <div class="rank_player_name"><strong>选手1</strong></div>
                     <div class="rank_player_paio">1分00秒</div>
                 </li>
                 <li class="rank_one">
                     <div class="rank_img2">
-                        <a href="leaderDetail.html"><img src="assets/img/glpz_img/2.png"></a>
+                        <a href="leaderDetail.html" class="d-block"><img src="assets/img/glpz_img/2.png"></a>
                     </div>
-                    <div class="rank_player_name m-0"><strong>No.1</strong></div>
+                    <div class="rank_player_name m-0"><strong>选手2</strong></div>
                     <div class="rank_player_paio">1分00秒</div>
                 </li>
                 <li class="rank_two">
                     <div class="rank_img">
-                        <a href="leaderDetail.html"><img src="assets/img/glpz_img/3.png"></a>
+                        <a href="leaderDetail.html" class="d-block"><img src="assets/img/glpz_img/3.png"></a>
                     </div>
-                    <div class="rank_player_name"><strong>No.3</strong></div>
+                    <div class="rank_player_name"><strong>选手3</strong></div>
                     <div class="rank_player_paio">1分00秒</div>
                 </li>
             </ul>
         </div>
         <div class="shadow1 card border-1 p-2">
+          {% for entry in site.data.leaderList %}
             <a href="leaderDetail.html" class="pt-2 pb-2">
                 <div class="d-flex align-items-center">
                     <div class="col-2 text-center p-0">
-                         <span class="text-danger">No.4</span>
+                         <span class="text-danger">NO.{{entry.number}}</span>
                     </div>
                     <div class="col-3 pl-0 text-center">
-                        <img class="rounded-circle pl-2 pr-2" src="assets/img/glpz_img/1.png" width="60"/>
+                        <img class="rounded-circle pl-2 pr-2" src="{{entry.img}}" width="60"/>
                     </div>
                     <div class="col-7 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0">选手1</h6><span class="mr-3">1分00秒</span>
+                        <h6 class="mb-0">{{entry.name}}</h6><span class="mr-3">{{entry.time}}</span>
                     </div>
                 </div>
             </a>
-            <a href="leaderDetail.html" class="pt-2 pb-2">
-                <div class="d-flex align-items-center">
-                    <div class="col-2 text-center p-0">
-                        <span class="text-danger">No.5</span>
-                    </div>
-                    <div class="col-3 pl-0 text-center">
-                        <img class="rounded-circle pl-2 pr-2" src="assets/img/glpz_img/2.png" width="60"/>
-                    </div>
-                    <div class="col-7 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0">选手2</h6><span class="mr-3">1分30秒</span>
-                    </div>
-                </div>
-            </a>
-            <a href="leaderDetail.html" class="pt-2 pb-2">
-                <div class="d-flex align-items-center">
-                    <div class="col-2 text-center p-0">
-                        <span class="text-danger">No.6</span>
-                    </div>
-                    <div class="col-3 pl-0 text-center">
-                        <img class="rounded-circle pl-2 pr-2" src="assets/img/glpz_img/3.png" width="60"/>
-                    </div>
-                    <div class="col-7 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0">选手2</h6><span class="mr-3">1分40秒</span>
-                    </div>
-                </div>
-            </a>
+          {% endfor %}
         </div>
     </div>
 </div>

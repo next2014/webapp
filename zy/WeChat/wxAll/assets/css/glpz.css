@@ -123,3 +123,103 @@ hr{
 .rank_player_paio span{
 	color: #e54242;
 }
+
+/* 选手信息 */
+.mine {
+	background-color: #f7f7f7;
+	height: 100vh;
+}
+.mine .weui-cell {
+	padding: 15px;
+}
+.mine .weui-cell:before {
+	left: 0;
+	border-top: 1px solid #ced4da;
+}
+.mine .weui-cells:before {
+	border-top: 0;
+}
+.mine .weui-cells a {
+	text-decoration: none;
+}
+.mine .weui-cell__bd {
+	text-align: right;
+	color: #6c757d;
+}
+.mine .weui-cell__bd:after {
+	top: 55%;
+}
+.mine .weui-cell_select .weui-cell__bd:after {
+	top: 55%;
+}
+.mine .weui-flex {
+	margin: 0.50313rem 0rem;
+}
+.mine .weui-flex a {
+	text-decoration: none;
+}
+.mine .weui-label {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #6c757d;
+}
+.mine .weui-tabbar__icon {
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #6c757d;
+	font-size: 1.2075rem;
+}
+.mine .mod_pos_item {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 1.5rem;
+}
+.mine .page__hd {
+	padding: 1.8rem 1.00625rem;
+	position: relative;
+	min-height: 120px;
+}
+.mine .page__hd a {
+	color: #343a40;
+	text-decoration: none;
+	padding: 0.14141rem 0.25156rem;
+}
+.mine .page__title {
+	font-size: 1.2rem;
+	color:#fff;
+}
+.mine .weui-tabbar__label {
+	font-size: 0.70437rem;
+	color: #6c757d;
+}
+.page__desc {
+	color: #888;
+	font-size: 14px;
+}
+.page__img {
+	width: auto;
+	height: auto;
+}
+.page__img img {
+	width: 80px;
+	height: 80px;
+	border:2px solid #fff!important;
+}
