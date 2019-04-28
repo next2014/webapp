@@ -1,0 +1,26 @@
+[
+  {
+    "id": 201,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "账户管理",
+    "url": " "
+  },
+  {
+    "id": 211,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "支付方式",
+    "url": " "
+  },
+  {
+    "id": 202,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "支付配置",
+    "url": " "
+  }
+]

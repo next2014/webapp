@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "系统设置",
+      "url": ""
+    },
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "系统栏目管理",
+      "url": ""
+    },
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "系统日志",
+      "url": ""
+    }
+  ]

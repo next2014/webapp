@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1377,
+    "pid": 1363,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "广告管理",
+    "url": "./html/form/form.html"
+  },
+  {
+    "id": 1378,
+    "pid": 1363,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "分类管理",
+    "url": ""
+  }
+]
