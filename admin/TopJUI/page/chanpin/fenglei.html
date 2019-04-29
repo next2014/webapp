@@ -12,6 +12,8 @@
     <link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <!-- layui框架样式 -->
     <link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+    <!-- bootstrap框架UI -->
+    <link type="text/css" href="../../static/plugins/bootstrap4/dist/css/bootstrap.css" rel="stylesheet"/>
     <!-- jQuery相关引用 -->
     <script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
@@ -23,11 +25,45 @@
     <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
     <!-- layui框架js -->
     <script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+
+
 </head>
-
 <body>
-
-   分类管理
-
+<div class="fenglei">
+    <div class="container">
+        <div class="m-5">
+            <div class="pb-4">
+                <a id="btn" href="#" data-toggle="topjui-linkbutton" data-options="iconCls:'fa fa-plus'">添加子类型</a>
+                <a id="btn" href="#" data-toggle="topjui-linkbutton" data-options="iconCls:'fa fa-ban'">禁止该类型</a>
+                <a id="btn" href="#" data-toggle="topjui-linkbutton" data-options="iconCls:'fa fa-trash-o'">删除该类型</a>
+            </div>
+            <form class="layui-form" id="add-form1" action="">
+                    <div class="layui-form-item center">
+                        <label class="layui-form-label pl-0 pr-0">分类名称</label>
+                        <div class="layui-input-block">
+                           <input type="text" name="name" required lay-verify="required" placeholder="请输入分类名称" style="width:60%" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label pl-0 pr-0">排序</label>
+                        <div class="layui-input-block">
+                        <input type="text" name="type" required lay-verify="required" placeholder="" style="width:60%" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label pl-0 pr-0">备注</label>
+                        <div class="layui-input-block">
+                           <textarea name="desc" placeholder="说点什么......" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" style="margin-left:50px">
+                            <button class="layui-btn" lay-submit lay-filter="save">提 交</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

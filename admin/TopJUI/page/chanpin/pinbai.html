@@ -31,16 +31,23 @@
               <button class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add">添加品牌</button>
             </div>
           </script>
+
           <table id="test" lay-filter="test"></table>
+
           <script type="text/html" id="barDemo">
-            <a class="layui-btn layui-btn-sm layui-btn-primary" lay-event="kai">开启</a>
             <a class="layui-btn layui-btn-sm layui-btn-warm" lay-event="edit">编辑</a>
             <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</a>
           </script>
-        
+          <script type="text/html" id="checkboxTpl">
+            <input type="checkbox" name="lock" value="{{d.id}}" title="开启" lay-filter="lockDemo" {{ d.id == 10006 ? 'checked' : '' }}>
+          </script>
+          <script type="text/html" id="picTpl">
+             <img src="../../static/images/logo/2.jpg" width="80" lay-event="pic">
+          </script>
+
           <!-- 添加产品分类 -->
           <div id="add-main" style="display:none;padding:30px">
-              <form class="layui-form" id="add-form" action="">
+              <form class="layui-form" id="add-form1" action="">
                 <div class="layui-form-item center">
                   <label class="layui-form-label">ID</label>
                   <div class="layui-input-block">
@@ -199,12 +206,18 @@
                   </div>
                 </div>
               </form>
-            </div>
+          </div>
+
+          <!-- 弹出图片层 -->
+          <div id="tong" style="display:none">
+            <img src="../../static/images/logo/1.jpg">
+          </div>
+
           <!-- <script src="src/layui.js" charset="utf-8"></script> -->
         <script>
             layui.use('table', function(){
-            var table = layui.table;
-            //return;
+            var table = layui.table
+            ,form = layui.form;
             
             //渲染
             window.ins1 = table.render({
@@ -213,17 +226,18 @@
             ,url: '../../json/table/demo2.json'
             ,toolbar: '#toolbarDemo'
             ,title: '用户数据表'
+            ,size: 'lg' //小尺寸的表格
             ,cols: [[
                 {type: 'checkbox', fixed: 'left'}
-                ,{field:'number', title:'ID', width:120, sort: true}
-                ,{field:'name', title:'排序', width:120}
-                ,{field:'price', title:'品牌LOGO', width:150}
-                ,{field:'nprice', title:'品牌名称', width:150, edit: 'text', sort: true}
+                ,{field:'id', title:'ID', width:80, templet: '#inputTpl', unresize: true}
+                ,{field:'name', title:'排序', width:80, unresize: true, sort: true}
+                ,{field:'logopic', title:'品牌LOGO', width:150, templet: '#picTpl', unresize: true}
+                ,{field:'nprice', title:'品牌名称', width:150, edit: 'text'}
                 ,{field:'city', title:'所属地区/国家', width:150}
-                ,{field:'ReviewStatus', title:'描述', width:350, sort: true}
-                ,{field:'joinTime', title:'加入时间', width:150}
-                ,{field:'status', title:'状态', width:120, sort: true}
-                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:200}
+                ,{field:'ReviewStatus', title:'描述', width:350}
+                ,{field:'joinTime', title:'加入时间', width:120}
+                ,{field:'lock', title:'状态', width:120, templet: '#checkboxTpl', unresize: true}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:160}
             ]]
             ,page: true
             // ,response: {
@@ -240,17 +254,79 @@
             // }
             });
 
+            //工具栏事件
+            // table.on('toolbar(test)', function(obj){
+            // var checkStatus = table.checkStatus(obj.config.id);
+            // switch(obj.event){
+            //     case 'add':
+            //         layer.open({
+            //             type: 1,
+            //             title: "添加产品分类",
+            //             closeBtn: 1,
+            //             shift: 2,
+            //             area: ['800px', '700px'],
+            //             shadeClose: true,
+            //             content: $("#add-main"),
+            //             success: function (layero, index) { },
+            //                 yes: function () {
+            //             }
+            //         });
+            //         break;
+            //   };
+            // });
+            $('#toolbarDemo').on('click', function () {
+                layer.open({
+                  type: 1,
+                  title: '添加广告',
+                  maxmin: true,
+                  shadeClose: false, //点击遮罩关闭层
+                  area: ['800px', ''],
+                  content: $('#add-main'),
+                  btn: ['提交', '取消'],
+                  yes: function (index, layero) {
+                    var num = 0;
+                    var str = "";
+                    $(".add_adverts input[type$='text']").each(function (n) {
+                      if ($(this).val() == "") {
+
+                        layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
+                          title: '提示框',
+                          icon: 0,
+                        });
+                        num++;
+                        return false;
+                      }
+                    });
+                    if (num > 0) { return false; }
+                    else {
+                      layer.alert('添加成功！', {
+                        title: '提示框',
+                        icon: 1,
+                      });
+                      layer.close(index);
+                    }
+                  }
+                });
+              })
+
+            //监听单元格编辑
+            table.on('edit(test)', function (obj) {
+              var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+
+              console.log(obj)
+            });
+
             //监听行工具事件
             table.on('tool(test)', function(obj){
             var data = obj.data;
-            //console.log(obj)
             if(obj.event === 'del'){
                 layer.confirm('真的删除行么', function(index){
                 obj.del();
                 layer.close(index);
                 });
             } else if(obj.event === 'edit'){
-                //  layer.alert('编辑行：<br>'+ JSON.stringify(data))
                 layer.open({
                     type: 1,
                     title: "产品分类编辑",
@@ -263,15 +339,6 @@
                         yes: function () {
                     }
                 });
-                // layer.prompt({
-                //   formType: 2
-                //   ,value: data.email
-                // }, function(value, index){
-                //   obj.update({
-                //     email: value
-                //   });
-                //   layer.close(index);
-                // });
             } 
 
             });
@@ -289,71 +356,17 @@
                 key: obj.field //排序字段
                 ,order: obj.type //排序方式
                 }
-            });
-            });
-            
-            //工具栏事件
-            table.on('toolbar(test)', function(obj){
-            var checkStatus = table.checkStatus(obj.config.id);
-            switch(obj.event){
-                case 'add':
-                layer.open({
-                    type: 1,
-                    title: "添加产品分类",
-                    closeBtn: 2,
-                    shift: 2,
-                    area: ['800px', '700px'],
-                    shadeClose: true,
-                    content: $("#add-main"),
-                    success: function (layero, index) { },
-                        yes: function () {
-                    }
-                });
-                break;
-              };
+             });
             });
 
-            
-            //监听排序
-            table.on('sort(test)', function(obj){
-            console.log(this)
-            
-            //return;
-            layer.msg('服务端排序。order by '+ obj.field + ' ' + obj.type);
-            //服务端排序
-            table.reload('test', {
-                initSort: obj
-                //,page: {curr: 1} //重新从第一页开始
-                ,where: { //重新请求服务端
-                key: obj.field //排序字段
-                ,order: obj.type //排序方式
-                }
+            //监听开启操作
+            form.on('checkbox(lockDemo)', function(obj){
+              layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
             });
-            });
-            
-            var $ = layui.jquery, active = {
-            // add: function(){
-            //   table.addRow('test')
-            // },
-            reload: function(){
-                var demoReload = $('#demoReload');
-                //执行重载
-                table.reload('testReload', {
-                page: {
-                    curr: 1 //重新从第 1 页开始
-                }
-                ,where: {
-                    key: {
-                    id: demoReload.val()
-                    }
-                }
-                });
-            }
-            };
 
             $('.demoTable .layui-btn').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
+              var type = $(this).data('type');
+              active[type] ? active[type].call(this) : '';
             });
 
         });
