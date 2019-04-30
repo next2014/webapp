@@ -82,9 +82,9 @@
                 <th data-options="field:'purchase_price',title:'现价格',sortable:true"></th>
                 <th data-options="field:'city',title:'所属地区/国家',sortable:true"></th>
                 <th data-options="field:'add_date',title:'加入时间',sortable:true"></th>
-                <th data-options="field:'app_static',title:'审核状态',sortable:true"></th>
-                <th data-options="field:'app_static',title:'状态',sortable:true"></th>
-                <th data-options="fixed:'right',title:'操作',sortable:true"></th>
+                <th data-options="field:'appy_static',title:'审核状态',sortable:true"></th>
+                <th data-options="field:'static',title:'状态',formatter:progressFormatter,"></th>
+                <th data-options="field:'operate',title:'操作',formatter:operateFormatter,width:120"></th>
                 <!-- <th data-options="field:'rate',title:'完成率',sortable:true,formatter:progressFormatter"></th> -->
             </tr>
             </thead>
@@ -138,14 +138,90 @@
 <!-- 表格工具栏结束 -->
 
 <script>
-    function progressFormatter(value, row, index) {
-        var htmlstr = '<div id="p" class="topjui-progressbar progressbar" data-options="value:' + value + '" style="width: 398px; height: 26px;">';
-        htmlstr += '<div class="progressbar-text" style="width: 398px; height: 26px; line-height: 26px;">' + value + '%</div>';
-        htmlstr += '<div class="progressbar-value" style="width: ' + value + '%; height: 26px; line-height: 26px;">';
-        htmlstr += '<div class="progressbar-text" style="width: 398px; height: 26px; line-height: 26px;">' + value + '%</div>';
-        htmlstr += '</div>';
-        htmlstr += '</div>';
+    function progressFormatter() {
+        var htmlstr = '<input data-toggle="topjui-switchbutton" checked="">';
         return htmlstr;
+    }
+
+    function operateFormatter(value, row, index) {
+        var htmlstr = '<button class="layui-btn layui-btn-xs" onclick="openEditDiag(\'' + row.uuid + '\')">编辑</button>';
+        htmlstr += '<button class="layui-btn layui-btn-xs layui-btn-danger" onclick="deleteRow(\'' + row.uuid + '\')">删除</button>';
+        return htmlstr;
+    }
+
+    function openEditDiag(uuid) {
+        var $editDialog = $('<form  id="myDialog" method="get"></form>'); // 创建form表单元素
+        $editDialog.iDialog({
+            title: '编辑数据',
+            width: 950,
+            height: 500,
+            closed: false,
+            cache: false,
+            href: _ctx + '/html/complex/dialog_edit.html?uuid=' + uuid,
+            modal: true,
+            buttons: [{
+                text: '保存',
+                iconCls: 'fa fa-save',
+                btnCls: 'topjui-btn-blue',
+                handler:ajaxSubmit // 调用下面自定义方法ajaxSubmit()
+            }, {
+                text: '关闭',
+                iconCls: 'fa fa-close',
+                btnCls: 'topjui-btn-red',
+                handler: function () {
+                    $editDialog.iDialog('close');
+                }
+            }],
+            onLoad: function () {
+                //加载表单数据
+                $.getJSON(_ctx + '/json/datagrid/product-detail.json?uuid=' + uuid, function (data) {
+                    $editDialog.form('load', data);
+                });
+            }
+        });
+    }
+    function ajaxSubmit() {
+    // 2 提交
+    // 2.1 方式一 上面 $('<form ></form>')
+    if($('#myDialog').form('validate')) {
+        var formData = $("#myDialog").serialize();
+        var url = _ctx + '/json/response/success.json';
+        $.post(url,formData,function (res) {
+            if (res.statusCode == 200) { // 后台返回状态值
+                $.iMessager.show({title: '我的消息', msg: res.message, timeout: 5000, showType: 'slide'});// '消息窗口'组件
+                $("#productDg").iDatagrid('reload');// 刷新下表格数据
+                $('#myDialog').dialog('destroy');// 销毁dialog面板
+            } else {
+                $.iMessager.show({title: '我的消息', msg: res.message, timeout: 5000, showType: 'slide'});// '消息窗口'组件
+            }
+        },'JSON')
+    }
+
+    //2.2 方式二
+    // $.iMessager.progress({'text': '请求中……'});  // 显示进度条（提交时请使用进度条 或者 禁用'提交'按钮，防止因为网络延迟用户重复提交）
+    // $('#myDialog').iForm('submit', {
+    //     url: _ctx + '/json/response/success.json',
+    //     onSubmit: function (param) {  /* param.p1 = 'param 用于提交额外的参数';*/
+    //         var isValid = $(this).iForm('validate'); //  提交数据表单数据时进行表单验证
+    //         if (!isValid) {
+    //             $.iMessager.progress('close');  // 如果表单是无效的则隐藏进度条
+    //         }
+    //         return isValid;    // 返回false终止表单提交
+    //     },
+    //     success: function (res) {
+    //         var data = JSON.parse(res); // 字符串格式JSON 转换成 对象格式JSON
+    //         setTimeout(function () { // 模拟请求延迟3秒（使用的时候请自行去掉）
+    //             if (data.statusCode == 200) { // 后台返回状态值
+    //                 $.iMessager.show({title: '我的消息', msg: data.message, timeout: 5000, showType: 'slide'});// '消息窗口'组件
+    //                 $("#productDg").iDatagrid('reload');// 刷新下表格数据
+    //                 $('#myDialog').dialog('destroy');// 销毁dialog面板
+    //             } else {
+    //                 $.iMessager.show({title: '我的消息', msg: data.message, timeout: 5000, showType: 'slide'});// '消息窗口'组件
+    //             }
+    //             $.iMessager.progress('close');  // 如果提交完成则隐藏进度条
+    //         }, 3000);
+    //     }
+    // });
     }
 
     // 自定义方法
