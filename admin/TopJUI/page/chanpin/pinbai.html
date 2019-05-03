@@ -39,9 +39,10 @@
             <a class="layui-btn layui-btn-sm layui-btn-warm" lay-event="edit">编辑</a>
             <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</a>
           </script>
-          <script type="text/html" id="checkboxTpl">
+          <script type="text/html" id="isShow">
             <input type="checkbox" name="lock" value="{{d.id}}" title="开启" lay-filter="lockDemo" {{ d.id == 10006 ? 'checked' : '' }}>
           </script>
+
           <script type="text/html" id="picTpl">
              <img src="../../static/images/logo/2.jpg" width="80" lay-event="pic">
           </script>
@@ -225,12 +226,11 @@
                 {type: 'checkbox', fixed: 'left'}
                 ,{field:'id', title:'ID', width:80, templet: '#inputTpl', unresize: true}
                 ,{field:'name', title:'排序', width:80, unresize: true, sort: true}
-                ,{field:'logopic', title:'品牌LOGO', width:150, templet: '#picTpl', unresize: true}
-                ,{field:'nprice', title:'品牌名称', width:150, edit: 'text'}
+                ,{field:'imageUrl', title:'品牌LOGO', width:150, templet: '<div><img src="{{d.imageUrl}}" /></div>'}
                 ,{field:'city', title:'所属地区/国家', width:150}
                 ,{field:'ReviewStatus', title:'描述', width:350}
                 ,{field:'joinTime', title:'加入时间', width:120}
-                ,{field:'lock', title:'状态', width:120, templet: '#checkboxTpl', unresize: true}
+                ,{field:'lock', title:'状态', width:120, templet: '#isShow', filter: "isShow",}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:160}
             ]]
             ,page: true

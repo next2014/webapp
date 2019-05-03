@@ -5,7 +5,7 @@
     ,"data": [{
       "id": "10001"
       ,"name": "1"
-      ,"logopic": "../../static/images/logo/1.jpg"
+      ,"imageUrl": "../../static/images/logo/1.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -13,7 +13,7 @@
     }, {
       "id": "10002"
       ,"name": "2"
-      ,"logopic": "../../static/images/logo/2.jpg"
+      ,"imageUrl": "../../static/images/logo/2.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -21,7 +21,7 @@
     }, {
       "id": "10003"
       ,"name": "3"
-      ,"logopic": "../../static/images/logo/3.jpg"
+      ,"imageUrl": "../../static/images/logo/3.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -29,7 +29,7 @@
     }, {
       "id": "10004"
       ,"name": "4"
-      ,"logopic": "../../static/images/logo/4.jpg"
+      ,"imageUrl": "../../static/images/logo/4.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -37,7 +37,7 @@
     }, {
       "id": "10005"
       ,"name": "5"
-      ,"logopic": "../../static/images/logo/5.jpg"
+      ,"imageUrl": "../../static/images/logo/5.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -45,7 +45,7 @@
     }, {
       "id": "10006"
       ,"name": "6"
-      ,"logopic": "../../static/images/logo/6.jpg"
+      ,"imageUrl": "../../static/images/logo/6.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -53,7 +53,7 @@
     }, {
       "id": "10007"
       ,"name": "7"
-      ,"logopic": "../../static/images/logo/7.jpg"
+      ,"imageUrl": "../../static/images/logo/7.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -61,7 +61,7 @@
     }, {
       "id": "10008"
       ,"name": "8"
-      ,"logopic": "../../static/images/logo/8.jpg"
+      ,"imageUrl": "../../static/images/logo/8.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -69,7 +69,7 @@
     }, {
       "id": "10009"
       ,"name": "9"
-      ,"logopic": "../../static/images/logo/9.jpg"
+      ,"imageUrl": "../../static/images/logo/9.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -77,7 +77,7 @@
     }, {
       "id": "10010"
       ,"name": "10"
-      ,"logopic": "../../static/images/logo/10.jpg"
+      ,"imageUrl": "../../static/images/logo/10.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -85,7 +85,7 @@
     }, {
       "id": "10011"
       ,"name": "11"
-      ,"logopic": "../../static/images/logo/11.jpg"
+      ,"imageUrl": "../../static/images/logo/11.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -93,7 +93,7 @@
     }, {
       "id": "10012"
       ,"name": "12"
-      ,"logopic": "../../static/images/logo/12.jpg"
+      ,"imageUrl": "../../static/images/logo/12.jpg"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
@@ -101,7 +101,7 @@
     }, {
       "id": "10013"
       ,"name": "13"
-      ,"logopic": "../../static/images/logo/13.jpg"
+      ,"imageUrl": "../../static/images/logo/13.png"
       ,"nprice": "欧美城"
       ,"city": "浙江杭州"
       ,"joinTime": "2016-10-14"
