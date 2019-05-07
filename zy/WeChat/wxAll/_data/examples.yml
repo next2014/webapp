@@ -83,3 +83,54 @@
       title: b9
       url: pages/detail_06.html
       content: 
+
+- category: 欧美城美食天地介绍
+  meishitd:
+    - name: 老牌洪氏潮卤
+      title: a1
+      index: 1
+      num: 1
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=9
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 韩食
+      title: a2
+      index: 2
+      num: 2
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=10
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 欧爸食堂
+      title: a3
+      index: 3
+      num: 3
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=12
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 欧妈美食坊
+      title: a4
+      index: 4
+      num: 4
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=11
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 美美甜品屋
+      title: a5
+      index: 5
+      num: 5
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=21
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 欧欧西餐厅
+      title: a6
+      index: 6
+      num: 6
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=19
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 铁板西式工坊
+      title: a7
+      index: 5
+      num: 7
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=17
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
+    - name: 泰香了泰式餐馆
+      title: a8
+      index: 4
+      num: 8
+      url: http://hzomsell.m.rc-yiding.com/main?storeId=18
+      content: 门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门店介绍门
