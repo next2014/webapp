@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "留言列表",
-    "url": ""
+    "url": "./page/xiaoxi/Guestbook.html"
   },
   {
     "id": 1353,
@@ -13,6 +13,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "意见反馈",
-    "url": ""
+    "url": "./page/xiaoxi/Feedback.html"
   }
 ]

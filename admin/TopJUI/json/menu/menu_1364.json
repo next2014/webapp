@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "产品列表",
-    "url": "./page/chanpin/proList.html"
+    "url": "./page/chanpin/Products_List.html"
   },
   {
     "id": 1348,
@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "品牌管理",
-    "url": "./page/chanpin/pinbai.html"
+    "url": "./page/chanpin/Brand_Manage.html"
   },
   {
     "id": 1347,
@@ -21,6 +21,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "分类管理",
-    "url": "./page/chanpin/fenglei.html"
+    "url": "./page/chanpin/Category_Manage.html"
   }
 ]

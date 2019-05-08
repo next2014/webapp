@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "文章列表",
-    "url": ""
+    "url": "./page/wenzhang/article_list.html"
   },
   {
     "id": 1346,
@@ -13,6 +13,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "分类管理",
-    "url": ""
+    "url": "./page/wenzhang/article_Sort.html"
   }
 ]

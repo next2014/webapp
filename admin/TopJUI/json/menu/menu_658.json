@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "会员列表",
-    "url": "./page/memguanli/memberList.html"
+    "url": "./page/memguanli/user_list.html"
   },
   {
     "id": 202,
@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "等级管理",
-    "url": "./page/memguanli/levelguili.html"
+    "url": "./page/memguanli/member-Grading.html"
   },
   {
     "id": 203,
@@ -21,6 +21,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "会员记录管理",
-    "url": "./page/memguanli/memberjilu.html"
+    "url": "./page/memguanli/integration.html"
   }
 ]

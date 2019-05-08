@@ -5,7 +5,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "系统设置",
-      "url": ""
+      "url": "./page/xitong/Systems.html"
     },
     {
       "id": 1346,
@@ -13,7 +13,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "系统栏目管理",
-      "url": ""
+      "url": "./page/xitong/System_section.html"
     },
     {
       "id": 1346,
@@ -21,6 +21,6 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "系统日志",
-      "url": ""
+      "url": "./page/xitong/System_Logs.html"
     }
   ]

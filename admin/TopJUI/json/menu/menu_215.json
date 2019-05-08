@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "账户管理",
-    "url": "./page/zfguanli/zfguanli.html"
+    "url": "./page/zfguanli/Cover_management.html"
   },
   {
     "id": 211,
@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "支付方式",
-    "url": "./page/zfguanli/zffangshi.html"
+    "url": "./page/zfguanli/payment_method.html"
   },
   {
     "id": 202,
@@ -21,6 +21,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "支付配置",
-    "url": "./page/zfguanli/zfpeizhi.html"
+    "url": "./page/zfguanli/Payment_Configure.html"
   }
 ]
