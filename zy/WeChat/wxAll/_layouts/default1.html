@@ -10,5 +10,20 @@
     {{ content }}
     {% include script.html %}
     {% include swiperjs.html %}
+    <script>
+        var $mpiBtn = $('.btn1');
+        var $mpiInd = $('.nd1');
+        $mpiBtn.on('click',function(){
+            if($mpiInd.height() == "50"){
+                    $mpiInd.height('auto');
+                    $('.btn1 i').attr("class","fa fa-angle-up");
+                    $('.btn1 i').html(' 收起');
+                }else{
+                    $mpiInd.height('50');
+                    $('.btn1 i').attr("class","fa fa-angle-down");
+                    $('.btn1 i').html(' 展开');
+                }
+            });
+      </script>
 </body>
 </html>

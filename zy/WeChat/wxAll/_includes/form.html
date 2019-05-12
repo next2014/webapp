@@ -1,0 +1,35 @@
+
+<script src="assets/js/layui.js"></script>
+<script>
+    layui.use('form', function () {
+        var $ = layui.jquery
+            , form = layui.form
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题也太短了吧';
+                }
+            }
+        });
+
+        //初始赋值
+        // form.val('first', {
+        //     'name': '测试测试测试测试'
+        //     , 'phone': 11111111111
+        //     , 'address': '广东惠州欧美城文化有限公司'
+        //     , 'interest': 3
+        //     , 'like[write]': true
+        //     , 'desc': 'form 是我们非常看重的一块'
+        //     , xxxxxxxxx: 123
+        // });
+
+        //监听提交
+        form.on('submit(*)', function (data) {
+            console.log(data)
+            alert(JSON.stringify(data.field));
+            return false;
+        });
+});
+</script>

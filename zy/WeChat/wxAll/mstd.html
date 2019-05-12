@@ -1,7 +1,53 @@
 ---
 layout: default1
-title: 欧美城文化小镇
+title: 美食天地
 ---
+<style>
+    .close{
+        color: #fff;
+        font-size:2.2rem;
+        opacity: 1;
+        width:30px;
+        height:30px;
+    }
+    .close span{
+        background: #333333;
+        height: 30px;
+        display: block;
+        line-height: 28px;
+        border-radius: 50px;
+    }
+    .rightclose{
+        position: absolute;
+        right: -7px;
+        top: -15px;
+        z-index: 1000;
+    }
+    .topImg{
+        height:200px;
+        overflow: hidden;
+        position: relative;
+    }
+    .topImg img{
+        position: absolute;
+        top:-25px;
+    }
+    .card-text{
+        height:160px;
+        text-indent: 2em;
+    }
+    i{
+        width: 30px;
+        height: 30px;
+        line-height:30px;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 30px;
+        background-color: #17a2b8;
+        color: #fff;
+    }
+</style>
 {% include swiper2.html %}
 {% for entry in site.data.examples %}
     {% for example in entry.meishitd %}
@@ -9,10 +55,13 @@ title: 欧美城文化小镇
         <div class="card shadow-sm border-0 mb-2 animated fadeinup delay-{{ example.index }}">
             <a href="javascript:;" data-toggle="modal" data-target="#intro{{ example.num }}" class="p-1">
                 <div class="d-flex align-items-center">
-                    <div class="col-4 pr-2 pl-0">
+                    <div class="col-2 pl-0 pr-2 text-center">
+                       <i class="web-font">{{ example.paihang }}</i>
+                    </div>
+                    <div class="col-3 pr-2 pl-0">
                         <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/{{ example.title | slugify }}.jpg" width="150" />
                     </div>
-                    <div class="col-8 p-0 d-flex align-items-center justify-content-between">
+                    <div class="col-7 p-0 d-flex align-items-center justify-content-between">
                         <h6 class="mb-0" style="line-height:24px;">{{ example.name }}</h6>
                         <img src="assets/img/right-circle.png" width="10%" class="mr-2">
                     </div>
@@ -33,7 +82,7 @@ title: 欧美城文化小镇
                             <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/{{ example.title | slugify }}.jpg">
                         </div>
                         <div class="card-body p-4">
-                            <h5 class="card-title">{{ example.name }}</h5>
+                            <h5 class="card-title text-center">【{{ example.name }}】</h5>
                             <p class="card-text mb-3 text-justify overflow-auto">{{ example.content }}</p>
                             <a href="{{ example.url }}" class="btn btn-warning btn-block"> 点击进入订餐 </a>
                         </div>
@@ -43,28 +92,4 @@ title: 欧美城文化小镇
         </div>
     {% endfor %}
 {% endfor %}
-<!-- <div class="container p-2 m-scene">
-    <div class="container shadow-sm border-0 card mb-3 animated fadeinup delay-1">
-        <a href="javascript:;" data-toggle="modal" data-target="#intro1" class="row p-2">
-            <div class="col-5 pr-2 pl-0">
-                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/1.jpg" width="150" />
-            </div>
-            <div class="col-7 p-0">
-                <h6 class="mt-1 mb-2" style="font-size:16px;"><strong>老牌洪氏潮卤</strong></h6>
-                <p class="text-justify">简介内容简介内容简介内容简介内容简介内容简介内容简介内容...</p>
-            </div>
-        </a>
-    </div>
-    <div class="container shadow-sm border-0 card mb-3 animated fadeinup delay-2">
-        <a href="javascript:;" data-toggle="modal" data-target="#intro2" class="row p-2">
-            <div class="col-5 pr-2 pl-0">
-                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/2.jpg" width="150" />
-            </div>
-            <div class="col-7 p-0">
-                <h6 class="mt-1 mb-2" style="font-size:16px;"><strong>韩食</strong></h6>
-                <p class="text-justify">简介内容简介内容简介内容简介内容简介内容简介内容简介内容...</p>
-            </div>
-        </a>
-    </div>
-</div> -->
 {% include footer1.html %}

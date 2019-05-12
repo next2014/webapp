@@ -1,12 +1,6 @@
-<script src="assets/js/jquery-weui.js"></script>
-<script src="assets/lib/fastclick.js"></script>
-<script src="assets/js/weui.min.js"></script>
+
 <script src="assets/js/gallery.js"></script>
-<script>
-  $(function() {
-    FastClick.attach(document.body);
-  });
-</script>
+{% if page.layout == "photoEdit" %}
 <script>
     $("#years-monthes").datetimePicker({
         title: '限定年月',
@@ -91,3 +85,4 @@
   });
 });
 </script>
+{% endif %}
