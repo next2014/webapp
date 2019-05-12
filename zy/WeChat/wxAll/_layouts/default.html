@@ -12,45 +12,6 @@
     {% include script.html %}
     {% include swiperjs.html %}
     {% include weui.html %}
-    {% if page.layout == "yybm" %}
-          <script>
-            $("#time-format").datetimePicker({
-                   title: '自定义格式',
-                   yearSplit: '年',
-                   monthSplit: '月',
-                   dateSplit: '日',
-                   times: function () {
-                   return [  // 自定义的时间
-                       {
-                       values: (function () {
-                           var hours = [];
-                           for (var i=0; i<24; i++) hours.push(i > 9 ? i : '0'+i);
-                           return hours;
-                       })()
-                       },
-                       {
-                       divider: true,  // 这是一个分隔符
-                       content: '时'
-                       },
-                       {
-                       values: (function () {
-                           var minutes = [];
-                           for (var i=0; i<59; i++) minutes.push(i > 9 ? i : '0'+i);
-                           return minutes;
-                       })()
-                       },
-                       {
-                       divider: true,  // 这是一个分隔符
-                       content: '分'
-                       }
-                   ];
-                   },
-                   onChange: function (picker, values, displayValues) {
-                   console.log(values);
-                   }
-               });
-           </script>
-    {% endif %}
     {% include form.html %}
 </body>
 </html>

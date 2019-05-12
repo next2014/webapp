@@ -18,7 +18,19 @@ title: 美食天地
         font-size: 14px;
    }
 </style>
-{% include swiper2.html %}
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+        {% for entry in site.data.swiper %}
+            {% for swiper in entry.glpzkdc %}
+                <div class="swiper-slide">
+                    <img src="{{swiper.src}}" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
 <div class="p-2 bg-light text-dark"><i class="fa fa-clock-o"></i> 营业时间：10:00 - 21:00</div>
 {% for entry in site.data.examples %}
     {% for example in entry.meishitd %}

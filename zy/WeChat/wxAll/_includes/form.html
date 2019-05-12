@@ -1,9 +1,8 @@
-
-<script src="assets/js/layui.js"></script>
 <script>
-    layui.use('form', function () {
+    layui.use(['form', 'laydate'], function () {
         var $ = layui.jquery
             , form = layui.form
+            , laydate = layui.laydate
 
         //自定义验证规则
         form.verify({
@@ -14,16 +13,11 @@
             }
         });
 
-        //初始赋值
-        // form.val('first', {
-        //     'name': '测试测试测试测试'
-        //     , 'phone': 11111111111
-        //     , 'address': '广东惠州欧美城文化有限公司'
-        //     , 'interest': 3
-        //     , 'like[write]': true
-        //     , 'desc': 'form 是我们非常看重的一块'
-        //     , xxxxxxxxx: 123
-        // });
+       //某个时间在当前时间的多久前
+        laydate.render({
+            elem: '#appytime'
+            ,type: 'datetime'
+        });
 
         //监听提交
         form.on('submit(*)', function (data) {
@@ -31,5 +25,6 @@
             alert(JSON.stringify(data.field));
             return false;
         });
-});
+
+    });
 </script>

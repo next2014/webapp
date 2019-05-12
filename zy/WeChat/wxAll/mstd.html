@@ -48,7 +48,19 @@ title: 美食天地
         color: #fff;
     }
 </style>
-{% include swiper2.html %}
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+        {% for entry in site.data.swiper %}
+        {% for swiper in entry.meishitd %}
+            <div class="swiper-slide">
+                <img src="{{swiper.src}}" class="d-block w-100" alt="">
+            </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
 {% for entry in site.data.examples %}
     {% for example in entry.meishitd %}
      {% if forloop.first %}<div class="container p-2 m-scene">{% endif %}

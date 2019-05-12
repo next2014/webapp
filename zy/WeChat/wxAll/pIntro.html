@@ -2,10 +2,22 @@
 layout: default
 title: 欧美城文化小镇
 ---
-<div class="p-3 text-center">
+<div class="p-2 text-center">
     <img src="assets/img/logo.png" class="w-75 mb-2 mt-2" alt="">
-    <img src="assets/img/fengxiang.png" class="w-100 mb-2" alt="">
-    {% include swiper.html %}
+    <img src="assets/img/fengxiang.png" class="w-100 mb-2" alt="">      
+    <div class="swiper-container carousel">
+        <div class="swiper-wrapper">
+          {% for entry in site.data.swiper %}
+            {% for swiper in entry.project %}
+                <div class="swiper-slide">
+                    <img src="{{swiper.src}}" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
 </div>
 {% for entry in site.data.examples %}
   {% for example in entry.introduct %}
@@ -26,9 +38,4 @@ title: 欧美城文化小镇
     {% if forloop.last %}</div>{% endif %}
   {% endfor %}
 {% endfor %}
-<div style="position:relative">
-    <div class="p-5 mt-5 text-center">
-        <p class="mb-5"><img class="img-fluid mx-auto border" src="assets/img/hz-m.png" width="120" height="120" alt=""/></p>
-    </div>
-    <div class="bgImg" style="background: url(assets/img/bg.png) no-repeat;opacity:0.65; background-size:100%; background-position: bottom"></div>
-</div>
+{% include footer1.html %}
