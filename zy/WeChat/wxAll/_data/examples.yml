@@ -84,60 +84,60 @@
       url: pages/detail_06.html
       content: 
 
-- category: 欧美城美食天地介绍
+- category: 欧美城美食天地
   meishitd:
     - name: 欧爸食堂
       paihang: 1
-      title: a3
+      title: 3
       index: 1
       num: 3
       url: http://hzomsell.m.rc-yiding.com?storeId=12
       content: 中式快餐是相对于西式快餐而言的，以中国人餐饮习惯为基础，结合快餐的某些元素，是一种全新的属于中国本土的餐饮形式。中式快餐以独特的适合国人的“中国味道”吸引着时尚一族。欧爸食堂结合游客的不同口味需求，推出各式饭类营养套餐，炒饭、粉、面类便餐，这更是满足了游客短时间游玩的饮食需要。
     - name: 欧妈美食坊
       paihang: 2
-      title: a4
+      title: 4
       index: 2
       num: 4
       url: http://hzomsell.m.rc-yiding.com?storeId=11
       content: 茶点在广东早茶中的地位也很重要。茶点分为干湿两种，干点有饺子、粉果、包子、酥点等，湿点则有粥类、肉类、龟苓膏、豆腐花等。其中又以干点做得最为精致，卖相甚佳。欧妈美食坊集茗茶、炖盅以及各种粤式点心于一身，满足广东乃至全国各地游客朋友对口味以及营养的需求。
     - name: 美美甜品屋
       paihang: 3
-      title: a5
+      title: 5
       index: 3
       num: 5
       url: http://hzomsell.m.rc-yiding.com?storeId=21
       content: 甜点屋是一个充满了梦想的地方。在这里，你可想象自己是一位公主、王子，自己是个魔法师，是一个可爱的巫女小姐。这里并不仅仅是小孩子们喜欢的地方，很多大人也很喜欢吃甜点。喜欢吃甜点的孩子都是怀有美好梦想的人。大家可以在这里找到好朋友，一起聊天，像自己的小伙伴们倾诉自己心中的梦。美美甜品屋为来自各地的游客提供美味可口的各式精致甜品。让自己的闲暇时光变得更加充实、满足。
     - name: 欧欧西餐厅
       paihang: 4
-      title: a6
+      title: 6
       index: 4
       num: 6
       url: http://hzomsell.m.rc-yiding.com?storeId=19
       content: 西餐，准确称呼为欧洲美食，西餐这个词是由于其特定的地理位置所决定的。西餐的主要特点是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。正规西菜而言应包括了餐汤、前菜、主菜、餐后甜品及饮品。欧欧西餐厅包含西式小吃、汉堡套餐、西式焗饭，披萨等各式西西式美食，可供各地游客品尝西方美食的风味。
     - name: 铁板西式工坊
       paihang: 5
-      title: a7
+      title: 7
       index: 5
       num: 7
       url: http://hzomsell.m.rc-yiding.com?storeId=17
       content: 铁板烧起源于日本，是一种西餐和中餐的结合，它拥有悠久历史，铁板烧最早发源于日本的西餐，由此而产生了把厨房搬到外面，和客人进行交流，让客人在进餐的同时能够欣赏到厨师厨艺的一种餐饮形式。慢慢的，这种饮食文化传到台湾，在台湾又经过三十年的发展和改良，衍生出一种具有法式、中式和日式相结合的新的饮食方式，称为法式铁板烧。
     - name: 泰香了泰式餐馆
       paihang: 6
-      title: a8
+      title: 8
       index: 6
       num: 8
       url: http://hzomsell.m.rc-yiding.com?storeId=18
       content: 泰国菜，泛指泰国民族的饮食文化。也叫做泰国料理（Thai Food）。泰国菜以酸、辣、咸、甜、苦五味的平衡为特点。用料主要以海鲜、水果、蔬菜为主。泰国菜有四大菜系，分别为泰北菜、泰东北菜、泰中菜、与泰南菜，反映泰国四方不同的地理和文化，而各地使用的食材往往跟邻近国家的一样。招牌菜有冬阴功(酸辣海鲜汤)、椰汁嫩鸡汤、咖喱鱼饼、绿咖喱鸡肉、芒果香饭等。
     - name: 老牌洪氏潮卤
       paihang: 7
-      title: a1
+      title: 1
       index: 1
       num: 1
       url: http://hzomsell.m.rc-yiding.com?storeId=9
       content: 潮汕卤鹅，是广东潮汕地区的传统名菜，属于潮菜系。潮汕特产的狮头鹅，肉质肥美，卤鹅是地方风味食品，香滑入味，肥而不腻。以酱油、冰糖、桂皮、砂仁、豆蔻、八角、南姜、加饭酒、蒜头、香菇等卤制而成。2018年9月，被评为“中国菜”之广东十大经典名菜。
     - name: 韩食
       paihang: 8
-      title: a2
+      title: 2
       index: 2
       num: 2
       url: http://hzomsell.m.rc-yiding.com?storeId=10

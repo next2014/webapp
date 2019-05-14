@@ -6,12 +6,26 @@
 
         //自定义验证规则
         form.verify({
-            title: function (value) {
-                if (value.length < 5) {
-                    return '标题也太短了吧';
+            name: function (value) {
+                if (value.length < 1) {
+                    return '请填写参赛姓名';
                 }
             }
+            , number: function (value) {
+                if (value.length < 11) {
+                    return '手机号码必须填写11位数';
+                }
+            }
+            // , number: [/(.+){11}$/, '手机号码填写必须11位']
         });
+
+       //初始赋值
+    //   form.val('first', {
+    //     'title': '在线报名'
+    //     , 'phone': 13400000000
+    //     , 'name': ''
+    //   });
+
 
        //某个时间在当前时间的多久前
         laydate.render({
@@ -22,7 +36,7 @@
         //监听提交
         form.on('submit(*)', function (data) {
             console.log(data)
-            alert(JSON.stringify(data.field));
+            layer.msg('恭喜您报名成功', {icon: 1});
             return false;
         });
 

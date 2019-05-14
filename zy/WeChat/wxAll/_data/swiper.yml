@@ -14,25 +14,25 @@
 - category: 美食天地所有门店
   meishitd:
     - number: 1
-      src: assets/img/meishi_img/01.jpg
+      src: 1
     - number: 2
-      src: assets/img/meishi_img/3.jpg
+      src: 3
     - number: 3
-      src: assets/img/meishi_img/4.jpg
+      src: 4
     - number: 4
-      src: assets/img/meishi_img/5.jpg
+      src: 5
     - number: 5
-      src: assets/img/meishi_img/6.jpg
+      src: 6
 
 - category: 格林披志卡丁车
   glpzkdc:
     - number: 1
-      src: assets/img/glpz_img/01.jpg
+      src: 1
     - number: 2
-      src: assets/img/glpz_img/02.jpg
+      src: 2
     - number: 3
-      src: assets/img/glpz_img/03.jpg
+      src: 3
     - number: 4
-      src: assets/img/glpz_img/04.jpg
+      src: 4
     - number: 5
-      src: assets/img/glpz_img/05.jpg
+      src: 5
