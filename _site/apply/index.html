@@ -19,7 +19,6 @@
 
 <!-- layui -->
 <link rel="stylesheet" href="assets/css/layui.css">
-<link rel="stylesheet" href="src/css/modules/layer/default/layer.css">
 </head>
 <body>
     <style>
@@ -74,24 +73,24 @@
     <div class="title p-2 border-bottom">
         <h4><i class="fa fa-pencil-square-o text-secondary mr-1"></i><strong>520卡丁车情侣邀请赛-在线报名</strong></h4>
     </div>
-    <form  name="form" method="post" class="layui-form layui-form-pane1" action="./" lay-filter="first" style="width:100%">
+      <form class="layui-form layui-form-pane1" action="" lay-filter="first" style="width:100%" id="form" runat="server">
         <div class="layui-form apply-form" style="width:100%">
             <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
                 <label class="layui-form-label text-left pr-0 mb-0">手机号码<span class="text-danger">*</span></label>
                 <div class="layui-input-block">
-                    <input type="tel" name="phone" lay-verify="number" placeholder="请输入手机号码" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                    <input type="tel" name="phone" lay-verify="number" required placeholder="请输入手机号码" lay-verType="tips" autocomplete="off" class="layui-input border-0">
                 </div>
             </div>
             <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
                 <label class="layui-form-label text-left pr-0 mb-0">参赛姓名<span class="text-danger">*</span></label>
                 <div class="layui-input-block">
-                    <input type="text" name="name1" lay-verify="name" placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                    <input type="text" name="name1" lay-verify="name" required placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
                 </div>
             </div>
             <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
                 <label class="layui-form-label text-left pr-0 mb-0">参赛姓名<span class="text-danger">*</span></label>
                 <div class="layui-input-block">
-                    <input type="text" name="name2" lay-verify="name" placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                    <input type="text" name="name2" lay-verify="name" required placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
                 </div>
             </div>
             <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
@@ -153,28 +152,33 @@
     
 <script src="assets/js/gallery.js"></script>
 <script>
-    layui.use('form', function () {
-        var $ = layui.jquery
-            , form = layui.form
-            , laydate = layui.laydate
+layui.use('form', function () {
+	var $ = layui.jquery
+		, form = layui.form
+		, laydate = layui.laydate
 
-        //自定义验证规则
-        form.verify({
-            name: function (value) {
-                if (value.length < 1) {
-                    return '请填写参赛姓名';
-                }
-            }
-            , number: function (value) {
-                if (value.length < 11) {
-                    return '手机号码必须填写11位数';
-                }
-            }
-        });
+	//自定义验证规则
+	form.verify({
+		name: function (value) {
+			if (value.length < 1) {
+				return '请填写参赛姓名';
+			}
+		}
+		, number: function (value) {
+			if (value.length < 11) {
+				return '手机号码必须填写11位数';
+			}
+		}
+	});
 
-       
+	//监听提交
+	form.on('submit(*)', function (data) {
+		console.log(data)
+		layer.msg('恭喜您报名成功', {icon: 1});
+		return false;
+	});
 
-    });
+});
 </script>
 </body>
 </html>
