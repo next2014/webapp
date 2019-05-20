@@ -2,6 +2,11 @@
 layout: pages
 title: 门票预订
 ---
+<style>
+  .noMore{
+    text-align:center; display:block;height:1.4rem; line-height:1.4rem; color:#999;
+  }
+</style>
 <form id="register-form" action="ticketConfirm.html">
     <div class="ti_all">
         <!-- S 轮播 -->
@@ -15,7 +20,7 @@ title: 门票预订
                 <span class="fr" id="DiscountPrice">¥ <em>80</em></span>
             </div>
             <div class="piao_type" id="tourDate_id">
-                <h3 class="fl">游玩日期</h3>
+                <h3 class="fl">游玩日期1</h3>
                 <div class="fr time">
                     <input datatype="*" id="TourDate" nullmsg="请选择游玩日期！" name="TourDate" size="16" type="text" value="" class="mbsc-comp" readonly="">
                     <i class="layui-icon layui-icon-date" id="TourDateIcon"></i>
@@ -37,7 +42,7 @@ title: 门票预订
       <div class="ti_words">
             <div class="weui-tab">
                 <div class="mod_int weui-navbar border-bottom">
-                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
+                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab1">
                         <span class="mod_int_tab_text">购票须知</span>
                         <div class="bottom_line"></div>
                     </a>
@@ -45,24 +50,24 @@ title: 门票预订
                         <span class="mod_int_tab_text">入园须知</span>
                         <div class="bottom_line"></div>
                     </a>
-                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab3">
+                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab3">
                         <span class="mod_int_tab_text">内容详情</span>
                         <div class="bottom_line"></div>
                     </a>
                 </div>
                 <div class="weui-tab__bd">
-                    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <div id="tab1" class="weui-tab__bd-item">
                     {% include modules/ticketDetailsNew/mod_pos1.html %}
                     </div>
                     <div id="tab2" class="weui-tab__bd-item">
                     {% include modules/ticketDetailsNew/mod_pos2.html %}
                     </div>
-                    <div id="tab3" class="weui-tab__bd-item">
+                    <div id="tab3" class="weui-tab__bd-item weui-tab__bd-item--active">
                     {% include modules/ticketDetailsNew/mod_pos3.html %}
                     </div> 
                 </div>
             </div>
-            <span class="noMore" style="text-align:center; display:block;height:1.4rem; line-height:1.4rem; color:#999;">没有更多</span>
+            <span class="noMore">没有更多</span>
       </div>
     </div>
     <div class="in_btn ti_btn">
