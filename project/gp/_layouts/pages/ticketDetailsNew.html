@@ -20,7 +20,7 @@ title: 门票预订
                 <span class="fr" id="DiscountPrice">¥ <em>80</em></span>
             </div>
             <div class="piao_type" id="tourDate_id">
-                <h3 class="fl">游玩日期1</h3>
+                <h3 class="fl">游玩日期</h3>
                 <div class="fr time">
                     <input datatype="*" id="TourDate" nullmsg="请选择游玩日期！" name="TourDate" size="16" type="text" value="" class="mbsc-comp" readonly="">
                     <i class="layui-icon layui-icon-date" id="TourDateIcon"></i>
@@ -35,14 +35,18 @@ title: 门票预订
             <div class="piao_type">
                 <h3 class="fl">购买数量</h3>
                 <div class="fr">
-                  {% include components/amount/amount.html %}
+                    <div class="Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                    </div>
                 </div>
             </div>
       </div>
       <div class="ti_words">
             <div class="weui-tab">
                 <div class="mod_int weui-navbar border-bottom">
-                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab1">
+                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
                         <span class="mod_int_tab_text">购票须知</span>
                         <div class="bottom_line"></div>
                     </a>
@@ -50,20 +54,20 @@ title: 门票预订
                         <span class="mod_int_tab_text">入园须知</span>
                         <div class="bottom_line"></div>
                     </a>
-                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab3">
+                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab3">
                         <span class="mod_int_tab_text">内容详情</span>
                         <div class="bottom_line"></div>
                     </a>
                 </div>
                 <div class="weui-tab__bd">
-                    <div id="tab1" class="weui-tab__bd-item">
-                    {% include modules/ticketDetailsNew/mod_pos1.html %}
+                    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active"">
+                    {% include ticketDetailsNew/mod_pos1.html %}
                     </div>
                     <div id="tab2" class="weui-tab__bd-item">
-                    {% include modules/ticketDetailsNew/mod_pos2.html %}
+                    {% include ticketDetailsNew/mod_pos4.html %}
                     </div>
-                    <div id="tab3" class="weui-tab__bd-item weui-tab__bd-item--active">
-                    {% include modules/ticketDetailsNew/mod_pos3.html %}
+                    <div id="tab3" class="weui-tab__bd-item">
+                    {% include ticketDetailsNew/mod_pos3.html %}
                     </div> 
                 </div>
             </div>
