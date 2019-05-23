@@ -33,7 +33,7 @@ a:hover{ color:#F90}
 .r_f{ float:right}
 .l_f{ float:left}
 .mleft{ margin-left:10px;}
-.margin{ margin:15px;}
+.margin{ margin:10px;}
 .border{ border:1px solid #ddd; padding:5px; line-height:36px; margin-bottom:20px; }
 .border  span{ display:block; height:100%;}
 .alert { margin-top:20px;}
@@ -49,8 +49,7 @@ body
 }
 .page-content {
     background: #fff;
-    margin: 0;
-    padding:0px 15px;
+    padding:10px!important;
 }
 .Tips_content{ margin-top:20px; line-height:32px;}
 .Tips_content .score_style li{ float:none;}
@@ -69,11 +68,11 @@ body
 	border-right:1px solid #ffffff; 
 	text-align:center;	
 	display: inline-block;
-	overflow: 
-	hidden;float:left
+	overflow: hidden;
+	float:left
 }
 .Manager_style,
-.search_style{ position:relative; margin-top:20px; }
+.search_style{ position:relative; }
 #parentIframe,#parentIfour{ display:none;}
 .Manager_style .title_name,
 .search_style .title_names{ position:absolute; top:-20px; font-size:18px; background-color:#ffffff; padding:5px 20px; left:10px;}
@@ -209,7 +208,7 @@ body
 .state-overview .symbol, .state-overview .value {display: inline-block;text-align: center;}
 .state-overview .panel{border:1px solid #dddddd; margin-bottom:15px;}
 /***********************搜索查询***********************/
-.search_style{ margin-bottom:20px;}
+.search_style{ margin-bottom:20px;margin-top:20px; }
 .search_style .search_content li{ margin-right:20px; float:left; line-height:30px;}
 .search_style .search_content li .btn_search{
 	 height:32px; 
@@ -341,7 +340,7 @@ body
 .p_select_list .seach_style{ position:relative;}
 .p_select_list .seach_style i{ position:absolute; left:5px; color:#999; top:3px;}
 .left_produt .select{border-bottom:1px solid #dddddd;}
-#add_brand .title_name{ position:fixed;z-index:233}
+/* #add_brand .title_name{ position:fixed;z-index:233} */
 .p_select_list .Switching_btn{ width:80px; margin:0px 10px; float:left}
 .p_select_list .Switching{ display:block; margin:10px 0px}
 .p_select_list .Switching .btn{ width:80px;}
@@ -357,8 +356,8 @@ body
 /*********************品牌详细信息样式属性***********************/
 .brand_detailed{}
 .brand_detailed .brand_info{ border:1px solid #dddddd; margin-top:30px; position:relative; margin-bottom:20px}
-.brand_detailed .title_brand{font-size:18px; color:#F63; background-color:#FFF; position:absolute; top:-20px; left:0px; padding:0px 10px;  text-align:center; height:40px; line-height:40px;}
-.brand_detailed .Info_style{ padding:20px 0px;   margin-right:160px; position:relative; left:0px; top:0px;}
+.brand_detailed .title_brand{font-size:18px; color:#333333; background-color:#ddd; position:absolute; top:-20px; left:0px; padding:0px 10px;  text-align:center; height:40px; line-height:40px;margin:0 10px;}
+.brand_detailed .Info_style{ padding:20px;   margin-right:160px; position:relative; left:0px; top:0px;}
 .brand_detailed .Info_style li{ width:250px; float:left; height:40px; line-height:40px;}
 .brand_detailed .Info_style .b_Introduce{ width:100%; height:auto; position:relative}
 .brand_detailed .Info_style .b_Introduce .name{ line-height:24px; margin-left:80px; position:relative; top:-30px;}
@@ -462,7 +461,7 @@ body
 #form-article-add .cl .Add_p_s{ width:240px; position:relative; min-height:35px; float:left; margin-bottom:15px;}
 #form-article-add .cl .Add_p_s .input-text,
 #form-article-add .cl .Add_p_s .select{width:85%; margin-right:5px;}
-#form-article-add .formControls{ width: auto; margin-left:20px; top:0px; float:left}
+#form-article-add .formControls{ width: auto; margin-left:10px; top:0px; float:left}
 #form-article-add .formControls.col-10{ position:relative; width:90%; margin-left:10px}
 #form-article-add .formControls.col-10 textarea{ margin-left:0px; width:100%; height:250px;}
 #form-article-add .formControls.w_txt{ width:500px;}
@@ -655,20 +654,20 @@ body
 /********************************广告界面样式属性*************************/
 .Ads_list,
 .order_list_style{ padding:15px;margin-left:220px; float:right; position: absolute; overflow:auto;}
-.Ads_list .ad_img{ overflow:hidden; height:80px; display:block}
+.Ads_list .ad_img{ overflow:hidden; height:80px; display:block;text-align: center}
 .Ads_list.Widescreen,
 .order_list_style.Widescreen { margin-left:0px;}
 #add_ads_style .add_adverts{ padding:15px;}
 #add_ads_style .add_adverts li{ height:32px; line-height:30px; margin:10px 0px;}
 #add_ads_style .add_adverts li .label_name{ width:80px; float:left;text-align:right}
 #add_ads_style .add_adverts li .cont_style{ float:left; width:600px; position:relative;}
-#add_ads_style .add_adverts li .cont_style select.form-control{ width:220px; margin-left:10px}
+#add_ads_style .add_adverts li .cont_style select.form-control{ width:220px;margin-left: 10px;}
 #add_ads_style .add_adverts li .cont_style .logoupload{ margin-left:10px; position:relative}
 #add_ads_style .add_adverts li .cont_style  .prompt{ color:#F33; position:absolute; top:0px; right:0px;}
 #add_ads_style .add_adverts li .cont_style .logobox{ width:594px; height:120px; border:1px solid #dddddd; text-align:center; margin-left:10px; padding:1px; margin-bottom:10px;}
 /****************/
 .sort_style,
-.sort_adsadd_style{ margin-top:15px;}
+/* .sort_adsadd_style{ margin-top:15px;} */
 .sort_list .table{ font-size:12px}
 .sort_style_add li{ line-height:32px; margin:10px 0px;}
 .sort_style_add li .wordage,
@@ -704,7 +703,7 @@ body
 /**********************系统样式属性********************/
 .stystems_style{}
 .stystems_style .tab-content .form-group .control-label i{ color:#F63}
-.stystems_style .tab-content .form-group .textarea{ width:100%;resize: none; margin-left: 10px; height:200px;}
+.stystems_style .tab-content .form-group .textarea{ width:100%;resize: none; height:200px;}
 /*********************************验证样式属性*********************************/
 #form-admin-add .input-text, #form-admin-add .textarea {
     box-sizing: border-box;
@@ -789,15 +788,16 @@ body
 .defray_style .defray_list .defray_content li.description{padding:10px; font-size:14px; color:#999; border-bottom:1px solid #dddddd; text-align:left; height:90px; line-height:24px; overflow:hidden}
 .defray_style .defray_list .defray_content .defray_name{ height:40px; line-height:40px; background-color:#00a5e5; color:#ffffff}
 /********************支付详细********************/
-#add_payment_style li{ float: left; width:150px; margin-bottom:10px;}
+#add_payment_style li{ float: left; width:150px;}
+#add_payment_style li label{ width:100%; }
 #add_payment_style .payment_list{ display:block; border:1px  solid #dddddd; padding:10px;}
-#add_payment_style .add_content{ border:1px solid #dddddd; padding:10px; margin:0px 15px; display:none}
+#add_payment_style .add_content{ border:1px solid #dddddd; padding:10px; margin:15px; display:none}
 #add_payment_style .add_content li{ display:block; margin-bottom:10px; float:none; width:100%; height:100%}
 #add_payment_style .add_content li .label_name{ float:left; width:100px; text-align:right; height:32px; line-height:32px;}
-#add_payment_style .add_content li  span{ float:left; display:block; width:500px; line-height:32px;}
-#add_payment_style .add_content li .form-control{ width:300px; margin-left:10px;}
-#add_payment_style .add_content li .form-textarea{width: 400px;height: 100px;resize: none; margin-left: 10px;}
-.Payment_details{}
+#add_payment_style .add_content li  span{ float:left; display:block; width:500px; line-height:32px; margin-left:10px;}
+#add_payment_style .add_content li  span input{padding: 0 10px!important;}
+#add_payment_style .add_content li .form-control{ width:300px;}
+#add_payment_style .add_content li .form-textarea{width: 400px;height: 100px;resize: none;}
 .Payment_details .bank_style .title_name{ font-size:16px; height:40px; line-height:40px; border-bottom:1px solid #dddddd; padding:0px 20px;}
 .Payment_details .bank_style .bank_list{ padding:10px;}
 .Payment_details .bank_style .bank_list li{ width:200px; float:left; margin-bottom:10px; position:relative;}
@@ -1076,7 +1076,7 @@ body
 .detailed_style .shop_content li .info{ display:block; float:left; margin-left:10px;}
 .Store_Introduction{ border:1px solid #dddddd; position: relative; margin-top:35px;}
 .Store_Introduction .title_name{ background-color:#FFF; position:absolute; top:-20px; font-size:18px; left:20px !important; padding:5px 20px;}
-.Store_Introduction .info{ margin:20px; line-height:24px;}
+.Store_Introduction .info{ margin:30px 20px; line-height:24px;}
 .detailed_style .shop_content li.shop_name .Authenticate{ margin-left:10px; float:left;}
 .detailed_style .shop_content li.shop_name .Authenticate i{ background-image:url(../images/renz-icon.png); background-repeat:no-repeat; width:34px; height:34px; margin:0px 5px}
 .Authenticate i.icon-grxx{ background-position: -45px -40px;}
@@ -1089,17 +1089,21 @@ body
 .shop_reason .form-control{ width:568px; height:200px; resize:none; margin-left:0px}
 /**************************金额***************************/
 .amounts_style .transaction_Money{ border:1px solid #dddddd; margin-bottom:15px;}
-.amounts_style .transaction_Money .Money{ min-width:200px; position:relative; float:left; border-right:1px solid #dddddd; text-align:center; font-size:18px; color: #F33; line-height:80px;height:100px;}
+.amounts_style .transaction_Money .Money{ min-width:200px; position:relative; float:left; border-right:1px solid #dddddd; text-align:center; font-size:18px; color: #F33; line-height:80px;height:95px;}
 .amounts_style .transaction_Money .Money em{ font-size:12px}
 .amounts_style .transaction_Money .Money span{ padding:0px 10px;}
 .amounts_style .transaction_Money .Money p{ font-size:14px; color:#999; background-color:#ededed; border-top:1px dashed #dddddd; position:absolute; bottom:0px; height:30px; line-height:30px; width:100%}
 .amounts_style .Statistics_btn{ margin-left:13px}
 .amounts_style .Statistics_btn i.bigger{ font-size:32px}
 .amounts_style .Statistics_btn a.btn{ margin-top:13px;}
-
-
 .text_add{
 	padding: 0 10px;
     margin-left: 10px;
     height: 30px;
+}
+.btn{
+	border:0!important;
+}
+.search_content select{
+	margin-left: 10px;
 }

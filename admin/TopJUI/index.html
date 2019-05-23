@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="keywords" content='easyui,jui,jquery easyui,easyui demo,easyui中文' />
-    <meta name="description" content='TopJUI前端框架，基于最新版EasyUI前端框架构建，纯HTML调用功能组件，不用写JS代码的EasyUI，专注你的后端业务开发！' />
+    <meta name="description" content='' />
     <title>欧美城-海洋馆OA管理系统</title>
     <!-- 浏览器标签图片 -->
     <link rel="shortcut icon" href="./topjui/images/favicon.ico" />
@@ -91,16 +91,25 @@
             padding: 0;
         }
 
-        /*.nav-bar .nav-btn:hover,.nav-bar .nav-group li:hover,.nav-bar .nav-group li a:hover{*/
-        /*background: #367fa9;*/
-        /*color:white;*/
-        /*}*/
         .nav-group .bannerMenu {
             padding: 5px 0;
         }
 
         .hide {
             display: none !important;
+        }
+  
+        @media (min-width: 700px) { 
+            .mainbox{
+                display: flex; 
+                height: 750px;
+            }
+        }
+        @media (min-width: 1800px) {
+            .mainbox{
+                display: flex; 
+                height: 870px;
+            }
         }
     </style>
 </head>
@@ -128,15 +137,13 @@
     </div>
 
     <div data-toggle="topjui-layout" data-options="id:'index_layout',fit:true">
-
         <div id="north" class="banner" data-options="region:'north',border:false,split:false" style="height: 50px; padding:0;margin:0; overflow: hidden;">
-
             <div class="nav-bar">
                 <div class="nav-left webname">
-                    海洋馆OA管理系统
+                    欧美城OA管理系统
                     <span class="collapseMenu fa fa-chevron-circle-left" style="text-align: center;cursor: pointer;font-size: 18px;"></span>
                 </div>
-                <div class="nav-right" style="width:auto">
+                <!-- <div class="nav-right" style="width:auto">
                     <span style=" padding-right: 8px; height: 50px; line-height: 50px;">
                         <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true" style="color:#fff;">设置</a>
                         <div id="mm3" style="width:74px;">
@@ -147,7 +154,7 @@
                         <a href="javascript:void(0)" onclick="logout()" data-toggle="topjui-menubutton"
                             data-options="iconCls:'fa fa-sign-out',hasDownArrow:false" style="color:#fff;">注销</a>
                     </span>
-                </div>
+                </div> -->
 
                 <div class="nav-center">
                     <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
@@ -226,33 +233,34 @@
 
         </div>
 
-        <div id="west" data-options="region:'west',split:true,width:245,border:false,headerCls:'border_right',bodyCls:'border_right'" title="" iconCls="fa fa-dashboard">
-            <div id="RightAccordion"></div>
-            <!-- <div id="menuTab" data-toggle="topjui-tabs" data-options="fit:true,border:false">
-                <div title="导航菜单" data-options="iconCls:'fa fa-sitemap'" style="padding:0;">
-                    <div id="RightAccordion" class="topjui-accordion"></div>
+        <div class="mainbox">
+            <div id="west" data-options="region:'west',split:true,width:245,border:false,headerCls:'border_right',bodyCls:'border_right'" title="" iconCls="fa fa-dashboard" style="width:12.5%">
+                <div id="RightAccordion"></div>
+                <div id="menuTab" data-toggle="topjui-tabs" data-options="fit:true,border:false">
+                    <div title="导航菜单" data-options="iconCls:'fa fa-sitemap'" style="padding:0;">
+                        <div id="RightAccordion" class="topjui-accordion"></div>
+                    </div>
+                    <div title="常用链接" data-options="iconCls:'fa fa-star',closable:true">
+                        <ul id="channgyongLink"></ul>
+                    </div>
                 </div>
-                <div title="常用链接" data-options="iconCls:'fa fa-star',closable:true">
-                    <ul id="channgyongLink"></ul>
+            </div>
+    
+            <div id="center" data-options="region:'center',border:false" style="overflow:hidden;width:87.5%;">
+                <div id="index_tabs" style="width:100%;height:100%">
+                    <div title="系统首页" iconCls="fa fa-home" data-options="border:true,iframe:true,content:'<iframe src=\'./html/portal/index.html\' scrolling=\'auto\' frameborder=\'0\' style=\'width:100%;height:100%;\'></iframe>'"></div>
                 </div>
-            </div> -->
-        </div>
-
-        <div id="center" data-options="region:'center',border:false" style="overflow:hidden;">
-            <div id="index_tabs" style="width:100%;height:100%">
-                <div title="系统首页" iconCls="fa fa-home" data-options="border:true,iframe:true,content:'<iframe src=\'./html/portal/index.html\' scrolling=\'auto\' frameborder=\'0\' style=\'width:100%;height:100%;\'></iframe>'"></div>
             </div>
         </div>
 
+
         <div data-options="region:'south',border:true"
             style="text-align:center;height:30px;line-height:30px;border-bottom:0;overflow:hidden;">
-            <span style="float:left;padding-left:5px;width:30%;text-align: left;">当前用户：欧美人</span>
-            <span style="padding-right:5px;width:40%">
+            <span style="float:left;padding-left:5px;width:12.5%;text-align: left;">当前用户：欧美人</span>
+            <span style="padding-right:5px;width:57.5%;display: block">
                 版权所有 © 2019 <a href="" target="_blank">广东欧美城文化有限公司</a>
             </span>
-            <span style="float:right;padding-right:5px;width:30%;text-align: right;">
-               版本：<script>document.write(topJUI.version)</script>
-            </span>
+            <span style="float:right;padding-right:5px;width:30%;text-align: right;"></span>
         </div>
     </div>
 

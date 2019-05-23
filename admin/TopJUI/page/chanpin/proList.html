@@ -83,7 +83,7 @@
                 <th data-options="field:'city',title:'所属地区/国家',sortable:true"></th>
                 <th data-options="field:'add_date',title:'加入时间',sortable:true"></th>
                 <th data-options="field:'appy_static',title:'审核状态',sortable:true"></th>
-                <th data-options="field:'static',title:'状态',formatter:progressFormatter,"></th>
+                <!-- <th data-options="field:'static',title:'状态',formatter:progressFormatter,"></th> -->
                 <th data-options="field:'operate',title:'操作',formatter:operateFormatter,width:120"></th>
                 <!-- <th data-options="field:'rate',title:'完成率',sortable:true,formatter:progressFormatter"></th> -->
             </tr>
@@ -150,7 +150,7 @@
     }
 
     function openEditDiag(uuid) {
-        var $editDialog = $('<form  id="myDialog" method="get"></form>'); // 创建form表单元素
+        var $editDialog = $('<form id="myDialog" method="get"></form>'); // 创建form表单元素
         $editDialog.iDialog({
             title: '编辑数据',
             width: 950,

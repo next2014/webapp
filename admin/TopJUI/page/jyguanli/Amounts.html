@@ -25,7 +25,7 @@
     <title>交易金额</title>
 </head>
 <body>
-    <div class="margin clearfix">
+    <div class="clearfix" style="background-color: #ffffff;padding:10px;" >
         <div class="amounts_style">
             <div class="transaction_Money clearfix">
                 <div class="Money"><span>成交总额：1.2234.3456.00元</span>
@@ -113,7 +113,6 @@
         var oTable1 = $('#sample-table').dataTable({
             "aaSorting": [],//默认第几个排序
             "bStateSave": false,//状态保存
-            //"dom": 't',
             "bFilter": false,
             "aoColumnDefs": [
                 //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
@@ -146,7 +145,7 @@
     //统计
     require.config({
         paths: {
-            echarts: './assets/dist'
+            echarts: '../../static/web/assets/dist'
         }
     });
     require(
