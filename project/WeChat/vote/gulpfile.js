@@ -3,8 +3,6 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var imagemin 　 = require('gulp-imagemin'); 
-var pngquant 　 = require('imagemin-pngquant');
 var minify      = require('gulp-minify-css');
 
 var messages = {
@@ -71,15 +69,15 @@ gulp.task('sass', function () {
 /**
  * 压缩图片
  */
-gulp.task('imagemin', function(){ 
-    return gulp.src('assets/img/*.{png,JPG,gif,ico}') 
-      .pipe(imagemin({ 
-        progressive: true, 
-        svgoPlugins: [{removeViewBox: false}],//不要移除svg的viewbox属性
-        use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
-      })) 
-      .pipe(gulp.dest('_site/assets/img')); 
-  });
+// gulp.task('imagemin', function(){ 
+//     return gulp.src('assets/img/*.{png,JPG,gif,ico}') 
+//       .pipe(imagemin({ 
+//         progressive: true, 
+//         svgoPlugins: [{removeViewBox: false}],//不要移除svg的viewbox属性
+//         use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
+//       })) 
+//       .pipe(gulp.dest('_site/assets/img')); 
+//   });
 
 /**
  * Watch scss files for changes & recompile
@@ -91,7 +89,7 @@ gulp.task('watch', function(){
     // gulp.watch('src/js/*.js',['js']);
     gulp.watch('assets/scss/*.scss', ['sass']);
     // gulp.watch('_less/*.less', ['less']);
-    gulp.watch(['assets/img/*'], ['imagemin']);
+    // gulp.watch(['assets/img/*'], ['imagemin']);
     gulp.watch(['*.html', '_layouts/*.html','_includes/*.html','_posts/*'], ['jekyll-rebuild']);
 });
 
@@ -101,4 +99,4 @@ gulp.task('watch', function(){
  * 默认任务，只运行`gulp`会编译sass，
  * 编译jekyll站点，启动BrowserSync并观看文件。
  */
-gulp.task('default', ['browser-sync', 'watch','imagemin']); 
+gulp.task('default', ['browser-sync', 'watch']); 

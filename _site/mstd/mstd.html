@@ -5,482 +5,208 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>美食天地</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/main.css" rel="stylesheet">
-<!-- 图标 -->
-<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
-<!-- animateion -->
-<link href="assets/css/keyframes.css" rel="stylesheet">
-<link href="assets/css/animation.css" rel="stylesheet">
-<link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
+    <!-- animateion -->
+    <link href="assets/css/keyframes.css" rel="stylesheet">
+    <link href="assets/css/animation.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
 </head>
 <body>
     <style>
-    .close{
-        color: #fff;
-        font-size:2.2rem;
-        opacity: 1;
-        width:30px;
-        height:30px;
-    }
-    .close span{
-        background: #333333;
-        height: 30px;
-        display: block;
-        line-height: 28px;
-        border-radius: 50px;
-    }
-    .rightclose{
-        position: absolute;
-        right: -7px;
-        top: -15px;
-        z-index: 1000;
-    }
-    .topImg{
-        height:200px;
-        overflow: hidden;
-        position: relative;
-    }
-    .topImg img{
-        position: absolute;
-        top:-18px;
-    }
-    .card-text{
-        height:160px;
-        text-indent: 2em;
-    }
-    i{
-        width: 22px;
-        height: 22px;
-        line-height:22px;
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        border-radius: 30px;
-        background-color: #ffbb00;
-        color: #fff;
-        font-size: 16px!important;
-    }
-    .border-1 {
-        border: 1px solid #eeeeee !important;
-    }
-    .card a:hover{
-        color:#333333
-    }
-</style>
-<div class="swiper-container carousel">
-    <div class="swiper-wrapper">
-        
-            
-        
-            
-                <div class="swiper-slide">
-                    <img src="assets/img/meishi_img/1.jpg" class="d-block w-100" alt="">
-                </div>
-            
-                <div class="swiper-slide">
-                    <img src="assets/img/meishi_img/3.jpg" class="d-block w-100" alt="">
-                </div>
-            
-                <div class="swiper-slide">
-                    <img src="assets/img/meishi_img/4.jpg" class="d-block w-100" alt="">
-                </div>
-            
-                <div class="swiper-slide">
-                    <img src="assets/img/meishi_img/5.jpg" class="d-block w-100" alt="">
-                </div>
-            
-                <div class="swiper-slide">
-                    <img src="assets/img/meishi_img/6.jpg" class="d-block w-100" alt="">
-                </div>
-            
-        
-            
-        
+        .close {
+            color: #fff;
+            font-size: 2.2rem;
+            opacity: 1;
+            width: 30px;
+            height: 30px;
+        }
+
+        .close span {
+            background: #333333;
+            height: 30px;
+            display: block;
+            line-height: 28px;
+            border-radius: 50px;
+        }
+
+        .rightclose {
+            position: absolute;
+            right: -7px;
+            top: -15px;
+            z-index: 1000;
+        }
+
+        .topImg {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .topImg img {
+            position: absolute;
+            top: -18px;
+        }
+
+        .card-text {
+            height: 160px;
+            text-indent: 2em;
+        }
+
+        i {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 30px;
+            background-color: #ffbb00;
+            color: #fff;
+            font-size: 16px !important;
+        }
+
+        .border-1 {
+            border: 1px solid #eeeeee !important;
+        }
+
+        .card a:hover {
+            color: #333333
+        }
+    </style>
+    <div class="swiper-container carousel shadow-sm w-100">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/01.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/2.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/3.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/4.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/5.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/img/meishi_img/6.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-</div>
+    <div class="container pl-2 pr-2 pb-2 pt-3 m-scene">
 
-    
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-1">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=19" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/ooxcw.png" width="" alt="欧欧西餐屋"/>
+            </a>
+        </div>
 
-    
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-2">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=10" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/hs.png" width="" alt="韩食" />
+            </a>
+        </div>
 
-    
-     <div class="container p-2 m-scene">
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-4">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro6" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">1</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a6.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">欧欧西餐厅</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-3">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=12" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/obmg.png" width="" alt="欧爸食堂" />
             </a>
         </div>
-       
-        <div class="modal fade" id="intro6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a6.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【欧欧西餐厅】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">西餐，准确称呼为欧洲美食，西餐这个词是由于其特定的地理位置所决定的。西餐的主要特点是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。正规西菜而言应包括了餐汤、前菜、主菜、餐后甜品及饮品。欧欧西餐厅包含西式小吃、汉堡套餐、西式焗饭，披萨等各式西西式美食，可供各地游客品尝西方美食的风味。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=19" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-2">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro2" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">2</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a2.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">韩食</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a2.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【韩食】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">韩食以泡菜文化为特色，一日三餐都离不开泡菜。朝鲜民族传统名菜烧肉、泡菜、冷面已经成了世界名菜。韩国有各种饮食，由于其过去处于农耕社会，因此从古代开始主食就以米为主。韩国饮食与各种蔬菜、肉类、鱼类共同组成。泡菜(发酵的辣白菜)、海鲜酱(盐渍海产品)、豆酱(发酵的黄豆)等各种发酵保存食品，以营养价值和特别的味道而闻名。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=10" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-1">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro3" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">3</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a3.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">欧爸食堂</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a3.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【欧爸食堂】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">中式快餐是相对于西式快餐而言的，以中国人餐饮习惯为基础，结合快餐的某些元素，是一种全新的属于中国本土的餐饮形式。中式快餐以独特的适合国人的“中国味道”吸引着时尚一族。欧爸食堂结合游客的不同口味需求，推出各式饭类营养套餐，炒饭、粉、面类便餐，这更是满足了游客短时间游玩的饮食需要。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=12" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-2">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro4" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">4</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a4.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">欧妈美食坊</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a4.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【欧妈美食坊】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">茶点在广东早茶中的地位也很重要。茶点分为干湿两种，干点有饺子、粉果、包子、酥点等，湿点则有粥类、肉类、龟苓膏、豆腐花等。其中又以干点做得最为精致，卖相甚佳。欧妈美食坊集茗茶、炖盅以及各种粤式点心于一身，满足广东乃至全国各地游客朋友对口味以及营养的需求。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=11" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-3">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro5" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">5</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a5.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">美美甜品屋</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a5.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【美美甜品屋】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">甜点屋是一个充满了梦想的地方。在这里，你可想象自己是一位公主、王子，自己是个魔法师，是一个可爱的巫女小姐。这里并不仅仅是小孩子们喜欢的地方，很多大人也很喜欢吃甜点。喜欢吃甜点的孩子都是怀有美好梦想的人。大家可以在这里找到好朋友，一起聊天，像自己的小伙伴们倾诉自己心中的梦。美美甜品屋为来自各地的游客提供美味可口的各式精致甜品。让自己的闲暇时光变得更加充实、满足。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=21" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-5">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro7" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">6</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a7.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">铁板西式工坊</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a7.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【铁板西式工坊】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">铁板烧起源于日本，是一种西餐和中餐的结合，它拥有悠久历史，铁板烧最早发源于日本的西餐，由此而产生了把厨房搬到外面，和客人进行交流，让客人在进餐的同时能够欣赏到厨师厨艺的一种餐饮形式。慢慢的，这种饮食文化传到台湾，在台湾又经过三十年的发展和改良，衍生出一种具有法式、中式和日式相结合的新的饮食方式，称为法式铁板烧。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=17" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-6">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro8" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">7</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a8.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">曼谷咖喱</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       
-        <div class="modal fade" id="intro8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a8.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【曼谷咖喱】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">泰国菜，泛指泰国民族的饮食文化。也叫做泰国料理（Thai Food）。泰国菜以酸、辣、咸、甜、苦五味的平衡为特点。用料主要以海鲜、水果、蔬菜为主。泰国菜有四大菜系，分别为泰北菜、泰东北菜、泰中菜、与泰南菜，反映泰国四方不同的地理和文化，而各地使用的食材往往跟邻近国家的一样。招牌菜有冬阴功(酸辣海鲜汤)、椰汁嫩鸡汤、咖喱鱼饼、绿咖喱鸡肉、芒果香饭等。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=18" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-     
-        <div class="card shadow-sm border-0 mb-4 animated fadeinup delay-1">
-            <a href="javascript:;" data-toggle="modal" data-target="#intro1" class="p-2 border-1">
-                <div class="d-flex align-items-center">
-                    <div class="col-1 pl-0 pr-1 text-center">
-                       <i class="web-font">8</i>
-                    </div>
-                    <div class="col-5 pr-2 pl-1">
-                        <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/a1.jpg" width="150" />
-                    </div>
-                    <div class="col-6 p-0 d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0" style="line-height:24px;">老牌洪氏潮卤</h6>
-                        <img src="assets/img/right-circle.png" width="12%" class="mr-2">
-                    </div>
-                </div>
-            </a>
-        </div>
-       </div>
-        <div class="modal fade" id="intro1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="card">
-                        <div class="rightclose">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="topImg">
-                            <img class="rounded-top border-0 w-100" src="assets/img/meishi_img/mstd/a1.jpg">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title text-center">【老牌洪氏潮卤】</h5>
-                            <p class="card-text mb-3 text-justify overflow-auto">潮汕卤鹅，是广东潮汕地区的传统名菜，属于潮菜系。潮汕特产的狮头鹅，肉质肥美，卤鹅是地方风味食品，香滑入味，肥而不腻。以酱油、冰糖、桂皮、砂仁、豆蔻、八角、南姜、加饭酒、蒜头、香菇等卤制而成。2018年9月，被评为“中国菜”之广东十大经典名菜。</p>
-                            <a href="http://hzomsell.m.rc-yiding.com?storeId=9" class="btn btn-warning btn-block"> 点击进入订餐 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
 
-<div style="position:relative">
-    <div class="pb-5 pt-2 text-center">
-        <img class="img-fluid mx-auto border" src="assets/img/hz-m.png" width="100" height="100" alt="" />
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-4">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=11" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/ommsf.png" width="" alt="欧妈美食坊" />
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-5">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=21" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/mmttw.png" width="" alt="美美甜品屋" />
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-6">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=17" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/tbxsgf.png" width="" alt="omc铁板西式工坊" />
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-1">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=18" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/mgjl.png" width="" alt="曼谷咖喱" />
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3 animated fadeinup delay-2">
+            <a href="http://hzomsell.m.rc-yiding.com?storeId=9" class="p-2 border-1">
+                <img class="img-thumbnail1 border-0 p-0" src="assets/img/meishi_img/mstd/hscsled.png" width="" alt="老牌洪氏潮卤" />
+            </a>
+        </div>
     </div>
-    <div class="bgImg" style="background: url(assets/img/bg.png) no-repeat;opacity:0.65; background-size:100%; background-position: bottom"></div>
-</div>
+
+    <div style="position:relative">
+        <div class="pb-5 pt-5 text-center">
+            <img class="img-fluid mx-auto border" src="assets/img/hz-m.png" width="100" height="100" alt="" />
+        </div>
+        <div class="bgImg"
+            style="background: url(assets/img/bg.png) no-repeat;opacity:0.65; background-size:100%; background-position: bottom">
+        </div>
+    </div>
     <script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/bootstrap.bundle.js"></script>
-<script src="src/layui.js"></script>
-<script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/weui.min.js"></script>
-<script src="assets/lib/fastclick.js"></script>
-<script>
-    $(function() {
-        FastClick.attach(document.body);
-    });
-</script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="src/layui.js"></script>
+    <script src="assets/js/jquery-weui.js"></script>
+    <script src="assets/js/weui.min.js"></script>
+    <script src="assets/lib/fastclick.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
 
     <script src="assets/js/swiper.js"></script>
-<script type="text/javascript">
-    var swiper = new Swiper('.swiper-container',{
-        directon:'horizontal',//水平滑动
-        speed:300,//滑动速度
-        loop:true,
-        autoplay:{//自动切换时间
-            delay:3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el:'.swiper-pagination',
-            dynamicBullets: true,
-        }
-    });
-    var swiper1 = new Swiper('.swiper-container1', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+            directon: 'horizontal',//水平滑动
+            speed: 300,//滑动速度
+            loop: true,
+            autoplay: {//自动切换时间
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            }
+        });
+        var swiper1 = new Swiper('.swiper-container1', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
     <script>
         var $mpiBtn = $('.btn1');
         var $mpiInd = $('.nd1');
-        $mpiBtn.on('click',function(){
-            if($mpiInd.height() == "50"){
-                    $mpiInd.height('auto');
-                    $('.btn1 i').attr("class","fa fa-angle-up");
-                    $('.btn1 i').html(' 收起');
-                }else{
-                    $mpiInd.height('50');
-                    $('.btn1 i').attr("class","fa fa-angle-down");
-                    $('.btn1 i').html(' 展开');
-                }
-            });
-      </script>
+        $mpiBtn.on('click', function () {
+            if ($mpiInd.height() == "50") {
+                $mpiInd.height('auto');
+                $('.btn1 i').attr("class", "fa fa-angle-up");
+                $('.btn1 i').html(' 收起');
+            } else {
+                $mpiInd.height('50');
+                $('.btn1 i').attr("class", "fa fa-angle-down");
+                $('.btn1 i').html(' 展开');
+            }
+        });
+    </script>
 </body>
+
 </html>
