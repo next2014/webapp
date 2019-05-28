@@ -1,0 +1,158 @@
+<!-- 上拉更多/下拉刷新  -->
+<link rel="stylesheet" href="static/css/tweenLoad.css"/>
+<script src="static/js/tweenLoad.min.js"></script>
+<script>
+ $(function(){
+    // 页数
+    var page = 0;
+    // 每页展示5个
+    var size = 5;
+    
+    // dropload
+    $('.prolistContent').dropload({
+        scrollArea : window,
+        domUp : {
+            domClass   : 'dropload-up',
+            domRefresh : '<div class="dropload-refresh"><i class="fa fa-long-arrow-down fa-lg mr-2"></i>使劲往下拉</div>',
+            domUpdate  : '<div class="dropload-update"><i class="fa fa-long-arrow-up fa-lg mr-2"></i>释放更新</div>',
+            domLoad    : '<div class="dropload-load"><i class="fa fa-refresh fa-spin fa-lg mr-2"></i> 过来坐下...客官先喝杯茶歇歇脚</div>'
+        },
+        domDown : {
+            domClass   : 'dropload-down',
+            domRefresh : '<div class="dropload-refresh">↑使劲往上拉</div>',
+            domLoad    : '<div class="dropload-load"><i class="fa fa-spinner fa-pulse fa-lg mr-2"></i> 过来坐下...客官先喝杯茶歇歇脚</div>',
+            domNoData  : '<div class="dropload-noData">已经扯过头啦... (｡•ˇ‸ˇ•｡)</div>'
+        },
+        loadUpFn : function(me){
+            $.ajax({
+                type: 'GET',
+                url: 'static/json/update.json',//static/json/update.json
+                dataType: 'json',
+                success: function(data){
+                    var result = '';
+                    for(var i = 0; i < data.lists.length; i++){
+                        result += '<a href="'+data.lists[i].link+'" class="mod_pos_item">'
+                                        +'<div class="mod_pos_item_text">'
+                                            +'<h2 class="text-truncate">'+data.lists[i].position+'</h2>'
+                                            +'<p class="mod_pos_item_mes text-truncate">'
+                                                +'<span>'+data.lists[i].city+'</span>'
+                                                +'<span>'+data.lists[i].area+'</span>'
+                                                +'<span>'+data.lists[i].experience+'</span>'
+                                                +'<span>'+data.lists[i].education+'</span>'
+                                            +'</p>'
+                                            +'<ul class="mod_pos_item_ind">'
+                                                +'<li>'+data.lists[i].ind1+'</li>'
+                                                +'<li>'+data.lists[i].ind2+'</li>'
+                                                +'<li>'+data.lists[i].ind3+'</li>'
+                                                +'<li>'+data.lists[i].ind4+'</li>'
+                                                +'<li>'+data.lists[i].ind5+'</li>'
+                                            +'</ul>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_text pt-2">'
+                                                +'<div class="mod_pos_item_text_pic">'
+                                                +'<img src="'+data.lists[i].pic+'">'
+                                                +'</div>'
+                                                +'<h2 class="text-truncate pt-1">'+data.lists[i].company+'</h2>'
+                                                +'<p class="mod_pos_item_mes text-truncate">'
+                                                    +'<span>'+data.lists[i].nature+'</span>'
+                                                    +'<span>'+data.lists[i].scale+'</span>'
+                                                    +'<span>'+data.lists[i].operating+'</span>'
+                                                +'</p>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_salary">'
+                                            +'<p class="mod_pos_item_salary_mon">'+data.lists[i].salary+'</p>'
+                                            +'<p class="mod_pos_item_salary_data">'+data.lists[i].date+'</p>'
+                                        +'</div>'
+                                    +'</a>';
+                    }
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        $('.list').html(result);
+                        // 每次数据加载完，必须重置
+                        me.resetload();
+                        // 重置页数，重新获取loadDownFn的数据
+                        page = 0;
+                        // 解锁loadDownFn里锁定的情况
+                        me.unlock();
+                        me.noData(false);
+                    },1000);
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+        },
+        loadDownFn : function(me){
+            page++;
+            // 拼接HTML
+            var result = '';
+            $.ajax({
+                type: 'GET',
+                url: 'static/json/more.json',//more.json
+                dataType: 'json',
+                success: function(data){
+                    var arrLen = data.length;
+                    if(arrLen > 0){
+                        for(var i=0; i<arrLen; i++){
+                            result += '<a href="'+data[i].link+'" class="mod_pos_item">'
+                                        +'<div class="mod_pos_item_text">'
+                                            +'<h2 class="text-truncate">'+data[i].position+'</h2>'
+                                            +'<p class="mod_pos_item_mes text-truncate">'
+                                                +'<span>'+data[i].city+'</span>'
+                                                +'<span>'+data[i].area+'</span>'
+                                                +'<span>'+data[i].experience+'</span>'
+                                                +'<span>'+data[i].education+'</span>'
+                                            +'</p>'
+                                            +'<ul class="mod_pos_item_ind">'
+                                                +'<li>'+data[i].ind1+'</li>'
+                                                +'<li>'+data[i].ind2+'</li>'
+                                                +'<li>'+data[i].ind3+'</li>'
+                                                +'<li>'+data[i].ind4+'</li>'
+                                                +'<li>'+data[i].ind5+'</li>'
+                                            +'</ul>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_text pt-2">'
+                                                +'<div class="mod_pos_item_text_pic">'
+                                                +'<img src="'+data[i].pic+'">'
+                                                +'</div>'
+                                                +'<h2 class="text-truncate pt-1">'+data[i].company+'</h2>'
+                                                +'<p class="mod_pos_item_mes text-truncate">'
+                                                    +'<span>'+data[i].nature+'</span>'
+                                                    +'<span>'+data[i].scale+'</span>'
+                                                    +'<span>'+data[i].operating+'</span>'
+                                                +'</p>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_salary">'
+                                            +'<p class="mod_pos_item_salary_mon">'+data[i].salary+'</p>'
+                                            +'<p class="mod_pos_item_salary_data">'+data[i].date+'</p>'
+                                        +'</div>'
+                                    +'</a>';
+                            }
+                    // 如果没有数据
+                    }else{
+                        // 锁定
+                        me.lock();
+                        // 无数据
+                        me.noData();
+                    }
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        // 插入数据到页面，放到最后面
+                        $('.lists').append(result);
+                        // 每次数据插入，必须重置
+                        me.resetload();
+                    },1000);
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+        },
+        threshold : 50
+    });
+});
+</script>

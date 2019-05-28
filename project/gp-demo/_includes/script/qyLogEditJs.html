@@ -1,0 +1,74 @@
+<script>
+    /* 图片手动上传 */
+    var uploadCount = 0, uploadCustomFileList = [];
+    // 这里是简单的调用，其余api请参考文档
+    weui.uploader('#uploaderCustom', {
+        url: 'http://localhost:3000',
+        auto: false,
+        type: 'file',
+        onBeforeQueued: function(files) {
+            if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+                weui.alert('请上传图片');
+                return false;
+            }
+            if(this.size > 5 * 1024 * 1024){
+                weui.alert('请上传不超过10M的图片');
+                return false;
+            }
+            if (files.length > 1) { // 防止一下子选中过多文件
+                weui.alert('最多只能上传1张图片，请重新选择');
+                return true;
+            }
+            if (uploadCount + 1 > 1) {
+                weui.alert('最多只能上传1张图片');
+                return true;
+            }
+
+            ++uploadCount;
+
+        },
+        onQueued: function() {
+            uploadCustomFileList.push(this);
+        }
+    });
+    // 手动上传按钮
+    document.getElementById("uploaderCustomBtn").addEventListener('click', function(){
+        uploadCustomFileList.forEach(function(file){
+            file.upload();
+        });
+    });
+    // 缩略图预览
+    document.querySelector('#uploaderCustomFiles').addEventListener('click', function(e){
+    var target = e.target;
+
+    while(!target.classList.contains('weui-uploader__file') && target){
+        target = target.parentNode;
+    }
+    if(!target) return;
+
+    var url = target.getAttribute('style') || '';
+    var id = target.getAttribute('data-id');
+
+    if(url){
+        url = url.match(/url\((.*?)\)/)[1].replace(/"/g, '');
+    }
+    var gallery = weui.gallery(url, {
+        onDelete: function(){
+            weui.confirm('确定删除该图片？', function(){
+                var index;
+                for (var i = 0, len = uploadCustomFileList.length; i < len; ++i) {
+                    var file = uploadCustomFileList[i];
+                    if(file.id == id){
+                        index = i;
+                        break;
+                    }
+                }
+                if(index !== undefined) uploadCustomFileList.splice(index, 1);
+
+                target.remove();
+                gallery.hide();
+            });
+        }
+    });
+});
+</script>

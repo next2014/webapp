@@ -1,0 +1,49 @@
+//shopping
+.shop{
+	width: 100%;
+	height: 100vh;
+	background: #f8fbff;
+	ul{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		padding-top: 0.8rem;
+		margin-bottom:2rem;
+		li{
+			width: 90%;
+			height: auto;
+			overflow: hidden;
+			background:#fff;
+			border: 1px solid #dedede;
+			position: relative;
+			padding:0.3rem;
+			margin:6px auto;
+			border-top: 4px solid #f5c411;
+			.shop_img{
+				display: flex;
+			}
+		}
+	}
+	.del{
+		margin-top: 0.2rem;
+		font-size: 0.7rem;
+		color:#57beff;
+	}
+	.Choice{
+		width: 50%;
+		margin-top: 0;
+	}
+	.piao_type{
+		border-bottom: 0;
+	}
+	.sh_num{
+		font-size: 1rem;
+	}
+}
+.index_all{
+    .shop_r{
+	  p{
+		margin:0.1rem 0;
+	  } 
+   }
+}

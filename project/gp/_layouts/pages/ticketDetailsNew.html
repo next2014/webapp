@@ -46,11 +46,11 @@ title: 门票预订
       <div class="ti_words">
             <div class="weui-tab">
                 <div class="mod_int weui-navbar border-bottom">
-                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
+                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab1">
                         <span class="mod_int_tab_text">购票须知</span>
                         <div class="bottom_line"></div>
                     </a>
-                    <a class="mod_int_tab weui-navbar__item p-0" href="#tab2">
+                    <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab2">
                         <span class="mod_int_tab_text">入园须知</span>
                         <div class="bottom_line"></div>
                     </a>
@@ -60,14 +60,14 @@ title: 门票预订
                     </a>
                 </div>
                 <div class="weui-tab__bd">
-                    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active"">
+                    <div id="tab1" class="weui-tab__bd-item">
                     {% include ticketDetailsNew/mod_pos1.html %}
                     </div>
-                    <div id="tab2" class="weui-tab__bd-item">
-                    {% include ticketDetailsNew/mod_pos4.html %}
+                    <div id="tab2" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    {% include ticketDetailsNew/mod_pos6.html %}
                     </div>
                     <div id="tab3" class="weui-tab__bd-item">
-                    {% include ticketDetailsNew/mod_pos3.html %}
+                    {% include ticketDetailsNew/mod_pos7.html %}
                     </div> 
                 </div>
             </div>

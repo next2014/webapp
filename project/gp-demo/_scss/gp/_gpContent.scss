@@ -1,0 +1,160 @@
+p{
+    color:#666666;
+}
+.pl-2, .px-2 {
+    padding-left: 0.5rem !important;
+}
+.pr-2, .px-2 {
+    padding-right: 0.5rem !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+.content_title{
+    border-bottom: 1px dashed #999999;
+    margin-bottom: 5px;
+    width: 100px;
+    margin: 10px auto;
+}
+.content_title strong{
+    margin: 5px auto;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    background-color: #ff9f28;
+    width: 100px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    border-bottom: 3px solid #ff8400;
+    border-radius: 2px;
+}
+.biaoyanTime{
+    border: 1px solid #ddd;
+    padding: 15px 10px!important;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 3px solid #ddd;
+    position: relative;
+}
+.biaoyanTime .title{
+    position: absolute;
+    top: -21px;
+    left: 17%;
+    right: 17%;
+}
+.biaoyanTime strong{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    color: #f8f9fb;
+    text-align: center;
+    background: #3fbbef;
+    margin: 0 auto;
+    padding: 0 5px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.biaoyanTime span{
+    display: block;
+    line-height: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+.biaoyanTime .l_jiao{
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #319bd0;
+    border-left: 22px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -22px;
+}
+.biaoyanTime .r_jiao{
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #319bd0;
+    border-right: 22px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -22px;
+}
+.timeForm{
+    border: 1px solid #ddd;
+    padding: 15px 0 0 0!important;
+    border-bottom: 3px solid #ddd;
+    position: relative;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.timeForm .title{
+    position: absolute;
+    top: -21px;
+    left: 10%;
+    right: 17%;
+}
+.timeForm strong{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #f8f9fb;
+    text-align: center;
+    background: #3fbbef;
+    margin: 0 auto;
+    padding: 0 5px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.timeForm p{
+    padding: 0 0 20px 0;
+    line-height: 30px;
+    text-align: left;
+}
+.timeForm span{
+    background-color: #ff9f28;
+    color:#FFFFFF;
+    padding:2px;
+    margin-right:5px;
+}
+.timeForm .l_jiao{
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #319bd0;
+    border-left: 32px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -31px;
+}
+.road strong{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #ddd;
+    height: 35px;
+    line-height: 45px;
+}
+.road p{
+    text-align: left;
+}
+.road span{
+    display: block;
+    padding: 15px 15px 15px 35px;
+    border: 1px solid #ddd;
+    color:#666666;
+    line-height: 30px;
+}
+.road img{
+    float: left;
+    width:25px;
+    margin:0 10px 0 0;
+}

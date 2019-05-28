@@ -1,0 +1,61 @@
+---
+layout: pages
+title: 订单详情
+---
+<div class="o_de">
+    <ul>
+        <li><span>订单编号：</span><i>OE180825000345</i></li>
+        <li><span>下单时间：</span><i>2018-08-25 19:05:47</i></li>
+        <li><span>手 机：</span><i>13433598652</i></li>
+        <li class="o_con">
+            <div class="o_head">
+                取票号： <i>41587695</i>
+            </div>
+            <table class="layui-table" lay-skin="line">
+                <thead>
+                    <tr>
+                        <th>票名</th>
+                        <th>游玩日期</th>
+                        <th>数量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td_name">入园消费50元抵用券</td>
+                        <td>2018-08-25</td>
+                        <td>x2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+    <div class="de_btn last_btn">
+        <button class="fl layui-btn layui-btn-normal" onclick="javascript: window.location.href = &#39;eTicket.html&#39;">查看电子票</button>
+    </div>
+</div>
+<!-- 退票弹出 -->
+<div id="removemsg" class="out return" style="display:none">
+    <div class="te_d">
+        <h1>退票处理</h1>
+        <div class="re_con">
+            <p><label for="">订单号</label><span>OE180825000345</span></p>
+            <p><label for="">入园消费50元抵用券</label><span>2张</span></p>
+            <p class="plist">进行退票处理，退票成功后5个工作日内，已付费按原支付途径返还。</p>
+        </div>
+        <div class="de_btn">
+            <button class="fl layui-btn layui-btn-normal" onclick="Refund()">确认</button>
+            <button class="fr layui-btn layui-btn-warm" onclick="javascript: $(&#39;#removemsg&#39;).hide()">取消</button>
+        </div>
+    </div>
+</div>
+<!-- 退票弹出 -->
+<div id="removesuccess" class="out out_si" style="display:none">
+    <div class="te_d">
+        <h1>退票成功</h1>
+        <div class="te_ioc"><img class="piao" src="static/images/succ.svg" alt=""></div>
+        <div class="de_btn">
+            <button class="fl layui-btn layui-btn-normal" onclick="javascript: window.location.href = &#39;ticketList.html&#39;">确认</button>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="2" id="voucherNum">
