@@ -1,0 +1,62 @@
+---
+layout: default
+title: 格林披治卡丁车馆
+---
+<div class="pt-2 pb-2 text-center m-scene">
+  <strong class="animated fadeindown"> <img src="assets/img/gl_logo.png" alt=""> </strong>
+</div>
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+        {% for entry in site.data.swiper %}
+            {% for swiper in entry.glpzkdc %}
+                <div class="swiper-slide">
+                    <img src="assets/img/glpz_img/0{{swiper.src}}.jpg" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<div class="intro p-3">
+   <h3>[ 场馆介绍 ]</h3>
+   <p class="text-justify m-0">
+      　　格林披治致力打造中国最具实力的赛车运动软化基地，馆内配备有来自法国SODIKART(速帝卡)品牌的成人电动卡丁车，长达500米的由著名品牌公司SpeedShareLimited设计打造的双层立体赛道，格林披治卡丁车馆更引进最先进、
+      专业的卡丁车运营管理系统，在保障安全的同时让广大游客可尽情领略赛车文化的独特魅力。
+   </p>
+</div>
+<!-- <div class="price table-dark p-2" style="margin-top:40px;background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url(assets/img/glpz_img/148.jpg);"></div> -->
+<div class="price table-dark p-2" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url(assets/img/glpz_img/640.jpg);">
+  <div class="piao pl-4 pr-4" style="width:90%;border-bottom:1px solid #6c757d;margin:40px auto 0;">
+    <h3 class="bg-dark">票价信息</h3>
+  </div>
+  <div style="margin-top:35px;">
+    {% include comment/price_table.html %}
+  </div>
+  <p class="border-top ml-3 mr-3 pt-3">
+    <small class="w-100 d-block pb-3">
+        <span class="d-block mb-2" style="font-size:18px;">购票须知</span>
+        <span class="d-block">1、禁止年龄满60岁以上者驾驶卡订车。</span>
+        <span class="d-block">2、禁止孕妇、醉酒者、一年内骨折者、心脏病患者驾驶卡丁车。</span>
+        <span class="d-block">3、惠州格林披治卡丁车馆拥有最终解释权。</span>
+    </small>
+  </p>
+</div>
+<div class="price bg-secondary" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url(assets/img/glpz_img/bgtime.jpg);">
+    <!-- <div class="piao pl-4 pr-4">
+        <h3 class="bg-secondary text-white">营业时间</h3>
+        <hr/>
+    </div> -->
+    <div class="openTime text-center text-white pl-5 pr-5 pb-4 pt-3">
+        <div class="text-center d-block border border-white pt-3 pb-3">
+            <p class="mb-2" style="font-size:20px;">营业时间</p>
+            <strong class="d-block" style="font-size:20px;">10:00 - 22:00</strong>
+            <small>（法定节假日如有变化将另行通知）</small>
+        </div>
+        <p class="mb-0 mt-4">
+            咨询电话：0752-2888688<br/>
+            场馆地址：惠州市惠城区金龙大道99号
+        </p>
+    </div>
+</div>
+<div class="bg-info" style="width:100%;height:5px;"></div>

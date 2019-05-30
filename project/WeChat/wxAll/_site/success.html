@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>报名成功</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
+<!-- animateion -->
+<link href="assets/css/keyframes.css" rel="stylesheet">
+<link href="assets/css/animation.css" rel="stylesheet">
+<link href="assets/css/swiper.min.css" rel="stylesheet">
+<link href="assets/css/glpz.css"  rel="stylesheet">
+<!-- icon -->
+<link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- weui -->
+<link href="assets/css/weui.css" rel="stylesheet" >
+<link href="assets/css/jquery-weui.css" rel="stylesheet">
+
+<!-- layui -->
+<link rel="stylesheet" href="assets/css/layer.css">
+<link rel="stylesheet" href="assets/css/layui.css">
+</head>
+<body>
+    <style>
+.weui-btn-area {
+    margin: 1.17647059em 15px .3em;
+}
+</style>
+<div class="pt-2 pb-2 text-center" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url('assets/img/glpz_img/topbg.jpg');">
+    <img src="assets/img/gl_logo.png" width="140" alt="">
+</div>
+<div class="weui-msg">
+    <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+    <div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">恭喜您报名成功</h2>
+    </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <!-- <a href="apply.html" class="weui-btn weui-btn_warn">返回</a> -->
+            <!-- <a href="javascript:;" class="weui-btn weui-btn_default">修改</a> -->
+        </p>
+    </div>
+    <div class="weui-msg__extra-area">
+        <div class="weui-footer">
+            <p class="weui-footer__text">Copyright © 2019 格林披志</p>
+        </div>
+    </div>
+</div>
+    <!-- 底部导航 -->
+
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="src/layui.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/weui.min.js"></script>
+<script src="assets/lib/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+    <script src="assets/js/swiper.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container',{
+        directon:'horizontal',//水平滑动
+        speed:300,//滑动速度
+        loop:true,
+        autoplay:{//自动切换时间
+            delay:3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el:'.swiper-pagination',
+            dynamicBullets: true,
+        }
+    });
+    var swiper1 = new Swiper('.swiper-container1', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+    
+<script src="assets/js/gallery.js"></script>
+
+
+    <script>
+    layui.use('form',  function () {
+        var $ = layui.jquery
+            , form = layui.form
+
+        //自定义验证规则
+        form.verify({
+            name: function (value) {
+                if (value.length < 1) {
+                    return '请填写参赛姓名';
+                }
+            }
+            , number: function (value) {
+                if (value.length < 11) {
+                    return '手机号码必须填写11位数';
+                }
+            }
+        });
+
+       //初始赋值
+    //   form.val('first', {
+    //     'title': '在线报名'
+    //     , 'phone': 13400000000
+    //     , 'name': ''
+    //   })
+    
+       //某个时间在当前时间的多久前
+        laydate.render({
+            elem: '#appytime'
+            ,type: 'datetime'
+        });
+
+        //监听提交
+        form.on('submit(*)', function (data) {
+            console.log(data)
+            layer.msg('恭喜您报名成功', {icon: 1});
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

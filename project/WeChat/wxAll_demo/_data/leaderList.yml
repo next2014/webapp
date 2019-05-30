@@ -1,0 +1,19 @@
+- number: 4
+  img: assets/img/glpz_img/1.png
+  name: 选手1
+  time: 1分10秒
+
+- number: 5
+  img: assets/img/glpz_img/2.png
+  name: 选手1
+  time: 1分20秒
+
+- number: 6
+  img: assets/img/glpz_img/3.png
+  name: 选手1
+  time: 1分30秒
+
+- number: 7
+  img: assets/img/glpz_img/1.png
+  name: 选手1
+  time: 1分60秒

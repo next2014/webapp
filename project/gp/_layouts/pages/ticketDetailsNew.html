@@ -21,16 +21,18 @@ title: 门票预订
             </div>
             <div class="piao_type" id="tourDate_id">
                 <h3 class="fl">游玩日期</h3>
-                <div class="fr time">
+                <div class="fr time" style="position: relative;">
+                    <a href="calendar.html" style="display:block;width:200px;height:40px;position:absolute;right:30px;top:-2px;"></a>
                     <input datatype="*" id="TourDate" nullmsg="请选择游玩日期！" name="TourDate" size="16" type="text" value="" class="mbsc-comp" readonly="">
                     <i class="layui-icon layui-icon-date" id="TourDateIcon"></i>
                 </div>
                 <input type="hidden" name="TicketId" value="96">
                 <input type="hidden" name="type" value="buy">
             </div>
-            <div id="spareTicket" class="piao_type" style="display: none;">
+            <div class="piao_type">
                 <h3 class="fl">剩余预定票数:</h3>
-                <span class="fr" id="spareNum"></span>
+                <span class="fr" style="font-size:20px;">1500 张</span>
+                <!-- <span class="fr" id="spareNum"></span> -->
             </div>
             <div class="piao_type">
                 <h3 class="fl">购买数量</h3>
