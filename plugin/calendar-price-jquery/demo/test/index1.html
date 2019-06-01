@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>欧美城销售日历</title>
+  <link rel="stylesheet" href="css/calendar-price-jquery.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/calendar-price-jquery.js"></script>
+</head>
+<body>
+  <div class="calendar_price"></div>
+
+  <script>
+      var mockData = [
+        {
+          date: "2019-05-30",
+          price: "0.12"
+        },
+        {
+          date: "2019-05-31",
+          price: "12.00"
+        },
+        {
+          date: "2019-06-01",
+          price: "12000"
+        }
+      ];
+      
+      var nowdate = new Date();
+      var year = nowdate.getFullYear();
+      var month = nowdate.getMonth() + 1;
+      var day = nowdate.getDay();
+      var begindate = year + '-' + month + '-' + day;
+      
+      $.CalendarPrice({
+        el: '.calendar_price',
+        startDate: begindate,		// 开始日期
+        data: mockData,					// 日历初始显示的数据
+        // 配置需要设置的字段名称
+        config: [],
+        // 配置在日历中要显示的字段
+        show: [{key: 'price',name: '¥'}],
+        // 自定义颜色
+        style: {
+        // 头部背景色
+        headerBgColor: '#5CC1DE',
+        // 头部文字颜色
+        headerTextColor: '#fff',
+        // 周一至周日背景色，及文字颜色
+        weekBgColor: '#5CC1DE',
+        weekTextColor: '#fff',
+        // 有效日期颜色
+        validDateTextColor: '#333',
+        validDateBgColor: '#fff',
+        validDateBorderColor: '#eee',
+        // Hover
+        validDateHoverBgColor: '#5CC1DE',
+        validDateHoverTextColor: '#fff',
+        // 无效日期颜色
+        invalidDateTextColor: '#ccc',
+        invalidDateBgColor: '#fff',
+        invalidDateBorderColor: '#eee'
+        },
+        // 点击有效的某一触发的回调函数,覆盖掉默认的弹窗
+        everyday: function () {},
+        // 隐藏底部按钮（重置、确定、取消）
+        hideFooterButton: true
+      });
+  </script>
+
+</body>
+
+</html>
