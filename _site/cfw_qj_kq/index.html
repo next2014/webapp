@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>
+        首页 · 考勤系统
+    </title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+    <!-- jquery-weui -->
+    <link rel="stylesheet" href="static/css/weui.css">
+    <link rel="stylesheet" href="static/css/jquery-weui.css">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+</head>
+
+<body>
+    <header class="search">
+        <div class="search_header">
+            <div class="search_header_box">
+                <div class="search_left w-2">
+                    <a href="news.html"><svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xiaoxi"></use>
+                        </svg></a>
+                </div>
+                <div class="search_center"><a href="javascript:"> 签到和请假管理 </a></div>
+                <div class="search_right w-2"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="home">
+        <!-- S 待办项 -->
+        <div class="weui-tab">
+            <div class="mod_int weui-navbar">
+                <a class="mod_int_tab weui-navbar__item weui-bar__item--on p-0" href="#tab1">
+                    <span class="mod_int_tab_text">签到(<em>0</em>) <i class="fa fa-sort-down"></i></span>
+                    <div class="bottom_line"></div>
+                </a>
+                <a class="mod_int_tab weui-navbar__item p-0" href="#tab2">
+                    <span class="mod_int_tab_text">请假(<em>0</em>) <i class="fa fa-sort-down"></i></span>
+                    <div class="bottom_line"></div>
+                </a>
+            </div>
+            <div class="weui-tab__bd">
+                <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__hd pb-0">
+                            <a href="pages/ordersDetail.html" class="weui-form-preview__item">
+                              <label class="">梁先生</label>
+                              <span class="btn btn-warning btn-sm">待接单</span>
+                            </a>
+                        </div>
+                        <div class="weui-form-preview__bd pt-0" style="text-align:left!important">
+                            <i class="fa fa-map-marker pr-1"></i> 惠州-欧美城
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="weui-tab__bd-item">
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__hd">
+                            <a href="pages/ordersDetail.html" class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">任务下达</label>
+                                <span class="btn btn-warning btn-sm">待接单</span>
+                            </a>
+                        </div>
+                        <div class="weui-form-preview__bd">
+                            <a href="pages/ordersDetail.html" class="weui-form-preview__item d-block">
+                                <label class="weui-form-preview__label">跟进景观桥旁水管改造施工</label>
+                            </a>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">梁先生</label>
+                                <span class="weui-form-preview__value"><a href="tel:13433598652" class="tel"><i
+                                            class="fa fa-phone"></i></a></span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">17:30</label>
+                                <span class="weui-form-preview__value">惠州-欧美城</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E 待办项 -->
+    </div>
+    
+    <!-- 底部导航 -->
+    <nav class="menu">
+        <a href="index.html" class="active">
+            <i class="fa fa-calendar-check-o"></i>
+            <span>首页</span>
+        </a>
+        <a href="daily.html" class="">
+            <i class="fa fa-coffee"></i>
+            <span>考勤</span>
+        </a>
+        <a href="news.html" class="">
+            <i class="fa fa-user-o"></i>
+            <span>消息</span>
+            <em class="weui-badge weui-badge_dot"></em>
+        </a>
+    </nav>
+</body>
+<script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<script src="static/js/iconfont.js"></script>
+<script src="static/js/fastclick.js"></script>
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+    });
+</script>
+
+</html>
