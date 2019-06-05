@@ -1,0 +1,23 @@
+.login{
+    padding:8%;
+    background: #efeff4;
+    a{
+     text-decoration: none;
+    }
+    .weui-cell{
+        font-size:$font-14;
+        color:$gray-600;
+        padding:15px;
+        &:before{
+           left:0;
+        }
+      }
+      .weui-cells{
+        &:before{
+           border-top:0;
+        }
+        &:after{
+           border-bottom:0;
+        }
+      }
+}
