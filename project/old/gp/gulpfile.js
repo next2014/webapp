@@ -52,22 +52,21 @@ function handleErro(err){
  * 将_scss文件编译为_site / startic /css（用于实时注入）和 site（用于未来的jekyll构建）
  */
 gulp.task('sass', function () {
-    return gulp.src('assets/scss/*.scss')
+    return gulp.src('_scss/*.scss')
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
          })).on('error',handleErro)
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(gulp.dest('_site/static/css'))
         .pipe(minify({
             keepBreaks: true,//类型：Boolean 默认：false [是否保留换行]
             compatibility: 'ie7',//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
             advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
          }))//压缩
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest('static/css'))
         .pipe(browserSync.reload({stream:true}));
 });
-
 /**
  * 压缩图片
  */
@@ -89,7 +88,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function(){
     // gulp.watch('src/js/*.js',['js']);
-    gulp.watch('assets/scss/*.scss', ['sass']);
+    gulp.watch('_scss/*.scss', ['sass']);
     // gulp.watch('_less/*.less', ['less']);
     // gulp.watch(['assets/img/*'], ['imagemin']);
     gulp.watch(['*.html', '_layouts/*.html','_includes/*.html','_posts/*'], ['jekyll-rebuild']);
