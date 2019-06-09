@@ -1,0 +1,48 @@
+<script src="static/js/city-picker.min.js"></script>
+<script>
+    $("#Curlocat1").cityPicker({
+        title: "期望地点",
+        onChange: function (picker, values, displayValues) {
+        console.log(values, displayValues);
+        }
+    });
+</script>
+<script>
+    $("#in").select({
+        title: "希望岗位",
+        multi: true,
+        min: 2,
+        max: 3,
+        items: [
+            {
+                title: "网页设计",
+                value: 1,
+                description: "额外的数据1"
+            },
+            {
+                title: "UI设计",
+                value: 2,
+                description: "额外的数据2"
+            },
+            {
+                title: "插画设计",
+                value: 3,
+                description: "额外的数据3"
+            },
+            {
+                title: "前端开发",
+                value: 6,
+                description: "额外的数据6"
+            },
+        ],
+        onChange: function(d) {
+        console.log(this, d);
+        },
+        onClose: function (d) {
+        console.log('close')
+        },
+        onOpen: function() {
+          console.log("open");
+        },
+    });
+</script>

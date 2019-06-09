@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欧美城template</title>
+    <script src="assets/js/template-web.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script id="test" type="text/html">
+        <!-- isAadmin自定义名字 -->
+        {{if isAdmin}}
+            <h1>{{title}}</h1>
+            <ul>
+                {{each list value i}}
+                    <li>排序 {{i + 1}} ：{{value}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+        <!-- {{$data}} -->
+    </script>
+    <script>
+    var data = {
+        title: '欧美城各项目',
+        isAdmin: true,
+        list: ['海洋世界', '卡丁车', '婚博馆', '欧欧之家', '美食天地', '会所']
+    };
+    var html = template('test', data);
+    document.getElementById('content').innerHTML = html;
+    </script>
+</body>
+</html>

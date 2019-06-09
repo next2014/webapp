@@ -1,0 +1,28 @@
+<script>
+  var $mpiBtn = $('.mod_pos_item_btn');
+  var $mpiBtn1 = $('.mod_pos_item_btn1');
+  var $mpiInd = $('.mod_pos_item_ind');
+  var $mpiInd1 = $('.posContent');
+  $mpiBtn.on('click',function(){
+      if($mpiInd.height() == "32"){
+           $mpiInd.height('auto');
+           $('.mod_pos_item_btn i').attr("class","fa fa-angle-down");
+           $('.mod_pos_item_btn i').html(' 展开');
+       }else{
+           $mpiInd.height('32');
+           $('.mod_pos_item_btn i').attr("class","fa fa-angle-up");
+           $('.mod_pos_item_btn i').html(' 收起');
+       }
+   });
+   $mpiBtn1.on('click',function(){
+      if($mpiInd1.height() == "110"){
+           $mpiInd1.height('auto');
+           $('.mod_pos_item_btn1 i').attr("class","fa fa-angle-down");
+           $('.mod_pos_item_btn1 i').html(' 展开');
+       }else{
+           $mpiInd1.height('110');
+           $('.mod_pos_item_btn1 i').attr("class","fa fa-angle-up");
+           $('.mod_pos_item_btn1 i').html(' 收起');
+       }
+   });
+</script>

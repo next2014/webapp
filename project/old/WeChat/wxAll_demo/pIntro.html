@@ -1,0 +1,41 @@
+---
+layout: default
+title: 欧美城文化小镇
+---
+<div class="p-2 text-center">
+    <img src="assets/img/logo.png" class="w-75 mb-2 mt-2" alt="">
+    <img src="assets/img/fengxiang.png" class="w-100 mb-2" alt="">      
+    <div class="swiper-container carousel">
+        <div class="swiper-wrapper">
+          {% for entry in site.data.swiper %}
+            {% for swiper in entry.project %}
+                <div class="swiper-slide">
+                    <img src="{{swiper.src}}" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+{% for entry in site.data.examples %}
+  {% for example in entry.introduct %}
+    {% if forloop.first %}<div class="container p-2 m-scene">{% endif %}
+       <div class="Small shadow1 card mb-3 border-light animated fadeinright delay-{{ example.index }}">
+          <a href="{{ example.url }}" class="p-2" style="color:#666;">
+           <div class="d-flex align-items-center">
+                <div class="col-5 pl-0">
+                     <img class="img-thumbnail1 p-0" src="assets/img/{{ example.title | slugify }}.jpg" width="200" />
+                </div>
+                <div class="col-7 p-0 d-flex align-items-center justify-content-between">
+                    <h6 class="mb-0">{{ example.name }}</h6>
+                    <img src="assets/img/righ_Icon.png" width="30" alt="">
+                </div>
+           </div>
+           </a>
+       </div>
+    {% if forloop.last %}</div>{% endif %}
+  {% endfor %}
+{% endfor %}
+{% include footer1.html %}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html style="font-size: 35.8px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>聚焦欧美城 · 享受生活</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/ft-carousel.css">
+    <link rel="stylesheet" href="assets/css/layer.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/common2.css">
+    <link rel="stylesheet" href="assets/css/sort.css">
+    <link rel="stylesheet" href="src/css/layui.css">
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .layui-upload-img {
+            width: 92px;
+            height: 92px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body onload="countTime()">
+    <div class="votes">
+        <header>
+            <!-- Slider -->
+            <div class="swiper-container carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/banner/1.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/banner/2.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/banner/3.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/banner/4.jpg" class="d-block w-100" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- <div class="count-info layui-bg-green">
+                <div class="info">
+                    <p class="type"><i class="iconfont icon-20-account"></i><span class="text">参赛数</span></p> <span
+                        class="num">3</span>
+                </div>
+                <div class="info">
+                    <p class="type"><i class="iconfont icon-20-numbers"></i><span class="text">投票数</span></p> <span
+                        class="num">2</span>
+                </div>
+                <div class="info">
+                    <p class="type"><i class="iconfont icon-20-views"></i><span class="text">访问量</span></p> <span
+                        class="num">42</span>
+                </div>
+            </div> -->
+            <p class="count-down">
+                <i class="iconfont icon-time font-color"></i> 活动
+                <span class="text">结束</span>倒计时：
+                <span id="_d">00</span>
+                <span id="_h">00</span>
+                <span id="_m">00</span>
+                <span id="_s">00</span>
+            </p>
+        </header>
+        <div id="app" class="container">
+            <div class="sort-container" style="width:100%">
+                <h4 class="sort-title layui-bg-red" style="width:100%">
+                    <i class="iconfont icon-rank"></i> 排行榜
+                </h4>
+                <table class="layui-table sort-table sort-table" lay-even lay-skin="line" lay-size="lg" style="width:100%;margin:10px 0 0 0;">
+                    <tbody>
+                        <tr>
+                            <td style="width:30%;">
+                                <svg aria-hidden="true" class="icon">
+                                    <svg id="icon-20-no1" viewBox="0 0 1024 1024" width="100%" height="100%">
+                                        <path
+                                            d="M298.666667 704h426.666666V1024l-213.333333-113.493333L298.666667 1024v-320z"
+                                            fill="#E4512A"></path>
+                                        <path
+                                            d="M298.666667 597.333333h426.666666v277.333334L298.666667 736V597.333333z"
+                                            fill="#DD3D13"></path>
+                                        <path
+                                            d="M512 128a256 256 0 1 1-256 256 256 256 0 0 1 256-256m0-128a384 384 0 1 0 384 384 384 384 0 0 0-384-384z"
+                                            fill="#FFCB5F"></path>
+                                        <path d="M512 384m-256 0a256 256 0 1 0 512 0 256 256 0 1 0-512 0Z"
+                                            fill="#F0B33B"></path>
+                                        <path
+                                            d="M531.2 219.733333v304.64H484.693333V275.2a165.973333 165.973333 0 0 1-69.973333 38.4V267.52a177.92 177.92 0 0 0 42.666667-17.92 177.493333 177.493333 0 0 0 38.4-30.293333z"
+                                            fill="#FFFFFF"></path>
+                                    </svg>
+                                </svg>
+                            </td>
+                            <td style="width:40%" claas="user-name">
+                                <span style="display:block">张三</span>
+                            </td>
+                            <td style="width:30%">1 票</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <svg aria-hidden="true" class="icon">
+                                    <svg id="icon-20-no2" viewBox="0 0 1024 1024" width="100%" height="100%">
+                                        <path
+                                            d="M298.666667 704h426.666666V1024l-213.333333-113.493333L298.666667 1024v-320z"
+                                            fill="#E4512A"></path>
+                                        <path
+                                            d="M298.666667 597.333333h426.666666v277.333334L298.666667 736V597.333333z"
+                                            fill="#DD3D13"></path>
+                                        <path
+                                            d="M512 128a256 256 0 1 1-256 256 256 256 0 0 1 256-256m0-128a384 384 0 1 0 384 384 384 384 0 0 0-384-384z"
+                                            fill="#CBCBC9"></path>
+                                        <path d="M512 384m-256 0a256 256 0 1 0 512 0 256 256 0 1 0-512 0Z"
+                                            fill="#B7B5B6"></path>
+                                        <path
+                                            d="M589.226667 253.013333a85.333333 85.333333 0 0 1 27.733333 66.133334 106.24 106.24 0 0 1-29.866667 72.533333 428.8 428.8 0 0 1-63.573333 49.493333 150.186667 150.186667 0 0 0-59.306667 58.026667h153.173334v42.666667H406.613333a116.48 116.48 0 0 1 30.293334-80.213334 389.973333 389.973333 0 0 1 69.12-57.6 322.986667 322.986667 0 0 0 42.666666-34.986666 74.666667 74.666667 0 0 0 20.906667-50.346667 49.493333 49.493333 0 0 0-14.933333-38.4 60.586667 60.586667 0 0 0-42.666667-12.8 50.773333 50.773333 0 0 0-42.666667 19.626667A93.44 93.44 0 0 0 454.826667 341.333333H408.32a117.76 117.76 0 0 1 29.44-82.346666 100.266667 100.266667 0 0 1 78.933333-32.853334 103.68 103.68 0 0 1 72.533334 26.88z"
+                                            fill="#FFFFFF"></path>
+                                    </svg>
+                                </svg>
+                            </td>
+                            <td claas="user-name">
+                                <a href="javascript:;" style="display: flex;align-items: center;">
+                                    <img src="assets/img/002.jpg" alt=""><span style="display:block">张三</span></a>
+                            </td>
+                            <td>1 票</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <svg aria-hidden="true" class="icon">
+                                    <svg id="icon-20-no3" viewBox="0 0 1024 1024" width="100%" height="100%">
+                                        <path
+                                            d="M298.666667 704h426.666666V1024l-213.333333-113.493333L298.666667 1024v-320z"
+                                            fill="#E4512A"></path>
+                                        <path
+                                            d="M298.666667 597.333333h426.666666v277.333334L298.666667 736V597.333333z"
+                                            fill="#DD3D13"></path>
+                                        <path
+                                            d="M512 128a256 256 0 1 1-256 256 256 256 0 0 1 256-256m0-128a384 384 0 1 0 384 384 384 384 0 0 0-384-384z"
+                                            fill="#FFBD8A"></path>
+                                        <path d="M512 384m-256 0a256 256 0 1 0 512 0 256 256 0 1 0-512 0Z"
+                                            fill="#F3A56B"></path>
+                                        <path
+                                            d="M588.373333 247.893333a75.946667 75.946667 0 0 1 27.306667 61.44 66.133333 66.133333 0 0 1-50.346667 66.986667 85.333333 85.333333 0 0 1 42.666667 25.173333 64.426667 64.426667 0 0 1 15.36 42.666667 90.453333 90.453333 0 0 1-29.013333 69.12 117.333333 117.333333 0 0 1-82.346667 29.013333 113.066667 113.066667 0 0 1-75.093333-23.893333 107.093333 107.093333 0 0 1-35.84-78.08h46.933333a62.72 62.72 0 0 0 21.333333 47.36 61.44 61.44 0 0 0 42.666667 15.36 66.986667 66.986667 0 0 0 47.36-17.066667 51.626667 51.626667 0 0 0 15.786667-37.973333 46.933333 46.933333 0 0 0-16.64-39.68A69.973333 69.973333 0 0 0 512 395.52h-20.48v-34.986667H512a63.146667 63.146667 0 0 0 42.666667-12.373333 42.666667 42.666667 0 0 0 14.506666-35.413333 46.08 46.08 0 0 0-14.506666-34.986667 60.16 60.16 0 0 0-42.666667-12.373333 61.44 61.44 0 0 0-42.666667 14.08 62.72 62.72 0 0 0-18.346666 42.666666h-42.666667a99.413333 99.413333 0 0 1 33.706667-70.826666 104.106667 104.106667 0 0 1 72.96-25.173334 114.346667 114.346667 0 0 1 73.386666 21.76z"
+                                            fill="#FFFFFF"></path>
+                                    </svg>
+                                </svg>
+                            </td>
+                            <td claas="user-name">
+                                <a href="javascript:;" style="display: flex;align-items: center;">
+                                    <img src="assets/img/003.jpg" alt=""><span style="display:block">张三</span></a>
+                            </td>
+                            <td>0 票</td>
+                        </tr>
+                        <tr>
+                            <td>
+                               第4名
+                            </td>
+                            <td claas="user-name">
+                                <a href="javascript:;" style="display: flex;align-items: center;">
+                                    <img src="assets/img/004.jpg" alt=""><span style="display:block">张三</span></a>
+                            </td>
+                            <td>0 票</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="load-more-btn no-more" style="width:100%">没有更多了</button>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-navs layui-bg-gray text-dark">
+                <a href="index.html" class="link ">
+                    <i class="iconfont icon-20-users-choosed"></i> <span class="text">首页</span>
+                </a>
+                <a href="tsort.html" class="link  active ">
+                    <i class="iconfont icon-rank"></i> <span class="text">排行榜</span>
+                </a>
+                <a href="rule.html" class="link ">
+                    <i class="iconfont icon-20-rules"></i> <span class="text">活动说明</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <!-- <script src="assets/js/jquery-2.1.0.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/ft-carousel.min.js"></script>
+    <script type="text/javascript">
+        function countTime() {
+            //获取当前时间  
+            var date = new Date();
+            var now = date.getTime();
+            //设置截止时间  
+            var str = "2019/05/31 23:59:59";
+            var endDate = new Date(str);
+            var end = endDate.getTime();
+            //时间差  
+            var leftTime = end - now;
+            //定义变量 d,h,m,s保存倒计时的时间  
+            var d, h, m, s;
+            if (leftTime >= 0) {
+                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+                m = Math.floor(leftTime / 1000 / 60 % 60);
+                s = Math.floor(leftTime / 1000 % 60);
+            }
+            //将倒计时赋值到div中  
+            document.getElementById("_d").innerHTML = d + "天";
+            document.getElementById("_h").innerHTML = h + "时";
+            document.getElementById("_m").innerHTML = m + "分";
+            document.getElementById("_s").innerHTML = s + "秒";
+            //递归每秒调用countTime方法，显示动态时间效果  
+            setTimeout(countTime, 1000);
+        }
+    </script>
+    <script src="src/layui.js"></script>
+    <script>
+        layui.use(['form', 'upload', 'layer'], function () {
+            var $ = layui.jquery
+                , form = layui.form
+                , upload = layui.upload
+                , layer = layui.layer;
+
+            //自定义验证规则
+            form.verify({
+                title: function (value) {
+                    if (value.length < 5) {
+                        return '标题也太短了吧';
+                    }
+                }
+            });
+
+            //初始赋值
+            form.val('first', {
+                'name': '测试测试测试测试'
+                , 'phone': 11111111111
+                , 'address': '广东惠州欧美城文化有限公司'
+                , 'interest': 3
+                , 'like[write]': true
+                , 'desc': 'form 是我们非常看重的一块'
+                , xxxxxxxxx: 123
+            });
+
+            upload.render({
+                elem: '#test2'
+                , url: ''
+                , multiple: true
+                , number: 3
+                , size: 1024
+                , before: function (obj) {
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function (index, file, result) {
+                        $('#demo2').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img">')
+                    });
+                }
+                , done: function (res) {
+                    //上传完毕
+                }
+                , allDone: function (obj) {
+                    console.log(obj)
+                }
+            });
+
+            //监听提交
+            form.on('submit(*)', function (data) {
+                console.log(data)
+                alert(JSON.stringify(data.field));
+                return false;
+            });
+
+            //触发事件
+            var active = {
+                tpdata: function () {
+                    layer.confirm('您是否确定投票？', {
+                        title: '张三',
+                        btn: ['确认', '取消'] //按钮
+                    }, function () {
+                        layer.msg('成功投票', { icon: 1 });
+                    }, function () {
+                        layer.msg('取消投票', { icon: 5 });
+                    });
+                }
+            };
+            $('.toupiao').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+        });
+
+    </script>
+    <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+            directon: 'horizontal',//水平滑动
+            speed: 300,//滑动速度
+            loop: true,
+            autoplay: {//自动切换时间
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            }
+        });
+        var swiper1 = new Swiper('.swiper-container1', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

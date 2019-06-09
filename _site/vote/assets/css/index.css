@@ -146,12 +146,12 @@
 }
 
 .container .user-list .user {
-	background-color: #f4ba1c;
+	background-color: #ffffff;
+	border:1px solid #eeeeee;
 	overflow: hidden;
 	width: 48%;
 	position: relative;
 	margin-bottom: .53rem;
-	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.15);
 	text-align:center;
 }
 
@@ -232,9 +232,9 @@
 
 .container .user-list .user.equi .link .img {
 	width: auto;
-	height: auto;
+	/* height: 240px;
 	max-width: 100% !important;
-	max-height: 100% !important;
+	max-height: 100% !important; */
 	margin: 0
 }
 

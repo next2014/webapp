@@ -1,0 +1,71 @@
+- GetImage: static/images/GetImage.jpeg
+  GetTypeColor: primary
+  GetType:  儿童
+  GetTitle: 海洋世界平日票
+  GetPrick: 80.00
+
+- GetImage: static/images/GetImage(1).png
+  GetTypeColor: primary
+  GetType:  成人票
+  GetTitle: 海洋世界周末/节假票
+  GetPrick: 90.00
+
+- GetImage: static/images/GetImage(2).png
+  GetTypeColor: success
+  GetType:  儿童/长者票
+  GetTitle: 海洋世界平日票
+  GetPrick: 70.00
+
+- GetImage: static/images/GetImage(3).png
+  GetTypeColor: success
+  GetType:  儿童/长者票
+  GetTitle: 海洋世界周末/节假票
+  GetPrick: 80.00
+
+- GetImage: static/images/GetImage(4).png
+  GetTypeColor: info
+  GetType:  平日
+  GetTitle: 园区大门票
+  GetPrick: 20.00
+
+- GetImage: static/images/GetImage(5).png
+  GetTypeColor: danger
+  GetType:  周末/节假
+  GetTitle: 园区大门票
+  GetPrick: 30.00
+
+- GetImage: static/images/GetImage(6).png
+  GetTypeColor: primary
+  GetType:  成人联票
+  GetTitle: 海洋世界+婚博艺术中心欧美街9号
+  GetPrick: 100.00
+
+- GetImage: static/images/GetImage(7).png
+  GetTypeColor: success
+  GetType:  儿童/长者联票
+  GetTitle: 海洋世界+婚博艺术中心欧美街9号
+  GetPrick: 90.00
+
+- GetImage: static/images/GetImage(8).png
+  GetTypeColor: secondary
+  GetType:  单人
+  GetTitle: 欧美城1801年卡
+  GetPrick: 560.00
+
+- GetImage: static/images/GetImage(8).png
+  GetTypeColor: secondary
+  GetType:  两人
+  GetTitle: 欧美城1801年卡
+  GetPrick: 990.00
+
+- GetImage: static/images/GetImage(8).png
+  GetTypeColor: secondary
+  GetType:  三人
+  GetTitle: 欧美城1801年卡
+  GetPrick: 1390.00
+
+- GetImage: static/images/GetImage(8).png
+  GetTypeColor: secondary
+  GetType:  四人
+  GetTitle: 欧美城1801年卡
+  GetPrick: 1750.00
