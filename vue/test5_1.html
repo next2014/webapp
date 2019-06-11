@@ -2,26 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>动画过渡</title>
+    <style>
+        /* 显示隐藏时过滤效果 */
+       .XXX-enter-active, .XXX-leave-active{
+           transition: opacity 1s;
+       }
+       /* 隐藏时的样式 */
+       .XXX-enter, .XXX-leave-to {
+           opacity: 0;
+       }
+        
+        /* 显示的过滤效果 */
+        .move-enter-active {
+            transition: all 1s
+        }
+
+        /* 隐藏的过滤效果 */
+        .move-leave-active{
+            transition: all 3s
+        }
+
+        /* 隐藏时的样式 */
+        .move-enter, .move-leave-to {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+
+    </style>
 </head>
 <body>
-<div id="test">
+<div id="test1">
    <button @click="isShow=!isShow">toggle</button>
-   <transition name="fade">
+   <transition name="XXX">
      <p v-show="isShow">hello</p>
    </transition>
-
 </div>
+
+<div id="test2">
+    <button @click="isShow=!isShow">toggle</button>
+    <transition name="move">
+        <p v-show="isShow">hello</p>
+    </transition>
+</div>
+
 <script type="text/javascript" src="vue.min.js"></script>
 <script type="text/javascript">
    new Vue({
-       el: '#test',
+       el: '#test1',
        data () {
           return {
               isShow: true
           }
        }
    })
+
+   new Vue({
+       el: '#test2',
+       data () {
+          return {
+              isShow: true
+          }
+       }
+   })
+
+
 </script>
 </body>
 </html>
