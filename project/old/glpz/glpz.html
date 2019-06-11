@@ -1,0 +1,87 @@
+---
+layout: default
+title: 格林披治卡丁车馆
+---
+<style>
+  .m-scene .table td{
+    padding: 0.75rem 0.5rem!important;
+  }
+</style>
+<div class="pt-2 pb-2 text-center m-scene">
+  <strong class="animated fadeindown"> <img src="assets/img/gl_logo.png" width="130px" alt=""> </strong>
+</div>
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+        {% for entry in site.data.swiper %}
+            {% for swiper in entry.glpzkdc %}
+                <div class="swiper-slide">
+                    <img src="assets/img/glpz_img/{{swiper.src}}.jpg" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<div class="intro pl-3 pr-3 pt-3">
+   <h3>[ 场馆介绍 ]</h3>
+   <p class="text-justify m-0" style="line-height: 30px;font-size:16px">
+    　　格林披治致力打造中国最具实力的赛车运动软化基地，馆内配备有来自法国SODIKART(速帝卡)品牌的成人电动卡丁车，本条赛道是由迪拜设计师设计，是珠三角最大的室内环型立体交叉赛道，赛道全长436米，由U型弯，高速弯，连续S弯等共14个弯道组成。
+    同时配备比利时的专业计时系统SMS，体验前注册后可在屏幕上实时显示您开车的单圈最快圈速，
+    圈数以及同组竞速排名，体验结束后，系统会推送成绩至您注册的邮箱，以便您查看成绩。
+   </p>
+   <!-- <p class="text-justify m-0">
+        　　格林披治致力打造中国最具实力的赛车运动软化基地，馆内配备有来自法国SODIKART(速帝卡)品牌的成人电动卡丁车，长达436米的由著名品牌公司SpeedShareLimited设计打造的双层立体赛道，格林披治卡丁车馆更引进最先进、
+        专业的卡丁车运营管理系统，在保障安全的同时让广大游客可尽情领略赛车文化的独特魅力。
+    </p> -->
+</div>
+<div class="pt-4">
+    <img src="assets/img/map.png" width="100%" alt="">
+</div>
+<!-- <div class="price table-dark p-2" style="margin-top:40px;background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url(assets/img/glpz_img/148.jpg);"></div> -->
+<div class="price table-dark p-2" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; 
+background-position: 50% 50%; background-image:url(assets/img/glpz_img/640.jpg);">
+  <div class="piao pl-4 pr-4" style="width:95%;border-bottom:1px solid #6c757d;margin:37px auto 0;">
+    <h3 class="bg-dark">票价信息</h3>
+  </div>
+  <div style="margin-top:30px;">
+    {% include comment/price_table.html %}
+  </div>
+  <!-- <p class="border-top ml-3 mr-3 pt-3">
+    <small class="w-100 d-block pb-3">
+        <span class="d-block mb-2" style="font-size:18px;">购票须知</span>
+        <span class="d-block">1、禁止年龄满60岁以上者驾驶卡订车。</span>
+        <span class="d-block">2、禁止孕妇、醉酒者、一年内骨折者、心脏病患者驾驶卡丁车。</span>
+        <span class="d-block">3、惠州格林披治卡丁车馆拥有最终解释权。</span>
+    </small>
+  </p> -->
+  <p class="border-top ml-2 mr-2 pt-3">
+    <small class="w-100 d-block pb-3" style="line-height:25px;">
+        <span class="d-block mb-2" style="font-size:16px;text-align: center">温馨提示</span>
+        <span class="d-block ">1、驾驶时请勿随身携带贵重及易碎、坚硬物品（如钱包、手机、手表、首饰等）如有遗失或损坏，后果自负；</span>
+        <span class="d-block ">2、如患有高血压、心脏病或高度近视等症状的游客, 不得驾驶卡丁车；</span>
+        <span class="d-block ">3、驾驶小童车的游客须满足1.1米至1.35米的身高要求；</span>
+        <span class="d-block ">4、驾驶娱乐车的游客须满足1.35以上的身高要求方可驾驶卡丁车；</span>
+        <span class="d-block ">5、严禁酒后驾驶，否则后果自负；</span>
+        <span class="d-block ">6、游客不得穿高跟鞋、拖鞋、裙子、短裤驾驶卡丁车。</span>
+    </small>
+  </p>
+</div>
+<div class="price bg-secondary" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url(assets/img/glpz_img/bgtime.jpg);">
+    <!-- <div class="piao pl-4 pr-4">
+        <h3 class="bg-secondary text-white">营业时间</h3>
+        <hr/>
+    </div> -->
+    <div class="openTime text-center text-white pl-4 pr-4 pb-4 pt-3">
+        <div class="text-center d-block border border-white pt-3 pb-3">
+            <p class="mb-2" style="font-size:20px;">营业时间</p>
+            <strong class="d-block" style="font-size:20px;">10:00 - 22:00</strong>
+            <small>（法定节假日如有变化将另行通知）</small>
+        </div>
+        <p class="mb-0 mt-4">
+            咨询电话：0752-2888688<br/>
+            场馆地址：惠州市惠城区金龙大道99号
+        </p>
+    </div>
+</div>
+<div class="bg-info" style="width:100%;height:5px;"></div>

@@ -1,0 +1,11 @@
+<!-- 底部导航 -->
+{% if page.layout == "leaderList" or page.layout == "leaderDetail" %}
+<nav class="menu">
+    <a href="leaderList.html" class="{% if page.layout == "leaderList" %} active {% endif %}">
+        <i class="fa fa-home"></i><span>排行榜</span>
+    </a>
+    <a href="leaderDetail.html".html" class="{% if page.layout == "leaderDetail" %} active {% endif %}">
+        <i class="fa fa-user-circle"></i><span>我的</span>
+    </a>
+</nav>
+{% endif %}

@@ -1,18 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>{{ page.title | smartify }}</title>
     {% include head.html %}
-  </head>
-  <body>
-    {% include docs-navbar.html %}
-    {% if page.layout == "simple" %}
-        {{ content }}
-      {% else %}
-      <main id="content" role="main">
-        {{ content }}
-      </main>
-    {% endif %}
-    {% include footer.html %}
-    {% include scripts.html %}
-  </body>
+</head>
+<body>
+    {{ content }}
+    {% include menu.html %}
+    {% include script.html %}
+    {% include swiperjs.html %}
+    {% include weui.html %}
+    {% include form.html %}
+</body>
 </html>
