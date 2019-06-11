@@ -25,4 +25,4 @@ vue的插件库
       }
     //向外暴露
     window.MyPlugin = MyPlugin
-})
+})()
