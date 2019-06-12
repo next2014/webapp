@@ -1,0 +1,116 @@
+- category: 欧美城全景图
+  examples:
+    - name: 园区全景图
+      index: 1
+      title: a1
+      url: https://720yun.com/t/f06jvpef5k6?scene_id=19088801
+      content: 
+    - name: 海洋世界全景图
+      index: 2
+      title: a4
+      url: https://720yun.com/t/a97je7wuku8?scene_id=17916395
+      content: 
+    - name: 婚博中心全景图
+      index: 3
+      title: a3
+      url: https://720yun.com/t/cc3jvpevek8?scene_id=19079087
+      content:
+    - name: 卡丁车馆全景图
+      index: 4
+      title: a5
+      url: https://720yun.com/t/de7jrrtyrv9
+      content:
+    - name: 美食天地全景图
+      index: 5
+      title: b4
+      url: https://720yun.com/t/839jrrmuvw9
+      content:
+    - name: 欧欧主题酒店全景图
+      index: 6
+      title: b6
+      url: https://720yun.com/t/dbejrrhmey6
+      content:
+    - name: 蜡像馆全景图
+      index: 7
+      title: a6
+      url: https://720yun.com/t/9edjrrsv5f3
+      content:
+
+- category: 欧美城项目介绍
+  introduct:
+    - name: 海洋世界介绍
+      index: 1
+      title: b1
+      url: ../ocean/index.html 
+    - name: 婚博艺术中心介绍
+      index: 2
+      title: b2
+      url: ../Wedding/index.html
+    - name: 卡丁车馆介绍
+      index: 3
+      title: b3
+      url: ../KARTING/index.html
+    - name: 美食天地介绍
+      index: 4
+      title: b4
+      url: pages/detail_01.html
+    - name: 欧欧之家介绍
+      index: 5
+      title: b5
+      url: pages/detail_02.html
+    - name: 欧欧主题酒店介绍
+      index: 6
+      title: b6
+      url: pages/detail_03.html
+    - name: 主题汇演
+      index: 4
+      title: b7
+      url: pages/detail_04.html 
+    - name: 嗨玩一条街
+      index: 5
+      title: b8
+      url: pages/detail_05.html 
+    - name: 户外电玩
+      index: 6
+      title: b9
+      url: pages/detail_06.html
+
+- category: 欧美城美食天地
+  meishitd:
+    - name: 欧欧西餐厅
+      index: 1
+      img: ooxcw
+      url: http://hzomsell.m.rc-yiding.com?storeId=19
+    - name: 小樱日本料理
+      index: 2
+      img: xyrbll
+      url: http://hzomsell.m.rc-yiding.com?storeId=28
+      content:
+    - name: 韩食
+      index: 3
+      img: hs
+      url: http://hzomsell.m.rc-yiding.com?storeId=10
+    - name: 欧爸食堂
+      index: 4
+      img: obmg
+      url: http://hzomsell.m.rc-yiding.com?storeId=12
+    - name: 欧妈美食坊
+      index: 5
+      img: ommsf
+      url: http://hzomsell.m.rc-yiding.com?storeId=11
+    - name: 美美甜品屋
+      index: 6
+      img: mmttw
+      url: http://hzomsell.m.rc-yiding.com?storeId=21
+    - name: omc铁板西式工坊
+      index: 1
+      img: tbxsgf
+      url: http://hzomsell.m.rc-yiding.com?storeId=17
+    - name: 曼谷咖喱
+      index: 2
+      img: mgjl
+      url: http://hzomsell.m.rc-yiding.com?storeId=18
+    - name: 老牌洪氏潮卤
+      index: 3
+      img: hscsled
+      url: http://hzomsell.m.rc-yiding.com?storeId=9

@@ -39,11 +39,11 @@
            },
            methods: {
             deleteP(index) {
-               // 删除persons 中指定 index的p
+               // 删除persons中指定index的p
                this.persons.splice(index, 1)
             },
 
-            updateP  (index, newP) {
+            updateP (index, newP) {
                 // 并没有改变 persons 本身，数组内部发生了变化，但是并没有调用变异方法，vue 不会更新界面
                 //this.persons[index] = newP 
                 this.persons.splice(index, 1, newP)

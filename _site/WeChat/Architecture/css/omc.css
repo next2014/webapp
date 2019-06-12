@@ -1,0 +1,111 @@
+*{margin: 0;padding: 0;}
+.box_top{
+	width: 1020px;
+	height: 309px;
+	background-color: #ffffff;
+}
+.logo{
+	width: 517px;
+	height: 131px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.content{
+	width: 1020px;
+	height: 100%;
+	margin-top: -80px;
+	background-color: #ffffff;
+}
+/*--------标题样式
+.title01,.title02,.title03,.title04,.title05,.title06,.title07,.title08,
+.title09,.title10,.title11,.title12,.title13,.title14,.title15,.title16,
+.title17,.title18,.title19,.title20,.title21,.title22,.title23,.title24,
+.title25,.title26,.title27,.title28,.title29,.title30,.title31,.title32,
+.title33,.title34,.title35,.title36,.title37,.title38 p{
+	text-align: center;
+	padding-top:18px;
+	padding-bottom: 28px;
+	font-size: 36px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #e59b5a;
+}
+.title14,.title15,.title16,.title17,.title18,.title19,.title20,.title21,
+.title22,.title23,.title24,.title25,.title26,.title27,.title28,.title29,
+.title30,.title31,.title32,.title33,.title34,.title35,.title36,.title37,
+.title38 p{
+	 margin-top: -5px;
+	 padding-bottom: 25px;
+}
+------------------*/
+
+.title{
+    text-align: center;
+}
+.title:before,.title:after{
+    content: " ";
+    display: inline-block;
+    width: 100px;
+    border-top: solid 3px;
+    border-color: #e59b5a;
+    height: 15px;
+    vertical-align: middle;
+}
+.title>p{
+    display: inline-block;
+    margin: 0 12px;
+    font-family: "微软雅黑";
+    font-size: 40px;
+    color: #e59b5a;
+    font-weight: bold;
+    padding-top:38px;
+	padding-bottom: 28px;
+}
+
+.pic{
+	text-align: center;
+}
+.pic img{
+	width: 95%;
+}
+
+.section01,.section02,.section03,.section04,.section05,.section06,.section07,
+.section08,.section09,.section10,.section11,.section12,.section13,.section14,
+.section15,.section16,.section16-1,.section17,.section17-1,.section18,.section18-1,
+.section19,.section19-1,.section20,.section20-1,.section21,.section21-1,.section22,
+.section23,.section24,.section24-1,.section25,.section26,.section27,.section28,
+.section29,.section30,.section31,.section32,.section32-1,.section33,.section34,
+.section35,.section36,.section37,.section38,.section39{
+	text-align:justify;
+	padding-top: 28px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-family: "微软雅黑";
+	font-size: 36px;
+	color: #e59b5a;
+}
+.box01,.box02,.box03,.box04,.box05,.box06,.box07,.box08,.box09,.box10,.box11,.box12,
+.box13,.box14,.box15,.box16,.box17,.box18,.box19,.box20,.box21,.box22,.box23,.box24,
+.box25{
+	margin-top: 48px;
+	margin-bottom: 48px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #e59b5a;
+}
+.section16,.section17,.section18,.section19,.section20,.section21,.section24,.section32{
+	 margin-top: -20px;
+}
+.section16-1,.section17-1,.section18-1,.section19-1,.section20-1,.section21-1,
+.section24-1,.section32-1{
+	 margin-top: -20px; 
+	 margin-bottom: 20px;
+}
+.section15,.section22,.section23,.section25,.section26,.section27,.section28,.section29,
+.section30,.section31,.section33,.section34,.section35,.section36,.section37,.section38,
+.section39{
+	 margin-top: -20px;
+	 margin-bottom: 20px;
+}

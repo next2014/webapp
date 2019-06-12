@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>卡丁车选手信息</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
+<!-- animateion -->
+<link href="assets/css/keyframes.css" rel="stylesheet">
+<link href="assets/css/animation.css" rel="stylesheet">
+<link href="assets/css/swiper.min.css" rel="stylesheet">
+<link href="assets/css/glpz.css"  rel="stylesheet">
+<!-- icon -->
+<link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- weui -->
+<link href="assets/css/weui.css" rel="stylesheet" >
+<link href="assets/css/jquery-weui.css" rel="stylesheet">
+</head>
+<body>
+    <div class="leaderDetail">
+    <div class="page__hd bg-info">
+        <div class="text-center" style="margin:0 auto">
+            <div class="page__img">
+                <img src="assets/img/glpz_img/1.png" class="border rounded-circle" />
+            </div>
+            <h1 class="page__title mt-2 mb-2">李舒男</h1>
+            <p class="page__desc text-truncate text-white">卡丁车选手</p>
+        </div>
+        <div class="megEdit">
+           <a href="leaderEdit.html">
+              <i class="fa fa fa-cog text-white"></i>
+           </a>
+        </div>
+    </div>
+    <div class="mod_pos_item">
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label for="name" class="weui-label">性　　别</label>
+                </div>
+                <div class="weui-cell__bd"><p>男</p></div>
+            </div>
+        </div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label for="name" class="weui-label">出生日期</label>
+                </div>
+                <div class="weui-cell__bd"><p>1990-04-22</p></div>
+            </div>
+        </div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label for="name" class="weui-label">出生地址</label>
+                </div>
+                <div class="weui-cell__bd"><p>广东惠州</p></div>
+            </div>
+        </div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label for="name" class="weui-label">手机号码</label>
+                </div>
+                <div class="weui-cell__bd"><p>1340000000</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- 底部导航 -->
+
+<nav class="menu">
+    <a href="leaderList.html" class="">
+        <i class="fa fa-home"></i><span>排行榜</span>
+    </a>
+    <a href="leaderDetail.html".html" class=" active ">
+        <i class="fa fa-user-circle"></i><span>我的</span>
+    </a>
+</nav>
+
+    <!-- <script src="assets/js/jquery-2.1.0.min.js"></script> -->
+<script src="assets/lib/jquery-2.1.4.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container',{
+        directon:'horizontal',//水平滑动
+        speed:300,//滑动速度
+        loop:true,
+        autoplay:{//自动切换时间
+            delay:3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el:'.swiper-pagination',
+            dynamicBullets: true,
+        }
+    });
+    var swiper1 = new Swiper('.swiper-container1', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+    <script src="assets/js/jquery-weui.js"></script>
+<script src="assets/lib/fastclick.js"></script>
+<script src="assets/js/weui.min.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script>
+    $("#years-monthes").datetimePicker({
+        title: '限定年月',
+        years: [2017, 2018],
+        monthes: ['06', '07'],
+        onChange: function (picker, values, displayValues) {
+        console.log(values);
+        }
+    });
+</script>
+<script>
+  /* 图片手动上传 */
+  var uploadCount = 0, uploadCustomFileList = [];
+  // 这里是简单的调用，其余api请参考文档
+  weui.uploader('#uploaderCustom', {
+      url: 'http://localhost:3000',
+      auto: false,
+      type: 'file',
+      onBeforeQueued: function(files) {
+          if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+              weui.alert('请上传图片');
+              return false;
+          }
+          if(this.size > 5 * 1024 * 1024){
+              weui.alert('请上传不超过10M的图片');
+              return false;
+          }
+          if (files.length > 1) { // 防止一下子选中过多文件
+              weui.alert('最多只能上传1张图片，请重新选择');
+              return true;
+          }
+          if (uploadCount + 1 > 1) {
+              weui.alert('最多只能上传1张图片');
+              return true;
+          }
+
+          ++uploadCount;
+
+      },
+      onQueued: function() {
+          uploadCustomFileList.push(this);
+      }
+  });
+  // 手动上传按钮
+  document.getElementById("uploaderCustomBtn").addEventListener('click', function(){
+      uploadCustomFileList.forEach(function(file){
+          file.upload();
+      });
+  });
+  // 缩略图预览
+  document.querySelector('#uploaderCustomFiles').addEventListener('click', function(e){
+  var target = e.target;
+
+  while(!target.classList.contains('weui-uploader__file') && target){
+      target = target.parentNode;
+  }
+  if(!target) return;
+
+  var url = target.getAttribute('style') || '';
+  var id = target.getAttribute('data-id');
+
+  if(url){
+      url = url.match(/url\((.*?)\)/)[1].replace(/"/g, '');
+  }
+  var gallery = weui.gallery(url, {
+      onDelete: function(){
+          weui.confirm('确定删除该图片？', function(){
+              var index;
+              for (var i = 0, len = uploadCustomFileList.length; i < len; ++i) {
+                  var file = uploadCustomFileList[i];
+                  if(file.id == id){
+                      index = i;
+                      break;
+                  }
+              }
+              if(index !== undefined) uploadCustomFileList.splice(index, 1);
+
+              target.remove();
+              gallery.hide();
+          });
+      }
+  });
+});
+</script>
+</body>
+</html>

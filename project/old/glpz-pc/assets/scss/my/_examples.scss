@@ -1,0 +1,43 @@
+//小屏
+@media (min-width: 320px) { 
+    .bd-content{
+       .img-thumbnail{
+          height: 195px!important;
+       }
+     }
+    .simple{
+      padding: 1rem;
+    }
+}
+@media (min-width: 375px) { 
+ .bd-content{
+    .img-thumbnail{
+        height: 245px!important;
+    }
+  }
+  .simple{
+     padding: 1rem;
+   }
+}
+@media (min-width: 414px) { 
+ .bd-content{
+    .img-thumbnail{
+        height: 255px!important;
+    }
+  }
+  .simple{
+    padding: 1.5rem;
+  }
+}
+
+//大屏
+@media (min-width: 768px){
+    .bd-content{
+       .img-thumbnail{
+           height: 260px!important;
+       }
+     }
+     .simple{
+        padding: 3rem;
+     }
+}
