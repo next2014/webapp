@@ -1,0 +1,351 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{ padding:0;margin:0;list-style:none}
+html{font-size: 50px;}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.text-center{
+    text-align: center;
+}
+/* 头部 nav */
+.header{
+  position: absolute;
+  font-size: .38rem;
+  color: #fff;
+  font-family: 'PingFangSC';
+  overflow: hidden;
+  z-index: 666;
+  /* transition: all .5s; */
+}
+.header-n1{
+  top: .32rem;
+  right: .32rem;
+  width: .38rem;
+  height: .31rem;
+}
+.header-n2{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
+}
+.header-icon{
+  position: relative;
+}
+.header-icon img{
+  width: .38rem;
+  height: .31rem;
+}
+.n{
+  display: none;
+}
+.header-bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5.48rem;
+  height: 100%;
+  background: #fff;
+  transition: all .5s;
+  right: -5.8rem;
+  overflow: auto;
+}
+.header-bg-it{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.header-right{
+  right: 0;
+}
+.header-close{
+  width: .33rem;
+  height: .32rem;
+  position: absolute;
+  top: .32rem;
+  right: .32rem;
+}
+.header-logo{
+  padding: .14rem 0 .15rem;
+  min-height: .68rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+.header-logo img{
+  width: 2.65rem;
+  height: .68rem;
+}
+.nav{
+  font-size: .36rem;
+  color: #172b4d;
+  padding-top: .05rem;
+  font-family: "PingFang-SC-Bold";
+}
+.nav li{
+  height: 1.02rem;
+  line-height: 1.02rem;
+  padding-left: .52rem;
+  overflow: hidden;
+  transition: all .5s;
+}
+.nav a{
+  font-size: .36rem;
+  color: #172b4d;
+}
+.nav .nav-ul2 a{
+  display: inline-block;
+  width: 40%;
+  font-size: .3rem;
+  color: #5b697e;
+}
+.nav .nav-ul2-li{
+  height: auto;
+  line-height: normal;
+  font-size: .26rem;
+  color: #8492a6;
+  padding-top: .23rem;
+  padding-bottom: .12rem;
+}
+.nav .nav-triangle{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: .1rem solid transparent;
+  border-right: .1rem solid transparent;
+  vertical-align: middle;
+}
+.nav .triangle-up{
+  border-top: .1rem solid black;
+
+}
+.nav .triangle-down{
+  border-bottom: .1rem solid black;
+}
+
+
+/* 公共底部 */
+.footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  height: .98rem;
+  line-height: .48rem;
+  background-color: #4c8fe8;
+}
+.footer a{
+  font-size: .3rem;
+  color: #fefefe;
+}
+  
+/* section */
+.section{
+  width: 100%;
+  text-align: center;
+  padding-top: .7rem;
+
+}
+.section-title{
+  font-size: .38rem;
+  color: #172b4d;
+  margin-bottom: .26rem;
+}
+.section-title2{
+  font-size: .46rem;
+  color: #fff;
+  margin-bottom: .82rem;
+}
+.section-p{
+  font-size: .26rem;
+  color: #8492a6;
+  line-height: .36rem;
+}
+.section-btn{
+  display: inline-block;
+  font-size: .24rem;
+    color: #307cf6;
+  width: 1.8rem;
+  height: .56rem;
+  line-height: .56rem;
+    background-color: #ffffff;
+    border-radius: .28rem;
+  border: solid 1px #f8fafc;
+}
+.section-border{
+  margin: .47rem auto .44rem;
+  width: .6rem;
+    height: .02rem;
+    background-image: linear-gradient(90deg, 
+        #4c8fe8 0%, 
+        #1e70ff 100%), 
+    linear-gradient(
+        #172b4d, 
+        #172b4d);
+}
+
+/* 小程序的优势 */
+.sec-1{
+  padding-bottom: .18rem;
+  background-color: #fff;
+}
+.sec-1 .section-title{
+  margin-bottom: .60rem;
+}
+.sec-1-ad{
+  padding: 0 .31rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sec-ad-img{
+  margin: 0 auto .2rem;
+  width: 1.38rem;
+  height: 1.38rem;
+}
+.sec-ad-img img{
+  width: 100%;
+  height: 100%;
+}
+.sec-1-ad > div{
+  width: 33.33%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .24rem;
+  color: #172b4d;
+  margin-bottom: .61rem;
+}
+
+.sec-1-ad2{
+  margin: 0 auto;
+  width: 66.66%;
+}
+.sec-1-ad2>div{
+  width: 50%;
+}
+
+/* 公共尾部 */
+.sec-5{
+  width: 100%;
+  height: 3rem;
+  background: url("../img/bg_23.png") no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: .98rem;
+}
+.sec-5 .section-title{
+  font-size: .32rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.sec-5-btn{
+  margin: .39rem auto;
+}
+.sec-5-text{
+  display: inline-block;
+  color:  #fff;
+  font-size: .24rem;
+  line-height: .22rem;
+  border-bottom: 1px solid #fff;
+}
+.sec-5-text a{
+  color:  #fff;
+}
+
+
+/* 模态框 */
+.sec-2-model{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0,0,0,.7);
+  z-index: 9;
+}
+.block{
+  display: block !important;
+}
+.sec-2-model-bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5rem;
+  height:5.8rem;
+  background: #fff;
+  margin: auto;
+  padding: .5rem .9rem;
+  border-radius: .1rem;
+  box-shadow: 1px .06rem .1rem rgba(121,121,121,.19);
+  text-align: center;
+}
+.model-close{
+  position: absolute;
+  top: .2rem;
+  right: .2rem;
+  width: .2rem;
+  height: .2rem;
+}
+.model-title{
+  font-size: .32rem;
+  color: #172b4d;
+  margin-bottom: .3rem;
+}
+.form-item{
+  margin-bottom: 0;
+}
+.form-item input{
+  background: #f5f7fa;
+  border: 0px;
+  height: .6rem;
+  width: 100%;
+  border-radius: .3rem;
+  text-indent: .22rem;
+  outline: none;
+}
+.form-btn{
+  width: 2.84rem;
+  height: .6rem;
+  background: #4c8fe8;
+  font-size: .28rem;
+  color: #fff;
+  line-height: .6rem;
+  text-align: center;
+  border-radius: .3rem;
+  margin: .45rem auto 0px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px 1px rgba(67,100,241,.25);
+}
+
+#newBridge .nb-icon-wrap-0 .nb-icon-wrap-base{
+  background:url(/h5/images/index/maskImg.png) no-repeat !important;
+  background-size:1rem !important;
+}
+/* #newBridge .nb-icon-right-center{
+  top: 80%!important;
+  right: -6%!important;
+} */
+#newBridge #nb_icon_wrap{
+  left: 6.3rem !important;
+  top: 10rem !important
+}
