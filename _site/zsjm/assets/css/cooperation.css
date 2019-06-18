@@ -41,8 +41,8 @@
   font-size: .26rem;
   line-height: 1.5;
   color: #5b697e;
-  width: 5.53rem;
-  margin: .2rem auto .4rem;
+  width: 6.2rem;
+  margin: .2rem auto 0;
 }
 .support-item{
   margin: 0 .36rem;
@@ -72,8 +72,8 @@
 	color: #5b697e;
 }
 .support .support-img1{
-  width: 2.16rem;
-  height: 1.76rem;
+  width: 2.8rem;
+  height: 1.85rem;
 }
 .support .support-img2{
   width: 1.33rem;
@@ -104,11 +104,9 @@
   width: 2.11rem;
   height: 1.72rem;
 }
-
-
-.needyou{
+/* .needyou{
   padding-top: .86rem;
-}
+} */
 .needyou-title{
   background: url("../img/needyou_title.png") no-repeat center;
   background-size: 100% 100%;
@@ -134,10 +132,6 @@
   padding-left: .38rem;
   font-size: .3rem;
   color: #5b697e;
-}
-
-.proxy{
-  padding-top: .64rem;
 }
 .proxy-title{
   background: url("../img/proxy_title.png") no-repeat center;
