@@ -32,8 +32,16 @@
 
         .nameCoupon1 {
             padding: 10px 10px 0 10px;
-            line-height: 22px;
             text-align: left;
+        }
+
+        .nameCoupon1 p{
+           line-height: 25px;
+        }
+        .layui-layer-btn .layui-layer-btn0 {
+            border-color: rgb(236, 170, 3)!important;
+            background-color: #FFB800!important;
+            color: #333333!important;
         }
     </style>
 </head>
@@ -83,9 +91,8 @@
         </header>
         <div class="container">
             <div id="user-list" class="user-list">
-                <!-- NO.1 -->
                 <div class="user equi shadow-sm">
-                    <span class="number">1号</span>
+                    <span class="number">1<small>号</small></span>
                     <a href="detail.html" class="link">
                         <img class="lazy img" src="assets/img/001.jpg" style="display: block;" alt="">
                     </a>
@@ -96,13 +103,12 @@
                         <p style="height:45px;overflow:hidden;">
                             <strong>服务格言：</strong>微笑接待每一位顾客，真诚信心的热忱服务，努力提升自己的专业水平，以追求顾客满意为自己的目标，让顾客高兴而来，满意而归。</p>
                     </div>
-                    <button class="layui-btn layui-btn-warm m-1" data-type="tpdata" style="width:90%;">
-                      <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #fff;vertical-align: middle;"></i> 投票 (100)
+                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                      <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP1">100</span>)
                     </button>
                 </div>
-                <!-- NO.2 -->
                 <div class="user equi shadow-sm">
-                    <span class="number">2号</span>
+                    <span class="number">2<small>号</small></span>
                     <a href="detail.html" class="link">
                         <img class="lazy img" src="assets/img/002.jpg" style="display: block;" alt="">
                     </a>
@@ -114,13 +120,12 @@
                             <strong>服务格言：</strong>非常荣幸，能有这样的机会，参加“服务之星”评选活动，感谢公司各级领导给我们提供展现自身价值的平台。
                         </p>
                     </div>
-                    <button class="layui-btn layui-btn-warm m-1" data-type="tpdata" style="width:90%;">
-                       <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #fff;vertical-align: middle;"></i> 投票 (100)
+                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                       <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP2">100</span>)
                     </button>
                 </div>
-                <!-- NO.3 -->
                 <div class="user equi shadow-sm">
-                    <span class="number">3号</span>
+                    <span class="number">3<small>号</small></span>
                     <a href="detail.html" class="link">
                         <img class="lazy img" src="assets/img/003.jpg" style="display: block;" alt="">
                     </a>
@@ -132,13 +137,12 @@
                             <strong>服务格言：</strong>现今各行业竞争日趋激烈的大环境下，服务更体现了企业的软实力与竞争力，服务是当企业经营的精髓之所在。
                             在接下来的工作中，为了能更好提升公司及品牌形象我将会注重服务综合中的每一个细节，“想客户之所想，急客户之所急”，并且把此工作做到持之以恒。</p>
                     </div>
-                    <button class="layui-btn layui-btn-warm m-1" data-type="tpdata" style="width:90%;">
-                            <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #fff;vertical-align: middle;"></i> 投票 (100)
+                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                            <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP3">100</span>)
                          </button>
                 </div>
-                <!-- NO.4 -->
                 <div class="user equi shadow-sm">
-                    <span class="number">4号</span>
+                    <span class="number">4<small>号</small></span>
                     <a href="detail.html" class="link">
                         <img class="lazy img" src="assets/img/004.jpg" style="display: block;" alt="">
                     </a>
@@ -150,9 +154,9 @@
                             <strong>服务格言：</strong>作为一名主管的我要时时刻刻做到以身作则，起到模范带头作用，平时对待顾客要真诚周到，
                             对待员工要有层次管理，必须有乐观进取的工作精神，我会更加努力工作，带领大家一起进步，善待自己的服务，争取做到更好。</p>
                     </div>
-                    <button class="layui-btn layui-btn-warm m-1" data-type="tpdata" style="width:90%;">
-                            <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #fff;vertical-align: middle;"></i> 投票 (100)
-                         </button>
+                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                            <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP3">100</span>)
+                    </button>
                 </div>
             </div>
         </div>
@@ -170,7 +174,7 @@
             </div>
         </footer>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/ft-carousel.min.js"></script>
@@ -180,7 +184,7 @@
             var date = new Date();
             var now = date.getTime();
             //设置截止时间  
-            var str = "2019/05/31 23:59:59";
+            var str = "2019/07/31 23:59:59";
             var endDate = new Date(str);
             var end = endDate.getTime();
             //时间差  
@@ -202,6 +206,32 @@
             setTimeout(countTime, 1000);
         }
     </script>
+<script src="src/layui.js"></script>
+<script>
+    layui.use(['form', 'upload','layer'], function () {
+        var $ = layui.jquery
+            , layer = layui.layer;
+
+        //触发事件
+        var active = {
+            tpdata: function(){
+            layer.confirm('您是否确定投票？', {
+                title: '张三',
+                btn: ['确认','取消'] //按钮
+            }, function(){
+                layer.msg('成功投票', {icon: 1});
+            }, function(){
+                layer.msg('取消投票', {icon: 5});
+            });
+            }
+        };
+        $('.toupiao').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+});
+
+</script>
     <script src="assets/js/swiper.js"></script>
     <script type="text/javascript">
         var swiper = new Swiper('.swiper-container', {

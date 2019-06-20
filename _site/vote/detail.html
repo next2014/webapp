@@ -70,6 +70,7 @@
                         第1名</strong>
                     <img src="assets/img/001.jpg" style="width:60%;">
                     <p class="pl-1 pr-1" style="line-height:30px;width: 100%; border-top:1px solid #eee;margin-top:20px;">
+					    <strong>编号：</strong>1号<br/>
                         <strong>姓名：</strong>何启亨<br/>
                         <strong>部门：</strong>收银部<br/>
                         <strong>职位：</strong>收银主管<br/>
@@ -96,8 +97,7 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="assets/js/jquery-2.1.0.min.js"></script> -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/ft-carousel.min.js"></script>
@@ -107,7 +107,7 @@
             var date = new Date();
             var now = date.getTime();
             //设置截止时间  
-            var str = "2019/05/31 23:59:59";
+            var str = "2019/07/31 23:59:59";
             var endDate = new Date(str);
             var end = endDate.getTime();
             //时间差  
@@ -129,82 +129,7 @@
             setTimeout(countTime, 1000);
         }
     </script>
-    <script src="src/layui.js"></script>
-    <script>
-        layui.use(['form', 'upload', 'layer'], function () {
-            var $ = layui.jquery
-                , form = layui.form
-                , upload = layui.upload
-                , layer = layui.layer;
-
-            //自定义验证规则
-            form.verify({
-                title: function (value) {
-                    if (value.length < 5) {
-                        return '标题也太短了吧';
-                    }
-                }
-            });
-
-            //初始赋值
-            form.val('first', {
-                'name': '测试测试测试测试'
-                , 'phone': 11111111111
-                , 'address': '广东惠州欧美城文化有限公司'
-                , 'interest': 3
-                , 'like[write]': true
-                , 'desc': 'form 是我们非常看重的一块'
-                , xxxxxxxxx: 123
-            });
-
-            upload.render({
-                elem: '#test2'
-                , url: ''
-                , multiple: true
-                , number: 3
-                , size: 1024
-                , before: function (obj) {
-                    //预读本地文件示例，不支持ie8
-                    obj.preview(function (index, file, result) {
-                        $('#demo2').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img">')
-                    });
-                }
-                , done: function (res) {
-                    //上传完毕
-                }
-                , allDone: function (obj) {
-                    console.log(obj)
-                }
-            });
-
-            //监听提交
-            form.on('submit(*)', function (data) {
-                console.log(data)
-                alert(JSON.stringify(data.field));
-                return false;
-            });
-
-            //触发事件
-            var active = {
-                tpdata: function () {
-                    layer.confirm('您是否确定投票？', {
-                        title: '张三',
-                        btn: ['确认', '取消'] //按钮
-                    }, function () {
-                        layer.msg('成功投票', { icon: 1 });
-                    }, function () {
-                        layer.msg('取消投票', { icon: 5 });
-                    });
-                }
-            };
-            $('.toupiao').on('click', function () {
-                var type = $(this).data('type');
-                active[type] ? active[type].call(this) : '';
-            });
-        });
-
-    </script>
-    <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
     <script type="text/javascript">
         var swiper = new Swiper('.swiper-container', {
             directon: 'horizontal',//水平滑动

@@ -176,10 +176,11 @@
 	top: 0;
 	left: 0;
 	font-size: 14px;
-	padding: .15rem .35rem;
+	padding: .06rem .35rem;
 	color: #ffffff;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
+	border-bottom-right-radius: 10px;
 }
 
 .container .user-list .user .nameCoupon{
