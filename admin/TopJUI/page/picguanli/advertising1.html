@@ -33,13 +33,14 @@
 </head>
 
 <body>
-	<div class=" clearfix" id="advertising">
+
+	<div class="page-content clearfix" id="advertising">
 		<div id="scrollsidebar" class="left_Treeview">
 			<div class="show_btn" id="rightArrow"><span></span></div>
 			<div class="widget-box side_content" style="width:auto;border-right:0;"></div>
 		</div>
-		<div class="Ads_list" style="margin-left:0;width:100%!important;">
-			<div class="border clearfix">
+		<div class="Ads_list" style="margin-left:0;width:99%!important; padding:0!important">
+			<div class="border clearfix" style="margin-bottom:0!important;">
 				<span class="l_f">
 					<a href="javascript:ovid()" id="ads_add" class="btn btn-warning"><i class="fa fa-plus"></i> 添加广告</a>
 					<a href="javascript:ovid()" class="btn btn-danger"><i class="fa fa-trash"></i> 批量删除</a>
@@ -170,8 +171,6 @@
 						</div>
 					</span>
 				</li>
-
-
 			</ul>
 		</div>
 	</div>
@@ -382,7 +381,6 @@
 			]
 		});
 
-
 		$('table th input:checkbox').on('click', function () {
 			var that = this;
 			$(this).closest('table').find('tr > td:first-child input:checkbox')
@@ -392,7 +390,6 @@
 				});
 
 		});
-
 
 		$('[data-rel="tooltip"]').tooltip({ placement: tooltip_placement });
 		function tooltip_placement(context, source) {

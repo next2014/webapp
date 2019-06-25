@@ -24,11 +24,13 @@
   <title>支付方式</title>
 </head>
 <body>
-  <div class="margin clearfix">
+  <div class="page-content clearfix">
     <div class="defray_style">
-      <div class="alert alert-danger"> <button type="button" class="close" data-dismiss="alert"><i
-            class="fa fa-remove"></i></button>注：该支付方式启用并不能正常使用，需要开通支付功能才能使用相应的支付方式，</div>
-      <div class="border clearfix">
+      <div class="alert alert-danger" style="margin-top:0;margin-bottom:10px;">
+        <button type="button" class="close" data-dismiss="alert">
+          <i class="fa fa-remove"></i></button>注：该支付方式启用并不能正常使用，需要开通支付功能才能使用相应的支付方式，
+      </div>
+      <div class="border clearfix" style="margin-bottom: 10px!important;">
         <span class="l_f">
           <a href="javascript:ovid()" onclick="add_payment()" class="btn btn-primary Pay_add"><i
               class="fa fa-credit-card"></i>&nbsp;添加支付方式</a>
@@ -151,7 +153,6 @@
     </form>
   </div>
 </body>
-
 </html>
 <script>
   function select_payment(ojb, id) {

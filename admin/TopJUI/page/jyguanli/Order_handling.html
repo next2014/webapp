@@ -25,7 +25,7 @@
     <title>订单处理</title>
 </head>
 <body>
-    <div class="clearfix" style="background-color: #ffffff;">
+    <div class="page-content clearfix" style="padding:0!important;">
         <div class="handling_style" id="order_hand">
             <div id="scrollsidebar" class="left_Treeview">
                 <div class="show_btn" id="rightArrow"><span></span></div>
@@ -48,14 +48,11 @@
                 </div>
             </div>
             <div class="order_list_style" id="order_list_style" style="margin-left:0;width:100%!important;">
-                <div class="search_style">
-                    <ul class="search_content clearfix">
-                        <li><label class="l_f">订单编号</label><input name="" type="text" class="text_add"
-                                placeholder="输入订单编号" style=" width:250px" /></li>
-                        <li><label class="l_f">交易时间</label><input class="inline laydate-icon" id="start"
-                                style=" margin-left:10px;"></li>
-                        <li style="width:90px;"><button type="button" class="btn_search"><i
-                                    class="fa fa-search"></i>查询</button></li>
+                <div class="search_style" style="margin-top: 0;margin-bottom: 0;padding-bottom:10px;">
+                    <ul class="search_content clearfix" style="margin-left:0">
+                        <li><label class="l_f"></label><input name="" type="text" class="text_add" placeholder="请输入订单编号" style="width:250px;margin-left:0;padding:5px 10px;" ></li>
+                        <li><label class="l_f"></label><input class="inline laydate-icon" id="start" placeholder="请选择交易时间" style="padding-left: 10px;"></li>
+                        <li style="width:90px;"><button type="button" class="btn_search"><i class="fa fa-search"></i>查询</button></li>
                     </ul>
                 </div>
                 <!--交易订单列表-->
