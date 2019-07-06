@@ -153,6 +153,7 @@
 	position: relative;
 	margin-bottom: .53rem;
 	text-align:center;
+	height: 410px;
 }
 
 .container .user-list .user .link {
@@ -167,8 +168,8 @@
 
 .container .user-list .user .link .img {
 	box-sizing: border-box;
-	max-width: 100%;
-	max-height: 6rem
+	max-width: 80%;
+	/* max-height: 6rem */
 }
 
 .container .user-list .user .number {
@@ -232,11 +233,12 @@
 } */
 
 .container .user-list .user.equi .link .img {
-	width: auto;
+	/* width: auto; */
 	/* height: 240px;
 	max-width: 100% !important;
 	max-height: 100% !important; */
-	margin: 0
+	margin: 0;
+	height:250px;
 }
 
 .container .user-list .user.equi .name {

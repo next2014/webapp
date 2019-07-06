@@ -34,11 +34,9 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - desktop.ini
-  - posts
   - README.md
   - Gemfile
   - Gemfile.lock
-  - docs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

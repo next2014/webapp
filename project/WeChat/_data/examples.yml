@@ -4,37 +4,35 @@
       index: 1
       title: a1
       url: https://720yun.com/t/f06jvpef5k6?scene_id=19088801
-      content: 
     - name: 海洋世界全景图
       index: 2
       title: a4
       url: https://720yun.com/t/a97je7wuku8?scene_id=17916395
-      content: 
     - name: 婚博中心全景图
       index: 3
       title: a3
       url: https://720yun.com/t/cc3jvpevek8?scene_id=19079087
-      content:
     - name: 卡丁车馆全景图
       index: 4
       title: a5
       url: https://720yun.com/t/de7jrrtyrv9
-      content:
     - name: 美食天地全景图
       index: 5
       title: b4
       url: https://720yun.com/t/839jrrmuvw9
-      content:
     - name: 欧欧主题酒店全景图
       index: 6
       title: b6
       url: https://720yun.com/t/dbejrrhmey6
-      content:
     - name: 蜡像馆全景图
       index: 7
       title: a6
       url: https://720yun.com/t/9edjrrsv5f3
-      content:
+    - name: 欧欧之家全景图
+      index: 7
+      title: b5
+      url: https://720yun.com/t/a2vknyi75dm
+
 
 - category: 欧美城项目介绍
   introduct:

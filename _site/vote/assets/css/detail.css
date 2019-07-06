@@ -24,6 +24,7 @@
 
 .container .detail-panel {
 	width:100%;
+	margin-top: 0.5rem;
 	margin-bottom: 2rem;
 	box-sizing: border-box;
 	display: flex;
@@ -31,6 +32,10 @@
 	align-items: center;
 	position: relative;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container .detail-panel img{
+    padding-top: 20px;
 }
 
 .container .detail-panel .number {

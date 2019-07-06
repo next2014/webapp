@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html style="font-size: 35.8px;">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>欧美城 · 服务之星评选活动</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/ft-carousel.css">
-    <link rel="stylesheet" href="assets/css/layer.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/normalize.min.css">
-    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/common2.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="src/css/layui.css">
@@ -52,37 +47,6 @@
 		    <div>
 			   <img src="assets/img/banner/6-2.png"  style="width:100%" />
 			</div>
-            <!-- <div class="swiper-container carousel">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/1.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/2.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/3.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/4.jpg" class="d-block w-100" alt="">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div> -->
-            <!-- <div class="count-info layui-bg-green">
-                <div class="info">
-                    <p class="type"><i class="iconfont icon-20-account"></i><span class="text">参赛数</span></p> <span
-                        class="num">3</span>
-                </div>
-                <div class="info">
-                    <p class="type"><i class="iconfont icon-20-numbers"></i><span class="text">投票数</span></p> <span
-                        class="num">2</span>
-                </div>
-                <div class="info">
-                    <p class="type"><i class="iconfont icon-20-views"></i><span class="text">访问量</span></p> <span
-                        class="num">42</span>
-                </div>
-            </div> -->
             <p class="count-down shadow-sm">
                 <i class="iconfont icon-time font-color"></i>投票
                 <span class="text">结束</span>倒计时：
@@ -166,7 +130,7 @@
         <footer>
             <div class="footer-navs layui-bg-gray text-dark">
                 <a href="index.html" class="link active ">
-                    <i class="layui-icon layui-icon-home mr-1" style="font-size:20px;"></i> <span class="text">首页</span>
+                    <i class="fa fa-home mr-1" style="font-size:20px;"></i> <span class="text">首页</span>
                 </a>
                 <a href="tsort.html" class="link ">
                     <i class="iconfont icon-rank mr-1" style="font-size:20px;"></i> <span class="text">排行榜</span>
@@ -178,9 +142,8 @@
         </footer>
     </div>
     <script src="assets/js/jquery-2.1.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/ft-carousel.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.bundle.js"></script> -->
+    <!-- <script src="assets/js/ft-carousel.min.js"></script> -->
     <script type="text/javascript">
         function countTime() {
             //获取当前时间  
@@ -228,42 +191,20 @@
             });
             }
         };*/
-        var active = {
+        /*var active = {
             tpdata: function(){
             layer.confirm('投票活动尚未开始', {
                 title: '提示',
-                btn: '取消' //按钮
+                btn: '取消'
             });
             }
         };
         $('.toupiao').on('click', function(){
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
-        });
+        });*/
 });
 
 </script>
-    <script src="assets/js/swiper.js"></script>
-    <script type="text/javascript">
-        var swiper = new Swiper('.swiper-container', {
-            directon: 'horizontal',//水平滑动
-            speed: 300,//滑动速度
-            loop: true,
-            autoplay: {//自动切换时间
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-            }
-        });
-        var swiper1 = new Swiper('.swiper-container1', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
 </body>
 </html>

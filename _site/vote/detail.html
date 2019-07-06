@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html style="font-size: 35.8px;">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>欧美城 · 服务之星</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <title>欧美城 · 服务之星评选活动</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/ft-carousel.css">
-    <link rel="stylesheet" href="assets/css/layer.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/normalize.min.css">
-    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/common2.css">
     <link rel="stylesheet" href="assets/css/detail.css">
     <link rel="stylesheet" href="src/css/layui.css">
@@ -43,31 +38,14 @@
 		    <div>
 			   <img src="assets/img/banner/6.png"  style="width:100%" />
 			</div>
-            <!-- <div class="swiper-container carousel">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/1.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/2.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/3.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/banner/4.jpg" class="d-block w-100" alt="">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div> -->
-            <p class="count-down shadow-sm">
+            <!-- <p class="count-down shadow-sm">
                 <i class="iconfont icon-time font-color"></i> 投票
                 <span class="text">结束</span>倒计时：
                 <span id="_d">00</span>
                 <span id="_h">00</span>
                 <span id="_m">00</span>
                 <span id="_s">00</span>
-            </p>
+            </p> -->
         </header>
         <div id="app" class="container">
             <div class="detail-panel">
@@ -93,7 +71,7 @@
         <footer>
             <div class="footer-navs layui-bg-gray text-dark">
                 <a href="index.html" class="link active">
-                    <i class="layui-icon layui-icon-home mr-1" style="font-size:20px;"></i> <span class="text">首页</span>
+                    <i class="fa fa-home mr-1" style="font-size:20px;"></i> <span class="text">首页</span>
                 </a>
                 <a href="tsort.html" class="link ">
                     <i class="iconfont icon-rank mr-1" style="font-size:20px;"></i> <span class="text">排行榜</span>
@@ -105,37 +83,6 @@
         </footer>
     </div>
     <script src="assets/js/jquery-2.1.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/ft-carousel.min.js"></script>
-    <script type="text/javascript">
-        function countTime() {
-            //获取当前时间  
-            var date = new Date();
-            var now = date.getTime();
-            //设置截止时间  
-            var str = "2019/07/31 23:59:59";
-            var endDate = new Date(str);
-            var end = endDate.getTime();
-            //时间差  
-            var leftTime = end - now;
-            //定义变量 d,h,m,s保存倒计时的时间  
-            var d, h, m, s;
-            if (leftTime >= 0) {
-                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
-                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
-                m = Math.floor(leftTime / 1000 / 60 % 60);
-                s = Math.floor(leftTime / 1000 % 60);
-            }
-            //将倒计时赋值到div中  
-            document.getElementById("_d").innerHTML = d + "天";
-            document.getElementById("_h").innerHTML = h + "时";
-            document.getElementById("_m").innerHTML = m + "分";
-            document.getElementById("_s").innerHTML = s + "秒";
-            //递归每秒调用countTime方法，显示动态时间效果  
-            setTimeout(countTime, 1000);
-        }
-    </script>
     <script src="src/layui.js"></script>
     <script>
 		layui.use(['form', 'upload','layer'], function () {
@@ -155,18 +102,18 @@
 				});
 				}
 			};*/
-			var active = {
+			/*var active = {
 				tpdata: function(){
 				layer.confirm('投票活动尚未开始', {
 					title: '提示',
-					btn: '取消' //按钮
+					btn: '取消'
 				});
 				}
 			};
 			$('.toupiao').on('click', function(){
 				var type = $(this).data('type');
 				active[type] ? active[type].call(this) : '';
-			});
+			});*/
 	});
 	</script>
 </body>
