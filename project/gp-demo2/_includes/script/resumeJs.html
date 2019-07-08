@@ -1,0 +1,49 @@
+<script src="static/js/city-picker.min.js"></script>
+<script>
+    $("#Curlocat").cityPicker({
+        title: "现所在地",
+        onChange: function (picker, values, displayValues) {
+        console.log(values, displayValues);
+        }
+    });
+</script>
+<script>
+    $("#date").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日',
+    });
+    $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  
+        // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。
+        //只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+    });
+</script>
+<script>
+    $("#userType").select({
+        title: "用户类型",
+        items: [
+            {
+                title: "社会人士",
+                value: "001",
+            },
+            {
+                title: "应届毕业生",
+                value: "002"
+            }
+        ]
+    });
+    $("#sex").select({
+        title: "性别",
+        items: [
+            {
+                title: "男",
+                value: "001",
+            },
+            {
+                title: "女",
+                value: "002"
+            }
+        ]
+    });
+</script>

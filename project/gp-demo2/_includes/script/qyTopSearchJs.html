@@ -1,0 +1,15 @@
+<script>
+	var $mpiBtn = $('#mod_pos_item_btn');
+	var $mpiInd = $('.mod_pos_item');
+	$mpiBtn.on('click',function(){
+			if($mpiInd.css("display") == "none" || $mpiInd.css("display") == ""){  
+					$mpiInd.css("display","block");
+					$mpiInd.css("position","fixed");
+					$mpiInd.css("top","50px");
+					$mpiInd.css("z-index","200");
+					$mpiInd.css("width","100%");
+				}else{ 
+					$mpiInd.css("display","none");
+				}
+		});
+</script>

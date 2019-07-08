@@ -1,0 +1,12 @@
+<!-- 查看求职简历 备注信息 -->
+<script>
+    $(document).on("click", "#show-prompt", function() {
+        $.prompt({
+            title: "添加备注",
+						input1: '操作人',
+            onOK: function(text) {
+                 $.alert("您的备注是:"+text, "成功添加备注");
+            },
+        });
+    });
+</script>

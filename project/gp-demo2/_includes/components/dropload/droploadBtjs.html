@@ -1,0 +1,57 @@
+<!--下拉刷新列表-->
+<link rel="stylesheet" href="static/css/tweenLoad.css"/>
+<script src="static/js/tweenLoad.min.js"></script>
+<script>
+$(function(){
+    // 页数
+    var page = 0;
+    // 每页展示5个
+    var size = 4;
+    // dropload
+    $('.content').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            page++;
+            // 拼接HTML
+            var result = '';
+            $.ajax({
+                type: 'GET',
+                // url: 'http://ons.me/tools/dropload/json.php?page='+page+'&size='+size,
+                url: 'static/json/more.json',
+                dataType: 'json',
+                success: function(data){
+                    var arrLen = data.length;
+                    if(arrLen > 0){
+                        for(var i=0; i<arrLen; i++){
+                            result += '<li onclick="javascript: window.location.href =&#39;pages/ticketDetailsNew.html&#39;">'
+                                            +'<div class="in_fl tic_img">' 
+                                                    +'<img src="'+data[i].GetPic+'" alt="">'
+                                            +'</div>'
+                                            +'<div class="in_fr">'
+                                                +'<h2><a href="javascript:;" class="badge badge-'+data[i].GetTypeColor+' text-white mr-1">'+data[i].GetType+'</a>'+data[i].GetTitle+'</h2>'
+                                                +'<span class="dol d-block mt-1">¥<em>'+data[i].GetPrick+'</em></span>'
+                                            +'</div>'
+                                        +'</li>'
+                        }
+                    // 如果没有数据
+                    }else{
+                        // 锁定
+                        me.lock();
+                        // 无数据
+                        me.noData();
+                    }
+                     // 插入数据到页面，放到最后面
+                     $('.lists').append(result);
+                    // 每次数据插入，必须重置
+                    me.resetload();
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+        }
+    });
+});
+</script>

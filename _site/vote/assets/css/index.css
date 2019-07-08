@@ -153,7 +153,7 @@
 	position: relative;
 	margin-bottom: .53rem;
 	text-align:center;
-	height: 410px;
+	height: 450px;
 }
 
 .container .user-list .user .link {
@@ -166,9 +166,17 @@
 	width: 100%
 }
 
+.container .user-list .user a{
+   text-decoration: none;
+}
+
+.container .user-list .user a:hover{
+   color:#333;
+}
+
 .container .user-list .user .link .img {
 	box-sizing: border-box;
-	max-width: 80%;
+	/* max-width: 80%;*/
 	/* max-height: 6rem */
 }
 

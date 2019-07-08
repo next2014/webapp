@@ -1,0 +1,47 @@
+//remove
+
+.return .te_d{
+	height:auto;
+	top: 18%;
+}
+.return .te_d .re_con{
+	width: 80%;
+	height: auto;
+	margin:1rem auto;
+	font-size: 0.7rem;
+	color:#838383;
+}
+.return .re_con p{
+	line-height: 1.4rem;
+}
+.return .re_con p.plist{
+	line-height: 0.8rem;
+	color:#bababa;
+	margin:0.5rem 0;
+	font-size: 0.6rem;
+}
+.return .te_d .re_con label{
+	margin-right:0.4rem;
+}
+
+.return .te_d .de_btn{
+	width: 80%;
+	height:auto;
+	overflow: hidden;
+	margin:1rem auto;
+
+}
+.return .te_d .de_btn button{
+	width: 47%;
+    font-size: 0.6rem;
+}
+
+//remove success
+.out_si .de_btn{
+    width: 50%;
+    margin:0 auto;
+}
+.out_si .de_btn button{
+width: 100%;
+margin:1rem auto;
+}

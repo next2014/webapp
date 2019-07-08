@@ -1,0 +1,13 @@
+{% if page.layout == "pages/ticketConfirm" or page.layout == "pages/nowPlay" %}
+<header class="search">
+<div class="search_header">
+  <div class="search_header_box">
+    <div class="search_left w-5"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i> </a></div>
+    <div class="search_center">
+        {% if page.layout == "pages/ticketConfirm" or page.layout == "pages/nowPlay" %}欧美城微信自助购买{% endif %}
+    </div>
+    <div class="search_right w-5"></div>
+   </div>
+</div>
+</header>
+{% endif %}

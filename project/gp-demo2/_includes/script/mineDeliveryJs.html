@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="static/css/tweenLoad.css">
+<script src="static/js/tweenLoad.min.js"></script>
+<script>
+$(function(){
+    var itemIndex = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    var tab3LoadEnd = false;
+    var tab4LoadEnd = false;
+    var tab5LoadEnd = false;
+    // tab
+    $('.mod_int .mod_int_tab').on('click',function(){
+        var $this = $(this);
+        itemIndex = $this.index();
+        $this.addClass('weui-bar__item--on').siblings('.mod_int_tab').removeClass('weui-bar__item--on');
+        $('.weui-tab__bd-item').eq(itemIndex).show().siblings('.weui-tab__bd-item').hide();
+
+        // 如果选中菜单一
+        if(itemIndex == '0'){
+            // 如果数据没有加载完
+            if(!tab1LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        // 如果选中菜单二
+        }else if(itemIndex == '1'){
+            if(!tab2LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        //
+        }else if(itemIndex == '2'){
+            if(!tab3LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }   
+        }else if(itemIndex == '3'){
+            if(!tab4LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            } 
+        }else if(itemIndex == '4'){
+            if(!tab5LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            } 
+        }
+        // 重置
+        dropload.resetload();
+    });
+
+    var counter = 0;
+    // 每页展示4个
+    var num = 4;
+    var pageStart = 0,pageEnd = 0;
+
+    // dropload
+    var dropload = $('.weui-tab__bd').dropload({
+        scrollArea : window,
+        domDown : {
+            domClass   : 'dropload-down',
+            domRefresh : '<div class="dropload-refresh">↑使劲往上拉</div>',
+            domLoad    : '<div class="dropload-load"><i class="fa fa-spinner fa-pulse fa-lg mr-2"></i> 过来坐下...客官先喝杯茶歇歇脚</div>',
+            domNoData  : '<div class="dropload-noData">已经扯过头啦... (｡•ˇ‸ˇ•｡)</div>'
+        },
+        loadDownFn : function(me){
+            // 加载菜单一的数据
+            if(itemIndex == '0'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'static/json/more1.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+
+                        if(pageStart <= data.lists.length){
+                            for(var i = pageStart; i < pageEnd; i++){
+                              result += '<a href="'+data.lists[i].link+'" class="mod_pos_item">'
+                                        +'<div class="mod_pos_item_text">'
+                                            +'<h2 class="text-truncate">'+data.lists[i].position+'</h2>'
+                                            +'<p class="mod_pos_item_mes text-truncate">'
+                                                +'<span>'+data.lists[i].city+'</span>'
+                                                +'<span>'+data.lists[i].area+'</span>'
+                                                +'<span>'+data.lists[i].experience+'</span>'
+                                                +'<span>'+data.lists[i].education+'</span>'
+                                            +'</p>'
+                                            +'<ul class="mod_pos_item_ind">'
+                                                +'<li>'+data.lists[i].ind1+'</li>'
+                                                +'<li>'+data.lists[i].ind2+'</li>'
+                                                +'<li>'+data.lists[i].ind3+'</li>'
+                                                +'<li>'+data.lists[i].ind4+'</li>'
+                                                +'<li>'+data.lists[i].ind5+'</li>'
+                                            +'</ul>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_text pt-2">'
+                                                +'<div class="mod_pos_item_text_pic">'
+                                                +'<img src="'+data.lists[i].pic+'">'
+                                                +'</div>'
+                                                +'<h2 class="text-truncate pt-1">'+data.lists[i].company+'</h2>'
+                                                +'<p class="mod_pos_item_mes text-truncate">'
+                                                    +'<span>'+data.lists[i].nature+'</span>'
+                                                    +'<span>'+data.lists[i].scale+'</span>'
+                                                    +'<span>'+data.lists[i].operating+'</span>'
+                                                +'</p>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_salary">'
+                                            +'<p class="mod_pos_item_salary_mon">'+data.lists[i].salary+'</p>'
+                                            +'<p class="mod_pos_item_salary_data">'+data.lists[i].date+'</p>'
+                                        +'</div>'
+                                    +'</a>';
+                            if((i + 1) >= data.lists.length){
+                                // 数据加载完
+                                tab1LoadEnd = true;
+                                // 锁定
+                                me.lock();
+                                // 无数据
+                                me.noData();
+                                break;
+                              }
+                        }
+                    }
+                },
+                    error: function(xhr, type){
+                        alert('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            // 加载菜单二的数据
+            }else if(itemIndex == '1'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'static/json/more1.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+
+                        if(pageStart <= data.lists.length){
+                            for(var i = pageStart; i < pageEnd; i++){
+                              result += '<a href="'+data.lists[i].link+'" class="mod_pos_item">'
+                                        +'<div class="mod_pos_item_text">'
+                                            +'<h2 class="text-truncate">'+data.lists[i].position+'</h2>'
+                                            +'<p class="mod_pos_item_mes text-truncate">'
+                                                +'<span>'+data.lists[i].city+'</span>'
+                                                +'<span>'+data.lists[i].area+'</span>'
+                                                +'<span>'+data.lists[i].experience+'</span>'
+                                                +'<span>'+data.lists[i].education+'</span>'
+                                            +'</p>'
+                                            +'<ul class="mod_pos_item_ind">'
+                                                +'<li>'+data.lists[i].ind1+'</li>'
+                                                +'<li>'+data.lists[i].ind2+'</li>'
+                                                +'<li>'+data.lists[i].ind3+'</li>'
+                                                +'<li>'+data.lists[i].ind4+'</li>'
+                                                +'<li>'+data.lists[i].ind5+'</li>'
+                                            +'</ul>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_text pt-2">'
+                                                +'<div class="mod_pos_item_text_pic">'
+                                                +'<img src="'+data.lists[i].pic+'">'
+                                                +'</div>'
+                                                +'<h2 class="text-truncate pt-1">'+data.lists[i].company+'</h2>'
+                                                +'<p class="mod_pos_item_mes text-truncate">'
+                                                    +'<span>'+data.lists[i].nature+'</span>'
+                                                    +'<span>'+data.lists[i].scale+'</span>'
+                                                    +'<span>'+data.lists[i].operating+'</span>'
+                                                +'</p>'
+                                        +'</div>'
+                                        +'<div class="mod_pos_item_salary">'
+                                            +'<p class="mod_pos_item_salary_mon">'+data.lists[i].salary+'</p>'
+                                            +'<p class="mod_pos_item_salary_data">'+data.lists[i].date+'</p>'
+                                        +'</div>'
+                                    +'</a>';
+                        }
+                       }
+                    },
+                    error: function(xhr, type){
+                        alert('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            }else if(itemIndex == '2'){
+              
+            }else if(itemIndex == '2'){
+
+            }else if(itemIndex == '3'){
+                
+            }else if(itemIndex == '4'){
+                
+            }
+        }
+    });
+});
+</script>

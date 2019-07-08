@@ -1,0 +1,15 @@
+<script>
+    $(document).on("click", "#show-prompt", function() {
+        $.prompt({
+            text: "关键词请尽量简洁如‘投资经理’、‘销售’、‘土建工程师’，‘Java开发’",
+            title: "添加期望职位",
+            onOK: function(text) {
+            $.alert("您的职位是:"+text, "职位添加成功");
+            },
+            onCancel: function() {
+            console.log("取消了");
+            },
+            input: '请输入您期望的职位'
+        });
+    });
+</script>
