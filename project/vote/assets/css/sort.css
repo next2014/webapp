@@ -13,7 +13,6 @@
 }
 
 .container .sort-container {
-	box-shadow: 0 .05rem .11rem 0 rgba(0, 0, 0, 0.1);
 	margin-bottom: 2rem
 }
 
@@ -70,9 +69,9 @@
 	text-align: center;
 }
 .layui-table tr td img{
-	width: 40px;
+	/* width: 40px; */
 	height: 40px;
-	margin-right: .2rem;
+	margin-right: .3rem;
 }
 
 .layui-table  tr td.user-name span{

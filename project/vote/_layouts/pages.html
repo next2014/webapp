@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html style="font-size: 35.8px;">
 <head>
-{% include head.html %}
+  {% include head.html %}
 </head>
-<body data-device="pc" style="font-size: 12px;margin-left:auto;margin-right:auto;" onload="countTime()">
+<body onload="countTime()">
 <div class="votes">
     <header>
-        {% include swiper.html %}
+        <div>
+          <img src="assets/img/banner/6-2.png"  style="width:100%" />
+        </div>
         {% include votesDate.html %}
     </header>
     {{ content }}
     {% include menu.html %}
 </div>
 {% include script.html %}
-{% include swiperjs.html %}
 </body>
 </html>

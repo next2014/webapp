@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1377,
+    "pid": 1363,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "广告管理",
+    "url": "./page/picguanli/advertising.html"
+  },
+  {
+    "id": 1379,
+    "pid": 1363,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "广告管理2",
+    "url": "./page/picguanli/advertising1.html"
+  },
+  {
+    "id": 1378,
+    "pid": 1363,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "分类管理",
+    "url": "./page/picguanli/Sort_ads.html"
+  }
+]

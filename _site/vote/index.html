@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>欧美城 · 服务之星评选活动</title>
+    <title>欧美城 · 服务之星</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
@@ -38,6 +38,19 @@
             background-color: #FFB800!important;
             color: #333333!important;
         }
+        .modal-title{
+            font-size:18px;
+        }
+        .modal-header{
+          padding:0.35rem 1rem!important;
+        }
+        .modal-header .close{
+          padding:0.9rem 1rem 0 1rem!important;
+          font-size:35px;
+        }
+        .modal-body{
+            padding:1.2rem 1rem;
+        }
     </style>
 </head>
 
@@ -48,8 +61,9 @@
 			   <img src="assets/img/banner/6-2.png"  style="width:100%" />
 			</div>
             <p class="count-down shadow-sm">
-                <i class="iconfont icon-time font-color"></i>投票
-                <span class="text">结束</span>倒计时：
+                <i class="iconfont icon-time font-color"></i>
+                <!-- <div id="yingcang">投票<span class="text">结束</span>倒计时:</div> -->
+                <!-- 投票<span class="text">已结束</span> -->
                 <span id="_d">00</span>
                 <span id="_h">00</span>
                 <span id="_m">00</span>
@@ -88,7 +102,7 @@
                         </p>
                     </div>
                 </a>
-                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333" disabled>
                        <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP2">100</span>)
                     </button>
                 </div>
@@ -122,7 +136,7 @@
                             <strong>服务格言：</strong>作为一名主管的我要时时刻刻做到以身作则，起到模范带头作用，平时对待顾客要真诚周到，
                             对待员工要有层次管理，必须有乐观进取的工作精神，我会更加努力工作，带领大家一起进步，善待自己的服务，争取做到更好。</p>
                     </div>
-                    <button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333">
+                    <button type="button" class="btn btn-secondary m-1 toupiao" data-type="tpdata" style="width:90%;color:#fff;font-size: 18px;padding: 4px;border-radius: 0;">
                             <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP3">100</span>)
                     </button>
                 </div>
@@ -142,37 +156,77 @@
             </div>
         </footer>
     </div>
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-    <!-- <script src="assets/js/bootstrap.bundle.js"></script> -->
-    <!-- <script src="assets/js/ft-carousel.min.js"></script> -->
-    <script type="text/javascript">
-        function countTime() {
-            //获取当前时间  
-            var date = new Date();
-            var now = date.getTime();
-            //设置截止时间  
-            var str = "2019/07/09 00:00:00";
-            var endDate = new Date(str);
-            var end = endDate.getTime();
-            //时间差  
-            var leftTime = end - now;
-            //定义变量 d,h,m,s保存倒计时的时间  
-            var d, h, m, s;
-            if (leftTime >= 0) {
-                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
-                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
-                m = Math.floor(leftTime / 1000 / 60 % 60);
-                s = Math.floor(leftTime / 1000 % 60);
-            }
-            //将倒计时赋值到div中  
-            document.getElementById("_d").innerHTML = d + "天";
-            document.getElementById("_h").innerHTML = h + "时";
-            document.getElementById("_m").innerHTML = m + "分";
-            document.getElementById("_s").innerHTML = s + "秒";
-            //递归每秒调用countTime方法，显示动态时间效果  
-            setTimeout(countTime, 1000);
+
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">提示</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <p style="text-align: center;font-size:18px;">评选活动已结束</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function countTime() {
+        //获取当前时间  
+        var date = new Date();
+        var now = date.getTime();
+        //设置截止时间  
+        var str = "2019/07/09 00:00:00";
+        var endDate = new Date(str);
+        var end = endDate.getTime();
+        //时间差  
+        var leftTime = end - now;
+        //定义变量 d,h,m,s保存倒计时的时间  
+        var d, h, m, s;
+        if (leftTime >= 0) {
+            d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+            h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+            m = Math.floor(leftTime / 1000 / 60 % 60);
+            s = Math.floor(leftTime / 1000 % 60);
         }
-    </script>
+        //将倒计时赋值到div中  
+        var dag = document.getElementById("_d");
+        var hour = document.getElementById('_h');
+        var mouse = document.getElementById('_m');
+        var soure = document. getElementById('_s');
+        var yc = $('yingcang');
+        if(d > 0){
+            dag.innerHTML = d + "天";
+        }else{
+            dag.innerHTML = "投票已结束";
+            yc.css('display','none');
+        }
+        
+        if(h > 0){
+            hour.innerHTML = h + "时";
+        }else{
+            hour.innerHTML = " ";
+        }
+
+        if(m > 0){
+            mouse.innerHTML = m + "分";
+        }else{
+            mouse.innerHTML = " ";
+        }
+
+        if(s > 0){
+            soure.innerHTML = s + "秒";
+        }else{
+            soure.innerHTML = " ";
+        }
+        //递归每秒调用countTime方法，显示动态时间效果  
+        setTimeout(countTime, 1000);
+    }
+</script>
 <script src="src/layui.js"></script>
 <script>
     layui.use(['form', 'upload','layer'], function () {
@@ -205,7 +259,11 @@
             active[type] ? active[type].call(this) : '';
         });*/
 });
-
+</script>
+<script>
+    window.setTimeout(function(){
+        $('#myModal').modal('show')
+    },100)
 </script>
 </body>
 </html>

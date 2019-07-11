@@ -1,66 +1,58 @@
 [
-    {
-      "id": 1364,
-      "pid": 70,
-      "text": "产品管理",
-      "state": "closed",
-      "iconCls": "fa fa-home",
-      "url": ""
-    },
-    {
-      "id": 1363,
-      "pid": 70,
-      "text": "图片管理",
-      "state": "closed",
-      "iconCls": "fa fa-file-image-o",
-      "url": ""
-    },
-    {
-      "id": 214,
-      "pid": 70,
-      "text": "交易管理",
-      "state": "closed",
-      "iconCls": "fa fa-list",
-      "url": ""
-    },
-    {
-      "id": 215,
-      "pid": 70,
-      "text": "支付管理",
-      "state": "closed",
-      "iconCls": "fa fa-credit-card",
-      "url": ""
-    },
-    {
-      "id": 658,
-      "pid": 70,
-      "text": "会员管理",
-      "state": "closed",
-      "iconCls": "fa fa-user-o",
-      "url": ""
-    },
-    {
-      "id": 659,
-      "pid": 70,
-      "text": "店铺管理",
-      "state": "closed",
-      "iconCls": "fa fa-television",
-      "url": ""
-    },
-    {
-      "id": 660,
-      "pid": 70,
-      "text": "消息管理",
-      "state": "closed",
-      "iconCls": "fa fa-comment-o",
-      "url": ""
-    },
-    {
-      "id": 662,
-      "pid": 70,
-      "text": "文章管理",
-      "state": "closed",
-      "iconCls": "fa fa-list-alt",
-      "url": ""
-    }
-  ]
+  {
+    "id": 663,
+    "pid": 70,
+    "text": "日常办公",
+    "state": "closed",
+    "iconCls": "fa fa-user",
+    "url": ""
+  },
+  {
+    "id": 664,
+    "pid": 70,
+    "text": "行政办公",
+    "state": "closed",
+    "iconCls": "fa fa-calendar",
+    "url": ""
+  },
+  {
+    "id": 665,
+    "pid": 70,
+    "text": "人力资源",
+    "state": "closed",
+    "iconCls": "fa fa-money",
+    "url": ""
+  },
+  {
+    "id": 666,
+    "pid": 70,
+    "text": "采购模块",
+    "state": "closed",
+    "iconCls": "fa fa-cubes",
+    "url": ""
+  },
+  {
+    "id": 667,
+    "pid": 70,
+    "text": "工程模块",
+    "state": "closed",
+    "iconCls": "fa fa-file-text-o",
+    "url": ""
+  },
+  {
+    "id": 668,
+    "pid": 70,
+    "text": "财务模块",
+    "state": "closed",
+    "iconCls": "fa fa-file-text-o",
+    "url": ""
+  },
+  {
+    "id": 669,
+    "pid": 70,
+    "text": "审批项目",
+    "state": "closed",
+    "iconCls": "fa fa-file-text-o",
+    "url": ""
+  }
+]

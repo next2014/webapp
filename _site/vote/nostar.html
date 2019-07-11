@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="font-size: 35.8px;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>欧美城 · 服务之星</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/common2.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="src/css/layui.css">
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .layui-upload-img {
+            width: 92px;
+            height: 92px;
+            margin: 0 10px 10px 0;
+        }
+
+        .nameCoupon1 {
+            padding: 10px 10px 0 10px;
+            text-align: left;
+        }
+
+        .nameCoupon1 p{
+           line-height: 25px;
+        }
+        .layui-layer-btn .layui-layer-btn0 {
+            border-color: rgb(236, 170, 3)!important;
+            background-color: #FFB800!important;
+            color: #333333!important;
+        }
+        .nostar{
+            width: 92%;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            font-size:16px;width:100%;min-height:250px;text-align:center;color:#666;line-height:250px
+        }
+    </style>
+</head>
+
+<body onload="countTime()">
+    <div class="votes">
+        <header>
+		    <div>
+			   <img src="assets/img/banner/6-2.png"  style="width:100%" />
+            </div>
+            <p class="count-down shadow-sm">
+                <i class="iconfont icon-time font-color"></i>投票
+                <span class="text">结束</span>倒计时：
+                <span id="_d">00</span>
+                <span id="_h">00</span>
+                <span id="_m">00</span>
+                <span id="_s">00</span>
+            </p>
+        </header>
+        <div class="container">
+            <div class="nostar" style="">
+            投票评选活动尚未开启
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        function countTime() {
+            //获取当前时间  
+            var date = new Date();
+            var now = date.getTime();
+            //设置截止时间  
+            var str = "2019/07/11 12:00:00";
+            var endDate = new Date(str);
+            var end = endDate.getTime();
+            //时间差  
+            var leftTime = end - now;
+            //定义变量 d,h,m,s保存倒计时的时间  
+            var d, h, m, s;
+            if (leftTime >= 0) {
+                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+                m = Math.floor(leftTime / 1000 / 60 % 60);
+                s = Math.floor(leftTime / 1000 % 60);
+            }
+            //将倒计时赋值到div中
+            var dag = document.getElementById("_d");
+            var hour = document.getElementById('_h');
+            var mouse = document.getElementById('_m');
+            var soure = document. getElementById('_s');
+            if(d > 0){
+              dag.innerHTML = d + "天";
+            }else{
+              dag.innerHTML = 0 + "天";
+            }
+            
+            if(h > 0){
+              hour.innerHTML = h + "时";
+            }else{
+              hour.innerHTML = 0 + "时";
+            }
+
+            if(m > 0){
+              mouse.innerHTML = m + "分";
+            }else{
+              mouse.innerHTML = 0 + "分";
+            }
+
+            if(s > 0){
+              soure.innerHTML = s + "秒";
+            }else{
+              soure.innerHTML = 0 + "秒";
+            }
+            //递归每秒调用countTime方法，显示动态时间效果  
+            setTimeout(countTime, 1000);
+        }
+    </script>
+</body>
+</html>

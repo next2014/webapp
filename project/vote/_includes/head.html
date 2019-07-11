@@ -1,14 +1,63 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>聚焦欧美城 · 享受生活</title>
-<link rel="stylesheet" href="assets/css/bootstrap.css">
+<title>欧美城 · 服务之星</title>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/font.css">
-<link rel="stylesheet" href="assets/css/ft-carousel.css">
-<link rel="stylesheet" href="assets/css/layer.css">
-<link rel="stylesheet" href="assets/css/swiper.min.css">
-<link rel="stylesheet" href="assets/css/normalize.min.css">
-<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/css/common2.css">
+{% if page.layout == "home" %}
+<link rel="stylesheet" href="assets/css/index.css">
+<style>
+.modal-title{
+    font-size:18px;
+}
+.modal-header{
+    padding:0.35rem 1rem!important;
+}
+.modal-header .close{
+    padding:0.9rem 1rem 0 1rem!important;
+    font-size:35px;
+}
+.modal-body{
+    padding:1.2rem 1rem;
+}
+</style>
+{% endif %}
+{% if page.layout == "detail" %}
+<link rel="stylesheet" href="assets/css/detail.css">
+{% endif %}
+{% if page.layout == "tsort" %}
+<link rel="stylesheet" href="assets/css/sort.css">
+{% endif %}
+{% if page.layout == "rule" %}
+<link rel="stylesheet" href="assets/css/rule.css">
+<style>
+.rule-container .content p {
+    text-align: left;
+    line-height: 30px;
+}
+.rule-container .content p {
+    font-size: 14px;
+}
+.container .sort-title {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    width: 8.93rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    position: relative
+}
+.container .sort-title .icon {
+    position: absolute;
+    top: -18px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    transform: rotateZ(-5deg)
+}
+</style>
+{% endif %}
 <link rel="stylesheet" href="src/css/layui.css">
 <style>
     .icon {
@@ -18,9 +67,30 @@
         fill: currentColor;
         overflow: hidden;
     }
-    .layui-upload-img{
-        width: 92px; 
-        height: 92px; 
+
+    .layui-upload-img {
+        width: 92px;
+        height: 92px;
         margin: 0 10px 10px 0;
+    }
+
+    .nameCoupon1 {
+        padding: 10px 10px 0 10px;
+        text-align: left;
+    }
+
+    .nameCoupon1 p{
+       line-height: 25px;
+    }
+    .layui-layer-btn .layui-layer-btn0 {
+        border-color: rgb(236, 170, 3)!important;
+        background-color: #FFB800!important;
+        color: #333333!important;
+    }
+    .nostar{
+        width: 92%;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        font-size:16px;width:100%;min-height:250px;text-align:center;color:#666;line-height:250px
     }
 </style>

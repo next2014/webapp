@@ -142,7 +142,7 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-bottom: 1.5rem
+	margin-bottom: 1rem
 }
 
 .container .user-list .user {
@@ -151,7 +151,7 @@
 	overflow: hidden;
 	width: 48%;
 	position: relative;
-	margin-bottom: .53rem;
+	margin-bottom: .4rem;
 	text-align:center;
 	height: 450px;
 }
