@@ -39,15 +39,15 @@
     - name: 海洋世界介绍
       index: 1
       title: b1
-      url: ../ocean/index.html 
+      url: pages/ocean/index.html 
     - name: 婚博艺术中心介绍
       index: 2
       title: b2
-      url: ../Wedding/index.html
+      url: pages/Wedding/index.html
     - name: 卡丁车馆介绍
       index: 3
       title: b3
-      url: ../KARTING/index.html
+      url: pages/KARTING/index.html
     - name: 美食天地介绍
       index: 4
       title: b4

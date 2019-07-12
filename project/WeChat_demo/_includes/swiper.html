@@ -1,0 +1,14 @@
+<!-- Slider -->         
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+      {% for entry in site.data.swiper %}
+        {% for swiper in entry.project %}
+            <div class="swiper-slide">
+                <img src="{{swiper.src}}" class="d-block w-100" alt="">
+            </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>

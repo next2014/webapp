@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+		<link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
+		<link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+		<link rel="dns-prefetch" href="//res.wx.qq.com">
+		<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+		<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+		<link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
+		<link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+		<link rel="stylesheet" href="css/zhaopin.css" type="text/css">
+		<title>
+			人才招聘
+		</title>
+	</head>
+
+	<body id="activity-detail" class="zh_CN mm_appmsg  appmsg_skin_default appmsg_style_default">
+
+		<div id="js_article" class="rich_media">
+
+			<div class="rich_media_inner">
+
+				<div id="page-content" class="rich_media_area_primary">
+					<div class="rich_media_area_primary_inner">
+
+						<div id="img-content">
+
+							<div class="rich_media_content " id="js_content">
+
+								<p style="text-align: center;"><img src="img/zhaopin_img/1.gif"></p>
+								<p style="text-align: center;"><br /></p>
+								<section data-role="outer" label="Powered by 135editor.com">
+
+									<section class="_135editor" data-tools="135编辑器" data-id="94088" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;box-sizing: border-box;">
+											<section style="display: inline-block;">
+												<section style="display: inline-block;margin-right: auto;margin-left: auto;color: rgb(250, 107, 52);letter-spacing: 1.5px;font-weight: bold;padding-right: 20px;padding-left: 20px;transform: rotate(0deg);" class="135brush" data-brushtype="text">欧美城</section>
+												<section style="display: flex;justify-content: center;margin-top: -8px;">
+													<section style="color: #fee3c7;margin-top: -8px;margin-left: -15px;">✚</section>
+													<section style="color: #fee3c7;margin-top: -25px;">●</section>
+													<section data-bgless="spin" data-bglessp="280" style="width:100%;height:12px;background:#fee3c7;margin-bottom:4px;" data-width="100%"></section>
+													<section style="height: 0px;width: 0px;border-width: 6px;border-style: solid;border-color: rgb(254, 227, 199) transparent transparent;margin-top: 10px;margin-right: -5px;margin-left: 5px;box-sizing: border-box;"></section>
+													<section style="color: #fee3c7;margin-top: -25px;margin-right: -15px;">○</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<section class="_135editor" data-tools="135编辑器" data-id="94218" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="display: flex;justify-content: center;align-items: center;font-size:28px;font-weight: bold;color: #ffe9b3;">
+											<section style="display: inline-block;background-image:url(img/zhaopin_img/2_1.jpg);background-repeat: no-repeat;background-attachment: initial;background-origin: initial;background-clip: initial;background-size: 100%;background-position: center center;">
+												<section class="135brush" data-brushtype="text" style="text-align: center;font-size: 20px;padding: 20px;box-sizing: border-box;">要</section>
+											</section>
+											<section style="display: inline-block;background-image: url(img/zhaopin_img/2_2.jpg);background-repeat: no-repeat;background-attachment: initial;background-origin: initial;background-clip: initial;background-size: 100%;background-position: center center;">
+												<section class="135brush" data-brushtype="text" style="text-align: center;font-size: 20px;padding: 20px;box-sizing: border-box;">招</section>
+											</section>
+											<section style="display: inline-block;background-image: url(img/zhaopin_img/2_3.jpg);background-repeat: no-repeat;background-attachment: initial;background-origin: initial;background-clip: initial;background-size: 100%;background-position: center center;">
+												<section class="135brush" data-brushtype="text" style="text-align: center;font-size: 20px;padding: 20px;box-sizing: border-box;">人</section>
+											</section>
+											<section style="display: inline-block;background-image: url(img/zhaopin_img/2_4.jpg);background-repeat: no-repeat;background-attachment: initial;background-origin: initial;background-clip: initial;background-size: 100%;background-position: center center;">
+												<section class="135brush" data-brushtype="text" style="text-align: center;font-size: 20px;padding: 20px;box-sizing: border-box;">啦</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;"><br /></p>
+									<p style="font-size: 16px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">走过路过的街坊千万别错过</span></p>
+									<p style="font-size: 16px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">分分钟你赚够一个亿的梦想就在这里实现了</span><br /></p>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93743" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;">
+											<section style="width:6em;display: inline-block;"><img src="img/zhaopin_img/3.gif"></section>
+										</section>
+									</section>
+									<p style="font-size: 16px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">毕竟这里有</span></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="94287" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section class="_135editor" data-tools="135编辑器" data-id="94510" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+											<section style="text-align: center;padding: 10px 4px;box-sizing: border-box;">
+												<section style="margin-bottom: -12px;">
+													<section style="display: inline-block;background: #fefefe;"><img src="img/zhaopin_img/4.jpg" style="width: 6em;" /></section>
+												</section>
+												<section style="display: inline-block;background-image: url(img/zhaopin_img/5_1.jpg);background-position: initial;background-size: initial;background-repeat: initial;background-attachment: initial;background-origin: initial;background-clip: initial;padding: 0.3em;border-radius: 6px;transform: rotate(0deg);">
+													<section class="135brush" data-brushtype="text" style="border-radius: 6px;background: rgb(254, 254, 254);text-align: justify;letter-spacing: 1.5px;line-height: 1.75em;color: rgb(227, 20, 64);padding: 4px 20px;box-sizing: border-box;">高大上的办公环境</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">360°无死角的美景</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">园林式的办公环境</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">在这样的环境里工作自然干劲十足</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><img src="img/zhaopin_img/6.gif" style="height: 254px;width: 100%;" /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">除了优秀的工作环境</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">更有有爱的创业平台</span></p>
+									<p style="font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;text-align: center;line-height: 1.75em;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">欧美城欢迎更多有心有才人士加入</span></span>
+									</p>
+									<p style="font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;text-align: center;line-height: 1.75em;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">一起成长一起收获</span></span>
+									</p>
+									<p style="font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;text-align: center;line-height: 1.75em;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">共谱一份人生事业</span></span>
+									</p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">（老板大大：对的！欧美城欢迎大家）</span></span>
+									</p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="94510" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;padding: 10px 4px;box-sizing: border-box;">
+											<section style="margin-bottom: -12px;">
+												<section style="display: inline-block;background: rgb(254,254,254);"><img src="img/zhaopin_img/4.jpg" style="width:6em;disply:block;" /></section>
+											</section>
+											<section style="display: inline-block;background-image: url(img/zhaopin_img/5_2.jpg);background-position: initial;background-size: initial;background-repeat: initial;background-attachment: initial;background-origin: initial;background-clip: initial;padding: 0.3em;border-radius: 6px;transform: rotate(0deg);">
+												<section class="135brush" data-brushtype="text" style="border-radius: 6px;background: rgb(254, 254, 254);text-align: justify;letter-spacing: 1.5px;line-height: 1.75em;color: rgb(227, 20, 64);padding: 4px 20px;box-sizing: border-box;">颜值技能双在线的同事</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">有人好奇</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">小编推文里那些美女帅哥到底是哪里找的？</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">哼哼哼！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">这些可都是我们颜值爆表的同事们！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><img src="img/zhaopin_img/7.gif"></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">景美人美心情美</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">在欧美城工作也许还能提高颜值呢！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;"><img src="img/zhaopin_img/8.gif" style="height: 100px;width: 100px;"  /></span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">还有！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">这些视频动图、美图大片<br/>都是出自小编同事之手</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="92619" style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section data-width="100%" style="width: 100%;display: -webkit-flex;justify-content: center;">
+											<section data-width="50%" style="width: 50%;">
+												<section style="padding-right: 5px;box-sizing: border-box;">
+													<section class="135brush" data-brushtype="text" style="border-top: 1px dashed rgb(112, 112, 113);color: rgb(73, 73, 74);text-align: center;line-height: 40px;font-size: 14px;box-sizing: border-box;"><br /></section>
+													<section style="margin-top: 20px;"><img src="img/zhaopin_img/9.gif"></section>
+												</section>
+											</section>
+											<section data-width="50%" style="width: 50%;">
+												<section style="padding-left: 5px;box-sizing: border-box;">
+													<section><img src="img/zhaopin_img/10.gif"></section>
+													<section class="135brush" data-brushtype="text" style="margin-top: 20px;border-bottom: 1px dashed rgb(112, 112, 113);color: rgb(73, 73, 74);text-align: center;line-height: 40px;font-size: 14px;box-sizing: border-box;"><br /></section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">还有各种专业装备的加持</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">跟上大神，带你上天下海</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">玩转摄影，航拍，活动策划</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">还能速getPS，LR，DW等技能哦！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><img src="img/zhaopin_img/11.jpg"></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="94510" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;padding: 10px 4px;box-sizing: border-box;">
+											<section style="margin-bottom: -12px;">
+												<section style="display: inline-block;background: rgb(254,254,254);"><img src="img/zhaopin_img/4.jpg" style="width:6em;disply:block;" /></section>
+											</section>
+											<section style="display: inline-block;background-image: url(img/zhaopin_img/5_3.jpg);background-position: initial;background-size: initial;background-repeat: initial;background-attachment: initial;background-origin: initial;background-clip: initial;padding: 0.3em;border-radius: 6px;transform: rotate(0deg);">
+												<section class="135brush" data-brushtype="text" style="border-radius: 6px;background: rgb(254, 254, 254);text-align: justify;letter-spacing: 1.5px;line-height: 1.75em;color: rgb(227, 20, 64);padding: 4px 20px;box-sizing: border-box;">不定期的员工福利</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">不定期发放的员工福利</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">让你畅游海洋世界、欧美街9号</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">工作就是在旅游！</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><img src="img/zhaopin_img/12.gif"></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;"><br /></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">辣么棒的工作环境</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">辣么赞的同事氛围<br style="max-width: 100%;"  /></span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">怎样？要来跟小编我做同事么？</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;"><img src="img/zhaopin_img/13.jpg" style="height: 99px;width: 99px;"/></span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;line-height: 1.75em;text-align: center;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;">我们需要</span></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93743" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;">
+											<section style="width:6em;display: inline-block;"><img src="img/zhaopin_img/3.gif"></section>
+										</section>
+										<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+											<section>
+												<section style="margin-bottom: -1em;">
+													<section data-width="100%" style="width: 556px;text-align: left;">
+														<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+															<section data-bgless="spin" data-bglessp="180" style="padding: 4px;color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;box-sizing: border-box;">
+																<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																	<section class="135brush" data-brushtype="text" style="padding: 0em 0.6em;font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;box-sizing: border-box;">董事长助理 2名&nbsp;</section>
+																</section>
+															</section>
+														</section>
+													</section>
+												</section>
+												<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" data-width="100%" style="width: 556px;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;">
+													<section style="padding: 4px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+															<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+																<p>1.8年以上文旅行业或相近行业管理经验，5年以上大型企业相关工作经验；</p>
+																<p>2.文旅管理主导1名：文旅行业资深大前辈，主题公园长老为佳；金融管理主导1名：金融行业骨灰级阿头，财会技能满格</p>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+										<section style="text-align: center;">
+											<section style="width:6em;display: inline-block;"></section><br /></section>
+									</section>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">策划总经理 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1.旅游行业老司机，策划资深白骨精；</p>
+															<p>2.有创意，<span style="color: rgb(102, 102, 102);font-size: 14px;letter-spacing: 1.5px;background-color: rgb(253, 247, 208);">喜欢搞事</span>；</p>
+															<p>3.团队作战，带领团队走上人生巅峰；</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">营销总经理 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1.负责营销二部，须为主题乐园营销骨灰级人物，旅游业界长老；</p>
+															<p>2.有丰富的招商资源，男神女神皆可。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="white-space: normal;border-width: 0px;border-style: none;border-color: initial;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section data-width="100%" style="width: 556px;text-align: left;">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;">
+														<section data-bgless="spin" data-bglessp="180" style="padding: 4px;color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);">
+																<section class="135brush" data-brushtype="text" style="padding: 0em 0.6em;font-weight: bold;text-align: center;letter-spacing: 1.5px;">演艺总经理 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" data-width="100%" style="width: 556px;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;">
+												<section style="padding: 4px;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;">
+															<p>1、统筹演艺资源，园区演艺活动策划；</p>
+															<p>2、演艺队伍的壮大与管理；</p>
+															<p>3、演艺节目的编排与统筹，懂编导</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">新媒体运营 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、静能提笔写文案，动能抓机拍拍拍，干过新媒体；</p>
+															<p>2、网络重度爱好者，八卦热点均可撩，对文字有执拗的处女座情节；</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">平面设计师 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1.专业对口，3年以上同岗位工作经验。</p>
+															<p>2.设计小能手，搞掂PS、CorelDRAW、AI等软件毛问题；</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">客服经理 1名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、经验丰富老前辈，<span style="color: rgb(102, 102, 102);font-size: 14px;letter-spacing: 1.5px;background-color: rgb(253, 247, 208);">3年以上旅游景区/大型商超客服主管级以上管理经验</span>；<br /></p>
+															<p>2、<span style="color: rgb(102, 102, 102);font-size: 14px;letter-spacing: 1.5px;background-color: rgb(253, 247, 208);">较强团队培训能力，带领团队</span>解决客诉问题；</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="border-width: 0px;border-style: none;border-color: initial;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: #febf01 4px 4px 0px;border-radius:6px;">
+														<section data-bgless="spin" data-bglessp="180" style="color:#fff;background: #f3de2b;border-radius:6px;padding: 4px;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);">
+																<section class="135brush" data-brushtype="text" style="font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;">工程师 3名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;" data-width="100%">
+												<section style="padding:4px;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background:#fdf7d0;color:#666;border-radius:6px;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;">
+															<p>1、系统软件/编程/智能化工程师，具有一定相关工作经验；</p>
+															<p>2、具体面议</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;" data-width="100%">
+													<section style="display: inline-block;box-shadow: #febf01 4px 4px 0px;border-radius:6px;">
+														<section data-bgless="spin" data-bglessp="180" style="color:#fff;background: #f3de2b;border-radius:6px;padding: 4px;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);">
+																<section class="135brush" data-brushtype="text" style="font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;">厨师 n名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;" data-width="100%">
+												<section style="padding:4px;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background:#fdf7d0;color:#666;border-radius:6px;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;">
+															<p><span style="caret-color: red;">1、日式料理/西餐/东南亚美食/韩食/烧腊等，以上任一项专业好手，全能型大厨亦无比欢迎；</span><br /></p>
+															<p>2、欢迎味蕾刁钻，手艺高强的大厨试菜面谈</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">客服员&nbsp;4名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1.女，中专/高中以上学历，身高1.60M以上；</p>
+															<p>2.会办公设备操作，懂商务礼仪；&nbsp;</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">检票员 4名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、男、中专以上学历；&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+															<p>2、身高1.75M以上，形象好；</p>
+															<p>3、旅游、商业服务相关从业经验者优先。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">讲解员 n名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、女，大专以上学历，30岁以下；</p>
+															<p>2、旅游、播音或教师相关从业经验者优先；</p>
+															<p>3、普通话二级乙等以上。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">收银员 n名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、中专以上学历；&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+															<p>2、收银相关从业经验或者财务专业毕业者优先。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">电工 6名</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p>1、2年以上工作经验，中级以上电工证；</p>
+															<p>2、专业维修电工，钳工；懂管理变、配电设施，熟悉安全规范和操作规范。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93807" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section>
+											<section style="margin-bottom: -1em;">
+												<section style="width: 100%;text-align: left;" data-width="100%">
+													<section style="display: inline-block;box-shadow: rgb(254, 191, 1) 4px 4px 0px;border-radius: 6px;box-sizing: border-box;">
+														<section data-bgless="spin" data-bglessp="180" style="color: rgb(255, 255, 255);background: rgb(243, 222, 43);border-radius: 6px;padding: 4px;box-sizing: border-box;">
+															<section style="border-radius: 6px;border-width: 1px;border-style: dashed;border-color: rgb(255, 255, 255);box-sizing: border-box;">
+																<section class="135brush" data-brushtype="text" style="font-size: 17px;font-weight: bold;text-align: center;letter-spacing: 1.5px;padding: 0em 0.6em;box-sizing: border-box;">服务员 /销售员 N名&nbsp;</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+											<section data-bdless="spin" data-bdlessp="220" data-bdopacity="50%" style="width: 100%;border-width: 1px;border-style: dashed;border-color: rgb(254, 191, 1);border-radius: 6px;box-sizing: border-box;" data-width="100%">
+												<section style="padding: 4px;box-sizing: border-box;">
+													<section data-bgless="spin" data-bglessp="280" data-bgopacity="50%" style="background: rgb(253, 247, 208);color: rgb(102, 102, 102);border-radius: 6px;box-sizing: border-box;">
+														<section class="135brush" style="padding: 2em 1em 1em;font-size: 14px;letter-spacing: 1.5px;box-sizing: border-box;">
+															<p><span style="caret-color: red;">1、35岁以下；&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br /></p>
+															<p>2、从事服务行业经验者优先。</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">更多岗位更多信息</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">欢迎骚扰咱的人事小哥哥</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">▽</span></p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="background-color: rgb(255, 218, 81);"><strong><span style="background-color: rgb(255, 218, 81);max-width: 100%;font-size: 14px;letter-spacing: 2px;color: rgb(255, 255, 255);">联系人：潘欧巴</span></strong>
+										</span>
+									</p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="background-color: rgb(255, 218, 81);"><strong><span style="background-color: rgb(255, 218, 81);max-width: 100%;font-size: 14px;letter-spacing: 2px;color: rgb(255, 255, 255);">联系邮箱：758754891@qq.com</span></strong>
+										</span>
+									</p>
+									<p style="font-size: 16px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 25.6px;text-align: center;"><span style="background-color: rgb(255, 218, 81);"><strong><span style="background-color: rgb(255, 218, 81);max-width: 100%;font-size: 14px;letter-spacing: 2px;color: rgb(255, 255, 255);">联系电话：13414508656&nbsp;</span></strong>
+										</span>
+									</p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93528" style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="text-align: center;"><img src="img/zhaopin_img/14.gif" style="height: 43px;width: 10%;" /></section>
+									</section>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;"></span></p>
+									<p style="font-size: 16px;text-align: center;line-height: 1.75em;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">欢迎社会各界有心有才人士</span></span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">来欧美城共谱前程<br  /></span></span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><strong><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">平台我们造，才华任你施</span></span></strong></p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><span style="color: rgb(255, 218, 81);"><strong><span style="font-size: 14px;letter-spacing: 2px;">这不仅是一份工作，更是一份事业</span></strong>
+										</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">欧美城欢迎你一同加入创业队伍</span></span>
+									</p>
+									<p style="line-height: 1.75em;text-align: center;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">共享成长过程的每一个进步</span></span>
+									</p>
+									<p style="line-height: 1.75em;text-align: center;"><span style="color:#575757;"><span style="font-size: 14px;letter-spacing: 2px;">（PS：瞧我正经脸）</span></span>
+									</p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;"></span><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">so简历赶紧投起来！</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;font-size: 14px;letter-spacing: 2px;">人事小哥哥的电话赶紧打爆他！</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;"><img src="img/zhaopin_img/15.gif" style="height: 112px;width: 112px;"  /></span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><strong>ps.</strong></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">有才的宝宝们如果有作品记得附上作品哦</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #575757;max-width: 100%;font-size: 14px;letter-spacing: 2px;">人事欧巴会更加注意你的！</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><strong><span style="font-size: 14px;letter-spacing: 2px;color: #000000;max-width: 100%;line-height: 27.6px;">快！来！加！入！我！们！吧！</span></strong></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;"><img src="img/zhaopin_img/16.gif" style="height: 105px;width: 105px;"  /></span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;"><br  /></span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;">下面这份路线指南记得收好咯</span></p>
+									<p style="font-size: 17px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="font-size: 14px;color: #575757;letter-spacing: 2px;">↓<span style="color: rgb(87, 87, 87);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">↓</span><span style="color: rgb(87, 87, 87);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">↓</span></span>
+									</p>
+									<section style="white-space: normal;max-width: 100%;letter-spacing: 0.544px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+										<section style="margin-right: auto;margin-left: auto;max-width: 100%;width: 120px;display: inline-block;"><img src="img/zhaopin_img/17.gif"></section>
+									</section>
+									<section data-width="100%" style="margin-top: -13px;white-space: normal;max-width: 100%;letter-spacing: 0.544px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;width: 100%;border-radius: 10px;background: rgb(251, 216, 216);box-sizing: border-box;">
+										<section class="" style="max-width: 100%;border-radius: 10px;background: url(img/zhaopin_img/18.jpg;) 0% 50% / 100% repeat;box-sizing: border-box;">
+											<section style="padding: 12px;max-width: 100%;box-sizing: border-box;">
+												<section data-autoskip="1" class="" style="padding: 1em;max-width: 100%;font-size: 14px;letter-spacing: 1.5px;line-height: 1.75em;border-radius: 10px;background: rgb(254, 254, 254);box-sizing: border-box;">
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><strong style="max-width: 100%;"><span style="max-width: 100%;font-size: 18px;color: #888888;">惠州欧美城</span></strong></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">地址：惠州市惠城区金龙大道99号<br style="max-width: 100%;"  /></span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">电话：0752-2888688</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">客服在线时间：09:00-12:00,13:30-21:00</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">园区营业时间：10:00-21:00</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">注意：</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">1、即日起-2019年2月19日<span style="max-width: 100%;letter-spacing: 0.544px;">海洋世界营业时间</span>10:00-21:00；婚博艺术中心营业时间09:00-21:00（2月20日起婚博艺术中心欧美街9号将暂停开放）</span>
+													</p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">2、2月19日17:00后入园的游客均须购买“元宵节活动票”方能入场，票价68元/人。</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">路线指引：</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">1、自驾导航“欧美城文化小镇西门”即到</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">2、惠城区可乘坐30路公交车至“欧美城”站下</span></p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><span style="max-width: 100%;color: #888888;">温馨提示<span style="max-width: 100%;letter-spacing: 0.544px;">：为方便出行，建议可滴滴或搭乘公交前往。另园区禁止携带外带食品进园，请游客朋友们注意~</span></span>
+													</p>
+													<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;color: rgb(107, 100, 100);background-color: rgb(245, 245, 245);"><br /></p>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;margin-right: 5px;margin-left: 5px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;line-height: 27.2px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><span style="max-width: 100%;color: #7F7F7F;letter-spacing: 1px;font-size: 12px;">惠州欧美城出品</span></p>
+									<section style="font-size: 16px;max-width: 100%;letter-spacing: 0.544px;line-height: 27.2px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;">
+										<section style="max-width: 100%;">
+											<section style="max-width: 100%;">
+												<section style="max-width: 100%;">
+													<section style="max-width: 100%;">
+														<section style="max-width: 100%;">
+															<section class="_135editor" data-tools="135编辑器" data-id="85639" style="max-width: 100%;font-family: 微软雅黑;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+																<section style="max-width: 100%;">
+																	<section class="" data-style="color: rgb(0, 0, 0); white-space: normal; text-align: left; line-height: 1.75em;" style="max-width: 100%;">
+																		<p style="max-width: 100%;min-height: 1em;line-height: 25.6px;text-align: center;"><strong style="max-width: 100%;letter-spacing: 3px;font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;color: #1A81E6;font-size: 14px;line-height: 22.4px;"><img src="img/zhaopin_img/19.png"></span></strong></strong>
+																		</p>
+																		<p style="max-width: 100%;min-height: 1em;font-size: 14px;list-style-type: none;-webkit-padding-start: 0px;-webkit-margin-before: 0px;-webkit-margin-after: 0px;letter-spacing: 3px;color: rgb(160, 160, 160);text-align: center;"><span style="max-width: 100%;letter-spacing: 1px;"><strong style="max-width: 100%;color: rgb(62, 62, 62);font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;color: #1A81E6;font-size: 14px;line-height: 22.4px;"><strong style="max-width: 100%;color: rgb(62, 62, 62);font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;font-size: 14px;line-height: 22.4px;overflow-wrap: break-word !important;">- THE END -</span></strong>
+																			</strong>
+																			</span>
+																			</strong>
+																			</strong>
+																			</span>
+																		</p>
+																	</section>
+																</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+								</section>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+	<script nonce="700860653" type="text/javascript">
+		document.addEventListener("touchstart", function() {}, false);
+	</script>
+
+</html>

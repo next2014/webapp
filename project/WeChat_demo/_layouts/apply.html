@@ -1,0 +1,80 @@
+---
+layout: default
+title: 格林披志卡丁车馆
+---
+<style>
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    .layui-input-block {
+        margin-left: 100px!important;
+    }
+    .title h4{
+        height: 30px;
+        line-height: 30px;
+    }
+</style>
+<div class="pt-2 pb-2 text-center" style="background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image:url('assets/img/glpz_img/topbg.jpg');">
+    <img src="assets/img/gl_logo.png" width="140" alt="">
+</div>
+<div class="swiper-container carousel">
+    <div class="swiper-wrapper">
+        {% for entry in site.data.swiper %}
+            {% for swiper in entry.glpzkdc %}
+                <div class="swiper-slide">
+                    <img src="assets/img/glpz_img/0{{swiper.src}}.jpg" class="d-block w-100" alt="">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<div class="container p-0">
+    <div class="title p-2 border-bottom">
+        <h4><i class="fa fa-pencil-square-o text-secondary mr-1"></i><strong>520卡丁车情侣邀请赛-在线报名</strong></h4>
+    </div>
+    <form class="layui-form layui-form-pane1" action="" lay-filter="first" style="width:100%">
+        <div class="layui-form apply-form" style="width:100%">
+            <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
+                <label class="layui-form-label text-left pr-0 mb-0">手机号码<span class="text-danger">*</span></label>
+                <div class="layui-input-block">
+                    <input type="tel" name="phone" lay-verify="number" required placeholder="请输入手机号码" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                </div>
+            </div>
+            <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
+                <label class="layui-form-label text-left pr-0 mb-0">参赛姓名<span class="text-danger">*</span></label>
+                <div class="layui-input-block">
+                    <input type="text" name="name1" lay-verify="name" required placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                </div>
+            </div>
+            <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
+                <label class="layui-form-label text-left pr-0 mb-0">参赛姓名<span class="text-danger">*</span></label>
+                <div class="layui-input-block">
+                    <input type="text" name="name2" lay-verify="name" required placeholder="请输入姓名" lay-verType="tips" autocomplete="off" class="layui-input border-0">
+                </div>
+            </div>
+            <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
+                <label class="layui-form-label text-left pr-0 mb-0">活动时间</label>
+                <div class="layui-input-block mb-1">
+                    <input type="text" class="layui-input border-0" id="" value="2019-05-20" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item pt-1 pb-1 m-0 border-bottom">
+                <label class="layui-form-label text-left pr-0 mb-0">报名金额</label>
+                <div class="layui-input-block">
+                    <input type="text" name="number" lay-verify="money" value="￥152.00" readonly="readonly" autocomplete="off" class="layui-input border-0">
+                </div>
+            </div>
+            <div class="layui-form-item m-3">
+                <div class="layui-row layui-col-space12 text-center">
+                    <button class="layui-btn layui-btn-warm layui-col-sm4 w-100" lay-submit lay-filter="*">提  交</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
