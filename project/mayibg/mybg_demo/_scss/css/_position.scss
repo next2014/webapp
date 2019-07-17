@@ -1,0 +1,13 @@
+.pos_tab{
+    border-bottom: 1px solid #e0dfdf;
+    height: 40px;
+    li{
+       a{
+         text-align: center;
+         padding: 9px!important;
+         &.active{
+             border-bottom: 1px solid #2aace9;
+         }
+       }
+    }
+}

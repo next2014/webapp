@@ -1,0 +1,23 @@
+<script src="../static/js/swiper.js"></script>
+<script>
+    var pb1 = $.photoBrowser({
+        items: [
+        "../static/images/swiper-1.jpg",
+        "../static/images/swiper-2.jpg"
+        ],
+
+        onSlideChange: function(index) {
+        console.log(this, index);
+        },
+
+        onOpen: function() {
+        console.log("onOpen", this);
+        },
+        onClose: function() {
+        console.log("onClose", this);
+        }
+    });
+    $("#photo").click(function() {
+        pb1.open(2);
+    });
+</script>

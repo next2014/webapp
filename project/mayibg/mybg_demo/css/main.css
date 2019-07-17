@@ -1,0 +1,59 @@
+body{max-width:32.2rem;min-height:16.1rem;margin:0 auto}
+html{font-size:20px}
+*{-webkit-tap-highlight-color:transparent;outline:0}
+img{border:0 none;vertical-align:top}
+em,i{font-style:normal}
+ol,ul{list-style:none}
+button,h1,h2,h3,h4,h5,h6,input,select{font-size:100%;font-family:inherit}
+table{border-collapse:collapse;border-spacing:0}
+a,a:visited{text-decoration:none;color:#333}
+.row,dl,h2,h6,label,ol,p,ul{margin:0;padding:0}
+.w-2{width:2%!important}
+.w-5{width:5%!important}
+.w-10{width:10%!important}
+.w-20{width:20%!important}
+.w-30{width:30%!important}
+.w-40{width:40%!important}
+.w-50{width:50%!important}
+.w-55{width:55%!important}
+.w-70{width:70%!important}
+.mt-50{margin-top:2.51563rem}
+em{font-style:normal;color:#dc3545}
+.btn{font-size:.70437rem}
+.noContent{min-height:300px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;color:#6c757d}
+.noContent i{font-size:60px;margin-bottom:10px}
+.tooltip-inner{font-size:.60375rem}
+.z-depth-1{-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}
+.weui-cell_select .weui-cell__bd{padding-right:1.50937rem!important}
+.weui-dialog,.weui-toast{visibility:inherit!important}
+.MaxHeight500{max-height:430px;overflow:scroll!important}
+.weui-grids a{text-decoration:none}
+.icon{width:25px;height:25px;vertical-align:-.15em;fill:currentColor;overflow:hidden}
+.search_bg_Ter_Whi .btn-group span{color:#6c757d}
+.btn-group span{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:50px;height:50px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#dee2e6;font-size:.90563rem}
+.btn-group .dropdown-menu{text-align:center;padding:0}
+.btn-group .dropdown-menu a{color:#6c757d;font-size:.90563rem}
+.fixedBottom{position:fixed;right:30px;bottom:45px;z-index:1000}
+.fixedBottom .ind_rel_btn{width:50px;height:50px;font-size:12px;line-height:15px;background-color:rgba(0,0,0,.5);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.fixedBottom .ind_rel_btn a{width:30px;height:30px;display:block;text-decoration:none}
+.weui-tab__bd{padding-top:47px!important}
+.weui-search-bar__box,.weui-search-bar__label{height:35px!important;line-height:35px!important}
+.header_h{width:100%;height:55px}
+.header_fixed{width:100%;height:55px;position:fixed;left:0;top:0;z-index:10000000}
+.header_bg{width:100%;height:55px;background:#36c;position:relative;z-index:10}
+.header_userbg{width:100%;height:55px;position:relative;z-index:10;background:-webkit-gradient(linear,left top,right top,from(#000051),to(#af477e));background:-webkit-linear-gradient(left,#000051,#af477e);background:-o-linear-gradient(left,#000051,#af477e);background:linear-gradient(90deg,#000051,#af477e)}
+.header_fx_search{width:70%;margin:0 auto}
+.header_p_z{width:70%;color:#fff;text-align:center;height:55px;line-height:55px;font-size:18px}
+body.jobBg{background:url(../images/jobBg1.png) no-repeat;-webkit-background-size:100% 100%;background-size:100%}
+.status{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100vh}
+.status a{display:block;text-decoration:none}
+.sta_tit h4{font-size:1.00625rem;margin-bottom:0}
+.sta_tit small{color:#adb5bd}
+.sta_tit_box{text-align:center;display:block}
+.sta_tit_box p{width:120px;margin:0 auto}
+@media (min-width:320px){.sta_tit_box img{width:120px;height:120px}
+}
+@media (min-width:375px){.sta_tit_box img{width:150px;height:150px}
+}
+@media (min-width:414px){.sta_tit_box img{width:170px;height:170px}
+}

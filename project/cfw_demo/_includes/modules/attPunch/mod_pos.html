@@ -1,0 +1,13 @@
+<div class="weui-cells">
+{% for punch in site.data.attPunch %}
+  <div class="weui-cell">
+    <div class="weui-cell__bd pr-0 mr-0">
+        <h4><span class="mr-2">{{ punch.comname }}</span><small>{{ punch.posname }}</small></h4>
+        <section>
+          <small><a href="mineResumeView.html" class="text-danger">{{ punch.name }}</a></small> 
+          <small>打卡 <em>{{ punch.num }}</em> 次</span> | <span>2018-12-10 09:41</small>
+        </section>
+    </div>
+  </div>
+{% endfor %}
+</div>

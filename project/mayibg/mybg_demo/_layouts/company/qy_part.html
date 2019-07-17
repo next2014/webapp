@@ -1,0 +1,74 @@
+---
+layout: pages
+title: 兼职管理
+---
+<header>
+    <div class="header_bg bg3">
+        <a class="hd-lbtn " href="javascript:history.back()"><i class="header_top_l iconfont"></i></a>
+        <div class="header_h1">兼职管理</div>
+        <div class="header_fa_add">
+            <a href="qy_partadd.html" class="header_fa_add_p">发布兼职</a>
+        </div>
+    </div>
+</header>
+<section class="wap_member">
+    <div class="wap_member_comp_h1" style="position:relative"><span>兼职管理</span></div>
+    <div class="wap_member_job_show">
+        <div class="wap_member_no">您暂时还没有兼职
+            <div>
+                <a href="javascript:void(0)" onclick="jobadd_url('1','0','part','1','5');" class="wap_member_no_submit">发布兼职</a>
+            </div>
+        </div>
+        <div class="pages" style="margin-top:10px;"> </div>
+    </div>
+</section>
+<script>
+ function refreshPartWap(jobId) {
+        var weburl = '';
+        var integral = '1';
+        var online = '1';
+        var pro = '5';
+        var ajaxUrl = weburl + "member/index.php?c=ajax_refresh_part";
+
+        $.post(ajaxUrl, {
+            partid: jobId
+        }, function (data) {
+            data = eval('(' + data + ')');
+            if (data.error == 1) {
+                layermsg(data.msg, 2, 9, function () {
+                    window.location.href = '';
+                });
+            } else if (data.error == 2) {
+                if (online == 3) {
+                    layer.open({
+                        content: "您的等级特权已用完，继续操作将消费" + integral * pro + "积分，是否继续？",
+                        btn: ['继续', '取消'],
+                        shadeClose: false,
+                        yes: function () {
+                            window.location.href = "index.php?c=getserver&id=" + jobId + "&server=" + 13;;
+                        }
+                    });
+                } else {
+                    layer.open({
+                        content: "您的等级特权已用完，继续操作将消费" + integral + "元，是否继续？",
+                        btn: ['继续', '取消'],
+                        shadeClose: false,
+                        yes: function () {
+                            window.location.href = "index.php?c=getserver&id=" + jobId + "&server=" + 13;;
+                        }
+                    });
+                }
+
+            } else {
+                if (data.url) {
+                    layermsg(data.msg, 2, function () {
+                        location.href = "index.php?c=rating"
+                    });
+                } else {
+                    layermsg(data.msg, 2, 8);
+                }
+            }
+
+        });
+    }
+</script>

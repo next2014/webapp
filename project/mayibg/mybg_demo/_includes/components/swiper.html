@@ -1,0 +1,30 @@
+<section>
+    <div class="swiper-container" id="imgswiper">
+        <div class="swiper-wrapper">
+            {% if page.layout == "home" %}
+            <div class="swiper-slide">
+                <a href="#"><img src="images/1.jpg" width='100%' /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/2.jpg" width='100%' /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/3.jpg" width='100%' /></a>
+            </div>
+            {% endif %}
+            {% if page.layout == "company/index" %}
+            <div class="swiper-slide">
+                <a href="#"><img src="../images/1.jpg" width='100%' /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="../images/2.jpg" width='100%' /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="../images/3.jpg" width='100%' /></a>
+            </div>
+            {% endif %}
+        </div>
+        <!-- 如果需要分页器-->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>

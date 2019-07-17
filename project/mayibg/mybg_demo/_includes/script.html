@@ -1,0 +1,50 @@
+<script charset="utf-8" src="static/js/s.js" language="javascript"></script>
+<script src="static/js/hm.js" language="javascript"></script>
+<script src="static/js/push.js" language="javascript"></script>
+<script src="static/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="static/js/prefixfree.min.js" language="javascript"></script>
+<script src="static/js/pack.js" type="text/javascript"></script>
+<script src="static/js/layer.m.js" language="javascript"></script>
+<script src="static/js/public.js" language="javascript"></script>
+<script src="static/js/mui.min.js" language="javascript "></script>
+<script src="static/js/mui.picker.js" language="javascript "></script>
+<script src="static/js/mui.poppicker.js" language="javascript "></script>
+<script src="static/js/forgetpw.js" language="javascript "></script>
+<script src="static/js/reg_ajax.js" charset="utf-8" language="javascript"></script>
+<script src="static/js/gt.js" language="javascript"></script>
+<script src="static/js/mobile.js" type="text/javascript "></script>
+<script src="static/js/swiper.js"></script>
+<script src="static/js/search.js" language="javascript"></script>
+<script src="static/js/demo.js" language="javascript"></script>
+<script src="static/js/mui.min.js" language="javascript"></script>
+<script src="static/js/mui.view.js" language="javascript"></script>
+<script src="static/js/binding.js" language="javascript"></script>
+<script src="static/js/compress.js" language="javascript"></script>
+<script type="text/javascript">
+    function checkidcard(){
+    var idcard = $("#idcard").val();
+    if (idcard == '') {
+        layermsg("请填写身份证号！");
+        return false;
+    }
+    var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    if (reg.test(idcard) === false) {
+        layermsg("身份证号格式错误！");
+        return false;
+    }
+    if ($.trim($("#preview").val()) == '' && $("#previewimg").attr('src') == '') {
+        layermsg("请上传证件照！");
+        return false;
+    }
+}
+</script>
+<script>
+    //选择快捷输入moblie.html
+    mui('.mui-popover').on('tap', 'li', function(e) {
+        document.getElementById("name").value = document.getElementById("name").value + this.children[0].innerHTML;
+        mui('.mui-popover').popover('toggle')
+    })
+</script>
+<script>
+    var usertype = "1";
+</script>

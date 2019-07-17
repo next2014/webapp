@@ -1,0 +1,9 @@
+.daily{
+    @extend %bgColorMt;
+    .weui-grids{
+      background-color: $white;
+      a{
+          text-decoration: none;
+      }
+    }
+}

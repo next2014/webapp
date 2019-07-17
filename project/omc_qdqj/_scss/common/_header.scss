@@ -1,0 +1,45 @@
+%lineheight{
+  height:rem(161);
+}
+@mixin text-truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//顶部title
+.bd-navbar {
+    @extend %lineheight;
+    width:100%;
+    min-height:auto;
+    background-color:$blue-deep;
+    color:$gray-600;
+    position: fixed;
+    top:0;
+    z-index:1000;
+    div{
+       padding:0;
+       &:last-child{
+         padding-right:rem(20);
+         font-size:$font-12;
+       }
+    }
+    h6{
+        @extend %lineheight;
+        @include text-truncate;
+        text-align: center;
+        font-size:$font-14;
+    }
+    a{
+      color:$gray-600;
+      text-decoration:none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %lineheight;
+     }
+    i{
+      font-size:$font-20;
+      margin-right:rem(100);
+    }
+}

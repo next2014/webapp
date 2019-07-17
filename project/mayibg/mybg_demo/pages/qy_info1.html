@@ -1,0 +1,47 @@
+---
+layout: test
+title: 福利
+---
+<script src="../js/jquery-1.8.0.min.js" language="javascript"></script>
+<div class="yun_info_fl_list">
+    <div class="mui-input-row mui-checkbox">
+        <label>销售奖金 </label>
+        <input name="welfare[]" value="96" type="checkbox" class="welfare" data-name="销售奖金">
+    </div>
+</div>
+<div class="yun_info_fl_zdy">
+    <input name="demo" type="text" id="addwelfare" placeholder="请输入福利名称">
+    <div class="yun_info_fl_zdy_tj">
+        <button type="button" class="addwelfarebox">+ 添加福利</button>
+    </div>
+</div>
+<script>
+window.onload = function (){
+	var oBtn = document.getElementById('btn1');
+	var oText = document.getElementById('text1');
+	var oImg = document.getElementById('img1');
+
+	oBtn.onclick = function (){
+		oImg.src = oText.value;
+	};
+};
+</script>
+        
+        </head>
+        
+        <body>
+<input id="text1" type="text" />
+<input id="btn1" type="button" value="按钮" />
+<p id="p1">这是一些文字</p>
+                
+        
+<!-- <script>
+ $(function(){
+    var addInput = $('addwlfare').val;
+    var txt3=document.createElement("label"); 
+     $('.addwelfarebox').click(function(){
+         txt3.innerHTML = addInput;
+         $('.yun_info_fl_list').append(txt3 +'<input name="checkbox" type="checkbox" checked="true">' + '<br/>');
+     });
+ })
+</script> -->

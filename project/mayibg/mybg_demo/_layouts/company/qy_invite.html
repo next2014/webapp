@@ -1,0 +1,94 @@
+---
+layout: pages
+title: 面试邀请
+---
+<div class="body_wap">
+    <header class="header_h">
+        <div class="header_fixed">
+            <div class="header">
+                <div class="header_bg  bg3">
+                    <a class="hd-lbtn " href="javascript:history.back()"><i class="header_top_l"></i></a>
+                    <div class="header_h1">
+                        <div class="header_p_z"> 面试邀请</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<link rel="stylesheet" href="../css/mui.picker.min.css" type="text/css" />
+<input name="uid" id="uid" value="108" type="hidden">
+<form name="myform" method="post" action="qy_invite_datil.html">
+    <div class="invite_box">
+        <div class="invite_box_c">
+            <div class="invite_box_user">
+                <div class="invite_box_userpic">
+                    <img src="../images/14922051316.PNG" width="50" height="50">
+                </div>
+                <div class="invite_box_username">王丽婷</div>
+                <div class="invite_box_userwant">TA想要找<font color="#f00">兼职教师 </font> 工作</div>
+            </div>
+            <div class="invite_box_about">
+                <div class="invite_box_list">
+                    <i class="invite_box_job_icon"></i>
+                    <span class="invite_box_list_name">面试职位</span>
+                    <div class="yun_newwap_text_box">
+                        <button id='interjobPicker' class="mui-btn mui-btn-block" type='button'>
+                            请选择面试职位
+                        </button>
+                        <input type="hidden" id="jobname" name="jobname" value="##">
+                    </div>
+                </div>
+                <div class="invite_box_list">
+                    <i class="invite_box_time_icon"></i>
+                    <span class="invite_box_list_name">面试时间</span>
+                    <div class="yun_newwap_text_box">
+                        <button id='intertimePicker' style="border:none">请选择面试时间</button>
+                        <input type="hidden" id="intertime" name="intertime" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="invite_box_dz">
+                <i class="invite_box_add_icon"></i>
+                <span class="invite_box_list_name">面试地址</span>
+                <div class="invite_box_dz_box">
+
+                    <input id='address' type="text" value='dddd' class="job_invite_text" placeholder="请填写面试地址">
+                </div>
+            </div>
+            <div class="invite_box_bc"> <i class="invite_box_sm_icon"></i>面试备注：( 选填 )</div>
+            <div class="invite_box_bc_box">
+                <textarea id="content" class="job_invite_textarea" placeholder="请输入面试备注 "></textarea>
+            </div>
+        </div>
+        <div class="invite_box_tel_box">
+            <div class="invite_box_tel">
+                <i class="invite_box_pop_icon"></i>
+                <span class="invite_box_list_name">联系人</span>
+                <input type="text" id='linkman' value='' class="job_invite_text" placeholder="请填写联系人"> </div>
+            <div class="invite_box_tel">
+                <i class="invite_box_tel_icon"></i>
+                <span class="invite_box_list_name">联系电话</span>
+                <input type="text" id='linktel' value='' class="job_invite_text" placeholder="请填写联系电话"> </div>
+            <div class="yun_newwap_bth mt10">
+                <input type="hidden" value="52" id="eid">
+                <input type="hidden" value="108" id="uid">
+                <input type="hidden" id="username" value="王丽婷">
+                <button id="click_invite" type="button" class="mui-btn mui-btn-block mui-btn-primary">发布面试邀请</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    mui.init();
+    var interjobData = [];
+    ''
+    interjobData.push({
+        value: 'UI设计##534',
+        link_man: '',
+        link_moblie: '',
+        text: 'UI设计'
+    })
+    ''
+</script>
+<script src="../js/publicselect.js" language="javascript"></script>

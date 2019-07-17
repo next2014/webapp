@@ -1,0 +1,20 @@
+@mixin sizeWH($width, $height) {
+    width: rem($width);
+    height: rem($height);
+}
+
+@mixin sizePadding($top,$right,$bottom,$left) {
+    padding:rem($top) rem($right) rem($bottom) rem($left);
+}
+
+@mixin sizePtblr($tb,$lr) {
+    padding:rem($tb) rem($lr);
+}
+
+@mixin sizeMargin($top,$right,$bottom,$left) {
+    margin:rem($top) rem($right) rem($bottom) rem($left);
+}
+
+@mixin sizeMtblr($tb,$lr) {
+    margin:rem($tb) rem($lr);
+}

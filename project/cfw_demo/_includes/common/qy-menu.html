@@ -1,0 +1,15 @@
+<!-- 底部导航 -->
+{% if page.layout == "pages/qy-checkInSornd" or page.layout == "pages/qy-leaveSornd" or page.layout == "pages/qy-news"%}
+<nav class="menu">
+    <a href="qy-leaveSornd.html".html" class="{% if page.layout == "pages/qy-leaveSornd" %} active {% endif %}">
+        <i class="fa fa-calendar"></i><span>请假记录</span>
+    </a>
+    <a href="qy-checkInSornd.html" class="{% if page.layout == "pages/qy-checkInSornd" %} active {% endif %}">
+        <i class="fa fa-pencil-square-o"></i><span>签到记录</span>
+    </a>
+    <a href="qy-news.html" class="{% if page.layout == "pages/qy-news" %} active {% endif %}">
+        <i class="fa fa-user-o"></i><span>消息</span>
+        <em class="weui-badge weui-badge_dot"></em>
+    </a>
+</nav>
+{% endif %}

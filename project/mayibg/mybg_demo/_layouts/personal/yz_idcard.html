@@ -1,0 +1,45 @@
+---
+layout: default
+title: 实名验证
+---
+<!-- Content area -->
+<div class="body_wap">
+<header class="header_h">
+    <div class="header_fixed">
+        <div class="header">
+            <div class="header_userbg bg3">
+                <a class="hd-lbtn " href=""><i class="header_top_l iconfont"></i></a>
+                <div class="header_h1">实名认证</div>
+            </div>
+        </div>
+    </div>
+</header>
+<form id="resumeInfo" action="" method="post" onsubmit="return checkidcard();">
+    <div class="yun_com_msg">未认证</div>
+    <ul class="yunset_password mt15">
+        <li><span class="yunset_password_mname">您的姓名</span> <input type="text" name="name" value="liang" class="yunset_text"></li>
+        <li><span class="yunset_password_mname">身份证号</span> <input type="text" name="idcard" id="idcard" value=""
+                class="yunset_text"></li>
+    </ul>
+    <div class="yunset_identity_box">
+        <div class="yunset_identity" style="height:240px">
+            <div align="center" class="yunset_identity_pic_img" id="previewshow" style="display: none;">
+                <img src="images/make_S_15494086002.jpg" id="previewimg">
+            </div>
+            <div class="yunset_identity_pic">
+                <i class="yunset_identity_pic_tj"></i>
+                <input type="file" name="pic" onchange="previewImage(this,&#39;preview&#39;)" accept="image/*"
+                    class="yunset_identity_pic_file">
+                <input type="hidden" name="preview" value="" id="preview">
+            </div>
+            <div class="yunset_identity_tip">上传本人的身份证人像页照片</div>
+            <span class="yunset_identity_tip_a">选择上传图片</span>
+            <div class="yunset_identity_tip_c" style="padding-top:10px;">（ 文字清晰，四角齐全 )</div>
+        </div>
+    </div>
+    <div class="yunset_identity_msg"><i class="yunset_identity_msg_icon"></i>格式为 jpg,png,jpeg,bmp,gif不得超过2M</div>
+    <div class="yunset_bth_box">
+        <input type="hidden" name="eid" id="eid" value="">
+        <input type="submit" name="submit" value="保存" class="yunset_bth">
+    </div>
+</form>

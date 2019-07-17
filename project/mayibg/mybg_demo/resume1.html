@@ -1,0 +1,17 @@
+---
+layout: default
+title: 我的简历
+---
+id <span id="1"></span>
+简历 <span id="title"></span>
+
+<script>
+  mui.init();
+  mui.plusReady(function(){
+     var sData = plus.webview.currentWebview();
+     var title = mui('#title');
+     title[0].innterHTML = sData.title;
+     var id = mui('#id');
+     id[0].innterHTML = sData.id;
+  })
+</script>

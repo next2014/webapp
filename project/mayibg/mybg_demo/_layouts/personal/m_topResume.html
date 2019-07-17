@@ -1,0 +1,94 @@
+---
+layout: default
+title: 置顶简历
+---
+<div class="body_wap">
+    <header class="header_h">
+        <div class="header_fixed">
+            <div class="header">
+                <div class="header_userbg bg3">
+                    <a class="hd-lbtn mui-action-back" href="javascript:history.back()"><i class="header_top_l iconfont"></i></a>
+                    <div class="header_h1">置顶简历</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        var eid = '1084';
+        $(document).ready(function () {
+            $("input[name='days']").click(function () {
+                var val = $(this).val();
+                countmoney(val);
+            });
+        });
+        function countmoney(val) {
+            var price = $("#price").val();
+            var money = parseInt(val * (price * 100)) / 100;
+            $(".pricehtml").html(money);
+        }
+        function pay_form(type) {
+            var days = $("input[name='days']:checked").val();
+            if (type == 'zdresume') {
+                $('#xsdays').val(days);
+            }
+            if (days == '' || days < 1) {
+                layermsg("请选择或填写天数！", 2);
+                return false;
+            }
+            var paytype = $('#paytype').val();
+            if (paytype == null) {
+                layermsg('请选择一种支付方式！', 2);
+                return false;
+            } else if (paytype == 'wxpay') {
+                $("#paymentform").attr("action", "index.php?c=wxpay&id=");
+            } else if (paytype == 'alipay') {
+                $("#paymentform").attr("action", "");
+            }
+            return true;
+        }
+    </script>
+
+    <section class="wap_member">
+        <div class="wap_member_comp_h1"><span>简历置顶</span></div>
+        <form action="" method="post" onsubmit="return pay_form(&#39;zdresume&#39;);">
+            <div class="set_top_name"><span class="set_top_name_n">简历名称：</span>ssss</div>
+            <div class="set_top_name set_top_bor"><span class="set_top_name_n">结束时间：</span>
+                <font color="#999">暂未推广</font>
+            </div>
+            <div class="set_top_day_box mt15"><span class="set_top_day_box_n">置顶时长：</span>
+                <div class="clear"></div>
+                <ul class="set_top_day">
+                    <li><span class="set_top_day_n"><label class=""><input type="radio" checked="" name="days" value="1">1天</label></span></li>
+                    <li><span class="set_top_day_n"><label class=""><input type="radio" name="days" value="3">3天</label></span></li>
+                    <li><span class="set_top_day_n"><label class=""><input type="radio" name="days" value="7">7天</label></span></li>
+                    <li><span class="set_top_day_n"><label class=""><input type="radio" name="days" value="15">15天</label></span></li>
+                    <li><span class="set_top_day_n"><label class=""><input type="radio" name="days" value="30">30天</label></span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="set_top_money">所需金额：<span class="getserbver_box_s pricehtml">2</span> 元</div>
+            <div class="mt10">
+                <div class="spread_box spread_box_bor">
+                    <div class="spread_zf_list" onclick="paycheck(&#39;wxpay&#39;);">
+                        <i class="wxpay member_set_meal_fk_xz" style="top:0"></i> 微信支付
+                    </div>
+                </div>
+                <div class="spread_box spread_box_bor" onclick="paycheck(&#39;alipay&#39;);">
+                    <div class="spread_zf_list spread_zf_list_zfb">
+                        <i class="alipay member_set_meal_fk_xz" style="top:0"></i> 支付宝支付
+                    </div>
+                </div>
+                <div class=" mt15">
+                    <div class=""><input type="submit" value="确认支付" name="nextstep" class="reinputText2"></div>
+                </div>
+                <div class="getserbver_box_tel mt15">
+                    <a href="tel:18026630116">客服电话：18026630116</a>
+                </div> <input id="paytype" name="paytype" type="hidden" value="">
+                <input id="price" type="hidden" value="2">
+                <input name="server" id="server" type="hidden" value="zdresume">
+                <input name="xsdays" id="xsdays" type="hidden" value="">
+                <input name="resumeid" id="resumeid" type="hidden" value="1084">
+            </div>
+        </form>
+    </section>
+</div>

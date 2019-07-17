@@ -1,0 +1,337 @@
+--- 
+layout: pages
+title: 招聘中的职位
+---
+<header>
+    <div class="header_bg bg3">
+        <a class="hd-lbtn" href="javascript:history.back()">
+            <i class="header_top_l iconfont"></i>
+        </a>
+        <div class="header_h1">职位管理</div>
+        <!-- 发布职位-->
+        <div class="header_fa_add">
+            <a href="qy_jobadd.html" class="header_fa_add_p">发布职位</a>
+        </div>
+        <!-- 发布兼职-->
+    </div>
+</header>
+<section class="wap_member">
+    <div class="mui-content pos_tab">
+        <div class="mui-row">
+            <div class="mui-col-sm-6 mui-col-xs-6">
+                <li class="mui-table-view-cell">
+                    <a href="position.html" class="active">
+                        全职
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-sm-6 mui-col-xs-6">
+                <li class="mui-table-view-cell">
+                    <a href="c_part.html">
+                        兼职
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+    <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted index_jobtit">
+            <a class="mui-control-item  mui-active" href="#zplist">招聘中</a>
+            <a class="mui-control-item" href="#shlist">待审核</a>
+            <a class="mui-control-item" href="#xjlist">已下架</a>
+        </div>
+        <style>
+            .index_jobtit .mui-active {
+                position: relative;
+                color: #f60
+            }
+
+            .index_jobtit .mui-active:after {
+                width: 26px;
+                height: 2px;
+                background: #f60;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
+                content: '';
+                margin-left: -13px;
+            }
+
+            .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+                color: #f60
+            }
+        </style>
+        <div class="mui-slider-group">
+            <div id="zplist" class="mui-slider-item mui-control-content" style="border:none;">
+                <ul>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="../c_job_view.html" class="job_list_jobname ">前端H5开发工程师</a>
+                                </span>
+                                <div class="wap_member_date_r">已审核</div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：1
+                                <span class="wap_member_msg_job_s">浏览量：14 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-16</div>
+                            <div class="yun_m_job_list_tg">
+                                <a href="javascript:void(0)" onclick="showserver('546')">我要推广</a>
+                            </div>
+                            <div class="yun_m_job_list_zt"></div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','index.php?c=jobdel&id=546');" class="yun_member_sub  ">删除</a>
+                                <a href="javascript:void(0)" class="yun_member_sub  " onclick="refreshJobWap('546')">刷新</a>
+                                <a href="index.php?c=jobadd&id=546" class="yun_member_sub ">修改</a>
+                                <a href="javascript:void(0)" onclick="layer_del('','index.php?c=jobset&status=1&id=546')" class="yun_member_sub ">下架</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="../c_job_view.html" class="job_list_jobname ">.NET开发工程师</a>
+                                </span>
+                                <div class="wap_member_date_r">已审核</div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：0
+                                <span class="wap_member_msg_job_s">浏览量：8 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-16</div>
+                            <div class="yun_m_job_list_tg">
+                                <a href="javascript:void(0)" onclick="showserver('543')">我要推广</a>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                            </div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','index.php?c=jobdel&id=543');" class="yun_member_sub  ">删除</a>
+                                <a href="javascript:void(0)" class="yun_member_sub  " onclick="refreshJobWap('543')">刷新</a>
+                                <a href="index.php?c=jobadd&id=543" class="yun_member_sub ">修改</a>
+                                <a href="javascript:void(0)" onclick="layer_del('','index.php?c=jobset&status=1&id=543')" class="yun_member_sub ">下架</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="../c_job_view.html" class="job_list_jobname ">网页美工设计师</a>
+                                </span>
+                                <div class="wap_member_date_r">已审核</div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：1
+                                <span class="wap_member_msg_job_s">浏览量：13 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-16</div>
+                            <div class="yun_m_job_list_tg">
+                                <a href="javascript:void(0)" onclick="showserver('542')">我要推广</a>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                            </div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','index.php?c=jobdel&id=542');" class="yun_member_sub  ">删除</a>
+                                <a href="javascript:void(0)" class="yun_member_sub  " onclick="refreshJobWap('542')">刷新</a>
+                                <a href="index.php?c=jobadd&id=542" class="yun_member_sub ">修改</a>
+                                <a href="javascript:void(0)" onclick="layer_del('','index.php?c=jobset&status=1&id=542')" class="yun_member_sub ">下架</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="shlist" class="mui-slider-item mui-control-content" style="border:none;">
+                <ul>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="" class="job_list_jobname com_member_hr_cblue">.net</a>
+                                </span>
+                                <div class="wap_member_date_r">
+                                    <em>未审核</em>
+                                </div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：0
+                                <span class="wap_member_msg_job_s">浏览量：0 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-14</div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','index.php?c=jobdel&id=543');" class="yun_member_sub  yun_member_bth1">删除</a>
+                                <a href="qy_jobadd.html" class="yun_member_sub yun_member_bth2">修改</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="c_job_view.html" class="job_list_jobname com_member_hr_cblue">UI设计</a>
+                                </span>
+                                <div class="wap_member_date_r">
+                                    <em>未审核</em>
+                                </div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：0
+                                <span class="wap_member_msg_job_s">浏览量：0 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-14</div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','index.php?c=jobdel&id=542');" class="yun_member_sub  yun_member_bth1">删除</a>
+                                <a href="qy_jobadd.html" class="yun_member_sub yun_member_bth2">修改</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="xjlist" class="mui-slider-item mui-control-content" style="border:none;">
+                <ul>
+                    <li>
+                        <div class="wap_member_msg ">
+                            <div class="wap_member_date">
+                                <span class="yun_m_job_date_n">&nbsp;
+                                    <a href="c_job_view.html" class="job_list_jobname com_member_hr_cblue">UI设计</a>
+                                </span>
+                                <div class="wap_member_date_r">
+                                    已审核 </div>
+                            </div>
+                            <div class="yun_m_job_list_zt">
+                                应聘简历：0
+                                <span class="wap_member_msg_job_s">浏览量：13 </span>
+                            </div>
+                            <div class="yun_m_job_list_zt">更新时间：2018-12-04</div>
+                            <div class="yun_member_bth">
+                                <a href="javascript:layer_del('确定要删除？','qy_jobadd.html');" class="yun_member_sub  yun_member_bth1">删除</a>
+                                <a href="qy_jobadd.html" class="yun_member_sub yun_member_bth2">修改</a>
+                                <a href="javascript:void(0)" onclick="layermsg('会员已到期，无法上架，请先升级会员！');return false;" class="yun_member_sub yun_member_bth3">
+                                    <span class="yun_member_yzt">已下架</span>上架职位
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--推广弹出框-->
+<div style="width:100%;height:100%; background:rgba(51,51,51,0.5); position:fixed;left:0px;top:0px;z-index:1000000;display:none"
+    id="jobserver">
+    <div style="width:100%; position:absolute;left:0px;top:40px;">
+        <div style=" padding:20px;">
+            <div class="job_extension_tck" style="display:block">
+                <div class="job_extension_tck_tit">职位推广
+                    <span onclick="$('#jobserver').hide();" style="float:right">关闭</span>
+                </div>
+                <ul class="serverul">
+                    <li onclick="ckserver('1');" class="server1 job_extension_tck_yse">
+                        <a href="javascript:void(0)">
+                            <i class="job_extension_tck_icon "></i>自动刷新</a>
+                    </li>
+                    <li onclick="ckserver('2');" class="server2">
+                        <a href="javascript:void(0)">
+                            <i class="job_extension_tck_icon "></i>职位置顶</a>
+                    </li>
+                    <li onclick="ckserver('3');" class="server3">
+                        <a href="javascript:void(0)">
+                            <i class="job_extension_tck_icon "></i>推荐职位</a>
+                    </li>
+                    <li onclick="ckserver('4');" class="server4">
+                        <a href="javascript:void(0)">
+                            <i class="job_extension_tck_icon "></i>紧急招聘</a>
+                    </li>
+                    <li onclick="ckserver('5');" class="server5">
+                        <a href="javascript:void(0)">
+                            <i class="job_extension_tck_icon "></i>悬赏招聘</a>
+                    </li>
+                </ul>
+                <input id="server" value='1' type="hidden" />
+                <input id="jobid" value='' type="hidden" />
+                <div class="job_extension_tck_bth">
+                    <a href="javascript:void(0)" onclick="forserver()" class="job_extension_tck_sub">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    mui('.mui-scroll-wrapper').scroll();
+
+    function showserver(id) {
+        $('#jobid').val(id);
+        $('#jobserver').show();
+    }
+
+    function ckserver(type) {
+        $("#server").val(type);
+        $(".serverul li").removeClass("job_extension_tck_yse");
+        $(".server" + type).addClass("job_extension_tck_yse");
+    }
+
+    function forserver() {
+        var server = $("#server").val();
+        var jobid = $("#jobid").val();
+        if (server == '5') {
+            window.location.href = "";
+
+        } else {
+            window.location.href = "";
+        }
+
+    }
+
+    function refreshJobWap(jobId) {
+        var weburl = '';
+        var integral = '2';
+        var online = '1';
+        var pro = '5';
+        var ajaxUrl = weburl + "";
+
+        $.post(ajaxUrl, {
+            jobid: jobId
+        }, function (data) {
+            data = eval('(' + data + ')');
+            if (data.error == 1) {
+                layermsg(data.msg, 2, 9, function () {
+                    window.location.href = '';
+                });
+            } else if (data.error == 2) {
+                if (online == 3) {
+                    layer.open({
+                        content: "您的等级特权已用完，继续操作将消费" + integral * pro + "积分，是否继续？",
+                        btn: ['继续', '取消'],
+                        shadeClose: false,
+                        yes: function () {
+                            window.location.href = "";
+                        }
+                    });
+                } else {
+                    layer.open({
+                        content: "您的等级特权已用完，继续操作将消费" + integral + "元，是否继续？",
+                        btn: ['继续', '取消'],
+                        shadeClose: false,
+                        yes: function () {
+                            window.location.href = "";
+                        }
+                    });
+                }
+
+            } else {
+                if (data.url) {
+                    layermsg(data.msg, 2, function () {
+                        location.href = ""
+                    });
+                } else {
+                    layermsg(data.msg, 2, 8);
+                }
+            }
+
+        });
+    }
+</script>

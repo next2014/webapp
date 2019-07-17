@@ -4,16 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>美食天地</title>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/main.css" rel="stylesheet">
-<!-- 图标 -->
-<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
-<!-- animateion -->
-<link href="assets/css/keyframes.css" rel="stylesheet">
-<link href="assets/css/animation.css" rel="stylesheet">
-<link href="assets/css/swiper.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="margin:0!important;padding:8px;background-color: #ffffff!important">
     <style>
     .card a{
         position: relative;
@@ -221,44 +213,5 @@
     </div>
     <div class="bgImg" style="background: url(assets/img/bg.png) no-repeat;opacity:0.65; background-size:100%; background-position: bottom"></div>
 </div>
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/swiper.js"></script>
-<script type="text/javascript">
-    var swiper = new Swiper('.swiper-container',{
-        directon:'horizontal',//水平滑动
-        speed:300,//滑动速度
-        loop:true,
-        autoplay:{//自动切换时间
-            delay:3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el:'.swiper-pagination',
-            dynamicBullets: true,
-        }
-    });
-    var swiper1 = new Swiper('.swiper-container1', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
-    <script>
-        var $mpiBtn = $('.btn1');
-        var $mpiInd = $('.nd1');
-        $mpiBtn.on('click',function(){
-            if($mpiInd.height() == "50"){
-                    $mpiInd.height('auto');
-                    $('.btn1 i').attr("class","fa fa-angle-up");
-                    $('.btn1 i').html(' 收起');
-                }else{
-                    $mpiInd.height('50');
-                    $('.btn1 i').attr("class","fa fa-angle-down");
-                    $('.btn1 i').html(' 展开');
-                }
-            });
-    </script>
 </body>
 </html>

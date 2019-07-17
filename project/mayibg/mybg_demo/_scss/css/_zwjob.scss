@@ -1,0 +1,21 @@
+
+/*附近职位*/
+#loading { position:fixed;top:140px;left:50%; margin-left:-20px;z-index:999;} 
+.loading_icon{width:40px;height:40px; background:url(../images/loading.gif) no-repeat; background-size:100%; display:inline-block}
+.yun_map_tit{ padding:10px 20px 0px 20px; }
+.yun_map_tit ul {width:160px;height:33px; margin:0 auto;}
+.yun_map_tit ul li{ display:inline-block;width:80px;height:33px; line-height:33px; text-align:center; font-size:14px;background:#fff;border-radius:0px 20px 20px 0px; float:left}
+.yun_map_tit ul .yun_map_cur{background:#0195ff;color:#fff;border-radius:20px 0px 0px 20px;}
+.yun_map_tit ul .yun_map_cur a{color:#fff}
+.map_jobname{ font-size:15px; font-weight:bold}
+.map_job_list{background:#fff; font-size:14px;}
+.map_job_top{ width:100%;}
+.map_job_topname{ font-size:15px; font-weight:bold}
+.map_job_jl{ position:absolute;right:0px;top:0px;color:#0CF}
+.map_job_xz{color:#f00; font-size:16px; position:absolute;right:10px;top:10px;}
+.map_job_com_Box{ padding:10px;border-top:1px solid #eee;}
+.map_job_list_box{ padding:10px 50px 10px 10px; position:relative}
+.map_job_fl_s{display:inline-block; margin-right:10px; background:#ecf5fb;color:#2772a4;padding: 0px 5px; margin-top:6px; font-size:12px;}
+.map_job_list_box a{color:#000}
+.map_job_com{ padding-top:5px;}
+.map_job_com a{color:#666}

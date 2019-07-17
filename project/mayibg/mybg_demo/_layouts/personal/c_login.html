@@ -1,0 +1,95 @@
+---
+layout: default1
+title: 天天兼职
+---
+<div class="body_wap">
+    <header class="header_h">
+        <div class="header_fixed">
+            <div class="header">
+                <div class="header_bg  bg3">
+                    <a class="hd-lbtn mui-action-back" href="javascript:history.back();"><i class="header_top_l"></i></a>
+                    <div class="header_h1">
+                        <div class="header_p_z"> 会员登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div class="login_body">
+    <a href="selectLogin.html" class="login_reg"><span class="login_reg_s1">注册</span></a>
+    <section class="list">
+        <article>
+            <div class="login_box_h1_d">
+                <ul class="login_box_h_list">
+                    <li id="acount_login" class="login_box_h_list_cur">账户密码登录<i class="login_box_h_icon"></i></li>
+                    <li id="mobile_login" class="">手机动态码登录 <i class="login_box_h_icon"></i></li>
+                </ul>
+            </div>
+            <div class=" ">
+                <div class="login_body_cont">
+                    <form action="#" method="post" onsubmit="return mlogin(this);">
+                        <input type="hidden" name="act_login" id="act_login" value="0" />
+                        <input name="usertype" type="hidden" value="" />
+                        <input name="wxid" type="hidden" value="" />
+
+                        <dl class="forminputitem" id="login_normal_box" style="padding-top:0px;">
+                            <dd>
+                                <div class="c inputitem_w">
+                                    <i class="reg_icon_font login_icon_n1 "></i>
+                                    <input name="username" type="text" id="username" value="" placeholder="邮箱/手机号/用户名" class="inputitemtxt" />
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="c ico_eye_close inputitem_w">
+                                    <i class="reg_icon_font login_icon_n2 "></i>
+                                    <input name="password" type="password" id="password" class="inputitemtxt" placeholder="请输入密码" />
+                                    <em class="viewpwd" id="showPwd" onclick="showPwd(this)"></em>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!--手机动态码登录-->
+
+                        <div class="login_sj_box" id="login_sj_box" style="display:none;">
+                            <div class="c inputitem_w">
+                                <i class="reg_icon_font login_icon_n4 "></i>
+                                <input name="moblie" id="usermoblie" type="number" class="inputitemtxt" value="" placeholder="请输入手机号码" />
+                                <div class="logoin_msg none" id="show_mobile">
+                                    <div class="logoin_msg_tx">请填写正确的手机号</div>
+                                    <div class="logoin_msg_icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+
+                        <div class="login_sj_box_mb" id="login_sjyz_box" style="display:none;">
+                            <div class="c ico_name inputitem_w">
+                                <i class="reg_icon_font login_icon_n8 "></i>
+                                <input name="dynamiccode" type="text" class="inputitemtxt" id="dynamiccode" value="" placeholder="请输入短信验证码" />
+                                <div class="logoin_msg none" id="show_dynamiccode">
+                                    <div class="logoin_msg_tx">请填写发送的验证码</div>
+                                    <div class="logoin_msg_icon"></div>
+                                </div>
+                                <a href="javascript:void(0);" class="login_m_send2" id="send_msg_tip" onclick="send_msg('');">获取动态验证码</a>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="checkurl" value="" />
+                        <div class="login_bth"> <input type="submit" name="submit" id="sublogin" value="登录" class="inputSubmit mt15" /></div>
+                    </form>
+                    <div class="login_body_xc">
+                        <a href="forgetpw.html" class="loginuser_pw">忘记密码?</a>
+                        <a href="selectlogin.html" class="loginuser_reg">新用户注册</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="login_other">
+                <span class="login_other_span">其他方式登录</span>
+                <a href="#" title="sina" class="login_other_icon login_other_xl"><i class="iconfont_sina"></i></a>
+                <a href="#" title="QQ" class="login_other_icon login_other_qq"><i class="iconfont_qq"></i></a>
+                <a href="#" title="wx" class="login_other_icon login_other_wx"><i class="iconfont_wx"></i></a>
+            </div> -->
+        </article>
+    </section>
+</div>

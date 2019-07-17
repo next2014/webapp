@@ -1,0 +1,89 @@
+<script>
+        var wapurl = "",
+            weburl = "",
+            pricename = "积分",
+            integral_pricename = "积分",
+            code_web = '注册会员,前台登陆,店铺招聘,职场提问',
+            code_kind = '1';
+        $(document).ready(function() {
+            $.get(wapurl + "", function(data) {
+                var datas = eval("(" + data + ")");
+                if(datas.usertype == 1) {
+                    if(datas.msgNum) {
+                        $('#sysmsgnum').html(datas.msgNum);
+                        $('#tzmsgNum').html(datas.msgNum);
+                        $('#tzmsgNum').show();
+                    }
+                    if(datas.wkyqnum > 0) {
+                        $('#wkyqnum').html(datas.wkyqnum);
+                        $('#wkyqnum').show();
+                    }
+                    $('#yqnum').html(datas.yqnum);
+                    $('#sq_jobnum').html(datas.sq_jobnum);
+                    $('#fav_jobnum').html(datas.fav_jobnum);
+                }
+                if(datas.usertype == 2) {
+                    if(datas.msgNum) {
+                        $('#sysmsgnum').html(datas.msgNum);
+                        $('#tzmsgNum').html(datas.msgNum);
+                        $('#tzmsgNum').show();
+                    }
+                    $('#sqnum').html(datas.sqnum);
+                    $('#companyjobnum').html(datas.companyjobnum);
+                    $('#talent_pool_num').html(datas.talent_pool_num);
+                }
+                if(datas.usertype == 3) {
+                    if(datas.msgNum) {
+                        $('#sysmsgnum').html(datas.msgNum);
+                        $('#tzmsgNum').html(datas.msgNum);
+                        $('#tzmsgNum').show();
+
+                    }
+                    $('#ypnum').html(datas.ypnum);
+                    $('#jobnum').html(datas.jobnum);
+                    $('#downnum').html(datas.downnum);
+                }
+            });
+            $('#jobclick').click('click', function() {
+                $('#footerjob').toggle();
+                $('#footerresume').hide();
+            });
+            $('#footerjob').click('click', function() {
+                $('#footerjob').hide();
+            });
+            $('#reg_mune_box').click('click', function() {
+                $('#reg_mune').toggle();
+                $('#footerresume').hide();
+            });
+
+            $('#reg_mune_box_news').click('click', function() {
+                $('#reg_mune').toggle();
+                $('#footerresume').hide();
+            });
+
+            $('#reg_mune').click('click', function() {
+                $('#reg_mune').hide();
+            });
+            $('#reg_mune_boxs').click('click', function() {
+                $('#reg_mune').toggle();
+                $('#footerresume').hide();
+            });
+            $('#reg_mune').click('click', function() {
+                $('#reg_mune').hide();
+            });
+        });
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        if(isAndroid) {
+            var orginHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            window.onresize = function() {
+                var resizeHeight = document.documentElement.clientHeight || document.body.clientHeight;
+                if(orginHeight * 1 > resizeHeight * 1) {
+                    $('.yun_footer_fix').css('display', 'none');
+                    document.activeElement.scrollIntoView(false);
+                } else {
+                    $('.yun_footer_fix').css('display', 'block');
+                }
+            }
+        }
+</script>

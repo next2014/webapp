@@ -1,0 +1,74 @@
+<!-- basic scripts -->
+<!--[if !IE]> -->
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<!-- <![endif]-->
+<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="../assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- ace scripts -->
+<script src="../assets/js/ace-elements.min.js"></script>
+<script src="../assets/js/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+{% if page.layout == "admin/qj-tables" or page.layout == "admin/qd-tables" %}
+<script src="../assets/js/layer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $( "#id-btn-dialog2" ).on('click', function(e) {
+            e.preventDefault();
+            $( "#dialog-confirm" ).removeClass('hide').dialog({
+                resizable: false,
+                width: '600',
+                modal: true,
+                buttons: [
+                    {
+                        text: "提交",
+                        "class" : "btn btn-danger btn-minier",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ]
+            });
+        });  
+    });
+</script>
+{% endif %}
+{% if page.layout == "admin/qj-add" or page.layout == "admin/qd-add" %}
+<script src="../src/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+
+  //请假时间
+  laydate.render({
+    elem: '#test55'
+    ,type: 'time'
+    ,range: true
+    //,trigger: 'click'
+    ,done: function(value, date, endDate){
+      console.log(value, date, endDate);
+    }
+  });
+
+  //上班时间
+  laydate.render({
+    elem: '#test6-2' //指定元素
+    ,type: 'datetime'
+    ,theme: '#393D49'
+    //,range: true
+    ,trigger: 'click'
+  });
+
+});
+</script>
+{% endif %}
