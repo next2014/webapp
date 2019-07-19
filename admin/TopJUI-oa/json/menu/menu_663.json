@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "工作计划",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "工作任务",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "公告通知",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "签到",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "外出申请",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "出差申请",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "加班申请",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 663,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "请假申请",
+      "url": " "
+    }
+  ]

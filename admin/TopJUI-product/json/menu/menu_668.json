@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "现金管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "应收管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "应付管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "余额",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "财务报表",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 668,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "余额",
+      "url": " "
+    }
+]

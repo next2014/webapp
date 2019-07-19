@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1346,
+    "pid": 659,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "店铺列表",
+    "url": "./page/dianpu/Shop_list.html"
+  },
+  {
+    "id": 1348,
+    "pid": 659,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "店铺审核",
+    "url": "./page/dianpu/Shops_Audit.html"
+  }
+]

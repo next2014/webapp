@@ -1,0 +1,26 @@
+[
+  {
+    "id": 201,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会员列表",
+    "url": "./page/memguanli/user_list.html"
+  },
+  {
+    "id": 202,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "等级管理",
+    "url": "./page/memguanli/member-Grading.html"
+  },
+  {
+    "id": 203,
+    "pid": 215,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会员记录管理",
+    "url": "./page/memguanli/integration.html"
+  }
+]
