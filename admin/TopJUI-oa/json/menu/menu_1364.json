@@ -4,23 +4,63 @@
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "产品列表",
-    "url": "./page/chanpin/Products_List.html"
+    "text": "请假出差",
+    "url": ""
   },
   {
     "id": 1348,
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "品牌管理",
-    "url": "./page/chanpin/Brand_Manage.html"
+    "text": "企业用车",
+    "url": ""
   },
   {
     "id": 1347,
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "分类管理",
-    "url": "./page/chanpin/Category_Manage.html"
+    "text": "费控报销",
+    "url": ""
+  },
+  {
+    "id": 1347,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "记账凭证",
+    "url": ""
+  },
+  {
+    "id": 1347,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "审批",
+    "url": ""
+  },
+  {
+    "id": 1347,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "固定流程管理",
+    "url": ""
+  },
+  {
+    "id": 1347,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "分支流程管理",
+    "url": ""
+  },
+  {
+    "id": 1347,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "流程转派",
+    "url": ""
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "id": 1346,
-    "pid": 658,
+    "pid": 660,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "留言列表",
@@ -9,7 +9,7 @@
   },
   {
     "id": 1353,
-    "pid": 658,
+    "pid": 660,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "意见反馈",

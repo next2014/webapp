@@ -4,7 +4,7 @@
       "pid": 665,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "人事管理",
+      "text": "通信录",
       "url": " "
     },
     {
@@ -12,7 +12,7 @@
       "pid": 665,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "考勤管理",
+      "text": "绩效考核",
       "url": " "
     },
     {
@@ -20,7 +20,39 @@
       "pid": 665,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "薪酬管理",
+      "text": "人事统计报表",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "工资条",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "员工档案",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "人才管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "员工关怀",
       "url": " "
     }
 ]

@@ -4,15 +4,39 @@
     "pid": 659,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "店铺列表",
-    "url": "./page/dianpu/Shop_list.html"
+    "text": "表单流程",
+    "url": ""
   },
   {
     "id": 1348,
     "pid": 659,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "店铺审核",
-    "url": "./page/dianpu/Shops_Audit.html"
+    "text": "费控报销",
+    "url": ""
+  },
+  {
+    "id": 1348,
+    "pid": 659,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "请假出差",
+    "url": ""
+  },
+  {
+    "id": 1348,
+    "pid": 659,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "企业用车",
+    "url": ""
+  },
+  {
+    "id": 1348,
+    "pid": 659,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "审批请示",
+    "url": ""
   }
 ]

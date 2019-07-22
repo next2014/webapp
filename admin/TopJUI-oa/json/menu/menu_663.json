@@ -4,7 +4,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "工作计划",
+      "text": "考勤打卡",
       "url": " "
     },
     {
@@ -12,7 +12,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "工作任务",
+      "text": "会议助手",
       "url": " "
     },
     {
@@ -20,7 +20,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "公告通知",
+      "text": "企业用车",
       "url": " "
     },
     {
@@ -28,7 +28,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "签到",
+      "text": "费控报销",
       "url": " "
     },
     {
@@ -36,7 +36,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "外出申请",
+      "text": "新闻公告",
       "url": " "
     },
     {
@@ -44,7 +44,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "出差申请",
+      "text": "请假出差",
       "url": " "
     },
     {
@@ -52,15 +52,7 @@
       "pid": 663,
       "state": "open",
       "iconCls": "fa fa-file-text-o",
-      "text": "加班申请",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "请假申请",
+      "text": "审批请示",
       "url": " "
     }
   ]
