@@ -1,0 +1,73 @@
+---
+layout: pages
+title: todo
+---
+<!-- Page Content -->
+<div id="content">
+
+    <!-- Modal Structure Bottom Sheet -->
+    <div id="modal4" class="modal bottom-sheet">
+      <div class="modal-content choose-date">
+        <p><i class="ion-android-time"></i>Today</p>
+        <p><i class="ion-android-stopwatch"></i>Tomorrow</p>
+        <p><i class="ion-android-watch"></i>Next week</p>
+        <p><i class="ion-android-calendar"></i>Next month</p>
+        <p><i class="ion-android-funnel"></i>Choose date</p>
+      </div>
+    </div>
+
+    {% include Components/toolbar.html %}
+    
+    <!-- Hero Header -->
+    <div class="h-banner animated fadeindown">
+      <div class="parallax bg-5">
+        <div class="banner-title">ToDo</div>
+      </div>
+    </div>
+
+    <div class="todo animated fadeinup delay-1" id="test1">
+      <p class="todo-element">
+        <input checked id="todo1" type="checkbox"> <label for="todo1">Go to gym with Mike</label> <span>9:45 AM</span>
+      </p>
+
+      <p class="todo-element">
+        <input checked id="todo2" type="checkbox"> <label for="todo2">Back home for lunch</label> <img alt="" src="../../static/img/user4.jpg"> <span>9:45 AM</span>
+      </p>
+
+      <p class="todo-element">
+        <input id="todo3" type="checkbox"> <label for="todo3">Lunch with Jane</label> <span>9:45 AM</span> <img alt="" src="../../static/img/user3.jpg">
+      </p>
+
+      <p class="todo-element">
+        <input checked id="todo4" type="checkbox"> <label for="todo4">Work meeting</label> <span>9:45 AM</span>
+      </p>
+
+      <p class="todo-element">
+        <input id="todo5" type="checkbox"> <label for="todo5">Cooking for dinner</label> <span>9:45 AM</span> <img alt="" src="../../static/img/user3.jpg">
+      </p>
+
+      <p class="todo-element">
+        <input id="todo6" type="checkbox"> <label for="todo6">Take kids at swim</label> <span>9:45 AM</span>
+      </p>
+
+      <p class="todo-element">
+        <input checked id="todo7" type="checkbox"> <label for="todo7">Back home for lunch</label> <img alt="" src="../../static/img/user2.jpg"> <span>9:45 AM</span>
+      </p>
+
+      <p class="todo-element">
+        <input id="todo8" type="checkbox"> <label for="todo8">Lunch with Jane</label> <span>9:45 AM</span>
+      </p>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="floating-button page-fab animated bouncein delay-3">
+      <a class="btn-floating btn-large waves-effect waves-light accent-color btn z-depth-1 modal-trigger" href="#modal4">
+        <i class="ion-android-add"></i>
+      </a>
+    </div>
+    
+    {% include footer.html %}
+
+  
+      
+</div> <!-- End of Page Content -->

@@ -1,0 +1,118 @@
+---
+layout: pages
+title: checkout
+---
+  <!-- Page Content -->
+  <div id="content" class="page">
+
+
+      {% include Components/toolbar.html %}
+      <!-- Main Content -->
+      <div class="animated fadeinup">
+        <!-- Order Recap -->
+        <ul class="collapsible checkout-header animated fadeindown delay-2" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">
+              Show order summary
+              <i class="ion-android-arrow-dropdown"></i>
+              <span class="checkout-price right">$240.00</span>
+            </div>
+            <div class="collapsible-body z-depth-1">
+  
+              <!-- Products in cart -->
+              <div class="checkout-details">
+                <img class="checkout-image" src="../../static/img/user2.jpg" alt="">
+                <div class="checkout-product-title">
+                  <h6>Pair of Shoes <span class="right">$220.00</span></h6>
+                  <span>43 - 44</span>
+                </div>
+              </div>
+              
+              <!-- Discount -->
+              <form class="discount">
+                <div class="input-field">
+                  <input id="code" type="text" class="validate">
+                  <label for="code">Discount code here</label>
+                  <div class="btn primary-color">
+                    <i class="ion-arrow-right-c"></i>
+                  </div>
+                </div>
+              </form>
+  
+              <!-- Subtotal -->
+              <div class="subtotal">
+                <h6>Subtotal <span class="right">$220.00</span></h6>
+                <span>Shipping <span class="right">$20.00</span></span>
+              </div>
+  
+              <!-- Total -->
+              <div class="total">
+                <h4>Total <span class="right">$240.00</span></h4>
+              </div>
+  
+            </div>
+          </li>
+        </ul>
+  
+        <!-- Form Inputs -->
+        <div class="form-inputs">
+          <h4>Customer Information</h4>
+          <div class="input-field">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+            <span>Already have an account? <a class="primary-text" href="login.html">Login</a></span>
+          </div>
+  
+          <h4 class="shipping-address">Shipping address</h4>
+          <div>
+            <div class="input-field">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="input-field">
+            <input id="company" type="text">
+            <label for="company">Company (optional)</label>
+          </div>
+          <div class="input-field">
+            <input id="address" type="text" class="validate">
+            <label for="address">Address</label>
+          </div>
+          <div class="input-field">
+            <input id="apt" type="text">
+            <label for="apt">Apt, suite, etc (optional)</label>
+          </div>
+          <div class="input-field">
+            <input id="city" type="text" class="validate">
+            <label for="city">City</label>
+          </div>
+          <label>Shipping to:</label>
+          <select class="browser-default">
+            <option value="" disabled selected>--</option>
+            <option value="1">Europe</option>
+            <option value="2">America</option>
+            <option value="3">Asia</option>
+            <option value="4">Australia</option>
+            <option value="5">Africa</option>
+          </select>
+          <div class="input-field">
+            <input id="phone" type="number" class="validate">
+            <label for="phone">Phone</label>
+          </div>
+  
+          <p class="remember">
+            <input type="checkbox" id="test5" />
+            <label for="test5">Fast checkout next time</label>
+          </p>
+  
+          <a class="waves-effect waves-light btn-large primary-color width-100" href="index.html">Purchase</a>
+        </div>
+  
+        {% include footer.html %}
+    
+      
+    </div> <!-- End of Page Content -->

@@ -1,0 +1,12 @@
+---
+layout: pages
+title: sample post
+author: dave
+---
+<!-- 示例：特定访问作者 -->
+{% assign author = site.data.people[page.author] %}
+<a rel="author"
+  href="{{ author.twitter }}"
+  title="{{ author.name }}">
+    {{ author.name }}
+</a>
