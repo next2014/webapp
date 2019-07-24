@@ -1,3 +1,33 @@
+- GetImage: static/images/home/g1.jpg
+  GetTypeColor: primary
+  GetType:  泼水活动
+  GetTitle: 泼水节狂欢节门票
+  GetPrick: 30.00
+
+- GetImage: static/images/home/g2.png
+  GetTypeColor: primary
+  GetType:  小童车
+  GetTitle: 卡丁车馆6分钟体验
+  GetPrick: 55.00
+
+- GetImage: static/images/home/g3.png
+  GetTypeColor: primary
+  GetType:  娱乐车RTX
+  GetTitle: 卡丁车馆6分钟体验
+  GetPrick: 88.00
+
+- GetImage: static/images/home/g4.png
+  GetTypeColor: primary
+  GetType:  暑期
+  GetTitle: 卡丁车亲子套票
+  GetPrick: 168.00
+
+- GetImage: static/images/home/g5.png
+  GetTypeColor: primary
+  GetType:  
+  GetTitle: 遇见音乐节门票C
+  GetPrick: 98.00
+
 - GetImage: static/images/GetImage.jpeg
   GetTypeColor: primary
   GetType:  儿童

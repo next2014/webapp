@@ -20,3 +20,9 @@
       min-height: 320px;
    }
 }
+.table th, .table td{
+   padding: 0.75rem 0.5rem!important;
+}
+.btn-link:focus, .btn-link.focus{
+   text-decoration: none;
+}

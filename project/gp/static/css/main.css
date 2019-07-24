@@ -196,7 +196,7 @@ legend{color:#000}
 .home{background-color:#F8F9FB;margin-bottom:2.51563rem}
 .index_all{width:100%;background:#f8fbff}
 .index_all ul{width:100%;height:auto;overflow:hidden}
-.index_all ul li{width:94%;height:auto;overflow:hidden;background:#fff;margin:6px auto;-webkit-border-radius:.2rem;border-radius:.2rem;border:1px solid #dee2e6;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.index_all ul li{width:94%;height:auto;overflow:hidden;background:#fff;margin:10px auto;-webkit-border-radius:.2rem;border-radius:.2rem;border:1px solid #dee2e6;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .index_all ul li .inTop{width:100%}
 .index_all ul li .dol{color:#ff3b44}
 .index_all ul li .dol em{font-size:1.00625rem}
