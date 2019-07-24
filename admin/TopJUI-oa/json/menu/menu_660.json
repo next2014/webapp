@@ -4,15 +4,23 @@
     "pid": 660,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "留言列表",
-    "url": "./page/xiaoxi/Guestbook.html"
+    "text": "首页",
+    "url": "./page/tongxinlu/index.html"
   },
   {
-    "id": 1353,
+    "id": 1347,
     "pid": 660,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "意见反馈",
-    "url": "./page/xiaoxi/Feedback.html"
+    "text": "员工花名册",
+    "url": "./page/tongxinlu/namebook.html"
+  },
+  {
+    "id": 1348,
+    "pid": 660,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "设置",
+    "url": "./page/tongxinlu/set.html"
   }
 ]

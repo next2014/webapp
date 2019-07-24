@@ -1,26 +1,58 @@
 [
-    {
-      "id": 1346,
-      "pid": 661,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "系统设置",
-      "url": "./page/xitong/Systems.html"
-    },
-    {
-      "id": 1346,
-      "pid": 661,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "系统栏目管理",
-      "url": "./page/xitong/System_section.html"
-    },
-    {
-      "id": 1346,
-      "pid": 661,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "系统日志",
-      "url": "./page/xitong/System_Logs.html"
-    }
-  ]
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "考勤打卡",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会议助手",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "企业用车",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "费控报销",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "新闻公告",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "请假出差",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "审批请示",
+    "url": " "
+  }
+]

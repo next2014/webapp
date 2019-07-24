@@ -1,6 +1,22 @@
 [
   {
-    "id": 1365,
+    "id": 900,
+    "pid": 73,
+    "text": "销售管理",
+    "state": "closed",
+    "iconCls": "fa fa-home",
+    "url": ""
+  },
+  {
+    "id": 901,
+    "pid": 73,
+    "text": "销售管理",
+    "state": "closed",
+    "iconCls": "fa fa-home",
+    "url": ""
+  },
+  {
+    "id": 902,
     "pid": 73,
     "text": "销售管理",
     "state": "closed",

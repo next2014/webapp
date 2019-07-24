@@ -1,8 +1,16 @@
 [
     {
-      "id": 1364,
-      "pid": 70,
+      "id": 800,
+      "pid": 72,
       "text": "审批流程",
+      "state": "closed",
+      "iconCls": "fa fa-home",
+      "url": ""
+    },
+    {
+      "id": 801,
+      "pid": 72,
+      "text": "流程管理",
       "state": "closed",
       "iconCls": "fa fa-home",
       "url": ""

@@ -1,58 +1,18 @@
 [
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "考勤打卡",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "会议助手",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "企业用车",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "费控报销",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "新闻公告",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "请假出差",
-      "url": " "
-    },
-    {
-      "id": 1346,
-      "pid": 663,
-      "state": "open",
-      "iconCls": "fa fa-file-text-o",
-      "text": "审批请示",
-      "url": " "
-    }
-  ]
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "发送列表",
+    "url": "./page/gongzitiao/sendList.html"
+  },
+  {
+    "id": 1346,
+    "pid": 663,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "设置",
+    "url": "./page/gongzitiao/set.html"
+  }
+]

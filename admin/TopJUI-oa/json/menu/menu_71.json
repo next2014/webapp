@@ -2,9 +2,9 @@
   {
     "id": 660,
     "pid": 71,
-    "text": "通信录",
+    "text": "欧美城人力资源",
     "state": "closed",
-    "iconCls": "fa fa-home",
+    "iconCls": "fa fa-user-o",
     "url": ""
   },
   {
@@ -34,21 +34,13 @@
   {
     "id": 664,
     "pid": 71,
-    "text": "员工档案",
-    "state": "closed",
-    "iconCls": "fa fa-user-o",
-    "url": ""
-  },
-  {
-    "id": 665,
-    "pid": 71,
     "text": "人才管理",
     "state": "closed",
     "iconCls": "fa fa-television",
     "url": ""
   },
   {
-    "id": 666,
+    "id": 665,
     "pid": 71,
     "text": "员工关怀",
     "state": "closed",
