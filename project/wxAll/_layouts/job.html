@@ -1,0 +1,44 @@
+---
+layout: default
+title: 欧美城招聘
+---
+<div class="h-banner carousel">
+<img src="assets/img/1.png" width="100%" alt="">
+</div>
+<div class="container p-0 job">
+    <div class="ml-3 mr-3">
+       <h4>最新职位</h4><span class="line"></span>
+    </div>
+    <section class="mod_pos_list p-1">
+        {% for hom in site.data.home %}
+        <div class="mod_pos_item">
+            <div class="mod_pos_item_text">
+                <div class="mod_pos_item_tit text-truncate">
+                  <h2 class="mr-2">{{ hom.posname }}</h2> <span>{{ hom.type }}</span>
+                </div>
+                <p class="mod_pos_item_mes text-truncate mb-1">
+                    <span>{{ hom.xingbie }}</span>
+                    <span>{{ hom.jingyan }}</span>
+                    <span>{{ hom.xueli }}</span>
+                </p>
+                <div class="mod_pos_item_ind">
+                    <p class="mb-1 text-justify"><strong>职位要求：</strong>{{ hom.yaoqiu }}</p>
+                    <p class="text-justify"><strong>工作内容：</strong>{{ hom.content }}</p>
+                </div>
+            </div>
+            <!-- 时间|钱 -->
+            <div class="mod_pos_item_salary">
+                <!-- <p class="mod_pos_item_salary_mon">{{ hom.minMoney }}-{{hom.maxMoney}}K</p> -->
+                <p class="mod_pos_item_salary_data">{{ hom.data }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+<footer class="footer text-muted">
+    <hr class="w-100 m-0">
+    <p class="container pl-3 pr-3 pt-2 pb-2">
+        地址:惠州市惠城小金口青塘村委会青一村小组金龙大道99号<br/>
+        电话(总部):0752-2898403
+    </p>
+</footer>

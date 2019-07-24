@@ -1,0 +1,118 @@
+a{
+   color: #666;
+}
+a:hover{
+   text-decoration: none;
+}
+.bg-blue{
+   background-color:#3fbbef!important;
+}
+.h-banner{position:relative;z-index:1}
+.h-banner .parallax{height:100%}
+.h-banner .parallax img{display:block}
+.h-banner .floating-button{position:absolute;bottom:-25px;right:20px}
+.accordion .card-header button{
+   padding:1rem;
+}
+@media (min-width: 300px) { 
+   .accordion{
+      min-height: 260px;
+   }
+}
+@media (min-width: 375px) { 
+   .accordion{
+      min-height: 290px;
+   }
+}
+@media (min-width: 414px) {
+   .accordion{
+      min-height: 320px;
+   }
+}
+/*Iconfont-webfont*/
+@font-face {
+  font-family: "webfont";
+  src: url('../font/webfont.eot'); /* IE9 */
+  src: url('../font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/webfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+
+.web-font {
+  font-family: "webfont" !important;
+  font-size: 22px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 全景图 */
+.djIcon{
+   position: absolute;
+   top: 0;
+   z-index: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   height: 100%;
+   width: 100%;
+ }
+ .bgdark{
+   position: absolute;top:0;width:100%;height:100%;opacity: .6;
+ }
+ .card:last-child{
+     margin-bottom: 0!important;
+ }
+
+ .shadow1 {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12) !important;
+}
+.img-thumbnail1{
+   border-radius: 0.2rem;
+   background-color: #fff;
+   border: 1px solid #dee2e6;
+   border-radius: 0.25rem;
+   max-width: 100%;
+   height: auto;
+}
+
+.bgImg{
+   background-size: 100% 250px;
+   width:100%;
+   height: 250px;
+   position: absolute;
+   bottom: -20px;
+   z-index: -1;
+}
+.job h4 {width:60px;height:40px;line-height: 40px;text-align: center;}
+.job span.line{width:60px;height: 2px;display: block;background-color: #f60;}
+.mod_pos_list{color:#aeaeae;border-top:1px solid #dee2e6;}
+.mod_pos_list a{color:hsl(0, 0%, 68%);text-decoration:none;display:block}
+.mod_pos_item{color:#999999;position:relative;border-bottom:1px solid #dee2e6;overflow:hidden;padding: .50313rem;}
+.mod_pos_item:last-child{border:0;}
+.mod_pos_item_text{color:#999999;text-decoration:none;display:block;position:relative}
+.mod_pos_item_text h2{font-size:.805rem;color:#212529;}
+.mod_pos_item_text p{font-size:.70437rem}
+.mod_pos_item_text_pic{float:left;margin:0rem .50313rem 0rem 0rem}
+.mod_pos_item_text_pic img{width:50px;height:50px}
+.mod_pos_item_text::after{display:block;clear:both;content:""}
+.mod_pos_item_tit{padding:0rem 0rem .4rem 0rem;display: flex;align-items: center;}
+.mod_pos_item_tit span{ padding:0 5px;background-color: #f60;color: #fff; font-size: 12px;}
+.mod_pos_item_mes{font-size:.60375rem}
+.mod_pos_item_mes span{color:#212529;border-right:1px solid #dee2e6;display:block;float:left;padding:0rem .25156rem}
+.mod_pos_item_mes span:first-child{padding-left:0}
+.mod_pos_item_mes span:last-child{border-right:0}
+.mod_pos_item_ind{overflow:hidden;font-size:.60375rem;}
+.mod_pos_item_ind strong{color:#212529; font-weight: normal;}
+.mod_pos_item_ind li{display:block;float:left;font-size:.60375rem;background-color:#f8f9fa;padding:.10063rem .20125rem .10063rem 0;margin:.25156rem .25156rem 0rem 0rem;-webkit-border-radius:.15094rem;border-radius:.15094rem;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1
+;}
+.mod_pos_item_ind li:last-child{margin-right:0}
+.mod_pos_item_ind::after{display:block;clear:both;content:""}
+.mod_pos_item_salary{position:absolute;top:.50313rem;right:.75469rem;text-align:right;font-size:.70437rem}
+.mod_pos_item_salary_mon{text-align:right!important;color:#f60!important;font-size:.805rem}
+.mod_pos_item_salary_data{text-align:right!important;color:#aeaeae}
+.mod_pos_item_salary p{font-size:.70437rem;text-align:justify;text-justify:inter-ideograph;word-wrap:break-word;word-break:break-all;line-height:.90563rem}
+.footer{background-color: #dee2e6;}
+.footer p{line-height: 25px;}
