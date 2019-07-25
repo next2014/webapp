@@ -1,0 +1,133 @@
+---
+layout: admin1
+title: 员工考勤登记表
+---
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">首页</a>
+        </li>
+        <li class="active">考勤登记表</li>
+    </ul>
+</div>
+<div class="page-content">
+    <div class="page-header">
+        <button class="btn btn-primary btn-sm" onclick="location.href='kq-add.html'">
+            <i class="menu-icon fa fa-plus white"></i> 添加考勤登记表
+        </button>
+    </div>
+    <table id="simple-table" class="table  table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="center" width="5%">序号</th>
+                <th width="10%">上班区域</th>
+                <th width="10%">日期</th>
+                <th width="15%">上班时间(早)</th>
+                <th width="15%">上班时间(晚)</th>
+                <th width="10%">天/合计时间长</th>
+                <th width="20%">备注</th>
+                <th width="15%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center">1</td>
+                <td>江北</td>
+                <td>2019-03-04</td>
+                <td>2019-03-04 09:00 ~ 2019-03-04 18:00</td>
+                <td>2019-03-04 08:55</td>
+                <td>24天/192小时 </td>
+                <td></td>
+                <td>
+                    <div class="hidden-sm hidden-xs btn-group">
+                        <button class="btn btn-xs btn-success">
+                            <i class="ace-icon fa fa-check bigger-120"></i>
+                        </button>
+
+                        <button class="btn btn-xs btn-info" id="id-btn-dialog2">
+                            <i class="ace-icon fa fa-pencil bigger-120"></i>
+                        </button>
+
+                        <button class="btn btn-xs btn-danger">
+                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                        </button>
+                    </div>
+                    <div class="hidden-md hidden-lg">
+                        <div class="inline pos-rel">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                data-position="auto">
+                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+                                        <span class="blue">
+                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                        <span class="red">
+                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="dialog-confirm" class="hide">
+    <div class="row">
+        <div class="col-xs-12">
+            <form class="form-horizontal" role="form">
+                <div class="space-4"></div>
+                <div class="space-4"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 主题 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-field-1" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 部门 </label>
+                    <div class="col-sm-9">
+                        <input type="password" id="form-field-2" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 签到人 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-input-readonly" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-4"> 申请时间 </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="form-field-4" value="" class="form-control" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-5"> 事由 </label>
+                    <div class="col-sm-9">
+                        <div class="clearfix">
+                            <input type="text" id="form-field-5" value="" class="form-control" disabled/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
