@@ -1,0 +1,195 @@
+ /* 招聘信息 */
+ .collapsible{
+    margin-bottom: 0!important;
+  }
+  .h-banner{
+    overflow: hidden;
+  }
+  .job h4 {
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size:12px;
+    margin: 0;
+  }
+
+  .job span.line {
+    width: 60px;
+    height: 2px;
+    display: block;
+    background-color: #f60;
+  }
+
+  .mod_pos_list {
+    color: #aeaeae;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .mod_pos_list a {
+    color: hsl(0, 0%, 68%);
+    text-decoration: none;
+    display: block
+  }
+
+  .mod_pos_item {
+    color: #999999;
+    position: relative;
+    border-bottom: 1px solid #dee2e6;
+    overflow: hidden;
+    padding: .50313rem .7rem;
+    margin-bottom:10px!important;
+  }
+
+  .mod_pos_item:last-child {
+    border: 0;
+  }
+
+  .mod_pos_item_text {
+    color: #999999;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 0 !important;
+  }
+
+  .mod_pos_item_text h2 {
+    font-size: 14px;
+    color: #212529;
+    margin:10px 10px 8px 0!important;
+  }
+
+  .mod_pos_item_text p {
+    font-size: 12px;
+    overflow: hidden;
+  }
+
+  .mod_pos_item_text_pic {
+    float: left;
+    margin: 0rem .50313rem 0rem 0rem
+  }
+
+  .mod_pos_item_text_pic img {
+    width: 50px;
+    height: 50px
+  }
+
+  .mod_pos_item_text::after {
+    display: block;
+    clear: both;
+    content: ""
+  }
+
+  .mod_pos_item_tit {
+    display: flex;
+    align-items: center;
+  }
+
+  .mod_pos_item_tit span {
+    padding: 0 5px;
+    background-color: #f60;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .mod_pos_item_mes {
+    font-size: .60375rem;
+    margin-bottom: 0 !important;
+  }
+
+  .mod_pos_item_mes span {
+    color: #212529;
+    border-right: 1px solid #dee2e6;
+    display: block;
+    float: left;
+    padding: 0rem .25156rem
+  }
+
+  .mod_pos_item_mes span:first-child {
+    padding-left: 0
+  }
+
+  .mod_pos_item_mes span:last-child {
+    border-right: 0
+  }
+
+  .mod_pos_item_ind {
+    overflow: hidden;
+    font-size: 12px;
+  }
+
+  .mod_pos_item_ind p{
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    width: 95%;
+  }
+
+  .mod_pos_item_ind strong {
+    color: #212529;
+    font-weight: normal;
+  }
+
+  .mod_pos_item_ind li {
+    display: block;
+    float: left;
+    font-size: .60375rem;
+    background-color: #f8f9fa;
+    padding: .10063rem .20125rem .10063rem 0;
+    margin: .25156rem .25156rem 0rem 0rem;
+    -webkit-border-radius: .15094rem;
+    border-radius: .15094rem;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .mod_pos_item_ind li:last-child {
+    margin-right: 0
+  }
+
+  .mod_pos_item_ind::after {
+    display: block;
+    clear: both;
+    content: ""
+  }
+
+  .mod_pos_item_salary {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    text-align: right;
+    font-size: .70437rem
+  }
+
+  .mod_pos_item_salary_mon {
+    text-align: right !important;
+    color: #f60 !important;
+    font-size: 14px;
+  }
+
+  .mod_pos_item_salary_data {
+    text-align: right !important;
+    color: #aeaeae
+  }
+
+  .mod_pos_item_salary p {
+    font-size: 14px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: .90563rem
+  }
+
+  .footer {
+    background-color: #dee2e6;
+  }
+
+  .footer p {
+    line-height: 25px;
+  }

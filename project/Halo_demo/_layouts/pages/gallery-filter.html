@@ -1,0 +1,73 @@
+---
+layout: pages
+title: gallery-filter
+---
+  <!-- Page Content -->
+  <div id="content" class="page">
+
+
+      {% include Components/toolbar.html %}
+      <!-- Main Content -->
+      <div class="p-20 animated fadeinup">
+  
+        <!-- Filters -->
+        <div class="controls">
+          <button id="ChangeLayout" class="left">List</button>
+          <label>Filter:</label>
+          <button class="filter" data-filter="all">All</button>
+          <button class="filter" data-filter=".category-1">Art</button>
+          <button class="filter" data-filter=".category-2">Ink</button>
+          <button class="filter" data-filter=".category-3">Pop</button>
+        </div>
+  
+  
+        <div id="filter">
+          <!-- Swipeboox Contents -->
+          <section id="image-filter">
+            <div class="wrap small-width">
+              <div data-pswp-uid="1" id="demo-gallery" class="demo-gallery">
+                <a href="../../static/img/1.jpg" class="swipebox mix category-1 no-smoothState" title="This is dummy caption.">
+                  <img src="../../static/img/1.jpg" alt="image">
+                </a>
+                <a href="../../static/img/2.jpg" class="swipebox mix category-1 no-smoothState" title="He who searches for meaning here will be sorely disappointed.">
+                  <img src="../../static/img/2.jpg" alt="image">
+                </a>
+                <a href="../../static/img/3.jpg" class="swipebox mix category-2 no-smoothState" title="This is dummy caption.">
+                  <img src="../../static/img/3.jpg" alt="image">
+                </a>
+                <a href="../../static/img/4.jpg" class="swipebox mix category-2 no-smoothState" title="He who searches for meaning here will be sorely disappointed.">
+                  <img src="../../static/img/4.jpg" alt="image">
+                </a>
+                <a href="../../static/img/5.jpg" class="swipebox mix category-3 no-smoothState" title="My Caption">
+                  <img src="../../static/img/5.jpg" alt="image">
+                </a>
+                <a href="../../static/img/6.jpg" class="swipebox mix category-1 no-smoothState" title="This is dummy caption.">
+                  <img src="../../static/img/6.jpg" alt="image">
+                </a>
+                <a href="../../static/img/7.jpg" class="swipebox mix category-1 no-smoothState" title="This is dummy caption.">
+                  <img src="../../static/img/7.jpg" alt="image">
+                </a>
+                <a href="../../static/img/8.jpg" class="swipebox mix category-1 no-smoothState" title="He who searches for meaning here will be sorely disappointed.">
+                  <img src="../../static/img/8.jpg" alt="image">
+                </a>
+                <a href="../../static/img/9.jpg" class="swipebox mix category-2 no-smoothState" title="This is dummy caption.">
+                  <img src="../../static/img/9.jpg" alt="image">
+                </a>
+                <a href="../../static/img/10.jpg" class="swipebox mix category-2 no-smoothState" title="He who searches for meaning here will be sorely disappointed.">
+                  <img src="../../static/img/10.jpg" alt="image">
+                </a>
+              </div>
+            </div>
+          </section> <!-- End of Swipebox Contents -->
+          
+        </div>
+        <!-- End of Main Contents -->
+        
+        <div class="clr"></div>
+  
+          
+      </div> <!-- End of Page Content -->
+      
+      {% include footer.html %}
+  
+    </div>

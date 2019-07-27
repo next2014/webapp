@@ -1,66 +1,90 @@
 [
   {
     "id": 13651,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "广告管理",
-    "url":"./html/form/calendar.html"
+    "text": "房态图",
+    "url":""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "分类管理",
-    "url": "./html/base/draggable.html"
+    "text": "房态预测",
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "放置",
-    "url": "./html/base/droppable.html"
+    "text": "订单",
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "调整大小",
-    "url": "./html/base/resizable.html"
+    "text": "房单",
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "分页",
-    "url": "./html/base/pagination.html"
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "搜索框",
-    "url": "./html/base/searchBox.html"
+    "text": "工作账",
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "进度条",
-    "url": "./html/base/progressBar.html"
+    "text": "房价",
+    "url": ""
   },
   {
     "id": 13653,
-    "pid": 1350,
+    "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "提示框",
-    "url": "./html/base/tooltip.html"
+    "text": "会员",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "客史",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "报表",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "夜审",
+    "url": ""
   }
 ]

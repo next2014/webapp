@@ -1,66 +1,10 @@
 [
     {
       "id": 1364,
-      "pid": 70,
-      "text": "产品管理",
+      "pid": 71,
+      "text": "用户管理",
       "state": "closed",
       "iconCls": "fa fa-home",
       "url": ""
-    },
-    {
-      "id": 1363,
-      "pid": 70,
-      "text": "图片管理",
-      "state": "closed",
-      "iconCls": "fa fa-file-image-o",
-      "url": ""
-    },
-    {
-      "id": 214,
-      "pid": 70,
-      "text": "交易管理",
-      "state": "closed",
-      "iconCls": "fa fa-list",
-      "url": ""
-    },
-    {
-      "id": 215,
-      "pid": 70,
-      "text": "支付管理",
-      "state": "closed",
-      "iconCls": "fa fa-credit-card",
-      "url": ""
-    },
-    {
-      "id": 658,
-      "pid": 70,
-      "text": "会员管理",
-      "state": "closed",
-      "iconCls": "fa fa-user-o",
-      "url": ""
-    },
-    {
-      "id": 659,
-      "pid": 70,
-      "text": "店铺管理",
-      "state": "closed",
-      "iconCls": "fa fa-television",
-      "url": ""
-    },
-    {
-      "id": 660,
-      "pid": 70,
-      "text": "消息管理",
-      "state": "closed",
-      "iconCls": "fa fa-comment-o",
-      "url": ""
-    },
-    {
-      "id": 662,
-      "pid": 70,
-      "text": "文章管理",
-      "state": "closed",
-      "iconCls": "fa fa-list-alt",
-      "url": ""
     }
-  ]
+]

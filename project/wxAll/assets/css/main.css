@@ -86,6 +86,8 @@ a:hover{
    bottom: -20px;
    z-index: -1;
 }
+
+/* 招聘信息 */
 .job h4 {width:60px;height:40px;line-height: 40px;text-align: center;}
 .job span.line{width:60px;height: 2px;display: block;background-color: #f60;}
 .mod_pos_list{color:#aeaeae;border-top:1px solid #dee2e6;}

@@ -4,23 +4,23 @@
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "产品列表",
-    "url": "./page/chanpin/Products_List.html"
+    "text": "用户查询",
+    "url": ""
   },
   {
     "id": 1348,
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "品牌管理",
-    "url": "./page/chanpin/Brand_Manage.html"
+    "text": "角色管理",
+    "url": ""
   },
   {
     "id": 1347,
     "pid": 1364,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "分类管理",
-    "url": "./page/chanpin/Category_Manage.html"
+    "text": "业务管理",
+    "url": ""
   }
 ]

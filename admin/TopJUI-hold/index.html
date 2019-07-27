@@ -77,6 +77,10 @@
             cursor: pointer;
         }
 
+        .nav-center ul li a{
+            text-decoration: none;
+        }
+
         .nav-btn {
             border-left: 1px #367fa9 solid;
             display: inline-block;
@@ -167,12 +171,16 @@
                 </div>
                 <div class="nav-right">
                     <span style="margin-top:2px;">
-                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false"
-                           style="color:#fff; padding:0 10px;">
+                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false" style="color:#fff; padding:0 10px;">
+                           <span class="fa fa-user"></span> 消息
+                         </a>|
+                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false" style="color:#fff; padding:0 10px;">
+                           <span class="fa fa-user"></span> 费用中心
+                        </a>|
+                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false" style="color:#fff; padding:0 10px;">
                            <span class="fa fa-user"></span> 欧美人
                         </a>|
-                        <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true"
-                         style="color:#fff; padding:0 10px;">
+                        <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true" style="color:#fff; padding:0 10px;">
                             <span class="fa fa-cog"></span> 设置
                         </a>
                         <div id="mm3" style="width:74px;display: none">
@@ -181,24 +189,31 @@
                             <div data-options="iconCls:'fa fa-key'" onclick="javascript:modifyPwd(0)">修改密码</div>
                         </div>|
                         <a href="javascript:void(0)" onclick="logout()" style="color:#fff; padding:0 10px;">
-                            <span class="fa fa-sign-out"></span> 注销</a>
+                            <span class="fa fa-sign-out"></span> 退出</a>
                     </span>
                 </div>
-
                 <div class="nav-center">
                     <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                     <a class="nav-btn nav-right-btn topmenu" href="#" style="float: right;"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     <div style="overflow: hidden;position: relative;text-align: left">
                         <ul class="nav-group">
-                            <!-- <li id="1325" title="协同办公" class="topmenu">
+                            <li id="70" title="首页" class="topmenu selected">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
                                         <lable class="fa fa-suitcase"></lable>
                                     </p>
-                                    <p><span style="white-space:nowrap;">协同办公</span></p>
+                                    <p><span style="white-space:nowrap;">首页</span></p>
                                 </a>
-                            </li> -->
-                            <li id="72" title="房间管理" class="topmenu selected">
+                            </li>
+                            <li id="71" title="用户管理" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-suitcase"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">用户管理</span></p>
+                                </a>
+                            </li>
+                            <li id="72" title="房间管理" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
                                         <lable class="fa fa-dashboard"></lable>
@@ -206,31 +221,31 @@
                                     <p><span style="white-space:nowrap;">房间管理</span></p>
                                 </a>
                             </li>
-                            <li id="80" title="系统管理" class="topmenu">
+                            <li id="73" title="电子券管理" class="topmenu">
 								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
 									<p>
 										<lable class="fa fa-home"></lable>
 									</p>
-									<p><span style="white-space:nowrap;">系统管理</span></p>
+									<p><span style="white-space:nowrap;">电子券管理</span></p>
 								</a>
 							</li>
-                            <!-- <li id="9000" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.zuoyour.com/emis.html" target="_blank">
+                            <li id="74" title="小商品管理" class="topmenu">
+								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
 									<p>
 										<lable class="fa fa-leaf"></lable>
 									</p>
-									<p><span style="white-space:nowrap;">动态演示</span></p>
+									<p><span style="white-space:nowrap;">小商品管理</span></p>
 								</a>
 							</li>
-							<li id="9001" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.topjui.com" target="_blank">
+							<li id="75" title="协议模板" class="topmenu">
+								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
 									<p>
 										<lable class="fa fa-home"></lable>
 									</p>
-									<p><span style="white-space:nowrap;">官方网站</span></p>
+									<p><span style="white-space:nowrap;">协议模板</span></p>
 								</a>
 							</li>
-							<li id="9002" class="topmenu">
+							<!-- <li id="9002" class="topmenu">
 								<a class="l-btn-text bannerMenu" href="http://ask.topjui.com" target="_blank" >
 									<p>
 										<lable class="fa fa-wechat"></lable>

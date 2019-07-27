@@ -1,35 +1,18 @@
 [
   {
     "id": 1339,
-    "pid": 1329,
+    "pid": 1369,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "面板",
-    "url": "./html/layout/panel.html"
+    "text": "销售二维码",
+    "url": ""
   },
   {
     "id": 1349,
-    "pid": 1329,
+    "pid": 1369,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "选项卡",
-    "url": "./html/layout/tabs.html"
-  },
-  {
-    "id": 1341,
-    "pid": 1329,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
-    "text": "手风琴",
-    "url": "./html/layout/accordion.html"
-  },
-  {
-    "id": 1341,
-    "pid": 1329,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
-    "text": "布局",
-    "url": "./html/layout/layout.html"
+    "text": "协议模板",
+    "url": ""
   }
-
 ]

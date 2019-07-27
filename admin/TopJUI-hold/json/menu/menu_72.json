@@ -1,82 +1,10 @@
 [
     {
-      "id": 1364,
+      "id": 1366,
       "pid": 72,
-      "text": "房态图",
+      "text": "房间管理",
       "state": "closed",
       "iconCls": "fa fa-home",
-      "url": "./page/fangtaitu/fangtaitu.html"
-    },
-    {
-      "id": 1363,
-      "pid": 72,
-      "text": "房态预测",
-      "state": "closed",
-      "iconCls": "fa fa-file-image-o",
-      "url": ""
-    },
-    {
-      "id": 214,
-      "pid": 72,
-      "text": "订单",
-      "state": "closed",
-      "iconCls": "fa fa-list",
-      "url": ""
-    },
-    {
-      "id": 215,
-      "pid": 72,
-      "text": "房单",
-      "state": "closed",
-      "iconCls": "fa fa-credit-card",
-      "url": ""
-    },
-    {
-      "id": 658,
-      "pid": 72,
-      "text": "工作账",
-      "state": "closed",
-      "iconCls": "fa fa-user-o",
-      "url": ""
-    },
-    {
-      "id": 659,
-      "pid": 72,
-      "text": "房价",
-      "state": "closed",
-      "iconCls": "fa fa-television",
-      "url": ""
-    },
-    {
-      "id": 660,
-      "pid": 72,
-      "text": "会员",
-      "state": "closed",
-      "iconCls": "fa fa-comment-o",
-      "url": ""
-    },
-    {
-      "id": 661,
-      "pid": 72,
-      "text": "客史",
-      "state": "closed",
-      "iconCls": "fa fa-list-alt",
-      "url": ""
-    },
-    {
-      "id": 662,
-      "pid": 72,
-      "text": "报表",
-      "state": "closed",
-      "iconCls": "fa fa-list-alt",
-      "url": ""
-    },
-    {
-      "id": 663,
-      "pid": 72,
-      "text": "夜审",
-      "state": "closed",
-      "iconCls": "fa fa-list-alt",
       "url": ""
     }
   ]

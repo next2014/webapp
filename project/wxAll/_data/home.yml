@@ -4,11 +4,13 @@
   jingyan: 1年经验
   xueli: 中专
   data: 07月12日
-  yaoqiu:  1、1年以上Net开发经验，熟悉B/S结构；
-                            2、掌握Html、JavaScrip，Jqury，AJAX等前端相关技术，有微信，H5相关经验；
-                            3、熟练ASP.NET(C#)，SQL Server后台开发技术；
-                            4、熟练使用Photoshop，VS2012/2015等项目开发软件；
-                            5、具备良好的代码编写习惯；良好的沟通能力，协作能力；工作态度积极，为人诚恳踏实，责任心强。
+  minMoney: 6
+  maxMoney: 8
+  yaoqiu:  <br/>1、1年以上Net开发经验，熟悉B/S结构；<br/>
+            2、掌握Html、JavaScrip，Jqury，AJAX等前端相关技术，有微信，H5相关经验；<br/>
+            3、熟练ASP.NET(C#)，SQL Server后台开发技术；<br/>
+            4、熟练使用Photoshop，VS2012/2015等项目开发软件；<br/>
+            5、具备良好的代码编写习惯；良好的沟通能力，协作能力；工作态度积极，为人诚恳踏实，责任心强。
   content: 暂无内容
 
 - posname: 活动策划总经理
@@ -17,6 +19,8 @@
   jingyan: 4年经验
   xueli: 专科以上
   data: 07月12日
+  minMoney: 6
+  maxMoney: 10
   yaoqiu: 1、专科以上学历，4年以上旅游景区专业活动策划工作经验；
                                 2、具备清晰的活动策划思路和前卫的活动创新能力；
                                 3、热忱、开朗、足够的创新意识，强烈的服务意识和时间观念，良好的团队协作精神；
@@ -33,6 +37,8 @@
   jingyan: 3年经验
   xueli: 专科以上
   data: 07月12日
+  minMoney: 8
+  maxMoney: 10
   yaoqiu: 1、3年以上主题乐园营销相关经验或5年以上旅行社计调相关工作经验；
                                 2、良好的沟通表达协调能力及公关经验；
                                 3、大专学历，男女不限。
@@ -45,6 +51,8 @@
   jingyan: 5年经验
   xueli: 硕士以上
   data: 07月12日
+  minMoney: 8
+  maxMoney: 10
   yaoqiu: 1、5年以上多元化集团财务经理工作经验、尤擅长融资、风控；
                                     2、拥有丰富的大型项目融资经验和社会资源；
                                     3、对国家文旅政策有涉足或较深了解；

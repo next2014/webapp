@@ -1,0 +1,19 @@
+[
+    {
+      "id": 13651,
+      "pid": 1367,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "电子券管理",
+      "url":""
+    },
+    {
+      "id": 13653,
+      "pid": 1367,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "券类型管理",
+      "url": ""
+    }
+  ]
+  
