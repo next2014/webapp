@@ -5,7 +5,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "房态图",
-    "url":""
+    "url":"./page/fangtaitu/fangtaitu.html"
   },
   {
     "id": 13653,
@@ -29,14 +29,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "房单",
-    "url": ""
-  },
-  {
-    "id": 13653,
-    "pid": 1365,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
-    "text": "分页",
     "url": ""
   },
   {

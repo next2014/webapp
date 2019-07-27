@@ -1,0 +1,289 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../static/web/css/style.css" />
+    <link rel="stylesheet" href="../../static/web/assets/css/codemirror.css" />
+    <link rel="stylesheet" href="../../static/web/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="../../static/web/font/css/font-awesome.min.css" />
+    <!--[if lte IE 8]>
+		  <link rel="stylesheet" href="../../static/web/assets/css/ace-ie.min.css" />
+        <![endif]-->
+    <link rel="stylesheet" href="../../static/web/src/css/layui.css" />
+    <link rel="stylesheet" href="../../static/web/css/global.css">
+    <script src="../../static/web/js/jquery-1.9.1.min.js"></script>
+    <script src="../../static/web/assets/js/bootstrap.min.js"></script>
+    <script src="../../static/web/assets/js/typeahead-bs2.min.js"></script>
+    <script src="../../static/web/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/web/assets/js/jquery.dataTables.bootstrap.js"></script>
+    <script src="../../static/web/assets/layer/layer.js" type="text/javascript"></script>
+    <script src="../../static/web/assets/laydate/laydate.js" type="text/javascript"></script>
+    <script src="../../static/web/assets/dist/echarts.js"></script>
+    <title>交易金额</title>
+    <style>
+      .fangtaitu .layui-row{
+          padding: 6px 4px;
+      }
+      .fangtaitu .layui-row .layui-col-md1{
+          width:auto;
+      }
+      .fangtaitu .layui-row .layui-col-md1 .grid-demo{
+          /* margin: 0 3px; */
+          width: 78px;
+          height: 78px;
+          position: relative;
+      }
+      .fangtaitu .layui-row .topBtn{
+          width: 78px!important;
+          height: 40px!important;
+          line-height: 40px!important;
+      }
+      .fangtaitu .layui-row .layui-col-md1 .grid-demo span{
+          text-align: left;
+          height: 20px;
+          line-height: 20px;
+          display: block;
+      }
+      .fangtaitu .layui-row .layui-col-md1 .grid-demo span i{
+          display: block;
+          width: 19.5px;
+          height: 19.5px;
+          text-align: center;
+      }
+      .fangtaitu .layui-row .layui-col-md1 .grid-demo span.right{
+          position: absolute;
+          right: 0;
+          top: 2px;
+      }
+    </style>
+</head>
+<body>
+<div class="fangtaitu">
+    <div class="layui-row layui-col-space5 pt-4 pb-3">
+        <div class="layui-col-md1 layui-col-md-offset5">
+            <div class="grid-demo topBtn p-0">门卡读写</div>
+        </div>
+        <div class="layui-col-md1">
+            <div class="grid-demo topBtn p-0">礼包购买</div>
+        </div>
+        <div class="layui-col-md1">
+            <div class="grid-demo topBtn p-0">新增订单</div>
+        </div>
+        <div class="layui-col-md1">
+            <div class="grid-demo topBtn p-0">注册会员</div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space5">
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg1">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <span class="right">
+                  <i class="bg-danger text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-warning text-white">3</i>
+              </span>
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo grid-demo-bg3">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                <i class="bg-info text-white">1</i>
+                <i class="bg-info text-white">2</i>
+                <i class="bg-info text-white">3</i>
+            </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1">
+            <div class="grid-demo">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+            </div>
+          </div>
+          <div class="layui-col-md1">
+            <div class="grid-demo grid-demo-bg1">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+            </div>
+          </div>
+          <div class="layui-col-md1">
+            <div class="grid-demo">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+            </div>
+          </div>
+          <div class="layui-col-md1">
+            <div class="grid-demo grid-demo-bg2">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+            </div>
+          </div>
+          <div class="layui-col-md1">
+            <div class="grid-demo">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+            </div>
+          </div>
+    </div>
+</div>
+</body>
+</html>
