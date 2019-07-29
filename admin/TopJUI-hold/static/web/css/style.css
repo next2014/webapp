@@ -619,11 +619,11 @@ body
 .Competence_info .Competence_list li{ height:40px; line-height:40px; padding:0px 20px; width:50%; float:left}
 /*****************************添加用户样式属性************************/
 .add_menber{}
-.add_menber li{ margin:10px 0px; height:40px; line-height:40px; float:left; width:50%}
+.add_menber li{height:40px; line-height:40px; float:left; width:25%}
 .add_menber li.adderss{ width:100%}
 .add_menber li .label_name,
 .member_content li .label_name { width:80px; text-align:right; float:left; line-height:30px;}
-.add_menber li .add_name{ float:left; margin-left:10px; line-height:30px;}
+.add_menber li .add_name{ float:left; line-height:30px;}
 .add_menber li .add_name .lbl{ top:-5px; left:10px;}
 /******用户信息********/
 .member_show{}
@@ -660,7 +660,7 @@ body
 .order_list_style.Widescreen { margin-left:0px;}
 #add_ads_style .add_adverts{ padding:15px;}
 #add_ads_style .add_adverts li{ height:32px; line-height:30px; margin:10px 0px;}
-#add_ads_style .add_adverts li .label_name{ width:80px; float:left;text-align:right}
+#add_ads_style .add_adverts li .label_name{ width:75px; float:left;text-align:right}
 #add_ads_style .add_adverts li .cont_style{ float:left; width:600px; position:relative;}
 #add_ads_style .add_adverts li .cont_style select.form-control{ width:220px;margin-left: 10px;}
 #add_ads_style .add_adverts li .cont_style .logoupload{ margin-left:10px; position:relative}
@@ -1100,7 +1100,8 @@ body
 .text_add{
 	padding: 0 10px;
     margin-left: 10px;
-    height: 30px;
+	height: 30px;
+	width: 150px;
 }
 .btn{
 	border:0!important;
