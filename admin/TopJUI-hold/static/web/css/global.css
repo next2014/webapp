@@ -889,6 +889,9 @@ body .layui-layer-dir .layui-layer-content {
 .grid-demo-bg3 {
     background-color: #38814A;
 }
+.grid-demo-bg4 {
+    background-color: #72727A;
+}
 /* 演示 */
  body .layui-layout-admin .site-demo {
     bottom: 60px;
