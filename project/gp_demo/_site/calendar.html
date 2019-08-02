@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>
+    价格日历 · 欧美城
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/main.css">
+<!-- icon -->
+<link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="static/css/weui.css">
+<link rel="stylesheet" href="static/css/jquery-weui.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<!-- Select ticket type -->
+
+
+<link rel="stylesheet" href="static/css/calendar-price-jquery.min.css">
+
+</head>
+<body>
+    
+    <header class="search">
+        <div class="search_header_box search_header">
+            <div class="search_left" style="width:3%;">
+                <!-- <a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a> -->
+            </div>
+            <a href="javascript:;" class="search_header_box_input">欧美城价格日历</a>
+            <div class="search_right" style="width:3%;"></div>
+        </div>
+</header>
+<div style="height:50px;"></div>
+
+<div class="calendar_price"></div>
+
+<div class="p-2">
+    <a href="ticketDetailsNew.html" class="btn btn-info btn-lg btn-block text-white">返 回</a>
+</div>
+    
+    <script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<!-- Select ticket type -->
+
+<!--  -->
+
+
+<script src="static/js/mock-data.js"></script>
+<script src="static/js/calendar-price-jquery.min.js"></script>
+<script>
+$(function () {
+    // 生成模拟数据
+    var MOCK_DATA = createMockData();
+
+    // 日历设置表单字段配置
+    // key 字段名
+    // name 表单label
+    // value 默认值
+    // placeholder input[placeholder]
+    var calendarConfig = [
+      {
+        key: 'price',
+        name: '零售价',
+        type: 'text',
+        placeholder: '请输入'
+      },
+      {
+        key: 'stock',
+        name: '当天库存',
+        type: 'number',
+        placeholder: '-1代表不限',
+        editable: true
+      }
+    ]
+
+    // 日历中显示配置
+    // var showConfig = [
+    //   {
+    //     key: 'price',
+    //     name: '￥'
+    //   }
+    // ]
+
+    // 样式颜色配置
+    var styleConfig = {
+      // 头部背景色
+      headerBgColor: '#098cc2',
+      // 头部文字颜色
+      headerTextColor: '#fff',
+      // 周一至周日背景色，及文字颜色
+      weekBgColor: '#098cc2',
+      weekTextColor: '#fff',
+      // 周末背景色，及文字颜色
+      weekendBgColor: '#098cc2',
+      weekendTextColor: '#fff',
+      // 有效日期颜色
+      validDateTextColor: '#333',
+      validDateBgColor: '#fff',
+      validDateBorderColor: '#eee',
+      // Hover
+      validDateHoverBgColor: '#098cc2',
+      validDateHoverTextColor: '#fff',
+      // 无效日期颜色
+      invalidDateTextColor: '#ccc',
+      invalidDateBgColor: '#fff',
+      invalidDateBorderColor: '#eee',
+      // 底部背景颜色
+      footerBgColor: '#fff',
+      // 重置按钮颜色
+      resetBtnBgColor: '#77c351',
+      resetBtnTextColor: '#fff',
+      resetBtnHoverBgColor: '#55b526',
+      resetBtnHoverTextColor: '#fff',
+      // 确定按钮
+      confirmBtnBgColor: '#098cc2',
+      confirmBtnTextColor: '#fff',
+      confirmBtnHoverBgColor: '#00649a',
+      confirmBtnHoverTextColor: '#fff',
+      // 取消按钮
+      cancelBtnBgColor: '#fff',
+      cancelBtnBorderColor: '#bbb',
+      cancelBtnTextColor: '#999',
+      cancelBtnHoverBgColor: '#fff',
+      cancelBtnHoverBorderColor: '#bbb',
+      cancelBtnHoverTextColor: '#666'
+    }
+
+    // 初始化日历
+    var zxCalendar = $.CalendarPrice({
+      el: '.calendar_price',
+      startDate: '2019-05-31',
+      endDate: '2019-12-30',
+      data: MOCK_DATA,
+      // 配置需要设置的字段名称
+      config: calendarConfig,
+      // 配置在日历中要显示的字段
+      show: [{key: 'price',name: '¥'}],
+      // 自定义颜色
+      style: styleConfig,
+      // 隐藏底部按钮（重置、确定、取消）
+      // hideFooterButton: true
+    });
+
+    log(zxCalendar)
+
+    // 监听设置表单提交
+    // 将阻止默认流程执行
+    // 继续执行默认流程，请执行参数next()
+    zxCalendar.$on('submit-form', function (data, next) {
+      // data 设置的数据
+      console.log('$(submit-form)表单数据 ================')
+      console.log(data)
+
+      // 此处可以验证表单
+      // 验证表单逻辑....
+      // ....
+
+      // 继续执行下一步
+      next()
+    })
+
+    // 执行过程中错误回调
+    zxCalendar.$on('error', function (err) {
+      // 执行中的错误提示
+      console.error('$on(error)Error:')
+      console.log(err)
+      alert(err.msg);
+    })
+
+    // 切换月份
+    zxCalendar.$on('month-change', function (data) {
+      log('$on(month-change) 数据：');
+      log(data);
+    })
+
+    // 点击有效的某一天通知
+    zxCalendar.$on('valid-day', function (day, data, next) {
+      log('$on(valid-day)当前点击的(有效)日期为: ' + day + ', 数据：');
+      log(data);
+
+      // 继续执行默认流程
+      next();
+    })
+
+    // 设置数据变化
+    zxCalendar.$on('setup-value-change', function (data) {
+      log('$on(setup-value-change)设置窗口被修改数据....');
+      log(data);
+      // 取消设置
+      // 这里可以触发关闭设置窗口
+    })
+
+    // 点击重置按钮回调
+    zxCalendar.$on('reset', function () {
+      log('$on(reset)数据重置成功！');
+    })
+
+    // 点击确定按钮回调，返回当前设置数据
+    zxCalendar.$on('confirm', function (data) {
+      log('$on(confirm)点击确定按钮通知！');
+      log(data);
+    })
+
+    // 点击取消按钮回调
+    zxCalendar.$on('cancel', function () {
+      log('$on(cancel)取消设置 ....');
+      // 取消设置
+      // 这里可以触发关闭设置窗口
+    })
+
+  });
+
+  function log (s) {
+    console.log(s)
+  }
+</script>  
+
+<!--  -->
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>
+    查看电子票 · 欧美城
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="../static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="../static/css/weui.css">
+<link rel="stylesheet" href="../static/css/jquery-weui.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+<!-- Select ticket type -->
+<link rel="stylesheet" href="../static/css/gp/layui.css">
+<link id="layuicss-laydate" rel="stylesheet" href="../static/css/gp/laydate.css" media="all">
+<link id="layuicss-layer" rel="stylesheet" href="../static/css/gp/layer.css" media="all">
+<link id="layuicss-skincodecss" rel="stylesheet" href="../static/css/gp/code.css" media="all">
+
+</head>
+<body>
+    
+    <div class="OR_all">
+    <!--头部标题图片-->
+    <div class="code_head">
+        <img src="../static/images/code-1.svg" alt="电子票" title="电子票">
+        <span>欧美城电子票</span>
+    </div>
+    <div class="container or_main">
+        <p> OMN0B5000677</p>
+        <div class="center-block hy-qcode can" style="display: block;">
+            <img class="qcode" src="../static/images/QR(1).png" alt="门票二维码">
+        </div>
+        <h3 id="OMN0B5000677" class="text-center no"><label>电子票号：</label><span>OMN0B5000677</span></h3>
+        <h3 id="OMN0B5000677" class="text-center no1"><label></label><span></span><span>2018-08-25至0001-01-01</span></h3>
+    </div>
+    <div class="row mt-2">
+        <div class="col-6">
+            <button id="Previous" class="btn btn-primary btn-block" disabled>上一张</button>
+        </div>
+        <div class="col-6">
+            <button id="next" class="btn btn-primary btn-block">下一张</button>
+        </div>
+    </div>
+</div>
+
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery-weui.js"></script>
+<!-- Select ticket type -->
+
+<script src="../static/js/political_WeCall.js"></script>
+<script src="../static/js/mobiscroll.jquery.min.js"></script>
+
+
+
+<!-- <script src="../static/js/main.js"></script>
+<script>
+        var page = 1, pagesum = 2;
+        $(function () {
+            if (page >= pagesum) {
+                $('#next').attr("disabled", true);
+            }
+            if (page <= 1) {
+                $('#Previous').attr("disabled", true);
+            }
+            $($('.can')[0]).show();
+            $($('.no')[0]).show();
+            $($('.no1')[0]).show();
+        })
+        $('#Previous').click(function () {
+            $('.can').hide();
+            $('.no').hide();
+            $('.no1').hide();
+            page--;
+            $($('.can')[page - 1]).show();
+            $($('.no')[page - 1]).show();
+            $($('.no1')[page - 1]).show();
+            if (page <= 1) {
+                $('#Previous').attr("disabled", true);
+            }
+            $("#next").attr("disabled", false);
+        })
+        $('#next').click(function () {
+            $('.can').hide();
+            $('.no').hide();
+            $('.no1').hide();
+            page++;
+            $($('.can')[page - 1]).show();
+            $($('.no')[page - 1]).show();
+            $($('.no1')[page - 1]).show();
+            if (page >= pagesum) {
+                $('#next').attr("disabled", true);
+            }
+            $('#Previous').attr("disabled", false);
+        })
+</script> -->
+
+
+
+</body>
+</html>

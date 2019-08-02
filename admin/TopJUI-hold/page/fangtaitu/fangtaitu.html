@@ -79,12 +79,117 @@
       height: 25px;
       line-height: 25px;
     }
+
+    /*会员级别*/
+    .btn-warning.active, .btn-warning.active:focus, .btn-warning.active:hover, .btn-warning.focus.active, .open>.btn-warning.dropdown-toggle.active {
+        background-color: #ff7b00!important;
+        border-color: #f19515;
+    }
+    .btn-info.active, .btn-info.active:focus, .btn-info.active:hover, .btn-info.focus.active, .open>.btn-info.dropdown-toggle.active {
+        background-color: #2b95d6!important;
+        border-color: #3e99d1;
+    }
+    .btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+        color: #fff!important;
+        background-color: #8d8d8d!important;
+    }
+    .btn-dark.active, .btn-dark.active:focus, .btn-dark.active:hover, .btn-dark.focus.active, .open>.btn-dark.dropdown-toggle.active {
+        background-color: #646c72!important;
+        border-color: #626f77;
+    }
+    .btn-dark {
+        color: #fff!important;
+        background-color: #343a40!important;
+        border-color: #343a40!important;
+    }
+    .btn-light {
+        color: #888!important;
+        text-shadow: 0 -1px 0 rgba(250,250,250,.25)!important;
+    }
+    .fj_num{
+      height: 210px;
+      overflow:scroll;
+    }
+    .fj_num .col{
+      height: 50px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      color:#ffffff;
+      text-align: center;
+      background-color: #1e76ad;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .fj_num .col:last-child{
+      margin-right: 0!important;
+    }
+    .tab-title{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .fanghao-tab li{
+       float:right!important;
+    }
+    .fangjiaForm{
+       overflow: hidden;
+    }
+    .xingkeren .xingkeren-title{
+       width: 100px;
+       height: 40px;
+       line-height: 40px;
+       text-align: center;
+       border-left:1px solid #ccc;
+       border-right:1px solid #ccc;
+       border-top:1px solid #ccc;
+       margin-bottom: -1px;
+       background-color: #fff;
+    }
+    .xingkeren .xingkeren-title strong{
+       display: block;
+       border-top: 2px solid rgb(255, 174, 0);
+    }
+    .xinkenren-message{
+      overflow: hidden;
+      border:1px solid #ccc;
+       padding:15px 0;
+    }
+    .fangjiaForm-title strong{
+       font-size: 25px;
+       font-weight: normal;
+    }
+    .fangjiaForm-title span{
+       color:#FC6E64;
+    }
+    .fangjiaForm-content{
+       border:1px solid #ccc;
+    }
+
+    /* 现金 */
+    .xianjinZf{
+      margin-top:20px;
+      border:1px solid #ccc;
+    }
+    .xianjinZf ul li{
+      display: flex;
+      align-items: center;
+    }
+
+    /* 关联房 */
+    .glfang-title{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-color:#eee;
+    }
   </style>
 </head>
 
 <body>
   <div class="fangtaitu">
-    <div class="layui-row layui-col-space5 pt-4 pb-3">
+    <!-- <div class="layui-row layui-col-space5 pt-4 pb-3">
       <div class="layui-col-md1 layui-col-md-offset5">
         <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="add_menkaduxie">门卡读写</a>
       </div>
@@ -97,218 +202,895 @@
       <div class="layui-col-md1">
         <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="reg_member">注册会员</a>
       </div>
-    </div>
+    </div> -->
+    <div class="layui-row layui-col-space5 pt-2">
+        <div class="layui-col-md1">
+          <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="order_add">新增订单</a>
+        </div>
+        <div class="layui-col-md1">
+          <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="reg_member">注册会员</a>
+        </div>
+      </div>
     <div class="layui-row layui-col-space5">
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <span class="right">
-              <i class="bg-danger text-white">欠</i>
-              <i class="bg-info text-white">停</i>
-              <i class="bg-warning text-white">联</i>
-          </span>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg1">
+              <span>8502</span>
+              <span>新客人</span>
+              <span>BQ</span>
+              <span class="right">
+                  <i class="bg-danger text-white">欠</i>
+                  <i class="bg-info text-white">停</i>
+                  <i class="bg-warning text-white">联</i>
+              </span>
+          </div>
         </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg3">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
-                <i class="bg-info text-white">1</i>
-                <i class="bg-info text-white">2</i>
-                <i class="bg-info text-white">3</i>
-            </span> -->
-        </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span></span>
+            <span>BQ</span>
+            <!-- <span class="right">
                   <i class="bg-info text-white">1</i>
                   <i class="bg-info text-white">2</i>
                   <i class="bg-info text-white">3</i>
               </span> -->
+          </div>
         </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg1">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
+        <div class="layui-col-md1 fangjian_kong">
+          <div class="grid-demo grid-demo-bg4">
+            <span>8502</span>
+            <span></span>
+            <span>BQ</span>
+            <!-- <span class="right">
                   <i class="bg-info text-white">1</i>
                   <i class="bg-info text-white">2</i>
                   <i class="bg-info text-white">3</i>
               </span> -->
+          </div>
         </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
+        <div class="layui-col-md1 fangjian_stop">
+          <div class="grid-demo grid-demo-bg5">
+            <span>8502</span>
+            <span></span>
+            <span>BQ</span>
+            <!-- <span class="right">
                   <i class="bg-info text-white">1</i>
                   <i class="bg-info text-white">2</i>
                   <i class="bg-info text-white">3</i>
               </span> -->
+          </div>
         </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo grid-demo-bg2">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
                   <i class="bg-info text-white">1</i>
                   <i class="bg-info text-white">2</i>
                   <i class="bg-info text-white">3</i>
               </span> -->
+          </div>
         </div>
-      </div>
-      <div class="layui-col-md1">
-        <div class="grid-demo">
-          <span>8502</span>
-          <span>新客人</span>
-          <span>BQ</span>
-          <!-- <span class="right">
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
                   <i class="bg-info text-white">1</i>
                   <i class="bg-info text-white">2</i>
                   <i class="bg-info text-white">3</i>
               </span> -->
+          </div>
         </div>
-      </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg3">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                  <i class="bg-info text-white">1</i>
+                  <i class="bg-info text-white">2</i>
+                  <i class="bg-info text-white">3</i>
+              </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                    <i class="bg-info text-white">1</i>
+                    <i class="bg-info text-white">2</i>
+                    <i class="bg-info text-white">3</i>
+                </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg1">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                    <i class="bg-info text-white">1</i>
+                    <i class="bg-info text-white">2</i>
+                    <i class="bg-info text-white">3</i>
+                </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                    <i class="bg-info text-white">1</i>
+                    <i class="bg-info text-white">2</i>
+                    <i class="bg-info text-white">3</i>
+                </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo grid-demo-bg2">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                    <i class="bg-info text-white">1</i>
+                    <i class="bg-info text-white">2</i>
+                    <i class="bg-info text-white">3</i>
+                </span> -->
+          </div>
+        </div>
+        <div class="layui-col-md1 fangjian">
+          <div class="grid-demo">
+            <span>8502</span>
+            <span>新客人</span>
+            <span>BQ</span>
+            <!-- <span class="right">
+                    <i class="bg-info text-white">1</i>
+                    <i class="bg-info text-white">2</i>
+                    <i class="bg-info text-white">3</i>
+                </span> -->
+          </div>
+        </div>
     </div>
   </div>
-   
+
+  <!-- star 停售房 -->
+  <div class="add_order" id="add_stopSell" style="display: none;">
+      <ul class="page-content" style="overflow: hidden">
+          <li style="width: 100%!important;"><label class="label_name">房间号</label>
+            <span class="add_name">
+              <input value="302" name="" type="text" class="text_add" disabled="disabled" placeholder="不能为空" style="width:150px;font-size:12px;"/>
+              <input type="submit" class="text_add text-white bg-success" id="xuanzhe_add" value="选择" style="width:90px;border:0;border-radius:5px;margin-left:0;"/>
+            </span>
+          </li>
+          <li style="width: 100%!important;"><label class="label_name">楼层</label>
+             <span class="add_name" style="display: flex;justify-content: space-between;">
+               <input value="302" name="" type="text" class="text_add" disabled="disabled" placeholder="不能为空" style="width:150px;font-size:12px;"/>
+             </span>
+          </li>
+          <li style="width: 100%!important;"><label class="label_name">房单号</label>
+             <span class="add_name">
+               <input value="" name="" type="text" class="text_add" disabled="disabled" style="width:150px;font-size:12px;"/>
+             </span>
+          </li>
+          <li style="width: 100%!important;"><label class="label_name">有效期</label>
+             <span class="add_name" style="display: flex;justify-content: space-between;">
+               <input name="" type="text" class="text_add" id="CheckIn1">
+               <input name="" type="text" class="text_add" id="GoWay1"/>
+             </span>
+          </li>
+      </ul>
+  </div>
+  <!-- end 停售房 -->
+
+  <!-- star 房单号 tab -->
+  <div class="add_order" id="add_content" style="display: none;">
+     <div class="page-content" style="overflow: hidden;padding:0!important">
+         <div class="layui-tab layui-tab-card" style="margin:0!important;position: relative;">
+              <ul class="layui-tab-title fanghao-tab">
+                <li style="width:8%">日志</li>
+                <li style="width:8%">服务</li>
+                <li style="width:8%">电子券</li>
+                <li style="width:8%">房租计划</li>
+                <li style="width:8%">预授权</li>
+                <li style="width:8%">账务</li>
+                <li class="layui-this" style="width:8%">房单</li>
+              </ul>
+              <div class="layui-tab-content" style="min-height: 465px;">
+                <div class="layui-tab-item">日志</div>
+                <div class="layui-tab-item">服务</div>
+                <div class="layui-tab-item">电子券</div>
+                <div class="layui-tab-item">房租计划</div>
+                <div class="layui-tab-item">预授权</div>
+                <div class="layui-tab-item">账务</div>
+                <div class="layui-tab-item layui-show"><!-- 房单 -->
+                  <div class="layui-row">
+                      <div class="layui-col-md9">
+                          <div class="fangjiaForm" style="overflow: hidden">
+                              <ul class="fangjiaForm-content pl-2 pr-2 pt-3 pb-3" style="overflow: hidden">
+                                  <li><label class="label_name">房号</label> <span class="add_name">
+                                      <input name="房号" value="8212" type="text" class="text_add" disabled="disabled" style="width:120px;" /></span>
+                                  </li>
+                                  <li><label class="label_name">房型</label>
+                                    <span class="add_name">
+                                        <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" style="width:120px;">
+                                          <option value="0">商务大床房</option>
+                                          <option value="1">商务套房</option>
+                                          <option value="2">至尊湖景大床房</option>
+                                          <option value="3">至尊大床房</option>
+                                          <option value="4">豪华双床房</option>
+                                          <option value="5">豪华大床房</option>
+                                        </select>
+                                    </span>
+                                  </li>
+                                  <li><label class="label_name">房价类型</label>
+                                    <div class="add_name" style="display: flex;justify-content: space-between;">
+                                        <select name="interest" lay-filter="aihao" class="text_add" style="width:80px;padding:0;">
+                                            <option value="1">门市价</option>
+                                            <option value="2">银会员价</option>
+                                            <option value="3">金会员价</option>
+                                            <option value="4">铂金价</option>
+                                            <option value="8">钟点房</option>
+                                            <option value="9">不定房价</option>
+                                            <option value="10">免费房</option>
+                                            <option value="14">自用房</option>
+                                            <option value="18" disabled="disabled">协议公式价</option>
+                                            <option value="19" disabled="disabled">全年不变价</option>
+                                            <option value="20" disabled="disabled">OTA直连价</option>
+                                            <option value="3081">钻石会员价</option>
+                                            <option value="3083">携程168</option>
+                                            <option value="3088">钟点房</option>
+                                            <option value="3089">去哪儿</option>
+                                            <option value="3091">美团飞猪178</option>
+                                            <option value="3093">前台价格</option>
+                                            <option value="3094">银卡价</option>
+                                            <option value="3097">嘉宾价</option>
+                                            <option value="3099">会员价</option>
+                                            <option value="3104">黄金会员价</option>
+                                            <option value="3105">客房</option>
+                                        </select>
+                                        <input type="submit" class="text_add text-white bg-success" id="" value="钟" style="width:40px;margin-left:2px;border:0;border-radius:2px"/>
+                                    </div>
+                                  </li>
+                                  <li><label class="label_name">房价</label> <span class="add_name">
+                                    <input name="房价" type="text" class="text_add" value="188" disabled="disabled" style="width:120px;"/></span>
+                                    <div class="prompt r_f"></div>
+                                  </li>
+                                  <li><label class="label_name">入住时间</label>
+                                    <span class="add_name">
+                                      <input name="入住时间" type="text" class="text_add" id="" style="width:120px;">
+                                    </span>
+                                  </li>
+                                  <li><label class="label_name">离店时间</label>
+                                    <span class="add_name">
+                                        <input name="离店时间" type="text" class="text_add" id="" style="width:120px;">
+                                    </span>
+                                  </li>
+                                  <li><label class="label_name">含早数量</label> 
+                                    <span class="add_name">
+                                        <select name="interest" lay-filter="aihao" class="text_add" style="width:120px;" >
+                                            <option value="0">无早</option>
+                                            <option value="1">一份早餐</option>
+                                            <option value="2">两份早餐</option>
+                                            <option value="3">三份早餐</option>
+                                            <option value="4">四份早餐</option>
+                                        </select>
+                                    </span>
+                                  </li>
+                                  <li><label class="label_name">销售员</label> 
+                                    <span class="add_name">
+                                      <select name="interest" lay-filter="aihao" class="text_add" style="width:120px;" >
+                                          <option value="0">销售员</option>
+                                          <option value="1">销售员1</option>
+                                          <option value="3">销售员2</option>
+                                          <option value="4">销售员3</option>
+                                      </select>
+                                    </span>
+                                  </li>
+                                  <li><label class="label_name">联系人</label> <span class="add_name">
+                                    <input name="联系人" type="text" class="text_add" style="width:120px;" /></span>
+                                  </li>
+                                  <li><label class="label_name">联系电话</label> <span class="add_name">
+                                      <input name="联系电话" type="text" class="text_add" style="width:120px;" /></span>
+                                  </li>
+                                  <li><label class="label_name">会员卡号</label> <span class="add_name">
+                                      <input name="会员卡号" type="text" class="text_add" disabled="disabled" style="width:120px;" /></span>
+                                  </li>
+                                  <li><label class="label_name">会员级别</label>
+                                      <div class="add_name">
+                                        <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:120px;" >
+                                            <option value="0">非会员</option>
+                                            <option value="1">银会员</option>
+                                            <option value="3">金会员</option>
+                                            <option value="4">铂金会员</option>
+                                        </select>
+                                      </div>
+                                  </li>
+                                  <li style="width:100%"><label class="label_name">员工备注</label>
+                                    <span class="add_name" style="width: 91%;">
+                                      <input name="" type="text" class="text_add" style="width:98%;"/>
+                                    </span>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div class="xingkeren" style="overflow: hidden">
+                            <div class="search_style mb-0" style="display: flex;align-items: center;justify-content: space-between;">
+                                <div class="xingkeren-title f-left">
+                                  <strong>赖萌萌</strong>
+                                </div>
+                                <ul class="search_content clearfix">
+                                    <li style="width: 100%;height:auto;">
+                                      <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
+                                      <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="xinkenren-message">
+                                <ul>
+                                    <li><label class="label_name">客人姓名</label> <span class="add_name">
+                                        <input name="姓名" value="" type="text" class="text_add" placeholder="不能为空" style="width:120px;" /></span>
+                                    </li>
+                                    <li><label class="label_name">客人性别</label>
+                                      <span class="add_name">
+                                          <select name="xingbie" lay-filter="aihao" class="text_add" style="width:120px;" >
+                                              <option value="0">未知</option>
+                                              <option value="1">男</option>
+                                              <option value="2">女</option>
+                                          </select>
+                                      </span>
+                                    </li>
+                                    <li><label class="label_name">出生日期</label>
+                                      <span class="add_name">
+                                        <input name="出生日期" type="text" class="text_add" id="chushengriqi" style="width:120px;" >
+                                      </span>
+                                    </li>
+                                    <li><label class="label_name">手机号码</label> <span class="add_name">
+                                      <input name="手机号码" type="text" class="text_add" placeholder="请填写手机号码" style="width:120px;" /></span>
+                                    </li>
+                                    <li><label class="label_name">证件类型</label>
+                                      <div class="add_name">
+                                          <select name="证件类型" lay-filter="aihao" class="text_add" style="width:120px;" >
+                                              <option value="0">身份证/驾驶证</option>
+                                              <option value="1">台湾居民来往通行证</option>
+                                              <option value="3">港澳居民来往大陆通行</option>
+                                              <option value="4">外籍护照</option>
+                                              <option value="5">外交护照</option>
+                                              <option value="6">公务护照</option>
+                                              <option value="7">因公普通护照</option>
+                                              <option value="8">军官证</option>
+                                              <option value="9">士兵证</option>
+                                              <option value="10">其它</option>
+                                          </select>
+                                      </div>
+                                    </li>
+                                    <li><label class="label_name">证件号码</label> <span class="add_name">
+                                      <input name="证件号码" type="text" class="text_add" placeholder="请填写身份证号码" style="width:120px;" /></span>
+                                    </li>
+                                    <li><label class="label_name">签证信息</label> 
+                                      <span class="add_name" style="display: flex; align-items: center;">
+                                        <select name="qzxinxi" lay-filter="aihao" class="text_add" style="width:70px;padding:0;">
+                                            <option value="0">无</option>
+                                            <option value="1">普通签证</option>
+                                            <option value="2">公务签证</option>
+                                            <option value="3">外交签证</option>
+                                        </select>
+                                        <input name="" type="text" class="text_add" id="youxiaoTime" value="00:00" style="width:50px;margin-left:5px"/>
+                                      </span>
+                                    </li>
+                                    <li><label class="label_name">客人民族</label>
+                                      <span class="add_name">
+                                          <select name="客人民族" lay-filter="aihao" class="text_add" style="width:120px;" >
+                                              <option value="0"></option>
+                                              <option value="1">汉</option>
+                                              <option value="2">蒙古</option>
+                                              <option value="3">回</option>
+                                              <option value="4">藏</option>
+                                              <option value="5">维吾尔</option>
+                                              <option value="6">苗</option>
+                                              <option value="7">彝</option>
+                                              <option value="8">壮</option>
+                                              <option value="9">布依</option>
+                                              <option value="10">朝鲜</option>
+                                              <option value="11">满</option>
+                                              <option value="12">侗</option>
+                                              <option value="13">瑶</option>
+                                              <option value="14">白</option>
+                                              <option value="15">土家</option>
+                                              <option value="16">哈尼</option>
+                                              <option value="17">哈萨克</option>
+                                              <option value="18">傣</option>
+                                              <option value="19">黎</option>
+                                              <option value="20">傈僳</option>
+                                              <option value="21">佤</option>
+                                              <option value="22">畲</option>
+                                              <option value="23">高山</option>
+                                              <option value="24">拉祜</option>
+                                              <option value="25">水</option>
+                                              <option value="26">东乡</option>
+                                              <option value="27">纳西</option>
+                                              <option value="28">景颇</option>
+                                              <option value="29">柯尔克孜</option>
+                                              <option value="30">土</option>
+                                              <option value="31">达翰尔</option>
+                                              <option value="32">仫佬</option>
+                                              <option value="33">羌</option>
+                                              <option value="33">布朗</option>
+                                              <option value="34">撒拉</option>
+                                              <option value="35">毛难</option>
+                                              <option value="36">仡佬</option>
+                                              <option value="37">锡伯</option>
+                                              <option value="38">阿昌</option>
+                                              <option value="39">普米</option>
+                                              <option value="40">塔吉克</option>
+                                              <option value="41">怒</option>
+                                              <option value="42">乌孜别克</option>
+                                              <option value="43">俄罗斯</option>
+                                              <option value="44">鄂温克</option>
+                                              <option value="45">崩龙</option>
+                                              <option value="46">保安</option>
+                                              <option value="47">裕固</option>
+                                              <option value="48">京</option>
+                                              <option value="49">塔塔尔</option>
+                                              <option value="50">独龙</option>
+                                              <option value="51">鄂伦春</option>
+                                              <option value="52">赫哲</option>
+                                              <option value="53">门巴</option>
+                                              <option value="54">珞巴</option>
+                                              <option value="55">基诺</option>
+                                              <option value="56">外国血统</option>
+                                              <option value="57">其它</option>
+                                          </select>
+                                      </span>
+                                    </li>
+                                    <li><label class="label_name">会员级别</label>
+                                      <div class="add_name">
+                                        <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:120px;">
+                                            <option value="0">非会员</option>
+                                            <option value="1">银会员</option>
+                                            <option value="3">金会员</option>
+                                            <option value="4">铂金会员</option>
+                                        </select>
+                                      </div>
+                                    </li>
+                                    <li><label class="label_name">会员卡号</label> <span class="add_name">
+                                        <input name="会员卡号" type="text" class="text_add" disabled="disabled" style="width:120px;" /></span>
+                                    </li>
+                                    <li style="width:100%"><label class="label_name">客人地址</label>
+                                      <span class="add_name" style="width: 90.5%;">
+                                      <input name="" type="text" class="text_add" style="width:98%;"/></span>
+                                  </li>
+                                    <li style="width:100%"><label class="label_name">客人喜好</label>
+                                      <span class="add_name" style="width: 90.5%;">
+                                        <input name="" type="text" class="text_add" style="width:98%;"/></span>
+                                    </li>
+                                  </ul>
+                            </div>
+                          </div> 
+                      </div>
+                      <div class="layui-col-md3">
+                         <div class="glfang ml-2 border mb-0 p-0" style="height: 485px;">
+                             <div class="glfang-title p-1">
+                                <strong>关联房</strong>
+                                <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button>
+                             </div>
+                             <div class="p-2">暂无关联房</div>
+                         </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="tab-title ml-4" style="display: flex;align-items: center;height: 40px;">
+            <div class="mr-2"><span class="text-danger">房号</span> <strong>8205</strong></div>
+            <div class="mr-2"><span class="text-danger">房单号</span> <strong>23803</strong></div>
+            <div class="mr-2"><span class="text-danger">入住 5</span> <strong>晚</strong></div>
+            <div><small class="text-danger">预授权：6000000元</small></div>
+          </div>
+     </div>
+  </div>
+  <!-- end 房单号 tab-->
+
+ <!-- star 房间 -->
+ <div class="add_order" id="add_fangjian" style="display: none;">
+    <div class="page-content" style="overflow: hidden;padding:10px!important;">
+      <!-- 房间号 -->
+      <div class="fangjiaForm" style="overflow: hidden">
+        <div class="fangjiaForm-title pl-3 pr-3 pb-2">
+          <span>房间号：</span> <strong>8212</strong>
+        </div>
+        <ul class="fangjiaForm-content pl-2 pr-2 pt-3 pb-3" style="overflow: hidden">
+            <li><label class="label_name">房号</label> <span class="add_name">
+                <input name="房号" value="8212" type="text" class="text_add" disabled="disabled"/></span>
+            </li>
+            <li><label class="label_name">房型</label>
+              <span class="add_name">
+                  <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled">
+                    <option value="0">商务大床房</option>
+                    <option value="1">商务套房</option>
+                    <option value="2">至尊湖景大床房</option>
+                    <option value="3">至尊大床房</option>
+                    <option value="4">豪华双床房</option>
+                    <option value="5">豪华大床房</option>
+                  </select>
+              </span>
+            </li>
+            <li><label class="label_name">房价类型</label>
+              <div class="add_name" style="display: flex;justify-content: space-between;">
+                  <select name="interest" lay-filter="aihao" class="text_add" style="width:108px;padding:0;">
+                      <option value="1">门市价</option>
+                      <option value="2">银会员价</option>
+                      <option value="3">金会员价</option>
+                      <option value="4">铂金价</option>
+                      <option value="8">钟点房</option>
+                      <option value="9">不定房价</option>
+                      <option value="10">免费房</option>
+                      <option value="14">自用房</option>
+                      <option value="18" disabled="disabled">协议公式价</option>
+                      <option value="19" disabled="disabled">全年不变价</option>
+                      <option value="20" disabled="disabled">OTA直连价</option>
+                      <option value="3081">钻石会员价</option>
+                      <option value="3083">携程168</option>
+                      <option value="3088">钟点房</option>
+                      <option value="3089">去哪儿</option>
+                      <option value="3091">美团飞猪178</option>
+                      <option value="3093">前台价格</option>
+                      <option value="3094">银卡价</option>
+                      <option value="3097">嘉宾价</option>
+                      <option value="3099">会员价</option>
+                      <option value="3104">黄金会员价</option>
+                      <option value="3105">客房</option>
+                  </select>
+                  <input type="submit" class="text_add text-white bg-success" id="" value="钟" style="width:40px;margin-left:2px;border:0;border-radius:2px"/>
+              </div>
+            </li>
+            <li><label class="label_name">房价</label> <span class="add_name">
+               <input name="房价" type="text" class="text_add" value="188" disabled="disabled"/></span>
+               <div class="prompt r_f"></div>
+           </li>
+            <li><label class="label_name">入住时间</label>
+              <span class="add_name">
+                 <input name="入住时间" type="text" class="text_add" id="">
+              </span>
+            </li>
+            <li><label class="label_name">离店时间</label>
+               <span class="add_name">
+                  <input name="离店时间" type="text" class="text_add" id="">
+               </span>
+            </li>
+            <li><label class="label_name">含早数量</label> 
+               <span class="add_name">
+                  <select name="interest" lay-filter="aihao" class="text_add">
+                      <option value="0">无早</option>
+                      <option value="1">一份早餐</option>
+                      <option value="2">两份早餐</option>
+                      <option value="3">三份早餐</option>
+                      <option value="4">四份早餐</option>
+                   </select>
+               </span>
+            </li>
+            <li><label class="label_name">销售员</label> 
+              <span class="add_name">
+                <select name="interest" lay-filter="aihao" class="text_add">
+                    <option value="0">销售员</option>
+                    <option value="1">销售员1</option>
+                    <option value="3">销售员2</option>
+                    <option value="4">销售员3</option>
+                </select>
+              </span>
+            </li>
+            <li><label class="label_name">联系人</label> <span class="add_name">
+              <input name="联系人" type="text" class="text_add" /></span>
+            </li>
+            <li><label class="label_name">联系电话</label> <span class="add_name">
+                <input name="联系电话" type="text" class="text_add" /></span>
+            </li>
+            <li><label class="label_name">会员卡号</label> <span class="add_name">
+                <input name="会员卡号" type="text" class="text_add" disabled="disabled"/></span>
+            </li>
+            <li><label class="label_name">会员级别</label>
+                <div class="add_name">
+                  <select lay-filter="aihao" class="text_add" disabled="disabled">
+                      <option value="0">非会员</option>
+                      <option value="1">银会员</option>
+                      <option value="3">金会员</option>
+                      <option value="4">铂金会员</option>
+                  </select>
+                </div>
+            </li>
+            <li style="width:100%"><label class="label_name">员工备注</label>
+              <span class="add_name" style="width: 91%;">
+                <input name="" type="text" class="text_add" style="width:100%;"/>
+              </span>
+            </li>
+        </ul>
+      </div>
+      <!-- 新客人 -->
+      <div class="xingkeren" style="overflow: hidden">
+         <div class="search_style mb-0" style="display: flex;align-items: center;justify-content: space-between;">
+            <div class="xingkeren-title f-left">
+              <strong>新客人</strong>
+            </div>
+            <ul class="search_content clearfix">
+                <li style="width: 100%;height:auto;">
+                  <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
+                  <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
+                </li>
+            </ul>
+         </div>
+         <div class="xinkenren-message">
+            <ul>
+                <li><label class="label_name">客人姓名</label> <span class="add_name">
+                    <input name="姓名" value="" type="text" class="text_add" placeholder="不能为空"/></span>
+                </li>
+                <li><label class="label_name">客人性别</label>
+                  <span class="add_name">
+                      <select name="xingbie" lay-filter="aihao" class="text_add">
+                          <option value="0">未知</option>
+                          <option value="1">男</option>
+                          <option value="2">女</option>
+                      </select>
+                  </span>
+                </li>
+                <li><label class="label_name">出生日期</label>
+                  <span class="add_name">
+                     <input name="出生日期" type="text" class="text_add" id="chushengriqi">
+                  </span>
+                </li>
+                <li><label class="label_name">手机号码</label> <span class="add_name">
+                  <input name="手机号码" type="text" class="text_add" placeholder="请填写手机号码" /></span>
+                </li>
+                <li><label class="label_name">证件类型</label>
+                  <div class="add_name">
+                      <select name="证件类型" lay-filter="aihao" class="text_add">
+                          <option value="0">身份证/驾驶证</option>
+                          <option value="1">台湾居民来往通行证</option>
+                          <option value="3">港澳居民来往大陆通行</option>
+                          <option value="4">外籍护照</option>
+                          <option value="5">外交护照</option>
+                          <option value="6">公务护照</option>
+                          <option value="7">因公普通护照</option>
+                          <option value="8">军官证</option>
+                          <option value="9">士兵证</option>
+                          <option value="10">其它</option>
+                      </select>
+                  </div>
+                </li>
+                <li><label class="label_name">证件号码</label> <span class="add_name">
+                   <input name="证件号码" type="text" class="text_add" placeholder="请填写身份证号码"/></span>
+                </li>
+                <li><label class="label_name">签证信息</label> 
+                   <span class="add_name" style="display: flex; align-items: center;">
+                     <select name="qzxinxi" lay-filter="aihao" class="text_add" style="width:95px;padding:0;">
+                        <option value="0">无</option>
+                        <option value="1">普通签证</option>
+                        <option value="2">公务签证</option>
+                        <option value="3">外交签证</option>
+                     </select>
+                     <input name="" type="text" class="text_add" id="youxiaoTime" value="00:00" style="width:50px;margin-left:5px"/>
+                   </span>
+                </li>
+                <li><label class="label_name">客人民族</label>
+                   <span class="add_name">
+                      <select name="客人民族" lay-filter="aihao" class="text_add">
+                          <option value="0"></option>
+                          <option value="1">汉</option>
+                          <option value="2">蒙古</option>
+                          <option value="3">回</option>
+                          <option value="4">藏</option>
+                          <option value="5">维吾尔</option>
+                          <option value="6">苗</option>
+                          <option value="7">彝</option>
+                          <option value="8">壮</option>
+                          <option value="9">布依</option>
+                          <option value="10">朝鲜</option>
+                          <option value="11">满</option>
+                          <option value="12">侗</option>
+                          <option value="13">瑶</option>
+                          <option value="14">白</option>
+                          <option value="15">土家</option>
+                          <option value="16">哈尼</option>
+                          <option value="17">哈萨克</option>
+                          <option value="18">傣</option>
+                          <option value="19">黎</option>
+                          <option value="20">傈僳</option>
+                          <option value="21">佤</option>
+                          <option value="22">畲</option>
+                          <option value="23">高山</option>
+                          <option value="24">拉祜</option>
+                          <option value="25">水</option>
+                          <option value="26">东乡</option>
+                          <option value="27">纳西</option>
+                          <option value="28">景颇</option>
+                          <option value="29">柯尔克孜</option>
+                          <option value="30">土</option>
+                          <option value="31">达翰尔</option>
+                          <option value="32">仫佬</option>
+                          <option value="33">羌</option>
+                          <option value="33">布朗</option>
+                          <option value="34">撒拉</option>
+                          <option value="35">毛难</option>
+                          <option value="36">仡佬</option>
+                          <option value="37">锡伯</option>
+                          <option value="38">阿昌</option>
+                          <option value="39">普米</option>
+                          <option value="40">塔吉克</option>
+                          <option value="41">怒</option>
+                          <option value="42">乌孜别克</option>
+                          <option value="43">俄罗斯</option>
+                          <option value="44">鄂温克</option>
+                          <option value="45">崩龙</option>
+                          <option value="46">保安</option>
+                          <option value="47">裕固</option>
+                          <option value="48">京</option>
+                          <option value="49">塔塔尔</option>
+                          <option value="50">独龙</option>
+                          <option value="51">鄂伦春</option>
+                          <option value="52">赫哲</option>
+                          <option value="53">门巴</option>
+                          <option value="54">珞巴</option>
+                          <option value="55">基诺</option>
+                          <option value="56">外国血统</option>
+                          <option value="57">其它</option>
+                      </select>
+                   </span>
+                </li>
+                <li><label class="label_name">会员级别</label>
+                  <div class="add_name">
+                    <select lay-filter="aihao" class="text_add" disabled="disabled">
+                        <option value="0">非会员</option>
+                        <option value="1">银会员</option>
+                        <option value="3">金会员</option>
+                        <option value="4">铂金会员</option>
+                    </select>
+                  </div>
+                </li>
+                <li><label class="label_name">会员卡号</label> <span class="add_name">
+                    <input name="会员卡号" type="text" class="text_add" disabled="disabled"/></span>
+                </li>
+                <li style="width:100%"><label class="label_name">客人地址</label>
+                  <span class="add_name" style="width: 90.5%;">
+                   <input name="" type="text" class="text_add" style="width:100%;"/></span>
+               </li>
+                <li style="width:100%"><label class="label_name">客人喜好</label>
+                  <span class="add_name" style="width: 90.5%;">
+                    <input name="" type="text" class="text_add" style="width:100%;"/></span>
+                </li>
+              </ul>
+         </div>
+      </div>
+      <!-- 现金支付 -->
+      <div class="xianjinZf" style="overflow: hidden">
+         <ul class=" page-content" style="overflow: hidden;">
+            <li style="width: 18%"><label class="label_name" style="width:50px;">现金</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 18%"><label class="label_name" style="width:50px;">支付宝</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 18%"><label class="label_name" style="width:50px;">微信</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 18%"><label class="label_name" style="width:50px;">银行卡</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 18%"><label class="label_name" style="width:50px;">预授权</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+          </ul>
+      </div>
+    </div>
+ </div>
+ <!-- end 房单号-->
+
   <!-- star 门卡读写 -->
   <div class="add_order" id="menkaduixie" style="display: none;padding:10px;">
-      门卡读写
+    <ul class="page-content" style="overflow: hidden">
+      <li style="width: 100%!important;"><label class="label_name">房间号</label>
+        <span class="add_name">
+          <input value="302" name="" type="text" class="text_add" disabled="disabled" placeholder="不能为空" style="width:150px;font-size:12px;"/>
+          <input type="submit" class="text_add text-white bg-success" id="xuanzhe_add" value="选择" style="width:90px;border:0;border-radius:5px;margin-left:0;"/>
+        </span>
+      </li>
+      <li style="width: 100%!important;"><label class="label_name">楼层</label>
+         <span class="add_name" style="display: flex;justify-content: space-between;">
+           <input value="302" name="" type="text" class="text_add" disabled="disabled" placeholder="不能为空" style="width:150px;font-size:12px;"/>
+         </span>
+      </li>
+      <li style="width: 100%!important;"><label class="label_name">房单号</label>
+         <span class="add_name">
+           <input value="" name="" type="text" class="text_add" disabled="disabled" style="width:150px;font-size:12px;"/>
+         </span>
+      </li>
+      <li style="width: 100%!important;"><label class="label_name">有效期</label>
+         <span class="add_name" style="display: flex;justify-content: space-between;">
+           <input name="" type="text" class="text_add" id="CheckIn1">
+           <input name="" type="text" class="text_add" id="GoWay1"/>
+         </span>
+      </li>
+    </ul>
+  </div>
+  <div class="add_order" id="add_xuanzhe" style="display: none;padding:10px 10px 0 10px;">
+    <div class=" page-content" style="overflow: hidden;padding:0!important;">
+       <div class="row fj_num">
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+          <div class="col">8501</div>
+        </div>
+        <div class="pb-2 pt-2">
+          <label class="label_name">房价类型</label>
+          <span class="add_name"><input name="" type="text" class="text_add" placeholder="输入房号筛选"/></span>
+        </div>
+    </div>
   </div>
   <!-- end 门卡读写 -->
    
@@ -327,30 +1109,44 @@
               <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
             </li>
         </ul>
-    </div>
+     </div>
     <div class="add_order1">
         <h2>预订信息</h2>
         <ul class=" page-content" style="overflow: hidden">
           <li><label class="label_name">预订人/机构</label> <span class="add_name">
-              <input name="预订人/机构" value="" type="text" class="text_add" placeholder="不能为空"/>
-              </span><div class="prompt r_f"></div>
+              <input name="预订人/机构" value="" type="text" class="text_add" placeholder="不能为空"/></span>
           </li>
           <li><label class="label_name">联系人</label> <span class="add_name">
             <input name="联系人" type="text" class="text_add" /></span>
-            <div class="prompt r_f"></div>
           </li>
           <li><label class="label_name">联系电话</label> <span class="add_name">
               <input name="联系电话" type="text" class="text_add" /></span>
-              <div class="prompt r_f"></div>
           </li>
           <li><label class="label_name">房价类型</label>
             <div class="add_name">
                 <select name="interest" lay-filter="aihao" class="text_add">
-                    <option value="0">门市价</option>
-                    <option value="1">银会员价</option>
+                    <option value="1">门市价</option>
+                    <option value="2">银会员价</option>
                     <option value="3">金会员价</option>
                     <option value="4">铂金价</option>
-                    <option value="5">铂金价</option>
+                    <option value="8">钟点房</option>
+                    <option value="9">不定房价</option>
+                    <option value="10">免费房</option>
+                    <option value="14">自用房</option>
+                    <option value="18" disabled="disabled">协议公式价</option>
+                    <option value="19" disabled="disabled">全年不变价</option>
+                    <option value="20" disabled="disabled">OTA直连价</option>
+                    <option value="3081">钻石会员价</option>
+                    <option value="3083">携程168</option>
+                    <option value="3088">钟点房</option>
+                    <option value="3089">去哪儿</option>
+                    <option value="3091">美团飞猪178</option>
+                    <option value="3093">前台价格</option>
+                    <option value="3094">银卡价</option>
+                    <option value="3097">嘉宾价</option>
+                    <option value="3099">会员价</option>
+                    <option value="3104">黄金会员价</option>
+                    <option value="3105">客房</option>
                 </select>
             </div>
           </li>
@@ -531,189 +1327,156 @@
      <div class="add_order1">
          <h2>基本信息</h2>
          <ul class=" page-content" style="overflow: hidden">
-           <li><label class="label_name">预订人/机构</label> <span class="add_name">
-               <input name="预订人/机构" value="" type="text" class="text_add" placeholder="不能为空"/>
+           <li><label class="label_name">姓名</label> <span class="add_name">
+               <input name="姓名" value="" type="text" class="text_add" placeholder="不能为空"/>
                </span><div class="prompt r_f"></div>
            </li>
-           <li><label class="label_name">联系人</label> <span class="add_name">
-             <input name="联系人" type="text" class="text_add" /></span>
+           <li><label class="label_name">联系电话</label> <span class="add_name">
+             <input name="联系电话" type="text" class="text_add" placeholder="请填写手机号码" /></span>
              <div class="prompt r_f"></div>
            </li>
-           <li><label class="label_name">联系电话</label> <span class="add_name">
-               <input name="联系电话" type="text" class="text_add" /></span>
-               <div class="prompt r_f"></div>
-           </li>
-           <li><label class="label_name">房价类型</label>
+           <li><label class="label_name">证件类型</label>
              <div class="add_name">
                  <select name="interest" lay-filter="aihao" class="text_add">
-                     <option value="0">门市价</option>
-                     <option value="1">银会员价</option>
-                     <option value="3">金会员价</option>
-                     <option value="4">铂金价</option>
-                     <option value="5">铂金价</option>
+                     <option value="0">身份证/驾驶证</option>
+                     <option value="1">台湾居民来往通行证</option>
+                     <option value="3">港澳居民来往大陆通行</option>
+                     <option value="4">外籍护照</option>
+                     <option value="5">外交护照</option>
+                     <option value="6">公务护照</option>
+                     <option value="7">因公普通护照</option>
+                     <option value="8">军官证</option>
+                     <option value="9">士兵证</option>
+                     <option value="10">其它</option>
                  </select>
              </div>
            </li>
-           <li><label class="label_name">入住时间</label>
+           <li><label class="label_name">证件号码</label> <span class="add_name">
+              <input name="证件号码" type="text" class="text_add" placeholder="请填写身份证号码"/></span>
+              <div class="prompt r_f"></div>
+          </li>
+           <li><label class="label_name">出生日期</label>
              <span class="add_name">
-                <input name="入住时间" type="text" class="text_add" id="CheckIn">
+                <input name="入住时间" type="text" class="text_add" id="chushengriqi">
              </span>
            </li>
-           <li><label class="label_name">离店时间</label>
+           <li><label class="label_name">性别</label>
               <span class="add_name">
-                 <input name="离店时间" type="text" class="text_add" id="GoWay"/>
+                  <select name="性别" class="text_add">
+                      <option value="1">男</option>
+                      <option value="2">女</option>
+                  </select>
               </span>
            </li>
-           <li><label class="label_name">担保时效</label> 
-             <span class="add_name" style="display: flex;justify-content: space-between;">
-                <select name="interest" lay-filter="aihao" class="text_add" style="width:75px;padding:0;">
-                   <option value="0">非担保</option>
-                   <option value="1">担保</option>
+           <li style="width:50%"><label class="label_name">省</label> 
+              <span class="add_name">
+                <!-- <select name="interest" lay-filter="aihao" class="text_add">
+                   <option value="0">北京市</option>
+                </select> -->
+                <select name="quiz1" class="text_add">
+                    <option value="">请选择省</option>
+                    <option value="浙江">浙江省</option>
+                    <option value="你的工号">江西省</option>
+                    <option value="你最喜欢的老师">福建省</option>
                 </select>
-                <input name="" type="text" class="text_add" id="danbaoTime" value="00:00" style="width:70px;margin-left:5px"/>
+              </span>
+              <label class="label_name">市</label>
+              <span class="add_name">
+                <!-- <select name="interest" lay-filter="aihao" class="text_add">
+                   <option value="0">北京市</option>
+                </select> -->
+                <select name="quiz2" class="text_add">
+                  <option value="">请选择市</option>
+                  <option value="杭州">杭州</option>
+                  <option value="宁波">宁波</option>
+                  <option value="温州">温州</option>
+                  <option value="台州">台州</option>
+                  <option value="绍兴">绍兴</option>
+                </select>
+              </span>
+           </li>
+           <!-- <li><label class="label_name">市</label>
+              <span class="add_name">
+                <select name="interest" lay-filter="aihao" class="text_add">
+                   <option value="0">北京市</option>
+                </select>
+              </span>
+           </li> -->
+           <li><label class="label_name">会员卡号</label> <span class="add_name">
+               <input name="会员卡号" type="text" class="text_add" disabled="disabled"/></span>
+           </li>
+           <li><label class="label_name">邮件地址</label><span class="add_name">
+                <input name="邮件地址" type="text" class="text_add"></span>
+           </li>
+           <li><label class="label_name">销售部门</label>
+             <span class="add_name">
+                <select name="interest" lay-filter="aihao" class="text_add">
+                  <option value="0">测试酒店</option>
+                  <option value="1">测试酒店1</option>
+                </select>
              </span>
            </li>
-           <li><label class="label_name">中介单号</label> <span class="add_name">
-               <input name="中介单号" type="text" class="text_add" disabled="disabled"/></span>
+           <li><label class="label_name">销售员</label> 
+              <div class="add_name">
+                <select name="interest" lay-filter="aihao" class="text_add">
+                    <option value="0">销售员</option>
+                    <option value="1">销售员1</option>
+                    <option value="3">销售员2</option>
+                    <option value="4">销售员3</option>
+                </select>
+              </div>
            </li>
-           <li><label class="label_name">会员卡号</label> <span class="add_name">
-               <input name="label_name" type="text" class="text_add" disabled="disabled"/></span>
-           </li>
-           <li><label class="label_name">会员类型</label>
-               <div class="add_name">
-                 <select lay-filter="aihao" class="text_add" disabled="disabled">
-                     <option value="0">非会员</option>
-                     <option value="1">银会员</option>
-                     <option value="3">金会员</option>
-                     <option value="4">铂金会员</option>
-                 </select>
-               </div>
-           </li>
-           <li><label class="label_name">客源结构</label>
-              <span class="add_name" style="display: flex;justify-content: space-between;">
-                 <select lay-filter="aihao" class="text_add" style="width:75px;padding:0;font-size:12px">
-                    <option value="0">时租</option>
-                    <option value="1">散客</option>
-                    <option value="3" selected="selected">个人会员</option>
-                    <option value="4">协议公司</option>
-                    <option value="5">中介</option>
-                    <option value="6">自用房</option>
-                    <option value="7">免费房</option>
-                 </select>
-                 <select lay-filter="aihao" class="text_add" style="width:70px;margin-left:5px;font-size:12px">
-                     <option value="0">银会员</option>
-                     <option value="1">金会员</option>
-                     <option value="2">铂金会员</option>
-                     <option value="3">业主尊享会员</option>
-                  </select>
-              </span>
-           </li>
-           <li><label class="label_name">订单来源</label> 
-              <span class="add_name" style="display: flex;justify-content: space-between;">
-                 <select name="interest" lay-filter="aihao" class="text_add" style="width:75px;padding:0;font-size:12px">
-                    <option value="0" selected="selected">前台</option>
-                    <option value="1">客服</option>
-                    <option value="3">网站</option>
-                    <option value="4">合作渠道</option>
-                    <option value="5">手机网站</option>
-                    <option value="6">去哪儿预售</option>
-                 </select>
-                 <select name="interest" lay-filter="aihao" class="text_add" style="width:70px;margin-left:5px;font-size:12px">
-                     <option value="0">散客</option>
-                     <option value="1">团体</option>
-                     <option value="2">长住</option>
-                     <option value="3">外宾</option>
-                  </select>
-              </span>
-           </li>
-           <li style="width:50%"><label class="label_name">员工备注</label> <span class="add_name">
-               <input name="" type="text" class="text_add" style="width:390px;"/></span>
-               <div class="prompt r_f"></div>
-           </li>
-           <li><label class="label_name">销售员</label>
-               <div class="add_name">
-                 <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled">
-                     <option value="0">未参与市场活动</option>
-                     <option value="1">注册会员赠送300优惠券</option>
-                     <option value="3">用户人员2</option>
-                     <option value="4">用户人员3</option>
-                 </select>
-               </div>
-           </li>
-           <li><label class="label_name">市场活动</label>
-               <div class="add_name">
-                 <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled">
-                     <option value="0">管理员</option>
-                     <option value="1">用户人员</option>
-                     <option value="3">用户人员2</option>
-                     <option value="4">用户人员3</option>
-                 </select>
-               </div>
+           <li style="width:100%"><label class="label_name">地址</label>
+             <span class="add_name" style="width: 90.5%;">
+              <input name="" type="text" class="text_add" style="width:100%;"/></span>
+          </li>
+           <li style="width:100%"><label class="label_name">备注</label>
+             <span class="add_name" style="width: 90.5%;">
+               <input name="" type="text" class="text_add" style="width:100%;"/></span>
            </li>
          </ul>
          <h2>会员级别</h2>
-         <ul class=" page-content" style="overflow: hidden">
-           <li><label class="label_name">房间类型</label>
-             <span class="add_name" style="display: flex;justify-content: space-between;">
-                 <select name="interest" lay-filter="aihao" class="text_add" style="width:95px;padding:0;font-size: 12px;">
-                    <option value="0">商务大床房</option>
-                    <option value="1">商务套房</option>
-                    <option value="2">至尊湖景大床房</option>
-                    <option value="3">至尊大床房</option>
-                    <option value="4">豪华双床房</option>
-                    <option value="5">豪华大床房</option>
-                 </select>
-                 <input type="text" class="text_add text-danger" value="600" style="width:50px;margin-left:5px"/>
-              </span>
-           </li>
-           <li><label class="label_name">房间数量</label>
-             <span class="add_name" style="display: flex;justify-content: space-between;">
-                 <select name="interest" lay-filter="aihao" class="text_add">
-                    <option value="0">1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
-                    <option value="4">5</option>
-                    <option value="5">6</option>
-                 </select>
-              </span>
-           </li>
-           <li><label class="label_name">入住人</label>
-              <span class="add_name">
-                <input value="梁先生,李小姐" name="" type="text" class="text_add" disabled="disabled" style="width:90px;font-size:12px;"/>
-                <input type="submit" class="text_add text-white bg-success" id="ruzhuren_add" value="增" style="width:40px;margin-left:5px;border:0;border-radius:5px"/>
-             </span>
-           </li>
-           <li><label class="label_name">早餐</label>
-             <span class="add_name" style="display: flex;justify-content: space-between;">
-                 <select name="interest" lay-filter="aihao" class="text_add">
-                    <option value="0">无早</option>
-                    <option value="1">一份早餐</option>
-                    <option value="2">两份早餐</option>
-                    <option value="3">三份早餐</option>
-                    <option value="4">四份早餐</option>
-                 </select>
-              </span>
-           </li>
-         </ul>
-         <h2>押金信息</h2>
-         <ul class=" page-content" style="overflow: hidden">
-           <li><label class="label_name">现金</label> <span class="add_name">
-               <input value="" name="" type="text" class="text_add" /></span>
-           </li>
-           <li><label class="label_name">支付宝</label> <span class="add_name">
-               <input value="" name="" type="text" class="text_add" /></span>
-           </li>
-           <li><label class="label_name">微信</label> <span class="add_name">
-               <input value="" name="" type="text" class="text_add" /></span>
-           </li>
-           <li><label class="label_name">银行卡</label> <span class="add_name">
-               <input value="" name="" type="text" class="text_add" /></span>
-           </li>
-           <li><label class="label_name">预售权</label> <span class="add_name">
-               <input value="" name="" type="text" class="text_add" /></span>
-           </li>
-         </ul>
+         <div class="btn-group-toggle pt-2 pb-4 pl-2 pr-2" data-toggle="buttons">
+            <label class="btn btn-secondary active" style="width: 17%">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> 银会员
+            </label>
+            <label class="btn btn-warning" style="width: 16%">
+              <input type="radio" name="options" id="option2" autocomplete="off"> 金会员
+            </label>
+            <label class="btn btn-light" style="width: 16%">
+              <input type="radio" name="options" id="option3" autocomplete="off"> 铂金会员
+            </label>
+            <label class="btn btn-info" style="width: 16%">
+              <input type="radio" name="options" id="option4" autocomplete="off"> 钻石会员
+            </label>
+            <label class="btn btn-dark" style="width: 16%">
+              <input type="radio" name="options" id="option5" autocomplete="off"> 黑金卡
+            </label>
+            <label class="btn btn-warning" style="width: 16%">
+              <input type="radio" name="options" id="option6" autocomplete="off"> 至尊会员
+            </label>
+          </div>
+         <h2>会员费用</h2>
+         <ul class=" page-content" style="overflow: hidden;">
+            <li style="width: 16%"><label class="label_name" style="width:40px;">现金</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 17%"><label class="label_name" style="width:50px;">支付宝</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 17%"><label class="label_name" style="width:40px;">微信</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 17%"><label class="label_name" style="width:50px;">银行卡</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 17%"><label class="label_name" style="width:50px;">挂房账</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+            </li>
+            <li style="width: 17%"><label class="label_name" style="width:40px;">扫码</label> <span class="add_name">
+                <input value="" name="" type="text" class="text_add" style="width:100px"/></span>
+             </li>
+          </ul>
      </div>
    </div>
   <!-- end 注册会员 -->
@@ -754,14 +1517,43 @@
       </ul> -->
   </div>
   <!-- end 入住人 -->
+
+  <!-- star 入住人 -->
+  <div class="add_order" id="add_kerenxinxi" style="display:none;padding:10px;">
+      <table class="table table-striped table-bordered table-hover" id="sample-table">
+      <thead>
+        <tr>
+          <th width="33.3%">入住人</th>
+          <th width="33.3%">电话号码</th>               
+          <th width="33.3%">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+           <td><input type="text" class="ace"></td>
+           <td><input type="text" class="ace"></td>
+           <td class="td-manage">        
+              <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-danger" ><i class="fa fa-trash  bigger-120"></i></a>
+             </td>
+          </tr>
+        </tbody>
+      </table>  
+  </div>
+  <!-- end 入住人 -->
+  
+  
+
 </body>
 
 </html>
 <script src="../../static/web/src/layui.js" charset="utf-8"></script>
 <script>
-layui.use(['laydate','layer'], function(){
+layui.use(['laydate','layer', 'form', 'element'], function(){
   var laydate = layui.laydate
-    ,layer =layui.layer;
+    ,layer =layui.layer
+    ,from = layui.form
+    ,element = layui.element;
+
   // 入住时间
   laydate.render({
     elem: '#CheckIn'
@@ -772,11 +1564,61 @@ layui.use(['laydate','layer'], function(){
     elem: '#GoWay'
     ,type: 'datetime'
   });
+  // 有效日期
+  laydate.render({
+    elem: '#CheckIn1'
+    ,type: 'datetime'
+  });
+  laydate.render({
+    elem: '#GoWay1'
+    ,type: 'datetime'
+  });
+  // 出生日期
+  laydate.render({
+    elem: '#chushengriqi'
+    ,type: 'datetime'
+  });
   // 担保时间
   laydate.render({
     elem: '#danbaoTime'
     ,type: 'time'
     ,format: 'H点m分'
+  });
+  // 房间号 有人住
+  $('.fangjian').on('click', function(){
+    layer.open({
+      type: 1,
+      title: '房单:2030',
+      maxmin: true,
+      shadeClose: true, //点击遮罩关闭层
+      area: ['1200px', '650px'],
+      content: $('#add_content'),
+      btn: ['增加客人','确认']
+    });
+  });
+  // 房间 无人住
+  $('.fangjian_kong').on('click', function(){
+    layer.open({
+      type: 1,
+      title: '房间:2030',
+      maxmin: true,
+      shadeClose: true, //点击遮罩关闭层
+      area: ['1000px', '650px'],
+      content: $('#add_fangjian'),
+      btn: ['入住']
+    });
+  });
+  // 房间号
+   $('#xuanzhe_add').on('click', function() {
+    layer.open({
+      type: 1,
+      title: '选择房间号',
+      maxmin: true,
+      shadeClose: true, //点击遮罩关闭层
+      area: ['500px', ''],
+      content: $('#add_xuanzhe'),
+      btn: ['取消']
+    });
   });
   // 入住人信息
   $('#ruzhuren_add').on('click', function() {
