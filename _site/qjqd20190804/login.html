@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    登录                                                                                                                 
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/mui.min.css" type="text/css" />
+<link rel="styleSheet" href="assets/css/layer.css" type="text/css" id="layermcss">
+<link rel="stylesheet" href="static/css/css.css" type="text/css" />
+    <script src="assets/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="assets/js/layer.m.js" language="javascript"></script>
+<script src="assets/js/public.js" language="javascript"></script>
+<script>
+        var code_web = '前台登陆';
+        $(document).ready(function () {
+            $("#txt_CheckCode,#usermoblie,#dynamiccode").focus(function () {
+                var txAreaVal = $(this).val();
+                if (txAreaVal == this.defaultValue) {
+                    $(this).val("");
+                }
+            }).blur(function () {
+                var txAreaVal = $(this).val();
+                if (txAreaVal == this.defaultValue || $(this).val() == "") {
+                    $(this).val(this.defaultValue);
+                }
+            }).keydown(function (e) {
+                var ev = document.all ? window.event : e;
+                if (ev.keyCode == 13) {
+                    check_login('', 'vcode_imgs');
+                } else {
+                    return;
+                }
+            });
+        });
+    
+        var Timer;
+        var smsTimer_time = 90; //倒数 90
+        var smsTimer_flag = 90; //倒数 90
+        var smsTime_speed = 1000; //速度 1秒钟
+    
+        //发送手机短信
+        function send_msg(url) {
+            var moblie = $('#usermoblie').val();
+            var code;
+            var geetest_challenge;
+            var geetest_validate;
+            var geetest_seccode;
+            if (moblie == "" || moblie == "请输入手机号码") {
+                layermsg("请输入手机号码！");
+                return false;
+            } else {
+                var reg = /^[1][3456789]\d{9}$/;
+                if (!reg.test(moblie)) {
+                    layermsg('手机格式错误！');
+                    return false;
+                }
+            }
+            var codesear = new RegExp('前台登录');
+            if (codesear.test(code_web)) {
+                if (code_kind == 1) {
+                    code = $.trim($("#checkcode").val());
+                    if (!code) {
+                        layermsg('请填写图片验证码！');
+                        return false;
+                    }
+                } else if (code_kind == 3) {
+                    geetest_challenge = $('input[name="geetest_challenge"]').val();
+                    geetest_validate = $('input[name="geetest_validate"]').val();
+                    geetest_seccode = $('input[name="geetest_seccode"]').val();
+                    if (geetest_challenge == '' || geetest_validate == '' || geetest_seccode == '') {
+                        $("#popup-submit").trigger("click");
+                        layermsg('请点击按钮进行验证！');
+                        return false;
+                    }
+                }
+            }
+            if (smsTimer_time == smsTimer_flag) {
+                Timer = setInterval("smsTimer($('#send_msg_tip'))", smsTime_speed);
+                $.post(url, {
+                    moblie: moblie,
+                    authcode: code,
+                    geetest_challenge: geetest_challenge,
+                    geetest_validate: geetest_validate,
+                    geetest_seccode: geetest_seccode
+                }, function (data) {
+                    //alert(data);
+                    var jsonObject = eval("(" + data + ")");
+                    if (jsonObject.error !== 1) {
+                        clearInterval(Timer);
+                    }
+                    layermsg(jsonObject.msg, 2, function () {
+                        if (code_kind == 1) {
+    
+                            checkCode('vcode_img');
+                        } else if (code_kind == 3) {
+    
+                            $("#popup-submit").trigger("click");
+                        }
+                        if (jsonObject.url) {
+                            window.location.href = jsonObject.url;
+                            window.event.returnValue = false;
+                            return false;
+                        }
+                    });
+                })
+            } else {
+                layermsg('请勿重复发送！', 2, 8);
+                return false;
+            }
+        }
+        //手机号码校验
+        function testMb(mbNo) {
+            var reg = /^[1][3456789]\d{9}$/; //验证手机号码   
+            return reg.test(mbNo);
+        }
+        //倒计时
+        function smsTimer(obj) {
+            if (smsTimer_flag > 0) {
+                $(obj).html('重新发送(' + smsTimer_flag + 's)');
+                $(obj).attr({
+                    'style': 'background:#eaebed;'
+                });
+                smsTimer_flag--;
+            } else {
+                $(obj).html('重新发送');
+                $(obj).attr({
+                    'style': 'background:#eaebed;'
+                });
+                smsTimer_flag = smsTimer_time;
+                clearInterval(Timer);
+            }
+        }
+</script>
+</head>
+<body>
+    
+
+    <div class="login">
+    <div class="d-flex justify-content-center mt-4 mb-4">
+        <div>
+            <img src="static/images/profile-photos/10.png" class="rounded-circle img-thumbnail" width="100">
+        </div>
+    </div>
+    <div class="login_body">
+        <div class="login_body_cont">
+            <form action="#" method="post" onsubmit="return mlogin(this);">
+                <!--手机动态码登录-->
+                <div class="login_sj_box" id="login_sj_box">
+                    <div class="c inputitem_w">
+                        <i class="reg_icon_font login_icon_n4 "></i>
+                        <input name="moblie" id="usermoblie" type="number" class="inputitemtxt" value="" placeholder="请输入手机号码" />
+                        <div class="logoin_msg none" id="show_mobile">
+                            <div class="logoin_msg_tx">请填写正确的手机号</div>
+                            <div class="logoin_msg_icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="login_sj_box_mb" id="login_sjyz_box">
+                    <div class="c ico_name inputitem_w">
+                        <i class="reg_icon_font login_icon_n8 "></i>
+                        <input name="dynamiccode" type="text" class="inputitemtxt" id="dynamiccode" value="" placeholder="请输入短信验证码" />
+                        <div class="logoin_msg none" id="show_dynamiccode">
+                            <div class="logoin_msg_tx">请填写发送的验证码</div>
+                            <div class="logoin_msg_icon"></div>
+                        </div>
+                        <a href="javascript:void(0);" class="login_m_send2" id="send_msg_tip" onclick="send_msg('');">获取动态验证码</a>
+                    </div>
+                </div>
+                <input type="hidden" name="checkurl" value="" />
+                <div class="login_bth"> <input type="submit" name="submit" id="sublogin" value="登录" class="inputSubmit mt15" /></div>
+            </form>
+      </div>
+    </div>
+</div>
+</body>
+</html>

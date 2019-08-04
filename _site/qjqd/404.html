@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+                                                                                                                
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="static/css/weui.css">
+<link rel="stylesheet" href="static/css/jquery-weui.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/demos.css">
+</head>
+<body style="background-color:#F0F0F0">
+    
+
+    <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
+    <!-- 底部导航 -->
+
+</body>
+<script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<script src="static/js/iconfont.js"></script>
+<script src="static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+     $("#checkin-time").calendar({
+        value: ['2019-03-11'],
+        dateFormat: 'yyyy年mm月dd日'
+    });
+    $("#time4").datetimePicker({
+        times: function () {
+          return [
+            {
+              values: ['上午8点', '下午2点', '晚上8点']
+            }
+          ];
+        },
+        max: '2022-12-12',
+        onChange: function (picker, values, displayValues) {
+          console.log(values);
+        }
+     });
+ </script>
+
+
+
+</html>

@@ -173,6 +173,10 @@
        align-items: center;
        background-color:#eee;
     }
+
+    .glfang .layui-form{
+      margin:0;
+    }
   </style>
     <script src="../../static/web/js/jquery-1.9.1.min.js"></script>
 <script src="../../static/web/assets/js/bootstrap.min.js"></script>
@@ -194,7 +198,7 @@
         <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="reg_member">注册会员</a>
       </div>
     </div> -->
-    <div class="layui-row layui-col-space5 pt-2">
+    <div class="layui-row layui-col-space5 pt-2 m-0">
         <div class="layui-col-md1">
           <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="order_add">新增订单</a>
         </div>
@@ -202,7 +206,7 @@
           <a href="javascript:ovid();" class="grid-demo bg-light text-dark topBtn p-0" id="reg_member">注册会员</a>
         </div>
       </div>
-    <div class="layui-row layui-col-space5">
+    <div class="layui-row layui-col-space5 m-0">
         <div class="layui-col-md1 fangjian">
           <div class="grid-demo grid-demo-bg1">
               <span>8502</span>
@@ -464,7 +468,7 @@
     <!----------------左侧 房间信息 --------------------------->
     <div class="layui-col-md9">
         <div class="fangjiaForm" style="overflow: hidden">
-            <ul class="fangjiaForm-content pl-2 pr-2 pt-3 pb-3" style="overflow: hidden">
+            <ul class="fangjiaForm-content pl-2 pr-2 pt-2" style="overflow: hidden">
                 <li><label class="label_name">房号</label> <span class="add_name">
                     <input name="房号" value="8212" type="text" class="text_add" disabled="disabled" style="width:120px;" /></span>
                 </li>
@@ -640,7 +644,7 @@
           <div class="xinkenren-message">
               <ul>
                   <li><label class="label_name">客人姓名</label> <span class="add_name">
-                      <input name="姓名" value="" type="text" class="text_add" placeholder="不能为空" style="width:120px;" /></span>
+                      <input value="赖萌萌" type="text" class="text_add" style="width:120px;" /></span>
                   </li>
                   <li><label class="label_name">客人性别</label>
                     <span class="add_name">
@@ -653,15 +657,15 @@
                   </li>
                   <li><label class="label_name">出生日期</label>
                     <span class="add_name">
-                      <input name="出生日期" type="text" class="text_add" id="chushengriqi" style="width:120px;" >
+                      <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:125px;" >
                     </span>
                   </li>
                   <li><label class="label_name">手机号码</label> <span class="add_name">
-                    <input name="手机号码" type="text" class="text_add" placeholder="请填写手机号码" style="width:120px;" /></span>
+                    <input type="text" class="text_add" value="13800000000" style="width:120px;" /></span>
                   </li>
                   <li><label class="label_name">证件类型</label>
                     <div class="add_name">
-                        <select name="证件类型" lay-filter="aihao" class="text_add" style="width:120px;" >
+                        <select lay-filter="aihao" class="text_add" style="width:120px;" >
                             <option value="0">身份证/驾驶证</option>
                             <option value="1">台湾居民来往通行证</option>
                             <option value="3">港澳居民来往大陆通行</option>
@@ -676,7 +680,7 @@
                     </div>
                   </li>
                   <li><label class="label_name">证件号码</label> <span class="add_name">
-                    <input name="证件号码" type="text" class="text_add" placeholder="请填写身份证号码" style="width:120px;" /></span>
+                    <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:120px;" /></span>
                   </li>
                   <li><label class="label_name">签证信息</label> 
                     <span class="add_name" style="display: flex; align-items: center;">
@@ -689,68 +693,10 @@
                       <input name="" type="text" class="text_add" id="youxiaoTime" value="00:00" style="width:50px;margin-left:5px"/>
                     </span>
                   </li>
-                  <li><label class="label_name">客人民族</label>
+                  <li><label class="label_name">客人国籍</label>
                     <span class="add_name">
-                        <select name="客人民族" lay-filter="aihao" class="text_add" style="width:120px;" >
-                            <option value="0"></option>
-                            <option value="1">汉</option>
-                            <option value="2">蒙古</option>
-                            <option value="3">回</option>
-                            <option value="4">藏</option>
-                            <option value="5">维吾尔</option>
-                            <option value="6">苗</option>
-                            <option value="7">彝</option>
-                            <option value="8">壮</option>
-                            <option value="9">布依</option>
-                            <option value="10">朝鲜</option>
-                            <option value="11">满</option>
-                            <option value="12">侗</option>
-                            <option value="13">瑶</option>
-                            <option value="14">白</option>
-                            <option value="15">土家</option>
-                            <option value="16">哈尼</option>
-                            <option value="17">哈萨克</option>
-                            <option value="18">傣</option>
-                            <option value="19">黎</option>
-                            <option value="20">傈僳</option>
-                            <option value="21">佤</option>
-                            <option value="22">畲</option>
-                            <option value="23">高山</option>
-                            <option value="24">拉祜</option>
-                            <option value="25">水</option>
-                            <option value="26">东乡</option>
-                            <option value="27">纳西</option>
-                            <option value="28">景颇</option>
-                            <option value="29">柯尔克孜</option>
-                            <option value="30">土</option>
-                            <option value="31">达翰尔</option>
-                            <option value="32">仫佬</option>
-                            <option value="33">羌</option>
-                            <option value="33">布朗</option>
-                            <option value="34">撒拉</option>
-                            <option value="35">毛难</option>
-                            <option value="36">仡佬</option>
-                            <option value="37">锡伯</option>
-                            <option value="38">阿昌</option>
-                            <option value="39">普米</option>
-                            <option value="40">塔吉克</option>
-                            <option value="41">怒</option>
-                            <option value="42">乌孜别克</option>
-                            <option value="43">俄罗斯</option>
-                            <option value="44">鄂温克</option>
-                            <option value="45">崩龙</option>
-                            <option value="46">保安</option>
-                            <option value="47">裕固</option>
-                            <option value="48">京</option>
-                            <option value="49">塔塔尔</option>
-                            <option value="50">独龙</option>
-                            <option value="51">鄂伦春</option>
-                            <option value="52">赫哲</option>
-                            <option value="53">门巴</option>
-                            <option value="54">珞巴</option>
-                            <option value="55">基诺</option>
-                            <option value="56">外国血统</option>
-                            <option value="57">其它</option>
+                        <select lay-filter="aihao" class="text_add" style="width:120px;" >
+                          <option value="1">中国</option>
                         </select>
                     </span>
                   </li>
@@ -765,7 +711,17 @@
                     </div>
                   </li>
                   <li><label class="label_name">会员卡号</label> <span class="add_name">
-                      <input name="会员卡号" type="text" class="text_add" disabled="disabled" style="width:120px;" /></span>
+                      <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:120px;" /></span>
+                  </li>
+                  <li><label class="label_name">入住时间</label>
+                    <span class="add_name">
+                      <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:125px;">
+                    </span>
+                  </li>
+                  <li><label class="label_name">离店时间</label>
+                    <span class="add_name">
+                        <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:120px;">
+                    </span>
                   </li>
                   <li style="width:100%"><label class="label_name">客人地址</label>
                     <span class="add_name" style="width: 90.5%;">
@@ -782,13 +738,24 @@
 
     <!---------------右侧 关联房间信息 --------------------------------------->
     <div class="layui-col-md3">
-       <div class="glfang ml-2 border mb-0 p-0" style="height: 485px;">
-           <div class="glfang-title p-1">
-              <strong>关联房</strong>
-              <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button>
+       <div class="glfang ml-2 border mb-0 p-0" style="height: 500px;">
+           <div class="glfang-title">
+              <!-- <strong>关联房</strong>
+              <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button> -->
+              <script type="text/html" id="toolbarDemo">
+                <div class="layui-btn-container">
+                  <strong>关联房</strong>
+                  <button class="layui-btn layui-btn-sm" lay-event="lf_zhengjia">增加</button>
+                </div>
+              </script>
            </div>
-           <div class="p-2">暂无关联房</div>
+           <table id="glfang" lay-filter="test"></table>
+           <script type="text/html" id="barDemo">
+              <a class="layui-btn layui-btn-xs" lay-event="edit">同行</a>
+              <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">取消</a>
+            </script>
        </div>
+
     </div>
   </div>
                </div>
@@ -1591,11 +1558,12 @@
   <!-- end 入住人 -->
     <script src="../../static/web/src/layui.js" charset="utf-8"></script>
 <script>
-layui.use(['laydate','layer', 'form', 'element'], function(){
+layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   var laydate = layui.laydate
     ,layer =layui.layer
     ,from = layui.form
-    ,element = layui.element;
+    ,element = layui.element
+    ,table = layui.table;
 
   // 入住时间
   laydate.render({
@@ -1767,6 +1735,103 @@ layui.use(['laydate','layer', 'form', 'element'], function(){
       }
     });
   });
+
+    //渲染
+    window.ins1 = table.render({
+        elem: '#glfang'
+        ,height: 525
+        ,title: '关联房'
+        ,url: 'json/table/demo1.json'
+        ,page: {}
+        ,autoSort: false
+        //,loading: false
+        ,totalRow: true
+        ,limit: 30
+        ,toolbar: '#toolbarDemo'
+        //,defaultToolbar: ['filter']
+        ,cols: [[
+          {field:'id', title:'房单号', width:57}
+          ,{field:'fangNum', title:'房号', width:57}
+          ,{field:'guests', title:'客人',  width:57}
+          ,{fixed: 'right', title:'', toolbar: '#barDemo', width:57}
+        ]]
+      });
+
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'update':
+            layer.msg('编辑');
+            break;
+          case 'delete':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+
+        console.log(obj)
+      });
+
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 2,
+              area: ['700px', '550px'],
+              fixed: false, //不固定
+              maxmin: true,
+              content: 'form.html'
+            });
+        }
+      });
+
+      //监听排序
+      table.on('sort(test)', function (obj) {
+        console.log(this)
+        //return;
+        layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
+        //服务端排序
+        table.reload('test', {
+          initSort: obj
+          //,page: {curr: 1} //重新从第一页开始
+          , where: { //重新请求服务端
+            key: obj.field //排序字段
+            , order: obj.type //排序方式
+          }
+        });
+      });
+      //return;
+
+      $('i').on('click', function () {
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+      });
+      $('.layui-btn').on('click', function () {
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+      });
 });
 </script>
 </body>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    请假                                                                                                            
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="static/css/weui.css">
+<link rel="stylesheet" href="static/css/jquery-weui.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/demos.css">
+</head>
+<body style="background-color:#F0F0F0">
+    
+
+    <header class="search">
+    <div class="search_header search_bg_Ter_Whi">
+        <div class="search_header_box">
+            <div class="search_left w-2"><a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a></div>
+            <div class="search_center"><a href="javascript:"> 请假 </a></div>
+            <div class="search_right w-2"><a href=""></a></div>
+        </div>
+    </div>
+</header>
+<form class="layui-form layui-form-pane1" action="" lay-filter="first">
+<div class="leave">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">申请人</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="张小姐" id="ci_01" readonly="readonly">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">所属公司</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="广东欧美城文化有限公司" id="ci_02">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">部 门</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="客服部" id="bumen">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">职 务</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="接待员" id="ci_04">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假开始时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-03-01 12:00" id="leave-start">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假结束时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-07-01 12:00" id="leave-end">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">上班时间</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="2019-07-01 12:00" id="work-time">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd">
+                <label class="weui-label">请假类别</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" value="请选择请假类型" id="leave-type" >
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">事由</div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+               <textarea class="weui-textarea" placeholder="填写事由" rows="3" name="desc"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui-btn-area m-3">
+        <button type="submit" class="weui-btn weui-btn_warn" lay-submit lay-filter="*">提交</button>
+    </div>
+    <div class="weui-cells__tips">
+        <strong>备注：</strong><br/>
+        <p class="text-justify">
+            1) 广东欧美各部门负责人、子公司总经理（或负责人）请假、年休假，提报总裁办人力资源部，由常务副总裁审核后报总裁批准；<br/>
+            2) 广东欧美各部门员工请假、年休假由各部门负责人审批;<br/>
+            3) 各公司员工请假、年休假由各子公司总经理或负责人审批,员工请假10天以上报总裁办人力资源部审批。
+        </p>      
+    </div>
+</div>
+</form>
+    <!-- 底部导航 -->
+
+<nav class="menu">
+    <a href="index.html" class="">
+        <i class="fa fa-home"></i><span>首页</span>
+    </a>
+    <a href="leaveSornd.html".html" class="">
+        <i class="fa fa-calendar"></i><span>请假记录</span>
+    </a>
+    <a href="checkInSornd.html" class="">
+        <i class="fa fa-pencil-square-o"></i><span>签到记录</span>
+    </a>
+    <a href="news.html" class="">
+        <i class="fa fa-user-o"></i><span>消息</span>
+        <em class="weui-badge weui-badge_dot"></em>
+    </a>
+</nav>
+
+</body>
+<script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<script src="static/js/iconfont.js"></script>
+<script src="static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+     $("#checkin-time").calendar({
+        value: ['2019-03-11'],
+        dateFormat: 'yyyy年mm月dd日'
+    });
+    $("#time4").datetimePicker({
+        times: function () {
+          return [
+            {
+              values: ['上午8点', '下午2点', '晚上8点']
+            }
+          ];
+        },
+        max: '2022-12-12',
+        onChange: function (picker, values, displayValues) {
+          console.log(values);
+        }
+     });
+ </script>
+
+
+
+<link rel="stylesheet" href="src/css/layui.css">
+<script src="src/layui.js"></script>
+<script>
+layui.use('form', function () {
+    var form = layui.form;
+    //自定义验证规则
+    form.verify({
+    title: function (value) {
+        if (value.length < 5) {
+        return '标题也太短了吧';
+        }
+      }
+    });
+
+    //初始赋值
+    form.val('first', {
+    'title': ''
+    , 'interest': 3
+    , 'like[write]': true
+    , 'desc': '填写事由'
+    });
+
+    //监听提交
+    form.on('submit(*)', function (data) {
+    console.log(data)
+    layer.msg(
+        JSON.stringify(data.field)
+    ) 
+    // alert(JSON.stringify(data.field));
+    return false;
+    });
+
+   //提交
+   function submit($,params){
+     $.post('${ctx}/golbal/add1', params, function (res) {
+        if (res.status==1) {
+          layer.msg(res.message,{icon:1},function(index){
+            CloseWin();
+          }) 
+        }else if(res.status==2){
+          layer.msg(res.message,{icon:0},function(){
+            parent.location.href='${ctx}/golbal/main';
+            CloseWin();
+            })
+        }else{
+          layer.msg(res.message,{icon:0},function(){
+            location.reload(); // 页面刷新
+               return false
+          })
+        } 
+      }, 'json');
+    }
+
+
+});
+</script>
+<script>
+  $("#leave-type").picker({
+      title: "请假类型",
+      cols: [
+          {
+              textAlign: 'center',
+              values: ['事假', '病假', '年休假', '产假', '节育假', '婚假', '丧假', '工伤假', '其他']
+          }
+      ]
+  });
+  $("#bumen").picker({
+      title: "部门",
+      cols: [
+          {
+              textAlign: 'center',
+              values: ['市场部', '运营部', '策划部', '网络部', '工程部', '客服部', '财务部', '其他']
+          }
+      ]
+  });
+  // 定义工作时间 及 学习时间
+  var $date = $("#leave-start");  //开始工作时间
+  var $date1 = $("#leave-end");//结束工作时间
+  var $date2 = $("#work-time");//入学时间
+  var $dateP = [$date,$date1,$date2];
+  for(var i=0;i<$dateP.length;i++){
+      console.log(i+" "+$dateP[i]);//测试数组的index
+      $dateP[i].datetimePicker({
+          title: '请假开始时间',
+          years: [2018, 2019],
+          monthes: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+          onChange: function (picker, values, displayValues) {
+            console.log(values);
+          }
+      });
+  }
+</script>
+
+</html>

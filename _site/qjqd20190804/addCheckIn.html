@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>
+    添加签到                                                                                                            
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/main.css">
+<!-- 图标 -->
+<link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="static/css/weui.css">
+<link rel="stylesheet" href="static/css/jquery-weui.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/demos.css">
+</head>
+<body style="background-color:#F0F0F0">
+    
+
+    <div class="addCheckIn">
+    <form class="layui-form layui-form-pane1" action="" lay-filter="first" style="width:100%">
+        <div class="p-3">
+
+            <div class="layui-form apply-form" style="width:100%">
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">编号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="number" lay-verify="required|name" value="816002" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">签到主题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="name" lay-verify="required|name" required placeholder="签到主题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">部门</label>
+                    <div class="layui-input-block">
+                        <select name="interest" lay-filter="interest">
+                            <option value="0">网络部</option>
+                            <option value="1">市场部</option>
+                            <option value="2">客服部</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">签到人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="name" lay-verify="required|name" required placeholder="请输入签到人" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">申请时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="address" lay-verify="required|address" required placeholder="请选择时间" autocomplete="off" class="layui-input" id="apple">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:100px;">签到类型</label>
+                    <div class="layui-input-block">
+                        <select name="interest" lay-filter="interest">
+                            <option value="0">补签到</option>
+                            <option value="1">重新申请</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label" style="width:100px;">事由</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+ 
+    <!-- 底部导航 -->
+
+</body>
+<script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<script src="static/js/iconfont.js"></script>
+<script src="static/js/fastclick.js"></script>
+<script>
+     $(function() {
+         FastClick.attach(document.body);
+     });
+     $("#checkin-time").calendar({
+        value: ['2019-03-11'],
+        dateFormat: 'yyyy年mm月dd日'
+    });
+    $("#time4").datetimePicker({
+        times: function () {
+          return [
+            {
+              values: ['上午8点', '下午2点', '晚上8点']
+            }
+          ];
+        },
+        max: '2022-12-12',
+        onChange: function (picker, values, displayValues) {
+          console.log(values);
+        }
+     });
+ </script>
+
+ <link rel="stylesheet" href="src/css/layui.css">
+ <script src="src/layui.js"></script>
+ <script>
+ layui.use(['form', 'upload','layer','laydate'], function () {
+   var $ = layui.jquery
+    , form = layui.form
+    , upload = layui.upload
+    , laydate = layui.laydate
+    , layer = layui.layer;
+
+    //申请时间
+    laydate.render({
+        elem: '#apple' //指定元素
+        ,type: 'datetime'
+        ,theme: '#393D49'
+        //,range: true
+        ,trigger: 'click'
+    });
+
+    $('#addCheckInSornd').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加签到',
+            closeBtn: false,
+            shift: 2,
+            area: ['94%', '500px'],
+            shadeClose: true,
+            content: $("#add-main")
+        });
+    });
+   
+    $('#addLeaveSornd').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加请假',
+            closeBtn: false,
+            shift: 2,
+            area: ['94%', '500px'],
+            shadeClose: true,
+            content: $("#add-main1")
+        });
+    });
+   
+    //提交监听事件
+    form.on('submit(save)', function (data) {
+          params = data.field;
+          //alert(JSON.stringify(params))
+          submit($, params);
+          return false;
+        })
+        var obj = document.getElementById('closeBtn');
+        obj.addEventListener('click', function cancel() {
+          CloseWin();
+        });
+ });
+ //提交
+ function submit($, params) {
+    $.post('${ctx}/golbal/add1', params, function (res) {
+        if (res.status == 1) {
+        layer.msg(res.message, { icon: 1 }, function (index) {
+            CloseWin();
+        })
+        } else if (res.status == 2) {
+        layer.msg(res.message, { icon: 0 }, function () {
+            parent.location.href = '${ctx}/golbal/main';
+            CloseWin();
+        })
+        } else {
+        layer.msg(res.message, { icon: 0 }, function () {
+            location.reload(); // 页面刷新
+            return false
+        })
+        }
+    }, 'json');
+    }
+    // debugger;
+    //关闭页面
+    function CloseWin() {
+    parent.location.reload(); // 父页面刷新
+    var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+    parent.layer.close(index); //再执行关闭 
+    }
+ </script>
+ 
+
+
+</html>
