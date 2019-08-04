@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "人事管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "考勤管理",
+      "url": " "
+    },
+    {
+      "id": 1346,
+      "pid": 665,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "薪酬管理",
+      "url": " "
+    }
+]

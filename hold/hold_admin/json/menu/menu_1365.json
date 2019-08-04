@@ -1,0 +1,82 @@
+[
+  {
+    "id": 13651,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房态图",
+    "url":"./page/fangtaitu/fangtaitu.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房态预测",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "订单",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房单",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "工作账",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房价",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会员",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "客史",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "报表",
+    "url": ""
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "夜审",
+    "url": ""
+  }
+]

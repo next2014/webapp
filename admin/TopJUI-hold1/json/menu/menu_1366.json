@@ -1,0 +1,27 @@
+[
+    {
+      "id": 13651,
+      "pid": 1366,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "房间管理",
+      "url":""
+    },
+    {
+      "id": 13653,
+      "pid": 1366,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "维修房",
+      "url": ""
+    },
+    {
+      "id": 13653,
+      "pid": 1366,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "房型管理",
+      "url": ""
+    }
+  ]
+  

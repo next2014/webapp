@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1346,
+        "pid": 666,
+        "state": "open",
+        "iconCls": "fa fa-file-text-o",
+        "text": "采购订单",
+        "url": " "
+    },
+    {
+        "id": 1346,
+        "pid": 666,
+        "state": "open",
+        "iconCls": "fa fa-file-text-o",
+        "text": "采购入库",
+        "url": " "
+    },
+    {
+        "id": 1346,
+        "pid": 666,
+        "state": "open",
+        "iconCls": "fa fa-file-text-o",
+        "text": "采购出库",
+        "url": " "
+    },
+    {
+        "id": 1346,
+        "pid": 666,
+        "state": "open",
+        "iconCls": "fa fa-file-text-o",
+        "text": "库存管理",
+        "url": " "
+    }
+]

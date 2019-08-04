@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1346,
+    "pid": 664,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "公告通知",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 664,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "新闻管理",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 664,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "日程安排查询",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 664,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "固定资产",
+    "url": " "
+  }
+]

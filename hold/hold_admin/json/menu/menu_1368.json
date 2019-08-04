@@ -1,0 +1,35 @@
+[
+    {
+      "id": 13651,
+      "pid": 1368,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "小商品",
+      "url":""
+    },
+    {
+      "id": 13653,
+      "pid": 1368,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "微信售卖",
+      "url": ""
+    },
+    {
+      "id": 13653,
+      "pid": 1368,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "饮食管理",
+      "url": ""
+    },
+    {
+      "id": 13653,
+      "pid": 1368,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "库存记录",
+      "url": ""
+    }
+  ]
+  
