@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "权限管理",
+      "url": "./page/guanliyuan/admin_Competence.html"
+    },
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "管理员列表",
+      "url": "./page/guanliyuan/administrator.html"
+    },
+    {
+      "id": 1346,
+      "pid": 661,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "个人信息",
+      "url": "./page/guanliyuan/admin_info.html"
+    }
+  ]

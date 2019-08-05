@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>表格操作 - layui</title>
+  <link rel="stylesheet" href="src/css/layui.css">
+  <style>
+    body {padding: 20px;
+      /*overflow-y: scroll;*/}
+  </style>
+</head>
+<body>
+    <table class="layui-table" lay-data="{height:305, url:'/json/table/demo5.json', page:true, id:'test2', skin: 'row', even: true}">
+      <thead>
+        <tr>
+          <th lay-data="{field:'id', width:80, sort: true}">ID</th>
+          <th lay-data="{field:'username', width:80, templet: '#usernameTpl'}">用户名</th>
+          <th lay-data="{field:'sex', width:80, sort: true, templet: '#sexTpl'}">性别</th>
+          <th lay-data="{field:'city', width:80}">城市</th>
+          <th lay-data="{field:'sign'}">签名</th>
+          <th lay-data="{field:'experience', width:80, sort: true, style:'background-color: #eee;'}">积分</th>
+          <th lay-data="{field:'score', width:80, sort: true}">评分</th>
+          <th lay-data="{field:'classify', width:80, style:'background-color: #009688; color: #fff;'}">职业</th>
+          <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>
+        </tr>
+      </thead>
+    </table>
+     
+    <script type="text/html" id="usernameTpl">
+      <a href="/?table-demo-id={{d.id}}" class="layui-table-link" target="_blank">{{ d.username }}</a>
+    </script>
+    <script type="text/html" id="sexTpl">
+      {{#  if(d.sex === '女'){ }}
+        <span style="color: #F581B1;">{{ d.sex }}</span>
+      {{#  } else { }}
+        {{ d.sex }}
+      {{#  } }}
+    </script>
+    
+    <script type="text/html" id="barDemo1">
+      <a class="layui-btn layui-btn-xs" lay-event="edit">工具性按钮</a>
+    </script>
+                  
+    <script src="https://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="src/layui.js" charset="utf-8"></script>
+    <script>
+    layui.use('table', function(){
+      var table = layui.table;
+    });
+    </script>
+</body>
+
+</html>
