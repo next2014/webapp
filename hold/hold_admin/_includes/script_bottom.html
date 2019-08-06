@@ -37,6 +37,70 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ,type: 'time'
     ,format: 'H点m分'
   });
+
+  // 日志
+  table.render({
+    elem: '#rizhi'
+    ,url:'../../json/table/rizhi.json'
+    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cols: [[
+      {field:'id', width:100, title: '编码', sort: true}
+      ,{field:'sytime', width:180, title: '使用时间'}
+      ,{field:'czy', width:100, title: '操作员', sort: true}
+      ,{field:'content', width:593, title: '内容'}
+    ]]
+  });
+
+  // 预授权
+  table.render({
+    elem: '#ysq'
+    ,url:'../../json/table/ysq.json'
+    ,cellMinWidth: 80
+    ,cols: [[
+      {field:'id', width:83, title: '编码'}
+      ,{field:'xykh', width:83, title: '信用卡号'}
+      ,{field:'sqm', width:83, title: '授权码'}
+      ,{field:'jinger', width:83, title: '金额'}
+      ,{field:'zhangtai', width:83, title: '状态'}
+      ,{field:'qixian', width:83, title: '期限'}
+      ,{field:'danju', width:83, title: '单据'}
+      ,{field:'fsTime', width:83, title: '发生时间'}
+      ,{field:'banci', width:83, title: '班次'}
+      ,{field:'czy', width:83, title: '操作员'}
+      ,{field:'yyri', width:83, title: '营业日'}
+      ,{field:'beizhu', width:83, title: '备注'}
+    ]]
+  });
+
+  // 电子券973
+  table.render({
+    elem: '#dzq'
+    ,url:'../../json/table/dzq.json'
+    ,cellMinWidth: 80
+    ,cols: [[
+      {field:'id', width:100, title: '编码'}
+      ,{field:'qmc', width:140, title: '券名称'}
+      ,{field:'qlx', width:100, title: '券类型'}
+      ,{field:'jinger', width:100, title: '金额'}
+      ,{field:'zhangtai', width:100, title: '状态'}
+      ,{field:'createTime', width:200, title: '创建时间'}
+      ,{field:'beizhu', width:230, title: '备注'}
+    ]]
+  });
+
+  // 房租计划
+  table.render({
+    elem: '#fzjh'
+    ,url:'../../json/table/fzjh.json'
+    ,cellMinWidth: 80
+    ,cols: [[
+      {field:'id', width:230, title: '编码', sort: true}
+      ,{field:'fangfei', width:243, title: '房费'}
+      ,{field:'yyri', width:240, title: '营业日', sort: true}
+      ,{field:'beizhu', width:260, title: '备注'}
+    ]]
+  });
+
   // 房间号 有人住
   $('.fangjian').on('click', function(){
     layer.open({
@@ -44,11 +108,11 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '房单:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '650px'],
-      content: $('#add_content'),
-      btn: ['确认', '取消']
+      area: ['1000px', '670px'],
+      content: $('#add_content')
     });
   });
+
   // 房间 无人住
   $('.fangjian_kong').on('click', function(){
     layer.open({
@@ -178,24 +242,21 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     });
   });
 
-    //渲染
+    //关联房
     window.ins1 = table.render({
         elem: '#glfang'
         ,height: 525
         ,title: '关联房'
-        ,url: '../json/table/demo1.json'
-        ,page: {}
+        ,url: '../../json/table/demo1.json'
+        ,page: false
         ,autoSort: false
-        //,loading: false
-        ,totalRow: true
-        ,limit: 30
         ,toolbar: '#toolbarDemo'
         //,defaultToolbar: ['filter']
         ,cols: [[
-          {field:'id', title:'房单号', width:57}
-          ,{field:'fangNum', title:'房号', width:57}
-          ,{field:'guests', title:'客人',  width:57}
-          ,{fixed: 'right', title:'', toolbar: '#barDemo', width:57}
+          {field:'id', title:'房单号', width:50}
+          ,{field:'fangNum', title:'房号', width:50}
+          ,{field:'guests', title:'客人',  width:47}
+          ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
         ]]
       });
 
@@ -240,11 +301,10 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         } else if (obj.event === 'edit') {
             //页面层-自定义
             layer.open({
-              type: 2,
-              area: ['700px', '550px'],
-              fixed: false, //不固定
-              maxmin: true,
-              content: 'form.html'
+              type: 1,
+              area: ['300px', '200px'],
+              content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
+              btn: ['是', '否']
             });
         }
       });

@@ -11,22 +11,28 @@
                <li class="layui-this" style="width:8%">房单</li>
              </ul>
              <div class="layui-tab-content" style="min-height: 465px;">
-               <div class="layui-tab-item">日志</div>
-               <div class="layui-tab-item">服务</div>
-               <div class="layui-tab-item">电子券</div>
-               <div class="layui-tab-item">房租计划</div>
-               <div class="layui-tab-item">预授权</div>
-               <div class="layui-tab-item">账务</div>
+               <div class="layui-tab-item" style="margin: 0!important"><!-- 日志 -->
+                 {% include modules/fangtaitu/fangtaitu_rz.html %}
+               </div>
+               <div class="layui-tab-item"><!--服务-->
+                 {% include modules/fangtaitu/fangtaitu_fw.html %}
+               </div>
+               <div class="layui-tab-item"><!--电子券-->
+                 {% include modules/fangtaitu/fangtaitu_dzq.html %}
+               </div>
+               <div class="layui-tab-item"><!--房租计划-->
+                 {% include modules/fangtaitu/fangtaitu_fzjh.html %}
+               </div>
+               <div class="layui-tab-item"><!--预授权-->
+                {% include modules/fangtaitu/fangtaitu_ysq.html %}
+               </div>
+               <div class="layui-tab-item"><!--账务-->
+                {% include modules/fangtaitu/fangtaitu_zw.html %}
+               </div>
                <div class="layui-tab-item layui-show"><!-- 房单 -->
-                   {% include modules/fangtaitu/fangtaitu_fd.html %}
+                {% include modules/fangtaitu/fangtaitu_fd.html %}
                </div>
              </div>
-         </div>
-         <div class="tab-title ml-4" style="display: flex;align-items: center;height: 40px;">
-           <div class="mr-2"><span class="text-danger">房号</span> <strong>8205</strong></div>
-           <div class="mr-2"><span class="text-danger">房单号</span> <strong>23803</strong></div>
-           <div class="mr-2"><span class="text-danger">入住 5</span> <strong>晚</strong></div>
-           <div><small class="text-danger">预授权：6000000元</small></div>
          </div>
     </div>
  </div>
