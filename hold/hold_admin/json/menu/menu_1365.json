@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "房态预测",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -21,7 +21,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "订单",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -29,7 +29,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "房单",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -37,7 +37,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "工作账",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -45,7 +45,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "房价",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -53,7 +53,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "会员",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -61,7 +61,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "客史",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -69,7 +69,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "报表",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   },
   {
     "id": 13653,
@@ -77,6 +77,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "夜审",
-    "url": ""
+    "url": "./page/chanpin/chanpin.html"
   }
 ]

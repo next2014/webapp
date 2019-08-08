@@ -10,6 +10,12 @@
 </head>
 <body>
     {{content}}
-    {% include script_bottom.html %}
+    <script src="../../static/web/src/layui.js" charset="utf-8"></script>
+    {% if page.layout == "page/fangtaitu/fangtaitu" %}
+        {% include script_bottom.html %}
+    {% endif %}
+    {% if page.layout == "page/fjguanli/fjguanli" %}
+        {% include script/fjguanliJs.html %}
+    {% endif %}
 </body>
 </html>

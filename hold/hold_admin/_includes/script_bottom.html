@@ -1,4 +1,3 @@
-<script src="../../static/web/src/layui.js" charset="utf-8"></script>
 <script>
 layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   var laydate = layui.laydate
@@ -51,6 +50,28 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ]]
   });
 
+  // 财务
+  table.render({
+    elem: '#zhangwu'
+    ,url:'../../json/table/zhangwu.json'
+    ,cellMinWidth: 80
+    ,cols: [[
+      {field:'id', width:73, title: '编码'}
+      ,{field:'fanghao', width:80, title: '房号'}
+      ,{field:'xiangmu', width:70, title: '项目'}
+      ,{field:'xmbianhao', width:80, title: '项目编号'}
+      ,{field:'zjxiangmu', width:80, title: '子级项目'}
+      ,{field:'xiaofei', width:73, title: '消费'}
+      ,{field:'jiesuan', width:73, title: '结算'}
+      ,{field:'fsTime', width:73, title: '发生时间'}
+      ,{field:'yyri', width:73, title: '营业日'}
+      ,{field:'banci', width:63, title: '班次'}
+      ,{field:'czy', width:73, title: '操作员'}
+      ,{field:'beizhu', width:73, title: '备注'}
+      ,{field:'caozuo', width:80, title: '操作'}
+    ]]
+  });
+
   // 预授权
   table.render({
     elem: '#ysq'
@@ -58,15 +79,15 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ,cellMinWidth: 80
     ,cols: [[
       {field:'id', width:83, title: '编码'}
-      ,{field:'xykh', width:83, title: '信用卡号'}
-      ,{field:'sqm', width:83, title: '授权码'}
-      ,{field:'jinger', width:83, title: '金额'}
-      ,{field:'zhangtai', width:83, title: '状态'}
+      ,{field:'xykh', width:80, title: '信用卡号'}
+      ,{field:'sqm', width:80, title: '授权码'}
+      ,{field:'jinger', width:70, title: '金额'}
+      ,{field:'zhangtai', width:80, title: '状态'}
       ,{field:'qixian', width:83, title: '期限'}
       ,{field:'danju', width:83, title: '单据'}
       ,{field:'fsTime', width:83, title: '发生时间'}
       ,{field:'banci', width:83, title: '班次'}
-      ,{field:'czy', width:83, title: '操作员'}
+      ,{field:'czy', width:73, title: '操作员'}
       ,{field:'yyri', width:83, title: '营业日'}
       ,{field:'beizhu', width:83, title: '备注'}
     ]]
@@ -260,79 +281,88 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         ]]
       });
 
-      //工具栏事件
-      table.on('toolbar(test)', function (obj) {
-        var checkStatus = table.checkStatus(obj.config.id);
-        switch (obj.event) {
-          case 'add':
-            layer.msg('添加');
-            break;
-          case 'update':
-            layer.msg('编辑');
-            break;
-          case 'delete':
-            layer.msg('删除');
-            break;
-          case 'lf_zhengjia':
-            var data = checkStatus.data;
-            layer.alert(JSON.stringify(data));
-            break;
-        };
-      });
+    //工具栏事件
+    table.on('toolbar(test)', function (obj) {
+      var checkStatus = table.checkStatus(obj.config.id);
+      switch (obj.event) {
+        case 'add':
+          layer.msg('添加');
+          break;
+        case 'update':
+          layer.msg('编辑');
+          break;
+        case 'delete':
+          layer.msg('删除');
+          break;
+        case 'add_glfang':
+          var data = checkStatus.data;
+          layer.alert(JSON.stringify(data));
+          // layer.open({
+          //     type: 1,
+          //     title: '新增关联房',
+          //     maxmin: true,
+          //     shadeClose: true,
+          //     area: ['500px', '400'],
+          //     content: $('#fangjian_content'),
+          //     btn: ['确认']
+          // });
+          break;
+      };
+    });
 
-      //监听单元格编辑
-      table.on('edit(test)', function (obj) {
-        var value = obj.value //得到修改后的值
-          , data = obj.data //得到所在行所有键值
-          , field = obj.field; //得到字段
+    //监听单元格编辑
+    table.on('edit(test)', function (obj) {
+      var value = obj.value //得到修改后的值
+        , data = obj.data //得到所在行所有键值
+        , field = obj.field; //得到字段
 
-        console.log(obj)
-      });
+      console.log(obj)
+    });
 
-      //监听行工具事件
-      table.on('tool(test)', function (obj) {
-        var data = obj.data;
-        //console.log(obj)
-        if (obj.event === 'del') {
-          layer.confirm('真的删除行么', function (index) {
-            obj.del();
-            layer.close(index);
+    //监听行工具事件
+    table.on('tool(test)', function (obj) {
+      var data = obj.data;
+      //console.log(obj)
+      if (obj.event === 'del') {
+        layer.confirm('真的删除行么', function (index) {
+          obj.del();
+          layer.close(index);
+        });
+      } else if (obj.event === 'edit') {
+          //页面层-自定义
+          layer.open({
+            type: 1,
+            area: ['300px', '200px'],
+            content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
+            btn: ['是', '否']
           });
-        } else if (obj.event === 'edit') {
-            //页面层-自定义
-            layer.open({
-              type: 1,
-              area: ['300px', '200px'],
-              content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
-              btn: ['是', '否']
-            });
+      }
+    });
+
+    //监听排序
+    table.on('sort(test)', function (obj) {
+      console.log(this)
+      //return;
+      layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
+      //服务端排序
+      table.reload('test', {
+        initSort: obj
+        //,page: {curr: 1} //重新从第一页开始
+        , where: { //重新请求服务端
+          key: obj.field //排序字段
+          , order: obj.type //排序方式
         }
       });
+    });
+    //return;
 
-      //监听排序
-      table.on('sort(test)', function (obj) {
-        console.log(this)
-        //return;
-        layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
-        //服务端排序
-        table.reload('test', {
-          initSort: obj
-          //,page: {curr: 1} //重新从第一页开始
-          , where: { //重新请求服务端
-            key: obj.field //排序字段
-            , order: obj.type //排序方式
-          }
-        });
-      });
-      //return;
-
-      $('i').on('click', function () {
-        var type = $(this).data('type');
-        active[type] ? active[type].call(this) : '';
-      });
-      $('.layui-btn').on('click', function () {
-        var type = $(this).data('type');
-        active[type] ? active[type].call(this) : '';
-      });
+    $('i').on('click', function () {
+      var type = $(this).data('type');
+      active[type] ? active[type].call(this) : '';
+    });
+    $('.layui-btn').on('click', function () {
+      var type = $(this).data('type');
+      active[type] ? active[type].call(this) : '';
+    });
 });
 </script>

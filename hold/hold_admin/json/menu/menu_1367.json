@@ -5,7 +5,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "电子券管理",
-      "url":""
+      "url":"./page/chanpin/chanpin.html"
     },
     {
       "id": 13653,
@@ -13,7 +13,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "券类型管理",
-      "url": ""
+      "url": "./page/chanpin/chanpin.html"
     }
   ]
   
