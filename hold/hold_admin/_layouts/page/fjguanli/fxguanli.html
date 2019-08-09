@@ -1,0 +1,121 @@
+---
+layout: default
+title: 房型管理
+---
+<div class="fjguanli">
+    <div class="search_style">
+        <ul class="search_content clearfix" style="margin-left:0;">
+            <li>
+                <label class="l_f mr-2">名称</label>
+                <input name="" type="text" class="text_add" style="width:150px;margin-left:0;padding:5px 10px;" />
+            </li>
+            <li style="width:90px;"><button type="button" class="btn_search"><i class="icon-search"></i>查询</button></li>
+        </ul>
+        <div><a href="javascript:ovid()" id="fxguangli_add" class="btn btn-warning" style="height:30px;line-height: 20px;">
+            <i class="icon-plus"></i> 添加房型</a></div>
+    </div>
+    <!-- 房型管理 列表 -->
+    <table class="layui-hide" id="fxguanli" lay-filter="test"></table>
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;">删除</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a>
+    </script>
+    <!--新增房房型-->
+    <div class="add_menber" id="fangjian_content" style="display:none">
+      <div style="padding:15px; overflow: hidden;">
+         <form class="layui-form">
+            <div class="layui-form-item" style="width:100%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房型名称</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房型编码</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">大床数量</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人数</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">微信控房</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width: 100%">
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <textarea  class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <!-- <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div> -->
+         </form>
+      </div>
+    </div>
+    <!--编辑房型-->
+    <div class="add_menber" id="fxguanli_edit" style="display:none">
+      <div style="padding:15px; overflow: hidden;">
+        <form class="layui-form">
+            <div class="layui-form-item" style="width:100%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房型名称</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="乐享大床房" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房型编码</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="乐享大" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">大床数量</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="2" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人数</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="3" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">微信控房(保留量)</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="0" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width: 100%">
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <textarea  class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <!-- <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div> -->
+        </form>
+      </div>
+    </div>
+</div>

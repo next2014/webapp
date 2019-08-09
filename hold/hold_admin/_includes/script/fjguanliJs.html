@@ -6,11 +6,11 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ,element = layui.element
     ,table = layui.table;
 
-    // 添加房间
-    $('#fangjian_add').on('click', function () {
+    // 添加房型
+    $('#fxguangli_add').on('click', function () {
         layer.open({
             type: 1,
-            title: '新增房间',
+            title: '新增房型',
             maxmin: true,
             shadeClose: false,
             area: ['600px', '370px'],
@@ -42,9 +42,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         });
     });
     
-
     // 房间管理973
-    window.ins1 = table.render({
+    table.render({
         elem: '#fjguanli'
         ,height: 525
         ,title: '房间管理'
@@ -52,18 +51,19 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         ,page: true
         ,autoSort: false
         ,toolbar: '#toolbarDemo'
+        ,cellMinWidth: 80
         //,defaultToolbar: ['filter']
         ,cols: [[
-          {field:'id', title:'房间号', width:120}
-          ,{field:'msh', title:'门锁号', width:120}
-          ,{field:'louceng', title:'楼层',  width:120}
+          {field:'id', title:'房间号', width:130}
+          ,{field:'msh', title:'门锁号', width:130}
+          ,{field:'louceng', title:'楼层',  width:130}
           ,{field:'fjtype', title:'房间类型',  width:120}
           ,{field:'zjxiangmu', title:'清洁状态',  width:120}
           ,{field:'xiaofei', title:'维修状态',  width:120}
           ,{field:'jiesuan', title:'在住状态',  width:120}
           ,{field:'fsTime', title:'对应单号',  width:150}
           ,{field:'yyri', title:'是否可用',  width:150}
-          ,{field:'beizhu', title:'备注',  width:150}
+          ,{field:'beizhu', title:'备注',  width:'18%'}
           ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
         ]]
       });
@@ -110,7 +110,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
           //页面层-自定义
           layer.open({
             type: 1,
-            area: ['600px', '370px'],
+            title: '修改房间信息',
+            area: ['600px', '380px'],
             content: $('#fangjian_edit'),
             btn: ['提交', '取消']
           });

@@ -1,0 +1,49 @@
+{
+    "code": 0
+    ,"msg": ""
+    ,"count": 30
+    ,"data": [{
+      "id": "8705"
+      ,"fjtype": "豪华大床房"
+      ,"startime": "2019-08-06"
+      ,"endtime": "2019-08-10"
+      ,"create": "admin"
+      ,"zhuangtai": "有效"
+      ,"leixing": "维修房"
+      ,"zlx": "马桶损坏"
+      ,"beizhu": "fixing soon"
+    },
+    {
+        "id": "8705"
+        ,"fjtype": "豪华大床房"
+        ,"startime": "2019-08-06"
+        ,"endtime": "2019-08-10"
+        ,"create": "admin"
+        ,"zhuangtai": "有效"
+        ,"leixing": "维修房"
+        ,"zlx": "马桶损坏"
+        ,"beizhu": "fixing soon"
+      },
+      {
+        "id": "8705"
+        ,"fjtype": "豪华大床房"
+        ,"startime": "2019-08-06"
+        ,"endtime": "2019-08-10"
+        ,"create": "admin"
+        ,"zhuangtai": "有效"
+        ,"leixing": "维修房"
+        ,"zlx": "马桶损坏"
+        ,"beizhu": "fixing soon"
+      },
+      {
+        "id": "8705"
+        ,"fjtype": "豪华大床房"
+        ,"startime": "2019-08-06"
+        ,"endtime": "2019-08-10"
+        ,"create": "admin"
+        ,"zhuangtai": "有效"
+        ,"leixing": "维修房"
+        ,"zlx": "马桶损坏"
+        ,"beizhu": "fixing soon"
+      }]
+}

@@ -13,7 +13,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "维修房",
-      "url": "./page/chanpin/chanpin.html"
+      "url": "./page/fjguanli/wxfang.html"
     },
     {
       "id": 13653,
@@ -21,7 +21,7 @@
       "state": "open",
       "iconCls": "fa fa-file-text-o",
       "text": "房型管理",
-      "url": "./page/chanpin/chanpin.html"
+      "url": "./page/fjguanli/fxguanli.html"
     }
   ]
   

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欧美城-欧欧主题酒店</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" />
+<link rel="stylesheet" href="../../static/web/css/style.css" />
+<link rel="stylesheet" href="../../static/web/assets/css/codemirror.css" />
+<link rel="stylesheet" href="../../static/web/assets/css/ace.min.css" />
+<link rel="stylesheet" href="../../static/web/font/css/font-awesome.min.css" />
+<!--[if lte IE 8]>
+        <link rel="stylesheet" href="../../static/web/assets/css/ace-ie.min.css" />
+    <![endif]-->
+<link rel="stylesheet" href="../../static/web/src/css/layui.css" />
+<link rel="stylesheet" href="../../static/web/css/global.css">
+<link rel="stylesheet" href="../../static/web/css/main.css">
+    <script src="../../static/web/js/jquery-1.9.1.min.js"></script>
+<script src="../../static/web/assets/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="jsguanli">
+    角色管理
+</div>
+    <script src="../../static/web/src/layui.js" charset="utf-8"></script>
+    
+    
+    
+    
+    
+        <script>
+    layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+        var laydate = layui.laydate
+        ,layer =layui.layer
+        ,from = layui.form
+        ,element = layui.element
+        ,table = layui.table;
+    
+        // 添加房型
+        $('#fxguangli_add').on('click', function () {
+            layer.open({
+                type: 1,
+                title: '新增房型',
+                maxmin: true,
+                shadeClose: false,
+                area: ['600px', '370px'],
+                content: $('#fangjian_content'),
+                btn: ['提交', '取消'],
+                yes: function (index, layero) {
+                    var num = 0;
+                    var str = "";
+                    $(".add_adverts input[type$='text']").each(function (n) {
+                        if ($(this).val() == "") {
+    
+                            layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
+                                title: '提示框',
+                                icon: 0,
+                            });
+                            num++;
+                            return false;
+                        }
+                    });
+                    if (num > 0) { return false; }
+                    else {
+                        layer.alert('添加成功！', {
+                            title: '提示框',
+                            icon: 1,
+                        });
+                        layer.close(index);
+                    }
+                }
+            });
+        });
+        
+        // 房间管理973
+        table.render({
+            elem: '#yhchaxun'
+            ,height: 525
+            ,title: '房间管理'
+            ,url: '../../json/table/yhchaxun.json'
+            ,page: true
+            ,autoSort: false
+            ,toolbar: '#toolbarDemo'
+            ,cellMinWidth: 80
+            //,defaultToolbar: ['filter']
+            ,cols: [[
+              {field:'id', title:'用户编码', width:130}
+              ,{field:'yhzh', title:'用户账号', width:130}
+              ,{field:'yhxm', title:'用户姓名',  width:130}
+              ,{field:'gonghao', title:'工号',  width:120}
+              ,{field:'juese', title:'角色',  width:120}
+              ,{field:'xsbm', title:'销售编码',  width:120}
+              ,{field:'xsymc', title:'销售员名称',  width:120}
+              ,{field:'zhuangtai', title:'状态',  width:150}
+              ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+            ]]
+          });
+    
+        //工具栏事件
+        table.on('toolbar(test)', function (obj) {
+          var checkStatus = table.checkStatus(obj.config.id);
+          switch (obj.event) {
+            case 'add':
+              layer.msg('添加');
+              break;
+            case 'edit':
+              layer.msg('编辑');
+              break;
+            case 'del':
+              layer.msg('删除');
+              break;
+            case 'lf_zhengjia':
+              var data = checkStatus.data;
+              layer.alert(JSON.stringify(data));
+              break;
+          };
+        });
+    
+       //监听单元格编辑
+       table.on('edit(test)', function (obj) {
+          var value = obj.value //得到修改后的值
+            , data = obj.data //得到所在行所有键值
+            , field = obj.field; //得到字段
+    
+          console.log(obj)
+        });
+    
+        //监听行工具事件
+        table.on('tool(test)', function (obj) {
+          var data = obj.data;
+          //console.log(obj)
+          if (obj.event === 'del') {
+            layer.confirm('真的删除行么', function (index) {
+              obj.del();
+              layer.close(index);
+            });
+          } else if (obj.event === 'edit') {
+              //页面层-自定义
+              layer.open({
+                type: 1,
+                title: '修改房间信息',
+                area: ['600px', '380px'],
+                content: $('#fangjian_edit'),
+                btn: ['提交', '取消']
+              });
+          }
+        });
+                          
+        $('i').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        $('.layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    
+    });
+    </script>
+    
+</body>
+</html>

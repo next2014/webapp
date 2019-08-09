@@ -1,0 +1,49 @@
+---
+layout: default
+title: 维修房
+---
+<div class="wxfang">
+    <div class="search_style">
+        <ul class="search_content clearfix" style="margin-left:0;">
+            <li>
+                <label class="l_f mr-2">房号</label>
+                <input name="" type="text" class="text_add" style="width:150px;margin-left:0;padding:5px 10px;" />
+            </li>
+            <li>
+                <label class="l_f mr-2">房型</label>
+                <div class="add_name">
+                    <select name="interest" lay-filter="aihao" style="width:120px;">
+                        <option value="0">全部</option>
+                        <option value="1">商务大床房</option>
+                        <option value="2">商务套房</option>
+                        <option value="3">至尊湖景大床房</option>
+                        <option value="4">至尊大床房</option>
+                        <option value="5">豪华双床房</option>
+                        <option value="6">豪华大床房</option>
+                        <option value="7">乐享大床房</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <label class="l_f mr-2">状态</label>
+                <div class="add_name">
+                    <select name="interest" lay-filter="aihao" style="width:120px;">
+                        <option value="0">全部</option>
+                        <option value="1">有效</option>
+                        <option value="2">完成</option>
+                        <option value="3">取消</option>
+                    </select>
+                </div>
+            </li>
+            <li style="width:90px;"><button type="button" class="btn_search"><i class="icon-search"></i>查询</button></li>
+        </ul>
+        <div><a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;">
+            <i class="icon-plus"></i> 批量完成</a></div>
+    </div>
+    <!-- 维修房 列表 -->
+    <table class="layui-hide" id="wxfang" lay-filter="test"></table>
+    <script type="text/html" id="barDemo">
+        <!-- <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;">删除</a> -->
+        <a class="layui-btn layui-btn-xs" lay-event="wancheng" style="color:#ffffff">完成</a>
+    </script>
+</div>

@@ -15,217 +15,14 @@
     <![endif]-->
 <link rel="stylesheet" href="../../static/web/src/css/layui.css" />
 <link rel="stylesheet" href="../../static/web/css/global.css">
-<style>
-    .fangtaitu .grid-demo{
-      cursor: pointer;
-    }
-    .fangtaitu .layui-row {
-      padding: 6px 4px;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 {
-      width: auto;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 a{
-      width: auto;
-      display: block;
-      text-decoration: none;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 .grid-demo {
-      /* margin: 0 3px; */
-      width: 78px;
-      height: 78px;
-      position: relative;
-    }
-
-    .fangtaitu .layui-row .topBtn {
-      width: 78px !important;
-      height: 40px !important;
-      line-height: 40px !important;
-      margin: 0 10px;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 .grid-demo span {
-      text-align: left;
-      height: 20px;
-      line-height: 20px;
-      display: block;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 .grid-demo span i {
-      display: block;
-      width: 19.5px;
-      height: 19.5px;
-      text-align: center;
-    }
-
-    .fangtaitu .layui-row .layui-col-md1 .grid-demo span.right {
-      position: absolute;
-      right: 0;
-      top: 2px;
-    }
-    .add_order h2{
-      font-weight: bold;
-      height: 25px;
-      line-height: 25px;
-    }
-
-    /*会员级别*/
-    .btn-warning.active, .btn-warning.active:focus, .btn-warning.active:hover, .btn-warning.focus.active, .open>.btn-warning.dropdown-toggle.active {
-        background-color: #ff7b00!important;
-        border-color: #f19515;
-    }
-    .btn-info.active, .btn-info.active:focus, .btn-info.active:hover, .btn-info.focus.active, .open>.btn-info.dropdown-toggle.active {
-        background-color: #2b95d6!important;
-        border-color: #3e99d1;
-    }
-    .btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
-        color: #fff!important;
-        background-color: #8d8d8d!important;
-    }
-    .btn-dark.active, .btn-dark.active:focus, .btn-dark.active:hover, .btn-dark.focus.active, .open>.btn-dark.dropdown-toggle.active {
-        background-color: #646c72!important;
-        border-color: #626f77;
-    }
-    .btn-dark {
-        color: #fff!important;
-        background-color: #343a40!important;
-        border-color: #343a40!important;
-    }
-    .btn-light {
-        color: #888!important;
-        text-shadow: 0 -1px 0 rgba(250,250,250,.25)!important;
-    }
-    .fj_num{
-      height: 210px;
-      overflow:scroll;
-    }
-    .fj_num .col{
-      height: 50px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      color:#ffffff;
-      text-align: center;
-      background-color: #1e76ad;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .fj_num .col:last-child{
-      margin-right: 0!important;
-    }
-    .tab-title{
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    .fanghao-tab li{
-       float:right!important;
-    }
-    .fangjiaForm{
-       overflow: hidden;
-    }
-    .xingkeren .xingkeren-title{
-       width: 100px;
-       height: 40px;
-       line-height: 40px;
-       text-align: center;
-       border-left:1px solid #ccc;
-       border-right:1px solid #ccc;
-       border-top:1px solid #ccc;
-       margin-bottom: -1px;
-       background-color: #fff;
-    }
-    .xingkeren .xingkeren-title strong{
-       display: block;
-       border-top: 2px solid rgb(255, 174, 0);
-    }
-    .xinkenren-message{
-      overflow: hidden;
-      border:1px solid #ccc;
-       padding:15px 0;
-    }
-    
-    /* 房单号 */
-    .fangjiaForm .fangjiaForm-content .label_name,.xingkeren .xinkenren-message .label_name{
-       width:50px;
-       font-size: 12px;
-    }
-    .fangjiaForm .fangjiaForm-content .text_add{
-      padding:0 2px!important;
-      font-size:12px;
-    }
-    .fangjiaForm-title strong{
-       font-size: 25px;
-       font-weight: normal;
-    }
-    .fangjiaForm-title span{
-       color:#FC6E64;
-    }
-    .fangjiaForm-content{
-       border:1px solid #ccc;
-    }
-
-    /* 现金 */
-    .xianjinZf{
-      margin-top:20px;
-      border:1px solid #ccc;
-    }
-    .xianjinZf ul li{
-      display: flex;
-      align-items: center;
-    }
-
-    /* 关联房 */
-    .glfang-title{
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       background-color:#eee;
-    }
-
-    .glfang .layui-form{
-      margin:0;
-    }
-
-    .glfang .layui-table-cell{
-      padding: 0!important;
-    }
-
-    select.text_add{
-      padding:0 2px;
-    }
-    
-    .glfang .layui-table-box th{
-      text-align: center;
-    }
-
-    .glfang .layui-table-box tr td{
-      font-size: 12px;
-      padding: 0!important;
-      text-align: center;
-    }
-    .fjguanli{
-      padding:10px;
-    }
-    .fjguanli li{
-      display: flex;
-    }
-    .fjguanli .layui-form-item {
-      float: left;
-      clear: initial;
-    }
-  </style>
+<link rel="stylesheet" href="../../static/web/css/main.css">
     <script src="../../static/web/js/jquery-1.9.1.min.js"></script>
 <script src="../../static/web/assets/js/bootstrap.min.js"></script>
 
 </head>
 <body>
     <div class="fjguanli">
-    <div class="search_style" style="margin-top: 0;margin-bottom: 0;padding-bottom:10px;display: flex;justify-content: space-between;">
+    <div class="search_style">
         <ul class="search_content clearfix" style="margin-left:0;">
             <li>
                 <label class="l_f mr-2">房号</label>
@@ -269,18 +66,16 @@
             </li>
             <li style="width:90px;"><button type="button" class="btn_search"><i class="icon-search"></i>查询</button></li>
         </ul>
-        <div style="margin-left:10px;">
-          <a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;"><i class="icon-plus"></i> 添加房间</a>
-        </div>
+        <div><a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;">
+            <i class="icon-plus"></i> 添加房间</a></div>
     </div>
-
     <!-- 房间管理 列表 -->
     <table class="layui-hide" id="fjguanli" lay-filter="test"></table>
     <script type="text/html" id="barDemo">
-        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;">删除</a>
-        <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="edit" style="color:#ffffff;">修改</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit_password" style="color:#ffffff">修改密码</a>
+        <a class="layui-btn layui-btn-xs" lay-event="set_tsquanxian" style="color:#ffffff">特殊权限</a>
     </script>
-
     <!--新增房间-->
     <div class="add_menber" id="fangjian_content" style="display:none">
       <div style="padding:15px; overflow: hidden;">
@@ -319,13 +114,13 @@
                 </div>
             </div>
             <div class="layui-form-item" style="width: 100%">
-                <label class="layui-form-label" style="align-items: center;display: flex; padding: 0;height: 100px;">备注</label>
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
                     <textarea  class="layui-textarea"></textarea>
                 </div>
             </div>
-            <div class="layui-form-item" style="width: 100%">
-                <p class="text-danger">注：多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
+            <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
+                <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
             </div>
             <!-- <div class="layui-form-item">
                 <div class="layui-input-block">
@@ -336,7 +131,6 @@
         </form>
       </div>
     </div>
-
     <!--编辑房间-->
     <div class="add_menber" id="fangjian_edit" style="display:none">
       <div style="padding:15px; overflow: hidden;">
@@ -375,13 +169,10 @@
                 </div>
             </div>
             <div class="layui-form-item" style="width: 100%">
-                <label class="layui-form-label" style="align-items: center;display: flex; padding: 0;height: 100px;">备注</label>
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
                     <textarea  class="layui-textarea"></textarea>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width: 100%">
-                <p class="text-danger">注：多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
             </div>
             <!-- <div class="layui-form-item">
                 <div class="layui-input-block">
@@ -404,11 +195,11 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ,element = layui.element
     ,table = layui.table;
 
-    // 添加房间
-    $('#fangjian_add').on('click', function () {
+    // 添加房型
+    $('#fxguangli_add').on('click', function () {
         layer.open({
             type: 1,
-            title: '新增房间',
+            title: '新增房型',
             maxmin: true,
             shadeClose: false,
             area: ['600px', '370px'],
@@ -440,9 +231,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         });
     });
     
-
     // 房间管理973
-    window.ins1 = table.render({
+    table.render({
         elem: '#fjguanli'
         ,height: 525
         ,title: '房间管理'
@@ -450,18 +240,19 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         ,page: true
         ,autoSort: false
         ,toolbar: '#toolbarDemo'
+        ,cellMinWidth: 80
         //,defaultToolbar: ['filter']
         ,cols: [[
-          {field:'id', title:'房间号', width:120}
-          ,{field:'msh', title:'门锁号', width:120}
-          ,{field:'louceng', title:'楼层',  width:120}
+          {field:'id', title:'房间号', width:130}
+          ,{field:'msh', title:'门锁号', width:130}
+          ,{field:'louceng', title:'楼层',  width:130}
           ,{field:'fjtype', title:'房间类型',  width:120}
           ,{field:'zjxiangmu', title:'清洁状态',  width:120}
           ,{field:'xiaofei', title:'维修状态',  width:120}
           ,{field:'jiesuan', title:'在住状态',  width:120}
           ,{field:'fsTime', title:'对应单号',  width:150}
           ,{field:'yyri', title:'是否可用',  width:150}
-          ,{field:'beizhu', title:'备注',  width:150}
+          ,{field:'beizhu', title:'备注',  width:'18%'}
           ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
         ]]
       });
@@ -508,7 +299,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
           //页面层-自定义
           layer.open({
             type: 1,
-            area: ['600px', '370px'],
+            title: '修改房间信息',
+            area: ['600px', '380px'],
             content: $('#fangjian_edit'),
             btn: ['提交', '取消']
           });
@@ -526,6 +318,9 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
 
 });
 </script>
+    
+    
+    
     
 </body>
 </html>

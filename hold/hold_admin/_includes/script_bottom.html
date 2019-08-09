@@ -146,6 +146,20 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       btn: ['入住']
     });
   });
+
+  // 房间 停售
+  $('.fangjian_stop').on('click', function(){
+    layer.open({
+      type: 1,
+      title: '停售房:2030',
+      maxmin: true,
+      shadeClose: true, //点击遮罩关闭层
+      area: ['600px', '280px'],
+      content: $('#add_fjstop'),
+      btn: ['完成停售']
+    });
+  });
+
   // 房间号
    $('#xuanzhe_add').on('click', function() {
     layer.open({
@@ -264,7 +278,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   });
 
     //关联房
-    window.ins1 = table.render({
+    table.render({
         elem: '#glfang'
         ,height: 525
         ,title: '关联房'

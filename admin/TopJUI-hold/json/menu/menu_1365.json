@@ -12,14 +12,6 @@
     "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "房态预测",
-    "url": "./page/chanpin/chanpin.html"
-  },
-  {
-    "id": 13653,
-    "pid": 1365,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
     "text": "订单",
     "url": "./page/chanpin/chanpin.html"
   },
@@ -60,23 +52,7 @@
     "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "客史",
-    "url": "./page/chanpin/chanpin.html"
-  },
-  {
-    "id": 13653,
-    "pid": 1365,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
     "text": "报表",
-    "url": "./page/chanpin/chanpin.html"
-  },
-  {
-    "id": 13653,
-    "pid": 1365,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
-    "text": "夜审",
     "url": "./page/chanpin/chanpin.html"
   }
 ]

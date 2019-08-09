@@ -1,0 +1,139 @@
+---
+layout: default
+title: 用户查询
+---
+<div class="fjguanli">
+    <div class="search_style">
+        <ul class="search_content clearfix" style="margin-left:0;">
+            <li>
+                <label class="l_f mr-2">名称</label>
+                <input name="" type="text" class="text_add" style="width:150px;margin-left:0;padding:5px 10px;" />
+            </li>
+            <li>
+                <label class="l_f mr-2">状态</label>
+                <div class="add_name">
+                    <select name="interest" lay-filter="aihao" style="width:120px;">
+                        <option value="0">全部</option>
+                        <option value="1">在职</option>
+                        <option value="2">离职</option>
+                    </select>
+                </div>
+            </li>
+            <li style="width:90px;"><button type="button" class="btn_search">查询</button></li>
+        </ul>
+        <div><a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;">新增用户</a></div>
+    </div>
+    <!-- 用户列表 -->
+    <table class="layui-hide" id="yhchaxun" lay-filter="test"></table>
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;">删除</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a>
+    </script>
+    <!--新增用户-->
+    <div class="add_menber" id="fangjian_content" style="display:none">
+      <div style="padding:15px; overflow: hidden;">
+        <form class="layui-form">
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">商务大床房</option>
+                        <option value="1">商务大床房1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">清洁已检查</option>
+                        <option value="1">清洁已检查1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">可用房</option>
+                        <option value="1">脏房</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width: 100%">
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <textarea  class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
+                <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
+            </div>
+            <!-- <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div> -->
+        </form>
+      </div>
+    </div>
+    <!--修改用户信息-->
+    <div class="add_menber" id="fangjian_edit" style="display:none">
+      <div style="padding:15px; overflow: hidden;">
+        <form class="layui-form">
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">商务大床房</option>
+                        <option value="1">商务大床房1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">清洁已检查</option>
+                        <option value="1">清洁已检查1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">可用房</option>
+                        <option value="1">脏房</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="width: 100%">
+                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <textarea  class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <!-- <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div> -->
+        </form>
+      </div>
+    </div>
+</div>

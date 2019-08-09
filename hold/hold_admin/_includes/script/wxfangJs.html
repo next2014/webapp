@@ -1,0 +1,56 @@
+<script>
+    layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+        var laydate = layui.laydate
+        ,layer =layui.layer
+        ,from = layui.form
+        ,element = layui.element
+        ,table = layui.table;
+    
+        // 维修房973
+        table.render({
+            elem: '#wxfang'
+            ,height: 525
+            ,title: '维修房'
+            ,url: '../../json/table/wxfang.json'
+            ,page: true
+            ,autoSort: false
+            ,toolbar: '#toolbarDemo'
+            ,cellMinWidth: 100
+            //,defaultToolbar: ['filter']
+            ,cols: [[
+              {field:'id', title:'房间号', width:150}
+              ,{field:'fjtype', title:'房间类型',  width:150}
+              ,{field:'startime', title:'开始日期',  width:130}
+              ,{field:'endtime', title:'结束日期',  width:130}
+              ,{field:'create', title:'创建者',  width:130}
+              ,{field:'zhuangtai', title:'状态',  width:120}
+              ,{field:'leixing', title:'类型',  width:150}
+              ,{field:'zlx', title:'子类型',  width:150}
+              ,{field:'beizhu', title:'备注',  width:'20%'}
+              ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+            ]]
+          });
+
+        //监听行工具事件
+        table.on('tool(test)', function (obj) {
+          var data = obj.data;
+          //console.log(obj)
+          if (obj.event === 'wancheng') {
+            layer.confirm('确定完成停售房？', function (index) {
+                obj.del();
+                layer.close(index);
+            });
+          }
+        });
+                          
+        $('i').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        $('.layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    
+    });
+</script>

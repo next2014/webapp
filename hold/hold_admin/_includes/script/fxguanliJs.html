@@ -1,0 +1,116 @@
+<script>
+layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+    var laydate = layui.laydate
+    ,layer =layui.layer
+    ,from = layui.form
+    ,element = layui.element
+    ,table = layui.table;
+
+    // 添加房型
+    $('#fxguangli_add').on('click', function () {
+        layer.open({
+            type: 1,
+            title: '新增房型',
+            maxmin: true,
+            shadeClose: false,
+            area: ['600px', '390px'],
+            content: $('#fangjian_content'),
+            btn: ['提交', '取消'],
+            yes: function (index, layero) {
+                var num = 0;
+                var str = "";
+                $(".add_adverts input[type$='text']").each(function (n) {
+                    if ($(this).val() == "") {
+                        layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
+                            title: '提示框',
+                            icon: 0,
+                        });
+                        num++;
+                        return false;
+                    }
+                });
+                if (num > 0) { return false; }
+                else {
+                    layer.alert('添加成功！', {
+                        title: '提示框',
+                        icon: 1,
+                    });
+                    layer.close(index);
+                }
+            }
+        });
+    });
+
+    // 房型管理 973
+    table.render({
+        elem: '#fxguanli'
+        ,height: 700
+        ,title: '房型管理'
+        ,url: '../../json/table/fxguanli.json'
+        ,page: true
+        ,toolbar: '#toolbarDemo'
+        //,defaultToolbar: ['filter']
+        ,cols: [[
+            {field:'id', title:'编号', width:150}
+            ,{field:'fxname', title:'房型名称',  width:150}
+            ,{field:'fxbm', title:'房型编码',  width:150}
+            ,{field:'dcsl', title:'大床数量',  width:150}
+            ,{field:'ruzhu', title:'最大入住人数',  width:150}
+            ,{field:'kongfang', title:'微信控房',  width:200}
+            ,{field:'beizhu', title:'备注',  width:'30%'}
+            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+        ]]
+    });
+
+    //工具栏事件
+    table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+            case 'add':
+             layer.msg('添加');
+            break;
+            case 'edit':
+             layer.msg('编辑');
+            break;
+            case 'del':
+             layer.msg('删除');
+            break;
+        };
+    });
+
+    //监听单元格编辑
+    table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+            , data = obj.data //得到所在行所有键值
+            , field = obj.field; //得到字段
+
+          console.log(obj)
+        });
+
+        //监听行工具事件
+    table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+            layer.confirm('真的删除行么', function (index) {
+             obj.del();
+             layer.close(index);
+            });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+                type: 1,
+                title: '修改房型信息',
+                area: ['600px', '390px'],
+                content: $('#fxguanli_edit'),
+                btn: ['提交', '取消']
+            });
+        }
+     });
+    $('.layui-btn').on('click', function () {
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
+
+});
+</script>
