@@ -368,253 +368,58 @@
     <div class="mr-2"><span class="text-danger">入住 5</span> <strong>晚</strong></div>
     <div><small class="text-danger">预授权：6000000元</small></div>
 </div>
+<form class="layui-form" id="add-form" action="">
 <div class="layui-row fd_meg">
-    <!----------------左侧 房间信息 --------------------------->
-    <div class="layui-col-md9">
-        <div class="fangjiaForm" style="overflow: hidden">
-            <ul class="fangjiaForm-content pl-2 pr-2 pt-2" style="overflow: hidden">
-                <li><label class="label_name">房号</label> <span class="add_name">
-                    <input value="8212" type="text" class="text_add" disabled="disabled" style="width:115px;" /></span>
-                </li>
-                <li><label class="label_name">房型</label>
-                  <span class="add_name">
-                      <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
-                        <option value="0">商务大床房</option>
-                        <option value="1">商务套房</option>
-                        <option value="2">至尊湖景大床房</option>
-                        <option value="3">至尊大床房</option>
-                        <option value="4">豪华双床房</option>
-                        <option value="5">豪华大床房</option>
-                      </select>
-                  </span>
-                </li>
-                <li><label class="label_name">房价类型</label>
-                  <div class="add_name" style="display: flex;justify-content: space-between;">
-                      <select name="interest" lay-filter="aihao" class="text_add" style="width:73px;padding:0;">
-                          <option value="1">门市价</option>
-                          <option value="2">银会员价</option>
-                          <option value="3">金会员价</option>
-                          <option value="4">铂金价</option>
-                          <option value="8">钟点房</option>
-                          <option value="9">不定房价</option>
-                          <option value="10">免费房</option>
-                          <option value="14">自用房</option>
-                          <option value="18" disabled="disabled">协议公式价</option>
-                          <option value="19" disabled="disabled">全年不变价</option>
-                          <option value="20" disabled="disabled">OTA直连价</option>
-                          <option value="3081">钻石会员价</option>
-                          <option value="3083">携程168</option>
-                          <option value="3088">钟点房</option>
-                          <option value="3089">去哪儿</option>
-                          <option value="3091">美团飞猪178</option>
-                          <option value="3093">前台价格</option>
-                          <option value="3094">银卡价</option>
-                          <option value="3097">嘉宾价</option>
-                          <option value="3099">会员价</option>
-                          <option value="3104">黄金会员价</option>
-                          <option value="3105">客房</option>
-                      </select>
-                      <input type="submit" class="text_add text-white bg-success" id="" value="钟" style="width:40px;margin-left:2px;border:0;border-radius:2px"/>
-                  </div>
-                </li>
-                <li><label class="label_name">房价</label> <span class="add_name">
-                  <input name="房价" type="text" class="text_add" value="188" disabled="disabled" style="width:115px;color:red!important"/></span>
-                  <div class="prompt r_f"></div>
-                </li>
-                <li><label class="label_name">入住时间</label>
-                  <span class="add_name">
-                    <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
-                  </span>
-                </li>
-                <li><label class="label_name">离店时间</label>
-                  <span class="add_name">
-                      <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
-                  </span>
-                </li>
-                <li><label class="label_name">订单状态</label> 
-                  <span class="add_name">
-                      <select name="interest" lay-filter="aihao" class="text_add" style="width:115px;" >
-                            <option value="1">预订</option>
-                            <option value="2">取消</option>
-                            <option value="3">未到</option>
-                            <option value="4">入住</option>
-                            <option value="5">退房</option>
-                        </select>
-                  </span>
-                </li>
-                <li><label class="label_name">中介单号</label> <span class="add_name">
-                     <input name="中介单号" type="text" class="text_add" style="width:115px;" disabled="disabled" /></span>
-                </li>
-                <li><label class="label_name">联系人</label> <span class="add_name">
-                  <input type="text" class="text_add" value="赖萌萌" style="width:115px;" /></span>
-                </li>
-                <li><label class="label_name">预订人</label> <span class="add_name">
-                  <input type="text" class="text_add" value="赖萌萌" style="width:115px;" /></span>
-                </li>
-                <li><label class="label_name">联系电话</label> <span class="add_name">
-                    <input name="联系电话" type="text" class="text_add" value="18079100000" style="width:115px;" /></span>
-                </li>
-                <li><label class="label_name">订单来源</label> 
-                    <span class="add_name" style="display: flex;justify-content: space-between;">
-                       <select name="interest" lay-filter="aihao" class="text_add" style="width:50px;padding:0;font-size:12px">
-                          <option value="0" selected="selected">前台</option>
-                          <option value="1">客服</option>
-                          <option value="3">网站</option>
-                          <option value="4">合作渠道</option>
-                          <option value="5">手机网站</option>
-                          <option value="6">去哪儿预售</option>
-                       </select>
-                       <select name="interest" lay-filter="aihao" class="text_add" style="width:60px;margin-left:5px;font-size:12px;padding-left:2px">
-                           <option value="0">散客</option>
-                           <option value="1">团体</option>
-                           <option value="2">长住</option>
-                           <option value="3">外宾</option>
-                        </select>
-                    </span>
-                 </li>
-                 <li><label class="label_name">会员级别</label>
-                    <div class="add_name">
-                      <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;" >
-                          <option value="0">非会员</option>
-                          <option value="1">银会员</option>
-                          <option value="3">金会员</option>
-                          <option value="4">铂金会员</option>
-                      </select>
-                    </div>
-                </li>
-                <li><label class="label_name">会员卡号</label> <span class="add_name">
-                    <input type="text" class="text_add" value="110015106" disabled="disabled" style="width:115px;" /></span>
-                </li>
-                <li><label class="label_name">储值积分</label> <span class="add_name">
-                    <input type="text" class="text_add" value="71111/3000" disabled="disabled" style="width:115px;color:red!important" /></span>
-                </li>
-                <li><label class="label_name">客源结构</label>
-                    <span class="add_name" style="display: flex;justify-content: space-between;">
-                       <select lay-filter="aihao" class="text_add" style="width:50px;padding:0;font-size:12px">
-                          <option value="0">时租</option>
-                          <option value="1">散客</option>
-                          <option value="3" selected="selected">个人会员</option>
-                          <option value="4">协议公司</option>
-                          <option value="5">中介</option>
-                          <option value="6">自用房</option>
-                          <option value="7">免费房</option>
-                       </select>
-                       <select lay-filter="aihao" class="text_add" style="width:60px;margin-left:5px;font-size:12px;padding-left:2px">
-                           <option value="0">银会员</option>
-                           <option value="1">金会员</option>
-                           <option value="2">铂金会员</option>
-                           <option value="3">业主尊享会员</option>
-                        </select>
-                    </span>
-                 </li>
-                <li style="width:50%"><label class="label_name">员工备注</label> <span class="add_name">
-                        <input name="" type="text" class="text_add" style="width:293px;"/></span>
-                </li>
-                <li><label class="label_name">市场活动</label>
-                    <div class="add_name">
-                      <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;" >
-                          <option value="0">管理员</option>
-                          <option value="1">用户人员</option>
-                          <option value="3">用户人员2</option>
-                          <option value="4">用户人员3</option>
-                      </select>
-                    </div>
-                </li>
-                <li><label class="label_name">销售员</label>
-                    <div class="add_name">
-                      <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;" >
-                          <option value="0">未参与市场活动</option>
-                          <option value="1">注册会员赠送300优惠券</option>
-                          <option value="3">用户人员2</option>
-                          <option value="4">用户人员3</option>
-                      </select>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!--------------------房间 客人资料-------------------------------->
-        <div class="xingkeren" style="overflow: hidden">
-          <div class="search_style mb-0" style="display: flex;align-items: center;justify-content: space-between;">
-              <div class="xingkeren-title f-left">
-                <strong><span class="badge badge-warning mr-2">主</span>赖萌萌</strong>
-              </div>
-              <ul class="search_content clearfix">
-                  <li style="width: 100%;height:auto;margin-right:0">
-                    <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
-                    <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
-                  </li>
-              </ul>
-          </div>
-          <ul class="xinkenren-message pl-2 pr-2 pt-2">
-              <li><label class="label_name">客人姓名</label> <span class="add_name">
-                  <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
+  <!----------------左侧 房间信息 --------------------------->
+  <div class="layui-col-md9">
+      <div class="fangjiaForm" style="overflow: hidden">
+          <ul class="fangjiaForm-content p-2" style="overflow: hidden">
+              <li><label class="label_name">房号</label> <span class="add_name">
+                  <input value="8212" type="text" class="text_add" disabled="disabled" style="width:115px;" /></span>
               </li>
-              <li><label class="label_name">客人性别</label>
-                <span class="add_name">
-                    <select name="xingbie" lay-filter="aihao" class="text_add" style="width:115px;" >
-                        <option value="0">未知</option>
-                        <option value="1">男</option>
-                        <option value="2">女</option>
-                    </select>
-                </span>
-              </li>
-              <li><label class="label_name">出生日期</label>
-                <span class="add_name">
-                  <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:115px;" >
-                </span>
-              </li>
-              <li><label class="label_name">手机号码</label> <span class="add_name">
-                <input type="text" class="text_add" value="13800000000" style="width:115px;" /></span>
-              </li>
-              <li><label class="label_name">证件类型</label>
+              <li><label class="label_name">房型</label>
                 <div class="add_name">
-                    <select lay-filter="aihao" class="text_add" style="width:115px;" >
-                        <option value="0">身份证/驾驶证</option>
-                        <option value="1">台湾居民来往通行证</option>
-                        <option value="3">港澳居民来往大陆通行</option>
-                        <option value="4">外籍护照</option>
-                        <option value="5">外交护照</option>
-                        <option value="6">公务护照</option>
-                        <option value="7">因公普通护照</option>
-                        <option value="8">军官证</option>
-                        <option value="9">士兵证</option>
-                        <option value="10">其它</option>
+                    <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
+                      <option value="0">商务大床房</option>
+                      <option value="1">商务套房</option>
+                      <option value="2">至尊湖景大床房</option>
+                      <option value="3">至尊大床房</option>
+                      <option value="4">豪华双床房</option>
+                      <option value="5">豪华大床房</option>
                     </select>
                 </div>
               </li>
-              <li><label class="label_name">证件号码</label> <span class="add_name">
-                <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
-              </li>
-              <li><label class="label_name">签证信息</label> 
-                <span class="add_name" style="display: flex; align-items: center;">
-                  <select name="qzxinxi" lay-filter="aihao" class="text_add" style="width:50px;padding:0;">
-                      <option value="0">无</option>
-                      <option value="1">普通签证</option>
-                      <option value="2">公务签证</option>
-                      <option value="3">外交签证</option>
-                  </select>
-                  <input name="" type="text" class="text_add" id="youxiaoTime" placeholder="有效时间" style="width:63px;margin-left:2px"/>
-                </span>
-              </li>
-              <li><label class="label_name">客人国籍</label>
-                <span class="add_name">
-                    <select lay-filter="aihao" class="text_add" style="width:115px;" >
-                      <option value="1">中国</option>
+              <li><label class="label_name">房价类型</label>
+                <div class="add_name fjType_left73" style="display: flex;justify-content: space-between;">
+                    <select name="interest" lay-filter="aihao" class="text_add" style="width:73px;padding:0;">
+                        <option value="1">门市价</option>
+                        <option value="2">银会员价</option>
+                        <option value="3">金会员价</option>
+                        <option value="4">铂金价</option>
+                        <option value="8">钟点房</option>
+                        <option value="9">不定房价</option>
+                        <option value="10">免费房</option>
+                        <option value="14">自用房</option>
+                        <option value="18" disabled="disabled">协议公式价</option>
+                        <option value="19" disabled="disabled">全年不变价</option>
+                        <option value="20" disabled="disabled">OTA直连价</option>
+                        <option value="3081">钻石会员价</option>
+                        <option value="3083">携程168</option>
+                        <option value="3088">钟点房</option>
+                        <option value="3089">去哪儿</option>
+                        <option value="3091">美团飞猪178</option>
+                        <option value="3093">前台价格</option>
+                        <option value="3094">银卡价</option>
+                        <option value="3097">嘉宾价</option>
+                        <option value="3099">会员价</option>
+                        <option value="3104">黄金会员价</option>
+                        <option value="3105">客房</option>
                     </select>
-                </span>
-              </li>
-              <li><label class="label_name">会员级别</label>
-                <div class="add_name">
-                  <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
-                      <option value="0">非会员</option>
-                      <option value="1">银会员</option>
-                      <option value="3">金会员</option>
-                      <option value="4">铂金会员</option>
-                  </select>
+                    <input type="submit" class="text_add text-white bg-success" id="" value="钟" style="width:40px;margin-left:2px;border:0;border-radius:2px"/>
                 </div>
               </li>
-              <li><label class="label_name">会员卡号</label> <span class="add_name">
-                  <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:115px;" /></span>
+              <li><label class="label_name">房价</label> <span class="add_name">
+                <input name="房价" type="text" class="text_add" value="188" disabled="disabled" style="width:115px;color:red!important"/></span>
               </li>
               <li><label class="label_name">入住时间</label>
                 <span class="add_name">
@@ -626,46 +431,254 @@
                     <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
                 </span>
               </li>
-              <li style="width:100%"><label class="label_name">客人地址</label>
-                <span class="add_name" style="width: 93%;">
-                <input name="" type="text" class="text_add" style="width:98%;"/></span>
-            </li>
-              <li style="width:100%"><label class="label_name">客人喜好</label>
-                <span class="add_name" style="width: 93%;">
-                  <input name="" type="text" class="text_add" style="width:98%;"/></span>
+              <li><label class="label_name">订单状态</label> 
+                <div class="add_name">
+                    <select name="interest" lay-filter="aihao" class="text_add">
+                          <option value="1">预订</option>
+                          <option value="2">取消</option>
+                          <option value="3">未到</option>
+                          <option value="4">入住</option>
+                          <option value="5">退房</option>
+                      </select>
+                 </div>
+              </li>
+              <li><label class="label_name">中介单号</label> <span class="add_name">
+                   <input name="中介单号" type="text" class="text_add" style="width:115px;" disabled="disabled" /></span>
+              </li>
+              <li><label class="label_name">联系人</label> <span class="add_name">
+                <input type="text" class="text_add" value="赖萌萌" style="width:115px;" /></span>
+              </li>
+              <li><label class="label_name">预订人</label> <span class="add_name">
+                <input type="text" class="text_add" value="赖萌萌" style="width:115px;" /></span>
+              </li>
+              <li><label class="label_name">联系电话</label> <span class="add_name">
+                  <input name="联系电话" type="text" class="text_add" value="18079100000" style="width:115px;" /></span>
+              </li>
+              <li><label class="label_name">订单来源</label> 
+                  <div class="add_name" style="display: flex;justify-content: space-between;">
+                    <div class="ddlaiyuan_left55">
+                      <select name="interest" lay-filter="aihao" class="text_add" style="width:50px;padding:0;font-size:12px">
+                          <option value="0" selected="selected">前台</option>
+                          <option value="1">客服</option>
+                          <option value="3">网站</option>
+                          <option value="4">合作渠道</option>
+                          <option value="5">手机网站</option>
+                          <option value="6">去哪儿预售</option>
+                      </select>
+                    </div>
+                    <div class="ddlaiyuan_right55">
+                      <select name="interest" lay-filter="aihao" class="text_add" style="width:60px;margin-left:5px;font-size:12px;padding-left:2px">
+                          <option value="0">散客</option>
+                          <option value="1">团体</option>
+                          <option value="2">长住</option>
+                          <option value="3">外宾</option>
+                        </select>
+                    </div>
+                  </div>
+               </li>
+               <li><label class="label_name">会员级别</label>
+                  <div class="add_name">
+                    <select lay-filter="aihao" class="text_add" disabled="disabled">
+                        <option value="0">非会员</option>
+                        <option value="1">银会员</option>
+                        <option value="3">金会员</option>
+                        <option value="4">铂金会员</option>
+                    </select>
+                  </div>
+              </li>
+              <li><label class="label_name">会员卡号</label> <span class="add_name">
+                  <input type="text" class="text_add" value="110015106" disabled="disabled" style="width:115px;" /></span>
+              </li>
+              <li><label class="label_name">储值积分</label> <span class="add_name">
+                  <input type="text" class="text_add" value="71111/3000" disabled="disabled" style="width:115px;color:red!important" /></span>
+              </li>
+              <li><label class="label_name">客源结构</label>
+                  <div class="add_name" style="display: flex;justify-content: space-between;">
+                    <div class="keyuanjg_left55">
+                      <select lay-filter="aihao" class="text_add">
+                        <option value="0">时租</option>
+                        <option value="1">散客</option>
+                        <option value="3" selected="selected">个人会员</option>
+                        <option value="4">协议公司</option>
+                        <option value="5">中介</option>
+                        <option value="6">自用房</option>
+                        <option value="7">免费房</option>
+                     </select>
+                    </div>
+                    <div class="keyuanjg_right55">
+                      <select lay-filter="aihao" class="text_add">
+                        <option value="0">银会员</option>
+                        <option value="1">金会员</option>
+                        <option value="2">铂金会员</option>
+                        <option value="3">业主尊享会员</option>
+                     </select>
+                    </div>
+                  </div>
+               </li>
+              <li style="width:50%"><label class="label_name">员工备注</label> <span class="add_name">
+                      <input name="" type="text" class="text_add" style="width:290px;"/></span>
+              </li>
+              <li><label class="label_name">市场活动</label>
+                  <div class="add_name">
+                    <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled" >
+                        <option value="0">管理员</option>
+                        <option value="1">用户人员</option>
+                        <option value="3">用户人员2</option>
+                        <option value="4">用户人员3</option>
+                    </select>
+                  </div>
+              </li>
+              <li><label class="label_name">销售员</label>
+                  <div class="add_name">
+                    <select name="interest" lay-filter="aihao" class="text_add" disabled="disabled">
+                        <option value="0">未参与市场活动</option>
+                        <option value="1">注册会员赠送300优惠券</option>
+                        <option value="3">用户人员2</option>
+                        <option value="4">用户人员3</option>
+                    </select>
+                  </div>
               </li>
           </ul>
-        </div> 
-    </div>
-
-    <!---------------右侧 关联房间信息 --------------------------------------->
-    <div class="layui-col-md3">
-       <div class="glfang ml-2 border mb-0 p-0" style="height: 495px;">
-           <div class="glfang-title">
-              <strong>关联房</strong>
-              <!-- <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button> -->
-              <script type="text/html" id="toolbarDemo">
-                <div class="layui-btn-container">
-                  <!-- <strong>关联房</strong> -->
-                  <button class="layui-btn layui-btn-sm" lay-event="add_glfang">增加</button>
+      </div>
+      <!--------------------房间 客人资料-------------------------------->
+      <div class="xingkeren" style="overflow: hidden">
+        <div class="search_style mb-0" style="display: flex;align-items: center;justify-content: space-between;">
+            <div class="xingkeren-title f-left">
+              <strong><span class="badge badge-warning mr-2">主</span>赖萌萌</strong>
+            </div>
+            <ul class="search_content clearfix">
+                <li style="width: 100%;height:auto;margin-right:0">
+                  <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
+                  <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
+                </li>
+            </ul>
+        </div>
+        <ul class="xinkenren-message pl-2 pr-2 pt-2">
+            <li><label class="label_name">客人姓名</label> <span class="add_name">
+                <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
+            </li>
+            <li><label class="label_name">客人性别</label>
+              <span class="add_name">
+                  <select name="xingbie" lay-filter="aihao" class="text_add" style="width:115px;" >
+                      <option value="0">未知</option>
+                      <option value="1">男</option>
+                      <option value="2">女</option>
+                  </select>
+              </span>
+            </li>
+            <li><label class="label_name">出生日期</label>
+              <span class="add_name">
+                <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:115px;" >
+              </span>
+            </li>
+            <li><label class="label_name">手机号码</label> <span class="add_name">
+              <input type="text" class="text_add" value="13800000000" style="width:115px;" /></span>
+            </li>
+            <li><label class="label_name">证件类型</label>
+              <div class="add_name">
+                  <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                      <option value="0">身份证/驾驶证</option>
+                      <option value="1">台湾居民来往通行证</option>
+                      <option value="3">港澳居民来往大陆通行</option>
+                      <option value="4">外籍护照</option>
+                      <option value="5">外交护照</option>
+                      <option value="6">公务护照</option>
+                      <option value="7">因公普通护照</option>
+                      <option value="8">军官证</option>
+                      <option value="9">士兵证</option>
+                      <option value="10">其它</option>
+                  </select>
+              </div>
+            </li>
+            <li><label class="label_name">证件号码</label> <span class="add_name">
+              <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
+            </li>
+            <li><label class="label_name">签证信息</label> 
+              <span class="add_name" style="display: flex; align-items: center;">
+                <div class="ddlaiyuan_left55">
+                    <select name="qzxinxi" lay-filter="aihao" class="text_add">
+                        <option value="0">无</option>
+                        <option value="1">普通签证</option>
+                        <option value="2">公务签证</option>
+                        <option value="3">外交签证</option>
+                    </select>
                 </div>
-              </script>
-           </div>
-           <table id="glfang" lay-filter="test"></table>
-           <script type="text/html" id="barDemo">
-              <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">同行</a>
-              <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;margin-left:0">取消</a>
-            </script>
-       </div>
-     
-    </div>
+                <div class="ddlaiyuan_right55">
+                    <input name="" type="text" class="text_add" id="youxiaoTime" placeholder="有效时间" />
+                </div>
+              </span>
+            </li>
+            <li><label class="label_name">客人国籍</label>
+              <span class="add_name">
+                  <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                    <option value="1">中国</option>
+                  </select>
+              </span>
+            </li>
+            <li><label class="label_name">会员级别</label>
+              <div class="add_name">
+                <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
+                    <option value="0">非会员</option>
+                    <option value="1">银会员</option>
+                    <option value="3">金会员</option>
+                    <option value="4">铂金会员</option>
+                </select>
+              </div>
+            </li>
+            <li><label class="label_name">会员卡号</label> <span class="add_name">
+                <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:115px;" /></span>
+            </li>
+            <li><label class="label_name">入住时间</label>
+              <span class="add_name">
+                <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
+              </span>
+            </li>
+            <li><label class="label_name">离店时间</label>
+              <span class="add_name">
+                  <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
+              </span>
+            </li>
+            <li style="width:100%"><label class="label_name">客人地址</label>
+              <span class="add_name" style="width: 92.5%;">
+              <input name="" type="text" class="text_add" style="width:99%;"/></span>
+          </li>
+            <li style="width:100%"><label class="label_name">客人喜好</label>
+              <span class="add_name" style="width: 92.5%;">
+                <input name="" type="text" class="text_add" style="width:99%;"/></span>
+            </li>
+        </ul>
+      </div> 
   </div>
-  <div class="layui-form-item">
-    <div class="layui-input-block" style="margin:10px 0;text-align: right;">
-      <button class="layui-btn layui-btn-normal" lay-submit lay-filter="*">确定</button>
-      <button class="layui-btn layui-btn-primary">取消</button>
-    </div>
-  </div> 
+
+  <!---------------右侧 关联房间信息 --------------------------------------->
+  <div class="layui-col-md3">
+     <div class="glfang ml-2 border mb-0 p-0" style="height: 495px;">
+         <div class="glfang-title">
+            <strong>关联房</strong>
+            <!-- <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button> -->
+            <script type="text/html" id="toolbarDemo">
+              <div class="layui-btn-container">
+                <!-- <strong>关联房</strong> -->
+                <button class="layui-btn layui-btn-sm" lay-event="add_glfang">增加</button>
+              </div>
+            </script>
+         </div>
+         <table id="glfang" lay-filter="test"></table>
+         <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">同行</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;margin-left:0">取消</a>
+          </script>
+     </div>
+   
+  </div>
+</div>
+<div class="layui-form-item">
+  <div class="layui-input-block mt-4" style="text-align: right; margin:0">
+    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="save">确定</button>
+    <button class="layui-btn layui-btn-primary" id="closeBtn">取消</button>
+  </div>
+</div>
+</form>
                </div>
              </div>
          </div>
@@ -1626,32 +1639,32 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ]]
   });
 
-  // 房间号 有人住
+  // 房间号有人住
   $('.fangjian').on('click', function(){
     layer.open({
       type: 1,
       title: '房单:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '670px'],
+      area: ['1000px', '600px'],
       content: $('#add_content')
     });
   });
 
-  // 房间 无人住
+  // 房间无人住
   $('.fangjian_kong').on('click', function(){
     layer.open({
       type: 1,
       title: '房间:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '650px'],
+      area: ['1000px', '600px'],
       content: $('#add_fangjian'),
       btn: ['入住']
     });
   });
 
-  // 房间 停售
+  // 房间停售
   $('.fangjian_stop').on('click', function(){
     layer.open({
       type: 1,
@@ -1671,11 +1684,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '选择房间号',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#add_xuanzhe'),
       btn: ['取消']
     });
   });
+ 
   // 入住人信息
   $('#ruzhuren_add').on('click', function() {
     layer.open({
@@ -1683,11 +1697,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '客人信息',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#add_kerenxinxi'),
       btn: ['取消', '添加', '保存']
     });
   });
+ 
   // 门卡读取
   $('#add_menkaduxie').on('click', function() {
     layer.open({
@@ -1695,11 +1710,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '制作房卡',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#menkaduixie'),
       btn: ['注销', '制卡']
     });
   });
+ 
   // 礼包购买
   $('#add_goumai').on('click', function() {
     layer.open({
@@ -1707,11 +1723,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '礼包购买',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#goumai'),
       btn: ['确定']
     });
   });
+  
   // 新增订单
   $('#order_add').on('click', function () {
     layer.open({
@@ -1719,7 +1736,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '新增订单',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', ''],
+      area: ['1000px', '600px'],
       content: $('#add_order'),
       btn: ['预订'],
       yes: function (index, layero) {
@@ -1746,6 +1763,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       }
     });
   });
+ 
   // 注册会员
   $('#reg_member').on('click', function () {
     layer.open({
@@ -1753,7 +1771,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '新增会员',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', ''],
+      area: ['1000px', '600px'],
       content: $('#add_member'),
       btn: ['注册'],
       yes: function (index, layero) {
@@ -1781,108 +1799,144 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     });
   });
 
-    //关联房
-    table.render({
-        elem: '#glfang'
-        ,height: 525
-        ,title: '关联房'
-        ,url: '../../json/table/demo1.json'
-        ,page: false
-        ,autoSort: false
-        ,toolbar: '#toolbarDemo'
-        //,defaultToolbar: ['filter']
-        ,cols: [[
-          {field:'id', title:'房单号', width:50}
-          ,{field:'fangNum', title:'房号', width:50}
-          ,{field:'guests', title:'客人',  width:47}
-          ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
-        ]]
+  //关联房
+  table.render({
+      elem: '#glfang'
+      ,height: 470
+      ,url: '../../json/table/glfang.json'
+      ,toolbar: '#toolbarDemo'
+      ,cols: [[
+        {field:'id', title:'房单号', width:45}
+        ,{field:'fangNum', title:'房号', width:40}
+        ,{field:'guests', title:'客人',  width:47}
+        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
+      ]]
+  });
+
+  //工具栏事件
+  table.on('toolbar(test)', function (obj) {
+    var checkStatus = table.checkStatus(obj.config.id);
+    switch (obj.event) {
+      case 'add':
+        layer.msg('添加');
+        break;
+      case 'update':
+        layer.msg('编辑');
+        break;
+      case 'delete':
+        layer.msg('删除');
+        break;
+      case 'add_glfang':
+        var data = checkStatus.data;
+        layer.alert(JSON.stringify(data));
+        // layer.open({
+        //     type: 1,
+        //     title: '新增关联房',
+        //     maxmin: true,
+        //     shadeClose: true,
+        //     area: ['500px', '400'],
+        //     content: $('#fangjian_content'),
+        //     btn: ['确认']
+        // });
+        break;
+    };
+  });
+
+  //监听单元格编辑
+  table.on('edit(test)', function (obj) {
+    var value = obj.value //得到修改后的值
+      , data = obj.data //得到所在行所有键值
+      , field = obj.field; //得到字段
+
+    console.log(obj)
+  });
+
+  //监听行工具事件
+  table.on('tool(test)', function (obj) {
+    var data = obj.data;
+    //console.log(obj)
+    if (obj.event === 'del') {
+      layer.confirm('真的删除行么', function (index) {
+        obj.del();
+        layer.close(index);
       });
-
-    //工具栏事件
-    table.on('toolbar(test)', function (obj) {
-      var checkStatus = table.checkStatus(obj.config.id);
-      switch (obj.event) {
-        case 'add':
-          layer.msg('添加');
-          break;
-        case 'update':
-          layer.msg('编辑');
-          break;
-        case 'delete':
-          layer.msg('删除');
-          break;
-        case 'add_glfang':
-          var data = checkStatus.data;
-          layer.alert(JSON.stringify(data));
-          // layer.open({
-          //     type: 1,
-          //     title: '新增关联房',
-          //     maxmin: true,
-          //     shadeClose: true,
-          //     area: ['500px', '400'],
-          //     content: $('#fangjian_content'),
-          //     btn: ['确认']
-          // });
-          break;
-      };
-    });
-
-    //监听单元格编辑
-    table.on('edit(test)', function (obj) {
-      var value = obj.value //得到修改后的值
-        , data = obj.data //得到所在行所有键值
-        , field = obj.field; //得到字段
-
-      console.log(obj)
-    });
-
-    //监听行工具事件
-    table.on('tool(test)', function (obj) {
-      var data = obj.data;
-      //console.log(obj)
-      if (obj.event === 'del') {
-        layer.confirm('真的删除行么', function (index) {
-          obj.del();
-          layer.close(index);
+    } else if (obj.event === 'edit') {
+        //页面层-自定义
+        layer.open({
+          type: 1,
+          area: ['300px', '200px'],
+          content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
+          btn: ['是', '否']
         });
-      } else if (obj.event === 'edit') {
-          //页面层-自定义
-          layer.open({
-            type: 1,
-            area: ['300px', '200px'],
-            content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
-            btn: ['是', '否']
-          });
+    }
+  });
+
+  //监听排序
+  table.on('sort(test)', function (obj) {
+    console.log(this)
+    //return;
+    layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
+    //服务端排序
+    table.reload('test', {
+      initSort: obj
+      //,page: {curr: 1} //重新从第一页开始
+      , where: { //重新请求服务端
+        key: obj.field //排序字段
+        , order: obj.type //排序方式
       }
     });
+  });
+  //return;
 
-    //监听排序
-    table.on('sort(test)', function (obj) {
-      console.log(this)
-      //return;
-      layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
-      //服务端排序
-      table.reload('test', {
-        initSort: obj
-        //,page: {curr: 1} //重新从第一页开始
-        , where: { //重新请求服务端
-          key: obj.field //排序字段
-          , order: obj.type //排序方式
-        }
-      });
-    });
-    //return;
+  //提交监听事件
+  form.on('submit(save)', function (data) {
+    params = data.field;
+    //alert(JSON.stringify(params))
+    submit($, params);
+    return false;
+  })
+  var obj = document.getElementById('closeBtn');
+  obj.addEventListener('click', function cancel() {
+    CloseWin();
+  });
 
-    $('i').on('click', function () {
-      var type = $(this).data('type');
-      active[type] ? active[type].call(this) : '';
-    });
-    $('.layui-btn').on('click', function () {
-      var type = $(this).data('type');
-      active[type] ? active[type].call(this) : '';
-    });
+  $('i').on('click', function () {
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+  $('.layui-btn').on('click', function () {
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+
+
 });
+//提交
+function submit($, params) {
+  $.post('${ctx}/golbal/add1', params, function (res) {
+    if (res.status == 1) {
+    layer.msg(res.message, { icon: 1 }, function (index) {
+        CloseWin();
+    })
+    } else if (res.status == 2) {
+    layer.msg(res.message, { icon: 0 }, function () {
+        parent.location.href = '${ctx}/golbal/main';
+        CloseWin();
+    })
+    } else {
+    layer.msg(res.message, { icon: 0 }, function () {
+        location.reload(); // 页面刷新
+        return false
+    })
+    }
+  }, 'json');
+}
+//关闭页面
+function CloseWin() {
+    parent.location.reload(); // 父页面刷新
+    var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+    parent.layer.close(index); //再执行关闭 
+}
 </script>
     
     

@@ -107,9 +107,7 @@
 .fanghao-tab li{
     float:right!important;
 }
-.fangjiaForm{
-    overflow: hidden;
-}
+
 .xingkeren .xingkeren-title{
     width: 100px;
     height: 40px;
@@ -132,6 +130,36 @@
 }
 
 /* 房单号 */
+.fangjiaForm{
+    overflow: hidden;
+}
+.fangjiaForm .layui-form-select .layui-input,.xingkeren .layui-form-select .layui-input{
+    padding: 0 5px;
+    margin-left: 10px;
+    height: 30px;
+    border-color: #D5D5D5!important;
+    width:115px;
+    font-size: 12px;
+}
+.fangjiaForm .fjType_left73 .layui-form-select .layui-input{
+    width:73px!important;
+}
+.fangjiaForm .ddlaiyuan_left55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_left55 .layui-form-select .layui-input{
+   width:55px!important;
+   margin-left: 10px;;
+}
+.fangjiaForm .ddlaiyuan_right55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_right55 .layui-form-select .layui-input{
+    width:55px!important;
+    margin-left: 5px;;
+ }
+.fangjiaForm .keyuanjg_left55 .layui-form-select .layui-input{
+    width:55px!important;
+    margin-left: 10px;
+ }
+.fangjiaForm .keyuanjg_right55 .layui-form-select .layui-input{
+    width:55px!important;
+    margin-left: 5px;;
+ }
 .fangjiaForm .fangjiaForm-content .label_name,.xingkeren .xinkenren-message .label_name{
     width:50px;
     font-size: 12px;
@@ -200,6 +228,8 @@ select.text_add{
 .fjguanli .layui-form-item,.add_order .layui-form-item{
     float: left;
     clear: initial;
+    width:100%;
+    margin: 0;
 }
 
 .fjguanli .search_style,.wxfang .search_style{

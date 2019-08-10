@@ -122,32 +122,32 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ]]
   });
 
-  // 房间号 有人住
+  // 房间号有人住
   $('.fangjian').on('click', function(){
     layer.open({
       type: 1,
       title: '房单:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '670px'],
+      area: ['1000px', '600px'],
       content: $('#add_content')
     });
   });
 
-  // 房间 无人住
+  // 房间无人住
   $('.fangjian_kong').on('click', function(){
     layer.open({
       type: 1,
       title: '房间:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '650px'],
+      area: ['1000px', '600px'],
       content: $('#add_fangjian'),
       btn: ['入住']
     });
   });
 
-  // 房间 停售
+  // 房间停售
   $('.fangjian_stop').on('click', function(){
     layer.open({
       type: 1,
@@ -167,11 +167,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '选择房间号',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#add_xuanzhe'),
       btn: ['取消']
     });
   });
+ 
   // 入住人信息
   $('#ruzhuren_add').on('click', function() {
     layer.open({
@@ -179,11 +180,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '客人信息',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#add_kerenxinxi'),
       btn: ['取消', '添加', '保存']
     });
   });
+ 
   // 门卡读取
   $('#add_menkaduxie').on('click', function() {
     layer.open({
@@ -191,11 +193,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '制作房卡',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#menkaduixie'),
       btn: ['注销', '制卡']
     });
   });
+ 
   // 礼包购买
   $('#add_goumai').on('click', function() {
     layer.open({
@@ -203,11 +206,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '礼包购买',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['500px', ''],
+      area: ['500px', '400px'],
       content: $('#goumai'),
       btn: ['确定']
     });
   });
+  
   // 新增订单
   $('#order_add').on('click', function () {
     layer.open({
@@ -215,7 +219,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '新增订单',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', ''],
+      area: ['1000px', '600px'],
       content: $('#add_order'),
       btn: ['预订'],
       yes: function (index, layero) {
@@ -242,6 +246,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       }
     });
   });
+ 
   // 注册会员
   $('#reg_member').on('click', function () {
     layer.open({
@@ -249,7 +254,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '新增会员',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', ''],
+      area: ['1000px', '600px'],
       content: $('#add_member'),
       btn: ['注册'],
       yes: function (index, layero) {
@@ -277,106 +282,142 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     });
   });
 
-    //关联房
-    table.render({
-        elem: '#glfang'
-        ,height: 525
-        ,title: '关联房'
-        ,url: '../../json/table/demo1.json'
-        ,page: false
-        ,autoSort: false
-        ,toolbar: '#toolbarDemo'
-        //,defaultToolbar: ['filter']
-        ,cols: [[
-          {field:'id', title:'房单号', width:50}
-          ,{field:'fangNum', title:'房号', width:50}
-          ,{field:'guests', title:'客人',  width:47}
-          ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
-        ]]
+  //关联房
+  table.render({
+      elem: '#glfang'
+      ,height: 470
+      ,url: '../../json/table/glfang.json'
+      ,toolbar: '#toolbarDemo'
+      ,cols: [[
+        {field:'id', title:'房单号', width:45}
+        ,{field:'fangNum', title:'房号', width:40}
+        ,{field:'guests', title:'客人',  width:47}
+        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
+      ]]
+  });
+
+  //工具栏事件
+  table.on('toolbar(test)', function (obj) {
+    var checkStatus = table.checkStatus(obj.config.id);
+    switch (obj.event) {
+      case 'add':
+        layer.msg('添加');
+        break;
+      case 'update':
+        layer.msg('编辑');
+        break;
+      case 'delete':
+        layer.msg('删除');
+        break;
+      case 'add_glfang':
+        var data = checkStatus.data;
+        layer.alert(JSON.stringify(data));
+        // layer.open({
+        //     type: 1,
+        //     title: '新增关联房',
+        //     maxmin: true,
+        //     shadeClose: true,
+        //     area: ['500px', '400'],
+        //     content: $('#fangjian_content'),
+        //     btn: ['确认']
+        // });
+        break;
+    };
+  });
+
+  //监听单元格编辑
+  table.on('edit(test)', function (obj) {
+    var value = obj.value //得到修改后的值
+      , data = obj.data //得到所在行所有键值
+      , field = obj.field; //得到字段
+
+    console.log(obj)
+  });
+
+  //监听行工具事件
+  table.on('tool(test)', function (obj) {
+    var data = obj.data;
+    //console.log(obj)
+    if (obj.event === 'del') {
+      layer.confirm('真的删除行么', function (index) {
+        obj.del();
+        layer.close(index);
       });
-
-    //工具栏事件
-    table.on('toolbar(test)', function (obj) {
-      var checkStatus = table.checkStatus(obj.config.id);
-      switch (obj.event) {
-        case 'add':
-          layer.msg('添加');
-          break;
-        case 'update':
-          layer.msg('编辑');
-          break;
-        case 'delete':
-          layer.msg('删除');
-          break;
-        case 'add_glfang':
-          var data = checkStatus.data;
-          layer.alert(JSON.stringify(data));
-          // layer.open({
-          //     type: 1,
-          //     title: '新增关联房',
-          //     maxmin: true,
-          //     shadeClose: true,
-          //     area: ['500px', '400'],
-          //     content: $('#fangjian_content'),
-          //     btn: ['确认']
-          // });
-          break;
-      };
-    });
-
-    //监听单元格编辑
-    table.on('edit(test)', function (obj) {
-      var value = obj.value //得到修改后的值
-        , data = obj.data //得到所在行所有键值
-        , field = obj.field; //得到字段
-
-      console.log(obj)
-    });
-
-    //监听行工具事件
-    table.on('tool(test)', function (obj) {
-      var data = obj.data;
-      //console.log(obj)
-      if (obj.event === 'del') {
-        layer.confirm('真的删除行么', function (index) {
-          obj.del();
-          layer.close(index);
+    } else if (obj.event === 'edit') {
+        //页面层-自定义
+        layer.open({
+          type: 1,
+          area: ['300px', '200px'],
+          content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
+          btn: ['是', '否']
         });
-      } else if (obj.event === 'edit') {
-          //页面层-自定义
-          layer.open({
-            type: 1,
-            area: ['300px', '200px'],
-            content: '<p class="p-2">同行同享优惠,将目标房单转化会员订单，并享受会员价？</p>',
-            btn: ['是', '否']
-          });
+    }
+  });
+
+  //监听排序
+  table.on('sort(test)', function (obj) {
+    console.log(this)
+    //return;
+    layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
+    //服务端排序
+    table.reload('test', {
+      initSort: obj
+      //,page: {curr: 1} //重新从第一页开始
+      , where: { //重新请求服务端
+        key: obj.field //排序字段
+        , order: obj.type //排序方式
       }
     });
+  });
+  //return;
 
-    //监听排序
-    table.on('sort(test)', function (obj) {
-      console.log(this)
-      //return;
-      layer.msg('服务端排序。order by ' + obj.field + ' ' + obj.type);
-      //服务端排序
-      table.reload('test', {
-        initSort: obj
-        //,page: {curr: 1} //重新从第一页开始
-        , where: { //重新请求服务端
-          key: obj.field //排序字段
-          , order: obj.type //排序方式
-        }
-      });
-    });
-    //return;
+  //提交监听事件
+  form.on('submit(save)', function (data) {
+    params = data.field;
+    //alert(JSON.stringify(params))
+    submit($, params);
+    return false;
+  })
+  var obj = document.getElementById('closeBtn');
+  obj.addEventListener('click', function cancel() {
+    CloseWin();
+  });
 
-    $('i').on('click', function () {
-      var type = $(this).data('type');
-      active[type] ? active[type].call(this) : '';
-    });
-    $('.layui-btn').on('click', function () {
-      var type = $(this).data('type');
-      active[type] ? active[type].call(this) : '';
-    });
+  $('i').on('click', function () {
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+  $('.layui-btn').on('click', function () {
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+
+
 });
+//提交
+function submit($, params) {
+  $.post('${ctx}/golbal/add1', params, function (res) {
+    if (res.status == 1) {
+    layer.msg(res.message, { icon: 1 }, function (index) {
+        CloseWin();
+    })
+    } else if (res.status == 2) {
+    layer.msg(res.message, { icon: 0 }, function () {
+        parent.location.href = '${ctx}/golbal/main';
+        CloseWin();
+    })
+    } else {
+    layer.msg(res.message, { icon: 0 }, function () {
+        location.reload(); // 页面刷新
+        return false
+    })
+    }
+  }, 'json');
+}
+//关闭页面
+function CloseWin() {
+    parent.location.reload(); // 父页面刷新
+    var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+    parent.layer.close(index); //再执行关闭 
+}
 </script>
