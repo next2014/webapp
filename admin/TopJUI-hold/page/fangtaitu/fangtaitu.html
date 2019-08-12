@@ -372,8 +372,8 @@
 <div class="layui-row fd_meg">
   <!----------------左侧 房间信息 --------------------------->
   <div class="layui-col-md9">
-      <div class="fangjiaForm" style="overflow: hidden">
-          <ul class="fangjiaForm-content p-2" style="overflow: hidden">
+      <div class="fangjiaForm p-2" style="">
+          <ul class="fangjiaForm-content" style="">
               <li><label class="label_name">房号</label> <span class="add_name">
                   <input value="8212" type="text" class="text_add" disabled="disabled" style="width:115px;" /></span>
               </li>
@@ -539,21 +539,27 @@
                   </div>
               </li>
           </ul>
+          <div style="clear: both"></div>
       </div>
+      <div style="clear: both"></div>
       <!--------------------房间 客人资料-------------------------------->
-      <div class="xingkeren" style="overflow: hidden">
-        <div class="search_style mb-0" style="display: flex;align-items: center;justify-content: space-between;">
+      <div class="xingkeren mt-2" style="">
+        <div class="">
+          <div style="width:100%;display: flex;align-items: center;justify-content: space-between;">
             <div class="xingkeren-title f-left">
               <strong><span class="badge badge-warning mr-2">主</span>赖萌萌</strong>
             </div>
-            <ul class="search_content clearfix">
-                <li style="width: 100%;height:auto;margin-right:0">
-                  <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
-                  <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
-                </li>
-            </ul>
+            <div class="search_style m-0">
+              <ul class="search_content clearfix">
+                  <li style="width: 100%;height:auto;margin-right:0">
+                    <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:200px"/>
+                    <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
+                  </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul class="xinkenren-message pl-2 pr-2 pt-2">
+        <ul class="xinkenren-message p-2">
             <li><label class="label_name">客人姓名</label> <span class="add_name">
                 <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
             </li>
@@ -594,8 +600,8 @@
               <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
             </li>
             <li><label class="label_name">签证信息</label> 
-              <span class="add_name" style="display: flex; align-items: center;">
-                <div class="ddlaiyuan_left55">
+              <div class="add_name" style="display: flex; align-items: center;">
+                <div class="ddlaiyuan_left55" style="width: 55px">
                     <select name="qzxinxi" lay-filter="aihao" class="text_add">
                         <option value="0">无</option>
                         <option value="1">普通签证</option>
@@ -603,10 +609,10 @@
                         <option value="3">外交签证</option>
                     </select>
                 </div>
-                <div class="ddlaiyuan_right55">
-                    <input name="" type="text" class="text_add" id="youxiaoTime" placeholder="有效时间" />
+                <div class="ddlaiyuan_right55" style="width: 55px;margin-left:15px">
+                    <input type="text" class="text_add" id="youxiaoTime" value="2019-08-10" style="width:100%;margin:0;"/>
                 </div>
-              </span>
+              </div>
             </li>
             <li><label class="label_name">客人国籍</label>
               <span class="add_name">
@@ -652,7 +658,7 @@
 
   <!---------------右侧 关联房间信息 --------------------------------------->
   <div class="layui-col-md3">
-     <div class="glfang ml-2 border mb-0 p-0" style="height: 495px;">
+     <div class="glfang ml-2 border mb-0 p-0" style="height: 446px;">
          <div class="glfang-title">
             <strong>关联房</strong>
             <!-- <button type="button" class="layui-btn layui-btn-sm" style="width:auto">增加</button> -->
@@ -673,7 +679,7 @@
   </div>
 </div>
 <div class="layui-form-item">
-  <div class="layui-input-block mt-4" style="text-align: right; margin:0">
+  <div class="layui-input-block mt-3 mb-2" style="text-align: right; margin:0">
     <button class="layui-btn layui-btn-normal" lay-submit lay-filter="save">确定</button>
     <button class="layui-btn layui-btn-primary" id="closeBtn">取消</button>
   </div>
@@ -1646,7 +1652,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '房单:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '600px'],
+      area: ['1000px', '605px'],
       content: $('#add_content')
     });
   });
@@ -1802,7 +1808,6 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   //关联房
   table.render({
       elem: '#glfang'
-      ,height: 470
       ,url: '../../json/table/glfang.json'
       ,toolbar: '#toolbarDemo'
       ,cols: [[

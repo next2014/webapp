@@ -72,70 +72,82 @@
     <!-- 房间管理 列表 -->
     <table class="layui-hide" id="fjguanli" lay-filter="test"></table>
     <script type="text/html" id="barDemo">
-        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="edit" style="color:#ffffff;">修改</a>
-        <a class="layui-btn layui-btn-xs" lay-event="edit_password" style="color:#ffffff">修改密码</a>
-        <a class="layui-btn layui-btn-xs" lay-event="set_tsquanxian" style="color:#ffffff">特殊权限</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" style="color:#ffffff;">删除</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a>
+        <!-- <a class="layui-btn layui-btn-xs" lay-event="set_tsquanxian" style="color:#ffffff">特殊权限</a> -->
     </script>
     <!--新增房间-->
     <div class="add_menber" id="fangjian_content" style="display:none">
-      <div style="padding:15px; overflow: hidden;">
-        <form class="layui-form">
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <select name="interest" lay-filter="aihao">
-                        <option value="0">商务大床房</option>
-                        <option value="1">商务大床房1</option>
-                    </select>
+        <div style="padding:15px; overflow: hidden;">
+            <form class="layui-form">
+                <div class="layui-form-item mb-3" style="width:50%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
+                    <div class="layui-input-block" style="margin-left: 100px;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="0">商务大床房</option>
+                            <option value="1">商务大床房1</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
+                <div class="layui-form-item mb-3" style="width:50%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
+                    <div class="layui-input-block" style="margin-left: 100px;">
+                        <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <select name="interest" lay-filter="aihao">
-                        <option value="0">清洁已检查</option>
-                        <option value="1">清洁已检查1</option>
-                    </select>
+                <div class="layui-form-item mb-3" style="width:50%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
+                    <div class="layui-input-block" style="margin-left: 100px;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="0">清洁已检查</option>
+                            <option value="1">清洁已检查1</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <select name="interest" lay-filter="aihao">
-                        <option value="0">可用房</option>
-                        <option value="1">脏房</option>
-                    </select>
+                <div class="layui-form-item mb-3" style="width:50%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
+                    <div class="layui-input-block" style="margin-left: 100px;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="0">可用房</option>
+                            <option value="1">脏房</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width: 100%">
-                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <textarea  class="layui-textarea"></textarea>
+                <div class="layui-form-item" style="width: 100%">
+                    <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
+                    <div class="layui-input-block" style="margin-left: 100px;">
+                        <textarea  class="layui-textarea"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
-                <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
-            </div>
-            <!-- <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
-                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
+                    <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
                 </div>
-            </div> -->
-        </form>
-      </div>
+                <!-- <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div> -->
+            </form>
+        </div>
     </div>
     <!--编辑房间-->
     <div class="add_menber" id="fangjian_edit" style="display:none">
       <div style="padding:15px; overflow: hidden;">
         <form class="layui-form">
             <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间号码</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text"value="8705" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">门锁号码</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" value="8705555" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
                 <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
                     <select name="interest" lay-filter="aihao">
@@ -147,7 +159,7 @@
             <div class="layui-form-item" style="width:50%">
                 <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
-                    <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
+                    <input type="text" name="" value="7" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item" style="width:50%">
@@ -252,8 +264,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
           ,{field:'jiesuan', title:'在住状态',  width:120}
           ,{field:'fsTime', title:'对应单号',  width:150}
           ,{field:'yyri', title:'是否可用',  width:150}
-          ,{field:'beizhu', title:'备注',  width:'18%'}
-          ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+          ,{field:'beizhu', title:'备注',  width:'15%'}
+          ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:250}
         ]]
       });
 

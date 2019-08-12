@@ -108,6 +108,10 @@
     float:right!important;
 }
 
+.xingkeren .add_order li{
+    height: 38px!important;
+  }
+
 .xingkeren .xingkeren-title{
     width: 100px;
     height: 40px;
@@ -131,7 +135,10 @@
 
 /* 房单号 */
 .fangjiaForm{
-    overflow: hidden;
+    border:1px solid #cccccc;
+}
+.fangjiaForm li,.xingkeren li{
+  height: 36px!important;
 }
 .fangjiaForm .layui-form-select .layui-input,.xingkeren .layui-form-select .layui-input{
     padding: 0 5px;
@@ -175,9 +182,9 @@
 .fangjiaForm-title span{
     color:#FC6E64;
 }
-.fangjiaForm-content{
+/* .fangjiaForm-content{
     border:1px solid #ccc;
-}
+} */
 
 /* 现金 */
 .xianjinZf{
@@ -204,7 +211,9 @@
 .glfang .layui-table-cell{
     padding: 0!important;
 }
-
+.glfang .layui-table-main{
+   height: 322px!important;
+}
 select.text_add{
     padding:0 2px;
 }

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- 避免IE使用兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content='' />
+    <meta name="keywords" content='easyui,jui,jquery easyui,easyui demo,easyui中文' />
     <meta name="description" content='' />
-    <title>欧美城ERP综合系统</title>
+    <title>欧美城-海洋馆OA管理系统</title>
     <!-- 浏览器标签图片 -->
     <link rel="shortcut icon" href="./topjui/images/favicon.ico" />
     <!-- TopJUI框架样式 -->
@@ -34,13 +35,9 @@
         }
 
         .nav-bar .nav-right {
-            width: auto;
+            width: 410px;
             float: right;
 
-        }
-
-        .nav-bar .nav-right a{
-           text-decoration: none;
         }
 
         .nav-bar .nav-center {
@@ -97,44 +94,22 @@
         .nav-group .bannerMenu {
             padding: 5px 0;
         }
+
         .hide {
             display: none !important;
         }
+  
         @media (min-width: 700px) { 
             .mainbox{
                 display: flex; 
                 height: 750px;
             }
         }
-		@media (min-width: 1220px) {
+        @media (min-width: 1800px) {
             .mainbox{
                 display: flex; 
-                height: 680px;
+                height: 870px;
             }
-        }
-        @media (min-width: 1820px) {
-            .mainbox{
-                display: flex; 
-                height: 860px;
-            }
-        }
-        .l-btn-plain, .l-btn-plain:hover {
-            padding: 1px;
-            border: none;
-        }
-        .l-btn, .l-btn-plain:hover {
-            -moz-border-radius: 2px;
-            -webkit-border-radius: 2px;
-            border-radius: 2px;
-        }
-        .l-btn-plain {
-            background: 0 0;
-            filter: none;
-        }
-        .l-btn-text {
-            width: auto;
-            padding: 0;
-            margin: 0 6px;
         }
     </style>
 </head>
@@ -165,43 +140,36 @@
         <div id="north" class="banner" data-options="region:'north',border:false,split:false" style="height: 50px; padding:0;margin:0; overflow: hidden;">
             <div class="nav-bar">
                 <div class="nav-left webname">
-                    欧美城OA办公管理系统
+                    欧美城OA管理系统
                     <span class="collapseMenu fa fa-chevron-circle-left" style="text-align: center;cursor: pointer;font-size: 18px;"></span>
                 </div>
-                <div class="nav-right">
-                    <span style="margin-top:2px;">
-                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false"
-                           style="color:#fff; padding:0 10px;">
-                           <span class="fa fa-user"></span> 欧美人
-                        </a>|
-                        <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true"
-                         style="color:#fff; padding:0 10px;">
-                            <span class="fa fa-cog"></span> 设置
-                        </a>
-                        <div id="mm3" style="width:74px;display: none">
+                <!-- <div class="nav-right" style="width:auto">
+                    <span style=" padding-right: 8px; height: 50px; line-height: 50px;">
+                        <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true" style="color:#fff;">设置</a>
+                        <div id="mm3" style="width:74px;">
                             <div data-options="iconCls:'fa fa-info-circle'" onclick="javascript:modifyPwd(0)">个人信息</div>
                             <div class="menu-sep"></div>
                             <div data-options="iconCls:'fa fa-key'" onclick="javascript:modifyPwd(0)">修改密码</div>
                         </div>|
-                        <a href="javascript:void(0)" onclick="logout()" style="color:#fff; padding:0 10px;">
-                            <span class="fa fa-sign-out"></span> 注销</a>
+                        <a href="javascript:void(0)" onclick="logout()" data-toggle="topjui-menubutton"
+                            data-options="iconCls:'fa fa-sign-out',hasDownArrow:false" style="color:#fff;">注销</a>
                     </span>
-                </div>
+                </div> -->
 
                 <div class="nav-center">
                     <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
                     <a class="nav-btn nav-right-btn topmenu" href="#" style="float: right;"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     <div style="overflow: hidden;position: relative;text-align: left">
                         <ul class="nav-group">
-                            <!-- <li id="1325" title="协同办公" class="topmenu">
+                            <li id="60" title="协同办公" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
                                         <lable class="fa fa-suitcase"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">协同办公</span></p>
                                 </a>
-                            </li> -->
-                            <li id="71" title="商品管理" class="topmenu selected">
+                            </li>
+                            <li id="70" title="企业管理" class="topmenu selected">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
                                         <lable class="fa fa-dashboard"></lable>
@@ -209,54 +177,54 @@
                                     <p><span style="white-space:nowrap;">企业管理</span></p>
                                 </a>
                             </li>
-                            <li id="80" title="系统管理" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
-									<p>
-										<lable class="fa fa-home"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">系统管理</span></p>
-								</a>
-							</li>
-                            <!-- <li id="9000" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.zuoyour.com/emis.html" target="_blank">
-									<p>
-										<lable class="fa fa-leaf"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">动态演示</span></p>
-								</a>
-							</li>
-							<li id="9001" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.topjui.com" target="_blank">
-									<p>
-										<lable class="fa fa-home"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">官方网站</span></p>
-								</a>
-							</li>
-							<li id="9002" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://ask.topjui.com" target="_blank" >
-									<p>
-										<lable class="fa fa-wechat"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">交流社区</span></p>
-								</a>
-							</li>
-							<li id="9003" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:addParentTab({href:'http://www.topjui.com/compile',title:'在线编译'})" target="_blank" >
-									<p>
-										<lable class="fa fa-code"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">在线调试</span></p>
-								</a>
-							</li>
-							<li id="9004" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.jeasyui.cn/" target="_blank" >
-									<p>
-										<lable class="fa fa-link"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">EasyUI中文网</span></p>
-								</a>
-							</li> -->
+                            <li id="9000" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-book"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">文档中心</span></p>
+                                </a>
+                            </li>
+                            <li id="9001" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-xing-square"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">流程中心</span></p>
+                                </a>
+                            </li>
+                            <li id="9002" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-wpforms"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">表单中心</span></p>
+                                </a>
+                            </li>
+                            <li id="9003" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-bar-chart"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">报表中心</span></p>
+                                </a>
+                            </li>
+                            <li id="9004" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-wechat"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">消息中心</span></p>
+                                </a>
+                            </li>
+                            <li id="9005" class="topmenu">
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-cog"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">平台管理</span></p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -287,10 +255,10 @@
 
 
         <div data-options="region:'south',border:true"
-            style="text-align:center;height:30px;line-height:30px;border-bottom:0;overflow:hidden;background-color: #3c8dbc;color:#ffffff;">
+            style="text-align:center;height:30px;line-height:30px;border-bottom:0;overflow:hidden;">
             <span style="float:left;padding-left:5px;width:12.5%;text-align: left;">当前用户：欧美人</span>
             <span style="padding-right:5px;width:57.5%;display: block">
-                版权所有 © 2019 <a href="" target="_blank" style="color:#ffffff;">广东欧美城文化有限公司</a>
+                版权所有 © 2019 <a href="" target="_blank">广东欧美城文化有限公司</a>
             </span>
             <span style="float:right;padding-right:5px;width:30%;text-align: right;"></span>
         </div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>海洋世界数据</title>
+</head>
+<body>
+
+<div id="main" style="height:500px;"></div>
+
+<script src="../../static/www/js/echarts.js"></script>
+<script type="text/javascript">
+	require.config({
+		paths: {
+			echarts: '../../static/www/js'
+		}
+	});
+	require(
+		[
+			'echarts',
+			'echarts/chart/bar',
+			'echarts/chart/line',
+			// 'echarts/chart/map'
+		],
+		function (ec) {
+			//--- 场馆数据图 ---
+			var myChart = ec.init(document.getElementById('main'));
+			myChart.setOption({
+				tooltip : {
+					trigger: 'axis'
+				},
+				legend: {
+					data:['海洋世界', '婚博中心', '卡丁车馆', '真人CS体验馆', '美食天地', '欧欧之家', '欧欧主题酒店']
+				},
+				toolbox: {
+					show : true,
+					feature : {
+						mark : {show: true},
+						dataView : {show: true, readOnly: false},
+						magicType : {show: true, type: ['line', 'bar']},
+						restore : {show: true},
+						saveAsImage : {show: true}
+					}
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+					}
+				],
+				yAxis : [
+					{
+						type : 'value',
+						splitArea : {show : true}
+					}
+				],
+				series : [
+					{
+						name:'海洋世界',
+						type:'bar',
+						data:[2, 4, 7, 23, 25, 76, 135, 162, 32, 20, 6, 33]
+					},
+					{
+						name:'婚博中心',
+						type:'bar',
+						data:[2, 4, 7, 23, 25, 76, 135, 162, 32, 20, 6, 33]
+					},
+					{
+						name:'卡丁车馆',
+						type:'bar',
+						data:[7, 8, 10, 30, 45, 24, 35, 41, 22, 26, 16, 19]
+					},
+					{
+						name:'真人CS体验馆',
+						type:'bar',
+						data:[26, 59, 90, 26, 27, 70, 175, 182, 48, 18, 50, 23]
+					},
+					{
+						name:'美食天地',
+						type:'bar',
+						data:[26, 59, 40, 44, 67, 77, 16, 12, 47, 18, 60, 29]
+					},
+					{
+						name:'欧欧之家',
+						type:'bar',
+						data:[26, 59, 80, 24, 117, 47, 26, 33, 50, 20, 67, 42]
+					},
+					{
+						name:'欧欧主题酒店',
+						type:'bar',
+						data:[26, 59, 44, 24, 97, 87, 16, 12, 47, 18, 60, 29]
+					}
+				]
+			});
+		}
+	);
+</script>
+</body>
+</html>
