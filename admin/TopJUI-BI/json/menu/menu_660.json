@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "海洋世界数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/shuju/zonghe2.html"
   },
   {
     "id": 1353,
@@ -21,7 +21,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "婚博中心数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/echarts/bar.html"
   },
   {
     "id": 1354,

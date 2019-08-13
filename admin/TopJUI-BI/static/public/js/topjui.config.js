@@ -6,7 +6,7 @@
  */
 /* 静态演示中获取contextPath，动态演示非必须 开始 */
 var contextPath = "";
-var remoteHost = "http://localhost:8981";
+var remoteHost = "http://192.168.30.18:8096";
 if (navigator.onLine) {
     remoteHost = "http://demo.ewsd.cn";
     var _hmt = _hmt || [];

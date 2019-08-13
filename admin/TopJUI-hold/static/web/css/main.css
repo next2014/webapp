@@ -128,8 +128,8 @@
     border-top: 2px solid rgb(255, 174, 0);
 }
 .xinkenren-message{
-    overflow: hidden;
-    border:1px solid #ccc;
+    /* overflow: hidden; */
+    /* border:1px solid #ccc; */
     padding:15px;
 }
 
@@ -142,7 +142,7 @@
 }
 .fangjiaForm .layui-form-select .layui-input,.xingkeren .layui-form-select .layui-input{
     padding: 0 5px;
-    margin-left: 10px;
+    margin-left: 5px;
     height: 30px;
     border-color: #D5D5D5!important;
     width:115px;
@@ -153,7 +153,7 @@
 }
 .fangjiaForm .ddlaiyuan_left55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_left55 .layui-form-select .layui-input{
    width:55px!important;
-   margin-left: 10px;;
+   margin-left: 5px;;
 }
 .fangjiaForm .ddlaiyuan_right55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_right55 .layui-form-select .layui-input{
     width:55px!important;
@@ -161,7 +161,7 @@
  }
 .fangjiaForm .keyuanjg_left55 .layui-form-select .layui-input{
     width:55px!important;
-    margin-left: 10px;
+    margin-left: 5px;
  }
 .fangjiaForm .keyuanjg_right55 .layui-form-select .layui-input{
     width:55px!important;
@@ -212,7 +212,7 @@
     padding: 0!important;
 }
 .glfang .layui-table-main{
-   height: 322px!important;
+   height: 355px!important;
 }
 select.text_add{
     padding:0 2px;
@@ -238,9 +238,25 @@ select.text_add{
     float: left;
     clear: initial;
     width:100%;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .fjguanli .search_style,.wxfang .search_style{
     margin-top: 0;margin-bottom:0;display:flex;justify-content: space-between;
+}
+
+.text_add{
+	padding: 0 5px;
+    margin-left: 5px;
+	height: 30px;
+	width: 150px;
+}
+.btn{
+	border:0!important;
+}
+.search_content select{
+	margin-left: 0!important;
+}
+.search_content .btn {
+    border-radius: 4px;
 }

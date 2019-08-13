@@ -13,7 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "订单",
-    "url": "./page/chanpin/chanpin.html"
+    "url": "./page/dingdan/dingdan.html"
   },
   {
     "id": 13653,

@@ -1,100 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>欧美城各场馆数据分析</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*.ttlsa.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>首页-欧欧主题酒店BI系统</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- basic styles -->
+    <link href="../../static/www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/www/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="/Content/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" href="/Content/css/main-ie8.css" />
+    <![endif]-->
+    <!--[if lt IE]>
+        <script src="/Content/js/html5shiv.js"></script>
+        <script src="/Content/js/respond.min.js"></script>
+    <![endif]-->
+    <link href="../../static/www/css/main.css" rel="stylesheet">
+    <style type="text/css">
+        #number_Dev {
+            margin-left: -41px;
+        }
+
+        #revpar {
+            margin-left: -28px;
+        }
+
+        #rent_out {
+            margin-left: -28px;
+        }
+
+        #housing_price {
+            margin-left: -28px;
+        }
+
+        .box-content {
+            padding: 10px;
+            color: #666666;
+        }
+    </style>
 </head>
-<body>
-
-<div id="main" style="height:500px;"></div>
-
-<script src="../../static/www/js/echarts.js"></script>
-<script type="text/javascript">
-	require.config({
-		paths: {
-			echarts: '../../static/www/js'
-		}
-	});
-	require(
-		[
-			'echarts',
-			'echarts/chart/bar',
-			'echarts/chart/line',
-			// 'echarts/chart/map'
-		],
-		function (ec) {
-			//--- 场馆数据图 ---
-			var myChart = ec.init(document.getElementById('main'));
-			myChart.setOption({
-				tooltip : {
-					trigger: 'axis'
-				},
-				legend: {
-					data:['海洋世界', '婚博中心', '卡丁车馆', '真人CS体验馆', '美食天地', '欧欧之家', '欧欧主题酒店']
-				},
-				toolbox: {
-					show : true,
-					feature : {
-						mark : {show: true},
-						dataView : {show: true, readOnly: false},
-						magicType : {show: true, type: ['line', 'bar']},
-						restore : {show: true},
-						saveAsImage : {show: true}
-					}
-				},
-				calculable : true,
-				xAxis : [
-					{
-						type : 'category',
-						data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
-					}
-				],
-				yAxis : [
-					{
-						type : 'value',
-						splitArea : {show : true}
-					}
-				],
-				series : [
-					{
-						name:'海洋世界',
-						type:'bar',
-						data:[2, 4, 7, 23, 25, 76, 135, 162, 32, 20, 6, 33]
-					},
-					{
-						name:'婚博中心',
-						type:'bar',
-						data:[2, 4, 7, 23, 25, 76, 135, 162, 32, 20, 6, 33]
-					},
-					{
-						name:'卡丁车馆',
-						type:'bar',
-						data:[7, 8, 10, 30, 45, 24, 35, 41, 22, 26, 16, 19]
-					},
-					{
-						name:'真人CS体验馆',
-						type:'bar',
-						data:[26, 59, 90, 26, 27, 70, 175, 182, 48, 18, 50, 23]
-					},
-					{
-						name:'美食天地',
-						type:'bar',
-						data:[26, 59, 40, 44, 67, 77, 16, 12, 47, 18, 60, 29]
-					},
-					{
-						name:'欧欧之家',
-						type:'bar',
-						data:[26, 59, 80, 24, 117, 47, 26, 33, 50, 20, 67, 42]
-					},
-					{
-						name:'欧欧主题酒店',
-						type:'bar',
-						data:[26, 59, 44, 24, 97, 87, 16, 12, 47, 18, 60, 29]
-					}
-				]
-			});
-		}
-	);
-</script>
+<body class="fixed-body">
+    <div class="page-content">
+        <div class="page-header">
+            <h1><a name="zonghe">综合指数</a></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                开业门店(个) :<b>9</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                会员总数(万) :<b>10.97</b>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                接待人数(万) :<b>44.06</b>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">门店营收(万) :<b>22,432.82</b></div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                活跃会员(万) :<b>6.79</b>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                接待人次(万) :<b>91.27</b>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-header">
+            <h1><a name="huiyuan">人数统计</a></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">会员发展数</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">会员活跃度</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">本店会员消费与非本店会员消费占比</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">活跃会员类型占比</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">活跃会员年龄层</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">活跃会员性别占比</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h1><a name="jingying">经营统计</a></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">平均出租率</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">平均房价</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">Revpar</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">近三个月提前预定</h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">
+                                    近三个月平均入住时长
+                                </h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">
+                                    中介与中央渠道间夜占比
+                                </h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">
+                                    中央渠道间夜占比
+                                </h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="title">
+                                    中介渠道间夜占比
+                                </h3>
+                            </div>
+                            <div class="box-content">
+                                暂无数据...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <script src="../../static/www/js/jquery.min.js"></script>
+    <script src="../../static/www/js/bootstrap.min.js"></script>
+    <script src="../../static/www/js/main.js"></script>
 </body>
+
 </html>

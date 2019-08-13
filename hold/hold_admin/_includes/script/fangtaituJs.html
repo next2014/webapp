@@ -93,7 +93,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ]]
   });
 
-  // 电子券973
+  // 电子券
   table.render({
     elem: '#dzq'
     ,url:'../../json/table/dzq.json'
@@ -129,7 +129,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       title: '房单:2030',
       maxmin: true,
       shadeClose: true, //点击遮罩关闭层
-      area: ['1000px', '605px'],
+      area: ['1000px', '600px'],
       content: $('#add_content')
     });
   });
@@ -286,9 +286,9 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   table.render({
       elem: '#glfang'
       ,url: '../../json/table/glfang.json'
-      ,toolbar: '#toolbarDemo'
+      ,toolbar: false
       ,cols: [[
-        {field:'id', title:'房单号', width:45}
+        {field:'id', title:'房单号', width:40}
         ,{field:'fangNum', title:'房号', width:40}
         ,{field:'guests', title:'客人',  width:47}
         ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
@@ -311,15 +311,15 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       case 'add_glfang':
         var data = checkStatus.data;
         layer.alert(JSON.stringify(data));
-        // layer.open({
-        //     type: 1,
-        //     title: '新增关联房',
-        //     maxmin: true,
-        //     shadeClose: true,
-        //     area: ['500px', '400'],
-        //     content: $('#fangjian_content'),
-        //     btn: ['确认']
-        // });
+        layer.open({
+            type: 1,
+            title: '新增关联房',
+            maxmin: true,
+            shadeClose: true,
+            area: ['500px', '400'],
+            content: $('#fangjian_content'),
+            btn: ['确认']
+        });
         break;
     };
   });
@@ -382,16 +382,14 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     CloseWin();
   });
 
-  $('i').on('click', function () {
-    var type = $(this).data('type');
-    active[type] ? active[type].call(this) : '';
-  });
+  // $('i').on('click', function () {
+  //   var type = $(this).data('type');
+  //   active[type] ? active[type].call(this) : '';
+  // });
   $('.layui-btn').on('click', function () {
     var type = $(this).data('type');
     active[type] ? active[type].call(this) : '';
   });
-
-
 });
 //提交
 function submit($, params) {

@@ -1108,15 +1108,3 @@ body
 .amounts_style .Statistics_btn{ margin-left:13px}
 .amounts_style .Statistics_btn i.bigger{ font-size:32px}
 .amounts_style .Statistics_btn a.btn{ margin-top:13px;}
-.text_add{
-	padding: 0 5px;
-    margin-left: 10px;
-	height: 30px;
-	width: 150px;
-}
-.btn{
-	border:0!important;
-}
-.search_content select{
-	margin-left: 0!important;
-}
