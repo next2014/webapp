@@ -31,22 +31,100 @@ title: 选择票种
     <!-- E 园区公告 -->
 
 		<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
-		<!-- <div class="content">
-			<ul class="lists" id="ticket"></ul>
+		<!-- <div class="ticket">
+			<h3><strong>海洋世界门票</strong></h3>
+			<div class="content">
+				<ul class="lists"></ul>
+			</div>
 		</div> -->
-	  <ul id="ticket">
-			{% for ticket in site.data.ticket %}
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="{{ticket.GetImage}}" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}</h2>
-					<span class="dol d-block mt-1">¥<em>{{ticket.GetPrick}}</em></span>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
+		<div class="tab">
+			<a href="javascript:;" class="item cur">全部</a>
+			<a href="javascript:;" class="item">活动</a>
+			<a href="javascript:;" class="item">海洋世界</a>
+			<a href="javascript:;" class="item">卡丁车馆</a>
+		</div>
+		<!-- <div class="content">
+			<div class="lists"></div>
+			<div class="lists"></div>
+		</div> -->
+		<!-- start 开始 -->
+		<div class="ticket" id="ticket">
+			<div class="content">
+				<h3><strong>海洋世界门票</strong></h3>
+				<ul class="lists">
+					{% for ticket in site.data.ticket1 %}
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="{{ticket.GetImage}}" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+							</h2>
+							<ul class="ticket_type">
+								<li>{{ticket.zType1}}</li>
+								<li>{{ticket.zType2}}</li>
+								<li>{{ticket.zType3}}</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+								<span class="dor">¥{{ticket.YuanPrick}}</span>
+							</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<h3><strong>卡丁车馆门票</strong></h3>
+				<ul class="lists">
+					{% for ticket in site.data.ticket2 %}
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="{{ticket.GetImage}}" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+							</h2>
+							<ul class="ticket_type">
+								<li>{{ticket.zType1}}</li>
+								<li>{{ticket.zType2}}</li>
+								<li>{{ticket.zType3}}</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+								<span class="dor">¥{{ticket.YuanPrick}}</span>
+							</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<h3 class="p-2"><strong>活动门票</strong></h3>
+				<ul class="lists">
+					{% for ticket in site.data.ticket3 %}
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="{{ticket.GetImage}}" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+							</h2>
+							<ul class="ticket_type">
+								<li>{{ticket.zType1}}</li>
+								<li>{{ticket.zType2}}</li>
+								<li>{{ticket.zType3}}</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+								<span class="dor">¥{{ticket.YuanPrick}}</span>
+							</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!-- end 结束 -->
 	</div>
 </div>
 

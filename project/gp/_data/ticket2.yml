@@ -1,0 +1,29 @@
+- GetImage: static/images/home1/kdc2.jpg
+  GetTypeColor: primary
+  GetType:  小童车
+  GetTitle: 卡丁车馆6分钟体验
+  GetPrick: 55.00
+  YuanPrick: 55.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 核验准考证
+
+- GetImage: static/images/home1/kdc1.jpg
+  GetTypeColor: primary
+  GetType:  娱乐车RTX
+  GetTitle: 卡丁车馆6分钟体验
+  GetPrick: 88.00
+  YuanPrick: 88.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 核验学生证
+
+- GetImage: static/images/home1/kdc3.jpg
+  GetTypeColor: primary
+  GetType:  暑期
+  GetTitle: 卡丁车亲子套票
+  GetPrick: 168.00
+  YuanPrick: 168.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 核验准考证

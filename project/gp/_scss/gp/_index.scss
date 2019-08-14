@@ -2,37 +2,119 @@
     background-color: $pgbg;
     margin-bottom: rem(161);
 }
+.tab{
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #cccccc;
+    background-color: #ffffff;
+    .item{
+        display: block;
+        flex: 1;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        color: #333;
+        text-decoration: none;
+    }
+    .cur{
+        height: 42px;
+        border-bottom: 2px solid #F6AB00;
+        color: #F6AB00;
+    }
+}
+
+.ticket{
+  h3{
+    padding: 0 10px;
+    border-top: 10px solid #e9ecef;
+    margin-bottom: 0;
+    background-color: #fff;
+    line-height: 35px;
+    strong{
+      border-left: 4px solid #F6AB00;
+      padding-left: 10px;
+      font-weight: bold;
+    }
+  }
+}
 .index_all{
 	width: 100%;
-    background: #f8fbff;
+    // background: #f8fbff;
+    background-color: #ffffff;
     ul{
         width: 100%;
         height: auto;
         overflow: hidden;
         li{
-            width: 94%;
+            width: 100%;
             height: auto;
             overflow: hidden;
             background:$white;
             margin:10px auto;
-            border-radius:0.2rem;
-            border: 1px solid $gray-300;
+            // border-radius:0.2rem;
+            // border: 1px solid $gray-300;
+            border-bottom: 1px solid #e9ecef;
             display: flex;
+            &:last-child{
+              border-bottom:0;
+              margin-bottom:0;
+            }
             .inTop{
                 width: 100%;
             }
             .dol{
                 color:#ff3b44;
+                font-size:$font-20;
+                font-weight: bold;
                 em{
-                    font-size:$font-20;
+                    font-size:$font-24;
+                }
+            }
+            .dor{
+                color:#cccccc;
+                font-size:$font-16;
+                text-decoration: line-through;
+            }
+            .in_fl{
+                // margin: rem(32.2);
+                width:30%;
+                margin-bottom: rem(32.2);
+                margin-right: rem(32.2);
+                margin-top: 0;
+                img{
+                    border-radius: 5px;
                 }
             }
         }  
     }
     .in_fr{
-       margin-top: 0.3rem;
-       width: 54%;
+    // margin-top: 0.3rem;
+       margin-bottom: rem(32.2);
+       margin-right: rem(32.2);
+       width: 68%;
        height: auto;
+       position: relative;
+       .ticket_type{
+         height: 35px;
+         line-height: 35px;
+         li{
+           display: inline;
+           margin-right: 5px;
+           border: 1px solid #F6AB00;
+           color: #F6AB00;
+           padding: 2px;
+           font-size:$font-10;
+           &:last-child{
+               margin-right: 0;
+           }
+         }
+       }
+       .ticket_price{
+           position: absolute;
+           bottom: 0;
+           left: 0;
+       }
        .piao_type{
             line-height:1.5rem;
             border-bottom:0;
@@ -47,8 +129,11 @@
         }
         h2{
             font-size:$font-16;
-            line-height: rem(80.5);
+            font-weight: bold;
             color:#342c2a;
+            height: 30px;
+            line-height: 30px;
+            // line-height: rem(80.5);
         }
         p{
             width: 100%;

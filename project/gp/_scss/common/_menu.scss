@@ -9,7 +9,7 @@
 //底部导航
 .menu{
   @include fixed-bottom;
-  @include sizePadding(10,0,10,0);
+  @include sizePadding(15,0,15,0);
   z-index:1000;
   background-color:$white;
   border-top: 1px solid $gray-200;
@@ -43,7 +43,7 @@
     text-align: center;
     position: relative;
     flex-grow: 1;
-    line-height:rem(48.3);
+    line-height:rem(30);
     color:$gray-500;
     position: relative;
     &.active{
