@@ -30,6 +30,10 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     elem: '#chushengriqi'
     ,type: 'datetime'
   });
+  laydate.render({
+    elem: '#chusheng'
+    ,type: 'datetime'
+  });
   // 担保时间
   laydate.render({
     elem: '#danbaoTime'
@@ -41,7 +45,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   table.render({
     elem: '#rizhi'
     ,url:'../../json/table/rizhi.json'
-    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cellMinWidth: 80 
     ,cols: [[
       {field:'id', width:100, title: '编码', sort: true}
       ,{field:'sytime', width:180, title: '使用时间'}
@@ -122,13 +126,26 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ]]
   });
 
+  // 增加客户
+  $('#kehu_add').on('click', function(){
+    layer.open({
+      type: 1,
+      title: '增加客人',
+      maxmin: true,
+      shadeClose: true,
+      area: ['600px', '360px'],
+      content: $('#add_kehu'),
+      btn: ['提交', '取消']
+    });
+  });
+
   // 房间号有人住
   $('.fangjian').on('click', function(){
     layer.open({
       type: 1,
       title: '房单:2030',
       maxmin: true,
-      shadeClose: true, //点击遮罩关闭层
+      shadeClose: true,
       area: ['1000px', '600px'],
       content: $('#add_content')
     });
@@ -137,12 +154,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   // 房间无人住
   $('.fangjian_kong').on('click', function(){
     layer.open({
-      type: 1,
+      type: 2,
       title: '房间:2030',
       maxmin: true,
-      shadeClose: true, //点击遮罩关闭层
+      shadeClose: true,
       area: ['1000px', '600px'],
-      content: $('#add_fangjian'),
+      content: 'get_fangjian.html',
       btn: ['入住']
     });
   });
@@ -153,7 +170,7 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       type: 1,
       title: '停售房:2030',
       maxmin: true,
-      shadeClose: true, //点击遮罩关闭层
+      shadeClose: true,
       area: ['600px', '280px'],
       content: $('#add_fjstop'),
       btn: ['完成停售']
@@ -373,7 +390,6 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   //提交监听事件
   form.on('submit(save)', function (data) {
     params = data.field;
-    //alert(JSON.stringify(params))
     submit($, params);
     return false;
   })

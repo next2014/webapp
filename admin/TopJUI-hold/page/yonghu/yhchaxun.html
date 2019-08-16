@@ -40,7 +40,7 @@
             </li>
             <li style="width:90px;"><button type="button" class="btn_search">查询</button></li>
         </ul>
-        <div><a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;">新增用户</a></div>
+        <div><a href="javascript:ovid()" id="yonghu_add" class="btn btn-warning" style="height:30px;line-height: 20px;">新增用户</a></div>
     </div>
     <!-- 用户列表 -->
     <table class="layui-hide" id="yhchaxun" lay-filter="test"></table>
@@ -49,50 +49,63 @@
         <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a>
     </script>
     <!--新增用户-->
-    <div class="add_menber" id="fangjian_content" style="display:none">
-      <div style="padding:15px; overflow: hidden;">
+    <div class="add_menber" id="yonghu_content" style="display:none">
+      <div style="padding:15px;">
         <form class="layui-form">
             <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户账号</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="用户账号" placeholder="请填写6到16位任意字符" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户密码</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="用户密码" placeholder="请填写6到16位任意字符" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户名称</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="用户名称" placeholder="不能为空" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">员工工号</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="员工工号" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户手机</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="用户手机" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户邮箱</label>
+                <div class="layui-input-block" style="margin-left: 100px;">
+                    <input type="text" name="用户邮箱" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" style="width:50%">
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">角色组</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
                     <select name="interest" lay-filter="aihao">
-                        <option value="0">商务大床房</option>
-                        <option value="1">商务大床房1</option>
+                        <option value="0">财务经理</option>
+                        <option value="1">销售主管</option>
                     </select>
                 </div>
             </div>
             <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
+                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">用户状态</label>
                 <div class="layui-input-block" style="margin-left: 100px;">
                     <select name="interest" lay-filter="aihao">
-                        <option value="0">清洁已检查</option>
-                        <option value="1">清洁已检查1</option>
+                        <option value="0">在职</option>
+                        <option value="1">停职</option>
+                        <option value="2">离职</option>
                     </select>
                 </div>
-            </div>
-            <div class="layui-form-item" style="width:50%">
-                <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <select name="interest" lay-filter="aihao">
-                        <option value="0">可用房</option>
-                        <option value="1">脏房</option>
-                    </select>
-                </div>
-            </div>
-            <div class="layui-form-item" style="width: 100%">
-                <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
-                <div class="layui-input-block" style="margin-left: 100px;">
-                    <textarea  class="layui-textarea"></textarea>
-                </div>
-            </div>
-            <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
-                <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
             </div>
             <!-- <div class="layui-form-item">
                 <div class="layui-input-block">
@@ -170,16 +183,16 @@
         ,element = layui.element
         ,table = layui.table;
     
-        // 添加房型
-        $('#fxguangli_add').on('click', function () {
+        // 增加用户
+        $('#yonghu_add').on('click', function () {
             layer.open({
                 type: 1,
                 title: '新增房型',
                 maxmin: true,
                 shadeClose: false,
                 area: ['600px', '370px'],
-                content: $('#fangjian_content'),
-                btn: ['提交', '取消'],
+                content: $('#yonghu_content'),
+                btn: ['保存'],
                 yes: function (index, layero) {
                     var num = 0;
                     var str = "";
@@ -206,11 +219,11 @@
             });
         });
         
-        // 房间管理973
+        // 用户列表
         table.render({
             elem: '#yhchaxun'
             ,height: 525
-            ,title: '房间管理'
+            ,title: '所有用户'
             ,url: '../../json/table/yhchaxun.json'
             ,page: true
             ,autoSort: false

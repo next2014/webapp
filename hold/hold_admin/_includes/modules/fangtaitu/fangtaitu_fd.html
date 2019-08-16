@@ -59,12 +59,12 @@
               </li>
               <li><label class="label_name">入住时间</label>
                 <span class="add_name">
-                  <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
+                  <input name="入住时间" type="text" class="text_add" id="CheckIn" value="2019-07-26 09:23" style="width:115px;">
                 </span>
               </li>
               <li><label class="label_name">离店时间</label>
                 <span class="add_name">
-                    <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
+                    <input name="离店时间" type="text" class="text_add" id="GoWay" value="2019-08-04 09:23" style="width:115px;">
                 </span>
               </li>
               <li><label class="label_name">订单状态</label> 
@@ -179,117 +179,227 @@
       </div>
       <div style="clear: both"></div>
       <!--------------------房间 客人资料-------------------------------->
-      <div class="xingkeren mt-2" style="">
-          <div style="width:100%;display: flex;align-items: center;justify-content: space-between;">
+      <div class="xingkeren mt-2">
+          <!-- <div style="width:100%;display: flex;align-items: center;justify-content: space-between;">
             <div class="xingkeren-title f-left">
               <strong><span class="badge badge-warning mr-2">主</span>赖萌萌</strong>
             </div>
             <div class="search_style m-0">
               <ul class="search_content clearfix">
                   <li style="width: 100%;height:auto;margin-right:0">
-                    <input name="用户信息不能" type="text" class="text_add" placeholder="手机号码/身份证号" style="width:150px"/>
-                    <button type="button" class="btn_search pl-2 pr-2" style="width: auto">查询/读取证件</button>
+                    <button type="button" id="kehu_add" class="btn_search pl-2 pr-2" style="width: auto">增加客人</button>
                   </li>
               </ul>
             </div>
           </div>
           <div style="border:1px solid #cccccc;">
-              <ul class="xinkenren-message p-2">
-                  <li><label class="label_name">客人姓名</label> <span class="add_name">
-                      <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
-                  </li>
-                  <li><label class="label_name">客人性别</label>
-                    <span class="add_name">
-                        <select name="xingbie" lay-filter="aihao" class="text_add" style="width:115px;" >
-                            <option value="0">未知</option>
-                            <option value="1">男</option>
-                            <option value="2">女</option>
-                        </select>
-                    </span>
-                  </li>
-                  <li><label class="label_name">出生日期</label>
-                    <span class="add_name">
-                      <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:115px;" >
-                    </span>
-                  </li>
-                  <li><label class="label_name">手机号码</label> <span class="add_name">
-                    <input type="text" class="text_add" value="13800000000" style="width:115px;" /></span>
-                  </li>
-                  <li><label class="label_name">证件类型</label>
-                    <div class="add_name">
-                        <select lay-filter="aihao" class="text_add" style="width:115px;" >
-                            <option value="0">身份证/驾驶证</option>
-                            <option value="1">台湾居民来往通行证</option>
-                            <option value="3">港澳居民来往大陆通行</option>
-                            <option value="4">外籍护照</option>
-                            <option value="5">外交护照</option>
-                            <option value="6">公务护照</option>
-                            <option value="7">因公普通护照</option>
-                            <option value="8">军官证</option>
-                            <option value="9">士兵证</option>
-                            <option value="10">其它</option>
-                        </select>
-                    </div>
-                  </li>
-                  <li><label class="label_name">证件号码</label> <span class="add_name">
-                    <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
-                  </li>
-                  <li><label class="label_name">签证信息</label> 
-                    <div class="add_name" style="display: flex; align-items: center;">
-                      <div class="ddlaiyuan_left55" style="width: 55px">
-                          <select name="qzxinxi" lay-filter="aihao" class="text_add">
-                              <option value="0">无</option>
-                              <option value="1">普通签证</option>
-                              <option value="2">公务签证</option>
-                              <option value="3">外交签证</option>
-                          </select>
-                      </div>
-                      <div class="ddlaiyuan_right55" style="width: 55px;margin-left:10px">
-                          <input type="text" class="text_add" id="youxiaoTime" value="2019-08-10" style="width:100%;margin:0;"/>
-                      </div>
-                    </div>
-                  </li>
-                  <li><label class="label_name">客人国籍</label>
-                    <span class="add_name">
-                        <select lay-filter="aihao" class="text_add" style="width:115px;" >
-                          <option value="1">中国</option>
-                        </select>
-                    </span>
-                  </li>
-                  <li><label class="label_name">会员级别</label>
-                    <div class="add_name">
-                      <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
-                          <option value="0">非会员</option>
-                          <option value="1">银会员</option>
-                          <option value="3">金会员</option>
-                          <option value="4">铂金会员</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li><label class="label_name">会员卡号</label> <span class="add_name">
-                      <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:115px;" /></span>
-                  </li>
-                  <li><label class="label_name">入住时间</label>
-                    <span class="add_name">
-                      <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
-                    </span>
-                  </li>
-                  <li><label class="label_name">离店时间</label>
-                    <span class="add_name">
-                        <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
-                    </span>
-                  </li>
-                  <li style="width:100%"><label class="label_name">客人地址</label>
-                    <span class="add_name" style="width: 92.5%;">
-                    <input name="" type="text" class="text_add" style="width:99%;"/></span>
-                  </li>
-                  <li style="width:100%"><label class="label_name">客人喜好</label>
-                    <span class="add_name" style="width: 92.5%;">
-                      <input name="" type="text" class="text_add" style="width:99%;"/></span>
-                  </li>
-              </ul>
+              
               <div style="clear: both"></div>
+          </div> -->
+          
+          <div class="layui-tab" lay-filter="test">
+             <div class="search_style m-0" style="position: relative;">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" lay-id="11" style="width: auto"><span class="badge badge-warning mr-1">主</span> 赖萌萌</li>
+                    <li lay-id="22" style="width: auto">李梦</li>
+                    <!-- <li lay-id="33">客人3</li>
+                    <li lay-id="44">客人4</li>
+                    <li lay-id="55">客人5</li> -->
+                </ul>
+                <button type="button" id="kehu_add" class="layui-btn layui-btn-normal pl-2 pr-2" style="position: absolute;right: 0;top:5px;height: 30px;line-height: 30px;">增加客人</button>
+             </div>
+            <div class="layui-tab-content" >
+                <div class="layui-tab-item layui-show">
+                    <ul class="xinkenren-message p-2">
+                        <li><label class="label_name">客人姓名</label> <span class="add_name">
+                            <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">客人性别</label>
+                          <span class="add_name">
+                              <select name="xingbie" lay-filter="aihao" class="text_add" style="width:115px;" >
+                                  <option value="0">未知</option>
+                                  <option value="1">男</option>
+                                  <option value="2">女</option>
+                              </select>
+                          </span>
+                        </li>
+                        <li><label class="label_name">出生日期</label>
+                          <span class="add_name">
+                            <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:115px;" >
+                          </span>
+                        </li>
+                        <li><label class="label_name">手机号码</label> <span class="add_name">
+                          <input type="text" class="text_add" value="13800000000" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">证件类型</label>
+                          <div class="add_name">
+                              <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                                  <option value="0">身份证/驾驶证</option>
+                                  <option value="1">台湾居民来往通行证</option>
+                                  <option value="3">港澳居民来往大陆通行</option>
+                                  <option value="4">外籍护照</option>
+                                  <option value="5">外交护照</option>
+                                  <option value="6">公务护照</option>
+                                  <option value="7">因公普通护照</option>
+                                  <option value="8">军官证</option>
+                                  <option value="9">士兵证</option>
+                                  <option value="10">其它</option>
+                              </select>
+                          </div>
+                        </li>
+                        <li><label class="label_name">证件号码</label> <span class="add_name">
+                          <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">签证信息</label> 
+                          <div class="add_name" style="display: flex; align-items: center;">
+                            <div class="ddlaiyuan_left55" style="width: 55px">
+                                <select name="qzxinxi" lay-filter="aihao" class="text_add">
+                                    <option value="0">无</option>
+                                    <option value="1">普通签证</option>
+                                    <option value="2">公务签证</option>
+                                    <option value="3">外交签证</option>
+                                </select>
+                            </div>
+                            <div class="ddlaiyuan_right55" style="width: 55px;margin-left:10px">
+                                <input type="text" class="text_add" id="youxiaoTime" value="2019-08-10" style="width:100%;margin:0;"/>
+                            </div>
+                          </div>
+                        </li>
+                        <li><label class="label_name">客人国籍</label>
+                          <span class="add_name">
+                              <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                                <option value="1">中国</option>
+                              </select>
+                          </span>
+                        </li>
+                        <li><label class="label_name">会员级别</label>
+                          <div class="add_name">
+                            <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
+                                <option value="0">非会员</option>
+                                <option value="1">银会员</option>
+                                <option value="3">金会员</option>
+                                <option value="4">铂金会员</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li><label class="label_name">会员卡号</label> <span class="add_name">
+                            <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">入住时间</label>
+                          <span class="add_name">
+                            <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
+                          </span>
+                        </li>
+                        <li><label class="label_name">离店时间</label>
+                          <span class="add_name">
+                              <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
+                          </span>
+                        </li>
+                        <li style="width:100%"><label class="label_name">客人备注</label>
+                          <span class="add_name" style="width: 92.5%;">
+                          <input name="客人备注" type="text" class="text_add" style="width:99%;"/></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="xinkenren-message p-2">
+                        <li><label class="label_name">客人姓名</label> <span class="add_name">
+                            <input value="赖萌萌" type="text" class="text_add" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">客人性别</label>
+                          <span class="add_name">
+                              <select name="xingbie" lay-filter="aihao" class="text_add" style="width:115px;" >
+                                  <option value="0">未知</option>
+                                  <option value="1">男</option>
+                                  <option value="2">女</option>
+                              </select>
+                          </span>
+                        </li>
+                        <li><label class="label_name">出生日期</label>
+                          <span class="add_name">
+                            <input type="text" class="text_add" value="2019-07-26 09:20" id="chushengriqi" style="width:115px;" >
+                          </span>
+                        </li>
+                        <li><label class="label_name">手机号码</label> <span class="add_name">
+                          <input type="text" class="text_add" value="13800000000" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">证件类型</label>
+                          <div class="add_name">
+                              <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                                  <option value="0">身份证/驾驶证</option>
+                                  <option value="1">台湾居民来往通行证</option>
+                                  <option value="3">港澳居民来往大陆通行</option>
+                                  <option value="4">外籍护照</option>
+                                  <option value="5">外交护照</option>
+                                  <option value="6">公务护照</option>
+                                  <option value="7">因公普通护照</option>
+                                  <option value="8">军官证</option>
+                                  <option value="9">士兵证</option>
+                                  <option value="10">其它</option>
+                              </select>
+                          </div>
+                        </li>
+                        <li><label class="label_name">证件号码</label> <span class="add_name">
+                          <input type="text" class="text_add" value="441302199208191033" disabled="disabled" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">签证信息</label> 
+                          <div class="add_name" style="display: flex; align-items: center;">
+                            <div class="ddlaiyuan_left55" style="width: 55px">
+                                <select name="qzxinxi" lay-filter="aihao" class="text_add">
+                                    <option value="0">无</option>
+                                    <option value="1">普通签证</option>
+                                    <option value="2">公务签证</option>
+                                    <option value="3">外交签证</option>
+                                </select>
+                            </div>
+                            <div class="ddlaiyuan_right55" style="width: 55px;margin-left:10px">
+                                <input type="text" class="text_add" id="youxiaoTime" value="2019-08-10" style="width:100%;margin:0;"/>
+                            </div>
+                          </div>
+                        </li>
+                        <li><label class="label_name">客人国籍</label>
+                          <span class="add_name">
+                              <select lay-filter="aihao" class="text_add" style="width:115px;" >
+                                <option value="1">中国</option>
+                              </select>
+                          </span>
+                        </li>
+                        <li><label class="label_name">会员级别</label>
+                          <div class="add_name">
+                            <select lay-filter="aihao" class="text_add" disabled="disabled" style="width:115px;">
+                                <option value="0">非会员</option>
+                                <option value="1">银会员</option>
+                                <option value="3">金会员</option>
+                                <option value="4">铂金会员</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li><label class="label_name">会员卡号</label> <span class="add_name">
+                            <input type="text" class="text_add" value="11000000" disabled="disabled" style="width:115px;" /></span>
+                        </li>
+                        <li><label class="label_name">入住时间</label>
+                          <span class="add_name">
+                            <input name="入住时间" type="text" class="text_add" id="" value="2019-07-26 09:23" style="width:115px;">
+                          </span>
+                        </li>
+                        <li><label class="label_name">离店时间</label>
+                          <span class="add_name">
+                              <input name="离店时间" type="text" class="text_add" id="" value="2019-08-04 09:23" style="width:115px;">
+                          </span>
+                        </li>
+                        <li style="width:100%"><label class="label_name">客人备注</label>
+                          <span class="add_name" style="width: 92.5%;">
+                          <input name="客人备注" type="text" class="text_add" style="width:99%;"/></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item">内容4</div>
+                <div class="layui-tab-item">内容5</div> -->
+                <div style="clear: both"></div>
+            </div>
           </div>
+
       </div> 
   </div>
 

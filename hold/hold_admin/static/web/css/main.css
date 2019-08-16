@@ -260,3 +260,14 @@ select.text_add{
 .search_content .btn {
     border-radius: 4px;
 }
+.layui-form-select .layui-input{
+   height: 30px!important;
+}
+
+.layui-layer-page .layui-layer-content{
+    overflow: initial!important;
+}
+
+.layui-select-disabled .layui-disabled{
+    border: 1px solid #D5D5D5!important;
+}

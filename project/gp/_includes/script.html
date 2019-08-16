@@ -7,6 +7,43 @@
    <script src="static/js/swiper.js"></script>
    {% include components/swiper/swiperjs.html %}
    {% include fastclickjs.html %}
+   <script src="static/js/weui.min.js"></script>
+   <script>
+     document.querySelector('#pickerBtn').addEventListener('click', function () {
+            weui.picker([{
+                label: '海洋世界',
+                value: 0
+            }, {
+                label: '婚博中心',
+                disabled: true,
+                value: 1
+            }, {
+                label: '卡丁车馆',
+                disabled: true,
+                value: 2
+            }, {
+                label: '真人CS体验馆',
+                value: 3
+            }, {
+                label: '园区活动',
+                value: 4
+            }, {
+                label: '欧欧主题酒店',
+                value: 5
+            }], {
+                defaultValue: [8],
+                className: 'custom-classname',
+                onChange: function (result) {
+                    //console.log(item, index);
+                    console.log(result);
+                },
+                onConfirm: function (result) {
+                    console.log(result);
+                },
+                id: 'picker'
+            });
+        });
+   </script>
 {% endif %}
 <!-- {% if page.layout == "ticketList" %}
 <script src="static/js/political_WeCall.js"></script>

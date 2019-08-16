@@ -6,16 +6,16 @@
         ,element = layui.element
         ,table = layui.table;
     
-        // 添加房型
-        $('#fxguangli_add').on('click', function () {
+        // 增加用户
+        $('#yonghu_add').on('click', function () {
             layer.open({
                 type: 1,
                 title: '新增房型',
                 maxmin: true,
                 shadeClose: false,
                 area: ['600px', '370px'],
-                content: $('#fangjian_content'),
-                btn: ['提交', '取消'],
+                content: $('#yonghu_content'),
+                btn: ['保存'],
                 yes: function (index, layero) {
                     var num = 0;
                     var str = "";
@@ -42,11 +42,11 @@
             });
         });
         
-        // 房间管理973
+        // 用户列表
         table.render({
             elem: '#yhchaxun'
             ,height: 525
-            ,title: '房间管理'
+            ,title: '所有用户'
             ,url: '../../json/table/yhchaxun.json'
             ,page: true
             ,autoSort: false

@@ -1,10 +1,9 @@
 ﻿// 路径配置
 require.config({
     paths: {
-        echarts: '../Content/build/dist'
+        echarts: './js'
     }
 });
-
 //会员发展数
 function numberDevChart(obj, jsondata) {
     require(
@@ -13,18 +12,14 @@ function numberDevChart(obj, jsondata) {
 			'echarts/chart/line' // 使用线性图就加载line模块，按需加载
 		],
 		function (ec) {
-
 		    var axisData = new Array();//时间
-		    //门店
-		    var store = new Array();
-		    //总部
-		    var hQ = new Array();
+		    var store = new Array();//门店
+		    var hQ = new Array(); //总部
 		    for (var i = 0; i < jsondata.length; i++) {
 		        axisData.push(jsondata[i].ndate);//时间
 		        store.push(jsondata[i].chain);//门店号
 		        hQ.push(jsondata[i].www + jsondata[i].wx + jsondata[i].gh);
 		    }
-
 		    // 基于准备好的dom，初始化echarts图表
 		    var myChart = ec.init(obj);
 		    option = {
@@ -97,7 +92,6 @@ function numberDevChart(obj, jsondata) {
 		}
      );
 }
-
 //会员活跃度
 function useractivityChart(obj, jsondata) {
     require(
