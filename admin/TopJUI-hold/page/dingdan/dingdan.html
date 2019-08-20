@@ -27,11 +27,11 @@
             <li>
                 <input type="text" class="text_add" style="width:200px;height:32px;margin-left:0;padding:5px 10px;" />
             </li>
-            <li><button type="button" class="btn btn-primary w-100 p-1">查询/读取证件</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1" id="fangjian_add">高级查询</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1">今日抵达</button></li>
+            <li><button type="button" class="btn btn-primary w-100 p-1 ml-2">查询/读取证件</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1 ml-2" id="gjchaxun">高级查询</button></li>
+            <!-- <li><button type="button" class="btn btn-light w-100 p-1">今日抵达</button></li>
             <li><button type="button" class="btn btn-light w-100 p-1">预订未到</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1">取消订单</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1">取消订单</button></li> -->
         </ul>
         <!-- <div><a href="javascript:ovid()" id="fangjian_add" class="btn btn-warning" style="height:30px;line-height: 20px;">
             <i class="icon-plus"></i> 添加房间</a></div> -->
@@ -43,51 +43,117 @@
         <!-- <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a> -->
         <!-- <a class="layui-btn layui-btn-xs" lay-event="set_tsquanxian" style="color:#ffffff">特殊权限</a> -->
     </script>
-    <!--新增房间-->
-    <div class="add_menber" id="fangjian_content" style="display:none">
+    <!--高级查询-->
+    <div class="add_menber" id="dingdan_content" style="display:none">
         <div style="padding:15px; overflow: hidden;">
             <form class="layui-form">
-                <div class="layui-form-item mb-3" style="width:50%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
-                    <div class="layui-input-block" style="margin-left: 100px;">
-                        <select name="interest" lay-filter="aihao">
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房单号</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">来源</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <select name="" lay-filter="aihao">
                             <option value="0">商务大床房</option>
                             <option value="1">商务大床房1</option>
                         </select>
                     </div>
                 </div>
-                <div class="layui-form-item mb-3" style="width:50%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">楼层</label>
-                    <div class="layui-input-block" style="margin-left: 100px;">
-                        <input type="text" name="楼层" placeholder="请填写整数" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:50%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">清洁状态</label>
-                    <div class="layui-input-block" style="margin-left: 100px;">
-                        <select name="interest" lay-filter="aihao">
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">二级来源</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <select name="" lay-filter="aihao">
                             <option value="0">清洁已检查</option>
                             <option value="1">清洁已检查1</option>
                         </select>
                     </div>
                 </div>
-                <div class="layui-form-item mb-3" style="width:50%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">维修状态</label>
-                    <div class="layui-input-block" style="margin-left: 100px;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value="0">可用房</option>
-                            <option value="1">脏房</option>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间号码</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">预订人</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">预订手机</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <select name="" lay-filter="aihao">
+                            <option value="0">全部</option>
+                            <option value="1">商务大床房1</option>
                         </select>
                     </div>
                 </div>
-                <div class="layui-form-item" style="width: 100%">
-                    <label class="layui-form-label" style="padding: 0;text-align: right;">备注</label>
-                    <div class="layui-input-block" style="margin-left: 100px;">
-                        <textarea  class="layui-textarea"></textarea>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
                     </div>
                 </div>
-                <div class="layui-form-item" style="width: 100%;margin-bottom: 0;">
-                    <p class="text-danger">注:多间房（同楼层）添加格式为C:101-103;C:107-109;E:111-125</p>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">联系人</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人类型</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <select name="" lay-filter="aihao">
+                            <option value="0">全部</option>
+                            <option value="1">非会员</option>
+                            <option value="2">银会员</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住日期</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input name="" type="text" class="text_add ml-0" id="CheckInStar" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">至</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input name="" type="text" class="text_add ml-0" id="CheckInEnd" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">状态</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <select name="" lay-filter="aihao">
+                            <option value="0">全部</option>
+                            <option value="1">预订</option>
+                            <option value="2">取消</option>
+                            <option value="3">未到</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">离店日期</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input name="" type="text" class="text_add ml-0" id="leaveStar" style="width:100%">
+                    </div>
+                </div>
+                <div class="layui-form-item mb-3" style="width:33.3%">
+                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">至</label>
+                    <div class="layui-input-block" style="margin-left: 90px;">
+                        <input name="" type="text" class="text_add ml-0" id="leaveEnd" style="width:100%">
+                    </div>
                 </div>
                 <!-- <div class="layui-form-item">
                     <div class="layui-input-block">
@@ -107,134 +173,129 @@
     
     
         <script>
-     layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
-            var laydate = layui.laydate
-            ,layer =layui.layer
-            ,from = layui.form
-            ,element = layui.element
-            ,table = layui.table;
-        
-            // 添加房型
-            $('#fangjian_add').on('click', function () {
-                layer.open({
-                    type: 1,
-                    title: '新增房型',
-                    maxmin: true,
-                    shadeClose: false,
-                    area: ['600px', '370px'],
-                    content: $('#fangjian_content'),
-                    btn: ['提交', '取消'],
-                    yes: function (index, layero) {
-                        var num = 0;
-                        var str = "";
-                        $(".add_adverts input[type$='text']").each(function (n) {
-                            if ($(this).val() == "") {
-        
-                                layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
-                                    title: '提示框',
-                                    icon: 0,
-                                });
-                                num++;
-                                return false;
-                            }
-                        });
-                        if (num > 0) { return false; }
-                        else {
-                            layer.alert('添加成功！', {
-                                title: '提示框',
-                                icon: 1,
-                            });
-                            layer.close(index);
-                        }
-                    }
-                });
-            });
-            
-            // 房间管理973
-            table.render({
-                elem: '#dingdan'
-                ,height: 525
-                ,title: '房间管理'
-                ,url: '../../json/table/fjguanli.json'
-                ,page: true
-                ,autoSort: false
-                ,toolbar: false
-                // ,toolbar: '#toolbarDemo'
-                ,cols: [[
-                  {field:'id', title:'房间号', width:130}
-                  ,{field:'msh', title:'门锁号', width:130}
-                  ,{field:'louceng', title:'楼层',  width:130}
-                  ,{field:'fjtype', title:'房间类型',  width:120}
-                  ,{field:'zjxiangmu', title:'清洁状态',  width:120}
-                  ,{field:'xiaofei', title:'维修状态',  width:120}
-                  ,{field:'jiesuan', title:'在住状态',  width:120}
-                  ,{field:'fsTime', title:'对应单号',  width:150}
-                  ,{field:'yyri', title:'是否可用',  width:150}
-                  ,{field:'beizhu', title:'备注',  width:'15%'}
-                  ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:250}
-                ]]
-              });
-        
-            //工具栏事件
-            table.on('toolbar(test)', function (obj) {
-              var checkStatus = table.checkStatus(obj.config.id);
-              switch (obj.event) {
-                case 'add':
-                  layer.msg('添加');
-                  break;
-                case 'edit':
-                  layer.msg('编辑');
-                  break;
-                case 'del':
-                  layer.msg('删除');
-                  break;
-                case 'lf_zhengjia':
-                  var data = checkStatus.data;
-                  layer.alert(JSON.stringify(data));
-                  break;
-              };
-            });
-        
-           //监听单元格编辑
-           table.on('edit(test)', function (obj) {
-              var value = obj.value //得到修改后的值
-                , data = obj.data //得到所在行所有键值
-                , field = obj.field; //得到字段
-        
-              console.log(obj)
-            });
-        
-            //监听行工具事件
-            table.on('tool(test)', function (obj) {
-              var data = obj.data;
-              //console.log(obj)
-              if (obj.event === 'del') {
-                layer.confirm('真的删除行么', function (index) {
-                  obj.del();
-                  layer.close(index);
-                });
-              } else if (obj.event === 'edit') {
-                  //页面层-自定义
-                  layer.open({
-                    type: 1,
-                    title: '修改房间信息',
-                    area: ['600px', '380px'],
-                    content: $('#fangjian_edit'),
-                    btn: ['提交', '取消']
-                  });
-              }
-            });
-                              
-            $('i').on('click', function () {
-                var type = $(this).data('type');
-                active[type] ? active[type].call(this) : '';
-            });
-            $('.layui-btn').on('click', function () {
-                var type = $(this).data('type');
-                active[type] ? active[type].call(this) : '';
-            });
-        
+layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+      var laydate = layui.laydate
+      ,layer =layui.layer
+      ,from = layui.form
+      ,element = layui.element
+      ,table = layui.table;
+      
+        // 入住时间 star
+        laydate.render({
+          elem: '#CheckInStar'
         });
+        // 入住时间 end
+        laydate.render({
+          elem: '#CheckInEnd'
+        });
+
+        // 离开时间 star
+        laydate.render({
+          elem: '#leaveStar'
+        });
+
+        // 离开时间 end
+        laydate.render({
+          elem: '#leaveEnd'
+        });
+
+      // 高级查询
+      $('#gjchaxun').on('click', function () {
+          layer.open({
+              type: 1,
+              title: '高级查询',
+              maxmin: true,
+              shadeClose: false,
+              area: ['800px', '370px'],
+              content: $('#dingdan_content'),
+              btn: ['取消', '搜索']
+          });
+      });
+      
+      // 房间管理973
+      table.render({
+          elem: '#dingdan'
+          ,height: 525
+          ,title: '房间管理'
+          ,url: '../../json/table/fjguanli.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'id', title:'房间号', width:130}
+            ,{field:'msh', title:'门锁号', width:130}
+            ,{field:'louceng', title:'楼层',  width:130}
+            ,{field:'fjtype', title:'房间类型',  width:120}
+            ,{field:'zjxiangmu', title:'清洁状态',  width:120}
+            ,{field:'xiaofei', title:'维修状态',  width:120}
+            ,{field:'jiesuan', title:'在住状态',  width:120}
+            ,{field:'fsTime', title:'对应单号',  width:150}
+            ,{field:'yyri', title:'是否可用',  width:150}
+            ,{field:'beizhu', title:'备注',  width:'15%'}
+            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:250}
+          ]]
+        });
+  
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'edit':
+            layer.msg('编辑');
+            break;
+          case 'del':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+  
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+          console.log(obj)
+      });
+  
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 1,
+              title: '修改房间信息',
+              area: ['600px', '380px'],
+              content: $('#fangjian_edit'),
+              btn: ['提交', '取消']
+            });
+        }
+      });
+                        
+      $('i').on('click', function () {
+          var type = $(this).data('type');
+          active[type] ? active[type].call(this) : '';
+      });
+      $('.layui-btn').on('click', function () {
+          var type = $(this).data('type');
+          active[type] ? active[type].call(this) : '';
+      });
+  
+  });
 </script>
     
 </body>

@@ -8,12 +8,12 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
 
   // 入住时间
   laydate.render({
-    elem: '#CheckIn'
+    elem: '.CheckIn'
     ,type: 'datetime'
   });
   // 离店时间
   laydate.render({
-    elem: '#GoWay'
+    elem: '.GoWay'
     ,type: 'datetime'
   });
   // 有效日期
@@ -39,6 +39,22 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     elem: '#danbaoTime'
     ,type: 'time'
     ,format: 'H点m分'
+  });
+  // 有效时间
+  laydate.render({
+    elem: '#youxiaoTime'
+    ,type: 'datetime'
+  });
+
+  // 入住时间
+  laydate.render({
+    elem: '.CheckIn1'
+    ,type: 'datetime'
+  });
+  // 离店时间
+  laydate.render({
+    elem: '.GoWay1'
+    ,type: 'datetime'
   });
 
   // 日志
@@ -142,14 +158,19 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   // 房间号有人住
   $('.fangjian').on('click', function(){
     layer.open({
-      type: 1,
+      type: 2,
       title: '房单:2030',
+      load: 2,
       maxmin: true,
       shadeClose: true,
       area: ['1000px', '600px'],
-      content: $('#add_content')
+      content: 'add_fangtaitu.html',
+      btn: ['取消', '确定']
+      // content: $('#add_content')
     });
   });
+
+  // var index = layer.load(0, {shade: false});
 
   // 房间无人住
   $('.fangjian_kong').on('click', function(){
