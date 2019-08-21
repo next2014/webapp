@@ -853,11 +853,6 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     ,element = layui.element
     ,table = layui.table;
 
-    var index = layer.load(0, {shade: false});
-    // var index = layer.load(1, {
-    //   shade: [0.1,'#fff'] 
-    // });
-
   // 入住时间
   laydate.render({
     elem: '.CheckIn'
@@ -1015,12 +1010,14 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       load: 2,
       maxmin: true,
       shadeClose: true,
-      area: ['1000px', '600px'],
+      area: ['1000px', '555px'],
       content: 'add_fangtaitu.html',
       btn: ['取消', '确定']
       // content: $('#add_content')
     });
   });
+
+  // var index = layer.load(0, {shade: false});
 
   // 房间无人住
   $('.fangjian_kong').on('click', function(){
@@ -1259,15 +1256,15 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   //return;
 
   //提交监听事件
-  form.on('submit(save)', function (data) {
-    params = data.field;
-    submit($, params);
-    return false;
-  })
-  var obj = document.getElementById('closeBtn');
-  obj.addEventListener('click', function cancel() {
-    CloseWin();
-  });
+  // form.on('submit(save)', function (data) {
+  //   params = data.field;
+  //   submit($, params);
+  //   return false;
+  // })
+  // var obj = document.getElementById('closeBtn');
+  // obj.addEventListener('click', function cancel() {
+  //   CloseWin();
+  // });
 
   // $('i').on('click', function () {
   //   var type = $(this).data('type');
@@ -1282,19 +1279,19 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
 function submit($, params) {
   $.post('${ctx}/golbal/add1', params, function (res) {
     if (res.status == 1) {
-    layer.msg(res.message, { icon: 1 }, function (index) {
-        CloseWin();
-    })
+      layer.msg(res.message, { icon: 1 }, function (index) {
+          CloseWin();
+      })
     } else if (res.status == 2) {
-    layer.msg(res.message, { icon: 0 }, function () {
-        parent.location.href = '${ctx}/golbal/main';
-        CloseWin();
-    })
+      layer.msg(res.message, { icon: 0 }, function () {
+          parent.location.href = '${ctx}/golbal/main';
+          CloseWin();
+      })
     } else {
-    layer.msg(res.message, { icon: 0 }, function () {
-        location.reload(); // 页面刷新
-        return false
-    })
+      layer.msg(res.message, { icon: 0 }, function () {
+          location.reload(); // 页面刷新
+          return false
+      })
     }
   }, 'json');
 }
@@ -1305,6 +1302,8 @@ function CloseWin() {
     parent.layer.close(index); //再执行关闭 
 }
 </script>
+    
+    
     
     
     

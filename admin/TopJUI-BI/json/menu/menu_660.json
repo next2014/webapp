@@ -4,7 +4,7 @@
     "pid": 660,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "综合数据",
+    "text": "购票数据分析",
     "url": "./page/shuju/zonghe.html"
   },
   {
@@ -13,15 +13,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "海洋世界数据",
-    "url": "./page/shuju/zonghe1.html"
-  },
-  {
-    "id": 1353,
-    "pid": 660,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
-    "text": "婚博中心数据",
-    "url": "./page/shuju/zonghe2.html"
+    "url": "./page/shuju/hy.html"
   },
   {
     "id": 1354,
@@ -29,7 +21,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "卡丁车馆数据",
-    "url": "./page/shuju/bar.html"
+    "url": "./page/shuju/kdc.html"
   },
   {
     "id": 1348,
@@ -37,7 +29,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "真人CS体验馆数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/shuju/zrcs.html"
   },
   {
     "id": 1347,
@@ -45,7 +37,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "美食天地数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/shuju/mstd.html"
   },
   {
     "id": 1347,
@@ -53,7 +45,7 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "欧欧之家数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/shuju/oozj.html"
   },
   {
     "id": 1347,
@@ -61,6 +53,6 @@
     "state": "open",
     "iconCls": "fa fa-file-text-o",
     "text": "欧欧主题酒店数据",
-    "url": "./page/shuju/yihao.html"
+    "url": "./page/shuju/ooztjd.html"
   }
 ]

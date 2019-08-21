@@ -24,20 +24,14 @@
     <div class="fjguanli">
     <div class="search_style">
         <ul class="search_content clearfix" style="margin-left:0;">
-            <li>
-                <input type="text" class="text_add" style="width:200px;height:32px;margin-left:0;padding:5px 10px;" />
-            </li>
-            <li><button type="button" class="btn btn-primary w-100 p-1">查询/读取证件</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1" id="gjchaxun">高级查询</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1">今日预高</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1">已退房单</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1">悬单</button></li>
+            <li><button type="button" class="btn btn-primary w-100 p-1" id="gjchaxun">房价调整</button></li>
         </ul>
     </div>
     <!-- 订单列表 -->
-    <table class="layui-hide" id="fangdan" lay-filter="test"></table>
+    <table class="layui-hide" id="fangjia" lay-filter="test"></table>
 </div>
     <script src="../../static/web/src/layui.js" charset="utf-8"></script>
+    
     
     
     
@@ -88,30 +82,22 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
         
         // 房间管理973
         table.render({
-            elem: '#fangdan'
+            elem: '#fangjia'
             ,height: 525
             ,title: '房单'
-            ,url: '../../json/table/fangdan.json'
+            ,url: '../../json/table/fangjia.json'
             ,page: true
             ,autoSort: false
             ,toolbar: false
             // ,toolbar: '#toolbarDemo'
             ,cols: [[
-            {field:'id', title:'房间号', width:80}
-            ,{field:'msh', title:'房单', width:80}
-            ,{field:'louceng', title:'会员类型', width:100}
-            ,{field:'fjtype', title:'房间类型', width:100}
-            ,{field:'fangjia', title:'房价', width:70}
-            ,{field:'ydr', title:'预订人', width:70}
-            ,{field:'lxr', title:'联系人', width:70}
-            ,{field:'lxdh', title:'联系电话', width:150}
-            ,{field:'rzr', title:'入住人', width:100}
-            ,{field:'rztime', title:'入住时间', width:150}
-            ,{field:'leavetime', title:'离店时间', width:150}
-            ,{field:'zhuangtai', title:'状态', width:100}
-            ,{field:'laiyuan', title:'来源', width:100}
-            ,{field:'beizhu', title:'备注', width:170}
-            ,{field:'yuer', title:'余额', width:100}
+              {field:'fx', title:'房型', width:150}
+                ,{field:'msj', title:'门市价', width:150}
+                ,{field:'mff', title:'免费房', width:150}
+                ,{field:'zyf', title:'自用房', width:150}
+                ,{field:'ykj', title:'银卡价', width:150}
+                ,{field:'jkj', title:'金卡价', width:150}
+                ,{field:'zzhy', title:'至尊会员', width:150}
             ]]
         });
     
@@ -173,9 +159,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
             active[type] ? active[type].call(this) : '';
         });
     
-    });
+});
 </script>
-    
     
 </body>
 </html>

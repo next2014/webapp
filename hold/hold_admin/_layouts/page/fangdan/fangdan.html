@@ -2,6 +2,19 @@
 layout: default
 title: 房单
 ---
-<div class="fangdan">
-    房单
+<div class="fjguanli">
+    <div class="search_style">
+        <ul class="search_content clearfix" style="margin-left:0;">
+            <li>
+                <input type="text" class="text_add" style="width:200px;height:32px;margin-left:0;padding:5px 10px;" />
+            </li>
+            <li><button type="button" class="btn btn-primary w-100 p-1">查询/读取证件</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1" id="gjchaxun">高级查询</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1">今日预高</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1">已退房单</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1">悬单</button></li>
+        </ul>
+    </div>
+    <!-- 订单列表 -->
+    <table class="layui-hide" id="fangdan" lay-filter="test"></table>
 </div>

@@ -28,12 +28,13 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       // 高级查询
       $('#gjchaxun').on('click', function () {
           layer.open({
-              type: 1,
+              type: 2,
               title: '高级查询',
               maxmin: true,
               shadeClose: false,
-              area: ['800px', '370px'],
-              content: $('#dingdan_content'),
+              area: ['800px', '340px'],
+              content: 'add_dingdan.html',
+              // content: $('#dingdan_content'),
               btn: ['取消', '搜索']
           });
       });

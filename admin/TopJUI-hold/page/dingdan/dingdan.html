@@ -27,8 +27,8 @@
             <li>
                 <input type="text" class="text_add" style="width:200px;height:32px;margin-left:0;padding:5px 10px;" />
             </li>
-            <li><button type="button" class="btn btn-primary w-100 p-1 ml-2">查询/读取证件</button></li>
-            <li><button type="button" class="btn btn-light w-100 p-1 ml-2" id="gjchaxun">高级查询</button></li>
+            <li><button type="button" class="btn btn-primary w-100 p-1">查询/读取证件</button></li>
+            <li><button type="button" class="btn btn-light w-100 p-1" id="gjchaxun">高级查询</button></li>
             <!-- <li><button type="button" class="btn btn-light w-100 p-1">今日抵达</button></li>
             <li><button type="button" class="btn btn-light w-100 p-1">预订未到</button></li>
             <li><button type="button" class="btn btn-light w-100 p-1">取消订单</button></li> -->
@@ -43,127 +43,6 @@
         <!-- <a class="layui-btn layui-btn-xs" lay-event="edit" style="color:#ffffff">修改</a> -->
         <!-- <a class="layui-btn layui-btn-xs" lay-event="set_tsquanxian" style="color:#ffffff">特殊权限</a> -->
     </script>
-    <!--高级查询-->
-    <div class="add_menber" id="dingdan_content" style="display:none">
-        <div style="padding:15px; overflow: hidden;">
-            <form class="layui-form">
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房单号</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">来源</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <select name="" lay-filter="aihao">
-                            <option value="0">商务大床房</option>
-                            <option value="1">商务大床房1</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">二级来源</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <select name="" lay-filter="aihao">
-                            <option value="0">清洁已检查</option>
-                            <option value="1">清洁已检查1</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间号码</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">预订人</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">预订手机</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">房间类型</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <select name="" lay-filter="aihao">
-                            <option value="0">全部</option>
-                            <option value="1">商务大床房1</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">联系人</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input type="text" name="" placeholder="" class="text_add ml-0" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住人类型</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <select name="" lay-filter="aihao">
-                            <option value="0">全部</option>
-                            <option value="1">非会员</option>
-                            <option value="2">银会员</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">入住日期</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input name="" type="text" class="text_add ml-0" id="CheckInStar" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">至</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input name="" type="text" class="text_add ml-0" id="CheckInEnd" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">状态</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <select name="" lay-filter="aihao">
-                            <option value="0">全部</option>
-                            <option value="1">预订</option>
-                            <option value="2">取消</option>
-                            <option value="3">未到</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">离店日期</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input name="" type="text" class="text_add ml-0" id="leaveStar" style="width:100%">
-                    </div>
-                </div>
-                <div class="layui-form-item mb-3" style="width:33.3%">
-                    <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">至</label>
-                    <div class="layui-input-block" style="margin-left: 90px;">
-                        <input name="" type="text" class="text_add ml-0" id="leaveEnd" style="width:100%">
-                    </div>
-                </div>
-                <!-- <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
-                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                    </div>
-                </div> -->
-            </form>
-        </div>
-    </div>
 </div>
     <script src="../../static/web/src/layui.js" charset="utf-8"></script>
     
@@ -202,12 +81,13 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       // 高级查询
       $('#gjchaxun').on('click', function () {
           layer.open({
-              type: 1,
+              type: 2,
               title: '高级查询',
               maxmin: true,
               shadeClose: false,
-              area: ['800px', '370px'],
-              content: $('#dingdan_content'),
+              area: ['800px', '340px'],
+              content: 'add_dingdan.html',
+              // content: $('#dingdan_content'),
               btn: ['取消', '搜索']
           });
       });
@@ -297,6 +177,8 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
   
   });
 </script>
+    
+    
     
 </body>
 </html>

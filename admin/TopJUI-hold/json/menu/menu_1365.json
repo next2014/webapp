@@ -28,16 +28,8 @@
     "pid": 1365,
     "state": "open",
     "iconCls": "fa fa-file-text-o",
-    "text": "工作账",
-    "url": "./page/chanpin/chanpin.html"
-  },
-  {
-    "id": 13653,
-    "pid": 1365,
-    "state": "open",
-    "iconCls": "fa fa-file-text-o",
     "text": "房价",
-    "url": "./page/chanpin/chanpin.html"
+    "url": "./page/fangjia/fangjia.html"
   },
   {
     "id": 13653,
