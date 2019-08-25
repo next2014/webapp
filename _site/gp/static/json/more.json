@@ -1,49 +1,41 @@
 [{
-	"GetPic": "static/images/GetImage.jpeg",
+	"GetPic": "static/images/home1/gp3.png",
     "GetTypeColor":"primary",
 	"GetType":"成人票",
 	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
+	"GetPrick":"80.00",
+	"YuanPrick":"80.00",
+	"zType1":"身份证入园",
+	"zType2":"可订当日",
+	"zType3":"核验准考证"
 }, {
-	"GetPic": "static/images/GetImage.jpeg",
+	"GetPic": "static/images/home1/gp3.png",
     "GetTypeColor":"primary",
 	"GetType":"成人票",
 	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
+	"GetPrick":"80.00",
+	"YuanPrick":"80.00",
+	"zType1":"身份证入园",
+	"zType2":"可订当日",
+	"zType3":"核验准考证"
 }, {
-    "GetPic": "static/images/GetImage.jpeg",
+    "GetPic": "static/images/home1/gp3.png",
     "GetTypeColor":"primary",
 	"GetType":"成人票",
 	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
+	"GetPrick":"80.00",
+	"YuanPrick":"80.00",
+	"zType1":"身份证入园",
+	"zType2":"可订当日",
+	"zType3":"核验准考证"
 }, {
-	"GetPic": "static/images/GetImage.jpeg",
+	"GetPic": "static/images/home1/gp3.png",
     "GetTypeColor":"primary",
 	"GetType":"成人票",
 	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
-}, {
-	"GetPic": "static/images/GetImage(1).png",
-    "GetTypeColor":"primary",
-	"GetType":"成人票",
-	"GetTitle":"海洋世界周末/节假票",
-	"GetPrick":"90.0"
-}, {
-    "GetPic": "static/images/GetImage(2).png",
-    "GetTypeColor":"primary",
-	"GetType":"成人票",
-	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
-}, {
-	"GetPic": "static/images/GetImage(3).png",
-    "GetTypeColor":"primary",
-	"GetType":"成人票",
-	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
-}, {
-	"GetPic": "static/images/GetImage(3).png",
-    "GetTypeColor":"primary",
-	"GetType":"成人票",
-	"GetTitle":"海洋世界平日票",
-	"GetPrick":"80.0"
+	"GetPrick":"80.00",
+	"YuanPrick":"80.00",
+	"zType1":"身份证入园",
+	"zType2":"可订当日",
+	"zType3":"核验准考证"
 }]

@@ -1,25 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>欧美城销售日历</title>
-  <link rel="stylesheet" href="static/css/calendar-price-jquery.min.css">
-  <style>
-    body {margin: 0; padding: 0; font-family: "Microsoft YaHei UI";}
-  </style>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>
+    价格日历 · 欧美城
+</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/main.css">
+<!-- icon -->
+<link rel="stylesheet" href="static/css/fontawesome/css/font-awesome.min.css">
+<!-- jquery-weui -->
+<link rel="stylesheet" href="static/css/weui.css">
+<link rel="stylesheet" href="static/css/jquery-weui.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<!-- Select ticket type -->
+
+
+<link rel="stylesheet" href="static/css/calendar-price-jquery.min.css">
+
 </head>
 <body>
+    
+    <header class="search">
+        <div class="search_header_box search_header">
+            <div class="search_left" style="width:3%;">
+                <!-- <a href="javascript:history.back()"><i class="fa fa-angle-left fa-lg"></i></a> -->
+            </div>
+            <a href="javascript:;" class="search_header_box_input">欧美城价格日历</a>
+            <div class="search_right" style="width:3%;"></div>
+        </div>
+</header>
+<div style="height:50px;"></div>
 
-<div class="container"></div>
+<div class="calendar_price"></div>
 
-<!-- <script src="js/jquery-1.12.4.min.js"></script> -->
-<script src="static/js/jquery-2.2.4.min.js"></script>
+<div class="p-2">
+    <a href="ticketDetailsNew.html" class="btn btn-info btn-lg btn-block text-white">返 回</a>
+</div>
+    
+    <script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-weui.js"></script>
+<!-- Select ticket type -->
+
+<!--  -->
+
+
 <script src="static/js/mock-data.js"></script>
-<!--<script src="../dist/js/calendar-price-jquery.min.js"></script>-->
 <script src="static/js/calendar-price-jquery.min.js"></script>
 <script>
-  $(function () {
+$(function () {
     // 生成模拟数据
     var MOCK_DATA = createMockData();
 
@@ -30,45 +63,10 @@
     // placeholder input[placeholder]
     var calendarConfig = [
       {
-        key: 'buyNumMax',
-        name: '最多购买数',
-        type: 'number',
-        placeholder: '请输入最多购买数量'
-      },
-      {
-        key: 'buyNumMin',
-        name: '最少购买数',
-        type: 'number',
-        placeholder: '请输入最少购买数'
-      },
-      {
         key: 'price',
-        name: '分销售价',
+        name: '零售价',
         type: 'text',
         placeholder: '请输入'
-      },
-      {
-        key: 'priceMarket',
-        name: '景区挂牌价',
-        type: 'text',
-        placeholder: '请输入'
-      },
-      {
-        key: 'priceSettlement',
-        name: '分销结算价',
-        type: 'text',
-        placeholder: '请输入'
-      },
-      {
-        key: 'priceRetail',
-        name: '建议零售价',
-        placeholder: '请输入建议零售价'
-      },
-      {
-        key: 'cashback',
-        name: '返现',
-        placeholder: '返现',
-        disabled: true
       },
       {
         key: 'stock',
@@ -83,31 +81,9 @@
     // var showConfig = [
     //   {
     //     key: 'price',
-    //     name: '分:￥'
-    //   },
-    //   {
-    //     key: 'priceSettlement',
-    //     name: '采:￥'
-    //   },
-    //   {
-    //     key: 'stock',
-    //     name: '库:'
+    //     name: '￥'
     //   }
     // ]
-    var showConfig = [
-      {
-        key: 'priceRetail',
-        name: '零售价:￥'
-      },
-      {
-        key: 'priceMarket',
-        name: '市场价:￥'
-      },
-      {
-        key: 'stock',
-        name: '库存:'
-      }
-    ]
 
     // 样式颜色配置
     var styleConfig = {
@@ -155,16 +131,18 @@
 
     // 初始化日历
     var zxCalendar = $.CalendarPrice({
-      el: '.container',
-      // startDate: '2017-08-02',
-      endDate: '2019-06-30',
+      el: '.calendar_price',
+      startDate: '2019-05-31',
+      endDate: '2019-12-30',
       data: MOCK_DATA,
       // 配置需要设置的字段名称
       config: calendarConfig,
       // 配置在日历中要显示的字段
-      show: showConfig,
+      show: [{key: 'price',name: '¥'}],
       // 自定义颜色
-      style: styleConfig
+      style: styleConfig,
+      // 隐藏底部按钮（重置、确定、取消）
+      // hideFooterButton: true
     });
 
     log(zxCalendar)
@@ -239,7 +217,8 @@
   function log (s) {
     console.log(s)
   }
-</script>
+</script>  
 
+<!--  -->
 </body>
 </html>

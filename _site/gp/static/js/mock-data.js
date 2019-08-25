@@ -13,12 +13,12 @@ function createMockData () {
     mockData.push({
       date: date.getFullYear() + '-' + fd(i % 12 + 1) + '-' + fd(randNum(30)),
       stock: i * 21,
-      buyNumMax: "50",
-      buyNumMin: "1",
+      // buyNumMax: "50",
+      // buyNumMin: "1",
       price: randNum(i) + '.00',
-      priceMarket: "100.00",
-      priceSettlement: "90.00",
-      priceRetail: "99.00"
+      // priceMarket: "100.00",
+      // priceSettlement: "90.00",
+      // priceRetail: "99.00"
     });
   }
   return mockData

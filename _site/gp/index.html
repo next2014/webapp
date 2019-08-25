@@ -18,16 +18,14 @@
 <!-- Select ticket type -->
 
 
-
-
 </head>
 <body>
     
     <div class="home">
-	<div class="index_all">
-		<!-- S 轮播 -->
-		<!-- 展现招聘广告 -->
-<div class="swiper-container1 topAd">
+ <div class="index_all">
+	<!-- S 轮播 -->
+	<!-- 展现招聘广告 -->
+<div class="swiper-container topAd" style="width: 100%;">
     <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="static/images/ti_tu-2.jpg"/></div>
         <div class="swiper-slide"><img src="static/images/ti_tu-2.jpg"/></div>
@@ -36,7 +34,7 @@
     <!-- 如果需要分页器-->
     <div class="swiper-pagination"></div>
 </div>
-		<!-- E 轮播 -->
+	<!-- E 轮播 -->
 
     <!-- S 园区公告 -->
     <!-- <div class="mod_bbs border-bottom" style="display:flex;">
@@ -57,7 +55,8 @@
         </section>
 		</div> -->
 		<ul>
-			<li class="border-0"><div class="alert alert-warning p-2 mb-0" role="alert">
+			<li class="m-1" style="width:auto!important">
+			  <div class="alert alert-warning p-2 mb-0" role="alert">
 				<h1 class="alert-heading text-center">特别公告 <img src="static/images/new.png" alt="" style="width:30px;vertical-align: middle;padding-bottom: 5px;"/></h1>
 				<h2 class="mb-2">亲爱的游客朋友们：</h2>
 				<p class="pb-2 text-justify">　　为回馈广大游客对欧美城的关注与喜爱，欧美城将于2019年3月23日-24日推出重磅的海洋馆门票特价优惠活动......</p>
@@ -70,132 +69,199 @@
     <!-- E 园区公告 -->
 
 		<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
-		<!-- <div class="content">
-			<ul class="lists" id="ticket"></ul>
+		<!-- <div class="ticket">
+			<h3><strong>海洋世界门票</strong></h3>
+			<div class="content">
+				<ul class="lists"></ul>
+			</div>
 		</div> -->
-	  <ul id="ticket">
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage.jpeg" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-primary text-white mr-1">儿童</a>海洋世界平日票</h2>
-					<span class="dol d-block mt-1">¥<em>80.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(1).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-primary text-white mr-1">成人票</a>海洋世界周末/节假票</h2>
-					<span class="dol d-block mt-1">¥<em>90.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(2).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-success text-white mr-1">儿童/长者票</a>海洋世界平日票</h2>
-					<span class="dol d-block mt-1">¥<em>70.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(3).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-success text-white mr-1">儿童/长者票</a>海洋世界周末/节假票</h2>
-					<span class="dol d-block mt-1">¥<em>80.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(4).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-info text-white mr-1">平日</a>园区大门票</h2>
-					<span class="dol d-block mt-1">¥<em>20.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(5).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-danger text-white mr-1">周末/节假</a>园区大门票</h2>
-					<span class="dol d-block mt-1">¥<em>30.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(6).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-primary text-white mr-1">成人联票</a>海洋世界+婚博艺术中心欧美街9号</h2>
-					<span class="dol d-block mt-1">¥<em>100.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(7).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-success text-white mr-1">儿童/长者联票</a>海洋世界+婚博艺术中心欧美街9号</h2>
-					<span class="dol d-block mt-1">¥<em>90.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(8).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-secondary text-white mr-1">单人</a>欧美城1801年卡</h2>
-					<span class="dol d-block mt-1">¥<em>560.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(8).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-secondary text-white mr-1">两人</a>欧美城1801年卡</h2>
-					<span class="dol d-block mt-1">¥<em>990.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(8).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-secondary text-white mr-1">三人</a>欧美城1801年卡</h2>
-					<span class="dol d-block mt-1">¥<em>1390.0</em></span>
-				</div>
-			</li>
-			
-			<li class="lists" onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-				<div class="in_fl tic_img">
-					<img src="static/images/GetImage(8).png" alt=" ">
-				</div>
-				<div class="in_fr">
-					<h2><a href="javascript:;" class="badge badge-secondary text-white mr-1">四人</a>欧美城1801年卡</h2>
-					<span class="dol d-block mt-1">¥<em>1750.0</em></span>
-				</div>
-			</li>
-			
-		</ul>
+		<div class="tab">
+			<a href="javascript:;" class="item cur">全部 </a>
+			<a href="javascript:;" class="item" id="pickerBtn">选票类型 <i class="fa fa-angle-down"></i></a>
+		</div>
+		<!-- <div class="content">
+			<div class="lists"></div>
+			<div class="lists"></div>
+		</div> -->
+
+		<!-- start 开始 -->
+		<div class="ticket" id="ticket">
+			<div class="content">
+				<h3 class="pt-2 pl-2 pr-2"><strong>最新活动门票</strong></h3>
+				<ul class="lists">
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/hd1.jpg" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">泼水活动</a>泼水节狂欢节门票
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验学生证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>30.0</em></span>
+								<span class="dor">¥30.0</span>
+							</div>
+						</div>
+					</li>
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/hd2.jpg" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1"></a>遇见音乐节门票C
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验准考证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>98.0</em></span>
+								<span class="dor">¥98.0</span>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+				<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界门票</strong></h3>
+				<ul class="lists">
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/gp3.png" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">儿童票</a>海洋世界
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>16点前来</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>55.0</em></span>
+								<span class="dor">¥120.0</span>
+							</div>
+						</div>
+					</li>
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/gp3.png" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">成人票</a>海洋世界
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>20点前来</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>55.0</em></span>
+								<span class="dor">¥120.0</span>
+							</div>
+						</div>
+					</li>
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/gp3.png" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">长者票</a>海洋世界
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验准考证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>55.0</em></span>
+								<span class="dor">¥120.0</span>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+				<h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆门票</strong></h3>
+				<ul class="lists">
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/kdc2.jpg" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">小童车</a>卡丁车馆6分钟体验
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验准考证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>55.0</em></span>
+								<span class="dor">¥55.0</span>
+							</div>
+						</div>
+					</li>
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/kdc1.jpg" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">娱乐车RTX</a>卡丁车馆6分钟体验
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验学生证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>88.0</em></span>
+								<span class="dor">¥88.0</span>
+							</div>
+						</div>
+					</li>
+					
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+						<div class="in_fl tic_img">
+							<img src="static/images/home1/kdc3.jpg" alt=" ">
+						</div>
+						<div class="in_fr">
+							<h2>
+								<a href="javascript:;" class="badge badge-primary text-white mr-1">暑期</a>卡丁车亲子套票
+							</h2>
+							<ul class="ticket_type">
+								<li>身份证入园</li>
+								<li>可订当日</li>
+								<li>核验准考证</li>
+							</ul>
+							<div class="ticket_price d-block">
+								<span class="dol">¥<em>168.0</em></span>
+								<span class="dor">¥168.0</span>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<!-- end 结束 -->
 	</div>
 </div>
 
@@ -245,9 +311,8 @@
 <!-- Select ticket type -->
 
    <script src="static/js/swiper.js"></script>
-   
-<script type="text/javascript">
-    var swiper1 = new Swiper('.swiper-container1',{//广告
+   <script type="text/javascript">
+    var swiper1 = new Swiper('.swiper-container',{//广告
         directon: 'horizontal',//水平滑动
         speed:300,//滑动速度
         loop:true,
@@ -275,6 +340,43 @@
          FastClick.attach(document.body);
      });
  </script>
+   <script src="static/js/weui.min.js"></script>
+   <script>
+     document.querySelector('#pickerBtn').addEventListener('click', function () {
+            weui.picker([{
+                label: '海洋世界',
+                value: 0
+            }, {
+                label: '婚博中心',
+                disabled: true,
+                value: 1
+            }, {
+                label: '卡丁车馆',
+                disabled: true,
+                value: 2
+            }, {
+                label: '真人CS体验馆',
+                value: 3
+            }, {
+                label: '园区活动',
+                value: 4
+            }, {
+                label: '欧欧主题酒店',
+                value: 5
+            }], {
+                defaultValue: [8],
+                className: 'custom-classname',
+                onChange: function (result) {
+                    //console.log(item, index);
+                    console.log(result);
+                },
+                onConfirm: function (result) {
+                    console.log(result);
+                },
+                id: 'picker'
+            });
+        });
+   </script>
 
 <!--  -->
 
