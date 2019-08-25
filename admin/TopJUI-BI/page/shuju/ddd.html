@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>海洋馆数据分析</title>
+    <!-- <script src="../../static/www/js/jquery.min.js"></script> -->
+    <script type="text/javascript" src="http://echarts.baidu.com/doc/asset/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="main" style="height:400px"></div>
+
+
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+
+    <script>
+        //路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist/'
+            }
+        });
+
+        //使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' //使用柱状图就加载bar 模块，按需加载
+            ],
+            function (ec, theme) {
+                // 基于准备好的 dom, 初始化echarts 图表
+                var myChart = ec.init(document.getElementById('main'));
+    
+                myChart.showLoading();
+                $.ajax({
+                    type:'get',
+                    url:'http://www.telize.com/geoip',  //随便找的公开接口
+                    dataType:'jsonp',                   //跨域jsonp
+                    success:function(res){
+                        // 把数据变成 echarts 接受的 option
+                        var option = optionFactory(res);
+                        myChart.hideLoading();
+                        //为echarts 对象加载数据
+                        myChart.setOption(option);
+                    }
+                });
+            });
+    
+            function optionFactory(res){
+                //
+                var option = {
+                    title:{
+                        text:res.country+''+res.city+''+res.ip+''+'经度:'+ res.longitude+' 维度:'+res.latitude
+                    },
+                    xAxis:{
+                        type:'category',
+                        data:res.ip.split('.')
+                    },
+                    yAxis:{
+                        type:'value'
+                    },
+                    series:[
+                        {
+                            name:'当前 IP',
+                            type: 'bar',
+                            data:res.ip.split('.')
+                        }
+                    ]
+                }
+            }
+    </script>
+
+</body>
+</html>
