@@ -1,0 +1,274 @@
+.fangtaitu .grid-demo{
+    cursor: pointer;
+}
+.fangtaitu .layui-row {
+    padding: 6px 4px;
+}
+
+.fangtaitu .layui-row .layui-col-md1 {
+    width: auto;
+}
+
+.fangtaitu .layui-row .layui-col-md1 a{
+    width: auto;
+    display: block;
+    text-decoration: none;
+}
+
+.fangtaitu .layui-row .layui-col-md1 .grid-demo {
+    /* margin: 0 3px; */
+    width: 78px;
+    height: 78px;
+    position: relative;
+}
+
+.fangtaitu .layui-row .topBtn {
+    width: 78px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    margin: 0 10px;
+}
+
+.fangtaitu .layui-row .layui-col-md1 .grid-demo span {
+    text-align: left;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+}
+
+.fangtaitu .layui-row .layui-col-md1 .grid-demo span i {
+    display: block;
+    width: 19.5px;
+    height: 19.5px;
+    text-align: center;
+}
+
+.fangtaitu .layui-row .layui-col-md1 .grid-demo span.right {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+.add_order h2{
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+}
+
+/*会员级别*/
+.btn-warning.active, .btn-warning.active:focus, .btn-warning.active:hover, .btn-warning.focus.active, .open>.btn-warning.dropdown-toggle.active {
+    background-color: #ff7b00!important;
+    border-color: #f19515;
+}
+.btn-info.active, .btn-info.active:focus, .btn-info.active:hover, .btn-info.focus.active, .open>.btn-info.dropdown-toggle.active {
+    background-color: #2b95d6!important;
+    border-color: #3e99d1;
+}
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+    color: #fff!important;
+    background-color: #8d8d8d!important;
+}
+.btn-dark.active, .btn-dark.active:focus, .btn-dark.active:hover, .btn-dark.focus.active, .open>.btn-dark.dropdown-toggle.active {
+    background-color: #646c72!important;
+    border-color: #626f77;
+}
+.btn-dark {
+    color: #fff!important;
+    background-color: #343a40!important;
+    border-color: #343a40!important;
+}
+.btn-light {
+    color: #888!important;
+    text-shadow: 0 -1px 0 rgba(250,250,250,.25)!important;
+}
+.fj_num{
+    height: 210px;
+    overflow:scroll;
+}
+.fj_num .col{
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color:#ffffff;
+    text-align: center;
+    background-color: #1e76ad;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fj_num .col:last-child{
+    margin-right: 0!important;
+}
+/* .tab-title{
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
+.fanghao-tab li{
+    float:right!important;
+}
+
+.xingkeren .add_order li{
+    height: 38px!important;
+  }
+
+.xingkeren .xingkeren-title{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-top:1px solid #ccc;
+    margin-bottom: -1px;
+    background-color: #fff;
+}
+.xingkeren .xingkeren-title strong{
+    display: block;
+    border-top: 2px solid rgb(255, 174, 0);
+}
+.xinkenren-message{
+    /* overflow: hidden; */
+    /* border:1px solid #ccc; */
+    padding:15px;
+}
+
+/* 房单号 */
+.fangjiaForm{
+    border:1px solid #cccccc;
+}
+.fangjiaForm li,.xingkeren li{
+  height: 36px!important;
+}
+.fangjiaForm .layui-form-select .layui-input,
+.xingkeren .layui-form-select .layui-input{
+    padding: 0 5px;
+    margin-left: 5px;
+    height: 30px;
+    border-color: #D5D5D5!important;
+    width:180px;
+    font-size: 12px;
+}
+.fangjiaForm .fjType_left73 .layui-form-select .layui-input{
+    width:138px!important;
+}
+.fangjiaForm .ddlaiyuan_left55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_left55 .layui-form-select .layui-input{
+   width:87.5px!important;
+   margin-left: 5px;;
+}
+.fangjiaForm .ddlaiyuan_right55 .layui-form-select .layui-input,.xingkeren .ddlaiyuan_right55 .layui-form-select .layui-input{
+    width:87.5px!important;
+    margin-left: 5px;;
+ }
+.fangjiaForm .keyuanjg_left55 .layui-form-select .layui-input{
+    width:87.5px!important;
+    margin-left: 5px;
+ }
+.fangjiaForm .keyuanjg_right55 .layui-form-select .layui-input{
+    width:87.5px!important;
+    margin-left: 5px;;
+ }
+.fangjiaForm .fangjiaForm-content .label_name,.xingkeren .xinkenren-message .label_name{
+    width:50px;
+    font-size: 12px;
+}
+.fangjiaForm .fangjiaForm-content .text_add{
+    padding:0 2px!important;
+    font-size:12px;
+}
+.fangjiaForm-title strong{
+    font-size: 25px;
+    font-weight: normal;
+}
+.fangjiaForm-title span{
+    color:#FC6E64;
+}
+/* .fangjiaForm-content{
+    border:1px solid #ccc;
+} */
+
+/* 现金 */
+.xianjinZf{
+    margin-top:20px;
+    border:1px solid #ccc;
+}
+.xianjinZf ul li{
+    display: flex;
+    align-items: center;
+}
+
+/* 关联房 */
+.glfang-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#eee;
+}
+
+.glfang .layui-form{
+    margin:0;
+}
+
+.glfang .layui-table-cell{
+    padding: 0!important;
+}
+.glfang .layui-table-main{
+   height: 355px!important;
+}
+select.text_add{
+    padding:0 2px;
+}
+
+.glfang .layui-table-box th{
+    text-align: center;
+}
+
+.glfang .layui-table-box tr td{
+    font-size: 12px;
+    padding: 0!important;
+    text-align: center;
+}
+.fjguanli,.wxfang{
+    padding:10px;
+    background-color: #ffffff;
+}
+.fjguanli li,.wxfang li{
+    display: flex;
+}
+.fjguanli .layui-form-item,.add_order .layui-form-item{
+    float: left;
+    clear: initial;
+    width:100%;
+    margin: 0 0 10px 0;
+}
+
+.fjguanli .search_style,.wxfang .search_style{
+    margin-top: 0;margin-bottom:0;display:flex;justify-content: space-between;
+}
+
+.text_add{
+	padding: 0 5px;
+    margin-left: 5px;
+	height: 30px;
+	width: 150px;
+}
+.btn{
+	border:0!important;
+}
+.search_content select{
+	margin-left: 0!important;
+}
+.search_content .btn {
+    border-radius: 4px;
+}
+.layui-form-select .layui-input{
+   height: 30px!important;
+}
+
+.layui-layer-page .layui-layer-content{
+    overflow: initial!important;
+}
+
+.layui-select-disabled .layui-disabled{
+    border: 1px solid #D5D5D5!important;
+}

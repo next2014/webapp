@@ -10,8 +10,9 @@
     <link href="../../static/www/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../static/www/css/font-awesome.min.css" rel="stylesheet">
     <link href="../../static/www/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/web/src/css/layui.css" />
+    <script src="../../static/web/js/jquery-1.9.1.min.js"></script>
     <style type="text/css">
-
     </style>
 </head>
 <body class="fixed-body">
@@ -43,7 +44,12 @@
             </div>
         </div>
 
-        <div id="main" style="height: 600px;"></div>
+        <div style="border:1px solid #dddddd;">
+            <div id="main" style="height:350px;"></div>
+        </div>
+
+        <table class="layui-hide" id="goupiao" lay-filter="test"></table>
+
     </div>
     <script src="../../static/www/js/echarts.js"></script>
     <script type="text/javascript">
@@ -64,33 +70,84 @@
                 //--- 购票数据图 ---
                 var myChart = ec.init(document.getElementById('main'));
                 myChart.setOption({
+                    title: {
+                        text: '购票数据分析',
+                        subtext: ''
+                    },
                     tooltip : {
                         trigger: 'axis'
                     },
                     legend: {
-                        data:['海洋世界', '婚博中心', '卡丁车馆', '真人CS体验馆', '美食天地', '欧欧之家', '欧欧主题酒店']
+                        x: 'center',
+                        y: 35,
+                        itemWidth: 25,
+                        itemHeight: 20,
+                        itemGap: 30,
+                        data: [
+                            {
+                              name: '海洋世界',
+                            //   icon : 'image://http://echarts.baidu.com/doc/asset/img/echarts-logo.png',
+                              textStyle:{
+                                 color: '#FF7F50'
+                              }
+                            },
+                            {
+                              name:'婚博中心',
+                              fontSize: 16,
+                              textStyle:{
+                                 color: '#87cefa'
+                              }
+                            },
+                            {
+                              name:'卡丁车馆',
+                              textStyle:{
+                                  color: '#da70d6'
+                              }
+                            },
+                            {
+                              name:'真人CS体验馆',
+                              textStyle:{
+                                  color: '#32CD32'
+                              }
+                            },
+                            {
+                              name:'美食天地',
+                              textStyle:{
+                                  color: '#6495ED'
+                              }
+                            },
+                            {
+                              name:'欧欧之家',
+                              textStyle:{
+                                  color: '#FF69B4'
+                              }
+                            },
+                            {
+                              name:'欧欧主题酒店',
+                              textStyle:{
+                                  color: '#BA55D3'
+                              }
+                            }
+                        ]
+                        // data:['海洋世界', '婚博中心', '卡丁车馆', '真人CS体验馆', '美食天地', '欧欧之家', '欧欧主题酒店'],
                     },
-                    toolbox: {
-                        show : true,
-                        feature : {
-                            mark : {show: true},
-                            dataView : {show: true, readOnly: false},
-                            magicType : {show: true, type: ['line', 'bar']},
-                            restore : {show: true},
-                            saveAsImage : {show: true}
-                        }
-                    },
-                    calculable : true,
                     xAxis : [
                         {
                             type : 'category',
-                            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                            boundaryGap:true,
+                            splitLine: {show:false},
+                            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
                         }
                     ],
                     yAxis : [
                         {
                             type : 'value',
-                            splitArea : {show : true}
+                            splitArea : {show : true},
+                            splitLine: {
+                              lineStyle: {
+                                type: 'dashed'
+                              }
+                            }
                         }
                     ],
                     series : [
@@ -133,6 +190,91 @@
                 });
             }
         );
+    </script>
+    <script src="../../static/web/src/layui.js" charset="utf-8"></script>
+    <script>
+        layui.use(['laydate', 'layer', 'form', 'element', 'table'], function () {
+            var laydate = layui.laydate
+                , layer = layui.layer
+                , from = layui.form
+                , element = layui.element
+                , table = layui.table;
+
+            table.render({
+                elem: '#goupiao'
+                , height: 525
+                , title: '房单'
+                , url: '../../json/table/goupiao.json'
+                , page: true
+                , autoSort: false
+                , toolbar: false
+                // ,toolbar: '#toolbarDemo'
+                , cols: [[
+                    { field: 'fx', title: '票ID', width: 150 }
+                    , { field: 'msj', title: '票类名称', width: 150 }
+                    , { field: 'mff', title: '票数', width: 150 }
+                    , { field: 'zyf', title: '金额', width: 150 }
+                ]]
+            });
+
+            //工具栏事件
+            table.on('toolbar(test)', function (obj) {
+                var checkStatus = table.checkStatus(obj.config.id);
+                switch (obj.event) {
+                    case 'add':
+                        layer.msg('添加');
+                        break;
+                    case 'edit':
+                        layer.msg('编辑');
+                        break;
+                    case 'del':
+                        layer.msg('删除');
+                        break;
+                    case 'lf_zhengjia':
+                        var data = checkStatus.data;
+                        layer.alert(JSON.stringify(data));
+                        break;
+                };
+            });
+
+            //监听单元格编辑
+            table.on('edit(test)', function (obj) {
+                var value = obj.value //得到修改后的值
+                    , data = obj.data //得到所在行所有键值
+                    , field = obj.field; //得到字段
+                console.log(obj)
+            });
+
+            //监听行工具事件
+            table.on('tool(test)', function (obj) {
+                var data = obj.data;
+                //console.log(obj)
+                if (obj.event === 'del') {
+                    layer.confirm('真的删除行么', function (index) {
+                        obj.del();
+                        layer.close(index);
+                    });
+                } else if (obj.event === 'edit') {
+                    //页面层-自定义
+                    layer.open({
+                        type: 1,
+                        title: '修改房间信息',
+                        area: ['600px', '380px'],
+                        content: $('#fangjian_edit'),
+                        btn: ['提交', '取消']
+                    });
+                }
+            });
+
+            $('i').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+            $('.layui-btn').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+        });
     </script>
 </body>
 </html>

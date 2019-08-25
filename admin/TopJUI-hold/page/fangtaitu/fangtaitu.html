@@ -93,7 +93,7 @@
               </span> -->
           </div>
         </div>
-        <div class="layui-col-md1 fangjian">
+        <div class="layui-col-md1 fangjian_1">
           <div class="grid-demo grid-demo-bg1">
             <span>8502</span>
             <span>新客人</span>
@@ -300,13 +300,10 @@
     </ul>
 </div>
 <!-- end 停售房 -->
-
 <!-- star 房单号 tab -->
 <!-- end 房单号 tab-->
-
 <!-- star 房间 -->
 <!-- end 房间-->
-
 <!-- star 门卡读写 -->
 <div class="add_order" id="menkaduixie" style="display: none;padding:10px;">
   <ul class="page-content" style="overflow: hidden">
@@ -1012,6 +1009,21 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
       shadeClose: true,
       area: ['1000px', '555px'],
       content: 'add_fangtaitu.html',
+      btn: ['取消', '确定']
+      // content: $('#add_content')
+    });
+  });
+
+  // 房间号有人住
+  $('.fangjian_1').on('click', function(){
+    layer.open({
+      type: 2,
+      title: '房单:2030',
+      load: 2,
+      maxmin: true,
+      shadeClose: true,
+      area: ['1000px', '555px'],
+      content: 'add_fangtaitu_1.html',
       btn: ['取消', '确定']
       // content: $('#add_content')
     });

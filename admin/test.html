@@ -9,27 +9,25 @@
 </head>
 <body>
 
-  <a href="javascript:;" id="pic">
+  <!-- <a href="javascript:;" id="pic">
     <img src="tong.jpg">
-  </a>
+  </a> -->
 
-  <div id="tong" style="display:none"><img src="tong.jpg"></div>
+  <div id="tong" style="display:none">
+      <div class="page-content" style="padding:10px">
+        <img src="gonggao.jpg">
+      </div>
+  </div>
 
 <script>
-;!function(){
-  $('#pic').on('click', function(){
-    layer.open({
-      type: 1,
-      title: false,
-      closeBtn: 1,
-      area: '516px',
-      skin: 'layui-layer-nobg', //没有背景色
-      shadeClose: true,
-      content: $('#tong') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
-      // content: str //注意，如果str是object，那么需要字符拼接。
-    });
-  });
-}();
+layer.open({
+    type: 1,
+    title: '特别公告',
+    maxmin: true,
+    area: ['433', '650'],
+    shadeClose: true,
+    content: $('#tong')
+});
 </script>
 </body>
 </html>

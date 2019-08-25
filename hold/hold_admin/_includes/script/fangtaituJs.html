@@ -170,6 +170,21 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
     });
   });
 
+  // 房间号有人住
+  $('.fangjian_1').on('click', function(){
+    layer.open({
+      type: 2,
+      title: '房单:2030',
+      load: 2,
+      maxmin: true,
+      shadeClose: true,
+      area: ['1000px', '555px'],
+      content: 'add_fangtaitu_1.html',
+      btn: ['取消', '确定']
+      // content: $('#add_content')
+    });
+  });
+
   // var index = layer.load(0, {shade: false});
 
   // 房间无人住
