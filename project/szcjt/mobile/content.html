@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		
+	    <script src="<%templateskin%>/js/jquery-1.11.0.min.js"></script> 
+  
+        <script src="<%templateskin%>/js/js.js"></script> 
+        <link href="<%templateskin%>/css/css.css" rel="stylesheet">
+		<link href="<%templateskin%>/css/zy-mb.css" rel="stylesheet">
+		
+		<title>振业官网手机端</title>
+	</head>
+	<body>
+     <!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+	<!--	<div class="nv-list">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="about.html">关于振业</a></li>
+				<li><a href="#">缘善公益</a></li>
+				<li><a href="#">格林披治</a></li>
+				<li><a href="#">欧美城</a></li>
+				<li><a href="#">振业汽车</a></li>
+				<li><a href="news.html">新闻中心</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+			<div class="close-nv">
+				<span>
+					x
+				</span>
+			</div>
+		</div>-->
+		<!--end nv-list-->
+		<!--<header class=" header">
+			
+				<div class=" logo">
+					<h1><img src="{site.logo}" alt="振业集团手机官网" /></h1>  
+				</div>
+				
+				<span class="nv-button">
+					<img src="<%templateskin%>/img/nv-button.jpg" />
+				</span>
+				<div class="clear"></div>
+			</div>
+		</header>-->
+		<!--end header-->
+	    <div class="about-banner">
+	    	  <img src="<%templateskin%>/img/about-banner.jpg">
+	    </div>
+	
+	   <div class="about-content a-c">
+	   	  <div class="find_nav">
+			    <div class="find_nav_left">
+			        <div class="find_nav_list">
+			            <ul>
+			                <li class="find_nav_cur"><a href="javascript:void(0)">集团简介</a></li>
+			                <li><a href="javascript:void(0)">企业文化</a></li>
+			                <li><a href="javascript:void(0)">振业内刊</a></li>
+			                <li><a href="javascript:void(0)">振业之歌</a></li>
+			             <!--   <li><a href="javascript:void(0)">振业运动会</a></li>
+			                <li><a href="javascript:void(0)">振业年会</a></li>
+			                <li><a href="javascript:void(0)">联系方式</a></li>-->
+			                
+			                <li class="sideline"></li>
+			            </ul>
+			        </div>
+			    </div>
+   
+          </div>
+          <!--end nav-->
+          <div class="gy-tab gy-tab0">
+          	  <h2 class="gy-t">振业集团简介:</h2>
+          	 <!-- <p class="gy-p">
+          	  	       振业控股集团有限公司（简称：振业集团）成立于1998年11月8日，主要从事
+投资及管理。 <br/>
+  振业集团旗下分三大主体五十个子公司同时发展，规模正处高速扩展中，分别
+为：<br/>
+  广东省缘善公益基金会，从事慈善事业，属非盈利性公益机构；<br/>
+  欧美城文化（北京）股份有限公司分两大版块，一是欧美城文化娱乐版块，从
+事以欧美城文化小镇投资和运营；<br/>二是振业汽车版块，从事汽车销售、售后服务，
+以及投资拓展汽车相关产业的上下游链条业务，现已经营19年;<br/>
+  深圳市格林披治体育文化股份有限公司，拓展体育运动文化版块，投资各体育
+项目及打造大型体育旅游小镇等。
+          	  </p>
+          	  <h2 class="gy-t">振业4大板块:</h2>
+          	  <img src="<%templateskin%>/img/about-img1.jpg" >
+          	  <h2 class="gy-t">振业集团架构:</h2>
+          	  <img src="<%templateskin%>/img/about-img2.jpg"> -->
+              <%set DataTable zyjj=get_article_list("content", 0, 0, "status=0 and call_index='about'")%>
+        <%foreach(DataRow dr in zyjj.Rows)%>
+       {dr[content]}
+         <%/foreach%> 
+          </div>
+          <!--end 集团介绍-->
+          
+          <div class="gy-tab gy-tab1">
+          	  <%set DataTable qywh=get_article_list("content", 0, 0, "status=0 and call_index='wh'")%>
+        <%foreach(DataRow dr in qywh.Rows)%>
+       {dr[content]}
+         <%/foreach%>
+          </div>
+           <!--end 企业文化-->
+	   	
+	   	    <div class="gy-tab gy-tab2">
+	   	      <%set DataTable qynk=get_article_list("content", 0, 0, "status=0 and call_index='zynk'")%>
+        <%foreach(DataRow dr in qynk.Rows)%>
+       {dr[content]}
+         <%/foreach%>
+	   	    </div>
+	   	    <!--end 企业内刊-->
+	   	    
+	   	    <div class="gy-tab gy-tab3">
+	  <%set DataTable zyzg=get_article_list("content", 0, 0, "status=0 and call_index='zyzg'")%>
+        <%foreach(DataRow dr in zyzg.Rows)%>
+       {dr[content]}
+         <%/foreach%>
+	   	    </div>
+	   	    <!--end 振业之歌
+	   	    
+	   	    <div class="gy-tab gy-tab4">
+	   	    	   振业运动会
+	   	    	   
+	   	    </div>-->
+	   	    <!--end 振业运动会
+	   	      <div class="gy-tab gy-tab5">
+	   	    	振业年会
+	   	    </div>-->
+	   	    <!--end 振业年会
+	   	      <div class="gy-tab gy-tab6">
+	   	    联系方式
+	   	    </div>-->
+	   	    <!--end 联系方式-->
+	   </div>
+	   
+	    	 
+	    <!--end about content-->
+		 <%template src="_footer.html"%>
+	</body>
+	 
+    <script src="<%templateskin%>/js/zy-mb.js"></script>
+</html>

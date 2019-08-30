@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="<%templateskin%>/css/style.css">
+	    <link rel="stylesheet" type="text/css" href="<%templateskin%>/dist/swipeslider.css">
+		<link href="<%templateskin%>/css/zy-mb.css" rel="stylesheet">
+		<title>振业官网手机端</title>
+	</head>
+	<body>
+     <!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+	<!--	<div class="nv-list">
+			<ul>
+				<li><a href="<%linkurl("index")%>">首页</a></li>
+				<li><a href="<%linkurl("content","about")%>">关于振业</a></li>
+				<li><a href="<%linkurl("content","ysgy")%>">缘善公益</a></li>
+				<li><a href="<%linkurl("content","glpz")%>">格林披治</a></li>
+				<li><a href="<%linkurl("content","omcjs")%>">欧美城</a></li>
+				<li><a href="<%linkurl("content","qc")%>">振业汽车</a></li>
+				<li><a href="<%linkurl("news")%>">新闻中心</a></li>
+				<li><a href="<%linkurl("news_list",69)%>">人才招聘</a></li>
+				<li><a href="<%linkurl("content","contact")%>">联系我们</a></li>
+			</ul>
+			<div class="close-nv">
+				<span>
+					x
+				</span>
+			</div>
+		</div>-->
+		<!--end nv-list-->
+	<!--	<header class=" header">
+			
+				<div class=" logo">
+					<h1><img src="<%templateskin%>/img/logo.png" alt="振业集团手机官网" /></h1>  
+				</div>
+				
+				<span class="nv-button">
+					<img src="<%templateskin%>/img/nv-button.jpg" />
+				</span>
+				<div class="clear"></div>
+			</div>
+		</header>-->
+		<!--end header-->
+		<div class="banner">
+			 <section>
+		      
+		      <figure id="full_feature" class="swipslider">
+		        <ul class="sw-slides">
+
+  <%set DataTable focusNews1=get_article_list("photo", 0, 5, "status=0 and is_slide=1 and category_id=79")%>
+          <%foreach(DataRow dr in focusNews1.Rows)%>
+          <li class="sw-slide"><img src="{dr[img_url]}" /></li>
+          <%/foreach%>
+
+
+		        <!--<li class="sw-slide">
+		            <img src="<%templateskin%>/img/banner1.jpg" alt="Summer beach concept">
+		          </li>
+		          <li class="sw-slide">
+		            <img src="<%templateskin%>/img/banner2.jpg" alt="Lang from Yie Ar Kung Fu">
+		          </li>       
+		          <li class="sw-slide">
+		            <img src="<%templateskin%>/img/banner3.jpg" alt="Tiny Tina">
+		          </li>
+		          <li class="sw-slide">
+		            <img src="<%templateskin%>/img/banner4.jpg" alt="Tiny Tina from Borderlands 2">
+		          </li>
+		          <li class="sw-slide">
+		            <img src="<%templateskin%>/img/banner5.jpg" alt="Redhead girl">
+		          </li>-->
+		        </ul>
+		      </figure>
+		      
+		    </section>
+			
+		</div>
+		<!--end banner-->
+		<div class="about-zy">
+			<div class="zy-mb-title">
+				
+				<h2>关于振业</h2>
+<span>about  zhenye</span>
+			</div>
+			<p class="ab-p"> 
+				<!--振业控股集团有限公司（简称：振业集团）成立于1998年11月8日，主要从事投资及管理。 振业集团旗下分三大主体五十个子公司同时发展，规模正处高速扩展中......-->
+			<%set DataTable jtjj=get_article_list("content", 0, 1, "status=0 and call_index='about'")%>
+        <%foreach(DataRow dr in jtjj.Rows)%>
+        <%cutstring({dr[zhaiyao]},190)%>
+         <%/foreach%> 
+            
+            </p>
+			<a href="<%linkurl("about")%>" class="ab-more">了解更多</a>
+			<div class="zy-video">
+				<!--<img src="<%templateskin%>/img/video-poster.jpg"> -->
+<%set DataTable yssp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in yssp.Rows)%>
+		<video controls="controls" src="{dr[video_src]}" id="video_v2" poster="{dr[img_url]}" width="100%" ></video>
+	<%/foreach%>
+
+
+			</div>
+		</div>
+		<!--end 关于振业-->
+		<div class="news-zy">
+			<div class="zy-mb-title">
+				
+				<h2>新闻中心</h2>
+<span>news  center</span>
+			</div>
+			<div class="news-c">
+				<ul class="tab-nv">
+					<li class="li-active">企业新闻</li>
+					<li>员工风采</li>
+				</ul>
+				<div class="new-tab-c">
+					  <div class="new-tab new-tab-c1">
+					  	  <ul>
+               <%set DataTable qynews=get_article_list("news", 0, 4, "status=0  and category_id=124 and is_red=1")%> 
+          <%foreach(DataRow dr in qynews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div>
+ <div class="up-date">
+					  	  	  	 	 <%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+           <%/foreach%>
+					  	  	 <!-- <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>1“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>-->
+					  	  </ul>
+					  </div>
+					  <div class="new-tab new-tab-c2">
+					  	   <ul>
+                            <%set DataTable ygnews=get_article_list("news", 0, 4, "status=0  and category_id=61 and is_red=1")%> 
+          <%foreach(DataRow dr in ygnews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div>
+ <div class="up-date">
+					  	  	  	 	<%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>					  	  	   
+  <div class="clear"></div>
+
+					  	  	  </li>
+           <%/foreach%>
+					  	  	 <!-- <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>2“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>-->
+					  	  </ul>
+					
+					  </div>
+				</div>
+			</div>
+		</div>
+		<!--end 新闻-->
+		<div class="yw">
+			<div class="zy-mb-title">
+				
+				<h2>四大板块</h2>
+<span>four  modular</span>
+			</div>
+			 <ul class="yw-nv">
+			 	<li class="yw-active">
+			 		<img src="<%templateskin%>/img/ys-logo.png">
+			 		缘善公益</li>
+			 	<li><img src="<%templateskin%>/img/gp-logo.png">格林披治</li>
+			 	<li><img src="<%templateskin%>/img/omc-logo.png">欧美城</li>
+			 	<li><img src="<%templateskin%>/img/qc-logo.png">振业汽车</li>
+			 </ul>
+			 <div class="clear"></div>
+			 <div class="yw-tab-c">
+			 	  <div class="yw-tab-cc yw-tab-cc1">
+			 	  	  <div class="yw-js">
+			 	  	  	 
+			 	  	  	  <p class="pp1">
+			 	  	  	  	<span>简介:</span>
+            <%set DataTable ysgycontent=get_article_list("content", 0, 0, "status=0 and category_id=70")%>
+        <%foreach(DataRow dr in ysgycontent.Rows)%>
+         <p class="pp" ><%cutstring({dr[zhaiyao]},190)%> </p> 
+        <%/foreach%>
+ <a href="<%linkurl("news_list",87)%>">进入专题</a>
+		<!--2013年9月，集团总部董事局主席吴晓翔先生以个人名义发起并捐献人民币208万元整，成立了“广东省缘善公益基金会”同年10月经广东省民政厅注册登记...-->
+			 	  	  	  </p>
+			 	  	  </div>
+			 	  	   <ul class="yw-list">
+                 <%set DataTable ysgynews=get_article_list("news", 0, 4, "status=0  and category_id=87 and is_red=1")%> 
+          <%foreach(DataRow dr in ysgynews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div>
+<div class="up-date">
+					  	  	  	 	<%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>					  	  	     
+<div class="clear"></div>
+					  	  	  </li>
+           <%/foreach%>
+					  	  	 <!-- <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>-->
+					  	  </ul>
+			 	  </div>
+			        <div class="yw-tab-cc yw-tab-cc2">
+			 	  	  <div class="yw-js yw-js2">
+			  
+		  <p class="pp1">
+	<span>简介:</span>
+        <%set DataTable glpzcontent=get_article_list("content", 0, 0, "status=0 and category_id=71")%>
+        <%foreach(DataRow dr in glpzcontent.Rows)%>
+       <p class="pp">  <%cutstring({dr[zhaiyao]},190)%></p>
+        <%/foreach%> 
+<a href="<%linkurl("news_list",77)%>">进入专题 </a> 
+			 	<!--着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头...-->
+			 	  	  	  </p>
+			 	  	  </div>
+			 	  	   <ul class="yw-list">
+                             <%set DataTable glpznews=get_article_list("news", 0, 4, "status=0  and category_id in (114,115,128) and is_red=1")%> 
+          <%foreach(DataRow dr in glpznews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	 
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div>					  	  	     
+ <div class="up-date">
+					  	  	  	 	<%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>	
+
+<div class="clear"></div>
+					  	  	  </li>
+           <%/foreach%>
+					  	  	 <!-- <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>-->
+					  	  </ul>
+			 	  </div>
+			     <!--
+                 	end tab-cc2
+                 -->
+                 <div class="yw-tab-cc yw-tab-cc3">
+			 	  	  <div class="yw-js yw-js3">
+			 	  	  	 
+			 	  	  	 <p class="pp1">
+			 	  	  	  	<span>简介:</span>
+ <%set DataTable omccontent=get_article_list("content", 0, 0, "status=0 and  category_id=106")%>
+        <%foreach(DataRow dr in omccontent.Rows)%>
+        <p class="pp"> <%cutstring({dr[zhaiyao]},190)%> </p>
+         <%/foreach%>
+ <a href="<%linkurl("news_list",63)%>">
+			 	  	  	  	进入专题
+			 	  	  	  </a>
+
+			 	  	  	  <!--	欧美城文化小镇由振业集团投资并创立，项目主体公司欧美城文化（北京）股份有限公司于2015年在全国中小股份转让系统挂牌上市，证券简称：欧美城，证券代码：430173...-->
+			 	  	  	  </p>
+			 	  	  </div>
+			 	  	   <ul class="yw-list">
+
+             <%set DataTable omcnews=get_article_list("news", 0, 4, "status=0  and category_id in(122,123) and is_red=1")%> 
+          <%foreach(DataRow dr in omcnews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	  
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div>
+ <div class="up-date">
+					  	  	  	 	<%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>						  	  	     
+<div class="clear"></div>
+					  	  	  </li>
+           <%/foreach%>
+					  	  	  <!--<li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>-->
+					  	  </ul>
+			 	  </div>
+			     <!--
+                 	end tab-cc3
+                 -->
+                 <div class="yw-tab-cc yw-tab-cc4">
+			 	  	  <div class="yw-js yw-js4">
+			 	  	  	 
+			 	  	  	  <p class="pp1">
+			 	  	  	  	<span>简介:</span>
+        <%set DataTable qccontent=get_article_list("content", 0, 0, "status=0 and category_id=72")%>
+        <%foreach(DataRow dr in qccontent.Rows)%>
+         <p class="pp"><%cutstring({dr[zhaiyao]},190)%> </p>
+         <%/foreach%>
+ <a href="<%linkurl("news_list",113)%>">
+			 	  	  	  	进入专题
+			 	  	  	  </a>
+			 	  	  	  	<!--振业汽车服务有限公司（简称：振业汽车）成立于1998年11月8日，经过19年的积累和发展，由单店、单品牌经营代理中低端汽车...-->
+			 	  	  	  </p>
+			 	  	  </div>
+			 	  	   <ul class="yw-list">
+          <%set DataTable qcnews=get_article_list("news", 0, 4, "status=0  and category_id in(117,118,119) and is_red=1")%> 
+          <%foreach(DataRow dr in qcnews.Rows)%>
+           <li onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+					  	  	  	 <img src="{dr[img_url]}">
+					  	  	  	  
+					  	  	  	 <h2><a title="{dr[title]}" href="<%linkurl("news-articel",{dr[id]})%>"><%cutstring({dr[title]},40)%></a></h2>
+<div class="up-date"> <%cutstring({dr[zhaiyao]},67)%></div> 
+<div class="up-date">
+					  	  	  	 	<%datetostr({dr[add_time]},MM-dd)%>
+					  	  	  	 </div>						  	  	    
+<div class="clear"></div>
+					  	  	  </li>
+           <%/foreach%>
+					  	 
+					  	  	<!--  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>
+					  	  	  <li>
+					  	  	  	 <img src="img/news-img1.jpg">
+					  	  	  	 <div class="up-date">
+					  	  	  	 	-2017/11/12
+					  	  	  	 </div>
+					  	  	  	 <h2>“缘善筑梦，与爱童行”助学走访第一站——湖南芷江站圆满结束</h2>
+					  	  	     <div class="clear"></div>
+					  	  	  </li>    -->
+					  	  </ul>
+			 	  </div>
+			     <!--
+                 	end tab-cc4
+                 -->
+			 </div>
+		</div>
+		<!--end业务-->
+		
+        <%template src="_footer.html"%>
+
+	</body>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="<%templateskin%>/dist/swipeslider.min.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			 
+		      $('#full_feature').swipeslider();
+		      $('#content_slider').swipeslider({
+		        transitionDuration: 600,
+		        autoPlayTimeout: 10000,
+		        sliderHeight: '200px'
+		      });
+		      $('#responsiveness').swipeslider();
+		      $('#customizability').swipeslider({
+		        transitionDuration: 1500, 
+		        autoPlayTimeout: 4000, 
+		        timingFunction: 'cubic-bezier(0.38, 0.96, 0.7, 0.07)',
+		        sliderHeight: '200px'});
+		      $("#full_feature").css("padding","0px");
+		    });
+	</script>
+    <script src="<%templateskin%>/js/zy-mb.js"></script>
+</html>

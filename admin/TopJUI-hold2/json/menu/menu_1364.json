@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1346,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "用户查询",
+    "url": "./page/yonghu/yhchaxun.html"
+  },
+  {
+    "id": 1348,
+    "pid": 1364,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "角色管理",
+    "url": "./page/yonghu/jsguanli.html"
+  }
+]

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%set string category_title=get_category_title(model.category_id,"公司介绍")%>
+<title>{model.title} - {site.name}</title>
+<meta content="{model.seo_keywords}" name="keywords" />
+<meta content="{model.seo_description}" name="description" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+ <script type="text/javascript" src="{config.webpath}ckplayer/ckplayer/ckplayer.js"></script>
+
+   <link href="{config.webpath}css/zy.css" rel="stylesheet" type="text/css"> 
+    <script src="{config.webpath}js/jquery-1.11.0.min.js" ></script> 
+	<script src="{config.webpath}js/jquery.flexslider-min.js"></script> 
+	<style type="text/css">
+		
+		a,img{border:0;}
+		/* flexslider */
+		.flexslider{position:relative;height:680px;overflow:hidden;background:url(img/loading.gif) 50% no-repeat;}
+		.slides{position:relative;z-index:1;}
+		.slides li{height:680px;}
+		.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+		.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+		.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(img/dot.png) right 0 no-repeat;cursor:pointer;}
+		.flex-control-nav .flex-active{background-position:0 0;}
+
+		.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+		.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+		.flex-direction-nav li a.flex-prev{left:40px;background:url(img/prev.png) center center no-repeat;}
+		.flex-direction-nav li a.flex-next{right:40px;background:url(img/next.png) center center no-repeat;}
+		
+
+	</style>
+</head>
+
+
+<body>
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+ 
+ 
+
+<div class="section1 clearfix">
+
+    
+   <%if model.img_url!=""%>
+ <img src="{model.img_url}" class="content-top" />
+          <%/if%>
+          
+
+  <!--右边-->
+  <div class="list-right">
+    <div class="sidebar-box">
+      <div class="line30"></div>
+      <h3>振业集团</h3>
+      <ul class="navbar">
+        <%set DataTable contentlist=get_article_list(channel, 0, 0, "status=0 and category_id not in(70,71,72)")%>
+        <%foreach(DataRow dr in contentlist.Rows)%>
+        <li>
+          <h4><a title="{dr[title]}" href="<%linkurl("content",{dr[call_index]})%>">{dr[title]}</a></h4>
+        </li>
+        <%/foreach%>
+       <!-- <li>
+          <h4><a href="<%linkurl("feedback")%>">留言反馈</a></h4>
+        </li>
+        <li>
+          <h4><a href="<%linkurl("link")%>">友情链接</a></h4>
+        </li>-->
+      </ul>
+      <div class="line20"></div>
+      <h3>联系我们</h3>
+      <div class="sidebar-txt">
+        <p>振业控股集团有限公司</p>
+        <p>地址：{site.address}</p>
+        <p>电话：{site.tel}</p>
+         <p>传真：{site.fax}</p>
+        <p>E-mail：{site.email}</p>
+       <!-- <p>新浪微博：http://weibo.com/dtcms</p>-->
+      </div>
+    </div>
+  </div>
+  <!--/右边-->
+  
+  <!--左边-->
+  <div class="list-auto">
+    <div class="ntitle">
+      <h2>
+        {model.title}
+      </h2>
+      <span>当前位置：首页 &gt; {category_title} &gt; {model.title}</span>
+    </div>
+    
+    
+    <div class="entry">
+    
+
+   <!--每年排列在这里-->
+
+
+      {model.content}
+    </div>
+    
+   
+    
+  </div>
+  <!--/左边-->
+  
+</div>
+<!--视频调用-->
+<script type="text/javascript">
+    var videoObject = {
+        container: '#video', //“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player', //该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer: false, //如果强制使用flashplayer则设置成true
+               poster:'',
+          video: 'http://www.hkpbg.com/upload/video/zyzg11.mp4'
+    };
+ var player = new ckplayer(videoObject);
+</script>
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</body>
+
+</html>

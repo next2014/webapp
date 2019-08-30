@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新闻中心 - {site.name}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".focus-box").flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+
+   <link href="{config.webpath}css/zy.css" rel="stylesheet" type="text/css"> 
+    <script src="{config.webpath}js/jquery-1.11.0.min.js" ></script> 
+	<script src="{config.webpath}js/jquery.flexslider-min.js"></script> 
+	<style type="text/css">
+		
+		a,img{border:0;}
+		/* flexslider */
+		.flexslider{position:relative;height:680px;overflow:hidden;background:url(img/loading.gif) 50% no-repeat;}
+		.slides{position:relative;z-index:1;}
+		.slides li{height:680px;}
+		.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+		.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+		.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(img/dot.png) right 0 no-repeat;cursor:pointer;}
+		.flex-control-nav .flex-active{background-position:0 0;}
+
+		.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+		.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+		.flex-direction-nav li a.flex-prev{left:40px;background:url(img/prev.png) center center no-repeat;}
+		.flex-direction-nav li a.flex-next{right:40px;background:url(img/next.png) center center no-repeat;}
+	</style>
+
+
+
+</head>
+
+<body>
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+
+<div class="section clearfix">
+  <div class="line15"></div>
+  <!--焦点图-->
+  <div class="wrapper clearfix" style="margin-top:50px">
+    <div class="main-left">
+      <div class="focus-box">
+        <ul class="slides">
+          <%set DataTable focusList=get_article_list(channel, 0, 5, "status=0 and category_id!=69 and  is_slide=1")%>
+          <%foreach(DataRow dr in focusList.Rows)%>
+          <li>
+            <a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>">
+              <span class="note-bg"></span>
+              <span class="note-txt">{dr[title]}</span>
+              <img src="{dr[img_url]}" />
+            </a>
+          </li>
+          <%/foreach%>
+        </ul>
+      </div>
+    </div>
+    <!--/焦点图-->
+    
+    <!--最新资讯-->
+    <div class="main-left" style="margin-right:0;">
+      <ul class="txt-list1">
+        <%set DataTable newsList=get_article_list(channel, 0, 9, "status=0 and category_id!=69 and is_top=1")%>
+        <%loop newdr newsList%>
+        <%if(newdr__loop__id==1)%>
+        <li class="tit">
+        <%else%>
+        <li>
+         <span><%datetostr({newdr[add_time]},MM-dd)%></span>
+        <%/if%>
+          <a title="{newdr[title]}" href="<%linkurl("news_show",{newdr[id]})%>"><%cutstring({newdr[title]},44)%></a>
+        </li>
+        <%/loop%>
+      </ul>
+    </div>
+    <!--/最新资讯-->
+    
+    <!--头条资讯-->
+    <div class="sidebar-right" style="margin-left:15px;">
+      <ul class="img-list ilist">
+        <%set DataTable topList=get_article_list(channel, 0, 2, "status=0 and is_hot=1 and img_url<>''")%>
+        <%foreach(DataRow dr in topList.Rows)%>
+        <li>
+          <a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>">
+            <%if({dr[is_top]}=="1")%>
+            <span class="abs-txt">头条</span>
+            <%/if%>
+            <span class="abs-bg"></span>
+            <span class="txt1">{dr[title]}</span>
+           
+            <img src="{dr[img_url]}" />
+          </a>
+        </li>
+        <%/foreach%>
+      </ul>
+    </div>
+    <!--/头条资讯-->
+    
+  </div>
+</div>
+
+<!--分类资讯-->
+<%set DataTable categoryList=get_category_child_list_where(channel,0," and id not in(69,78,86,107,108,76,125) ")%>
+<%foreach(DataRow cdr in categoryList.Rows)%>
+<div class="section clearfix">
+  <div class="ntitle" style="border-bottom:0px;">
+    <h2 style="width:auto;">
+      <a href="<%linkurl("news_list",{cdr[id]})%>">{cdr[title]}<em></em></a>
+    </h2>
+    <p>
+      <!--小类-->
+      <%set DataTable bcategoryList=get_category_child_list_where(channel,{strtoint({cdr[id]})}," and id not in(76,125)")%>
+      <%loop cdr2 bcategoryList%>
+      <%if(cdr2__loop__id==1)%>
+      <a class="no-bg" href="<%linkurl("news_list",{cdr2[id]})%>">{cdr2[title]}</a>
+      <%else%>
+      <a href="<%linkurl("news_list",{cdr2[id]})%>">{cdr2[title]}</a>
+      <%/if%>
+      <%/loop%>
+    </p>
+  </div>
+  
+  <div class="wrapper clearfix">
+    <div class="sidebar-left">
+      <div class="t-list">
+        <ul>
+          <%set DataTable dt=get_article_list(channel, {strtoint({cdr[id]})}, 4, "status=0 and is_red=1 and img_url<>''")%>
+          <%foreach(DataRow dr1 in dt.Rows)%>
+          <li>
+            <a class="img-box" title="{dr1[title]}" href="<%linkurl("news_show",{dr1[id]})%>">
+              <img src="{dr1[img_url]}" border="0">
+            </a>
+            <h3><a title="{dr1[title]}" href="<%linkurl("news_show",{dr1[id]})%>">{dr1[title]}</a></h3>
+            <p>{dr1[zhaiyao]}</p>
+            <i>{dr1[add_time]}</i>
+          </li>
+          <%/foreach%>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="sidebar-right" style="padding-top:10px;">
+      <ul class="rank-list">
+        <%set DataTable hotList=get_article_list(channel, {strtoint({cdr[id]})}, 10, "status=0 and is_top=1", "click desc,id desc")%>
+        <%loop dr2 hotList%>
+          <%if(dr2__loop__id==1)%>
+            <li class="active">
+          <%else%>
+            <li>
+          <%/if%>
+          <span><%datetostr({dr2[add_time]},MM-dd)%></span>
+          <i class="num">{dr2__loop__id}</i>
+          <a href="<%linkurl("news_show",{dr2[id]})%>">{dr2[title]}</a>
+        </li>
+        <%/loop%>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+<%/foreach%>
+<!--分类资讯-->
+
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</body>
+</html>

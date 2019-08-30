@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{site.seo_title}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<!--<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/ckplayer/ckplayer.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>-->
+<!--  <link href="{config.webpath}css/index.css" rel="stylesheet" type="text/css">-->
+  
+      <script src="{config.webpath}js/jquery-1.11.0.min.js" ></script> 
+      <script src="<%templateskin%>/js/jquery.flexslider-min.js"></script> 
+	   <link href="{config.webpath}css/video.css" rel="stylesheet">
+        <link href="{config.webpath}css/zy.css" rel="stylesheet" type="text/css" />
+        <!-- If you'd like to support IE8 -->
+        <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+</head>
+
+<body >
+ 
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+
+ <div class="content">
+      	<!--start 图片轮播-->
+    	   <div class="zy-banner-box"> 			
+			 <div class="jq22-container">
+               <div class="flexslider">
+					<ul class="slides">
+						<!--<li ><img src="img/banner1.jpg" /></li>
+						<li ><img src="img/banner2.jpg" /></li>
+						<li ><img src="img/banner3.jpg" /></li>
+						<li ><img src="img/banner4.jpg" /></li>
+						<li ><img src="img/banner5.jpg" /></li>-->
+          <%set DataTable focusNews1=get_article_list("photo", 0, 5, "status=0 and is_slide=1 and category_id=79")%>
+          <%foreach(DataRow dr in focusNews1.Rows)%>
+          <li ><img src="{dr[img_url]}" /></li>
+          <%/foreach%>
+					</ul>
+				</div>
+	        </div>
+	   </div>
+	   <!--end 图片轮播-->
+	   <!--start line1-->
+	   <div class="line-1">
+        <%set DataTable jtxc=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in jtxc.Rows)%>
+
+	   	   <div class="zy-video">
+	   	   	  <h2 class="zy-h2"><span>振业宣传片</span><a class="h2-more" href="#">[&nbsp;图文介绍&nbsp;]</a></h2>
+			   <video id="my-video" class="video-js" controls preload="auto" width="528" height="340"
+				  poster="{dr[img_url]}" data-setup="{}">
+					<source src="{dr[video_src]}" type='video/mp4'>
+					<p class="vjs-no-js">
+					  To view this video please enable JavaScript, and consider upgrading to a web browser that
+					  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					</p>
+			   </video>          
+	   	   	 <!-- <video controls="controls" src="http://120.24.83.165/upload/201711/24/201711241027528539.mp4"  poster="http://120.24.83.165/upload/201711/27/201711270937595260.jpg"></video>-->
+	   	   </div><%/foreach%>
+	   	   <!--end video-->
+	   	   <div class="zy-news">
+	   	   	  <ul class="zy-tab-t">
+	   	   	  	<li class="tab-actived">集团新闻</li>
+	   	   	  	<li>员工风采</li>
+	   	   	  </ul>
+	   	   	  <div class="clear"></div>
+	   	   	  <div class="news-tabc">
+		   	   	  <div class="new-tab new-tab1">
+                  <%set DataTable mtbd12=get_article_list("news", 0, 1, "status=0 and  is_slide=1 and category_id in (103,104,109,110,111,112)")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd12.Rows)%>  
+		   	   	  	<div class="ps-news">
+		   	   	  	  <h2><a href="<%linkurl("news_show",{dr[id]})%>" title="{dr[title]}"><%cutstring({dr[title]},40)%></a></h2>
+			   	   	  <img src="{dr[img_url]}">
+			   	   	  <p>
+			   	   	  	<%cutstring({dr[zhaiyao]},97)%>
+			   	   	  </p>
+			   	   	  <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+			   	   	  <div class="clear"></div>
+		   	   	   </div>
+                    <%/foreach%>
+			   	   	  <ul class="list-art">
+			   	   	  	<!--<li><a href="#">"税"末狂欢 蓝色关爱三重礼…11-07</a></li>
+		                <li><a href="#">汽车保养服务钜惠活动来袭，更省钱更…11-07</a></li>
+		                <li><a href="#">2018年放假时间表出炉 火速围观 ！！…11-06</a></li>
+		                <li><a href="#">谨以此文献给将要买车险的朋友们！11-06</a></li>-->
+          <%set DataTable mtbd22=get_article_list("news", 0, 4, "status=0  and category_id in (103,104,109,110,111,112) and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd22.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},33)%></a><span><%datetostr({dr[add_time]},MM-dd)%></span></li>
+          <%/foreach%>
+		              </ul>
+           
+		   	   	  </div>
+		   	   	  <!--end new-tab1-->
+		   	   	  <div class="new-tab new-tab2">
+                    <%set DataTable mtbd3=get_article_list("news", 0, 1, "status=0 and is_slide=1 and category_id=108")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd3.Rows)%>
+		   	   	  	<div class="ps-news">
+		   	   	  	  <h2><a href="<%linkurl("news_show",{dr[id]})%>" title="{dr[title]}"><%cutstring({dr[title]},40)%></a></h2>
+			   	   	  <img src="{dr[img_url]}">
+			   	   	  <p>
+			   	   	  	<%cutstring({dr[zhaiyao]},97)%>
+			   	   	  </p>
+			   	   	  <span>-<%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+			   	   	  <div class="clear"></div>
+		   	   	   </div>
+                   <%/foreach%>
+			   	   	  <ul class="list-art">
+			   	   	  	<!--<li><a href="#">"税"末狂欢 蓝色关爱三重礼…11-07</a></li>
+		                <li><a href="#">汽车保养服务钜惠活动来袭，更省钱更…11-07</a></li>
+		                <li><a href="#">2018年放假时间表出炉 火速围观 ！！…11-06</a></li>
+		                <li><a href="#">谨以此文献给将要买车险的朋友们！11-06</a></li>-->
+                        <%set DataTable mtbd33=get_article_list("news", 0, 4, "status=0  and category_id=108 and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd33.Rows)%>
+           <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},33)%></a><span><%datetostr({dr[add_time]},MM-dd)%></span></li>
+      <%/foreach%>
+		              </ul>
+		   	   	  </div>
+		   	   	  <!--end new-tab2-->
+	   	   	  </div>
+	   	   </div>
+	   	   <!--end news-->
+	   	   <div class="zy-hr">
+	   	   	  <h2 class="zy-h2 zp-h2"><span><a href="<%linkurl("news_list",69)%>">集团招聘</a></span><b class="hr-bt-left"></b><b class="hr-bt-right"></b></h2>
+	   	   	 
+         <!--    <div class="zp-cc">
+					<div class="zp-c">
+					<div class="zp-c-c">
+                    <div class="zp-box">-->
+                    <div class="hr-c">
+	   	   	  	<div class="hr-cc">
+	   	   	  		<div class="hr-box hr-box1">
+                       <%set DataTable all_zplist=get_article_list("news", 0, 12, "status=0 and category_id=69")%>
+                            <%loop dr_job all_zplist%>
+							<h2><a href="<%linkurl("news_show",{dr_job[id]})%>"><%cutstring({dr_job[title]},15)%></a></h2>
+				           	<p>
+				            <%cutstring({dr_job[zhaiyao]},44)%><a href="<%linkurl("news_show",{dr_job[id]})%>"><span style="float:right;">[详情]</span></a>
+				           	</p>
+
+                            <%if(dr_job__loop__id%4==0||dr_job__loop__id==all_zplist.Rows.Count) %>
+                            </div>
+                            <%/if %>
+
+                            <%if(dr_job__loop__id%4==0&&dr_job__loop__id<all_zplist.Rows.Count) %>
+						    <div class="hr-box hr-box1">
+                            <%/if %>
+
+                            <%/loop %>
+             <div class="clear"></div>
+					</div>
+				</div>
+				
+				</div>
+				
+				
+			<!--</div>-->
+              <!--<div class="hr-c">
+	   	   	  	<div class="hr-cc">
+	   	   	  		<div class="hr-box hr-box1">
+	   	   	  			<h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	         <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  		</div>
+	   	   	  		<div class="hr-box hr-box2">
+	   	   	  			<h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	         <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  		</div>
+	   	   	  		<div class="hr-box hr-box3">
+	   	   	  			<h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	        <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  	         <h2><a href="#">网页美工设计</a></h2>
+	   	   	  	        <p>
+	   	   	  	 	    工作职责：1、女身高160cm以上，形象气质佳…<a href="">[详情]</a>
+	   	   	  	        </p>
+	   	   	  		</div>
+	   	   	  		<div class="clear"></div>
+	   	   	  		
+	   	   	  	</div> 	 
+	   	   	  </div>-->
+	   	   </div>
+	   	   <!--end hr-->
+	   	   <div class="clear"></div>
+	   </div>
+	   <!--end line1-->
+	   <!--start line2-->
+	   <div class="line2">
+	   	   <div class="ps-tab-c">
+	   	   	    <img class="ps-yw4" src="img/ps-yw4.jpg">
+	   	   	    <img class="ps-yw3" src="img/ps-yw3.jpg">
+	   	   	    <img class="ps-yw2" src="img/ps-yw2.jpg">
+	   	   	    <img class="ps-yw1" src="img/ps-yw1.jpg">
+	   	   </div>
+	   	   <ul class="yw-tab-box">
+	   	   	  <li class="yw-tab yw-tab1 ys-tab-actived"><span><img src="img/yw1-h.png"/>缘善公益</span></li>
+	   	   	  <li class="yw-tab yw-tab2"><span><img src="img/yw2-n.png"/>欧美城</span></li>
+	   	   	  <li class="yw-tab yw-tab3"><span><img src="img/yw3-n.png"/>振业汽车</span></li>
+	   	   	  <li class="yw-tab yw-tab4"><span><img src="img/yw4-n.png"/>格林披治</span></li>
+	   	   </ul>
+	   	   <div class="yw-tab-c">
+	   	   	   <div class="yw-tab-cc yw-tab1">
+		   	   	   	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+		   	   	   	   	  <!--  欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求，从构思策划、市场调研、项目决策到项目实施历经五年时间，有效延伸及融合欧美各文化特色业态，于2012 年启动并创立“欧美城文化小镇”...  <a href="#">[进入专题]</a>-->
+		 <%set DataTable contentlist2=get_article_list("content", 0, 0, "status=0 and title='缘善公益'")%>
+        <%foreach(DataRow dr in contentlist2.Rows)%>
+    <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>"> [进入专题] </a>
+<%/foreach%>
+                       </p>
+		   	   	   	   <ul class="img-news">
+           <%set DataTable yslb=get_article_list("news", 0, 3, "status=0  and category_id=87 and is_slide=1")%><!--and img_url<>''-->
+     <%loop dr yslb%>
+       <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+<%/foreach%>
+		   	   	   	   	 <!-- <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>-->
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+          <%set DataTable yslb1=get_article_list("news", 0, 3, "status=0  and category_id=87 and is_top=1")%> 
+          <%foreach(DataRow dr in yslb1.Rows)%>
+           <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},40)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+     <%/foreach%>
+		   	   	   	   	<!--  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>-->
+		   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span>缘善视频</span></h2>
+						<%set DataTable yssp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=121 ")%>
+      <%foreach(DataRow dr in yssp.Rows)%>
+	 <video class="ys-video" controls="controls"  src="{dr[video_src]}"  poster="{dr[img_url]}"></video>
+		   	   	   	<%/foreach%>
+                        	   	   	</div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab1-->
+	   	   	   
+	   	   	    <div class="yw-tab-cc yw-tab2">
+	   	   	       	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+		   	   	   	   	  <!-- 欧美城文化小镇由振业集团投资并创立，项目主体公司欧美城文化（北京）股份有限公司于2015年在全国中小股份转让系统挂牌上市，证券简称：欧美城，证券代码：430173。欧美城总部设在北京，进行联盟合作招商...  <a href="#">[进入专题]</a>-->
+	  <%set DataTable contentlist1=get_article_list("content", 0, 0, "  title='欧美城介绍'")%>
+        <%foreach(DataRow dr in contentlist1.Rows)%>
+        <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入专题]</a>
+         <%/foreach%>
+                       </p>
+		   	   	   	   <ul class="img-news">
+         <%set DataTable omclb=get_article_list("news", 0, 3, "status=0 and is_slide=1 and category_id=63")%><!--and img_url<>''-->
+         <%foreach(DataRow dr in omclb.Rows)%>
+                          <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+                  <%/foreach%>
+
+		   	   	   	 <!--  	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>-->
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+          <%set DataTable omclist=get_article_list("news", 0,3, "status=0 and is_top=1 and category_id=63 ")%><!--and img_url<>''-->
+          <%foreach(DataRow dr in omclist.Rows)%>
+          <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},40)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+            <%/foreach%>
+		   	   	   	   	 <!-- <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>-->
+		   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span class="omc-tt">欧美城视频</span></h2>
+            <%set DataTable omcsp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=30 ")%>
+      <%foreach(DataRow dr in omcsp.Rows)%>
+		   	   	   		<video class="ys-video" controls="controls"  src="{dr[video_src]}"  poster="{dr[img_url]}"></video>
+		   	   	   	<%/foreach%>
+                    </div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab2-->
+	   	   	   
+	   	   	   <div class="yw-tab-cc yw-tab3">
+	   	   	   	   <div class="qc-left">
+			<p>
+				    
+			 <!--振业汽车服务有限公司（简称：振业汽车）成立于1998年11月8日，经过19年的积累和发展，由单店、单品牌经营代理中低端汽车，逐步发展成为多店、多品牌经营的汽车经销集团，主营业务包括汽车整车销售、汽车维…<a href="/content.aspx?page=qc"> [进入专题] </a>-->
+             <%set DataTable contentlist3=get_article_list("content", 0, 0, "status=0 and title='振业汽车'")%>
+        <%foreach(DataRow dr in contentlist3.Rows)%>
+        <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入专题]</a>
+         <%/foreach%>
+
+            
+            </p>
+            	<div class="qc-tab-c">
+				  <div class="qc-bt-left"></div>
+			      <div class="qc-bt-right"></div>
+			      <div class="qc-tab-cc">
+			      	  
+          <%set DataTable zyqcp=get_article_list("photo", 0, 8, "status=0 and is_slide=1 and category_id=116")%>
+          <%foreach(DataRow dr in zyqcp.Rows)%>
+           <div class="qc-tab qc-tab1">
+			   <img src="{dr[img_url]}">
+				     </div>
+          <%/foreach%>
+	                 <!-- <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss1.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss2.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss3.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss4.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss5.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss6.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss7.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss8.jpg">
+				     </div>-->
+         
+			      	
+			      </div>
+				  
+				</div>
+			
+		</div>
+	   	   	       <div class="qc-right">
+			<div class="qc-tab-bt">
+				<ul>
+					<li class="qc-bt-active">汕头粤驰</li>
+					
+					<li class="">汕头粤特</li>
+					<li class="">汕头粤通</li>
+					
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="qc-right-c">
+				<div class="qc-right-tab qc-right-tab1" style="display: block;">
+					  <div class="qc-right-tab qc-right-tab1">
+			  <%set DataTable yuechi=get_article_list("news", 0, 3, "status=0 and  category_id=117 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuechi.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                            <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+				</div>
+
+         <!-- 	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>11.11长安福特钜惠，畅享福利嗨不停！</h3>
+						  <p>
+						  	购置税减免倒计时60天把握机惠，福赚11.11！
+						  	<span>2017-12-18</span>
+						  </p>
+						  
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>7招教你有效预防汽车积碳！</h3>
+						  <p>
+						  	路况是很多驾车出行的人们最懊恼的事情，城市交通时常会呈现较为拥堵的状况，这点似乎大家都已见怪不怪了，这就迫使了驾…
+						  	<span>2017-12-18</span>
+						  </p>
+						  
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>多些陪伴 “福”在身边</h3>
+						  <p>
+						  	九月九话重阳年少时，总觉得#远离父母，挣脱束缚# 真的很酷，现在却觉得，离家越远，心中越是对他们不住！年少时，总觉…
+						  	<span>2017-12-18</span>
+						  </p>
+						  
+						  <div class="clear"></div>
+						</a>
+					</div>-->
+          
+				</div>
+				<!--end qc-right-tab1-->
+				<div class="qc-right-tab qc-right-tab2" style="display: none;">
+			  <%set DataTable yuete=get_article_list("news", 0, 3, "status=0 and  category_id=118 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuete.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+
+          	<!--<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>省油这件事我们是认真的</h3>
+						  <p>
+						  	经国务院批准2017年1月1日起至12月31日止对购置1.6升及以下排量的乘用车按75%的税率征收车辆购置税自2018年1月1日起恢复…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>遇见福特SUV，就不可错过的理由</h3>
+						  <p>
+						  	SUV，在一定程度上既具有轿车的舒适性，又具有一定越野性的车型。SUV具有两大特点：一是运动性，不仅加速快、极速高，而…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>油耗暴增~竟然是这三个小鬼在作祟</h3>
+						  <p>
+						  	说到油耗，那是中国车主相当关心的问题。我们乐此不疲的探究着省油的方法，也得出了很多精深的理论，这些理论甚至可以与…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>-->
+          
+				</div>
+				<!--end qc-right-tab2-->
+				<div class="qc-right-tab qc-right-tab3" style="display: none;">
+						    <%set DataTable yuetong=get_article_list("news", 0, 3, "status=0 and  category_id=119 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuetong.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+
+          <!--	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>冬天来了，汽车开暖风油耗究竟提升多少？</h3>
+						  <p>
+						  	车子开暖风增加油耗？告诉你，不存在的，不过凡事总有例外，就不要拿例外来说事了。开过车的都知道，在夏天开车的时候并…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>汽车空调明明关着，为什么还会有暖风出来？是…</h3>
+						  <p>
+						  	前几天一朋友跟我说，他开高速回家，开始开空调调暖风的，后面感觉热就关了。可是过了一段时间，车里的人还是被热醒了，…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          
+          	<div class="qc-right-box">
+						<a href="#">
+						  <img src="img/img-news1.jpg">
+						  <h3>途观CRV的头号敌人! 15万价格40万品质, 刚上…</h3>
+						  <p>
+						  	市场像大海，有时候看上去风平浪静，但底下却暗涌潮动，汽车市场尤其！合资紧凑型SUV每月市场总销量大概在25万辆左右，…
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>-->
+          
+				</div>
+				<!--end qc-right-tab3-->
+				
+			</div>
+		
+      </div>
+      <!--end qiche right-->
+	   	   	   </div>
+	   	   	   <!--end tab3-->
+	   	   	   
+	   	   	    <div class="yw-tab-cc yw-tab4">
+	   	   	       	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+    <%set DataTable zyydh2=get_article_list("content", 0, 0, "status=0 and category_id=71")%>
+        <%foreach(DataRow dr in zyydh2.Rows)%>
+         <%cutstring({dr[zhaiyao]},190)%><a class="red-a" href="<%linkurl("content","glpz")%>"> [进入格林披治专题] </a>
+         <%/foreach%> 
+    <!--随着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头。格林披治以体育文化为导向，以双...  <a href="#">[进入专题]</a>-->
+		   	   	   	   </p>
+		   	   	   	   <ul class="img-news">
+
+           <%set DataTable hzglpznews=get_article_list("news", 0, 3, "status=0 and category_id in(114,115)  and is_slide=1")%>
+          <%foreach(DataRow dr in hzglpznews.Rows)%>
+         <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+           
+           <%/foreach%> 
+		   	   	   	   	 <!-- <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+		   	   	   	   	  <li>
+		   	   	   	   	  	<a href="#">
+		   	   	   	   	  		<img src="img/img-news1.jpg">
+		   	   	   	   	  		<span>为适应新常态下的消费升级需求</span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>-->
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+           <%set DataTable bjglpznews=get_article_list("news", 0, 3, "status=0 and category_id in (114,115) and is_top=1")%>
+          <%foreach(DataRow dr in bjglpznews.Rows)%>
+            <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},40)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+            <%/foreach%> 
+		   	   	   	   	 <!-- <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>
+		   	   	   	   	  <li><a href="#">欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求</a><span>[2017-11-23]</span></li>-->
+		   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span class="gp-tt">格林披治视频</span></h2>
+		   	   	   	  <%set DataTable glpzsp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=29 ")%>
+      <%foreach(DataRow dr in glpzsp.Rows)%>
+      <video class="ys-video" controls="controls"  src="{dr[video_src]}"  poster="{dr[img_url]}"></video>
+<%/foreach%>
+
+                    <!--	<video class="ys-video" controls="controls"  src="http://120.24.83.165/upload/201712/13/201712131716076093.mp4"  poster="img/gp-v-bg.jpg"></video>-->
+		   	   	   	</div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab4-->
+	   	   </div>
+	   </div>
+	   <!--end line2-->
+    </div>
+    <!--end content-->
+
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</body>
+<script src="<%templateskin%>/js/wySilder.min.js" type="text/javascript"></script>
+	<script src="<%templateskin%>/js/zy.js" type="text/javascript"></script>
+	<script src="http://vjs.zencdn.net/6.4.0/video.js"></script>
+  
+</html>

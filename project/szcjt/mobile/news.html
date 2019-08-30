@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		
+	    <script src="<%templateskin%>/js/jquery-1.11.0.min.js"></script> 
+  
+        <script src="<%templateskin%>/js/js2.js"></script> 
+        <link href="<%templateskin%>/css/css.css" rel="stylesheet">
+		<link href="<%templateskin%>/css/zy-mb.css" rel="stylesheet">
+	 
+		<title>振业集团新闻中心</title>
+	</head>
+	<body>
+     <!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+		<!--<div class="nv-list">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="about.html">关于振业</a></li>
+				<li><a href="#">缘善公益</a></li>
+				<li><a href="#">格林披治</a></li>
+				<li><a href="#">欧美城</a></li>
+				<li><a href="#">振业汽车</a></li>
+				<li><a href="news.html">新闻中心</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+			<div class="close-nv">
+				<span>
+					x
+				</span>
+			</div>
+		</div>-->
+		<!--end nv-list-->
+		<!--<header class=" header">
+			
+				<div class=" logo">
+					<h1><img src="<%templateskin%>/img/logo.jpg" alt="振业集团手机官网" /></h1>  
+				</div>
+				
+				<span class="nv-button">
+					<img src="<%templateskin%>/img/nv-button.jpg" />
+				</span>
+				<div class="clear"></div>
+			</div>
+		</header>-->
+		<!--end header-->
+	    <div class="about-banner">
+	    	  <img src="<%templateskin%>/img/mb-news-banner.jpg">
+	    </div>
+	
+	   <div class="about-content">
+	   	  <div class="find_nav">
+			    <div class="find_nav_left">
+			        <div class="find_nav_list">
+			            <ul>
+			                <li class="find_nav_cur"><a href="javascript:void(0)">集团新闻</a></li>
+			                <li><a href="javascript:void(0)">缘善公益</a></li>
+			                <li><a href="javascript:void(0)">格林披治</a></li>
+			                <li><a href="javascript:void(0)">欧美城</a></li>
+			                <li><a href="javascript:void(0)">振业汽车</a></li>
+			                
+			                
+			                <li class="sideline"></li>
+			            </ul>
+			        </div>
+			    </div>
+   
+          </div>
+          <!--end nav-->
+          <div class="gy-tab gy-tab0">
+
+          
+           <%set DataTable news_list1=get_article_list("news", 0, 5, "status=0  and category_id=124 and is_top=1")%>
+          <%foreach(DataRow dr in news_list1.Rows)%>
+            <div class="news-list-box">
+		   	  	  <a href="<%linkurl("news-articel",{dr[id]})%>"> 
+                  <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+                     <p> <%cutstring({dr[zhaiyao]},140)%> </p>
+		   	  	   </a>
+		   	  	     <div class="news-foot">
+          	   	   	  <span class="news-date">
+          	   	   	  	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+          	   	   	  </span>
+          	   	   	  <span class="news-more">
+          	   	   	  	<!--more->-->
+          	   	   	  </span>
+          	   	   	  <div class="clear"></div>
+          	   	   </div>
+		   	  </div>
+           <%/foreach%>
+   
+          	   <a class="new-more" href="<%linkurl("news_list",124)%>">+更多</a>
+          </div>
+           <!--end 集团新闻-->
+	   	
+	   	    <div class="gy-tab gy-tab1">
+	   	       <%set DataTable news_list2=get_article_list("news", 0, 5, "status=0  and category_id=87 and is_top=1")%>
+          <%foreach(DataRow dr in news_list2.Rows)%>
+            <div class="news-list-box">
+		   	  	  <a href="<%linkurl("news-articel",{dr[id]})%>"> 
+                  <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+                     <p> <%cutstring({dr[zhaiyao]},140)%> </p>
+		   	  	   </a>
+		   	  	     <div class="news-foot">
+          	   	   	  <span class="news-date">
+          	   	   	  	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+          	   	   	  </span>
+          	   	   	  <span class="news-more">
+          	   	   	  	more->
+          	   	   	  </span>
+          	   	   	  <div class="clear"></div>
+          	   	   </div>
+		   	  </div>
+           <%/foreach%>
+            <a class="new-more" href="<%linkurl("news_list",87)%>">+更多</a>
+	   	    </div>
+	   	    <!--end 缘善公益-->
+	   	    
+	   	    <div class="gy-tab gy-tab2">
+		 <%set DataTable news_list3=get_article_list("news", 0, 5, "status=0  and category_id in(114,115) and is_top=1")%>
+          <%foreach(DataRow dr in news_list3.Rows)%>
+            <div class="news-list-box">
+		   	  	  <a href="<%linkurl("news-articel",{dr[id]})%>"> 
+                  <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+                     <p> <%cutstring({dr[zhaiyao]},140)%> </p>
+		   	  	   </a>
+		   	  	     <div class="news-foot">
+          	   	   	  <span class="news-date">
+          	   	   	  	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+          	   	   	  </span>
+          	   	   	  <span class="news-more">
+          	   	   	  	more->
+          	   	   	  </span>
+          	   	   	  <div class="clear"></div>
+          	   	   </div>
+		   	  </div>
+           <%/foreach%>
+            <a class="new-more" href="<%linkurl("news_list",77)%>">+更多</a>
+	   	    </div>
+	   	    <!--end 格林披治-->
+	   	    
+	   	    <div class="gy-tab gy-tab3">
+	   <%set DataTable news_list4=get_article_list("news", 0, 5, "status=0  and category_id in(122,123,126) and is_top=1")%>
+          <%foreach(DataRow dr in news_list4.Rows)%>
+            <div class="news-list-box">
+		   	  	  <a href="<%linkurl("news-articel",{dr[id]})%>"> 
+                  <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+                     <p> <%cutstring({dr[zhaiyao]},140)%> </p>
+		   	  	   </a>
+		   	  	     <div class="news-foot">
+          	   	   	  <span class="news-date">
+          	   	   	  	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+          	   	   	  </span>
+          	   	   	  <span class="news-more">
+          	   	   	  	more->
+          	   	   	  </span>
+          	   	   	  <div class="clear"></div>
+          	   	   </div>
+		   	  </div>
+           <%/foreach%>
+            <a class="new-more" href="<%linkurl("news_list",63)%>">+更多</a>
+	   	    </div>
+	   	    <!--end 欧美城-->
+	   	     <div class="gy-tab gy-tab4">
+	   	     <%set DataTable news_list5=get_article_list("news", 0, 5, "status=0  and category_id in(117,118,119) and is_top=1")%>
+          <%foreach(DataRow dr in news_list5.Rows)%>
+            <div class="news-list-box">
+		   	  	  <a href="<%linkurl("news-articel",{dr[id]})%>"> 
+                  <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+                     <p> <%cutstring({dr[zhaiyao]},140)%> </p>
+		   	  	   </a>
+		   	  	     <div class="news-foot">
+          	   	   	  <span class="news-date">
+          	   	   	  	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+          	   	   	  </span>
+          	   	   	  <span class="news-more">
+          	   	   	  	more->
+          	   	   	  </span>
+          	   	   	  <div class="clear"></div>
+          	   	   </div>
+		   	  </div>
+           <%/foreach%>
+            <a class="new-more" href="<%linkurl("news_list",113)%>">+更多</a>
+	   	    </div>
+	   	    <!--end 振业汽车-->
+
+	   </div>
+	   
+	    	 
+	    <!--end about content-->
+		 <%template src="_footer.html"%>
+	</body>
+	 
+    <script src="<%templateskin%>/js/zy-mb.js"></script>
+</html>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1339,
+    "pid": 1369,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "销售二维码",
+    "url": "./page/chanpin/chanpin.html"
+  },
+  {
+    "id": 1349,
+    "pid": 1369,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "协议模板",
+    "url": "./page/chanpin/chanpin.html"
+  }
+]

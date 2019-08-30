@@ -1,0 +1,65 @@
+﻿<script type="text/javascript">
+	     $(function () {
+	         $('#btn').click(function () {
+ 
+	                 alert("请联系邮箱:591359133@qq.com");
+	               
+	         })
+	     })
+    </script>  
+ <div class="header">
+    	  <div class="header-c">
+    	  	<div class="logo">
+    	  		<h1><a href="<%linkurl("index")%>">
+				  <img src="{site.logo}" alt={site.name}>  
+				</a></h1>
+    	  	</div>
+    	  	<ul class="nav-ul" id="nav">
+    	  		<!--<li class="nv-actived"><a href="<%linkurl("index")%>">首页</a></li>-->
+    	  		<li><a href="<%linkurl("content","about")%>">关于振业</a>
+    	  			<ul class="list-ul">
+    	  			<!--	<li><a href="#">关于我们</a></li>
+    	  				<li><a href="#">企业文化</a></li>
+    	  				<li><a href="#">振业内刊</a></li>
+    	  				<li><a href="#">振业之歌</a></li>
+    	  				<li><a href="#">振业运动会</a></li>-->
+         <%set DataTable ccl=get_article_list("content", 0, 0, "status=0 and category_id=25 and id!=55")%>
+        <%foreach(DataRow dr in ccl.Rows)%>
+        <li>
+         <a title="{dr[title]}" href="<%linkurl("content",{dr[call_index]})%>">{dr[title]}</a> 
+        </li>
+        <%/foreach%>
+    	  			</ul>
+    	  		</li>
+    	  		<li><a href="<%linkurl("content","ysgy")%>">缘善公益</a></li>
+                     <li><a href="<%linkurl("content","glpz")%>">格林披治</a></li>
+<li><a href="<%linkurl("content","omcjs")%>">欧美城</a></li>
+					<li><a href="<%linkurl("content","qc")%>">振业汽车</a></li>
+    	  		<li><a onclick="dangqian(this.id)" id="3" href="<%linkurl("news")%>">新闻中心</a><span></span>
+    	  			<ul class="list-ul">
+    	  				<!--<li><a href="<%linkurl("news_list",124)%>">企业新闻</a></li>
+    	  				<li><a href="<%linkurl("news_list",61)%>">员工风采</a></li>-->
+
+<li><a href="<%linkurl("news_list",59)%>">振业集团</a></li>
+<li><a href="<%linkurl("news_list",87)%>">缘善公益</a></li>
+<li><a href="<%linkurl("news_list",77)%>">格林披治</a></li>
+<li><a href="<%linkurl("news_list",63)%>">欧美城</a></li>
+<li><a href="<%linkurl("news_list",113)%>">振业汽车</a></li>
+    	  			</ul>
+    	  		</li>
+    	  		<li><a href="<%linkurl("news_list",69)%>">人才招聘</a></li>
+    	  		<li><a href="<%linkurl("content","contact")%>">联系我们</a></li>
+    	  	</ul>
+    	  	<div class="clear"></div>
+    	  </div>
+    </div>
+
+ <div class="right-nv">
+    	   <ul>
+    	   	<li><a href="tencent://message/?uin=591359133&Site=QQ交谈&Menu=yes" target="blank"><img  src="img/icon1.gif"></a> </li>
+    	   	<li id="btn"><img src="img/icon2.gif"> </li>
+    	   	<!--<li><a href="<%linkurl("feedback")%>"><img src="img/icon3.gif"></a> </li>-->
+               <li> <a href="#" onclick="gotoTop();return false;" ><img src="img/back.gif"></a> </li>
+    	   </ul>
+    </div>
+    <!--end header-->

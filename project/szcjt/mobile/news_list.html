@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		
+	    <script src="<%templateskin%>/js/jquery-1.11.0.min.js"></script> 
+		<link href="<%templateskin%>/css/zy-mb.css" rel="stylesheet">
+		<%set string category_title=get_category_title(category_id,"集团新闻")%>
+		<title>{category_title} - {site.name}</title>
+	</head>
+	<body>
+    <!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+		<!--<div class="nv-list">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="about.html">关于振业</a></li>
+				<li><a href="#">缘善公益</a></li>
+				<li><a href="#">格林披治</a></li>
+				<li><a href="#">欧美城</a></li>
+				<li><a href="#">振业汽车</a></li>
+				<li><a href="news.html">新闻中心</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+			<div class="close-nv">
+				<span>
+					x
+				</span>
+			</div>
+		</div>-->
+		<!--end nv-list-->
+	<!--	<header class=" header">
+			
+				<div class=" logo">
+					<h1><img src="<%templateskin%>/img/logo.jpg" alt="振业集团手机官网" /></h1>  
+				</div>
+				
+				<span class="nv-button">
+					<img src="<%templateskin%>/img/nv-button.jpg" />
+				</span>
+				<div class="clear"></div>
+			</div>
+		</header>-->
+		<!--end header-->
+	    <div class="about-banner">
+	    	  <img src="<%templateskin%>/img/mb-news-banner.jpg">
+	    </div>
+	
+	   <div class="about-content">
+	   	  <b class="list-t"><!--集团新闻-->{category_title}</b>
+	   	  <div class="news-list-c">
+
+          <%set DataTable news_list=get_article_list(channel, category_id, pagesize, page, "status=0", out totalcount, out pagelist, "news_list", category_id, "__id__")%><!--取得一个分页DataTable-->
+          <%foreach(DataRow dr in news_list.Rows)%>
+      
+		   	  	 
+		   	   
+ <%if {category_title}=="人才招聘" %>
+      <div class="news-box-list" style="padding-top:10px;padding-bottom:10px;" onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+ 
+                           <%cutstring({dr[title]},20)%>
+                        <span style="float:right;">
+		   	  	   	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+		   	  	   </span>
+<div class="clear"></div> 
+<%else %>
+   <div class="news-box-list" onclick="location='<%linkurl("news-articel",{dr[id]})%>'">
+ 
+                                   <img src="{dr[img_url]}">
+		   	  	   <h2><%cutstring({dr[title]},40)%></h2>
+ <p>
+		   	  	   	<%datetostr({dr[add_time]},yyyy-MM-dd)%>
+		   	  	   </p>
+ <div class="clear"></div> 
+<%/if %>
+
+
+		   	  	  
+		   	  	  
+		   	  </div>
+           <%/foreach%>
+		<!--   	  <div class="news-box-list">
+		   	  	   <img src="<%templateskin%>/img/news-list-img1.jpg">
+		   	  	   <h2>吴晓翔先生当选新一届香港华商慈善基金会主席</h2>
+		   	  	   
+		   	  	   <p>
+		   	  	   	-2018-01-16
+		   	  	   </p>
+		   	  	   <div class="clear"></div>
+		   	  </div>
+		   	  <div class="news-box-list">
+		   	  	   <img src="<%templateskin%>/img/news-list-img1.jpg">
+		   	  	   <h2>吴晓翔先生当选新一届香港华商慈善基金会主席</h2>
+		   	  	   
+		   	  	   <p>
+		   	  	   	-2018-01-16
+		   	  	   </p>
+		   	  	   <div class="clear"></div>
+		   	  </div>-->
+		   	 
+	   	        <!--/新闻列表-->
+      
+      <!--分页页码-->
+     
+		   	  <div class="fenye">
+		   	  	  <p>
+                  {pagelist}
+		   	  	  <!--	<span class="fy-arr-left"><<</span>
+		   	  	  	<span class="fy-num-hov">1</span>
+		   	  	  	<span>2</span>
+		   	  	  	<span>3</span>
+		   	  	  	<span>4</span>
+		   	  	  	<span>5</span>
+		   	  	  	<span>6</span>
+		   	  	  	<span class="fy-arr-right">>></span>-->
+		   	  	  </p>
+		   	  </div>
+		   	  <!--end fenye-->
+	   	  </div>
+	   </div>
+	   
+	    	 
+	    <!--end about content-->
+		 <%template src="_footer.html"%>
+	</body>
+	 
+    <script src="<%templateskin%>/js/zy-mb.js"></script>
+</html>

@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{site.seo_title}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+ 
+ 
+      <script src="{config.webpath}js/jquery-1.11.0.min.js" ></script> 
+      <script src="<%templateskin%>/js/jquery.flexslider-min.js"></script> 
+      <link href="{config.webpath}css/zy.css" rel="stylesheet" type="text/css" />
+     
+<style type="text/css">
+	#video{margin-top:19px;}
+	#video2,#video3,#video4{ margin-top:16px;}
+</style>
+
+<script type="text/javascript">
+    //设定Mobile的定义(全小写)
+    var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+    //读取用户的浏览器资料
+    var browser = navigator.userAgent.toLowerCase();
+    var isMobile = false;
+
+    //检查开始
+    for (var i = 0; i < mobileAgent.length; i++) {
+        if (browser.indexOf(mobileAgent[i]) != -1) {
+            isMobile = true;
+            //alert(mobileAgent[i]);
+            //程式码(转址)
+            location.href = 'http://m.hkpbg.com/aspx/mobile/index.aspx';
+            //停止运行回圈
+            break;
+        }
+    }
+</script>
+
+
+
+</head>
+
+<body >
+ 
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+
+ <div class="content">
+      	<!--start 图片轮播-->
+    	   <div class="zy-banner-box"> 			
+			 <div class="jq22-container">
+               <div class="flexslider">
+					<ul class="slides">
+						 
+          <%set DataTable focusNews1=get_article_list("photo", 0, 5, "status=0 and is_slide=1 and category_id=79")%>
+          <%foreach(DataRow dr in focusNews1.Rows)%>
+          <li ><img src="{dr[img_url]}" /></li>
+          <%/foreach%>
+					</ul>
+				</div>
+	        </div>
+	   </div>
+	   <!--end 图片轮播-->
+	   <!--start line1-->
+	   <div class="line-1">
+
+        <%set DataTable jtxc=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in jtxc.Rows)%>
+
+	   	   <div class="zy-video">
+	   	   	  <h2 class="zy-h2"><span>振业宣传片</span><a class="h2-more" href="<%linkurl("content","about")%>">[&nbsp;图文介绍&nbsp;]</a></h2>
+			   <div id="video" style="width:528px;height:340px;"></div>
+		 
+	   	   </div><%/foreach%>
+	   	   <!--end video-->
+	   	   <div class="zy-news">
+	   	   	  <ul class="zy-tab-t">
+	   	   	  	<li class="tab-actived">集团新闻</li>
+	   	   	  	<li>员工风采</li>
+	   	   	  </ul>
+	   	   	  <div class="clear"></div>
+	   	   	  <div class="news-tabc">
+		   	   	  <div class="new-tab new-tab1">
+                  <%set DataTable mtbd12=get_article_list("news", 0, 1, "status=0 and  is_red=1 and category_id=124")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd12.Rows)%>  
+		   	   	  	<div class="ps-news">
+		   	   	  	  <h2><a href="<%linkurl("news_show",{dr[id]})%>" title="{dr[title]}"><%cutstring({dr[title]},36)%></a></h2>
+			   	   	  <img src="{dr[img_url]}">
+			   	   	  <p>
+			   	   	  	<%cutstring({dr[zhaiyao]},97)%>
+			   	   	  </p>
+			   	   	  <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+			   	   	  <div class="clear"></div>
+		   	   	   </div>
+                    <%/foreach%>
+			   	   	  <ul class="list-art">
+			   	   	  	 
+          <%set DataTable mtbd22=get_article_list("news", 0, 4, "status=0  and category_id=124 and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd22.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},40)%></a><span><%datetostr({dr[add_time]},MM-dd)%></span></li>
+          <%/foreach%>
+		              </ul>
+           
+		   	   	  </div>
+		   	   	  <!--end new-tab1-->
+		   	   	  <div class="new-tab new-tab2">
+                    <%set DataTable mtbd3=get_article_list("news", 0, 1, "status=0 and is_red=1 and category_id=61")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd3.Rows)%>
+		   	   	  	<div class="ps-news">
+		   	   	  	  <h2><a href="<%linkurl("news_show",{dr[id]})%>" title="{dr[title]}"><%cutstring({dr[title]},36)%></a></h2>
+			   	   	  <img src="{dr[img_url]}">
+			   	   	  <p>
+			   	   	  	<%cutstring({dr[zhaiyao]},97)%>
+			   	   	  </p>
+			   	   	  <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+			   	   	  <div class="clear"></div>
+		   	   	   </div>
+                   <%/foreach%>
+			   	   	  <ul class="list-art">
+			   	   	   
+          <%set DataTable mtbd33=get_article_list("news", 0, 4, "status=0  and category_id=61 and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd33.Rows)%>
+           <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},40)%></a><span><%datetostr({dr[add_time]},MM-dd)%></span></li>
+      <%/foreach%>
+		              </ul>
+		   	   	  </div>
+		   	   	  <!--end new-tab2-->
+	   	   	  </div>
+	   	   </div>
+	   	   <!--end news-->
+	   	   <div class="zy-hr">
+	   	   	  <h2 class="zy-h2 zp-h2"><span><a href="<%linkurl("news_list",69)%>">集团招聘</a></span><b class="hr-bt-left"></b><b class="hr-bt-right"></b></h2>
+	   	   	 
+         
+                    <div class="hr-c">
+	   	   	  	<div class="hr-cc">
+	   	   	  		<div class="hr-box hr-box1">
+                       <%set DataTable all_zplist=get_article_list("news", 0, 12, "status=0 and category_id=69")%>
+                            <%loop dr_job all_zplist%>
+							<h2><a href="<%linkurl("news_show",{dr_job[id]})%>"><%cutstring({dr_job[title]},15)%></a></h2>
+				           	<p>
+				            <%cutstring({dr_job[zhaiyao]},44)%><a href="<%linkurl("news_show",{dr_job[id]})%>"><span style="float:right;">[详情]</span></a>
+				           	</p>
+
+                            <%if(dr_job__loop__id%4==0||dr_job__loop__id==all_zplist.Rows.Count) %>
+                            </div>
+                            <%/if %>
+
+                            <%if(dr_job__loop__id%4==0&&dr_job__loop__id<all_zplist.Rows.Count) %>
+						    <div class="hr-box hr-box1">
+                            <%/if %>
+
+                            <%/loop %>
+             <div class="clear"></div>
+					</div>
+				</div>
+				
+				</div>
+				
+				
+			 
+	   	   </div>
+	   	   <!--end hr-->
+	   	   <div class="clear"></div>
+	   </div>
+	   <!--end line1-->
+	   <!--start line2-->
+	   <div class="line2">
+	   	  
+	   	   <ul class="yw-tab-box">
+	   	   	  <li class="yw-tab yw-tab1 ys-tab-actived"><span><img src="img/yw1-h.png"/>缘善公益</span></li>
+              <li class="yw-tab yw-tab2"><span><img src="img/yw2-h.png"/>格林披治</span></li>
+	   	   	  <li class="yw-tab yw-tab3"><span><img src="img/yw3-h.png"/>欧美城</span></li>
+	   	   	  <li class="yw-tab yw-tab4"><span><img src="img/yw4-h.png"/>振业汽车</span></li>
+	   	   	  
+	   	   </ul>
+	   	   <div class="yw-tab-c">
+	   	   	   <div class="yw-tab-cc yw-tab1">
+		   	   	   	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+		   	   	   	   	 
+		 <%set DataTable contentlist2=get_article_list("content", 0, 1, "status=0 and title='缘善公益'")%>
+        <%foreach(DataRow dr in contentlist2.Rows)%>
+    <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>"> [进入专题] </a>
+<%/foreach%>
+                       </p>
+		   	   	   	   <ul class="img-news">
+           <%set DataTable yslb=get_article_list("news", 0, 3, "status=0  and category_id=87 and is_red=1")%><!--and img_url<>''-->
+     <%loop dr yslb%>
+       <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+<%/foreach%>
+		   	   	   	   	 
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+          <%set DataTable yslb1=get_article_list("news", 0, 3, "status=0  and category_id=87 and is_top=1 and is_red!=1")%> 
+          <%foreach(DataRow dr in yslb1.Rows)%>
+           <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},70)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+     <%/foreach%>
+		   	   	   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span>缘善公益视频</span></h2>
+		   	   	   		<div id="video2" style="width:528px;height:297px;"></div>
+						 
+                        	   	   	</div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab1-->
+
+	   	   	   <div class="yw-tab-cc yw-tab2">
+	   	   	       	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+    <%set DataTable zyydh2=get_article_list("content", 0, 1, "status=0 and category_id=71")%>
+        <%foreach(DataRow dr in zyydh2.Rows)%>
+         <%cutstring({dr[zhaiyao]},190)%><a class="red-a" href="<%linkurl("content","glpz")%>"> [进入格林披治专题] </a>
+         <%/foreach%> 
+   	   	   	   	   </p>
+		   	   	   	   <ul class="img-news">
+
+           <%set DataTable hzglpznews=get_article_list("news", 0, 3, "status=0 and category_id in(114,115,128)  and is_red=1")%>
+          <%foreach(DataRow dr in hzglpznews.Rows)%>
+         <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+           
+           <%/foreach%> 
+		   	   	   	   	 
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+           <%set DataTable bjglpznews=get_article_list("news", 0, 3, "status=0 and category_id in (114,115) and is_top=1 and is_red!=1")%>
+          <%foreach(DataRow dr in bjglpznews.Rows)%>
+            <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},70)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+            <%/foreach%> 
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span class="gp-tt">格林披治视频</span></h2>
+		   	   	   		<div id="video3" style="width:528px;height:295px;"></div>
+		   	   	   
+		   	   	   	</div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab4-->
+
+	   	   	    <div class="yw-tab-cc yw-tab3">
+	   	   	       	<div class="yw-tab-left">
+		   	   	   	   <p class="yw-js">
+		   	   	   	   	  
+	  <%set DataTable contentlist1=get_article_list("content", 0, 1, "  title='欧美城介绍'")%>
+        <%foreach(DataRow dr in contentlist1.Rows)%>
+        <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入专题]</a>
+         <%/foreach%>
+                       </p>
+		   	   	   	   <ul class="img-news">
+         <%set DataTable omclb=get_article_list("news", 0, 3, "status=0 and is_red=1 and category_id in(122,123,126)")%><!--and img_url<>''-->
+         <%foreach(DataRow dr in omclb.Rows)%>
+                          <li>
+		   	   	   	   	  	<a href="<%linkurl("news_show",{dr[id]})%>">
+		   	   	   	   	  		<img src="{dr[img_url]}">
+		   	   	   	   	  		<span><%cutstring({dr[title]},25)%></span>
+		   	   	   	   	  	</a>
+		   	   	   	   	  </li>
+                  <%/foreach%>
+
+		   	   	   	 
+		   	   	   	   	  
+		   	   	   	   </ul>
+		   	   	   	   <div class="clear"></div>
+		   	   	   	   <ul class="txt-list">
+							<%set DataTable omclist=get_article_list("news", 0,3, "status=0  and is_index=1 and category_id in(122,123,126)  ")%><!--and img_url<>''-->
+							<%foreach(DataRow dr in omclist.Rows)%>
+							<li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},70)%></a><span>[&nbsp;<%datetostr({dr[add_time]},yyyy-MM-dd)%>&nbsp;]</span></li>
+							<%/foreach%>
+		   	   	   	   </ul>
+		   	   	   	</div>
+		   	   	   	<div class="yw-tab-right">
+		   	   	   		<h2 class="zy-h2"><span class="omc-tt">欧美城视频</span></h2>
+		   	   	   		<div id="video4" style="width:528px;height:295px;"></div>
+		   	   	   		
+                    </div>
+		   	   	   	<div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab2-->
+	   	   	   
+	   	   	   <div class="yw-tab-cc yw-tab4">
+	   	   	   	   <div class="qc-left">
+			<p>
+				    
+			 
+             <%set DataTable contentlist3=get_article_list("content", 0, 1, "status=0 and title='振业汽车'")%>
+        <%foreach(DataRow dr in contentlist3.Rows)%>
+        <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入专题]</a>
+         <%/foreach%>
+
+            
+            </p>
+            	<div class="qc-tab-c">
+				  <div class="qc-bt-left"></div>
+			      <div class="qc-bt-right"></div>
+			      <div class="qc-tab-cc">
+			      	  
+        
+	                  <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss1.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss2.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss3.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss4.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss5.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss6.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss7.jpg">
+				     </div>
+				     <div class="qc-tab qc-tab1">
+						    <img src="img/qc-pss8.jpg">
+				     </div>
+         
+			      	
+			      </div>
+				  
+				</div>
+			
+		</div>
+	   	   	       <div class="qc-right">
+			<div class="qc-tab-bt">
+				<ul>
+					<li class="qc-bt-active">汕头粤驰</li>
+					
+					<li class="">汕头粤特</li>
+					<li class="">汕头粤通</li>
+					
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="qc-right-c">
+				<div class="qc-right-tab qc-right-tab1" style="display: block;">
+					  <div class="qc-right-tab qc-right-tab1">
+			  <%set DataTable yuechi=get_article_list("news", 0, 3, "status=0 and  category_id=117 and is_red=1 ")%>
+          <%foreach(DataRow dr in yuechi.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                            <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+				</div>
+
+         
+          
+				</div>
+				<!--end qc-right-tab1-->
+				<div class="qc-right-tab qc-right-tab2" style="display: none;">
+			  <%set DataTable yuete=get_article_list("news", 0, 3, "status=0 and  category_id=118 and is_red=1 ")%>
+          <%foreach(DataRow dr in yuete.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+
+          	
+          
+				</div>
+				<!--end qc-right-tab2-->
+				<div class="qc-right-tab qc-right-tab3" style="display: none;">
+						    <%set DataTable yuetong=get_article_list("news", 0, 3, "status=0 and  category_id=119 and is_red=1 ")%>
+          <%foreach(DataRow dr in yuetong.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
+						  </p>
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+
+          
+          
+				</div>
+				<!--end qc-right-tab3-->
+				
+			</div>
+		
+      </div>
+                   <div class="clear"></div>
+	   	   	   </div>
+	   	   	   <!--end tab3-->	   	   	   
+	   	   	   
+	   	   </div>
+	   </div>
+	   <!--end line2-->
+    </div>
+    <!--end content-->
+
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</body>
+<script src="<%templateskin%>/js/wySilder.min.js" type="text/javascript"></script>
+<script src="<%templateskin%>/js/zy.js" type="text/javascript"></script>
+  
+</html>
+<!--视频调用-->
+ <script type="text/javascript" src="{config.webpath}ckplayer/ckplayer/ckplayer.js"></script>
+<script type="text/javascript">
+    var videoObject = {
+        container: '#video', //“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player', //该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer: false, //如果强制使用flashplayer则设置成true
+        //video: 'http://www.hkpbg.com/video/zy1.mp4'//振业视频地址
+          <%set DataTable focusVideo1=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in focusVideo1.Rows)%>
+               poster:'{dr[img_url]}',
+          video: 'http://www.hkpbg.com/video/zy1.mp4'
+          <%/foreach%>
+
+    };
+    var videoObject2 = {
+        container: '#video2', //“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player2', //该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer: false, //如果强制使用flashplayer则设置成true  //
+       <%set DataTable focusVideo2=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=121 ")%>
+      <%foreach(DataRow dr in focusVideo2.Rows)%>
+               poster:'{dr[img_url]}',
+          video: 'http://www.hkpbg.com/video/ys.mp4'//缘善
+      <%/foreach%>
+    };
+    var videoObject3 = {
+        container: '#video3', //“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player3', //该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer: false, //如果强制使用flashplayer则设置成true
+       <%set DataTable focusVideo3=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=29 ")%>
+      <%foreach(DataRow dr in focusVideo3.Rows)%>
+               poster:'{dr[img_url]}',
+          video: '/upload/video/glpz.flv'//格林披治
+           <%/foreach%>
+     
+    };
+    var videoObject4 = {
+        container: '#video4', //“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player4', //该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer: false, //如果强制使用flashplayer则设置成true
+          <%set DataTable focusVideo4=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=30 ")%>
+      <%foreach(DataRow dr in focusVideo4.Rows)%>
+               poster:'{dr[img_url]}',
+       video: '/upload/video/omc.flv'//欧美城视频地址
+         <%/foreach%>
+    };
+   var player = new ckplayer(videoObject);
+    var player2 = new ckplayer(videoObject2);
+    var player3 = new ckplayer(videoObject3);
+    var player4 = new ckplayer(videoObject4);
+</script>

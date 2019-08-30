@@ -1,0 +1,58 @@
+[
+  {
+    "id": 13651,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房态图",
+    "url":"./page/fangtaitu/fangtaitu.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "订单",
+    "url": "./page/dingdan/dingdan.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房单",
+    "url": "./page/chanpin/chanpin.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "工作账",
+    "url": "./page/chanpin/chanpin.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "房价",
+    "url": "./page/chanpin/chanpin.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会员",
+    "url": "./page/chanpin/chanpin.html"
+  },
+  {
+    "id": 13653,
+    "pid": 1365,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "报表",
+    "url": "./page/chanpin/chanpin.html"
+  }
+]

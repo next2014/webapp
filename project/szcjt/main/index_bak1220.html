@@ -1,0 +1,1306 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{site.seo_title}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/ckplayer/ckplayer.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $(".close").click(function () {
+            $(".video").hide();
+            $('video').trigger('pause');
+        })
+        $("#video-play").click(function () {
+            $(".video").show();
+            $('.video video').trigger('play');
+        })
+        //招聘
+        var current = 0;
+        function zprun() {
+            current++;
+
+            if (current < 3) {
+                $(".zp-c-c").animate({ "left": -current * 200 });
+            }
+            else if (current >= 3) {
+                current = 0;
+                $(".zp-c-c").animate({ "left": "0px" });
+            }
+        }
+        time = setInterval(zprun, 4000);
+        $(".zp-box").hover(function () {
+            clearInterval(time), function () {
+                time = setInterval(zprun, 4000);
+            }
+        })
+        $(".zp-box").mouseleave(function () {
+            time = setInterval(zprun, 4000);
+        })
+        $(".zp-bt").mouseenter(function () {
+            clearInterval(time);
+        })
+        $(".zp-bt").mouseleave(function () {
+            time = setInterval(zprun, 4000);
+        })
+        $(".bt-left").click(function () {
+            current++;
+            if (current < 3) {
+                $(".zp-c-c").animate({ "left": -current * 200 });
+            }
+            else if (current >= 3) {
+                current = 0;
+                $(".zp-c-c").animate({ "left": "0px" });
+            }
+        })
+        $(".bt-right").click(function () {
+            current--;
+
+
+            if (current < 0) {
+                current = 2;
+            }
+            $(".zp-c-c").animate({ "left": -current * 200 });
+        })
+        //ydh
+        $(".ydh-box").mouseenter(function () {
+            $(this).find("a").eq(0).stop().show(300);
+        })
+        $(".ydh-box").mouseleave(function () {
+            $(this).find("a").eq(0).stop().hide(300);
+        })
+        //格林披治新闻切换
+        var gpnum=0;
+        $(".gpp-tab-nv li").mouseover(function(){
+        	  $(".gpp-tab-nv li").css({"border-color":"white","color":"#999"});
+        	  $(this).css({"border-color":"#c82126","color":"#c82126"});
+        	  gpnum=$(this).index()+1;
+        	  $(".gpptab").hide();
+        	  $(".gpptab"+gpnum).fadeIn(300);
+        })
+        
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".focusbox").flexslider({
+            directionNav: false,
+            pauseOnAction: false
+        });
+    });
+</script>
+
+
+  <link href="{config.webpath}css/index.css" rel="stylesheet" type="text/css">
+  
+      <script src="{config.webpath}js/jquery-1.11.0.min.js" ></script> 
+	<script src="{config.webpath}js/jquery.flexslider-min.js"></script>
+
+	<style type="text/css">
+		video::-internal-media-controls-download-button {
+    display:none;
+}
+
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); 
+}
+		a,img{border:0;}
+	/*.line-1-left{ width:550px; height:250px;overflow: hidden; float:left; position: relative;}*/
+		.flexslider{position:relative;height:680px;overflow:hidden;background:url(img/loading.gif) 50% no-repeat;}
+		.slides1{position:relative;z-index:1;}
+		.slides1 li{height:680px;}
+		.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+		.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+		.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:white;cursor:pointer;}
+		.flex-control-nav .flex-active{background-position:0 0;}
+
+		.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+		.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+		.flex-direction-nav li a.flex-prev{left:40px;background:url(img/prev.png) center center no-repeat;}
+		.flex-direction-nav li a.flex-next{right:40px;background:url(img/next.png) center center no-repeat;}
+		.rollBox{overflow:hidden; width:1148px;margin:0 auto; margin-top:16px;}
+		.rollBox .LeftBotton{height:52px;width:8px;background:url(img/button.gif) no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin:55px 0 0 0;cursor:pointer;}
+		.rollBox .RightBotton{height:52px;width:8px;background:url(img/button.gif) no-repeat -8px 0;overflow:hidden;float:left;display:inline;margin:55px 0 0 0;cursor:pointer;}
+		.rollBox .Cont{width:1148px; height:173px; position:relative;overflow:hidden;float:left; }
+		.rollBox .ScrCont{width:2296px; position:absolute; left:0; top:0; height:173px;}
+		.rollBox .Cont .pic{width:164px;float:left;text-align:center; height:173px; position:relative;}
+		.rollBox .Cont .pic img{ width:100%; height:100%; position: absolute; top:0; left:0; z-index: 19;}
+		.rollBox .Cont .pic p{line-height:26px;color:#505050; position:absolute; bottom:0; left:0; z-index: 21; font-size: 14px; width:100%; height:26px; background:rgba(0,0,0,.5);}
+		.rollBox .Cont a:link,.rollBox .Cont a:visited{color:white;text-decoration:none;}
+		.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+		.rollBox #List1,.rollBox #List2{float:left;}
+		#roll{width: 200%; position: relative;}
+		#roll dd{width: 229px;height: 150px;float: left; position: relative; margin-left:1px;}
+		#roll dd img{ position: absolute; z-index: 1; left:0; top:0;}
+		#roll dd span{ position: absolute; bottom:0; left:0; width:100%; height:30px; background:rgba(0,0,0,.5); bottom:0; left:0; color:white; line-height:30px; z-index: 10; font-size: 14px; text-align: center;}
+		.box span{position: absolute;bottom: 40%; display: inline-block;width: 20px;text-align: center;cursor: pointer;background:rgba(0,0,0,.6);z-index: 90;color: white; font-size: 14px;}
+		.box .next{right: 0;}
+	</style> 
+  
+
+
+
+</head>
+
+<body style="background:white;">
+	<div class="video">
+		<div class="close">
+			<img src="img/close-icon.png">
+		</div>
+  <%set DataTable zyjtsp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in zyjtsp.Rows)%>
+		<video controls="controls" src="{dr[video_src]}" id="video_v1" width="640px" height="360px" poster="{dr[img_url]}"></video>
+	<%/foreach%>
+</div>
+	<!--end video-->
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+
+ <script>    setInterval("webjx.innerHTML=new Date().toLocaleString()+''+''.charAt(new Date().getDay());", 1000);
+   </script>
+
+ <script>    setInterval("webjx1.innerHTML=new Date().toLocaleString()+''+''.charAt(new Date().getDay());", 1000);
+   </script>
+<script><!--
+    var ns4up1 = (document.layers) ? 1 : 0;  // browser sniffer
+
+    var ie4up1 = (document.all && (navigator.appVersion.indexOf("MSIE 4") == -1)) ? 1 : 0;
+
+    var ns6up1 = (document.getElementById && !document.all) ? 1 : 0;
+
+    function nowclock() {
+        if (!ns4up1 && !ie4up1 && !ns6up1) return false;
+        var digital = new Date();
+        var hours = digital.getHours();
+        var minutes = digital.getMinutes();
+        var seconds = digital.getSeconds();
+        var day = digital.getDate();
+        var month = digital.getMonth() + 1;
+        var year = digital.getYear();
+        var amOrPm = "AM";
+        if (hours > 11) amOrPm = "PM";
+        if (hours > 12) hours = hours - 12;
+        if (hours == 0) hours = 12;
+        if (minutes < 10) minutes = "0" + minutes;
+        if (seconds < 10) seconds = "0" + seconds;
+        if (day < 10) day = "0" + day;
+        if (month < 10) month = "0" + month;
+        dispTime = hours + ":" + minutes + ":" + seconds + " " + amOrPm;
+        dispDate = year + "年" + month + "月" + day + "日, ";
+        if (ns4up1) {
+            document.layers.nowTime.document.write(dispTime);
+            document.layers.nowTime.document.close();
+            document.layers.nowDate.document.write(dispDate);
+            document.layers.nowDate.document.close();
+        } 
+    } nowclock();
+//-->
+	</script>
+
+
+    <div class="focusbox" style="height: 650px;">
+        <ul class="slides">
+          <%set DataTable focusNews1=get_article_list("photo", 0, 5, "status=0 and is_slide=1 and category_id=79")%>
+          <%foreach(DataRow dr in focusNews1.Rows)%>
+          <li>
+            <a title="{dr[title]}" href="#">
+              <span class="note-bg"></span>
+              <span class="note-txt">{dr[title]}</span>
+              <img src="{dr[img_url]}"  />
+            </a>
+          </li>
+          <%/foreach%>
+        </ul>
+      </div>
+
+	<div class="line-1">
+		<div class="line-1-left">
+			<h2 class="zy-tt1 gray-bottom bg-red-line">集团简介</h2>
+          
+          <%set DataTable contentlist=get_article_list("content", 0, 0, "status=0 and title='关于我们'")%>
+        <%foreach(DataRow dr in contentlist.Rows)%>
+         
+        <p class="p-indent25"><%cutstring({dr[zhaiyao]},450)%></p>
+         <a href="<%linkurl("content",{dr[call_index]})%>" class="xiangqing">了解详情</a>
+        <%/foreach%>
+           
+		</div>
+		<div class="line-1-center">
+			<h2 class="zy-tt1 gray-bottom bg-red-line">集团要闻</h2>
+
+             <%set DataTable mtbd0=get_article_list("news", 0, 1, "status=0 and is_slide=1  and category_id=107 ")%><!--is_top=1 and img_url<>''-->
+          <%foreach(DataRow dr in mtbd0.Rows)%>
+          <div class="ps-tx-list">
+				<a href="<%linkurl("news_show",{dr[id]})%>">
+					<img src="{dr[img_url]}" alt="">
+				    <h3 class="zy-tt-h3"><%cutstring({dr[title]},22)%></h3>
+					<p>
+						<%cutstring({dr[zhaiyao]},60)%>
+					</p>
+				</a>
+			</div>
+          <%/foreach %>
+
+		<!--	<div class="ps-tx-list">
+				<a href="#">
+					<img src="img/small-ps1.jpg" alt="">
+				    <h3 class="zy-tt-h3">惠州市领导到欧美城视察进...</h3>
+					<p>
+						8月24日惠州市领导张章，胡可，乔丹等12人到惠州欧美城视察工程进展...
+					</p>
+				</a>
+			</div>-->
+			<ul class="ul-list">
+				<!--<li><a href="#">如何快乐地工作——给工作植入快乐元素...</a></li>
+				<li><a href="#">有感而发...</a></li>
+				<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>-->
+        
+         <%set DataTable yaowen=get_article_list("news", 0,4, "status=0  and category_id=107 and is_top=1 ")%> 
+          <%foreach(DataRow dr in yaowen.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},45)%></a></li>
+          <%/foreach%>
+            
+			</ul>
+		</div>
+		<div class="line-1-right">
+			<div class="gupiao">
+				<b class="zy-tt1 red-tt">欧美城<span>-430173</span></b>
+				<div class="price"><b>16.00</b><span>RMB</span><div class="clear"></div></div>
+				<div style="font-size:12px;color:#666;">截止：<a id="webjx"> </a></div>
+			</div>
+			<div class="gupiao top16">
+				<b class="zy-tt1 red-tt">格林披治<span>-835903</span></b>
+				<div class="price"><b>1.20</b><span>RMB</span><div class="clear"></div></div>
+				<div style="font-size:12px;color:#666;">截止：<a id="webjx1"> </a></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--end line 1-->
+	<div class="content-gray">
+	<div class="line-2">
+		<div class="ps-box ps-box1">
+			
+               <%set DataTable jtxc=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=88 ")%>
+      <%foreach(DataRow dr in jtxc.Rows)%>
+          <a id="video-play" href="javascript:void(0);" ><img src="img/ps1.jpg" alt="集团宣传视频"></a>
+          <!--视频地址href="<%linkurl("video_show",{dr[id]})%>"-->
+           <%/foreach%>
+		</div>
+		<div class="ps-box ps-box2">
+			<a href="<%linkurl("content","zynk")%>"><img src="img/ps4.jpg" alt="振业内刊"></a>
+		</div>
+		<div class="ps-box ps-box2">
+			<a href="<%linkurl("content","ydh")%>"><img src="img/ps2.jpg" alt="格林披治运动会"></a>
+		</div>
+		<div class="ps-box ps-box2">
+	   <%set DataTable qmxss=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=30 ")%>
+      <%foreach(DataRow dr in qmxss.Rows)%>
+<a href="<%linkurl("video_show",{dr[id]})%>"><img src="img/ps3.jpg" alt="全明星赛事"></a>
+      <%/foreach %>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	<!--end line2-->
+	<div class="line-1 line-3">
+		<div class="line-1-left">
+			<h2 class="zy-tt1 gray-bottom "> <span class="tab-bt1 tab-actived">企业动态</span><span class="tab-bt2  margin-left10">媒体报道</span><a class="tab-a " href="<%linkurl("news")%>">+更多</a><a class="tab-a tab-a-none" href="#">+更多</a></h2>
+			
+            
+			<!--tab1-->
+			<div class="tab1">
+				<div class="tab-left">
+					<!--<a href="#">
+					   <img src="img/small-ps1.jpg" alt="">
+					   换个角度看生活
+					</a>-->
+             <%set DataTable mtbd12=get_article_list("news", 0, 1, "status=0 and  is_slide=1 and category_id in (103,104,109,110,111,112)")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd12.Rows)%>    
+          <a  title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>">	   <img src="{dr[img_url]}"  alt="{dr[title]}"><%cutstring({dr[title]},40)%>	</a>
+          <%/foreach%>
+				</div>
+				<ul class="ul-list top14">
+					<!--<li><a href="#">2如何快乐地工作——给工作植入快乐元素...</a></li>
+					<li><a href="#">有感而发...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+					<li><a href="#">如何快乐地工作——给工作植入快乐元素...</a></li>
+					<li><a href="#">有感而发...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>-->
+           <%set DataTable mtbd22=get_article_list("news", 0, 7, "status=0  and category_id in (103,104,109,110,111,112) and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd22.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},33)%></a></li>
+          <%/foreach%>
+				</ul>
+			</div>
+			<!--tab2-->
+
+            <div class="tab2">
+				<div class="tab-left">
+				   <%set DataTable mtbd3=get_article_list("news", 0, 1, "status=0 and is_slide=1 and category_id=108")%><!--and category_id=60-->
+          <%foreach(DataRow dr in mtbd3.Rows)%>
+          <a  title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>">	   <img src="{dr[img_url]}" alt=""><%cutstring({dr[title]},33)%>	</a>
+          <%/foreach%>
+				</div>
+				<ul class="ul-list top14">
+					<!--<li><a href="#">3如何快乐地工作——给工作植入快乐元素...</a></li>
+					<li><a href="#">有感而发...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+					<li><a href="#">如何快乐地工作——给工作植入快乐元素...</a></li>
+					<li><a href="#">有感而发...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+					<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>-->
+                <%set DataTable mtbd33=get_article_list("news", 0, 7, "status=0  and category_id=108 and is_top=1")%> 
+          <%foreach(DataRow dr in mtbd33.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},33)%></a></li>
+          <%/foreach%>
+				</ul>
+			</div>
+			<!--tab2-->
+
+
+		 </div>
+		<div class="line-1-center">
+			<h2 class="zy-tt1 gray-bottom bg-red-line">员工生活</h2>
+
+            
+			<div class="ps-tx-list1" >
+             <%set DataTable mtbd1=get_article_list("news", 0, 1, "status=0 and category_id=61 and is_slide=1")%><!--and img_url<>''-->
+          <%foreach(DataRow dr in mtbd1.Rows)%>
+
+				<a href="<%linkurl("news_show",{dr[id]})%>">
+					<img src="{dr[img_url]}" alt="">
+				    <h3 class="zy-tt-h3"><%cutstring({dr[title]},24)%></h3>
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%cutstring({dr[zhaiyao]},85)%>
+					</p>
+				</a>
+                 <%/foreach%>
+			</div>
+			<ul class="ul-list">
+				<!--<li><a href="#">如何快乐地工作——给工作植入快乐元素...</a></li>
+				<li><a href="#">有感而发...</a></li>
+				<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>-->
+
+                  <%set DataTable mtbd=get_article_list("news", 0, 3, "status=0 and category_id=61 and is_top=1")%>
+          <%foreach(DataRow dr in mtbd.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},38)%><span style="float:right;"><%datetostr({dr[add_time]},MM-dd)%></span></a></li>
+          <%/foreach%>
+
+			</ul>
+		</div>
+		<div class="line-1-right">
+			<div class="zp">
+				<h2 class="bg-red-h2"><a href="<%linkurl("news_list",69)%>">集团招聘</a><span class="zp-bt bt-left"><</span><span class="zp-bt bt-right">></span></h2>
+                 <div class="zp-c">
+					<div class="zp-c">
+					<div class="zp-c-c">
+                    <div class="zp-box">
+
+                       <%set DataTable all_zplist=get_article_list("news", 0, 9, "status=0 and category_id=69")%>
+                            <%loop dr_job all_zplist%>
+							<b><a href="<%linkurl("news_show",{dr_job[id]})%>"><%cutstring({dr_job[title]},20)%></a></b>
+				           	<p>
+				            <%cutstring({dr_job[zhaiyao]},50)%><a href="<%linkurl("news_show",{dr_job[id]})%>"><span style="float:right;">【详情】</span></a>
+				           	</p>
+
+                            <%if(dr_job__loop__id%3==0||dr_job__loop__id==all_zplist.Rows.Count) %>
+                            </div>
+                            <%/if %>
+
+                            <%if(dr_job__loop__id%3==0&&dr_job__loop__id<all_zplist.Rows.Count) %>
+						    <div class="zp-box">
+                            <%/if %>
+
+                            <%/loop %>
+
+
+
+
+						<!--<div class="zp-box">
+							<b><a href="#">一：1招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+						</div>
+						<div class="zp-box">
+							<b><a href="#">一：2招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+						</div>
+						<div class="zp-box">
+							<b><a href="#">一：3招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+							<b><a href="#">一：招聘网页设计师</a></b>
+							<p>
+								要求：会ps，会dw/html...【详情】
+							</p>
+						</div>-->
+
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	</div>
+	<!--end line 3-->
+	<div class="line-4">
+		<div class="line-4-c">
+			<h2 class="omc-h2">欧美城</h2>
+			<div class="line-4-left">
+				
+					 	 <div class="video-box omc-video"  > 
+                        
+                        <div class="omc-video-c">
+                        	    <%set DataTable omcsp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=30 ")%>
+      <%foreach(DataRow dr in omcsp.Rows)%>
+		<video controls="controls" src="{dr[video_src]}" id="video_v2" poster="{dr[img_url]}"></video>
+	<%/foreach%>
+               
+                        </div>
+              
+					<!--<img src="img/video-ps.jpg">-->
+             </div>
+			</div>
+			<div class="line-4-right">
+				
+				<p>
+					<!--欧美城项目由振业集团投资并创立。为适应新常态下的消费升级需求，从构思策划、
+市场调研、项目决策到项目实施历经五年时间，有效延伸及融合欧美各文化特色业
+态，于2012 年启动并创立“欧美城文化小镇”...-->
+  <%set DataTable contentlist1=get_article_list("content", 0, 0, "  title='欧美城介绍'")%>
+        <%foreach(DataRow dr in contentlist1.Rows)%>
+    <%cutstring({dr[zhaiyao]},300)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入欧美城专题]</a>
+ <%/foreach%>	</p>
+				<div class="line-4-r-l">
+				<!--	<a href="#">
+					  <img src="img/omc-ps1.jpg">
+					  <P>
+					  	为适应新常态下的消费升级需求
+					  </P>
+					</a>-->
+
+ <div class="focusbox line-4-img" >
+ <ul class="slides">
+          <%set DataTable omclb=get_article_list("news", 0,3, "status=0 and is_slide=1 and category_id=63 ")%><!--and img_url<>''-->
+          <%foreach(DataRow dr in omclb.Rows)%>
+          <li>
+            <a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>">
+              <span class="note-bg"></span>
+              <span class="note-txt">{dr[title]}</span>
+              <img src="{dr[img_url]}" />
+            </a>
+          </li>
+          <%/foreach%>
+        </ul></div>
+
+				</div>
+
+     
+
+
+				<div class="line-4-r-r">
+					<ul class="ul-list">
+						<!--<li><a href="#">如何快乐地工作——给工作植入...</a></li>
+						<li><a href="#">有感而发...</a></li>
+						<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+						<li><a href="#">汕大毕业季 燃爆的毕业典礼...</a></li>
+						<li><a href="#">做雌雄同体，左右开弓的职场人...</a></li>
+						<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+						<li><a href="#">汕大毕业季 燃爆的毕业典礼...</a></li>
+						<li><a href="#">如何快乐地工作——给工作植入...</a></li>-->
+
+           <%set DataTable focusNews2=get_article_list("news", 0, 7, "status=0 and  category_id=63 and is_top=1")%>
+          <%foreach(DataRow dr in focusNews2.Rows)%>
+          <li><a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},37)%>
+</a></li>
+          <%/foreach%>
+
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--end omc-js-->
+		<div class="omc-zhuti">
+			
+				<h2 class="omc-js omc-zt2">
+					<span>欧美城主题</span>
+				</h2>
+			
+			<div class="omc-zt-content">
+				
+				
+	<div class="omc-zt-content">
+				 <span class="prev bt-span"></span>
+				
+	<div class="rollBox">
+     
+     <div class="Cont" id="ISL_Cont">
+     	
+       <div class="box">
+
+			
+        
+			<dl id="roll">
+
+				<dd><a href="#"><img src="img/zt-img1.jpg"/><span>汽车文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img2.jpg"/><span>赛车文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img3.jpg"/><span>航天文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img4.jpg"/><span>影视文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img5.jpg"/><span>演绎文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img6.jpg"/><span>婚博文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img7.jpg"/><span>花海艺术主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img8.jpg"/><span>娱乐文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img9.jpg"/><span>儿童科普主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img10.jpg"/><span>海洋文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img11.jpg"/><span>餐饮文化主题</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img12.jpg"/><span>商学院</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img13.jpg"/><span>文化交流平台</span></a></dd>
+				<dd><a href="#"><img src="img/zt-img14.jpg"/><span>慈善公益</span></a></dd>
+				
+
+				
+
+			</dl>
+			
+          
+			
+
+		</div>
+		
+      </div>
+  
+    </div>
+    <span class="next bt-span"></span>
+   </div>
+
+   </div>
+   
+			
+		</div>
+		<!--end omc-zhuti-->
+	</div>
+	<!--end line4-->
+
+
+<div class="line-5">
+	<div class="line-5-left">
+		<h2 class="ys-tt">
+			缘善公益
+		</h2>
+		<p class="ys-info">2006年成立振业基金 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    2013年缘善基金成立&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    2016年各地分会陆续成立</p>
+	    <p class="jianjie">
+	    	        简介：<!--2013年9月，集团总部董事局主席吴晓翔先生以个人名义发起并捐献人民币208万元整，成立了“广东省缘善公益基金会”同年10月经
+广东省民政厅注册登记，属于非公募基金会，基金会登记管理机关是广东省民政厅，业务主管单位是广东省社会组织管理局...-->
+ <%set DataTable contentlist2=get_article_list("content", 0, 0, "status=0 and title='缘善公益'")%>
+        <%foreach(DataRow dr in contentlist2.Rows)%>
+    <%cutstring({dr[zhaiyao]},250)%><a href="<%linkurl("content",{dr[call_index]})%>">  </a>
+<%/foreach%>
+
+         <a href="<%linkurl("news_list",87)%>">[进入专题]</a>
+	    </p>
+
+         <%set DataTable yslb=get_article_list("news", 0, 2, "status=0  and category_id=87 and is_slide=1")%><!--and img_url<>''-->
+     <%loop dr yslb%>
+        <%if(dr__loop__id==1)%>
+         <div class="ys-boxx">
+	    	     <img src="{dr[img_url]}" width="245px;" height="141px;"/>
+	    	     <a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},25)%></a>
+	    </div>
+  <%else %>
+    <div class="ys-boxx left10">
+	    	      <img src="{dr[img_url]}" width="245px;" height="141px;" />
+	    	    <a title="{dr[title]}" href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},25)%></a> 
+	    </div>
+
+      <%/if %>
+<%/loop%>
+	   <!-- <div class="ys-boxx">
+	    	    <img src="img/ys-pss1.jpg">
+	    	    <a href="#">成立了“广东省缘善公益基金会”</a>
+	    </div>
+	    <div class="ys-boxx left10">
+	    	     <img src="img/ys-pss1.jpg">
+	    	    <a href="#">成立了“广东省缘善公益基金会”</a>
+	    </div>-->
+	    <div class="clear"></div>
+	</div>
+	<div class="line-5-right">
+
+
+      <%set DataTable ystop=get_article_list("news", 0, 1, "status=0 and  category_id=87 and is_top=1 and is_slide=1")%>
+          <%foreach(DataRow dr in ystop.Rows)%>
+
+		<div class="line-5-right-box">
+			<img src="{dr[img_url]}" width="311px;" height="212px;">
+			<a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},25)%></a>
+		</div>
+		<p>
+			    <!-- 感恩！各界爱心人士共捐款近缘善12、13号公益图书室对外开放.各界爱心人士共捐款近缘善12、13号公益图书室对外开放...爱心人士共捐款近缘善12、13号公益图书室对外开放.各界爱心人士共捐款...-->
+                 <%cutstring({dr[zhaiyao]},250)%>
+                 <a href="<%linkurl("news_list",87)%>">[进入专题]</a>
+		</p>
+      <%/foreach%>
+		<div class="clear"></div>
+		<ul class="ul-list top60">
+
+        <%set DataTable ysnews=get_article_list("news", 0, 4, "status=0 and  category_id=87 and is_top=1 ")%>
+          <%foreach(DataRow dr in ysnews.Rows)%>
+          <li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},60)%><span><%datetostr({dr[add_time]},MM-dd)%></span></a></li>
+			<!--<li><a href="#">如何快乐地工作——给工作植入快乐元素...<span>11-14</span></a></li>
+			<li><a href="#">有感而发...<span>11-14</span></a></li>
+			<li><a href="#">换个角度看生活，你将获益匪浅...<span>11-14</span></a></li>
+			<li><a href="#">如何快乐地工作——给工作植入快乐元素...<span>11-14</span></a></li>
+			<li><a href="#">有感而发...<span>11-14</span></a></li>-->
+			<%/foreach%>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<!--end line-5-->
+
+<div class="line-6">
+	<div class="txt-1998"></div>
+	<div class="txt-2017"></div>
+	<div class="line-6-c">
+		
+		<h2 class="qc-t">振业汽车<a href="<%linkurl("news_list",113)%>">[进入专题]</a></h2>
+		<div class="clear"></div>
+		<div class="qc-left">
+			<p>
+				     <!--广东省缘善公益基金会是公益性的非营利机构，不是政府部门，不靠权力
+驱动；也不是经济体，更不能靠经济利益驱动。作为社会组织，本会将通过资助慈善公益项目及其服务，为社会建设尽力奉献，以卓有成效的工作争取党政部门和社会各界广泛关注和支持，努力在政府...-->
+			 <%set DataTable contentlist3=get_article_list("content", 0, 0, "status=0 and title='振业汽车'")%>
+        <%foreach(DataRow dr in contentlist3.Rows)%>
+    <%cutstring({dr[zhaiyao]},200)%><a href="<%linkurl("content",{dr[call_index]})%>"> [详情] </a>
+<%/foreach%>
+
+            
+            </p>
+            	<div class="qc-tab-c">
+				  <div class="qc-bt-left"></div>
+			      <div class="qc-bt-right"></div>
+			      <div class="qc-tab-cc">
+			      	   <%set DataTable zyqcp=get_article_list("photo", 0, 8, "status=0 and is_slide=1 and category_id=116")%>
+          <%foreach(DataRow dr in zyqcp.Rows)%>
+            <div class="qc-tab qc-tab1">
+					    <img src="{dr[img_url]}">
+				  </div>
+          <%/foreach%>
+			      	<!--  <div class="qc-tab qc-tab1">
+						
+					    <img src="img/qc-js1.jpg">
+				  </div>
+				  
+				  <div class="qc-tab qc-tab2">
+						
+					    <img src="img/qc-js2.jpg">
+				  </div>
+				  
+				   <div class="qc-tab qc-tab3">
+						
+					    <img src="img/qc-js3.jpg">
+				  </div>-->
+				  <!--end qc-tab3-->
+			      </div>
+				  
+				</div>
+			
+		</div>
+		<!--end qc-left-->
+		<div class="qc-right">
+			<div class="qc-tab-bt">
+				<ul>
+					<li class="qc-bt-active">汕头粤驰</li>
+					
+					<li>汕头粤特</li>
+					<li>汕头粤通</li>
+					
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="qc-right-c">
+				<div class="qc-right-tab qc-right-tab1">
+					  <%set DataTable yuechi=get_article_list("news", 0, 3, "status=0 and  category_id=117 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuechi.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+						  	<span>2017-12-18</span>
+						  </p>
+						  
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+				</div>
+				<!--end qc-right-tab1-->
+				<div class="qc-right-tab qc-right-tab2">
+						  <%set DataTable yuete=get_article_list("news", 0, 3, "status=0 and  category_id=118 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuete.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+				</div>
+				<!--end qc-right-tab2-->
+				<div class="qc-right-tab qc-right-tab3">
+						  <%set DataTable yuetong=get_article_list("news", 0, 3, "status=0 and  category_id=119 and is_top=1 ")%>
+          <%foreach(DataRow dr in yuetong.Rows)%>
+          	<div class="qc-right-box">
+						<a href="<%linkurl("news_show",{dr[id]})%>">
+						  <img src="{dr[img_url]}">
+						  <h3><%cutstring({dr[title]},40)%></h3>
+						  <p>
+						  	<%cutstring({dr[zhaiyao]},110)%>
+						  	<span>2017-12-18</span>
+						  </p>
+						   
+						  <div class="clear"></div>
+						</a>
+					</div>
+          <%/foreach%>
+				</div>
+				<!--end qc-right-tab3-->
+				
+			</div>
+		
+           <!--
+         <%set DataTable yslist=get_article_list("news", 0, 3, "status=0 and category_id=113 and is_top=1")%>
+          <%foreach(DataRow dr in yslist.Rows)%>
+          <div class="qc-right-box">
+				<a href="<%linkurl("news_show",{dr[id]})%>">
+				  <img src="{dr[img_url]}">
+				  <h3><%cutstring({dr[title]},45)%></h3>
+				  <p>
+				  	<%cutstring({dr[zhaiyao]},125)%>
+				  </p>
+				  <div class="clear"></div>
+				</a>
+			</div>
+            <%/foreach%>
+-->
+
+
+			<!--<div class="qc-right-box">
+				<a href="#">
+				  <img src="img/qc-ps1.jpg">
+				  <h3>生产信息化 助力福特演绎时尚百搭</h3>
+				  <p>
+				  	国内首款“百搭定制”车型——福特H5，9月28日正式上市，可提供都市版，精英型、豪华版3款车型，价格分别为9.88万元
+				  </p>
+				  <div class="clear"></div>
+				</a>
+			</div>
+			<div class="qc-right-box">
+				<a href="#">
+				  <img src="img/qc-ps1.jpg">
+				  <h3>生产信息化 助力福特演绎时尚百搭</h3>
+				  <p>
+				  	国内首款“百搭定制”车型——福特H5，9月28日正式上市，可提供都市版，精英型、豪华版3款车型，价格分别为9.88万元
+				  </p>
+				  <div class="clear"></div>
+				</a>
+			</div>
+			<div class="qc-right-box">
+				<a href="#">
+				  <img src="img/qc-ps1.jpg">
+				  <h3>生产信息化 助力福特演绎时尚百搭</h3>
+				  <p>
+				  	国内首款“百搭定制”车型——福特H5，9月28日正式上市，可提供都市版，精英型、豪华版3款车型，价格分别为9.88万元
+				  </p>
+				  <div class="clear"></div>
+				</a>
+			</div>-->
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--end line-6-->
+
+<div class="line-4 line-7">
+		<div class="line-4-c">
+			<h2 class="omc-h2 gp-h2">格林披治</h2>
+			<div class="line-4-left1 gp-left">
+				
+				<div class="video-box gp-video">
+						 <div class="video-box"  > 
+
+               <%set DataTable glpzsp=get_article_list("video", 0, 1, "status=0 and is_top=1 and category_id=29 ")%>
+      <%foreach(DataRow dr in glpzsp.Rows)%>
+		<video controls="controls" src="{dr[video_src]}" id="video_v3" width="570px" height="320px" poster="{dr[img_url]}"></video>
+	<%/foreach%>
+					<!--<img src="img/video-ps.jpg">-->
+             </div>
+				</div>
+			</div>
+			<div class="line-4-right gp-right">
+				
+				<p>
+	 <%set DataTable zyydh2=get_article_list("content", 0, 0, "status=0 and category_id=71")%>
+        <%foreach(DataRow dr in zyydh2.Rows)%>
+    <%cutstring({dr[zhaiyao]},300)%><a class="red-a" href="<%linkurl("content","glpz")%>"> [进入格林披治专题] </a>
+<%/foreach%> 
+				</p>
+                <%set DataTable glpztop=get_article_list("news", 0, 1, "status=0 and category_id=103 and is_slide=1")%>
+          <%foreach(DataRow dr in glpztop.Rows)%>
+				<div class="line-4-r-l">
+					<a href="<%linkurl("news_show",{dr[id]})%>">
+					  <img src="{dr[img_url]}">
+					  <P>
+					  	<%cutstring({dr[title]},25)%>
+					  </P>
+					</a>
+				</div>
+                <%/foreach%> 
+				<div class="line-4-r-r gpp-list">
+					<div class="gpp-tab-nv">
+						<ul>
+							<li>惠州格林披治</li>
+							<li>北京格林披治</li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="gpp-tab-c">
+					 <ul class="ul-list top18 gpptab gpptab1">
+           
+ <%set DataTable hzglpznews=get_article_list("news", 0, 4, "status=0 and category_id=114 and is_top=1")%>
+          <%foreach(DataRow dr in hzglpznews.Rows)%>
+<li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},50)%><span><%datetostr({dr[add_time]},MM-dd)%></span></a></li>
+ <%/foreach%> 
+						<!--<li><a href="#">1如何快乐地工作——给工作植入...<span>11-11</span></a></li>
+						<li><a href="#">有感而发...</a></li>
+						<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+						<li><a href="#">汕大毕业季 燃爆的毕业典礼...</a></li>
+						<li><a href="#">做雌雄同体，左右开弓的职场人...</a></li>-->
+						
+					</ul>
+					<!--end tab1-->
+					<ul class="ul-list top18 gpptab gpptab2">
+           <%set DataTable bjglpznews=get_article_list("news", 0, 4, "status=0 and category_id=115 and is_top=1")%>
+          <%foreach(DataRow dr in bjglpznews.Rows)%>
+<li><a href="<%linkurl("news_show",{dr[id]})%>"><%cutstring({dr[title]},50)%><span><%datetostr({dr[add_time]},MM-dd)%></span></a></li>
+ <%/foreach%> 
+        
+						<!--<li><a href="#">2如何快乐地工作——给工作植入...<span>11-11</span></a></li>
+						<li><a href="#">有感而发...</a></li>
+						<li><a href="#">换个角度看生活，你将获益匪浅...</a></li>
+						<li><a href="#">汕大毕业季 燃爆的毕业典礼...</a></li>
+						<li><a href="#">做雌雄同体，左右开弓的职场人...</a></li>-->
+						
+					</ul>
+					<!--end tab2-->
+					
+						
+					</div>
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!--end line7-->
+<div class="content-gray">
+    <div class="nianhui">
+    	   <h2 class="h-nh">振业年会</h2>
+    	  <%set DTcms.Model.article_category cmodel=get_category_model(99)%>
+<%if(cmodel!=null)%>
+	   <div class="nh-left">
+    	   	 <img src="{cmodel.img_url}">
+    	   	 <a href="{cmodel.link_url}"><%cutstring({cmodel.title},25)%></a>
+    	   </div>
+<%/if%>
+    	   <div class="nh-right">
+    	   	  <b>集团年会介绍:<a href="#">[进入专题]</a></b>
+    	   	  <p>
+              <%set DataTable nianhui=get_article_list("content", 0, 0, "status=0 and category_id=105")%>
+        <%foreach(DataRow dr in nianhui.Rows)%>
+ <!-- 自创业之初，每逢年终岁末之际，振业都要大张旗鼓地举办一次公司年会，以年会的方式展现振业的文化内涵在振业看来，公司年会不仅是一次简单的年底员工聚会，更是激扬士气、部署战略、制定目标、展示团队风采的机会。更是激扬士气、部署战略、制定目标、展示团队风采的机会。-->
+    	   	 <a  href="<%linkurl("content","zynh")%>">
+               <%cutstring({dr[zhaiyao]},270)%></a>
+               <%/foreach%>
+              </p>
+
+  <%set DTcms.Model.article_category cmodel1=get_category_model(98)%>
+<%if(cmodel1!=null)%>
+	   <div class="nh-box left0">
+    	   	 <img src="{cmodel1.img_url}">
+    	   	 <a href="{cmodel1.link_url}"><%cutstring({cmodel1.title},25)%></a>
+    	   </div>
+<%/if%>
+
+  <%set DTcms.Model.article_category cmodel2=get_category_model(97)%>
+<%if(cmodel2!=null)%>
+	   <div class="nh-box left">
+    	   	 <img src="{cmodel2.img_url}">
+    	   	 <a href="{cmodel2.link_url}"><%cutstring({cmodel2.title},25)%></a>
+    	   </div>
+<%/if%>
+
+  <%set DTcms.Model.article_category cmodel3=get_category_model(96)%>
+<%if(cmodel3!=null)%>
+	   <div class="nh-box left">
+    	   	 <img src="{cmodel3.img_url}">
+    	   	 <a href="{cmodel3.link_url}"><%cutstring({cmodel3.title},25)%></a>
+    	   </div>
+<%/if%>
+
+
+    	   	 <!-- <div class="nh-box left0">
+    	   	  	
+    	   	  	  <img src="img/nh-img2.jpg">
+    	   	  	  <a href="#">2016年会专题</a>
+    	   	  </div>
+    	   	   <div class="nh-box">
+    	   	   
+    	   	  	  <img src="img/nh-img2.jpg">
+    	   	  	  <a href="#">2016年会专题</a>
+    	   	  </div>
+    	   	   <div class="nh-box">
+    	   	  
+    	   	  	  <img src="img/nh-img2.jpg">
+    	   	  	  <a href="#">2016年会专题</a>
+    	   	  </div>--!>
+    	   	  <div class="clear"></div>
+    	   </div>
+    	   <div class="clear"></div>
+    </div>
+    <!--end nianhui-->
+    <div class="nianhui">
+    	   <h2 class="h-nh h-ydh">振业运动会</h2>
+    	   <div class="nh-left">
+    	   	 <img src="img/ydh-ps1.jpg">
+    	   	 <a href="#">2016振业运动会专题</a>
+    	   </div>
+    	   <div class="nh-right">
+    	   	  <b>振业运动会介绍:<a href="#">[进入专题]</a></b>
+    	   	  <p>
+             <!-- 年终会议自创业之初，每逢年终岁末之际，振业都要大张旗鼓地举办一次公司年会，以年会的方式展现振业的文化内涵。在振业看来，公司年会不仅是一次简单的年底员工聚会，更是激扬士气、部署战略、制定目标、展示团队风采的机会。年会主题每一年的市场打拼中，振业都经历了竞争、挫折，也都取得不…-->
+             <%set DataTable zyydh=get_article_list("content", 0, 0, "status=0 and category_id=73")%>
+        <%foreach(DataRow dr in zyydh.Rows)%>
+         <a  href="<%linkurl("content","ydh")%>">
+               <%cutstring({dr[zhaiyao]},270)%></a>
+               <%/foreach%> </p>
+    	   	  <div class="nh-box left0">
+    	   	  	
+    	   	  	  <img src="img/ydh-ps2.jpg">
+    	   	  	  <p>男子篮球赛</p>
+    	   	  </div>
+    	   	   <div class="nh-box">
+    	   	   
+    	   	  	  <img src="img/ydh-ps3.jpg">
+    	   	  	  <p>男子拔河比赛</p>
+    	   	  </div>
+    	   	   <div class="nh-box">
+    	   	  
+    	   	  	  <img src="img/ydh-ps4.jpg">
+    	   	  	  <p>马拉松比赛</p>
+    	   	  </div>
+    	   	  <div class="clear"></div>
+    	   </div>
+    	   <div class="clear"></div>
+    </div>
+    <!--end nianhui-->
+  
+</div>
+
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</body>
+
+  <script type="text/javascript" charset="utf-8">
+
+			/**
+
+			 * parallelRoll 左右无缝滚动
+
+			 * boxName : 最外层盒子类名
+
+			 * tagName : 滚动标签元素
+
+			 * time : 滚动间隔时间
+
+			 * direction : 滚动方向  right-->向右    left-->向左
+
+			 * visual : 可视数
+
+			 * prev : 上一张
+
+			 * next : 下一张
+
+			
+
+			 * */
+
+			(function($){
+
+				$.fn.parallelRoll = function(options){
+
+					var opts = $.extend({}, $.fn.parallelRoll.defaults, options);
+
+					var _this = this;					
+
+					var l = _this.find(opts.tagName).length;
+
+					var autoRollTimer;
+
+					var flag = true; // 防止用户快速多次点击上下按钮
+
+					var arr = new Array();
+
+					/**
+
+					 * 如果当  (可视个数+滚动个数 >滚动元素个数)  时  为不出现空白停顿   将滚动元素再赋值一次
+
+					 * 同时赋值以后的滚动元素个数是之前的两倍  2 * l.
+
+					 * */
+
+					if(opts.amount + opts.visual > l){
+
+						_this[0].innerHTML += _this[0].innerHTML;
+
+						l = 2 * l;
+
+					}else{
+
+						l = l;
+
+					}					
+
+					var w = $(opts.tagName).outerWidth(true); //计算元素的宽度  包括补白+边框
+
+					_this.css({width: (l * w) + 'px'}); // 设置滚动层盒子的宽度
+
+					return this.each(function(){
+
+						_this.closest('.'+opts.boxName).hover(function(){							
+
+							clearInterval(autoRollTimer);
+
+						},function(){							
+
+							switch (opts.direction){
+
+								case 'left':
+
+									autoRollTimer = setInterval(function(){
+
+										left();
+
+									},opts.time);
+									clearInterval(autoRollTimer);
+
+								break;
+
+								case 'right':
+
+									autoRollTimer = setInterval(function(){
+
+										right();
+
+									},opts.time);
+									clearInterval(autoRollTimer);
+
+								break;
+
+								default : 
+
+									alert('参数错误！');
+
+								break;
+
+							}							
+
+						}).trigger('mouseleave');
+              
+						$('.'+opts.prev).on('click',function(){
+                            clearInterval(autoRollTimer);
+							flag ? left() : "";
+
+						});
+
+						$('.'+opts.next).on('click',function(){
+                             clearInterval(autoRollTimer);
+							flag ? right() : "";
+
+						});
+						
+
+					});					
+                    
+					function right(){
+
+						flag = false;
+
+						_this.animate({marginLeft : -(w*opts.amount)},500,function(){
+
+							_this.find(opts.tagName).slice(0,opts.amount).appendTo(_this);
+
+							_this.css({marginLeft:0});
+
+							flag = true;
+
+						});
+
+					};
+
+					function left(){
+
+						flag = false;
+
+						arr = _this.find(opts.tagName).slice(-opts.amount);										
+
+						for(var i = 0; i<opts.amount; i++){
+
+							$(arr[i]).css({marginLeft : -w*(i+1)}).prependTo(_this);
+
+						}										
+
+						_this.animate({marginLeft : w*opts.amount},500,function(){
+
+							_this.find(opts.tagName).removeAttr('style');
+
+							_this.css({marginLeft:0});
+
+							flag = true;
+
+						});
+
+					};
+
+				};
+
+				//插件默认选项
+
+			    $.fn.parallelRoll.defaults = {
+
+			    	boxName : 'box',
+
+			        tagName : 'dd',
+
+			        time : 3000,  // 
+
+			        direction : 'left', // 滚动方向
+
+			        visual : 7 , //可视数
+
+			        prev : 'prev',
+
+			        next : 'next',
+
+			        amount : 1   // 滚动数  默认是1
+
+			    };
+
+			})(jQuery);
+
+			
+
+			$(document).ready(function(){
+
+				$("#roll").parallelRoll({
+
+					amount : 2
+
+				});				
+
+			});
+
+			
+
+		</script>
+<script type="text/javascript">
+   	$(function(){
+   		var qclength=$(".qc-tab").length;
+
+   		var qcnum=0;
+   		$(".qc-tab-bt li").mouseover(function(){
+   			$(".qc-tab-bt li").removeClass("qc-bt-active");
+   			$(this).addClass("qc-bt-active");
+   			qcnum=$(this).index()+1;
+   			
+   		$(".qc-right-tab").hide();
+   			$(".qc-right-tab"+qcnum).fadeIn(500);
+   		})
+   		var qccurrent=0;
+   		$(".qc-bt-left").click(function(){
+   			qccurrent++;
+   			if(qccurrent>=qclength){
+   				qccurrent=0;
+   			}
+   			$(".qc-tab-cc").animate({"left":-513*qccurrent},500);
+   		})
+   		$(".qc-bt-right").click(function(){
+   			qccurrent--;
+   			if(qccurrent<0){
+   				qccurrent=qclength-1;
+   			}
+   			$(".qc-tab-cc").animate({"left":-513*qccurrent},500);
+   		})
+   	})
+   	
+   </script>
+</html>
