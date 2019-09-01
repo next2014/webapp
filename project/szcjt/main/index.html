@@ -70,7 +70,7 @@
       <%foreach(DataRow dr in jtxc.Rows)%>
 
 	   	   <div class="zy-video">
-	   	   	  <h2 class="zy-h2"><span>振业宣传片</span><a class="h2-more" href="<%linkurl("content","about")%>">[&nbsp;图文介绍&nbsp;]</a></h2>
+	   	   	  <h2 class="zy-h2"><span>狮子城宣传片</span><a class="h2-more" href="<%linkurl("content","about")%>">[&nbsp;图文介绍&nbsp;]</a></h2>
 			   <div id="video" style="width:528px;height:340px;"></div>
 		 
 	   	   </div><%/foreach%>
@@ -297,136 +297,6 @@
 	   	   	   </div>
 	   	   	   <!--end tab2-->
 	   	   	   
-	   	   	   <div class="yw-tab-cc yw-tab4">
-	   	   	   	   <div class="qc-left">
-			<p>
-				    
-			 
-             <%set DataTable contentlist3=get_article_list("content", 0, 1, "status=0 and title='振业汽车'")%>
-        <%foreach(DataRow dr in contentlist3.Rows)%>
-        <%cutstring({dr[zhaiyao]},190)%><a href="<%linkurl("content",{dr[call_index]})%>">[进入专题]</a>
-         <%/foreach%>
-
-            
-            </p>
-            	<div class="qc-tab-c">
-				  <div class="qc-bt-left"></div>
-			      <div class="qc-bt-right"></div>
-			      <div class="qc-tab-cc">
-			      	  
-        
-	                  <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss1.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss2.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss3.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss4.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss5.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss6.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss7.jpg">
-				     </div>
-				     <div class="qc-tab qc-tab1">
-						    <img src="img/qc-pss8.jpg">
-				     </div>
-         
-			      	
-			      </div>
-				  
-				</div>
-			
-		</div>
-	   	   	       <div class="qc-right">
-			<div class="qc-tab-bt">
-				<ul>
-					<li class="qc-bt-active">汕头粤驰</li>
-					
-					<li class="">汕头粤特</li>
-					<li class="">汕头粤通</li>
-					
-					
-				</ul>
-				<div class="clear"></div>
-			</div>
-			<div class="qc-right-c">
-				<div class="qc-right-tab qc-right-tab1" style="display: block;">
-					  <div class="qc-right-tab qc-right-tab1">
-			  <%set DataTable yuechi=get_article_list("news", 0, 3, "status=0 and  category_id=117 and is_red=1 ")%>
-          <%foreach(DataRow dr in yuechi.Rows)%>
-          	<div class="qc-right-box">
-						<a href="<%linkurl("news_show",{dr[id]})%>">
-						  <img src="{dr[img_url]}">
-						  <h3><%cutstring({dr[title]},40)%></h3>
-						  <p>
-						  	<%cutstring({dr[zhaiyao]},110)%>
-                            <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
-						  </p>
-						  <div class="clear"></div>
-						</a>
-					</div>
-          <%/foreach%>
-				</div>
-
-         
-          
-				</div>
-				<!--end qc-right-tab1-->
-				<div class="qc-right-tab qc-right-tab2" style="display: none;">
-			  <%set DataTable yuete=get_article_list("news", 0, 3, "status=0 and  category_id=118 and is_red=1 ")%>
-          <%foreach(DataRow dr in yuete.Rows)%>
-          	<div class="qc-right-box">
-						<a href="<%linkurl("news_show",{dr[id]})%>">
-						  <img src="{dr[img_url]}">
-						  <h3><%cutstring({dr[title]},40)%></h3>
-						  <p>
-						  	<%cutstring({dr[zhaiyao]},110)%>
-                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
-						  </p>
-						  <div class="clear"></div>
-						</a>
-					</div>
-          <%/foreach%>
-
-          	
-          
-				</div>
-				<!--end qc-right-tab2-->
-				<div class="qc-right-tab qc-right-tab3" style="display: none;">
-						    <%set DataTable yuetong=get_article_list("news", 0, 3, "status=0 and  category_id=119 and is_red=1 ")%>
-          <%foreach(DataRow dr in yuetong.Rows)%>
-          	<div class="qc-right-box">
-						<a href="<%linkurl("news_show",{dr[id]})%>">
-						  <img src="{dr[img_url]}">
-						  <h3><%cutstring({dr[title]},40)%></h3>
-						  <p>
-						  	<%cutstring({dr[zhaiyao]},110)%>
-                              <span><%datetostr({dr[add_time]},yyyy-MM-dd)%></span>
-						  </p>
-						  <div class="clear"></div>
-						</a>
-					</div>
-          <%/foreach%>
-
-          
-          
-				</div>
-				<!--end qc-right-tab3-->
-				
-			</div>
-		
-      </div>
-                   <div class="clear"></div>
-	   	   	   </div>
 	   	   	   <!--end tab3-->	   	   	   
 	   	   	   
 	   	   </div>
