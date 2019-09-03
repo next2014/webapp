@@ -230,7 +230,8 @@ dd {
 }
 a {
     text-decoration:none;
-    color:#62a8ea;
+    /* color:#62a8ea; */
+    color:#666666;
     background-color:transparent;
     -webkit-text-decoration-skip:objects
 }
@@ -239,7 +240,8 @@ a:active, a:hover {
 }
 a:focus, a:hover {
     text-decoration:underline;
-    color:#89bceb
+    /* color:#89bceb */
+    color:#dddddd;
 }
 a:focus {
     outline:5px auto -webkit-focus-ring-color;

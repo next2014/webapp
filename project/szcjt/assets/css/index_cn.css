@@ -115,14 +115,14 @@
     display:none
 }
 .slick-loading .slick-list {
-    background:#fff url('../../../public/ui/v2/static/plugin/slick/./ajax-loader.gif') center center no-repeat
+    background:#fff url('../public/ui/v2/static/plugin/slick/./ajax-loader.gif') center center no-repeat
 }
 @font-face {
     font-family:'slick';
     font-weight:normal;
     font-style:normal;
-    src:url('../../../public/ui/v2/static/plugin/slick/./fonts/slick.eot');
-    src:url('../../../public/ui/v2/static/plugin/slick/./fonts/slick.eot?#iefix') format('embedded-opentype'), url('../../../public/ui/v2/static/plugin/slick/./fonts/slick.woff') format('woff'), url('../../../public/ui/v2/static/plugin/slick/./fonts/slick.ttf') format('truetype'), url('../../../public/ui/v2/static/plugin/slick/./fonts/slick.svg#slick') format('svg')
+    src:url('../public/ui/v2/static/plugin/slick/./fonts/slick.eot');
+    src:url('../public/ui/v2/static/plugin/slick/./fonts/slick.eot?#iefix') format('embedded-opentype'), url('../public/ui/v2/static/plugin/slick/./fonts/slick.woff') format('woff'), url('../public/ui/v2/static/plugin/slick/./fonts/slick.ttf') format('truetype'), url('../public/ui/v2/static/plugin/slick/./fonts/slick.svg#slick') format('svg')
 }
 .slick-prev, .slick-next {
     font-size:0;
@@ -2380,7 +2380,6 @@ ul, li {
 }
 .head_nav_met_11_5_1-header {
     background-color:#ffffff;
-    background-color:
 }
 .head_nav_met_11_5_1-header .logo-box {
     height:60px;
@@ -2489,7 +2488,6 @@ body.met-navfixed {
     box-shadow:none;
     border-radius:0;
     background-color:#ffffff;
-    background-color:;
     z-index:1601
 }
 .head_nav_met_11_5_1 .met-head-user {
@@ -2506,7 +2504,6 @@ body.met-navfixed {
 }
 .head_nav_met_11_5_1 .nav-item .nav-link {
     color:#333333;
-    color:;
     overflow:visible;
     -webkit-transition:all .25s ease-out 0ms;
     transition:all .25s ease-out 0ms;
@@ -2562,7 +2559,6 @@ body.met-navfixed {
 .head_nav_met_11_5_1 #met-head-user-collapse .btn-primary {
     font-size:16px;
     color:#333333;
-    color:;
     background-color:transparent;
     border:0;
     padding:0 10px;
@@ -2585,7 +2581,6 @@ body.met-navfixed {
     top:-2px;
     line-height:60px;
     color:#333333;
-    color:;
     background-color:transparent;
     border:0;
     padding:0 10px;
@@ -2635,7 +2630,6 @@ body.met-navfixed {
 }
 .head_nav_met_11_5_1 .met-langlist .btn {
     color:#333333;
-    color:;
     border:0;
     padding:0 15px;
     height:60px;
@@ -2757,8 +2751,6 @@ body.met-navfixed {
     body.met-navfixed {
         padding-top:120px
     }
-    .head_nav_met_11_5_1-header {
-    }
     .head_nav_met_11_5_1-header .row {
         padding:0 15px
     }
@@ -2783,7 +2775,6 @@ body.met-navfixed {
         padding:8px;
         background:transparent;
         color:#333333;
-        color:;
         margin-top:13px
     }
     .head_nav_met_11_5_1-header .search-index {
@@ -2854,15 +2845,12 @@ body.met-navfixed {
     }
     .head_nav_met_11_5_1 .navbar-toggler .hamburger-bar {
         background:#333333;
-        background:
     }
     .head_nav_met_11_5_1 .navbar-toggler:before {
         background:#333333;
-        background:
     }
     .head_nav_met_11_5_1 .navbar-toggler:after {
         background:#333333;
-        background:
     }
     .head_nav_met_11_5_1 .met-head-user-toggler {
         margin-right:15px !important
@@ -2874,7 +2862,6 @@ body.met-navfixed {
         background:#fff;
         border-top:3px solid;
         border-color:#cc3333;
-        border-color:#cc3333
     }
     .head_nav_met_11_5_1 .dropdown-item .dropdown-menu {
         display:block
@@ -2955,7 +2942,6 @@ body.met-navfixed {
     z-index:1;
     position:absolute;
     background:#cc3333;
-    background:;
     transition:opacity 0.5s ease-out
 }
 .banner_met_11_5_2 .slick-arrow:before {
@@ -2988,7 +2974,6 @@ body.met-navfixed {
     width:10px;
     height:10px;
     background:#cc3333;
-    background:;
     opacity:.4;
     border-radius:100%;
     transition:all 0.5s ease-out;
@@ -3053,7 +3038,6 @@ body.met-navfixed {
     width:81px;
     height:4px;
     background:#cc3333;
-    background:;
     display:block;
     margin:0 auto;
     margin-bottom:36px
@@ -3144,7 +3128,6 @@ body.met-navfixed {
 }
 .banner_met_11_5_2-ny {
     background-color:#ffffff;
-    background-color:;
     height:120px
 }
 .banner_met_11_5_2-ny h1 {
@@ -3153,10 +3136,9 @@ body.met-navfixed {
     font-size:35px;
     text-shadow:none;
     color:#333333;
-    color:
 }
 .foot_nav_met_11_2_8 {
-    padding:70px 0 32px;
+    padding:32px 0 32px;
     background-color:#005e9a;
     border-color:#f0f2f5
 }
@@ -3174,6 +3156,7 @@ body.met-navfixed {
     margin-bottom:20px
 }
 .foot_nav_met_11_2_8 .list h4 {
+    text-align: left;
     font-size:14px;
     margin:0px;
     text-shadow:none;
@@ -3194,11 +3177,12 @@ body.met-navfixed {
     display:none
 }
 .foot_nav_met_11_2_8 .list ul li {
-    overflow:hidden;
+    /* overflow:hidden; */
     text-overflow:ellipsis;
     white-space:nowrap;
     position:relative;
-    text-align:center;
+    /* text-align:center; */
+    text-align: left;
     padding:0;
     margin-bottom:3px;
     color:#666666;
@@ -3245,7 +3229,7 @@ body.met-navfixed {
     cursor:pointer;
     font-size:14px;
     padding:0 0 0 26px;
-    margin-top:8px;
+    /* margin-top:8px; */
     text-align:left;
     color:#cc3333;
     color:;
@@ -3912,7 +3896,9 @@ footer .met-langlist {
     line-height:38px;
     position:relative;
     padding:0 15px;
-    text-align:left
+    text-align:left;
+    display: flex;
+    justify-content: space-between;
 }
 .service_list_met_11_5_7 .single-list li a {
     height:100%;
@@ -3920,9 +3906,8 @@ footer .met-langlist {
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
-    display:block;
+    /* display:block; */
     color:#333333;
-    color:;
     transition:color .5s ease-out
 }
 .service_list_met_11_5_7 .single-list li a:hover {
@@ -4084,18 +4069,16 @@ footer .met-langlist {
     border-top-right-radius:2px
 }
 .team_list_met_11_4_41 .item .content {
-    padding:0px 15px 25px 30px
+    padding:0px 15px 25px 15px
 }
 .team_list_met_11_4_41 .item .content .title {
     font-size:20px;
     color:#333333;
-    color:;
     font-weight:600;
     margin-top:15px
 }
 .team_list_met_11_4_41 .item .content .keywords {
     color:#666666;
-    color:;
     font-size:24px;
     line-height:24px;
     margin-top:15px;
@@ -4110,12 +4093,10 @@ footer .met-langlist {
     font-size:13px;
     overflow:hidden;
     color:#666666;
-    color:;
     margin-top:15px
 }
 .team_list_met_11_4_41 .more {
     color:#cc3333;
-    color:;
     font-size:14px
 }
 .team_list_met_11_4_41 .more:hover {

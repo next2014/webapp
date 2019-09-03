@@ -2,26 +2,30 @@
 layout: default
 title: 狮子城集团
 ---
+<!-- LOGO及导航 -->
 {% include header.html %}
 
-<!-- 广告图 -->
+<!-- 大轮播广告图 -->
 {% include banner.html %}
+<!-- {% include swiper.html %} -->
 
 <!-- 新闻动态 -->
-<section class="notice_list_met_11_1_4 text-xs-left" m-id="4">
+<section class="notice_list_met_11_1_4 text-xs-left" m-id="4" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
     <div class="container">
         <div class="notice clearfix">
             <span class="notice-title">新闻动态：</span>
             <div class="notice-swiper swiper-container-vertical">
-                <ul class="notice-ul" style="transform: translate3d(0px, -190px, 0px); transition-duration: 0ms;">
+                <ul class="notice-ul">
                     <li class="notice-li swiper-slide-duplicate" data-swiper-slide-index="4" style="height: 38px;">
-                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span class="time">2018-03-19</span></a>
+                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span
+                                class="time">2018-03-19</span></a>
                     </li>
                     <li class="notice-li" data-swiper-slide-index="0" style="height: 38px;">
                         <a href="" title="" target="_self">以开放型经济新体制推动经济持续健康发展 <span class="time">2019-03-08</span></a>
                     </li>
                     <li class="notice-li" data-swiper-slide-index="1" style="height: 38px;">
-                        <a href="" title="" target="_self">环保部：14省市将在今年底前完成生态红线划定 <span class="time">2019-03-08</span></a>
+                        <a href="" title="" target="_self">环保部：14省市将在今年底前完成生态红线划定 <span
+                                class="time">2019-03-08</span></a>
                     </li>
                     <li class="notice-li" data-swiper-slide-index="2" style="height: 38px;">
                         <a href="" title="" target="_self">两会访谈丨邹磊：创新为了电力绿色消费 <span class="time">2018-03-19</span></a>
@@ -30,9 +34,11 @@ title: 狮子城集团
                         <a href="" title="" target="_self">书记会见镇江市市委书记惠建林一行 <span class="time">2018-03-19</span></a>
                     </li>
                     <li class="notice-li swiper-slide-active" data-swiper-slide-index="4" style="height: 38px;">
-                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span class="time">2018-03-19</span></a>
+                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span
+                                class="time">2018-03-19</span></a>
                     </li>
-                    <li class="notice-li swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="height: 38px;">
+                    <li class="notice-li swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0"
+                        style="height: 38px;">
                         <a href="" title="" target="_self">以开放型经济新体制推动经济持续健康发展 <span class="time">2019-03-08</span></a>
                     </li>
                 </ul>
@@ -44,15 +50,12 @@ title: 狮子城集团
     </div>
 </section>
 
-<!--  -->
-<section class="news_list_met_11_5_5  text-xs-left ulstyle" m-id="5">
+<!-- 集团新闻  -->
+<section class="news_list_met_11_5_5  text-xs-left ulstyle">
     <div class="container">
         <!-- 左侧信息列表 -->
         <div class="left-news col-lg-7 clearfix">
-
-
             {% include left_banner.html %}
-
             <!-- 集团新闻 -->
             <div class="col-lg-6 text-news rtn">
                 <div class="head">
@@ -85,6 +88,7 @@ title: 狮子城集团
             </div>
         </div>
         <!-- 左侧信息列表 -->
+
         <!-- 右侧信息列表 -->
         <div class="right-news text-news col-lg-5">
             <div class="head">
@@ -118,44 +122,44 @@ title: 狮子城集团
     </div>
 </section>
 
-<section class="service_list_met_11_5_7 text-xs-center" m-id="7" data-eqh="300">
+<!-- 所有官网内容 -->
+<section class="service_list_met_11_5_7 text-xs-center">
     <div class="container">
         <div class="col-lg-8 service-list">
-            <div class="nav-tabs-vertical nav-tabs-div" data-plugin="tabs">
+            <!-- pc端显示效果 -->
+            <div class="nav-tabs-vertical nav-tabs-div " data-plugin="tabs">
+            <!-- 移动端显示效果 -->
+            <!-- <div class="nav-tabs-div nav-tabs-horizontal" data-plugin="tabs"> -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" data-toggle="tab" href=""
-                            role="tab">
-                            <i class="icon icon fa-cogs" aria-hidden="true"></i>缘善公益 </a>
+                        <a class="nav-link active" data-toggle="tab" href="" role="tab">
+                            <i class="fa fa-cogs" aria-hidden="true"></i> 缘善公益</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-toggle="tab" href=""
-                            role="tab">
-                            <i class="icon icon fa-truck" aria-hidden="true"></i>格林披志 </a>
+                        <a class="nav-link" data-toggle="tab" href="" role="tab">
+                            <i class="fa fa-truck" aria-hidden="true"></i> 格林披治</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-toggle="tab" href=""
-                            role="tab">
-                            <i class="icon icon fa-money" aria-hidden="true"></i>狮子城 </a>
+                        <a class="nav-link" data-toggle="tab" href="" role="tab">
+                            <i class="fa fa-money" aria-hidden="true"></i> 狮子城</a>
                     </li>
-
                 </ul>
                 <div class="tab-content p-y-10">
                     <div class="tab-pane active" id="tab-9" role="tabpanel">
                         <p class="desc">
                             2013年9月，集团总部董事局主席吴晓翔先生（中国狮子城集团董事长、中华缘善基金会主席、香港华商慈善基金会主席）以个人名义发起并捐献人民币208万元整，成立了“广东省缘善公益基金会”同年10月经广东省民…
-                            <a href="" title="" class="btn btn-block btn-more" target="_self">查看更多</a>
+                            <a href="">查看更多</a>
                         </p>
                         <div class="tab-detail clearfix">
                             <div class="col-lg-5">
-                                <img data-original="../upload/201803/1521445582.png"
-                                    alt="缘善公益" class="img-fluid" data-lazyload="true"
-                                    src="../assets/img/1521445582.png" style="display: block;">
+                                <img data-original="../upload/201803/1521445582.png" alt="缘善公益" class="img-fluid"
+                                    data-lazyload="true" src="../assets/img/1521445582.png" style="display: block;">
                             </div>
                             <div class="col-lg-7">
-                                <ul class="blocks-3 column-3">
-                                    <li>
-                                        <a href="">缘善公益潮南东溪小学助学见面会昨日圆满落幕！[ 2018-07-02 ]</a>
+                                <!-- <ul class="blocks-3 column-3"> -->
+                                <ul>
+                                    <li style="width:100%;text-align: left">
+                                        <a href=""><span style="width: 60%;overflow: hidden;">缘善公益潮南东溪小学助学见面会昨日圆满落幕！</span>[2018-07-02 ]</a>
                                     </li>
                                 </ul>
                             </div>
@@ -164,17 +168,18 @@ title: 狮子城集团
                     <div class="tab-pane" id="tab-10" role="tabpanel">
                         <p class="desc">
                             随着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头。格林披治以体育文化为导向，以双…
-                            <a href="" title="" class="btn btn-block btn-more" target="_self">查看更多</a>
+                            <a href="">查看更多</a>
                         </p>
                         <div class="tab-detail clearfix">
                             <div class="col-lg-5">
-                                <img data-original="../upload/201803/1521445887.jpg"
-                                    alt="格林披志" class="img-fluid imgloading" data-lazyload="true"
+                                <img data-original="../upload/201803/1521445887.jpg" alt="格林披志"
+                                    class="img-fluid imgloading" data-lazyload="true"
                                     src="../assets/img/1521445887.jpg">
                             </div>
                             <div class="col-lg-7">
-                                <ul class="blocks-3 column-3">
-                                    <li>
+                                <!-- <ul class="blocks-3 column-3"> -->
+                                <ul>
+                                    <li style="width:100%;text-align: left">
                                         <a href="">重磅！惠州要变成新“深圳”？还有这些消息，事关每个人...[ 2018-04-24 ]</a>
                                     </li>
                                 </ul>
@@ -184,16 +189,16 @@ title: 狮子城集团
                     <div class="tab-pane" id="tab-11" role="tabpanel">
                         <p class="desc">
                             狮子城文化创意园由振业集团投资并创立，项目主体公司深圳狮子城文化股份有限公司于2015年在全国中小股份转让系统挂牌上市，证券简称：狮子城，证券代码：430173。狮子城总部设在深圳，进行联盟合作招商和品…
-                            <a href="" title="" class="btn btn-block btn-more" target="_self">查看更多</a>
+                            <a href="">查看更多</a>
                         </p>
                         <div class="tab-detail clearfix">
                             <div class="col-lg-5">
-                                <img data-original="../upload/201803/1521446268.png"
-                                    alt="狮子城" class="img-fluid imgloading" data-lazyload="true"
-                                    src="../assets/img/loading.gif">
+                                <img data-original="../upload/201803/1521446268.png" alt="狮子城"
+                                    class="img-fluid imgloading" data-lazyload="true" src="../assets/img/loading.gif">
                             </div>
                             <div class="col-lg-7">
-                                <ul class="blocks-3 column-3">
+                                <!-- <ul class="blocks-3 column-3" -->
+                                <ul>
                                     <li>
                                         <a href="" title="">金融服务</a>
                                     </li>
@@ -214,111 +219,73 @@ title: 狮子城集团
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 single-list">
             <div class="right-list">
                 <div class="head">
-                    <h2>全球化产业</h2>
-                    <a href="" title="全球化产业">更多 <i class="fa fa-angle-right"></i></a>
+                    <h2>集团招聘</h2>
+                    <a href="">更多 <i class="fa fa-angle-right"></i></a>
                 </div>
                 <ul class="content-list">
-                    <li>
-                        <a href="" title="" target="_self">
-                            以开放型经济新体制推动经济持续健康发展 <span>03-08</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            环保部：14省市将在今年底前完成生态红线划定 <span>03-08</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            两会访谈丨邹磊：创新为了电力绿色消费 <span>03-19</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            书记会见镇江市市委书记惠建林一行 <span>03-19</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            集团召开2017年瘦身健体提质增效专题工作会 <span>03-19</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            总经理参加国际标准化组织铸造机械技术委员会（ISO/TC306）成立大会 <span>03-19</span>
-                        </a>
-                    </li>
+                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
+                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
+                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
                 </ul>
             </div>
         </div>
-        
     </div>
 </section>
 
-<section class="team_list_met_11_4_41 " m-id="41">
+<!-- 所有官网介绍 -->
+<section class="team_list_met_11_4_41">
     <div class="team-bg"></div>
     <div class="container ">
         <ul class="list p-0 m-b-0 slick-initialized slick-slider">
             <div aria-live="polite" class="slick-list draggable">
-                <div class="slick-track" role="listbox"
-                    style="opacity: 1; width: 1284px; transform: translate3d(0px, 0px, 0px);">
-                    <li class="item p-x-5 slick-slide slick-current slick-active" style="width: 428px;"
-                        data-slick-index="0" aria-hidden="false" tabindex="-1" role="option"
-                        aria-describedby="slick-slide10">
+                <div class="slick-track" role="listbox" style="opacity: 1; width: 1284px; transform: translate3d(0px, 0px, 0px);">
+                    <li class="item p-x-5 slick-slide slick-current slick-active" style="width: 428px;" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10">
                         <div class="">
                             <a href="" title="" class="head" tabindex="0">
-                                <img src="../assets/img/1521445582(1).png" alt="缘善公益">
+                                <img src="../assets/img/ys.jpg" alt="缘善公益">
                             </a>
                             <div class="content">
                                 <p class="title">缘善公益</p>
                                 <h3 class="keywords"></h3>
                                 <p class="desc">
-                                    机械装备研发与制造是国机集团重点发展的主体业务。深厚的行业背景和丰富的行业资源，使国机集团拥有在机械行业主要领域的科技创新、产品研发和制造能力，许多技术、装备和产品填补国内空白、替代进口，成为中国机械
-                                </p>
-                                <a href="" class="more"
-                                    tabindex="0">
+                                    2013年9月，集团总部董事局主席吴晓翔先生（中国狮子城集团董事长、中华缘善基金会主席、香港华商慈善基金会主席）以个人名义发起并捐献人民币208万元整，成立了“广东省缘善公益基金会”同年10月经广东省民…</p>
+                                <a href="" class="more" tabindex="0">
                                     <span>了解详情</span>
                                 </a>
                             </div>
                         </div>
                     </li>
-                    <li class="item p-x-5 slick-slide slick-active" style="width: 428px;" data-slick-index="1"
-                        aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11">
+                    <li class="item p-x-5 slick-slide slick-active" style="width: 428px;" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11">
                         <div class="">
                             <a href="" title="" class="head" tabindex="0">
-                                <img src="../assets/img/1521445887.jpg" alt="格林披志">
+                                <img src="../assets/img/gl.jpg" alt="格林披治">
                             </a>
                             <div class="content">
-                                <p class="title">格林披志</p>
+                                <p class="title">格林披治</p>
                                 <h3 class="keywords"></h3>
                                 <p class="desc">
-                                    作为全球极富竞争力的国际工程承包商，国机集团面向全球市场提供以设备成套、EPC、BOT、BOO等为主要方式的工程建设服务，内容涵盖工程项目开发及投融资，工程规划、勘察、设计、施工，设备成套、运维管理等
+                                    随着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头。格林披治以体育文化为导向，以双…
                                 </p>
-                                <a href="" class="more"
-                                    tabindex="0">
+                                <a href="" class="more" tabindex="0">
                                     <span>了解详情</span>
                                 </a>
                             </div>
                         </div>
                     </li>
-                    <li class="item p-x-5 slick-slide slick-active" style="width: 428px;" data-slick-index="2"
-                        aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide12">
+                    <li class="item p-x-5 slick-slide slick-active" style="width: 428px;" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide12">
                         <div class="">
                             <a href="" title="" class="head" tabindex="0">
-                                <img src="../assets/img/1521446268.png" alt="狮子城">
+                                <img src="../assets/img/sz.jpg" alt="狮子城">
                             </a>
                             <div class="content">
                                 <p class="title">狮子城</p>
                                 <h3 class="keywords"></h3>
                                 <p class="desc">
-                                    为成员企业提供投融资解决方案和面向资本市场的融资产品，并且汇聚整合了完善的生产链条和多元的渠道资源,达成战略和商业模式设计，促进集团优化资源配置、节约财务成本、保障资金安全、提升运行效率。
-                                </p>
-                                <a href="" class="more"
-                                    tabindex="0">
+                                    狮子城文化创意园由狮子城集团投资并创立，项目主体公司深圳狮子城文化股份有限公司于2015年在全国中小股份转让系统挂牌上市，证券简称：狮子城，证券代码：430173。狮子城总部设在深圳，进行联盟合作招商和品…</p>
+                                <a href="" class="more" tabindex="0">
                                     <span>了解详情</span>
                                 </a>
                             </div>
@@ -330,198 +297,12 @@ title: 狮子城集团
     </div>
 </section>
 
-<div class="foot_nav_met_11_2_8 border-top1 text-xs-center" m-id="8" m-type="foot_nav">
-    <div class="container">
-        <div class="col-lg-8 col-md-12  nav-list">
-            <div class="col-md-2 col-sm-12  list">
-                <h4 class="m-t-0">
-                    <a href="" title="" class="btn-collapse" target="_self">制造设备</a>
-                    <i class="fa fa-chevron-down"></i>
-                </h4>
-                <ul class="ulstyle  m-b-0 " id="list-9">
-                    <li>
-                        <a href="" title="" target="_self">重型机械</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">核电装备</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">农业机械</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">工程机械</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-12  list">
-                <h4 class="m-t-0">
-                    <a href="" title="集团概况" class="btn-collapse" target="_self">集团概况</a>
-                    <i class="fa fa-chevron-down"></i>
-                </h4>
-                <ul class="ulstyle  m-b-0 " id="list-1">
-                    <li>
-                        <a href="" title="关于我们" target="_self">关于我们</a>
-                    </li>
-                    <li>
-                        <a href="" title="意见反馈" target="_self">意见反馈</a>
-                    </li>
-                    <li>
-                        <a href="" title="联系我们" target="_self">联系我们</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-12  list">
-                <h4 class="m-t-0">
-                    <a href="" title="业务领域" class="btn-collapse" target="_self">业务领域</a>
-                    <i class="fa fa-chevron-down"></i>
-                </h4>
-                <ul class="ulstyle  m-b-0 " id="list-2">
-                    <li>
-                        <a href="" title="制造设备" target="_self">制造设备</a>
-                    </li>
-                    <li>
-                        <a href="" title="工程项目" target="_self">工程项目</a>
-                    </li>
-                    <li>
-                        <a href="" title="金融管理" target="_self">金融管理</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-12  list">
-                <h4 class="m-t-0">
-                    <a href="" title="金融管理"
-                        class="btn-collapse" target="_self">金融管理</a>
-                    <i class="fa fa-chevron-down"></i>
-                </h4>
-                <ul class="ulstyle  m-b-0 " id="list-11">
-                    <li>
-                        <a href="" title="" target="_self">金融服务</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">资产管理</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">资本投资</a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">金融证券</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-12 list">
-                <h4>
-                    <a title="支持" class="btn-collapse">关注我们</a>
-                    <i class="fa fa-chevron-down"></i>
-                </h4>
-                <ul class="ulstyle iconul m-b-0 " id="list-social">
+<!-- 底部栏目 -->
+{% include bottom-menu.html %}
 
-                    <!--微信-->
-                    <li>
-                        <a id="met-weixin" data-plugin="webuiPopover" data-trigger="hover" data-animation="pop"
-                            data-placement="top" data-width="155" data-padding="0" data-content="&lt;div class=&#39;text-xs-center&#39;&gt;&lt;img src=&#39;upload/201803/1521447050.jpg&#39; alt=&#39;集团公司响应式网站模板&#39; width=&#39;150&#39; height=&#39;150&#39; id=&#39;met-weixin-img&#39;&gt;&lt;/div&gt;">
-                            <i class="fa fa-weixin"></i>
-                            官方微信 </a>
-                    </li>
-                    <!--微信-->
-                    <!--QQ-->
-                    <li>
-                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=0000000000&amp;site=qq&amp;menu=yes"
-                            rel="nofollow" target="_blank">
-                            <i class="fa fa-qq"></i>
-                            客服QQ </a>
-                    </li>
-                    <!--QQ-->
-                    <!--微博-->
-                    <li>
-                        <a href="https://weibo.com/" rel="nofollow" target="_blank">
-                            <i class="fa fa-weibo "></i>
-                            新浪微博 </a>
-                    </li>
-                    <!--微博-->
-                    <!--邮箱-->
-                    <li>
-                        <a href="mailto:email@email.mt">
-                            <i class="fa fa-envelope"></i>
-                            官方邮箱 </a>
-                    </li>
-                    <!--邮箱-->
-                </ul>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-12 col-ms-12 col-xs-12 info">
-            <a href="tel:000-000-0000" class="foot-tel">000-000-0000</a>
-            <p>工作时间： 周一9：00~周五18：00</p>
-            <a href="https://mb.mituo.cn/feedback/" class="btn-message" title="在线留言" target="_blank">
-
-                <i class="fa fa-question-circle"></i>
-
-                在线留言 </a>
-        </div>
-    </div>
-
-</div>
-
+<!-- 页底 -->
 {% include footer.html %}
 
-<div class="foot_info_met_16_1_10_bottom text-xs-center" style="background: rgb(0, 117, 193);">
-    <div class="main">
-        <div class="">
-            <a href="tel:0000000000" class="item" target="_blank">
-                <i class="fa fa-phone"></i>
-                <span>电话咨询</span>
-            </a>
-        </div>
-        <div class="">
-            <a href="https://mb.mituo.cn/product/" class="item" target="_blank">
-                <i class="fa fa-navicon"></i>
-                <span>业务中心</span>
-            </a>
-        </div>
-        <div class="">
-            <a href="https://mb.mituo.cn/feedback/" class="item" target="_blank">
-                <i class="fa fa-pencil-square-o"></i>
-                <span>立即订购</span>
-            </a>
-        </div>
-        <div class="">
-            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=00000000&amp;site=qq&amp;menu=yes" class="item"
-                target="_blank">
-                <i class="fa fa-qq"></i>
-                <span>QQ客服</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-<button type="button"
-    class="btn btn-icon btn-primary btn-squared back_top_met_16_1_11 met-scroll-top animation-slide-bottom"
-    m-id="11" m-type="nocontent">
+<button type="button" class="btn btn-icon btn-primary btn-squared back_top_met_16_1_11 met-scroll-top" m-id="11" m-type="nocontent" hidden="hidden">
     <i class="icon wb-chevron-up" aria-hidden="true"></i>
 </button>
-
-<input type="hidden" name="met_lazyloadbg" value="">
-
-<style>
-    @media (min-width: 480px) {
-    .met-mb-tryout-modal .modal-dialog {
-        max-width: 450px;
-    }
-}
-</style>
-<button type="button" class="btn-mb-tryout-modal" data-toggle="modal" data-target=".met-mb-tryout-modal" data-keyboard="false" data-backdrop="false" hidden=""></button>
-<div class="modal fade modal-primary met-mb-tryout-modal" style="background: rgba(0, 0, 0, 0.5); display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-center modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header "><button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                    hidden=""><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title text-white">温馨提示</h4>
-            </div>
-            <div class="modal-body text-xs-center text-center">
-                <p class="blue-600 text-primary h6 font-size-16 m-b-20 mb-4">米拓建站邀请你一键开通免费试用，全面体验后台功能。</p><button
-                    class="btn btn-default btn-mb-not-tryout m-r-20 mr-5">暂不需要</button><a
-                    href="https://u.mituo.cn/api/order/tryout/mui271" target="_blank"
-                    class="btn btn-primary btn-mb-tryout">前往试用</a>
-            </div>
-        </div>
-    </div>
-</div>
