@@ -469,20 +469,32 @@ pre code {
     .container {
         width:750px
     }
+    .collapse{
+        display: block!important;
+    }
 }
 @media (min-width:992px) {
     .container {
         width:970px
+    }
+    .collapse{
+        display: block!important;
     }
 }
 @media (min-width:1200px) {
     .container {
         width:1170px
     }
+    .collapse{
+        display: block!important;
+    }
 }
 @media (min-width:1600px) {
     .container {
         width:1310px
+    }
+    .collapse{
+        display: block!important;
     }
 }
 .container-fluid {
@@ -6131,7 +6143,8 @@ a .tag-pill:focus, a .tag-pill:hover {
         margin-left:0
     }
     .media .media-left {
-        margin-bottom:5px
+        margin-bottom:5px;
+        padding-right: 0;
     }
     .media .media {
         padding-left:15px

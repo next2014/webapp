@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="dns-prefetch" href="//res.wx.qq.com">
+		<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+		<link rel="shortcut icon" type="image/x-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+		<link rel="mask-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
+		<link rel="apple-touch-icon-precomposed" href="https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+		<title>卡丁车馆介绍</title>
+		<style>
+			.radius_avatar {
+				display: inline-block;
+				background-color: #fff;
+				padding: 3px;
+				border-radius: 50%;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				overflow: hidden;
+				vertical-align: middle
+			}
+			
+			.radius_avatar img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background-color: #eee
+			}
+			
+			.rich_media_inner {
+				word-wrap: break-word;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+			}
+			
+			.rich_media_area_primary {
+				padding: 20px 16px 12px;
+				background-color: #fafafa;
+			}
+			
+			.rich_media_area_primary.voice {
+				padding-top: 66px;
+			}
+			
+			.rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips {
+				color: rgba(0, 0, 0, 0.3);
+				background-color: #fafafa;
+			}
+			
+			.rich_media_area_extra {
+				padding: 0 16px 24px;
+			}
+			
+			.rich_media_extra {
+				padding-top: 30px;
+			}
+			
+			.mpda_bottom_container .rich_media_extra {
+				padding-top: 24px;
+			}
+			
+			.mpda_bottom_container .rich_media_extra .mpad_more_list {
+				right: -10px;
+			}
+			
+			html {
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+				line-height: 1.6;
+			}
+			
+			body {
+				-webkit-touch-callout: none;
+				font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+				color: #333;
+				background-color: #f2f2f2;
+				letter-spacing: .034em;
+			}
+			
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-weight: 400;
+				font-size: 16px;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				color: #576b95;
+				text-decoration: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			
+			.rich_media_title {
+				font-size: 22px;
+				line-height: 1.4;
+				margin-bottom: 14px;
+			}
+			
+			@supports(-webkit-overflow-scrolling:touch) {
+				.rich_media_title {
+					font-weight: 700
+				}
+			}
+			
+			.rich_media_meta_list {
+				margin-bottom: 22px;
+				line-height: 20px;
+				font-size: 0;
+				word-wrap: break-word;
+				word-break: break-all;
+			}
+			
+			.rich_media_meta_list em {
+				font-style: normal
+			}
+			
+			.rich_media_meta {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 10px 10px 0;
+				font-size: 15px;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			
+			.rich_media_meta.icon_appmsg_tag {
+				margin-right: 4px
+			}
+			
+			.rich_media_meta.meta_tag_text {
+				margin-right: 0
+			}
+			
+			.rich_media_meta_primary {
+				display: block;
+				margin-bottom: 10px;
+				font-size: 15px;
+			}
+			
+			.meta_original_tag {
+				padding: 0 .5em;
+				font-size: 12px;
+				line-height: 1.4;
+				background-color: #f2f2f2;
+				color: #888;
+			}
+			
+			.meta_enterprise_tag img {
+				width: 30px;
+				height: 30px!important;
+				display: block;
+				position: relative;
+				margin-top: -3px;
+				border: 0;
+			}
+			
+			.rich_media_meta_link {
+				color: #576b95
+			}
+			
+			.rich_media_meta_text {
+				color: rgba(0, 0, 0, 0.3)
+			}
+			
+			.rich_media_meta_text.rich_media_meta_split {
+				padding-left: 10px
+			}
+			
+			.rich_media_meta_text.rich_media_meta_split:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -6px;
+				content: ' ';
+				display: block;
+				border-left: 1px solid #888;
+				width: 200%;
+				height: 130%;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-webkit-transform: scale(0.5);
+				transform: scale(0.5);
+				-webkit-transform-origin: 0 0;
+				transform-origin: 0 0;
+			}
+			
+			.rich_media_meta_text.article_modify_tag {
+				position: relative
+			}
+			
+			.rich_media_meta_nickname {
+				position: relative
+			}
+			
+			.rich_media_thumb_wrp {
+				margin-bottom: 6px
+			}
+			
+			.rich_media_thumb_wrp .original_img_wrp {
+				display: block
+			}
+			
+			.rich_media_thumb {
+				display: block;
+				width: 100%
+			}
+			
+			.rich_media_content {
+				overflow: hidden;
+				color: #333;
+				font-size: 17px;
+				word-wrap: break-word;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+				text-align: justify;
+				position: relative;
+				z-index: 0;
+			}
+			
+			.rich_media_content * {
+				max-width: 100%!important;
+				box-sizing: border-box!important;
+				-webkit-box-sizing: border-box!important;
+				word-wrap: break-word!important;
+			}
+			
+			.rich_media_content p {
+				clear: both;
+				min-height: 1em
+			}
+			
+			.rich_media_content em {
+				font-style: italic
+			}
+			
+			.rich_media_content fieldset {
+				min-width: 0
+			}
+			
+			.rich_media_content .list-paddingleft-2 {
+				padding-left: 2.2em
+			}
+			
+			.rich_media_content .list-paddingleft-2 .list-paddingleft-2 {
+				padding-left: 30px
+			}
+			
+			.rich_media_content blockquote {
+				margin: 0;
+				padding-left: 10px;
+				border-left: 3px solid #dbdbdb;
+			}
+			
+			img {
+				height: auto!important
+			}
+			
+			@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait) {
+				.rich_media_area_extra {
+					padding-bottom: 34px
+				}
+			}
+			
+			@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape) {
+				.rich_media_area_primary {
+					padding: 20px 60px 15px 60px
+				}
+				.rich_media_area_extra {
+					padding: 0 60px 21px 60px
+				}
+			}
+			
+			@media screen and (min-width:1024px) {
+				.rich_media_area_primary_inner,
+				.rich_media_area_extra_inner {
+					max-width: 677px;
+					margin-left: auto;
+					margin-right: auto
+				}
+				.rich_media_area_primary {
+					padding-top: 32px
+				}
+			}
+			
+			.appmsg_share_notice {
+				font-size: 16px;
+				color: #888;
+				position: relative;
+				padding: 1.25em 0;
+				margin-bottom: 1.75em;
+			}
+			
+			.appmsg_share_notice:before {
+				content: " ";
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				height: 1px;
+				border-top: 1px solid #dfdfdf;
+				-webkit-transform-origin: 0 0;
+				transform-origin: 0 0;
+				-webkit-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+			}
+			
+			.appmsg_share_notice:after {
+				content: " ";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				height: 1px;
+				border-bottom: 1px solid #dfdfdf;
+				-webkit-transform-origin: 0 100%;
+				transform-origin: 0 100%;
+				-webkit-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+			}
+			
+			.appmsg_share_notice_hd {
+				font-weight: 700;
+				padding-bottom: .2em;
+			}
+			
+			.cell {
+				padding: .8em 0;
+				display: block;
+				position: relative
+			}
+			
+			.cell_hd,
+			.cell_bd,
+			.cell_ft {
+				display: table-cell;
+				vertical-align: middle;
+				word-wrap: break-word;
+				word-break: break-all;
+				white-space: nowrap;
+			}
+			
+			.cell_primary {
+				width: 2000px;
+				white-space: normal;
+			}
+			
+			.flex_cell {
+				padding: 10px 0;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				-ms-flex-align: center;
+				align-items: center
+			}
+			
+			.flex_cell_primary {
+				width: 100%;
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				-ms-flex: 1;
+				box-flex: 1;
+				flex: 1;
+			}
+			
+			.original_tool_area {
+				display: block;
+				padding: .75em 1em 0;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				color: #333;
+				border: 1px solid #eaeaea;
+				margin: 20px 0;
+			}
+			
+			.original_tool_area .tips_global {
+				position: relative;
+				padding-bottom: .5em;
+				font-size: 15px;
+			}
+			
+			.original_tool_area .tips_global:after {
+				content: " ";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				height: 1px;
+				border-bottom: 1px solid #dbdbdb;
+				-webkit-transform-origin: 0 100%;
+				transform-origin: 0 100%;
+				-webkit-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+			}
+			
+			.original_tool_area .radius_avatar {
+				width: 27px;
+				height: 27px;
+				padding: 0;
+				margin-right: .5em;
+			}
+			
+			.original_tool_area .radius_avatar img {
+				height: 100%!important;
+			}
+			
+			.original_tool_area .flex_cell_bd {
+				width: auto;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				word-wrap: normal;
+			}
+			
+			.original_tool_area .flex_cell_ft {
+				font-size: 14px;
+				color: #888;
+				padding-left: 1em;
+				white-space: nowrap;
+			}
+			
+			.original_tool_area .icon_access:after {
+				content: " ";
+				display: inline-block;
+				height: 8px;
+				width: 8px;
+				border-width: 1px 1px 0 0;
+				border-color: #cbcad0;
+				border-style: solid;
+				transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+				-ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+				-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+				position: relative;
+				top: -2px;
+				top: -1px
+			}
+			
+			.rich_media_global_msg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				padding: .85em 35px .85em 15px;
+				z-index: 2;
+				background-color: #c6e0f8;
+				color: #888;
+				font-size: 12px;
+			}
+			
+			.rich_media_global_msg .icon_closed {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -5px;
+				line-height: 300px;
+				overflow: hidden;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				background: transparent url(//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/icon_appmsg_msg_closed_sprite.2x2eb52b.png) no-repeat 0 0;
+				width: 11px;
+				height: 11px;
+				vertical-align: middle;
+				display: inline-block;
+				-webkit-background-size: 100% auto;
+				background-size: 100% auto;
+			}
+			
+			.rich_media_global_msg .icon_closed:active {
+				background-position: 0 -17px
+			}
+			
+			.rich_media_global_msg.voice {
+				color: #1aad19;
+				background-color: #e8f6e8;
+				padding-left: 43.3px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.rich_media_global_msg.voice .ic_voice {
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				left: 15px;
+				display: inline-block;
+				width: 13.3px;
+				height: 18.3px;
+				background: url(data:image/png;base64,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) no-repeat center;
+				background-size: contain;
+			}
+			
+			.rich_media_global_msg.voice .icon_more {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -6.5px;
+				width: 8px;
+				height: 13px;
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAYAAADeB1slAAAAAXNSR0IArs4c6QAAA49JREFUSA2tVk1IVFEUPveOmhQk1ibfvLFZSJtACqJIIpCIoB+imcFV2Z9ZUVnRomgRGFn2i6mFf5XVotCZMYmgIMhlq6BFENFiwjfPAosgFzXOvNu5o3fmeue98Y16F3PP+c453/fu/xCQmvZSWwwJaC0G6P8WND9IoTmbVFRycpqAdgBWkwRo94V960RsPn1aoPpN9RI6CR0WsDWcjAErtUiqTR/S18+HnNcSTv5zYrwDSatVMgLkH6aciwfj79WYW5+OT4xfsyPnBIgvwt872qBW45ZQzaMlJXCfMPJbDQgfRUoIhduVUW2TwArpaWyX+bnYU9JAAH44FaJIccqCW76Ib7NTjhOOvFPN/8q/IvE3cR+npFJgao9rkiSUXjD2GCNqzMnPbNPYjth3mqINlJAvTsk4kiJmWa3eQe8WpxwVzwjwgFFn/CorL29EkY9qovC5CFDrKq7JVoHl6zNTJCf53/lLk78SN/FcbJRx2cZCixC4ZATGXsu4as8YgQjGamN/q5atOotn4K3A1J4BUMbgsh7Wt6sx2bcV4AkjtSPJxkDjRQL0hVwg21zEglSzN+rdKeOybTtFcgK39ajWZDFWr+IZHxfGQ8mV0YA5nMGmDVcCPNcb8R5gYJ1UCWQfp6PFCI4NyZhrAV6EIiHGrPOAB0ImkW2c0la8u8ICc0wUCWrvC1dsw+3TnN6uanDaJ4zeiIfiA9wtWIAX8XspxeA6iuBlaN88hNzCNXk+JwFOuXJYW5tMQmc+EcqgzXGb2n9XFk1NstX5yKczl89JAF+6vRaBM1m5XAu//qkRGrtb8BThTtqH2/V0LmUWwbvsiREw8X0vcJHxxNbjNm3KUuVaMjmPFuWm2CPesHc/kp+yj06hFMhj/PIOOcfVFLk6xZT0G3vMTpmc27MusityZk/OBfKOwA05MPLIDJn3OJldcxTQotpBYOyEXVEWIw/NoInvuHOznSJfVDs0GzneNw9mI+eyOSPQI9phfCqPO38TFhHaFw/Eu/LliNiMESB5w6zkzD05F8mMYJr8mFC263Fa+vAadvXloj4toEcrjlgMjgrQrseHpBcfkm67WD6M6MN6lTWZeoZjyYxGLcB57MGnsEfF3fjU2G189QBpcUqmBLrnSs4504s8GjLxrwm5qYrg3dKFf6x6VbwQ3yOS/wz8+bS0ruwfELaBY2nyoNkn4gvW65GKRn4WForwP+dONHDaOHeZAAAAAElFTkSuQmCC) no-repeat center;
+				background-size: contain;
+			}
+			
+			.preview_appmsg .rich_media_title {
+				margin-top: 2.3em
+			}
+			
+			@media screen and (min-width:1024px) {
+				.rich_media_global_msg {
+					position: relative;
+					margin-bottom: 32px
+				}
+				.preview_appmsg .rich_media_title.rich_media_title {
+					margin-top: 0
+				}
+			}
+			
+			.pages_reset {
+				color: #333;
+				line-height: 1.6;
+				font-size: 16px;
+				font-weight: 400;
+				font-style: normal;
+				text-indent: 0;
+				letter-spacing: normal;
+				text-align: left;
+				text-decoration: none;
+				white-space: normal;
+			}
+			
+			.weapp_element,
+			.weapp_display_element,
+			.mp-miniprogram {
+				display: block;
+				margin: 1em 0
+			}
+			
+			.share_audio_context {
+				margin: 16px 0
+			}
+			
+			.weapp_text_link {
+				font-size: 17px
+			}
+			
+			.weapp_text_link:before {
+				content: '';
+				display: inline-block;
+				line-height: 1;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url('data:image/png;base64,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');
+				vertical-align: middle;
+				font-size: 11px;
+				color: #888;
+				margin-right: 6px;
+				margin-top: -3px;
+				background-position: center;
+				height: 20px;
+				width: 20px;
+			}
+			
+			.flex_context {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.flex_bd {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				word-wrap: break-word;
+				word-break: break-all;
+			}
+			
+			.original_page {
+				background-color: #fff;
+				font-size: 16px;
+			}
+			
+			.account_info {
+				padding: 0 0 20px
+			}
+			
+			.account_info .flex_bd {
+				padding-left: .85em
+			}
+			
+			.radius_avatar.account_avatar {
+				width: 40px;
+				height: 40px;
+				padding: 0;
+			}
+			
+			.account_nickname {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 1;
+				line-height: 1.2;
+				color: #576b95;
+				font-size: 14px;
+			}
+			
+			.account_nickname_inner {
+				font-weight: 400;
+				vertical-align: top;
+			}
+			
+			.account_desc {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 1;
+				color: #b2b2b2;
+				font-size: 13px;
+				line-height: 1.2;
+				padding-top: .3em;
+			}
+			
+			.account_desc_inner {
+				display: inline;
+				vertical-align: top
+			}
+			
+			.share_notice {
+				margin-bottom: 20px;
+				word-wrap: break-word;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+			}
+			
+			.share_media {
+				padding-bottom: 18px
+			}
+			
+			.original_panel {
+				padding: 20px;
+				background-color: #fcfcfc;
+				word-wrap: break-word;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.original_panel:after {
+				content: " ";
+				border: 1px solid #d8d8d8;
+				border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-border-radius: 4px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200%;
+				height: 200%;
+				-webkit-transform: scale(0.5);
+				transform: scale(0.5);
+				-webkit-transform-origin: 0 0;
+				transform-origin: 0 0;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			
+			.original_panel .original_account {
+				margin-bottom: 18px;
+				position: relative;
+				z-index: 1
+			}
+			
+			.original_panel .original_account_avatar {
+				width: 28px;
+				height: 28px;
+				padding: 0
+			}
+			
+			.original_panel .original_account_nickname {
+				padding-left: .85em;
+				font-size: 15px;
+				color: #576b95
+			}
+			
+			.original_panel_title {
+				font-size: 23px;
+				color: #000;
+				margin: 0 0 16px
+			}
+			
+			.original_panel_content {
+				color: #333
+			}
+			
+			.original_panel_tool {
+				padding-top: 20px;
+				position: relative;
+				z-index: 1
+			}
+			
+			.original_cell_nickname {
+				display: inline-block;
+				vertical-align: middle;
+				font-weight: 400;
+				width: auto;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				word-wrap: normal;
+				max-width: 8em;
+				color: #000;
+			}
+			
+			.original_tool_area {
+				padding: 1.17em 0;
+				border-width: 0;
+				position: relative;
+			}
+			
+			.original_tool_area:before {
+				content: " ";
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				height: 1px;
+				border-top: 1px solid #dfdfdf;
+				-webkit-transform-origin: 0 0;
+				transform-origin: 0 0;
+				-webkit-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+			}
+			
+			.original_tool_area:after {
+				content: " ";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				height: 1px;
+				border-bottom: 1px solid #dfdfdf;
+				-webkit-transform-origin: 0 100%;
+				transform-origin: 0 100%;
+				-webkit-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+			}
+			
+			.original_tool_area .radius_avatar {
+				width: 20px;
+				height: 20px;
+				margin-right: .2em;
+			}
+			
+			.original_tool_area .flex_cell {
+				padding: 0;
+				font-size: 14px
+			}
+			
+			.original_tool_area .icon_access:after {
+				margin-right: 4px;
+				top: 0
+			}
+			
+			.preview_appmsg .rich_media_title {
+				margin-top: 1.5em
+			}
+			
+			.preview_appmsg .account_info {
+				padding-top: 3em
+			}
+			
+			.original_page {
+				background-color: transparent
+			}
+			
+			.account_info {
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				outline: 0;
+				padding-bottom: 20px;
+				font-size: 14px;
+			}
+			
+			.account_info.appmsg_account_info {
+				padding-bottom: 32px
+			}
+			
+			.account_info .radius_avatar img {
+				background-color: transparent
+			}
+			
+			.share_notice {
+				font-size: 16px;
+				word-wrap: break-word;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+			}
+			
+			.original_panel {
+				background-color: #fafafa
+			}
+			
+			.original_panel:after {
+				border-color: #e6e6e6
+			}
+			
+			.original_panel .original_account_avatar {
+				width: 30px;
+				height: 30px
+			}
+			
+			.original_panel_tool {
+				font-size: 14px
+			}
+			
+			.original_panel_tool a {
+				color: #576b95
+			}
+			
+			.original_panel_content {
+				font-size: 17px
+			}
+			
+			.share_media {
+				padding-bottom: 30px
+			}
+			
+			.icon_appmsg_tag {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 .5em;
+				font-size: 12px;
+				line-height: 1.5;
+				background-color: #c3c3c3;
+				color: #fff;
+				border-radius: 2px;
+				-moz-border-radius: 2px;
+				-webkit-border-radius: 2px;
+				width: auto;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				word-wrap: normal;
+				max-width: 70%;
+			}
+			
+			.icon_appmsg_tag.primary {
+				color: #3bb638;
+				padding: 4px .78em;
+				background-color: rgba(9, 187, 7, 0.08);
+				font-size: 12px;
+				border-top-left-radius: .95em 50%;
+				-moz-border-radius-topleft: .95em 50%;
+				-webkit-border-top-left-radius: .95em 50%;
+				border-top-right-radius: .95em 50%;
+				-moz-border-radius-topright: .95em 50%;
+				-webkit-border-top-right-radius: .95em 50%;
+				border-bottom-left-radius: .95em 50%;
+				-moz-border-radius-bottomleft: .95em 50%;
+				-webkit-border-bottom-left-radius: .95em 50%;
+				border-bottom-right-radius: .95em 50%;
+				-moz-border-radius-bottomright: .95em 50%;
+				-webkit-border-bottom-right-radius: .95em 50%;
+			}
+			
+			.icon_appmsg_tag.default {
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				color: rgba(0, 0, 0, 0.3);
+				background-color: transparent;
+				padding: 0 .54em;
+				font-size: 15px;
+				line-height: 1.3;
+				border-top-left-radius: .67em 50%;
+				-moz-border-radius-topleft: .67em 50%;
+				-webkit-border-top-left-radius: .67em 50%;
+				border-top-right-radius: .67em 50%;
+				-moz-border-radius-topright: .67em 50%;
+				-webkit-border-top-right-radius: .67em 50%;
+				border-bottom-left-radius: .67em 50%;
+				-moz-border-radius-bottomleft: .67em 50%;
+				-webkit-border-bottom-left-radius: .67em 50%;
+				border-bottom-right-radius: .67em 50%;
+				-moz-border-radius-bottomright: .67em 50%;
+				-webkit-border-bottom-right-radius: .67em 50%;
+			}
+			
+			.rich_media_meta_list .icon_appmsg_tag.default {
+				margin-top: -1px
+			}
+			
+			.icon_appmsg_tag.title_tag {
+				background-color: #d04b4e
+			}
+			
+			.icon_global_tag_wrp {
+				text-align: right;
+				padding-bottom: 12px
+			}
+			
+			.icon_global_tag {
+				background-color: rgba(118, 118, 118, 0.16);
+				color: rgba(0, 0, 0, 0.41);
+				line-height: 2.2;
+				border-top-left-radius: 1em 50%;
+				-moz-border-radius-topleft: 1em 50%;
+				-webkit-border-top-left-radius: 1em 50%;
+				border-bottom-left-radius: 1em 50%;
+				-moz-border-radius-bottomleft: 1em 50%;
+				-webkit-border-bottom-left-radius: 1em 50%;
+				padding: 0 1.8em 0 1.34em;
+				font-size: 12px;
+				margin-right: -24px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.global_plain_btn {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 1em;
+				line-height: 2;
+				font-size: 14px;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				border-radius: 5px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+			}
+			
+			.global_plain_btn.primary {
+				color: #1aad19;
+				border: 1px solid currentColor
+			}
+			
+			.global_plain_btn.primary:active {
+				color: rgba(26, 173, 25, 0.6)
+			}
+			
+			.wx_video_context {
+				color: #fefefe;
+				position: relative;
+				background-color: #000
+			}
+			
+			.wx_video_thumb,
+			.wx_video_thumb_primary {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%!important;
+				top: 0;
+			}
+			
+			.wx_video_thumb_primary {
+				-webkit-background-size: cover;
+				background-size: cover;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+			}
+			
+			.wx_video_play_btn {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				margin-top: -2px;
+				font-size: 0;
+				border-width: 0;
+				background-color: transparent;
+				padding: 0;
+				outline: 0;
+				z-index: 2;
+			}
+			
+			.wx_video_play_btn:before {
+				content: " ";
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-width: 14px 0 14px 25px;
+				border-color: transparent transparent transparent #fff;
+				border-style: dotted dotted dotted solid;
+			}
+			
+			.wx_video_mask {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			
+			.place_audio_area {
+				min-height: 100px;
+				background-color: #fdfdfd;
+				display: block;
+				margin: 16px 0;
+			}
+			
+			.place_music_area {
+				min-height: 68px;
+				background-color: #fdfdfd;
+				display: block;
+				margin: 17px 0 16px;
+			}
+			
+			.rich_media_empty_extra {
+				background-color: #fafafa
+			}
+			
+			.appmsg_skin_default.rich_media_empty_extra {
+				background-color: #fff
+			}
+			
+			.appmsg_skin_default .rich_media_area_primary {
+				background-color: #fff
+			}
+			
+			.appmsg_skin_default .rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips {
+				background-color: #fff
+			}
+			
+			.appmsg_style_default .rich_media_tool {
+				padding-top: 15px
+			}
+			
+			.rich_media_title_ios {
+				font-weight: 700
+			}
+			
+			.read-more__area {
+				margin: 30px 0
+			}
+			
+			.read-more__desc {
+				margin-bottom: 10px
+			}
+			
+			.read-more__article__extra {
+				font-size: 14px;
+				color: rgba(0, 0, 0, 0.5)
+			}
+			
+			.read-more__article__item {
+				margin-bottom: 10px
+			}
+		</style>
+	</head>
+
+	<body id="activity-detail" class="zh_CN mm_appmsg  appmsg_skin_default appmsg_style_default">
+		<div id="js_article" class="rich_media">
+			<div id="js_top_ad_area" class="top_banner"></div>
+			<div class="rich_media_inner">
+				<div id="page-content" class="rich_media_area_primary">
+					<div class="rich_media_area_primary_inner">
+						<div id="img-content">
+							<div class="rich_media_content " id="js_content">
+								<section data-role="outer" label="Powered by 135editor.com" style="font-family: 微软雅黑;">
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_01.gif" alt=""><br />
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">据说，这是最近<span style="color: rgb(255, 192, 0);"><strong>风靡惠州年轻人圈子</strong></span>的</span>
+									</p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><span style="color: #FFC000;"><strong><span style="font-size: 14px;letter-spacing: 2px;">打卡新据点</span></strong>
+										</span>
+									</p>
+									<p style="max-width: 100%;min-height: 1em;white-space: normal;background-color: rgb(255, 255, 255);font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;color: rgb(136, 136, 136);letter-spacing: 2px;box-sizing: border-box !important;word-wrap: break-word !important;">男神女神更爱来！</span></p>
+									<p style="max-width: 100%;min-height: 1em;white-space: normal;background-color: rgb(255, 255, 255);font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;"><span style="color:#d6a841;"><span style="font-size: 14px;letter-spacing: 2px;"><strong>▽</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=g1353sn1u6b" allowFullScreen="true"></iframe>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">足足长500米的<span style="color: rgb(255, 192, 0);"><strong>双层立体赛道</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">源自<span style="color: rgb(255, 192, 0);"><strong>法国</strong><strong>SODIKART</strong></span>品牌的专业卡丁车</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">可即时查看成绩与车速的<strong><span style="color: rgb(255, 192, 0);">竞技系统</span></strong>
+										</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">装逼力max的整套赛车服装<br  /></span>
+									</p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<strong><span style="font-size: 14px;letter-spacing: 2px;color: #FFC000;">惠州版的速度与激情</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;"></span></strong><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">就在这里</span>
+									</p>
+									<p style="max-width: 100%;min-height: 1em;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;font-size: 14px;text-align: center;white-space: normal;color: rgb(88, 88, 88);font-family: Helvetica, Arial, sans-serif;letter-spacing: 0.578px;widows: 1;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;">
+    								<img src="img/pic_01_01.jpg" style="vertical-align: middle; box-sizing: border-box !important; word-wrap: break-word !important; visibility: visible !important; width: 17px !important; height: auto !important;" _width="17px" src="https://mmbiz.qpic.cn/mmbiz_png/wueq2UvnpbBtSdT7Xqq1TAEZepB7kCaibNYS7UwRrhJnBhtiadt6Wl3ELzyicLpXY3n3fb2z4E9VmIP5hQKoYlqZw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" crossorigin="anonymous" data-fail="0"></strong>
+									</p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;">
+										<strong><span style="font-family: 微软雅黑;font-size: 14px;color: #FFC000;">惠州欧美城</span></strong><br />
+									</p>
+									<section class="_135editor" data-tools="135编辑器" data-id="93901" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section style="padding: 0em;box-sizing: border-box;">
+											<section style="border-top: 1px solid rgb(51, 51, 51);border-bottom: 1px solid rgb(51, 51, 51);border-right: none;border-left: none;box-sizing: border-box;">
+												<section class="135brush" data-brushtype="text" style="text-align: center;color: #FFC000;font-size: 18px;font-weight: bold;letter-spacing: 2px;padding-top: 10px;padding-bottom: 10px;box-sizing: border-box;">格林披治卡丁车馆</section>
+											</section>
+											<section style="margin: 10px auto;height: 0px;width: 0px;border-width: 8px;border-style: solid;border-color: rgb(70, 61, 59) transparent transparent;box-sizing: border-box;"><br /></section>
+										</section>
+									</section>
+									<p style="font-size: 16px;text-align: center;">
+										<img src="img/pic_02.gif" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 10px;">△<span style="color: #888888;letter-spacing: 2px;caret-color: red;">现馆内赛道、程序已全新升级</span></span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="letter-spacing: 2px;color: rgb(136, 136, 136);font-family: Helvetica, Arial, sans-serif;caret-color: red;font-size: 10px;">欢迎小伙伴们赴一场速度之旅</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">格林披治卡丁车馆</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">位于欧美城文化小镇四号馆内</span>
+									</p>
+									<p style="font-size: 16px;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">距离惠州江北市中心仅<strong><span style="color: rgb(255, 192, 0);font-size: 18px;">15</span></strong>分钟车程</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">它有别于其他卡丁车场所</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">环境只能用</span><span style="color: #FFC000;"><strong><span style="font-size: 14px;letter-spacing: 2px;">高大</span></strong><strong><span style="font-size: 14px;letter-spacing: 2px;">上</span></strong></span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">来形容</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">一进大厅就看到悬挂着的大屏幕</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;letter-spacing: 2px;color: #FFC000;">专业赛事场地的既视感</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_03.jpg" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">透过巨大的落地玻璃</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">还能看到疾驰在蜿蜒赛道上的卡丁车</span><br />
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">让你有观看国际卡丁车赛事的紧张feel</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_04.jpg" alt="">
+									</p>
+									<p style="font-size: 16px;"></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">馆内还贴心配备了<strong>餐饮区</strong></span>
+									</p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">让你能及时补充水分与能量</span>
+									</p>
+									<p style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">“充电”满格！！！</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="92619" style="font-size: medium;white-space: normal;font-family: Helvetica, Arial, sans-serif;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section data-width="100%" style="width: 100%;display: -webkit-flex;justify-content: center;">
+											<section data-width="50%" style="width: 50%;">
+												<section style="padding-right: 5px;box-sizing: border-box;">
+													<section class="135brush" data-brushtype="text" style="border-top: 1px dashed rgb(112, 112, 113);color: rgb(73, 73, 74);text-align: center;line-height: 40px;font-size: 14px;box-sizing: border-box;"><br /></section>
+													<section style="margin-top: 20px;">
+														<img src="img/pic_05.jpg" alt="">
+													</section>
+												</section>
+											</section>
+											<section data-width="50%" style="width: 50%;">
+												<section style="padding-left: 5px;box-sizing: border-box;">
+													<section>
+														<img src="img/pic_06.jpg" alt="">
+													</section>
+													<section class="135brush" data-brushtype="text" style="margin-top: 20px;border-bottom: 1px dashed rgb(112, 112, 113);color: rgb(73, 73, 74);text-align: center;line-height: 40px;font-size: 14px;box-sizing: border-box;"><br /></section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<p style="font-size: 16px;text-align: center;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">然而，这还没完</span>
+									</p>
+									<p style="font-size: 16px;text-align: center;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">格林披治卡丁车馆还有<span style="color: rgb(127, 127, 127);">众多</span><span style="color: rgb(255, 192, 0);font-size: 16px;"><strong>镇馆之宝</strong></span><br /></span>
+									</p>
+									<section class="_135editor" data-tools="135编辑器" data-id="89894" style="font-size: 16px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+										<section data-id="us515156" class="_135editor" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+											<section style="width:100%;text-align:center;" data-width="100%">
+												<img src="img/pic_06_1.gif" data-type="gif" data-w="100" style="width:60px;" />
+											</section>
+											<section style="clear:both;width:100%;" data-width="100%"></section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="12859" style="font-size: medium;font-family: Helvetica, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+										<section class="135brush" style="margin-top: 2px;margin-bottom: 2px;max-width: 100%;border-top: 2px solid rgb(252, 180, 43);border-right-color: rgb(252, 180, 43);border-bottom: 2px solid rgb(252, 180, 43);border-left-color: rgb(252, 180, 43);border-left-width: 0px;line-height: 25px;color: rgb(252, 180, 43);font-weight: bold;text-align: center;box-sizing: border-box;">
+											<section style="border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+												<section style="margin-top: 0.8em;margin-bottom: 0.5em;border-width: 0px;border-style: initial;border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+													<section style="color: inherit;display: inline-block;width: 1.3em;font-size: 5em;font-weight: inherit;line-height: 1em;vertical-align: top;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section class="135brush" data-brushtype="text" style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">01</section>
+													</section>
+													<section class="135title" style="margin-left: 0.5em;display: inline-block;text-align: left;color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<section class="135brush" data-brushtype="text" style="color: inherit;display: inline-block;font-size: 1.8em;font-weight: inherit;line-height: 1.2;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+																<span style="font-size: 18px;">源自法国的品牌卡丁车</span>
+															</section>
+														</section>
+														<section style="color: inherit;font-size: 2em;line-height: 1.4;font-weight: inherit;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<p style="line-height: 1.4;font-size: 12px;">Grand Prix</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<p style="font-size: 16px;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #7F7F7F;">格林披治致力打造中国最具实力的<span style="color: rgb(255, 192, 0);"><strong>赛车运动孵化基地</strong></span>。已在汕头成功试点，开设汕头格林披治卡丁车馆，反响热烈。而惠州欧美城·格林披治卡丁车馆现已试营业，欢迎广大运动爱好者热情加入。馆内配备有来自<strong>法国SODIKART品牌的成人电动卡丁车，</strong>更配备有专业的教练团队及配套设施。</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #7F7F7F;">
+    									<img src="img/pic_07.jpg" alt="">
+    								</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;"></p>
+									<p style="font-size: 16px;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #FFC000;"><strong style="white-space: normal;">SODIKART（速帝卡）</strong>是<strong>全球第一个卡丁车制造商</strong></span><span style="font-size: 14px;color: #7F7F7F;">，业务遍及五大洲，是卡丁车市场的主要参与者。卡丁车均按照非常严格的标准在Couëron<strong><span style="color: rgb(255, 192, 0);">（法国）工厂设计和生产</span></strong>。品牌堪称</span><span style="font-size: 14px;color: #FFC000;"><strong style="white-space: normal;">世界卡丁车届的NO.1</strong></span><span style="font-size: 14px;color: #7F7F7F;">，安全性能当然杠杠滴！</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><br /></p>
+									<section style="font-size: medium;font-family: Helvetica, Arial, sans-serif;white-space: normal;"></section>
+									<span style="font-size: 14px;color: rgb(127, 127, 127);">
+    								<img src="img/pic_08.jpg" alt="">
+    							</span>
+									<p style="font-size: 16px;"></p>
+									<p style="font-size: 16px;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #7F7F7F;">偷偷告诉你，这里的</span><span style="font-size: 14px;color: #FFC000;"><strong>儿童安全电动卡丁车</strong></span><span style="font-size: 14px;color: #7F7F7F;">还是</span><span style="font-size: 14px;color: #FFC000;"><strong>全国唯一</strong></span><span style="font-size: 14px;color: #7F7F7F;">的<span style="color: rgb(127, 127, 127);font-family: 微软雅黑;font-size: 14px;">由</span>中国汽车摩托车运动联合会认可参赛的车架生产厂商探索者出品的哦。</span>
+									</p>
+									<p style="font-size: 16px;"><br /></p>
+									<p style="text-align: center;">
+										<img src="img/pic_09.gif" alt="">
+									</p>
+									<p style="font-size: 16px;"></p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #7F7F7F;">这么专业的品牌卡丁车</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #7F7F7F;">无论大人还是小朋友，都玩得超放心！<br  /></span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #7F7F7F;">
+    									<img src="img/pic_10.gif" alt="">
+    								</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #7F7F7F;">
+    									<img src="img/pic_11.gif" alt="">
+    								</span>
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;"></p>
+									<p style="font-size: 16px;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="12859" style="font-size: medium;font-family: Helvetica, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+										<section class="135brush" style="margin-top: 2px;margin-bottom: 2px;max-width: 100%;border-top: 2px solid rgb(88, 156, 223);border-right-color: rgb(252, 180, 43);border-bottom: 2px solid rgb(88, 156, 223);border-left-color: rgb(252, 180, 43);border-left-width: 0px;line-height: 25px;color: rgb(88, 156, 223);font-weight: bold;text-align: center;box-sizing: border-box;">
+											<section style="border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+												<section style="margin-top: 0.8em;margin-bottom: 0.5em;border-width: 0px;border-style: initial;border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+													<section style="color: inherit;display: inline-block;width: 1.3em;font-size: 5em;font-weight: inherit;line-height: 1em;vertical-align: top;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section class="135brush" data-brushtype="text" style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">02</section>
+													</section>
+													<section class="135title" style="margin-left: 0.5em;display: inline-block;text-align: left;color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<section class="135brush" data-brushtype="text" style="color: inherit;display: inline-block;font-size: 1.8em;font-weight: inherit;line-height: 1.2;text-align: inherit;text-decoration: inherit;border-color: rgb(88, 156, 223);box-sizing: border-box;">
+																<span style="font-size: 18px;">国际标准的双层立体赛道</span>
+															</section>
+														</section>
+														<section style="color: inherit;font-size: 2em;line-height: 1.4;font-weight: inherit;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<p style="line-height: 1.4;font-size: 12px;">Grand Prix</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: 16px;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">馆内拥有长达</span><span style="font-size: 14px;color: #589cdf;"><strong>500米</strong></span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">的</span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;caret-color: red;">双层立体赛道</span>
+									</p>
+									<p style="font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;">
+    									<span style="font-size: 14px;letter-spacing: 2px;">由著名品牌公司</span>
+										</span>
+									</p>
+									<p style="font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #589cdf;"><strong>SpeedShare Limited</strong></span><span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">设计打造</span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">
+    									<img src="img/pic_12.gif" alt="">
+    								</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #589cdf;"><strong>SpeedShare Limited</strong></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">是一家公认的汽车，</span></span><span style="font-size: 14px;letter-spacing: 2px;color: rgb(136, 136, 136);">赛车和卡丁车服务供应商</span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">在美国，欧洲和亚洲的</span></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">卡丁车，汽车和赛车运动业界颇具威望</span></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #589cdf;"><strong>拥有卡丁车，汽车和赛车运动专业知识的</strong></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #589cdf;"><strong>亚洲，欧洲和美国专家团队</strong></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: 16px;text-align: center;">
+										<img src="img/pic_13.jpg" alt="">
+									</p>
+									<p style="font-size: 16px;text-align: center;"><br /></p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">它的创始人</span></span><span style="font-size: 14px;color: #589cdf;"><strong>Benjamin Grenon</strong></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">在创建和运营</span></span><span style="font-size: 14px;color: #589cdf;"><strong>Pan Delta超级赛车节</strong></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">和</span></span><span style="font-size: 14px;color: #589cdf;"><strong>中国超级摩托车锦标赛</strong></span><span style="color:#888888;"><span style="font-size: 14px;letter-spacing: 2px;">方面担当相当重要的角色</span></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color:#888888;">
+    									<span style="font-size: 14px;letter-spacing: 2px;"><br  /></span>
+										</span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<img src="img/pic_14.jpg" alt="">
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;"></span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">而通过前期对赛道的升级优化</span>
+									</p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><strong><span style="color: rgb(88, 156, 223);font-size: 14px;letter-spacing: 2px;">现馆内地面平整度和顺滑度</span></strong><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">有了很大提升</span></p>
+									<p style="white-space: normal;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">让你开车秒变老司机</span>
+									</p>
+									<p><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="12859" style="font-size: medium;font-family: Helvetica, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+										<section class="135brush" style="margin-top: 2px;margin-bottom: 2px;max-width: 100%;border-top: 2px solid rgb(254, 63, 55);border-right-color: rgb(252, 180, 43);border-bottom: 2px solid rgb(254, 63, 55);border-left-color: rgb(252, 180, 43);border-left-width: 0px;line-height: 25px;color: rgb(254, 63, 55);font-weight: bold;text-align: center;box-sizing: border-box;">
+											<section style="border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+												<section style="margin-top: 0.8em;margin-bottom: 0.5em;border-width: 0px;border-style: initial;border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+													<section style="color: inherit;display: inline-block;width: 1.3em;font-size: 5em;font-weight: inherit;line-height: 1em;vertical-align: top;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section class="135brush" data-brushtype="text" style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">03</section>
+													</section>
+													<section class="135title" style="margin-left: 0.5em;display: inline-block;text-align: left;color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<section class="135brush" data-brushtype="text" style="color: inherit;display: inline-block;font-size: 1.8em;font-weight: inherit;line-height: 1.2;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+																<span style="font-size: 18px;">专业运营管理系统</span>
+															</section>
+														</section>
+														<section style="color: inherit;font-size: 2em;line-height: 1.4;font-weight: inherit;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<p style="line-height: 1.4;font-size: 12px;">Grand Prix</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">格林披治卡丁车馆</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">引进最先进、专业的<span style="color: #fe3f37;"><strong>卡丁车运营管理系统</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_15.jpg" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_16.jpg" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;line-height: 1.75em;text-align: center;">
+										<span style="color: #888888;font-size: 14px;letter-spacing: 2px;caret-color: red;">通过大屏幕可以即时看到你的名字、头像</span><br />
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">还能<span style="color: rgb(254, 63, 55);"><strong>实时查看你的速度成绩</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">一秒晒圈，</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">装逼力max！</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;">
+										<img src="img/pic_17.jpg" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;">
+										<img src="img/pic_18.jpg" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">新的运营管理系统中还</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">设有</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="color: #fe3f37;"><strong><span style="font-size: 14px;letter-spacing: 2px;">速度控制系统</span></strong>
+										</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">发车或停车时</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">工作人员会将速度调慢</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">确保安全</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_19.gif" alt="">
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">当车进入赛道后</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">就会将速度调快</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">让你享受最极致的<span style="color: rgb(254, 63, 55);"><strong>速度体验</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;">
+										<img src="img/pic_20.gif" alt="">
+									</p>
+									<p style="font-size: 16px;line-height: 1.75em;text-align: center;"><br /></p>
+									<section class="_135editor" data-tools="135编辑器" data-id="12859" style="font-size: medium;font-family: Helvetica, Arial, sans-serif;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+										<section class="135brush" style="margin-top: 2px;margin-bottom: 2px;max-width: 100%;border-top: 2px solid rgb(139, 227, 185);border-right-color: rgb(252, 180, 43);border-bottom: 2px solid rgb(139, 227, 185);border-left-color: rgb(252, 180, 43);border-left-width: 0px;line-height: 25px;color: rgb(139,227,185);font-weight: bold;text-align: center;box-sizing: border-box;">
+											<section style="border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+												<section style="margin-top: 0.8em;margin-bottom: 0.5em;border-width: 0px;border-style: initial;border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+													<section style="color: inherit;display: inline-block;width: 1.3em;font-size: 5em;font-weight: inherit;line-height: 1em;vertical-align: top;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section class="135brush" data-brushtype="text" style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">04</section>
+													</section>
+													<section class="135title" style="margin-left: 0.5em;display: inline-block;text-align: left;color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<section class="135brush" data-brushtype="text" style="color: inherit;display: inline-block;font-size: 1.8em;font-weight: inherit;line-height: 1.2;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+																<span style="font-size: 18px;">专业教练团队</span>
+															</section>
+														</section>
+														<section style="color: inherit;font-size: 2em;line-height: 1.4;font-weight: inherit;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<p style="line-height: 1.4;font-size: 12px;">Grand Prix</p>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">没开过？不会玩？</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">统统不用担心</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">现场还有<span style="color: rgb(139, 227, 185);"><strong>专业教练手把手教学</strong></span></span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+										<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">小白也能变速度大神！</span>
+									</p>
+									<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><br /></p>
+									<img src="img/pic_21.jpg" alt="">
+									<img src="img/pic_22.jpg" alt="">
+								</section>
+								<section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;font-family: 微软雅黑;"><br /></section>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">来自</span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;"><span style="color: rgb(139, 227, 185);"><strong>深圳市探索者</strong></span></span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;">的专业卡丁车运营团队</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">不仅有丰富的赛事运营经验</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">更负责</span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;"><span style="color: rgb(139, 227, 185);"><strong>培训、输送、举荐及带领</strong></span></span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;">不少优秀的</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">专业卡丁车车手参加卡丁车世界赛</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">及各类国际卡丁车大赛哦</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;"><br /></p>
+								<p style="text-align: center;">
+									<img src="img/pic_23.jpg" alt="">
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;"><br  /></span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">如果你曾梦想成为一名赛车手</span>
+								</p>
+								<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;line-height: 1.75em;">
+									<span style="font-size: 14px;color: #888888;letter-spacing: 2px;">来到这里，你将敲开</span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;"><span style="color: rgb(139, 227, 185);"><strong>职业赛车手</strong></span></span><span style="font-size: 14px;color: #888888;letter-spacing: 2px;">的大门哦</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"><br /></p>
+								<section class="_135editor" data-tools="135编辑器" data-id="12859" style="font-family: Helvetica, Arial, sans-serif;font-size: medium;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+									<section class="135brush" style="margin-top: 2px;margin-bottom: 2px;max-width: 100%;border-top: 2px solid rgb(206, 196, 184);border-right-color: rgb(252, 180, 43);border-bottom: 2px solid rgb(206, 196, 184);border-left-color: rgb(252, 180, 43);border-left-width: 0px;line-height: 25px;color: rgb(206, 196, 184);font-weight: bold;text-align: center;box-sizing: border-box;">
+										<section style="border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+											<section style="margin-top: 0.8em;margin-bottom: 0.5em;border-width: 0px;border-style: initial;border-color: rgb(252, 180, 43);color: inherit;box-sizing: border-box;">
+												<section style="color: inherit;display: inline-block;width: 1.3em;font-size: 5em;font-weight: inherit;line-height: 1em;vertical-align: top;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+													<section class="135brush" data-brushtype="text" style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">05</section>
+												</section>
+												<section class="135title" style="margin-left: 0.5em;display: inline-block;text-align: left;color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+													<section style="color: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<section class="135brush" data-brushtype="text" style="color: inherit;display: inline-block;font-size: 1.8em;font-weight: inherit;line-height: 1.2;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+															<span style="font-size: 18px;">专业装备</span>
+														</section>
+													</section>
+													<section style="color: inherit;font-size: 2em;line-height: 1.4;font-weight: inherit;text-align: inherit;text-decoration: inherit;border-color: rgb(252, 180, 43);box-sizing: border-box;">
+														<p style="line-height: 1.4;font-size: 12px;">Grand Prix</p>
+													</section>
+												</section>
+											</section>
+										</section>
+									</section>
+								</section>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;"><br /></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<img src="img/pic_24.gif" alt="">
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"><br /></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">再加上<span style="color: rgb(206, 196, 184);"><strong>专业装备</strong></span>的加持</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">人人都能成为赛车手哦</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（赛车服可在现场租赁，也可以选择穿自己衣服）</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;"><br /></p>
+								<p style="text-align: center;">
+									<img src="img/pic_25.gif" alt="">
+								</p>
+								<p style="text-align: center;">
+									<img src="img/pic_26.gif" alt="">
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">带上你的闺蜜发小</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">一起来场速度的比拼吧<br  /></span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;"><br /></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">
+    								<img src="img/pic_27.gif" alt="">
+    							</span>
+								</p>
+								<p>
+									<img src="img/pic_28.jpg" alt="">
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"></p>
+								<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;"><strong><span style="font-size: 14px;letter-spacing: 2px;color: #cec4b8;">家门口的卡丁车馆</span></strong><span style="color: #888888;font-size: 14px;letter-spacing: 2px;caret-color: red;">已闪亮登场</span></p>
+								<p style="font-size: medium;font-family: Helvetica, Arial, sans-serif;text-align: center;line-height: 1.75em;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">喜欢刺激的大小车手们，约么？</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"><br /></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<img src="img/pic_29.gif" alt="">
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;"></p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;line-height: 1.75em;text-align: center;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">最后送上小伙伴们最关心的<span style="color: rgb(206, 196, 184);"><strong>票价信息</strong></span></span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">收好不谢</span>
+								</p>
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;">
+									<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">∨</span>
+								</p>
+
+								<!--卡丁车馆价格信息表-->
+
+								<section class="_135editor" data-tools="135编辑器" data-id="31" style="font-family: Helvetica, Arial, sans-serif;font-size: medium;white-space: normal;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" data-color="#fcb42b" data-custom="#fcb42b">
+									<section style="margin-top: 25px;padding: 5px;border-width: 1px;border-style: solid;border-color: rgb(204, 204, 204);line-height: 24px;box-sizing: border-box;">
+										<section style="margin-top: -20px;margin-left: 15px;color: inherit;width: auto;font-size: 16px;">
+											<span style="color: inherit;"><strong style="margin-top: 15px;margin-right: 8px;color: #666666;"><span class="135brush" data-brushtype="text" style="padding: 4px 10px;border-color: #FCB42B;border-radius: 5px;color: #FFFFFF;background-color: #FCB42B;text-align: center;letter-spacing: 2px;line-height: 1.75em;">卡丁车票价信息</span></strong>
+											</span>
+										</section>
+										<section class="135brush" data-style="text-indent: 2em;;" style="margin: 15px;line-height: 2em;">
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">成人单次票</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（1.5m以上适用）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">原价<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">98元；试业优惠价</span>78元（6分钟）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">成人两次票</span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">（<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">1.5m以上适用</span>）</span>
+											</p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;"><span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">原价168元；试业优惠价</span>138元</span>
+											</p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">（6分钟/次，共计12分钟）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">成人三次票</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">1.5m以上适用</span>）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">原价<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">238元；<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">试业</span>优惠价</span>198元</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（6分钟/次，共计18分钟）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">儿童单次票</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（1.25m-1.49m儿童适用）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">原价<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">68元；<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">试业</span>优惠价</span>48元（5分钟）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">儿童两次票</span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">（<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">1.25m-1.49m儿童适用</span>）</span>
+											</p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;"><span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">原价100元；试业优惠价</span>80元</span>
+											</p>
+											<p style="white-space: normal;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 2px;">（5分钟/次，共计10分钟）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;"><br /></p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="font-size: 14px;letter-spacing: 2px;">儿童三次票</span><span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;">1.25m-1.49m儿童适用</span>）</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">原价<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">138元；<span style="color: rgb(136, 136, 136);font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;font-size: 14px;letter-spacing: 2px;text-align: center;background-color: rgb(255, 255, 255);">试业</span>优惠价</span>120元</span>
+											</p>
+											<p style="max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;text-align: center;">
+												<span style="color: #888888;font-size: 14px;letter-spacing: 2px;">（5分钟/次，共计15分钟）</span>
+											</p>
+											<p style="color: #333333;font-size: 17px;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;letter-spacing: 0.544px;text-align: center;"><br /></p>
+											<p style="color: #333333;font-size: 17px;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;letter-spacing: 0.544px;text-align: center;">
+												<span style="color: #000000;"><strong><span style="max-width: 100%;font-size: 14px;letter-spacing: 2px;">温馨提示</span></strong>
+												</span>
+											</p>
+											<p style="color: #333333;font-size: 17px;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;letter-spacing: 0.544px;text-align: center;">
+												<span style="max-width: 100%;color: #888888;font-size: 14px;letter-spacing: 2px;">卡丁车馆仅限年满7岁且身高1.25m以上儿童</span>
+											</p>
+											<p style="color: #333333;font-size: 17px;max-width: 100%;min-height: 1em;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;letter-spacing: 0.544px;text-align: center;">
+												<span style="max-width: 100%;color: #888888;font-size: 14px;letter-spacing: 2px;">60岁以下成人参加</span>
+											</p>
+										</section>
+									</section>
+								</section>
+
+								<p style="font-family: Helvetica, Arial, sans-serif;font-size: medium;text-align: center;line-height: 1.75em;"><br /></p>
+								<section class="_135editor" style="font-size: medium;white-space: normal;max-width: 100%;font-variant-numeric: normal;widows: 1;font-family: Helvetica, Arial, sans-serif;line-height: 25.6px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+									<section style="max-width: 100%;-webkit-tap-highlight-color: transparent;font-family: Helvetica, sans-serif;line-height: 25.6px;background-image: initial;background-position: initial;background-size: initial;background-repeat: initial;background-attachment: initial;background-origin: initial;background-clip: initial;">
+										<section style="max-width: 100%;-webkit-tap-highlight-color: transparent;background-image: initial;background-attachment: initial;background-size: initial;background-origin: initial;background-clip: initial;background-position: initial;background-repeat: initial;">
+											<section data-role="paragraph" class="" style="max-width: 100%;border-width: 0px;border-style: none;border-color: initial;text-align: center;box-sizing: border-box;">
+												<section data-id="89715" data-tools="135编辑器" sans="sans" helvetica="helvetica" break-word="break-word" px="px" none="none" normal="normal" yahei="yahei" gb="gb" neue="neue" border-box="border-box" rgb="rgb" center="center" style="max-width: 100%;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;" class="_135editor">
+													<section class="_135editor" data-tools="135编辑器" data-id="93454" style="max-width: 100%;font-variant-numeric: normal;font-variant-east-asian: normal;letter-spacing: 0.544px;line-height: 25.6px;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+														<section style="margin-right: 5px;margin-bottom: 5px;max-width: 100%;display: flex;border-width: 1px;border-style: solid;border-color: rgb(95, 95, 94);box-shadow: rgb(255, 198, 0) 3px 3px 0px;border-radius: 10px;box-sizing: border-box;">
+															<section data-width="10%" style="margin-top: 14px;margin-left: 10px;max-width: 100%;width: 10%;">
+																<img src="img/pic_30.jpg" alt="" data-w="109" data-width="100%" style="visibility: visible !important;width: 100%;" />
+															</section>
+															<section data-width="90%" style="padding: 1em 0.8em;max-width: 100%;width: 90%;font-size: 14px;color: rgb(63, 63, 63);letter-spacing: 1.5px;text-align: justify;box-sizing: border-box;">
+																<section class="" style="max-width: 100%;">
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;">
+																		<span style="max-width: 100%;color: #7F7F7F;">惠州欧美城</span>
+																	</p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">地址：</span></strong><span style="max-width: 100%;color: #7F7F7F;">惠州市惠城区金龙大道99号<br style="max-width: 100%;"  /></span></p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">电话：</span></strong><span style="max-width: 100%;color: #7F7F7F;">0752-2888688</span></p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">客服在线时间：</span></strong><span style="max-width: 100%;color: #7F7F7F;">09:00-12:00,13:30-21:00</span></p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">营业时间：</span></strong><span style="max-width: 100%;color: #7F7F7F;">10:00-21:00</span></p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">路线指引：</span></strong></p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;">
+																		<span style="max-width: 100%;color: #7F7F7F;">1、自驾导航<strong style="max-width: 100%;">“欧美城文化小镇西门”</strong>即到</span>
+																	</p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;">
+																		<span style="max-width: 100%;color: #7F7F7F;">2、惠城区可乘坐30路公交车至<strong style="max-width: 100%;">“欧美城”</strong>站下</span>
+																	</p>
+																	<p style="max-width: 100%;min-height: 1em;color: rgb(51, 51, 51);line-height: 1.75em;"><strong style="max-width: 100%;"><span style="max-width: 100%;color: #7F7F7F;">温馨提示：</span></strong><span style="max-width: 100%;color: #7F7F7F;">为方便出行，<span style="max-width: 100%;color: #000000;"><strong style="max-width: 100%;">建议可滴滴或搭乘公交前往</strong></span>。另园区禁止携带外带食品进园，请游客朋友们注意~</span>
+																	</p>
+																</section>
+															</section>
+														</section>
+													</section>
+													<p style="margin-right: 5px;margin-left: 5px;max-width: 100%;min-height: 1em;font-variant-numeric: normal;font-variant-east-asian: normal;letter-spacing: 0.544px;line-height: 25.6px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;"><br /></p>
+													<p style="margin-right: 5px;margin-left: 5px;max-width: 100%;min-height: 1em;font-variant-numeric: normal;font-variant-east-asian: normal;letter-spacing: 0.544px;line-height: 25.6px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;">
+														<span style="max-width: 100%;color: #3F3F3F;font-size: 12px;letter-spacing: 1px;line-height: 25.6px;">惠州欧美城出品</span><br style="max-width: 100%;" />
+													</p>
+
+													<!--结尾落款-->
+													<section style="max-width: 100%;font-variant-numeric: normal;font-variant-east-asian: normal;letter-spacing: 0.544px;line-height: 25.6px;font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;">
+														<section style="max-width: 100%;">
+															<section style="max-width: 100%;">
+																<section style="max-width: 100%;">
+																	<section style="max-width: 100%;">
+																		<section style="max-width: 100%;">
+																			<section class="_135editor" data-tools="135编辑器" data-id="85639" style="max-width: 100%;font-family: 微软雅黑;border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;">
+																				<section style="max-width: 100%;">
+																					<section class="" data-style="color: rgb(0, 0, 0); white-space: normal; text-align: left; line-height: 1.75em;" style="max-width: 100%;">
+																						<p style="max-width: 100%;min-height: 1em;line-height: 25.6px;"><strong style="max-width: 100%;letter-spacing: 3px;font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;color: #1A81E6;font-size: 14px;line-height: 22.4px;">
+    																					<img src="img/pic_31.jpg" alt="" data-w="150" style="color: rgb(62, 62, 62);visibility: visible !important;width: 150px !important;" width="auto"  /></span></strong></strong><span style="max-width: 100%;color: #1A81E6;font-size: 14px;white-space: pre-wrap;"></span>
+																						</p>
+																						<p style="max-width: 100%;min-height: 1em;font-size: 14px;list-style-type: none;-webkit-padding-start: 0px;-webkit-margin-before: 0px;-webkit-margin-after: 0px;letter-spacing: 3px;color: rgb(160, 160, 160);">
+																							<span style="max-width: 100%;letter-spacing: 1px;"><strong style="max-width: 100%;color: rgb(62, 62, 62);font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;color: #1A81E6;font-size: 14px;line-height: 22.4px;"><strong style="max-width: 100%;color: rgb(62, 62, 62);font-size: 12px;line-height: 25.6px;overflow-wrap: break-word !important;"><strong style="max-width: 100%;line-height: 22.4px;"><span style="max-width: 100%;font-size: 14px;line-height: 22.4px;overflow-wrap: break-word !important;">- THE END -</span></strong>
+																							</strong>
+																							</span>
+																							</strong>
+																							</strong>
+																							</span>
+																						</p>
+																					</section>
+																				</section>
+																			</section>
+																		</section>
+																	</section>
+																</section>
+															</section>
+														</section>
+													</section>
+
+												</section>
+											</section>
+										</section>
+									</section>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

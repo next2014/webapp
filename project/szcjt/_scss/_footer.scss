@@ -1,0 +1,192 @@
+/* 底部导航 */
+
+.foot_nav_met_11_2_8 {
+    padding:32px 0 32px;
+    background-color:#005e9a;
+    border-color:#f0f2f5
+}
+@media(max-width:768px) {
+    .foot_nav_met_11_2_8 {
+        padding:50px 0 32px
+    }
+}
+@media(max-width:767px) {
+    .foot_nav_met_11_2_8 {
+        padding:20px 0 32px
+    }
+}
+.foot_nav_met_11_2_8 .list {
+    margin-bottom:20px
+}
+.foot_nav_met_11_2_8 .list h4 {
+    text-align: left;
+    font-size:14px;
+    margin:0px;
+    text-shadow:none;
+    padding:0 0 14px;
+    // color:#333333;
+    color:#ffffff
+}
+.foot_nav_met_11_2_8 .list h4 a {
+    // color:#333333;
+    color:#ffffff;
+    transition:color 0.2s ease-out
+}
+.foot_nav_met_11_2_8 .list h4 a:hover {
+    // color:#cc3333;
+    color:#8eddff
+}
+.foot_nav_met_11_2_8 .list h4 i {
+    display:none
+}
+.foot_nav_met_11_2_8 .list ul li {
+    /* overflow:hidden; */
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    position:relative;
+    /* text-align:center; */
+    text-align: left;
+    padding:0;
+    margin-bottom:3px;
+    color:#666666;
+    // border-bottom:1px solid #dddddd;
+    color:#8eddff
+}
+.foot_nav_met_11_2_8 .list ul li a {
+    font-size:12px;
+    // color:#666666;
+    color:#8eddff;
+    padding:6px 0;
+    transition:color 0.2s ease-out
+}
+.foot_nav_met_11_2_8 .list ul li a i {
+    font-size:13px;
+    padding-right:5px;
+    width:20px;
+    height:20px
+}
+.foot_nav_met_11_2_8 .list ul li a:hover {
+    // color:#cc3333;
+    color:#8eddff
+}
+.foot_nav_met_11_2_8 .info {
+    text-align:right
+}
+.foot_nav_met_11_2_8 .info .foot-tel {
+    font-size:30px;
+    text-shadow:none;
+    // color:#333333;
+    color:#ffffff;
+    display:block
+}
+.foot_nav_met_11_2_8 .info p {
+    // color:#666666;
+    color:#8eddff;
+    font-size:13px
+}
+.foot_nav_met_11_2_8 .info .btn-message {
+    float:right;
+    width:102px;
+    height:32px;
+    line-height:32px;
+    background-color:#f5f5f5;
+    cursor:pointer;
+    font-size:14px;
+    padding:0 0 0 26px;
+    text-align:left;
+    color:#cc3333;
+    border:1px solid #f5f5f5;
+    border-radius:5px;
+    box-sizing:content-box;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    transition:all .3s ease
+}
+.foot_nav_met_11_2_8 .iconimg {
+    margin-bottom:2px;
+    margin-right:1px;
+    max-width:20px
+}
+.foot_nav_met_11_2_8 .iconul li {
+    text-align:left !important;
+    padding-left:12px !important
+}
+@media (max-width:991px) {
+    .foot_nav_met_11_2_8 .list {
+        margin-bottom:20px
+    }
+    .foot_nav_met_11_2_8 .info {
+        text-align:center
+    }
+    .foot_nav_met_11_2_8 .info .btn-message {
+        float:none;
+        margin:8px auto;
+        display:block
+    }
+}
+@media (max-width:767px) {
+    .foot_nav_met_11_2_8 .container {
+        padding:0
+    }
+    .foot_nav_met_11_2_8 .nav-list {
+        padding:0
+    }
+    .foot_nav_met_11_2_8 .list {
+        margin:0;
+        padding:0
+    }
+    .foot_nav_met_11_2_8 .list h4 {
+        line-height:1;
+        text-align:left;
+        position:relative;
+        padding:0;
+        border-bottom:1px solid #eeeeee
+    }
+    .foot_nav_met_11_2_8 .list h4 a {
+        display:block;
+        padding:13px 12px 13px 18px
+    }
+    .foot_nav_met_11_2_8 .list h4 i {
+        display:block;
+        font-size:12px;
+        color:#666666;
+        color:#8eddff;
+        transition:all 0.3s ease-out;
+        position:absolute;
+        top:13px;
+        right:10px
+    }
+    .foot_nav_met_11_2_8 .list ul li {
+        text-align:left;
+        padding:13px 12px 13px 18px
+    }
+    .foot_nav_met_11_2_8 .list ul li:after {
+        content:"";
+        width:calc(80%);
+        height:2px;
+        background:#eeeeee;
+        position:absolute;
+        bottom:0;
+        -webkit-transform:scaleY(0.333333);
+        transform:scaleY(0.333333);
+        -webkit-transform-origin:center top;
+        transform-origin:center top;
+        left:15px
+    }
+    .foot_nav_met_11_2_8 .list ul li a {
+        padding:6px 0
+    }
+    .foot_nav_met_11_2_8 .list ul {
+        background-color:#ffffff;
+    }
+    .foot_nav_met_11_2_8 .info {
+        padding:15px;
+        text-align:left
+    }
+    .foot_nav_met_11_2_8 .info .btn-message {
+        float:left
+    }
+    .foot_nav_met_11_2_8 .info .foot-tel {
+        font-size:24px
+    }
+}
