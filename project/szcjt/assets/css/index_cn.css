@@ -405,7 +405,7 @@ footer .met-langlist{margin-top:10px}
 .service_list_met_11_5_7 .tab-detail img{margin-bottom:20px}
 .service_list_met_11_5_7 .service-list .nav-tabs-div,.service_list_met_11_5_7 .single-list{height:auto}
 }
-.team_list_met_11_4_41{padding:0;position:relative;padding:70px 0}
+.team_list_met_11_4_41{padding:0;position:relative;padding:60px 0}
 .team_list_met_11_4_41 .team-bg{width:100%;position:absolute;left:0;top:0;height:100%}
 .team_list_met_11_4_41 .team-bg img{width:100%;position:absolute;left:0;top:0;height:100%}
 @media (max-width:991px){.team_list_met_11_4_41 .team-bg{padding:20px 0}
@@ -463,4 +463,13 @@ footer .met-langlist{margin-top:10px}
 .foot_nav_met_11_2_8 .info{padding:15px;text-align:left}
 .foot_nav_met_11_2_8 .info .btn-message{float:left}
 .foot_nav_met_11_2_8 .info .foot-tel{font-size:24px}
+}
+
+@media (max-width:479px){
+  .rightNav{
+     position: absolute;
+     top: 45px;
+     left: 0px;
+     background: rgb(255, 255, 255);
+   }
 }
