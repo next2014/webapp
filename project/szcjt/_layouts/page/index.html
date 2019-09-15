@@ -8,107 +8,85 @@ title: 狮子城集团
 <!-- 大轮播广告图 -->
 {% include swiper.html %}
 
-<!-- 新闻动态 -->
-<section class="notice_list_met_11_1_4 text-xs-left" m-id="4" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-    <div class="container">
-        <div class="notice clearfix">
-            <span class="notice-title">新闻动态：</span>
-            <div class="notice-swiper swiper-container-vertical">
-                <ul class="notice-ul">
-                    <li class="notice-li swiper-slide-duplicate" data-swiper-slide-index="4" style="height: 38px;">
-                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span class="time">2018-03-19</span></a>
-                    </li>
-                    <li class="notice-li" data-swiper-slide-index="0" style="height: 38px;">
-                        <a href="" title="" target="_self">以开放型经济新体制推动经济持续健康发展 <span class="time">2019-03-08</span></a>
-                    </li>
-                    <li class="notice-li" data-swiper-slide-index="1" style="height: 38px;">
-                        <a href="" title="" target="_self">环保部：14省市将在今年底前完成生态红线划定 <span class="time">2019-03-08</span></a>
-                    </li>
-                    <li class="notice-li" data-swiper-slide-index="2" style="height: 38px;">
-                        <a href="" title="" target="_self">两会访谈丨邹磊：创新为了电力绿色消费 <span class="time">2018-03-19</span></a>
-                    </li>
-                    <li class="notice-li swiper-slide-prev" data-swiper-slide-index="3" style="height: 38px;">
-                        <a href="" title="" target="_self">书记会见镇江市市委书记惠建林一行 <span class="time">2018-03-19</span></a>
-                    </li>
-                    <li class="notice-li swiper-slide-active" data-swiper-slide-index="4" style="height: 38px;">
-                        <a href="" title="" target="_self">集团召开2017年瘦身健体提质增效专题工作会 <span class="time">2018-03-19</span></a>
-                    </li>
-                    <li class="notice-li swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="height: 38px;">
-                        <a href="" title="" target="_self">以开放型经济新体制推动经济持续健康发展 <span class="time">2019-03-08</span></a>
-                    </li>
-                </ul>
-            </div>
-            <a class="notice-more pull-xs-right" title="" href="" target="_self">
-                <i class="fa fa-share-square-o"></i>
-            </a>
-        </div>
-    </div>
-</section>
+<!-- 新闻动态 公告-->
+{% include swiper-scroll.html %}
 
 <!-- 集团新闻  -->
 <section class="news_list_met_11_5_5  text-xs-left ulstyle">
     <div class="container">
         <!-- 左侧信息列表 -->
-        <div class="left-news col-lg-7 clearfix">
-            {% include left_banner.html %}
+        <div class="left-news col-lg-8 clearfix">
+            <div class="col-lg-6 img-news" role="toolbar">
+               <img class="news-img" src="../assets/img/shipin.png" style="opacity: 1; height: 265px;" alt="狮子城视频" />
+            </div>
             <!-- 集团新闻 -->
             <div class="col-lg-6 text-news rtn">
-                <div class="head">
-                    <h2>集团要闻</h2>
-                    <a href="" title="" target="_self">更多 <i class="fa fa-angle-right"></i>
+               <div class="head">
+                <h2>狮子城活动资讯</h2>
+                <a href="" title="" target="_self">更多 <i class="fa fa-angle-right"></i>
+                </a>
+               </div>
+               <ul class="text-list">
+                <li>
+                    <a href="" title="" target="_self">
+                        <span style="">【惠州狮子城▪活动】赶走孩子“开学综合症”！本周末变身小小海洋艺术达人</span> <span class="time">03-08</span>
                     </a>
-                </div>
-                <ul class="text-list">
-                    <li>
-                        <a href="" title="" target="_self">
-                            <span style="">以开放型经济新体制推动经济持续健康发展</span> <span class="time">03-08</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            <span style="">环保部：14省市将在今年底前完成生态红线划定</span> <span class="time">03-08</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            <span style="">两会访谈丨邹磊：创新为了电力绿色消费</span> <span class="time">03-19</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="" target="_self">
-                            <span style="">书记会见镇江市市委书记惠建林一行</span> <span class="time">03-19</span>
-                        </a>
-                    </li>
-                </ul>
+                </li>
+                <li>
+                    <a href="" title="" target="_self">
+                        <span style="">【特别公告】关于项目更名的通知</span> <span class="time">03-08</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" title="" target="_self">
+                        <span style="">【送票】遇见电音节超燃回顾！本周日电音狂欢湿身加码</span> <span class="time">03-19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" title="" target="_self">
+                        <span style="">【惠州欧美城▪活动】电音节加场啦！这周日电音+泼水狂欢趴继续约定你</span> <span class="time">03-19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" title="" target="_self">
+                        <span style="">【惠州欧美城▪活动】电音节加场啦！这周日电音+泼水狂欢趴继续约定你</span> <span class="time">03-19</span>
+                    </a>
+                </li>
+               </ul>
             </div>
         </div>
         <!-- 左侧信息列表 -->
 
         <!-- 右侧信息列表 -->
-        <div class="right-news text-news col-lg-5">
+        <div class="right-news col-lg-4 text-news">
             <div class="head">
-                <h2>员工风采</h2>
+                <h2>狮子城婚博中心</h2>
                 <a href="" title="员工风采" target="_self">更多 <i class="fa fa-angle-right"></i></a>
             </div>
             <ul class="text-list">
                 <li>
                     <a href="" title="" target="_self">
-                        以开放型经济新体制推动经济持续健康发展 <span>03-08</span>
+                         珠三角婚纱摄影新贵，欧美城婚博艺术中心华丽绽放 <span>09-08</span>
                     </a>
                 </li>
                 <li>
                     <a href="" title="" target="_self">
-                        环保部：14省市将在今年底前完成生态红线划定 <span>03-08</span>
+                        点赞100万+！抖音最火网红婚礼创意玩法都在这了！说不定就有一个你能用得上！ <span>09-08</span>
                     </a>
                 </li>
                 <li>
                     <a href="" title="" target="_self">
-                        两会访谈丨邹磊：创新为了电力绿色消费 <span>03-19</span>
+                        谁说森系婚礼就不能奢华高贵？这场室内森系婚礼能一次性满足你三个愿望：奢华、浪漫、舒适 <span>09-19</span>
                     </a>
                 </li>
                 <li>
                     <a href="" title="" target="_self">
-                        书记会见镇江市市委书记惠建林一行 <span>03-19</span>
+                        最有创意的婚礼合影攻略来了！别再排排站剪刀手，婚礼合影这么玩火了整个朋友圈！ <span>09-19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" title="" target="_self">
+                        最有创意的婚礼合影攻略来了！别再排排站剪刀手，婚礼合影这么玩火了整个朋友圈！ <span>09-19</span>
                     </a>
                 </li>
             </ul>
@@ -126,13 +104,34 @@ title: 狮子城集团
         <div class="col-lg-4 single-list">
             <div class="right-list">
                 <div class="head">
-                    <h2>集团招聘</h2>
+                    <h2>人才招聘</h2>
                     <a href="">更多 <i class="fa fa-angle-right"></i></a>
                 </div>
                 <ul class="content-list">
-                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
-                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
-                    <li>岗位要求：1、有旅游景区相关品质工作者；2、组织… <a href="">详情</a></li>
+                    <li>
+                        <a href="">.NET开发工程师（1人）</a>
+                    </li>
+                    <li>
+                        <a href="">活动策划总经理（1人）</a>
+                    </li>
+                    <li>
+                        <a href="">市场人员</a>
+                    </li>
+                    <li>
+                        <a href="">营销总经理（1人）</a>
+                    </li>
+                    <li>
+                        <a href="">董事长助理（1人）</a>
+                    </li>
+                    <li>
+                        <a href="">新媒体运营（1人）</a>
+                    </li>
+                    <li>
+                        <a href="">平面设计师（1人） </a>
+                    </li>
+                    <li>
+                        <a href="">招聘职位：客服经理（1人）</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -153,7 +152,6 @@ title: 狮子城集团
                             </a>
                             <div class="content">
                                 <p class="title">缘善公益</p>
-                                <h3 class="keywords"></h3>
                                 <p class="desc">
                                     2013年9月，集团总部董事局主席吴晓翔先生（中国狮子城集团董事长、中华缘善基金会主席、香港华商慈善基金会主席）以个人名义发起并捐献人民币208万元整，成立了“广东省缘善公益基金会”同年10月经广东省民…</p>
                                 <a href="" class="more" tabindex="0">
@@ -169,9 +167,8 @@ title: 狮子城集团
                             </a>
                             <div class="content">
                                 <p class="title">格林披治</p>
-                                <h3 class="keywords"></h3>
                                 <p class="desc">
-                                    随着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头。格林披治以体育文化为导向，以双…
+                                    随着我国经济的高速发展和人民物质文化需求的增长，强身健体成为人们的生活必需和必然趋势，体育产业逐渐成为与人的健康和娱乐密切相关的现代服务业，展现出良好的发展势头。格林披治以体育文化为导向…
                                 </p>
                                 <a href="" class="more" tabindex="0">
                                     <span>了解详情</span>
@@ -185,10 +182,10 @@ title: 狮子城集团
                                 <img src="../assets/img/sz.jpg" alt="狮子城">
                             </a>
                             <div class="content">
-                                <p class="title">狮子城</p>
-                                <h3 class="keywords"></h3>
+                                <p class="title">狮子集团</p>
                                 <p class="desc">
-                                    狮子城文化创意园由狮子城集团投资并创立，项目主体公司深圳狮子城文化股份有限公司于2015年在全国中小股份转让系统挂牌上市，证券简称：狮子城，证券代码：430173。狮子城总部设在深圳，进行联盟合作招商和品…</p>
+                                    狮子控股集团有限公司（简称：狮子集团）成立于1998年11月8日，是一家从事投资及管理的公司。狮子集团旗下分五大版块同步发展，规模正处高速扩展中，分别为：投资版块：中国狮子集团有限公司/狮子控股集团…
+                                </p>
                                 <a href="" class="more" tabindex="0">
                                     <span>了解详情</span>
                                 </a>
@@ -207,6 +204,6 @@ title: 狮子城集团
 <!-- 页底 -->
 {% include footer.html %}
 
-<button type="button" class="btn btn-icon btn-primary btn-squared back_top_met_16_1_11 met-scroll-top animation-slide-bottom" m-id="11" m-type="nocontent">
+<!-- <button type="button" class="btn btn-icon btn-primary btn-squared back_top_met_16_1_11 met-scroll-top animation-slide-bottom" m-id="11" m-type="nocontent">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
-</button>
+</button> -->

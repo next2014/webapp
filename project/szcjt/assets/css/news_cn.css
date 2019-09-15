@@ -1887,11 +1887,11 @@ body.met-navfixed {
         margin:0
     }
     .news_list_page_met_28_1_39 .met-news-list .ulstyle .border-bottom1, .news_list_page_met_28_1_39 .met-news-list .ulstyle .card-shadow {
-        padding:20px
+        /* padding:20px */
+        padding:10px;
     }
     .news_list_page_met_28_1_39 .border-bottom1 .media-left a .media-object {
         margin:0 auto;
-        width:100%;
     }
 }
 .met_pager {

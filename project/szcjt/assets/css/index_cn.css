@@ -405,7 +405,7 @@ footer .met-langlist{margin-top:10px}
 .service_list_met_11_5_7 .tab-detail img{margin-bottom:20px}
 .service_list_met_11_5_7 .service-list .nav-tabs-div,.service_list_met_11_5_7 .single-list{height:auto}
 }
-.team_list_met_11_4_41{padding:0;position:relative;padding:60px 0}
+.team_list_met_11_4_41{padding:0;position:relative;padding:70px 0}
 .team_list_met_11_4_41 .team-bg{width:100%;position:absolute;left:0;top:0;height:100%}
 .team_list_met_11_4_41 .team-bg img{width:100%;position:absolute;left:0;top:0;height:100%}
 @media (max-width:991px){.team_list_met_11_4_41 .team-bg{padding:20px 0}
@@ -436,7 +436,7 @@ footer .met-langlist{margin-top:10px}
 .foot_nav_met_11_2_8 .list h4 a{color:#fff;-webkit-transition:color .2s ease-out;-o-transition:color .2s ease-out;transition:color .2s ease-out}
 .foot_nav_met_11_2_8 .list h4 a:hover{color:#8eddff}
 .foot_nav_met_11_2_8 .list h4 i{display:none}
-.foot_nav_met_11_2_8 .list ul li{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;position:relative;text-align:left;padding:0;margin-bottom:3px;color:#666;color:#8eddff}
+.foot_nav_met_11_2_8 .list ul li{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;position:relative;text-align:left;padding:0;margin-bottom:3px;color:#666;color:#8eddff;float: left;}
 .foot_nav_met_11_2_8 .list ul li a{font-size:12px;color:#8eddff;padding:6px 0;-webkit-transition:color .2s ease-out;-o-transition:color .2s ease-out;transition:color .2s ease-out}
 .foot_nav_met_11_2_8 .list ul li a i{font-size:13px;padding-right:5px;width:20px;height:20px}
 .foot_nav_met_11_2_8 .list ul li a:hover{color:#8eddff}
@@ -463,13 +463,4 @@ footer .met-langlist{margin-top:10px}
 .foot_nav_met_11_2_8 .info{padding:15px;text-align:left}
 .foot_nav_met_11_2_8 .info .btn-message{float:left}
 .foot_nav_met_11_2_8 .info .foot-tel{font-size:24px}
-}
-
-@media (max-width:479px){
-  .rightNav{
-     position: absolute;
-     top: 45px;
-     left: 0px;
-     background: rgb(255, 255, 255);
-   }
 }

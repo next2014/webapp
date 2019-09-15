@@ -2536,7 +2536,7 @@ a.tag:focus, a.tag:hover {
     position:relative;
     display:block;
     margin-bottom:-1px;
-    padding:.75rem 1.25rem;
+    padding:.75rem 0;
     border:1px solid transparent;
     background-color:#fff
 }
@@ -5276,7 +5276,8 @@ input::-ms-clear {
 .nav-tabs-vertical .nav-tabs {
     float:left;
     border-right:1px solid #e4eaec;
-    border-bottom:none
+    border-bottom:none;
+    height:100%;
 }
 .nav-tabs-vertical .nav-tabs .nav-item {
     float:none;
@@ -6143,15 +6144,18 @@ a .tag-pill:focus, a .tag-pill:hover {
         margin-left:0
     }
     .media .media-left {
-        margin-bottom:5px;
+        margin-bottom: 5px;
         padding-right: 0;
+        display: block;
     }
     .media .media {
         padding-left:15px
     }
-    .media-left {
-        display:block
-    }
+}
+@media (max-width:479px) {
+  .media-body h4{
+      margin-top:0;
+  }
 }
 .list-group .media {
     padding:2px 0;
