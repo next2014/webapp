@@ -5,8 +5,14 @@ title: 新闻中心
 <!-- LOGO及导航 -->
 {% include header.html %}
 
-<!-- 大轮播广告图 -->
-{% include swiper.html %}
+<!-- 单张banner图 1920X300 -->
+<div class="banner_met_11_5_2 page-bg" style="" m-id="2" m-type="banner">
+    <div class="slick-slide">
+        <img class="cover-image" src="../assets/img/1553051554.jpg" srcset="../assets/img/1553051554.jpg 767w,../assets/img/1553051554.jpg"
+            sizes="(max-width: 767px) 767px" alt="" data-height="0|0|0" data-fade="false" data-autoplayspeed="4000"
+            data-speed="1000" data-hex="|0.48" data-m="0" style="height: auto;">
+    </div>
+</div>
 
 <!-- 新闻中心 导航 -->
 <div class="subcolumn_nav_met_16_1_34 border-bottom1">
@@ -57,6 +63,7 @@ title: 新闻中心
                                 </div>
                             </li>
                         </ul>
+                        <!-- star 页码 -->
                         <div class="m-t-20 text-xs-center hidden-sm-down" m-type="nosysdata">
                             <div class="met_pager">
                                 <span class="PreSpan">上一页</span>
@@ -72,6 +79,7 @@ title: 新闻中心
                                 <span class="ladda-spinner"></span>
                             </button>
                         </div>
+                       <!-- end 页码 -->
                     </div>
                 </div>
             </div>

@@ -1,0 +1,25 @@
+{% if page.layout == "page/index" or page.layout == "page/about" or page.layout == "page/zhuti" or page.layout == "page/glpz" or page.layout == "page/szc" or page.layout == "page/rczp" or page.layout == "page/content" or  or page.layout == "page/news" %}
+<ul class="nav navbar-nav navlist">
+    <li class="nav-item">
+        <a href="index.html" title="狮子城首页" class="nav-link {% if page.layout == "page/index" %} active {% endif %}">狮子城首页</a>
+    </li>
+    <li class="nav-item">
+        <a href="about.html" title="关于狮子城" class="nav-link {% if page.layout == "page/about" %} active {% endif %}">关于狮子城</a>
+    </li>
+    <li class="nav-item">
+        <a href="zhuti.html" title="文化主题项目" class="nav-link {% if page.layout == "page/zhuti" %} active {% endif %}">文化主题项目</a>
+    </li>
+    <li class="nav-item">
+        <a href="news.html" title="狮子城新闻" class="nav-link {% if page.layout == "page/news" %} active {% endif %}">狮子城新闻</a>
+    </li>
+    <li class="nav-item">
+        <a href="szc.html" title="投掷者专栏" class="nav-link {% if page.layout == "page/szc" %} active {% endif %}">投掷者专栏</a>
+    </li>
+    <li class="nav-item">
+        <a href="rczp.html" title="人才招聘" class="nav-link {% if page.layout == "page/rczp" %} active {% endif %}">人才招聘</a>
+    </li>
+    <li class="nav-item">
+        <a href="content.html" title="联系我们" class="nav-link {% if page.layout == "page/content" %} active {% endif %}">联系我们</a>
+    </li>
+</ul>
+{% endif%}

@@ -1,0 +1,32 @@
+@media (min-width: 1600px){
+  .szcjt{
+     width: 1310px;
+   }
+  .szc{
+    width: 1310px;
+  }
+}
+.szcjt{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .9375rem;
+}
+
+.szc{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .9375rem;
+}
+
+// 新闻导航
+.subcolumn_nav_met_16_1_34-ul li{
+  display: inline-block;
+  vertical-align: top;
+}
+.subcolumn_nav_met_16_1_34-ul li > a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 16px;
+}

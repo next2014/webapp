@@ -1,0 +1,81 @@
+.foot_info_met_16_1_10 {
+    background:#ffffff;
+    color:#333333;
+    padding:20px 0px
+}
+.foot_info_met_16_1_10 a {
+    color:#333333;
+}
+.foot_info_met_16_1_10 a:hover {
+    color:#0075c1
+}
+.foot_info_met_16_1_10 .btn-outline.btn-default {
+    color:#333333;
+}
+.foot_info_met_16_1_10 .powered_by_metinfo a {
+    color:#0075c1;
+}
+.foot_info_met_16_1_10.border-top1 {
+    border-color:#f0f2f5
+}
+footer {
+    line-height:1.8
+}
+footer p {
+    margin-bottom:0px
+}
+footer .met-langlist {
+    margin-top:10px
+}
+.foot_info_met_16_1_10 .met-langlist li {
+    display:inline-block;
+    list-style:none
+}
+.foot_info_met_16_1_10 .met-langlist .btn-lang .flag-icon {
+    margin-right:3px
+}
+.foot_info_met_16_1_10 .met-langlist .dropdown-menu {
+    min-width:0;
+    width:100%;
+    background-color:#ffffff;
+    border-color:#ffffff
+}
+.foot_info_met_16_1_10 .met-langlist .dropdown-menu .dropdown-item {
+    white-space:nowrap
+}
+@media (max-width:479px) {
+    .foot_info_met_16_1_10 .met-langlist .btn-lang {
+        padding-left:5px;
+        padding-right:5px
+    }
+}
+.foot_info_met_16_1_10_bottom {
+    overflow:hidden;
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:999;
+    width:100%
+}
+.foot_info_met_16_1_10_bottom a.item {
+    color:#ffffff;
+    padding:5px 0;
+    display:inline-block
+}
+.foot_info_met_16_1_10_bottom a.item i {
+    color:#ffffff;
+    font-size:16px;
+    display:block
+}
+.foot_info_met_16_1_10_bottom {
+    display:none
+}
+.foot_info_met_16_1_10_bottom.iskeshi {
+    display:block
+}
+.foot_info_met_16_1_10_bottom .main {
+    display:flex
+}
+.foot_info_met_16_1_10_bottom .main>div {
+    flex:1
+}

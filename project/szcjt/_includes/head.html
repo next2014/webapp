@@ -1,7 +1,10 @@
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/index_cn.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/index_cn.css">
+{% if page.layout == "page/zhuti" %}
+<link rel="stylesheet" type="text/css" href="../assets/css/img_cn1.css">
+{% endif %}
 {% if page.layout == "page/news" %}
 <link rel="stylesheet" type="text/css" href="../assets/css/news_cn.css">
 {% endif %}
@@ -12,12 +15,12 @@
 <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/met_temdemo.js"></script>
 <style>
-@media (min-width:768px) {
+@media (max-width:768px) {
     .carousel {
-        min-width:1150px;
+        max-width:1150px;
     }
 }
-@media (min-width:414px) {
+@media (max-width:414px) {
     .navbar-nav {
         padding-top:50px;
     }
