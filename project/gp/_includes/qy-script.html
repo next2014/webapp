@@ -3,7 +3,7 @@
 <script src="../static/js/bootstrap.min.js"></script>
 <script src="../static/js/jquery-weui.js"></script>
 <!-- Select ticket type -->
-{% if page.layout == "pages/OrderDetails" or page.layout == "pages/eTicket" or page.layout == "pages/ticketDetailsNew" %}
+{% if page.layout == "pages/OrderDetails" or page.layout == "pages/eTicket" or page.layout == "pages/ticketDetailsNew" or page.layout == "pages/ticketDetailsNew1" or page.layout == "pages/ticketDetailsNew2" %}
 <script src="../static/js/political_WeCall.js"></script>
 <script src="../static/js/mobiscroll.jquery.min.js"></script>
 {% endif %}
@@ -86,7 +86,7 @@ $('#remove').click(function () {
         })
 </script> -->
 {% endif %}
-{% if page.layout == "pages/ticketDetailsNew" %}
+{% if page.layout == "pages/ticketDetailsNew" or page.layout == "pages/ticketDetailsNew1" or page.layout == "pages/ticketDetailsNew2" %}
 <script src="../static/js/Validform_v5.3.2_min.js"></script>
 <script src="../static/js/layui.all.js" type="text/javascript" charset="utf-8"></script>
 <script>

@@ -39,3 +39,19 @@
 .ti_words ul li.current {
 	display: block;
 }
+
+.changCi{
+	text-align: right;
+	label{
+		margin-bottom:10px!important;
+		padding:0 10px;
+		font-size: 14px;
+		width: 80px;
+		&:last-child{
+			margin-bottom: 0!important;
+		}
+		&:nth-last-child(2){
+			margin-bottom: 0!important;
+		}
+	}
+}

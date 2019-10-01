@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "固定流程管理",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "分支流程管理",
+    "url": " "
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "流程转派",
+    "url": " "
+  }
+]

@@ -40,8 +40,20 @@ title: 选择票种
 		</div> -->
 		<div class="tab">
 			<a href="javascript:;" class="item cur">全部 </a>
-			<a href="javascript:;" class="item" id="pickerBtn">选票类型 <i class="fa fa-angle-down"></i></a>
+			<a href="javascript:;" class="item dropdown-toggle" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">海洋世界</a>
+				<a class="dropdown-item" href="#">婚博中心</a>
+				<a class="dropdown-item" href="#">卡丁车馆</a>
+				<a class="dropdown-item" href="#">真人CS体验馆</a>
+				<a class="dropdown-item" href="#">园区活动</a>
+				<a class="dropdown-item" href="#">奇奇主题酒店</a>
+			</div>
+			<!-- 底部选票类型 -->
+			<!-- <a href="javascript:;" class="item dropdown-toggle" id="pickerBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型 <i class="fa fa-angle-down"></i></a> -->
 		</div>
+
+		<!-- 票的列表模板 -->
 		<!-- <div class="content">
 			<div class="lists"></div>
 			<div class="lists"></div>
@@ -53,7 +65,7 @@ title: 选择票种
 				<h3 class="pt-2 pl-2 pr-2"><strong>最新活动门票</strong></h3>
 				<ul class="lists">
 					{% for ticket in site.data.ticket3 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
 						<div class="in_fl tic_img">
 							<img src="{{ticket.GetImage}}" alt=" ">
 						</div>
@@ -77,7 +89,7 @@ title: 选择票种
 				<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界门票</strong></h3>
 				<ul class="lists">
 					{% for ticket in site.data.ticket1 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
 						<div class="in_fl tic_img">
 							<img src="{{ticket.GetImage}}" alt=" ">
 						</div>

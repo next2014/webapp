@@ -17,3 +17,13 @@
   zType1: 身份证入园
   zType2: 可订当日
   zType3: 核验准考证
+
+- GetImage: static/images/home1/hd3.png
+  GetTypeColor: primary
+  GetType: 成人票
+  GetTitle: 大马戏
+  GetPrick: 98.00
+  YuanPrick: 98.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 核验准考证

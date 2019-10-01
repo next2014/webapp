@@ -12,7 +12,7 @@
         display: block;
         flex: 1;
         width: 100%;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         color: #333;
         text-decoration: none;
@@ -131,9 +131,11 @@
             font-size:$font-16;
             font-weight: bold;
             color:#342c2a;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             height: 30px;
             line-height: 30px;
-            // line-height: rem(80.5);
         }
         p{
             width: 100%;
@@ -168,3 +170,26 @@
  .btn-link:focus, .btn-link.focus{
     text-decoration: none;
  }
+ .dropdown-menu{
+    right: 0;
+    font-size: 14px;
+ }
+.dropdown-item{
+    padding-top:0!important;
+    padding-bottom:0!important; 
+}
+@media (min-width:320px) {
+    .dropdown-menu{
+       top: 74% !important
+     }
+}
+@media (min-width:370px) {
+    .dropdown-menu{
+       top: 69% !important
+     }
+}
+@media (min-width:414px) {
+   .dropdown-menu{
+      top: 63%!important;
+    }
+}
