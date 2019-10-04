@@ -398,8 +398,10 @@ legend{color:#000}
 .w_up h2 span.current{background:#3fbbef;color:#fff}
 .ti_words ul li{display:none;height:auto}
 .ti_words ul li.current{display:block}
-.changCi{text-align:right}
+.changCi{text-align:right;font-size:18px!important;color:#dc3545!important;padding-right:15px}
 .changCi label{margin-bottom:10px!important;padding:0 10px;font-size:14px;width:80px}
 .changCi label:last-child{margin-bottom:0!important}
 .changCi label:nth-last-child(2){margin-bottom:0!important}
+.picker-item{height:45px;line-height:45px;font-size:18px}
+.toolbar .picker-button,.toolbar .title{font-size:18px!important}
 .ticket-item{padding:10px;border:1px solid #ddd;overflow:hidden}

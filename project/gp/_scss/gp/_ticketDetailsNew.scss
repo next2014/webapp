@@ -42,6 +42,9 @@
 
 .changCi{
 	text-align: right;
+	font-size:18px!important;
+	color:#dc3545!important;
+	padding-right:15px;
 	label{
 		margin-bottom:10px!important;
 		padding:0 10px;
@@ -53,5 +56,17 @@
 		&:nth-last-child(2){
 			margin-bottom: 0!important;
 		}
+	}
+}
+
+.picker-item{
+	height: 45px;
+	line-height: 45px;
+	font-size: 18px;
+}
+
+.toolbar{
+	.title,.picker-button{
+	  font-size: 18px!important;
 	}
 }

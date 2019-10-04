@@ -271,6 +271,32 @@ $('#remove').click(function () {
 </script>
 {% include components/swiper/qySwiperJs.html %}
 {% endif %}
+{% if page.layout == "pages/ticketDetailsNew1" %}
+<script>
+    $("#changci").picker({
+        title: "选择场次",
+        cols: [
+            {
+            textAlign: 'center',
+            values: ['全场次']
+            }
+        ]
+    });
+</script>
+{% endif %}
+{% if page.layout == "pages/ticketDetailsNew2" %}
+<script>
+    $("#changci").picker({
+        title: "选择场次",
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['11点场','17点场','19点30场']
+          }
+        ]
+    });
+</script>
+{% endif %}
 {% if page.layout == "pages/ticketConfirm" %}
 <script src="../static/js/political_WeCall.js"></script>
 <!-- <script src="../static/js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->

@@ -23,5 +23,13 @@
             prevEl: '.swiper-button-prev',
         }
     });
+    var announcementSwiper = new Swiper('.announcement', {
+        direction: 'vertical',
+		loop: true, 
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    })
 </script>
 {% endif %}
