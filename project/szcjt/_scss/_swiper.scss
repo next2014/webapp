@@ -1,0 +1,23 @@
+//资讯公告
+.slider{
+    font-size:14px;
+    height: auto!important;
+    margin:10px 0;
+    a{
+        text-decoration:none;
+    }
+}
+.announcement {
+    height:40px;
+    overflow: hidden;
+    a{
+     color:#294c7f;
+     text-decoration:none;
+     display:block;
+     line-height:40px;
+     height:40px;
+     text-indent:1em;
+     overflow:hidden;
+     font-size:14px;
+    }
+}
