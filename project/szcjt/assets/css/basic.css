@@ -378,16 +378,12 @@ pre code{font-size:inherit;padding:0;color:inherit;-webkit-border-radius:0;borde
 @media (min-width:480px){.container{width:606px}
 }
 @media (min-width:768px){.container{width:750px}
-.collapse{display:block!important}
 }
 @media (min-width:992px){.container{width:970px}
-.collapse{display:block!important}
 }
 @media (min-width:1200px){.container{width:1170px}
-.collapse{display:block!important}
 }
 @media (min-width:1600px){.container{width:1310px}
-.collapse{display:block!important}
 }
 .container-fluid{margin-right:auto;margin-left:auto;padding-right:.9375rem;padding-left:.9375rem}
 .container-fluid::after{display:table;clear:both;content:''}

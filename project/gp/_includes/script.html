@@ -3,9 +3,11 @@
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/jquery-weui.js"></script>
 <!-- Select ticket type -->
-{% if page.layout == "index" %}
+{% if page.layout == "list" or page.layout == "index" %}
 <script src="static/js/swiper.js"></script>
 {% include components/swiper/swiperjs.html %}
+{% endif %}
+{% if page.layout == "list"%}
 {% include fastclickjs.html %}
 <script src="static/js/weui.min.js"></script>
 <script>

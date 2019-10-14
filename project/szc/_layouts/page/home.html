@@ -6,30 +6,29 @@ title: 狮子城
 <div id="header" class="index_nav mini">
   <div class="content">
     <a href="" id="logo"><img src="../assets/img/pc_logo.png" height="40"></a>
-    <!-- <a href="" id="logo"><img src="../assets/img/1479704672537.png" height="40"></a> -->
     <ul id="nav">
       <li class="navitem"><a class="nav-a  active " href="" target="_self"><span
             data-title="首页">首页</span></a></li>
-      <li class="navitem"><a class="nav-a " href="http://mo004_1164.mo4.line1.uemo.net/project/" target="_self"><span
+      <li class="navitem"><a class="nav-a " href="" target="_self"><span
             data-title="产品与服务">产品与服务</span></a></li>
       <li class="navitem"><a class="nav-a " href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i
             class="fa fa-angle-down"></i></a>
         <ul class="subnav" style="top: 32px; left: -32.5px;">
-          <li><a href="http://mo004_1164.mo4.line1.uemo.net/page/18196/" target="_self"><span
+          <li><a href="" target="_self"><span
                 data-title="品牌故事">品牌故事</span><i class="fa fa-angle-right"></i></a></li>
-          <li><a href="http://mo004_1164.mo4.line1.uemo.net/videom/" target="_self"><span
+          <li><a href="" target="_self"><span
                 data-title="视频宣传">视频宣传</span><i class="fa fa-angle-right"></i></a></li>
         </ul>
       </li>
-      <li class="navitem"><a class="nav-a " href="http://mo004_1164.mo4.line1.uemo.net/service/" target="_self"><span
+      <li class="navitem"><a class="nav-a " href="" target="_self"><span
             data-title="企业理念">企业理念</span></a></li>
-      <li class="navitem"><a class="nav-a " href="http://mo004_1164.mo4.line1.uemo.net/team/" target="_self"><span
+      <li class="navitem"><a class="nav-a " href="" target="_self"><span
             data-title="职业发展">职业发展</span></a></li>
-      <li class="navitem"><a class="nav-a " href="http://mo004_1164.mo4.line1.uemo.net/news/" target="_self"><span
+      <li class="navitem"><a class="nav-a " href="" target="_self"><span
             data-title="新闻动态">新闻动态</span></a></li>
-      <li class="navitem"><a class="nav-a " href="http://mo004_1164.mo4.line1.uemo.net/page/18199/"
+      <li class="navitem"><a class="nav-a " href=""
           target="_self"><span data-title="联系我们">联系我们</span></a></li>
-      <li class="navitem"> <a href="http://www.uemo.net/" target="_blank"> <span data-title="返回UEmo">返回UEmo</span>
+      <li class="navitem"> <a href="" target="_blank"> <span data-title="返回">返回</span>
         </a></li>
     </ul>
     <div class="clear"></div>
@@ -39,46 +38,10 @@ title: 狮子城
 <div id="sitecontent">
   <div id="indexPage">
 
-    <div id="mslider" class="module" style="height: 720px;">
-      <script type="text/javascript">$(function () { $("#mslider li video").each(function (index, element) { element.play(); }); })</script>
-      <div class="bx-wrapper" style="max-width: 100%;">
-        <div class="bx-viewport" style="position: relative; overflow: hidden; width: 100%;">
-          <div class="bx-loading"></div>
-          <ul class="slider" data-options-height="720" data-options-auto="0" data-options-mode="0" data-options-pause="4" data-options-ease="ease-out"
-            style="position: relative; width: 415%; transition-timing-function: ease-out;">
-            <li style="background-image: url('http://resources.jsmo.xin/templates/upload/1164/201806/1528352315377.png'); height: 720px; list-style: none; position: relative; float: left; width: 1869px;" class="active">
-              <div id="tempImage_0"></div><img style="display:none" src="../assets/img/1528352315377.png" alt="">
-              <div class="mask"></div><a target="_blank" href="javascript:;">
-                <div>
-                  <p class="title ellipsis"></p>
-                </div>
-                <div class="sliderArrow fa fa-angle-down"></div>
-              </a>
-            </li>
-            <li style="background-image: url('http://resources.jsmo.xin/templates/upload/1164/201806/1528352325458.png'); height: 720px; list-style: none; position: relative; float: left; width: 1869px;">
-              <div id="tempImage_1"></div><img style="display:none" src="../assets/img/1528352325458.png" alt="">
-              <div class="mask"></div><a target="_blank" href="javascript:;">
-                <div>
-                  <p class="title ellipsis"></p>
-                </div>
-                <div class="sliderArrow fa fa-angle-down"></div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="bx-controls bx-has-pager bx-has-controls-direction">
-          <div class="bx-pager bx-default-pager">
-            <div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div>
-            <div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div>
-          </div>
-          <div class="bx-controls-direction">
-            <a class="bx-prev" href=""><i class="fa fa-angle-left"></i></a>
-            <a class="bx-next" href=""><i class="fa fa-angle-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- 轮播图片 -->
+    {% include swiper.html %}
+    
+    <!--  -->
     <div id="mproject" class="module">
       <div class="bgmask"></div>
       <div class="content layoutnone">
@@ -403,8 +366,7 @@ title: 狮子城
     </div>
 
     <!--mcounter-->
-    <div id="mpage" class="module bgShow"
-      style="background-image: url(&quot;//resources.jsmo.xin/templates/upload/1164/201712/1512119755964.jpg&quot;); background-position: center 954.5px;">
+    <div id="mpage" class="module bgShow" style="background-image: url(&quot;//resources.jsmo.xin/templates/upload/1164/201712/1512119755964.jpg&quot;); background-position: center 954.5px;">
       <div class="bgmask"></div>
       <div class="content">
         <div class="module-content">
@@ -435,8 +397,7 @@ title: 狮子城
       </div>
     </div>
 
-    <div id="mteam" class="module bgShow"
-      style="background-image: url(&quot;//resources.jsmo.xin/templates/upload/1164/201712/1512114621251.jpg&quot;); background-position: center 1226.5px;">
+    <div id="mteam" class="module bgShow" style="background-image: url(&quot;//resources.jsmo.xin/templates/upload/1164/201712/1512114621251.jpg&quot;); background-position: center 1226.5px;">
       <div class="bgmask"></div>
       <div class="content layoutslider">
         <div class="header wow animated" style="visibility: visible;">

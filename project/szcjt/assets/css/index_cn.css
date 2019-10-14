@@ -237,7 +237,7 @@ footer .met-langlist{margin-top:10px}
 .service_list_met_11_5_7 .service-list .column-3 a{color:#333;font-size:15px}
 .service_list_met_11_5_7 .service-list .column-3 a:before{position:absolute;content:'';height:14px;width:3px;background:#c33;left:0;top:5px}
 .service_list_met_11_5_7 .single-list{height:300px;overflow:hidden;padding:0;overflow:hidden;background-color:#fff;-webkit-border-radius:2px;border-radius:2px;border:1px solid;border-color:#666;border-color:#e7eaf1;-webkit-box-shadow:0 1px 3px rgba(0,37,55,.05);box-shadow:0 1px 3px rgba(0,37,55,.05);padding:0}
-.service_list_met_11_5_7 .single-list .content-list li{height:40px;overflow:hidden;line-height:38px;position:relative;padding:0 15px;text-align:left;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+.service_list_met_11_5_7 .single-list .content-list li{height:40px;overflow:hidden;line-height:30px;position:relative;padding:0 15px;text-align:left;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .service_list_met_11_5_7 .single-list li a{height:100%;max-width:270px;overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;color:#333;-webkit-transition:color .5s ease-out;-o-transition:color .5s ease-out;transition:color .5s ease-out}
 .service_list_met_11_5_7 .single-list li a:hover{color:#c33}
 .service_list_met_11_5_7 .single-list li span{position:absolute;right:15px;color:#666}

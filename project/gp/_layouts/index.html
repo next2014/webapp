@@ -1,165 +1,70 @@
 ---
 layout: default
-title: 选择票种
+title: 惠州狮子城
 ---
-<div class="home">
- <div class="index_all">
-	<!-- S 轮播 -->
-	{% include components/swiper/swiper.html %}
-	<!-- E 轮播 -->
-
-    <!-- S 园区公告 -->
-    <!-- <div class="mod_bbs border-bottom" style="display:flex;">
-			  <div style="width:60px;display: flex;align-items: center;justify-content: center;padding:0 5px">
-				    <img src="static/images/yun_wap_gg.png" style="width:50px;" alt=""/>
-				</div>
-        <section class="mod_bbs_msg">
-            {% include components/swiper/swiper1.html %}
-        </section>
-		</div> -->
-		<ul>
-			<li class="m-1" style="width:auto!important">
-			  <div class="alert alert-warning p-2 mb-0" role="alert">
-				<h1 class="alert-heading text-center">特别公告 <img src="static/images/new.png" alt="" style="width:30px;vertical-align: middle;padding-bottom: 5px;"/></h1>
-				<h2 class="mb-2">亲爱的游客朋友们：</h2>
-				<p class="pb-2 text-justify">　　为回馈广大游客对欧美城的关注与喜爱，欧美城将于2019年3月23日-24日推出重磅的海洋馆门票特价优惠活动......</p>
-				<hr class="mt-1 mb-1">
-				<p class="mb-0 text-right">
-					 <small data-toggle="modal" data-target="#exampleModalScrollable">点击详情 >></small>
-				</p></div>
-			</li>
-		</ul>
-    <!-- E 园区公告 -->
-
-		<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
-		<!-- <div class="ticket">
-			<h3><strong>海洋世界门票</strong></h3>
-			<div class="content">
-				<ul class="lists"></ul>
-			</div>
-		</div> -->
-		<div class="tab">
-			<a href="javascript:;" class="item cur">全部 </a>
-			<a href="javascript:;" class="item dropdown-toggle" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型</a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">海洋世界</a>
-				<a class="dropdown-item" href="#">婚博中心</a>
-				<a class="dropdown-item" href="#">卡丁车馆</a>
-				<a class="dropdown-item" href="#">真人CS体验馆</a>
-				<a class="dropdown-item" href="#">园区活动</a>
-				<a class="dropdown-item" href="#">奇奇主题酒店</a>
-			</div>
-			<!-- 底部选票类型 -->
-			<!-- <a href="javascript:;" class="item dropdown-toggle" id="pickerBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型 <i class="fa fa-angle-down"></i></a> -->
-		</div>
-
-		<!-- 票的列表模板 -->
-		<!-- <div class="content">
-			<div class="lists"></div>
-			<div class="lists"></div>
-		</div> -->
-
-		<!-- start 开始 -->
-		<div class="ticket" id="ticket">
-			<div class="content">
-				<h3 class="pt-2 pl-2 pr-2"><strong>最新活动门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket3 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket1 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket2 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-		<!-- end 结束 -->
-	</div>
+<!-- S 轮播 -->
+{% include components/swiper/swiper.html %}
+<!-- E 轮播 -->
+<!-- s 项目模块 -->
+<div class="ticketbox">
+   <!-- <div class="weui-flex">
+        <div class="weui-flex__item">
+            <div class="placeholder" style="height:150px">最新活动</div>
+            <div class="placeholder" style="height:200px">在线购票</div>
+            <div class="placeholder" style="height:150px">奇奇主题酒店</div>
+        </div>
+        <div class="weui-flex__item">
+            <div class="placeholder" style="height:150px">美食天地</div>
+            <div class="placeholder" style="height:130px">游玩推荐</div>
+            <div class="placeholder" style="height:120px">休闲娱乐</div>
+            <div class="placeholder" style="height:100px">联票</div>
+        </div>
+   </div> -->
+    <div class="weui-grids">
+        <a href="list.html" class="weui-grid js_grid bgcolor_newhd">
+            <h2 class="weui-grid__label">最新活动</h2>
+            <div class="weui-grid__icon" style="margin-right:10px;">
+            <img src="static/images/icon_newhd.png" alt="">
+            </div>
+        </a>
+        <a href="list.html" class="weui-grid js_grid bgcolor_mstd">
+            <h2 class="weui-grid__label">美食天地</h2>
+            <div class="weui-grid__icon">
+              <img src="static/images/icon_mstd.png" alt="">
+            </div>
+        </a>
+        <div class="weui-grid js_grid zxbox">
+            <a href="list.html" class="bgcolor_zxgp">
+                <h2 class="weui-grid__label">在线购票</h2>
+                <div class="weui-grid__icon" style="width:100px;height:100px;margin-top:10px;">
+                    <img src="static/images/icon_zxgp.png" alt="">
+                </div>
+            </a>
+            <a href="list.html" class="bgcolor_qqjd">
+                <h2 class="weui-grid__label">奇奇主题酒店</h2>
+                <div class="weui-grid__icon" style="width:100px;height:100px;margin-top:10px;">
+                <img src="static/images/icon_qqjd.png" alt="">
+                </div>
+            </a>
+        </div>
+        <a href="list.html" class="weui-grid js_grid bgcolor_ywtj">
+            <h2 class="weui-grid__label">游玩推荐</h2>
+            <div class="weui-grid__icon">
+            <img src="static/images/icon_ywtj.png" alt="">
+            </div>
+        </a>
+        <a href="list.html" class="weui-grid js_grid bgcolor_xxyl">
+            <h2 class="weui-grid__label">休闲娱乐</h2>
+            <div class="weui-grid__icon">
+            <img src="static/images/icon_xxyl.png" alt="">
+            </div>
+        </a>
+        <a href="list.html" class="weui-grid js_grid bgcolor_lp">
+            <h2 class="weui-grid__label">联票</h2>
+            <div class="weui-grid__icon">
+            <img src="static/images/icon_lp.png" alt="">
+            </div>
+        </a>
+    </div>
 </div>
-
-
-<!-- 园区公告 -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-scrollable" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalScrollableTitle">特别公告</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<p class="text-justify">
-						<span class="pb-1">亲爱的游客朋友们：</span><br/>　　为回馈广大游客对欧美城的关注与喜爱，欧美城将于2019年3月23日-24日推出重磅的海洋馆门票特价优惠活动。园区当天营业时间更改为09:00-21:00，欢迎广大游客前来一同分享快乐小城的故事。另活动当天欧美城恢复园区大门票收费标准30元/人，大门票可用于现场抵扣欧美城海洋世界门票费用。<br/>　　
-						即日起-2019年3月25日（周一），婚博艺术中心欧美街9号将进行升级优化，暂停开放，具体恢复时间将另行通知。原只面向专业摄影机构开放的婚博艺术中心三楼室内专业拍摄基地将于即日起-2019年3月22日（周五）向公众开放，在此期间，凡购买了婚博艺术中心欧美街9号门票或联票的游客，均可前往室内拍摄基地参观游玩。如造成不便，敬请谅解。
-				</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
-			</div>
-		</div>
-	</div>
-</div>
+<!-- e 项目模块 -->

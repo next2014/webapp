@@ -11,7 +11,7 @@
 <body>
     {% include common/header.html %}
     {{ content }}
-    {% if page.layout == "index" or page.layout == "ticketList" or page.layout == "shoppingNew" %}
+    {% if page.layout == "list" or page.layout == "ticketList" or page.layout == "shoppingNew" %}
        {% include common/menu.html %}
     {% endif %}
     {% include script.html %}
