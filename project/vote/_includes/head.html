@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>欧美城 · 服务之星</title>
+<title>狮子城· 服务之星评选</title>
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/font.css">
 <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/css/common2.css">
-{% if page.layout == "home" %}
+{% if page.layout == "index" %}
 <link rel="stylesheet" href="assets/css/index.css">
 <style>
 .modal-title{
@@ -31,7 +31,39 @@
 {% endif %}
 {% if page.layout == "rule" %}
 <link rel="stylesheet" href="assets/css/rule.css">
+{% endif %}
+<link rel="stylesheet" href="src/css/layui.css">
 <style>
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.layui-upload-img {
+    width: 92px;
+    height: 92px;
+    margin: 0 10px 10px 0;
+}
+.nameCoupon1 {
+    padding: 10px 10px 0 10px;
+    text-align: left;
+}
+.nameCoupon1 p{
+    line-height: 25px;
+}
+.layui-layer-btn .layui-layer-btn0 {
+    border-color: rgb(236, 170, 3)!important;
+    background-color: #FFB800!important;
+    color: #333333!important;
+}
+.nostar{
+    width: 92%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    font-size:16px;width:100%;min-height:250px;text-align:center;color:#666;line-height:250px
+}
 .rule-container .content p {
     text-align: left;
     line-height: 30px;
@@ -39,7 +71,7 @@
 .rule-container .content p {
     font-size: 14px;
 }
-.container .sort-title {
+.sort-title {
     font-size: 16px;
     color: #fff;
     text-align: center;
@@ -48,7 +80,7 @@
     line-height: 1.3rem;
     position: relative
 }
-.container .sort-title .icon {
+.sort-title .icon {
     position: absolute;
     top: -18px;
     left: -15px;
@@ -56,41 +88,4 @@
     height: 30px;
     transform: rotateZ(-5deg)
 }
-</style>
-{% endif %}
-<link rel="stylesheet" href="src/css/layui.css">
-<style>
-    .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-    }
-
-    .layui-upload-img {
-        width: 92px;
-        height: 92px;
-        margin: 0 10px 10px 0;
-    }
-
-    .nameCoupon1 {
-        padding: 10px 10px 0 10px;
-        text-align: left;
-    }
-
-    .nameCoupon1 p{
-       line-height: 25px;
-    }
-    .layui-layer-btn .layui-layer-btn0 {
-        border-color: rgb(236, 170, 3)!important;
-        background-color: #FFB800!important;
-        color: #333333!important;
-    }
-    .nostar{
-        width: 92%;
-        background-color: #ffffff;
-        border: 1px solid #dddddd;
-        font-size:16px;width:100%;min-height:250px;text-align:center;color:#666;line-height:250px
-    }
 </style>

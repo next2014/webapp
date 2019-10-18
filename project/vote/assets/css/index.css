@@ -142,7 +142,8 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-bottom: 1.5rem
+	margin-bottom: 1.5rem;
+	width:100%;
 }
 
 .container .user-list .user {
@@ -153,7 +154,7 @@
 	position: relative;
 	margin-bottom: .53rem;
 	text-align:center;
-	height: 450px;
+	/* height: 450px; */
 }
 
 .container .user-list .user .link {
@@ -241,12 +242,12 @@
 } */
 
 .container .user-list .user.equi .link .img {
-	/* width: auto; */
+	width: 100%;
 	/* height: 240px;
 	max-width: 100% !important;
 	max-height: 100% !important; */
 	margin: 0;
-	height:250px;
+	/* height:250px; */
 }
 
 .container .user-list .user.equi .name {

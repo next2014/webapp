@@ -1,0 +1,40 @@
+---
+layout: default
+title: 选择票种
+---
+<div class="index_all">
+        <!-- S 轮播 -->
+        {% include components/swiper/swiper.html %}
+        <!-- E 轮播 -->
+        
+        <!-- start 最新活动 -->
+        <div class="ticket" id="ticket">
+            <div class="content">
+            <h3 class="pt-2 pl-2 pr-2"><strong>最新活动</strong></h3>
+            <ul class="lists">
+                {% for ticket in site.data.ticket3 %}
+                <li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
+                    <div class="in_fl tic_img">
+                        <img src="{{ticket.GetImage}}" alt=" ">
+                    </div>
+                    <div class="in_fr">
+                        <h2>
+                            <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+                        </h2>
+                        <ul class="ticket_type">
+                            <li>{{ticket.zType1}}</li>
+                            <li>{{ticket.zType2}}</li>
+                            <li>{{ticket.zType3}}</li>
+                        </ul>
+                        <div class="ticket_price d-block">
+                            <span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+                            <span class="dor">¥{{ticket.YuanPrick}}</span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+        <!-- end 结束 -->
+      </div>

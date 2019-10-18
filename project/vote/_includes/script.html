@@ -6,7 +6,7 @@ function countTime() {
     var date = new Date();
     var now = date.getTime();
     //设置截止时间  
-    var str = "2019/07/09 00:00:00";
+    var str = "2019/10/20 12:00:00";
     var endDate = new Date(str);
     var end = endDate.getTime();
     //时间差  
@@ -51,41 +51,8 @@ function countTime() {
     setTimeout(countTime, 1000);
 }
 </script>
-<script src="src/layui.js"></script>
-<script>
-layui.use(['form', 'upload','layer'], function () {
-    var $ = layui.jquery
-        , layer = layui.layer;
-
-    //触发事件
-    /*var active = {
-      tpdata: function(){
-        layer.confirm('您是否确定投票？', {
-            title: '提示',
-            btn: ['确认','取消'] //按钮
-        }, function(){
-            layer.msg('成功投票', {icon: 1});
-        }, function(){
-            layer.msg('取消投票', {icon: 5});
-        });
-       }
-    };*/
-    /*var active = {
-        tpdata: function(){
-        layer.confirm('投票活动尚未开始', {
-            title: '提示',
-            btn: '取消'
-        });
-        }
-    };
-    $('.toupiao').on('click', function(){
-        var type = $(this).data('type');
-        active[type] ? active[type].call(this) : '';
-    });*/
-});
-</script>
-<script>
+<!-- <script>
     window.setTimeout(function(){
         $('#myModal').modal('show')
     },100)
-</script>
+</script> -->

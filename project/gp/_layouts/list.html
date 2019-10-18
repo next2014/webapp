@@ -2,143 +2,141 @@
 layout: default
 title: 选择票种
 ---
-<div class="home">
-    <div class="index_all">
-	<!-- S 轮播 -->
-	{% include components/swiper/swiper.html %}
-	<!-- E 轮播 -->
-
-    <!-- S 园区公告 -->
-    <!-- <div class="mod_bbs border-bottom" style="display:flex;">
-			  <div style="width:60px;display: flex;align-items: center;justify-content: center;padding:0 5px">
-				    <img src="static/images/yun_wap_gg.png" style="width:50px;" alt=""/>
+<div class="index_all">
+		<!-- S 轮播 -->
+		{% include components/swiper/swiper.html %}
+		<!-- E 轮播 -->
+	
+		<!-- S 园区公告 -->
+		<!-- <div class="mod_bbs border-bottom" style="display:flex;">
+				  <div style="width:60px;display: flex;align-items: center;justify-content: center;padding:0 5px">
+						<img src="static/images/yun_wap_gg.png" style="width:50px;" alt=""/>
+					</div>
+			<section class="mod_bbs_msg">
+				{% include components/swiper/swiper1.html %}
+			</section>
+			</div> -->
+			<ul>
+				<li class="m-1" style="width:auto!important">
+				  <div class="alert alert-warning p-2 mb-0" role="alert">
+					<h1 class="alert-heading text-center">特别公告 <img src="static/images/new.png" alt="" style="width:30px;vertical-align: middle;padding-bottom: 5px;"/></h1>
+					<h2 class="mb-2">亲爱的游客朋友们：</h2>
+					<p class="pb-2 text-justify">　　为回馈广大游客对欧美城的关注与喜爱，欧美城将于2019年3月23日-24日推出重磅的海洋馆门票特价优惠活动......</p>
+					<hr class="mt-1 mb-1">
+					<p class="mb-0 text-right">
+						 <small data-toggle="modal" data-target="#exampleModalScrollable">点击详情 >></small>
+					</p></div>
+				</li>
+			</ul>
+		<!-- E 园区公告 -->
+	
+			<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
+			<!-- <div class="ticket">
+				<h3><strong>海洋世界门票</strong></h3>
+				<div class="content">
+					<ul class="lists"></ul>
 				</div>
-        <section class="mod_bbs_msg">
-            {% include components/swiper/swiper1.html %}
-        </section>
-		</div> -->
-		<ul>
-			<li class="m-1" style="width:auto!important">
-			  <div class="alert alert-warning p-2 mb-0" role="alert">
-				<h1 class="alert-heading text-center">特别公告 <img src="static/images/new.png" alt="" style="width:30px;vertical-align: middle;padding-bottom: 5px;"/></h1>
-				<h2 class="mb-2">亲爱的游客朋友们：</h2>
-				<p class="pb-2 text-justify">　　为回馈广大游客对欧美城的关注与喜爱，欧美城将于2019年3月23日-24日推出重磅的海洋馆门票特价优惠活动......</p>
-				<hr class="mt-1 mb-1">
-				<p class="mb-0 text-right">
-					 <small data-toggle="modal" data-target="#exampleModalScrollable">点击详情 >></small>
-				</p></div>
-			</li>
-		</ul>
-    <!-- E 园区公告 -->
-
-		<!-- <img class="in_img" src="static/images/ti_tu-2.jpg"> -->
-		<!-- <div class="ticket">
-			<h3><strong>海洋世界门票</strong></h3>
-			<div class="content">
-				<ul class="lists"></ul>
+			</div> -->
+			<div class="tab">
+				<a href="javascript:;" class="item cur">全部 </a>
+				<a href="javascript:;" class="item dropdown-toggle" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">海洋世界</a>
+					<a class="dropdown-item" href="#">婚博中心</a>
+					<a class="dropdown-item" href="#">卡丁车馆</a>
+					<a class="dropdown-item" href="#">真人CS体验馆</a>
+					<a class="dropdown-item" href="#">园区活动</a>
+					<a class="dropdown-item" href="#">奇奇主题酒店</a>
+				</div>
+				<!-- 底部选票类型 -->
+				<!-- <a href="javascript:;" class="item dropdown-toggle" id="pickerBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型 <i class="fa fa-angle-down"></i></a> -->
 			</div>
-		</div> -->
-		<div class="tab">
-			<a href="javascript:;" class="item cur">全部 </a>
-			<a href="javascript:;" class="item dropdown-toggle" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型</a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">海洋世界</a>
-				<a class="dropdown-item" href="#">婚博中心</a>
-				<a class="dropdown-item" href="#">卡丁车馆</a>
-				<a class="dropdown-item" href="#">真人CS体验馆</a>
-				<a class="dropdown-item" href="#">园区活动</a>
-				<a class="dropdown-item" href="#">奇奇主题酒店</a>
+	
+			<!-- 票的列表模板 -->
+			<!-- <div class="content">
+				<div class="lists"></div>
+				<div class="lists"></div>
+			</div> -->
+	
+			<!-- start 开始 -->
+			<div class="ticket" id="ticket">
+				<div class="content">
+					<h3 class="pt-2 pl-2 pr-2"><strong>最新活动</strong></h3>
+					<ul class="lists">
+						{% for ticket in site.data.ticket3 %}
+						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
+							<div class="in_fl tic_img">
+								<img src="{{ticket.GetImage}}" alt=" ">
+							</div>
+							<div class="in_fr">
+								<h2>
+									<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+								</h2>
+								<ul class="ticket_type">
+									<li>{{ticket.zType1}}</li>
+									<li>{{ticket.zType2}}</li>
+									<li>{{ticket.zType3}}</li>
+								</ul>
+								<div class="ticket_price d-block">
+									<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+									<span class="dor">¥{{ticket.YuanPrick}}</span>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+					<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界</strong></h3>
+					<ul class="lists">
+						{% for ticket in site.data.ticket1 %}
+						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
+							<div class="in_fl tic_img">
+								<img src="{{ticket.GetImage}}" alt=" ">
+							</div>
+							<div class="in_fr">
+								<h2>
+									<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+								</h2>
+								<ul class="ticket_type">
+									<li>{{ticket.zType1}}</li>
+									<li>{{ticket.zType2}}</li>
+									<li>{{ticket.zType3}}</li>
+								</ul>
+								<div class="ticket_price d-block">
+									<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+									<span class="dor">¥{{ticket.YuanPrick}}</span>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+					<h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆</strong></h3>
+					<ul class="lists">
+						{% for ticket in site.data.ticket2 %}
+						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
+							<div class="in_fl tic_img">
+								<img src="{{ticket.GetImage}}" alt=" ">
+							</div>
+							<div class="in_fr">
+								<h2>
+									<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+								</h2>
+								<ul class="ticket_type">
+									<li>{{ticket.zType1}}</li>
+									<li>{{ticket.zType2}}</li>
+									<li>{{ticket.zType3}}</li>
+								</ul>
+								<div class="ticket_price d-block">
+									<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+									<span class="dor">¥{{ticket.YuanPrick}}</span>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
-			<!-- 底部选票类型 -->
-			<!-- <a href="javascript:;" class="item dropdown-toggle" id="pickerBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型 <i class="fa fa-angle-down"></i></a> -->
+			<!-- end 结束 -->
 		</div>
-
-		<!-- 票的列表模板 -->
-		<!-- <div class="content">
-			<div class="lists"></div>
-			<div class="lists"></div>
-		</div> -->
-
-		<!-- start 开始 -->
-		<div class="ticket" id="ticket">
-			<div class="content">
-				<h3 class="pt-2 pl-2 pr-2"><strong>最新活动门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket3 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket1 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆门票</strong></h3>
-				<ul class="lists">
-					{% for ticket in site.data.ticket2 %}
-					<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">
-						<div class="in_fl tic_img">
-							<img src="{{ticket.GetImage}}" alt=" ">
-						</div>
-						<div class="in_fr">
-							<h2>
-								<a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
-							</h2>
-							<ul class="ticket_type">
-								<li>{{ticket.zType1}}</li>
-								<li>{{ticket.zType2}}</li>
-								<li>{{ticket.zType3}}</li>
-							</ul>
-							<div class="ticket_price d-block">
-								<span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
-								<span class="dor">¥{{ticket.YuanPrick}}</span>
-							</div>
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-		<!-- end 结束 -->
-	</div>
-</div>
 
 
 <!-- 园区公告 -->

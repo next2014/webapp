@@ -612,160 +612,160 @@
 	});
 </script>
 <script>
-		layui.use(['form', 'upload', 'layer', 'laydate'],function () {
-			var $ = layui.jquery
-			,laydate = layui.laydate
-			,form = layui.form
-			,upload = layui.upload
-			,layer = layui.layer;
-	
-			// 登记时间
-			laydate.render({
-				elem: '#dengjiTime'
-				,type: 'datetime'
-			});
-			
-			/****** 增加合同 *********/
-			$('#ads_add').on('click', function () {
-				layer.open({
-					type: 1,
-					title: '增加合同',
-					maxmin: true,
-					shadeClose: false, //点击遮罩关闭层
-					area: ['800px', '600px'],
-					content: $('#add_ads_style'),
-					btn: ['提交', '取消'],
-					yes: function (index, layero) {
-						var num = 0;
-						var str = "";
-						$(".add_adverts input[type$='text']").each(function (n) {
-							if ($(this).val() == "") {
-	
-								layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
-									title: '提示框',
-									icon: 0,
-								});
-								num++;
-								return false;
-							}
-						});
-						if (num > 0) { return false; }
-						else {
-							layer.alert('添加成功！', {
-								title: '提示框',
-								icon: 1,
-							});
-							layer.close(index);
-						}
-					}
-				});
-			});
-	
-			upload.render({
-				elem: '#test9'
-				,url: ''
-				,done: function(res){
-				console.log(res);
-				}
-			});
-			
-			// 多文件上传
-			var demoListView = $('#demoList');
-			var uploadListIns = upload.render({
-				elem: '#testList'
-				,url: ''
-				,accept: 'file'
-				,multiple: true
-				,number: 3
-				,auto: false
-				,bindAction: '#testListAction'
-				,choose: function(obj){   
-				var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
-	
-				//读取本地文件
-				obj.preview(function(index, file, result){
-					var tr = $(['<tr id="upload-'+ index +'">'
-					,'<td>'+ file.name +'</td>'
-					,'<td>'+ (file.size/1014).toFixed(1) +'kb</td>'
-					,'<td>等待上传</td>'
-					,'<td>'
-						,'<button class="layui-btn layui-btn-mini demo-reload layui-hide">重传</button>'
-						,'<button class="layui-btn layui-btn-mini layui-btn-danger demo-delete">删除</button>'
-					,'</td>'
-					,'</tr>'].join(''));
-					
-					//单个重传
-					tr.find('.demo-reload').on('click', function(){
-					  obj.upload(index, file);
-					});
-					
-					//删除
-					tr.find('.demo-delete').on('click', function(){
-						delete files[index]; //删除对应的文件
-						tr.remove();
-						uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
-					});
-					
-					demoListView.append(tr);
-				});
-				}
-				,done: function(res, index, upload){
-				if(res.code == 0){ //上传成功
-					var tr = demoListView.find('tr#upload-'+ index)
-					,tds = tr.children();
-					tds.eq(2).html('<span style="color: #5FB878;">上传成功</span>');
-					tds.eq(3).html(''); //清空操作
-					delete this.files[index]; //删除文件队列已经上传成功的文件
-					return;
-				}
-				this.error(index, upload);
-				}
-				,allDone: function(obj){
-				console.log(obj)
-				}
-				,error: function(index, upload){
-				var tr = demoListView.find('tr#upload-'+ index)
-				,tds = tr.children();
-				tds.eq(2).html('<span style="color: #FF5722;">上传失败</span>');
-				tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
-				}
-			});
-	
-		   /*合同-编辑*/
-		  function member_edit(id){
+	layui.use(['form', 'upload', 'layer', 'laydate'],function () {
+		var $ = layui.jquery
+		,laydate = layui.laydate
+		,form = layui.form
+		,upload = layui.upload
+		,layer = layui.layer;
+
+		// 登记时间
+		laydate.render({
+			elem: '#dengjiTime'
+			,type: 'datetime'
+		});
+		
+		/****** 增加合同 *********/
+		$('#ads_add').on('click', function () {
 			layer.open({
 				type: 1,
-				title: '合同编辑',
-				maxmin: true, 
-				shadeClose:false, //点击遮罩关闭层
-				area : ['800px' , ''],
-				content:$('#edit_ads_style'),
-				btn:['提交','取消'],
-				yes:function(index,layero){	
-				var num=0;
-				var str="";
-			   $(".add_menber input[type$='text']").each(function(n){
-				if($(this).val()=="")
-				{
-					
-					layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-						title: '提示框',				
-						icon:0,								
-				}); 
-					num++;
-					return false;            
-				} 
-				});
-				if(num>0){  return false;}	 	
-				else{
-					layer.alert('添加成功！',{
-					title: '提示框',				
-					icon:1,		
+				title: '增加合同',
+				maxmin: true,
+				shadeClose: false, //点击遮罩关闭层
+				area: ['800px', '600px'],
+				content: $('#add_ads_style'),
+				btn: ['提交', '取消'],
+				yes: function (index, layero) {
+					var num = 0;
+					var str = "";
+					$(".add_adverts input[type$='text']").each(function (n) {
+						if ($(this).val() == "") {
+
+							layer.alert(str += "" + $(this).attr("name") + "不能为空！\r\n", {
+								title: '提示框',
+								icon: 0,
+							});
+							num++;
+							return false;
+						}
 					});
-					layer.close(index);	
-				}		  		     				
+					if (num > 0) { return false; }
+					else {
+						layer.alert('添加成功！', {
+							title: '提示框',
+							icon: 1,
+						});
+						layer.close(index);
+					}
 				}
 			});
-		  }
 		});
-	</script>
+
+		upload.render({
+			elem: '#test9'
+			,url: ''
+			,done: function(res){
+			console.log(res);
+			}
+		});
+		
+		// 多文件上传
+		var demoListView = $('#demoList');
+		var uploadListIns = upload.render({
+			elem: '#testList'
+			,url: ''
+			,accept: 'file'
+			,multiple: true
+			,number: 3
+			,auto: false
+			,bindAction: '#testListAction'
+			,choose: function(obj){   
+			var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+
+			//读取本地文件
+			obj.preview(function(index, file, result){
+				var tr = $(['<tr id="upload-'+ index +'">'
+				,'<td>'+ file.name +'</td>'
+				,'<td>'+ (file.size/1014).toFixed(1) +'kb</td>'
+				,'<td>等待上传</td>'
+				,'<td>'
+					,'<button class="layui-btn layui-btn-mini demo-reload layui-hide">重传</button>'
+					,'<button class="layui-btn layui-btn-mini layui-btn-danger demo-delete">删除</button>'
+				,'</td>'
+				,'</tr>'].join(''));
+				
+				//单个重传
+				tr.find('.demo-reload').on('click', function(){
+					obj.upload(index, file);
+				});
+				
+				//删除
+				tr.find('.demo-delete').on('click', function(){
+					delete files[index]; //删除对应的文件
+					tr.remove();
+					uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
+				});
+				
+				demoListView.append(tr);
+			});
+			}
+			,done: function(res, index, upload){
+			if(res.code == 0){ //上传成功
+				var tr = demoListView.find('tr#upload-'+ index)
+				,tds = tr.children();
+				tds.eq(2).html('<span style="color: #5FB878;">上传成功</span>');
+				tds.eq(3).html(''); //清空操作
+				delete this.files[index]; //删除文件队列已经上传成功的文件
+				return;
+			}
+			this.error(index, upload);
+			}
+			,allDone: function(obj){
+			console.log(obj)
+			}
+			,error: function(index, upload){
+			var tr = demoListView.find('tr#upload-'+ index)
+			,tds = tr.children();
+			tds.eq(2).html('<span style="color: #FF5722;">上传失败</span>');
+			tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
+			}
+		});
+
+		/*合同-编辑*/
+		function member_edit(id){
+		layer.open({
+			type: 1,
+			title: '合同编辑',
+			maxmin: true, 
+			shadeClose:false, //点击遮罩关闭层
+			area : ['800px' , ''],
+			content:$('#edit_ads_style'),
+			btn:['提交','取消'],
+			yes:function(index,layero){	
+			var num=0;
+			var str="";
+			$(".add_menber input[type$='text']").each(function(n){
+			if($(this).val()=="")
+			{
+				
+				layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
+					title: '提示框',				
+					icon:0,								
+			}); 
+				num++;
+				return false;            
+			} 
+			});
+			if(num>0){  return false;}	 	
+			else{
+				layer.alert('添加成功！',{
+				title: '提示框',				
+				icon:1,		
+				});
+				layer.close(index);	
+			}		  		     				
+			}
+		});
+		}
+	});
+</script>
