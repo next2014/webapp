@@ -95,7 +95,7 @@
                     <%--<button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333" id="buttom" runat="server" CommandName="rpt_tp" CommandArgument='<%=Request.QueryString["openid"] %>' OnClientClick='<%#  "if (!confirm(\"确定取消该订单?\")) return false;"%>' disabled>
                       <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP1"><%#Eval("j_number") %></span>)
                     </button>--%>
-                    <asp:LinkButton ID="LinkButton1" Enabled="false" CommandName="rpt_tp" CommandArgument='<%#Eval("id")+","+Request.QueryString["openid"] %>'  runat="server" CssClass="btn_qd wancheng"><i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i>　投票 (<span id="TP1"><%#Eval("j_number") %></span>)</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" CommandName="rpt_tp" CommandArgument='<%#Eval("id")+","+Request.QueryString["openid"] %>'  runat="server" CssClass="btn_qd wancheng"><i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i>　投票 (<span id="TP1"><%#Eval("j_number") %></span>)</asp:LinkButton>
                 </div>
                 </ItemTemplate>
                 </asp:Repeater>                
@@ -115,7 +115,7 @@
             </div>
         </footer>
     </div>
-    <!-- <div class="modal fade" id="myModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -129,7 +129,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <script src="assets/js/jquery-2.1.0.min.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -138,7 +138,7 @@
             var date = new Date();
             var now = date.getTime();
             //设置截止时间  
-            var str = "2019/10/23 12:00:00";
+            var str = "2019/10/25 12:00:00";
             var endDate = new Date(str);
             var end = endDate.getTime();
             //时间差  
@@ -150,6 +150,11 @@
                 h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
                 m = Math.floor(leftTime / 1000 / 60 % 60);
                 s = Math.floor(leftTime / 1000 % 60);
+            } else{
+                // 投票结束后 弹出提示
+                window.setTimeout(function(){
+                    $('#myModal').modal('show')
+                },100)
             }
                 var dag = document.getElementById("_d");
                 var hour = document.getElementById('_h');
