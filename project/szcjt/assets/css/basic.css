@@ -1046,6 +1046,7 @@ a.bg-inverse:focus,a.bg-inverse:hover{background-color:#5e6974!important}
 .text-truncate{overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis}
 .text-xs-left{text-align:left!important}
 .text-xs-right{text-align:right!important}
+.text-xs-center{text-align:center!important}
 @media (min-width:480px){.text-sm-left{text-align:left!important}
 .text-sm-right{text-align:right!important}
 .text-sm-center{text-align:center!important}

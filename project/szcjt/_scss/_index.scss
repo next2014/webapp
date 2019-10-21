@@ -499,6 +499,9 @@ body.met-navfixed {
 .foot_info_met_16_1_10.border-top1 {
     border-color:#f0f2f5
 }
+
+
+
 footer {
     line-height:1.8
 }
@@ -567,6 +570,8 @@ footer .met-langlist {
         display:block
     }
 }
+
+
 .back_top_met_16_1_11.met-scroll-top {
     position:fixed;
     right:10px;
@@ -593,6 +598,9 @@ footer .met-langlist {
         bottom:70px
     }
 }
+
+
+
 .notice_list_met_11_1_4 {
     position:relative;
     opacity:0;
@@ -671,6 +679,9 @@ footer .met-langlist {
         white-space:nowrap
     }
 }
+
+
+
 .news_list_met_11_5_5 {
     padding:10px 0;
     background-color:#ffffff;
@@ -845,6 +856,9 @@ footer .met-langlist {
         padding-left:.9375rem
     }
 }
+
+
+
 .service_list_met_11_5_7 {
     padding:10px 0;
     background-color:#ffffff;
@@ -1000,7 +1014,7 @@ footer .met-langlist {
     background-color:#ffffff;
 }
 .service_list_met_11_5_7 .single-list h2 {
-    max-width:calc(100% - 115px);
+    // max-width:calc(100% - 115px);
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
@@ -1071,6 +1085,9 @@ footer .met-langlist {
         height:auto
     }
 }
+
+
+
 .team_list_met_11_4_41 {
     padding:0;
     position:relative;
@@ -1199,4 +1216,46 @@ footer .met-langlist {
 
 .tab-pane .tab-detail ul li a span{
     width: 70%;height: 30px;overflow: hidden;display:  block;overflow:  hidden;text-overflow: ellipsis;white-space: nowrap
+}
+
+
+@media (max-width:320px) {
+    .notice-title{
+        width:150px;
+    }
+}
+@media (max-width:375px) {
+    .notice-title{
+        width:150px;
+    }
+}
+@media (max-width:414px) {
+    .notice-title{
+        width:150px;
+    }
+}
+@media (min-width:767px) {
+    .list .collapse {
+        display: block!important;
+    }
+}
+@media (min-width:768px) {
+    .list .collapse {
+        display: block!important;
+    }
+}
+@media (min-width:992px) {
+    .list .collapse {
+        display: block!important;
+    }
+}
+@media (min-width:1200px) {
+    .list .collapse {
+        display: block!important;
+    }
+}
+@media (min-width:1600px) {
+    .list .collapse {
+        display: block!important;
+    }
 }

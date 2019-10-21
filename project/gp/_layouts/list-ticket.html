@@ -3,12 +3,15 @@ layout: default
 title: 在线购票
 ---
 <div class="index_all">
-        <!-- S 轮播 -->
-        {% include components/swiper/swiper.html %}
-        <!-- E 轮播 -->
-        <!-- start 在线购票 -->
-        <div class="ticket" id="ticket">
-          <div class="content">
+    <!-- S 轮播 -->
+    {% include components/swiper/swiper.html %}
+    <!-- E 轮播 -->
+    <!-- start 在线购票 -->
+    <div class="ticket" id="ticket">
+        <!-- <div class="title">
+          <h2>在线购票</h2>
+        </div> -->
+        <div class="content">
             <h3 class="pt-2 pl-2 pr-2"><strong>海洋世界</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket1 %}
@@ -16,7 +19,7 @@ title: 在线购票
                     <div class="in_fl tic_img">
                         <img src="{{ticket.GetImage}}" alt=" ">
                     </div>
-                    <div class="in_fr">
+                    <div class="in_fr tic_con">
                         <h2>
                             <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
                         </h2>
@@ -33,6 +36,7 @@ title: 在线购票
                 </li>
                 {% endfor %}
             </ul>
+            
             <h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket2 %}
@@ -40,7 +44,7 @@ title: 在线购票
                     <div class="in_fl tic_img">
                         <img src="{{ticket.GetImage}}" alt=" ">
                     </div>
-                    <div class="in_fr">
+                    <div class="in_fr tic_tit">
                         <h2>
                             <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
                         </h2>
@@ -57,7 +61,7 @@ title: 在线购票
                 </li>
                 {% endfor %}
             </ul>
-          </div>
         </div>
-        <!-- end 结束 -->
-     </div>
+    </div>
+    <!-- end 结束 -->
+</div>

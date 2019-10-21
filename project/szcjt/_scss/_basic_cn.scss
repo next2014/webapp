@@ -3017,6 +3017,7 @@ button.close {
         bottom:20px
     }
 }
+
 .bg-faded {
     background-color:#f3f7f9
 }
@@ -3363,9 +3364,9 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-right {
     text-align:right!important
 }
-// .text-xs-center {
-//     text-align:center!important
-// }
+.text-xs-center {
+    text-align:center!important
+}
 @media (min-width:480px) {
     .text-sm-left {
         text-align:left!important

@@ -25,17 +25,27 @@
 }
 
 .ticket{
-  h3{
-    padding: 0 10px;
-    border-top: 10px solid #e9ecef;
-    margin-bottom: 0;
-    background-color: #fff;
-    line-height: 35px;
-    strong{
-      border-left: 4px solid #F6AB00;
-      padding-left: 10px;
-      font-weight: bold;
-    }
+  .title{
+      h2{
+         font-size:$font-16;
+         height: 30px;
+         line-height: 30px;
+         padding:0 10px;
+      }
+  }
+  .content{
+     h3{
+        padding: 0 10px;
+        border-top: 10px solid #e9ecef;
+        margin-bottom: 0;
+        background-color: #fff;
+        line-height: 35px;
+        strong{
+          border-left: 4px solid #F6AB00;
+          padding-left: 10px;
+          font-weight: bold;
+        }
+     }
   }
 }
 .index_all{
@@ -78,18 +88,26 @@
             }
             .in_fl{
                 // margin: rem(32.2);
-                width:30%;
-                margin-bottom: rem(32.2);
-                margin-right: rem(32.2);
-                margin-top: 0;
+                width:32%;
+                // margin-bottom: rem(32.2);
+                // margin-right: rem(32.2);
+                // margin-top: 0;
                 img{
                     border-radius: 5px;
                 }
             }
         }  
     }
+    .tic_con{
+       h2{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        height: 30px;
+        line-height: 30px!important;
+      }
+    }
     .in_fr{
-    // margin-top: 0.3rem;
        margin-bottom: rem(32.2);
        margin-right: rem(32.2);
        width: 68%;
@@ -100,7 +118,7 @@
          line-height: 35px;
          li{
            display: inline;
-           margin-right: 5px;
+        //    margin-right: 5px;
            border: 1px solid #F6AB00;
            color: #F6AB00;
            padding: 2px;
@@ -111,9 +129,9 @@
          }
        }
        .ticket_price{
-           position: absolute;
-           bottom: 0;
-           left: 0;
+        //    position: absolute;
+        //    bottom: 0;
+        //    left: 0;
        }
        .piao_type{
             line-height:1.5rem;
@@ -131,11 +149,7 @@
             font-size:$font-16;
             font-weight: bold;
             color:#342c2a;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            height: 30px;
-            line-height: 30px;
+            line-height: 20px;
         }
         p{
             width: 100%;
@@ -161,7 +175,7 @@
 }
 .in_fl{
 	width: 40%;
-	margin: rem(32.2);
+	margin: rem(18.2);
 }
 
 .table th, .table td{

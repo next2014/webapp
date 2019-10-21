@@ -197,8 +197,9 @@ legend{color:#000}
 .tab{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:44px;line-height:44px;border-bottom:1px solid #ccc;background-color:#fff}
 .tab .item{display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;width:100%;font-size:14px;text-align:center;color:#333;text-decoration:none}
 .tab .cur{height:42px;border-bottom:2px solid #F6AB00;color:#F6AB00}
-.ticket h3{padding:0 10px;border-top:10px solid #e9ecef;margin-bottom:0;background-color:#fff;line-height:35px}
-.ticket h3 strong{border-left:4px solid #F6AB00;padding-left:10px;font-weight:700}
+.ticket .title h2{font-size:.805rem;height:30px;line-height:30px;padding:0 10px}
+.ticket .content h3{padding:0 10px;border-top:10px solid #e9ecef;margin-bottom:0;background-color:#fff;line-height:35px}
+.ticket .content h3 strong{border-left:4px solid #F6AB00;padding-left:10px;font-weight:700}
 .index_all{width:100%;background-color:#fff}
 .index_all ul{width:100%;height:auto;overflow:hidden}
 .index_all ul li{width:100%;height:auto;overflow:hidden;background:#fff;margin:10px auto;border-bottom:1px solid #e9ecef;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -207,21 +208,21 @@ legend{color:#000}
 .index_all ul li .dol{color:#ff3b44;font-size:1.00625rem;font-weight:700}
 .index_all ul li .dol em{font-size:1.2075rem}
 .index_all ul li .dor{color:#ccc;font-size:.805rem;text-decoration:line-through}
-.index_all ul li .in_fl{width:30%;margin-bottom:.50313rem;margin-right:.50313rem;margin-top:0}
+.index_all ul li .in_fl{width:32%}
 .index_all ul li .in_fl img{-webkit-border-radius:5px;border-radius:5px}
+.index_all .tic_con h2{overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;height:30px;line-height:30px!important}
 .index_all .in_fr{margin-bottom:.50313rem;margin-right:.50313rem;width:68%;height:auto;position:relative}
 .index_all .in_fr .ticket_type{height:35px;line-height:35px}
-.index_all .in_fr .ticket_type li{display:inline;margin-right:5px;border:1px solid #F6AB00;color:#F6AB00;padding:2px;font-size:.50313rem}
+.index_all .in_fr .ticket_type li{display:inline;border:1px solid #F6AB00;color:#F6AB00;padding:2px;font-size:.50313rem}
 .index_all .in_fr .ticket_type li:last-child{margin-right:0}
-.index_all .in_fr .ticket_price{position:absolute;bottom:0;left:0}
 .index_all .in_fr .piao_type{line-height:1.5rem;border-bottom:0}
 .index_all .in_fr .piao_type .del{margin-left:.2rem;color:#0077c8}
 .index_all .in_fr img{width:100%;height:100%}
-.index_all .in_fr h2{font-size:.805rem;font-weight:700;color:#342c2a;overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;height:30px;line-height:30px}
+.index_all .in_fr h2{font-size:.805rem;font-weight:700;color:#342c2a;line-height:20px}
 .index_all .in_fr p{width:100%;margin:.3rem 0;font-size:.70437rem;color:#999;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}
 .index_all .in_fr div{width:auto;height:auto;overflow:hidden}
 .index_all .in_fr .Sold{margin-right:22%;font-size:.5rem;color:#666;margin-top:5%}
-.in_fl{width:40%;margin:.50313rem}
+.in_fl{width:40%;margin:.28437rem}
 .table td,.table th{padding:.75rem .5rem!important}
 .btn-link.focus,.btn-link:focus{text-decoration:none}
 .dropdown-menu{right:0;font-size:14px}
