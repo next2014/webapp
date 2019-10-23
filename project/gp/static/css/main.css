@@ -202,27 +202,26 @@ legend{color:#000}
 .ticket .content h3 strong{border-left:4px solid #F6AB00;padding-left:10px;font-weight:700}
 .index_all{width:100%;background-color:#fff}
 .index_all ul{width:100%;height:auto;overflow:hidden}
-.index_all ul li{width:100%;height:auto;overflow:hidden;background:#fff;margin:10px auto;border-bottom:1px solid #e9ecef;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.index_all ul li:last-child{border-bottom:0;margin-bottom:0}
+.index_all ul li{width:100%;height:auto;overflow:hidden;background:#fff;margin:10px auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.index_all ul li:last-child{border-bottom:0}
 .index_all ul li .inTop{width:100%}
 .index_all ul li .dol{color:#ff3b44;font-size:1.00625rem;font-weight:700}
 .index_all ul li .dol em{font-size:1.2075rem}
 .index_all ul li .dor{color:#ccc;font-size:.805rem;text-decoration:line-through}
-.index_all ul li .in_fl{width:32%}
+.index_all ul li .in_fl{width:100px;height:100px;margin:0 .50313rem}
 .index_all ul li .in_fl img{-webkit-border-radius:5px;border-radius:5px}
+.index_all ul li .qqjdImg{width:150px!important;height:90px!important}
 .index_all .tic_con h2{overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;height:30px;line-height:30px!important}
-.index_all .in_fr{margin-bottom:.50313rem;margin-right:.50313rem;width:68%;height:auto;position:relative}
-.index_all .in_fr .ticket_type{height:35px;line-height:35px}
+.index_all .in_fr{width:68%;height:auto;position:relative}
 .index_all .in_fr .ticket_type li{display:inline;border:1px solid #F6AB00;color:#F6AB00;padding:2px;font-size:.50313rem}
 .index_all .in_fr .ticket_type li:last-child{margin-right:0}
 .index_all .in_fr .piao_type{line-height:1.5rem;border-bottom:0}
 .index_all .in_fr .piao_type .del{margin-left:.2rem;color:#0077c8}
 .index_all .in_fr img{width:100%;height:100%}
-.index_all .in_fr h2{font-size:.805rem;font-weight:700;color:#342c2a;line-height:20px}
+.index_all .in_fr h2{font-size:.805rem;font-weight:700;color:#342c2a;line-height:20px;margin-bottom:5px}
 .index_all .in_fr p{width:100%;margin:.3rem 0;font-size:.70437rem;color:#999;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}
 .index_all .in_fr div{width:auto;height:auto;overflow:hidden}
 .index_all .in_fr .Sold{margin-right:22%;font-size:.5rem;color:#666;margin-top:5%}
-.in_fl{width:40%;margin:.28437rem}
 .table td,.table th{padding:.75rem .5rem!important}
 .btn-link.focus,.btn-link:focus{text-decoration:none}
 .dropdown-menu{right:0;font-size:14px}

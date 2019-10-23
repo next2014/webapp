@@ -1,0 +1,29 @@
+- GetImage: static/images/qqjd/1_13_09.jpg
+  GetTypeColor: primary
+  GetType:  奇奇主题酒店
+  GetTitle: 豪华单人房
+  YuanPrick: 368.00
+
+- GetImage: static/images/qqjd/1_13_06.jpg
+  GetTypeColor: primary
+  GetType:  奇奇主题酒店
+  GetTitle: 豪华双人房
+  YuanPrick: 388.00
+
+- GetImage: static/images/qqjd/1_13_07.jpg
+  GetTypeColor: primary
+  GetType:  奇奇主题酒店
+  GetTitle: 豪华套房
+  YuanPrick: 588.00
+
+- GetImage: static/images/qqjd/1_13_07_01.jpg
+  GetTypeColor: primary
+  GetType:  两大一小
+  GetTitle: 豪华双人房
+  YuanPrick: 999.00
+
+- GetImage: static/images/qqjd/1_13_07_03.jpg
+  GetTypeColor: primary
+  GetType:  浪漫激情双人游
+  GetTitle: 豪华套房
+  YuanPrick: 898.00

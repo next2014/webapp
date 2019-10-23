@@ -9,7 +9,29 @@ title: 奇奇主题酒店
         
         <!-- start 奇奇主题酒店  -->
         <div class="mstd">
-            <div class="weui-flex">
+
+            <div class="content">
+                <h3 class="pt-2 pl-2 pr-2"><strong>奇奇主题酒店</strong></h3>
+                <ul class="lists">
+                    {% for ticket in site.data.listqqjd %}
+                    <li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
+                        <div class="in_fl qqjdImg">
+                            <img src="{{ticket.GetImage}}" alt=" ">
+                        </div>
+                        <div class="in_fr tic_con">
+                            <h2>
+                                <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-2 pt-1 pb-1 pl-2 pr-2">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+                            </h2>
+                            <div class="ticket_price d-block">
+                                <span class="dol">¥<em>{{ticket.YuanPrick}}</em></span>
+                                <!-- <span class="dor">¥{{ticket.YuanPrick}}</span> -->
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+             </div>
+            <!-- <div class="weui-flex">
                 <div class="weui-flex__item ywbox">
                     <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
                     <div class="yw-con">标准客房</div>
@@ -18,7 +40,7 @@ title: 奇奇主题酒店
                     <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
                     <div class="yw-con">豪华大房</div>
                 </div>
-            </div>
-            </div>
+            </div> -->
+        </div>
        <!-- end  -->
       </div>

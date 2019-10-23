@@ -62,13 +62,10 @@
             overflow: hidden;
             background:$white;
             margin:10px auto;
-            // border-radius:0.2rem;
-            // border: 1px solid $gray-300;
-            border-bottom: 1px solid #e9ecef;
+            // border-bottom: 1px solid #e9ecef;
             display: flex;
             &:last-child{
               border-bottom:0;
-              margin-bottom:0;
             }
             .inTop{
                 width: 100%;
@@ -87,14 +84,17 @@
                 text-decoration: line-through;
             }
             .in_fl{
-                // margin: rem(32.2);
-                width:32%;
-                // margin-bottom: rem(32.2);
-                // margin-right: rem(32.2);
-                // margin-top: 0;
+                // width:32%;
+                width:100px;
+                height:100px;
+                margin:0 rem(32.2);
                 img{
-                    border-radius: 5px;
+                  border-radius: 5px;
                 }
+            }
+            .qqjdImg{
+                width:150px!important;
+                height:90px!important;
             }
         }  
     }
@@ -108,17 +108,12 @@
       }
     }
     .in_fr{
-       margin-bottom: rem(32.2);
-       margin-right: rem(32.2);
        width: 68%;
        height: auto;
        position: relative;
        .ticket_type{
-         height: 35px;
-         line-height: 35px;
          li{
            display: inline;
-        //    margin-right: 5px;
            border: 1px solid #F6AB00;
            color: #F6AB00;
            padding: 2px;
@@ -127,11 +122,6 @@
                margin-right: 0;
            }
          }
-       }
-       .ticket_price{
-        //    position: absolute;
-        //    bottom: 0;
-        //    left: 0;
        }
        .piao_type{
             line-height:1.5rem;
@@ -150,6 +140,7 @@
             font-weight: bold;
             color:#342c2a;
             line-height: 20px;
+            margin-bottom: 5px;
         }
         p{
             width: 100%;
@@ -173,11 +164,6 @@
         }
     }
 }
-.in_fl{
-	width: 40%;
-	margin: rem(18.2);
-}
-
 .table th, .table td{
     padding: 0.75rem 0.5rem!important;
  }

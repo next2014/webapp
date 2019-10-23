@@ -95,7 +95,7 @@
                     <%--<button class="layui-btn layui-btn-warm m-1 toupiao" data-type="tpdata" style="width:90%;color:#333333" id="buttom" runat="server" CommandName="rpt_tp" CommandArgument='<%=Request.QueryString["openid"] %>' OnClientClick='<%#  "if (!confirm(\"确定取消该订单?\")) return false;"%>' disabled>
                       <i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i> 投票 (<span id="TP1"><%#Eval("j_number") %></span>)
                     </button>--%>
-                    <asp:LinkButton OnClientClick="javascript:return confirm('确定投票?');" ID="LinkButton1" CommandName="rpt_tp" CommandArgument='<%#Eval("id")+","+Request.QueryString["openid"] %>'  runat="server" CssClass="btn_qd wancheng"><i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i>　投票 (<span id="TP1"><%#Eval("j_number") %></span>)</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" CommandName="rpt_tp" CommandArgument='<%#Eval("id")+","+Request.QueryString["openid"] %>'  runat="server" CssClass="btn_qd wancheng"><i class="layui-icon layui-icon-praise" style="font-size:20px; color: #333333;vertical-align: middle;"></i>　投票 (<span id="TP1"><%#Eval("j_number") %></span>)</asp:LinkButton>
                 </div>
                 </ItemTemplate>
                 </asp:Repeater>                
@@ -138,7 +138,7 @@
             var date = new Date();
             var now = date.getTime();
             //设置截止时间  
-            var str = "2019/10/25 18:00:00";
+            var str = "2019/10/25 12:00:00";
             var endDate = new Date(str);
             var end = endDate.getTime();
             //时间差  

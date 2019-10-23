@@ -1,0 +1,49 @@
+- GetImage: static/images/mstd/xyrbll.png
+  GetTypeColor: primary
+  GetType: 小樱日本料理
+  GetUrlstoreId : '28'
+
+- GetImage: static/images/mstd/hs.png
+  GetTypeColor: primary
+  GetType: 韩食
+  GetUrlstoreId: '10'
+
+- GetImage: static/images/mstd/obmg.png
+  GetTypeColor: primary
+  GetType: 奇爸爸食堂
+  GetUrlstoreId: '12'
+
+- GetImage: static/images/mstd/ommsf.png
+  GetTypeColor: primary
+  GetType: 奇妈妈美食坊
+  GetUrlstoreId: '11'
+
+- GetImage: static/images/mstd/mmttw.png
+  GetTypeColor: primary
+  GetType: 茜茜甜品屋
+  GetUrlstoreId: '21'
+
+- GetImage: static/images/mstd/tbxsgf.png
+  GetTypeColor: primary
+  GetType: 奇奇西餐屋
+  GetUrlstoreId: '17'
+
+- GetImage: static/images/mstd/mgjl.png
+  GetTypeColor: primary
+  GetType: 小金象东南亚风味馆
+  GetUrlstoreId: '18'
+
+- GetImage: static/images/mstd/hscsled.png
+  GetTypeColor: primary
+  GetType: 兴旺正宗潮汕卤鹅店
+  GetUrlstoreId : '9'
+
+- GetImage: static/images/mstd/lmcf.png
+  GetTypeColor: primary
+  GetType: 老妈炒粉
+  GetUrlstoreId: '65'
+
+- GetImage: static/images/mstd/xkkjcg.png
+  GetTypeColor: primary
+  GetType: 巷口客家菜馆
+  GetUrlstoreId: '68'
