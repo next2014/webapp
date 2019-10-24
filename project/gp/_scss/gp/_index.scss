@@ -206,6 +206,7 @@
   padding: 10px 5px;
 }
 
+
 .yw{
     margin-bottom: 10px;
 }
@@ -219,4 +220,12 @@
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+}
+
+.zxbox{
+  .weui-grid__icon{
+    width:70px;
+    height:70px;
+    margin:20px 10px 0 0;
+  }
 }

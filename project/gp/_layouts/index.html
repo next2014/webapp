@@ -2,69 +2,71 @@
 layout: default2
 title: 惠州狮子城
 ---
-<!-- S 轮播 -->
-{% include components/swiper/swiper.html %}
-<!-- E 轮播 -->
-<!-- s 项目模块 -->
-<div class="ticketbox">
-   <!-- <div class="weui-flex">
-        <div class="weui-flex__item">
-            <div class="placeholder" style="height:150px">最新活动</div>
-            <div class="placeholder" style="height:200px">在线购票</div>
-            <div class="placeholder" style="height:150px">奇奇主题酒店</div>
-        </div>
-        <div class="weui-flex__item">
-            <div class="placeholder" style="height:150px">美食天地</div>
-            <div class="placeholder" style="height:130px">游玩推荐</div>
-            <div class="placeholder" style="height:120px">休闲娱乐</div>
-            <div class="placeholder" style="height:100px">联票</div>
-        </div>
-   </div> -->
-    <div class="weui-grids">
-        <a href="list-newhd.html" class="weui-grid js_grid bgcolor_newhd">
-            <h2 class="weui-grid__label">最新活动</h2>
-            <div class="weui-grid__icon" style="margin-right:10px;">
-            <img src="static/images/icon_newhd.png" alt="">
+<div class="index_all">
+    <!-- S 轮播 -->
+    {% include components/swiper/swiper.html %}
+    <!-- E 轮播 -->
+    <!-- s 项目模块 -->
+    <div class="ticketbox">
+    <!-- <div class="weui-flex">
+            <div class="weui-flex__item">
+                <div class="placeholder" style="height:150px">最新活动</div>
+                <div class="placeholder" style="height:200px">在线购票</div>
+                <div class="placeholder" style="height:150px">奇奇主题酒店</div>
             </div>
-        </a>
-        <a href="list-mstd.html" class="weui-grid js_grid bgcolor_mstd">
-            <h2 class="weui-grid__label">美食天地</h2>
-            <div class="weui-grid__icon">
-              <img src="static/images/icon_mstd.png" alt="">
+            <div class="weui-flex__item">
+                <div class="placeholder" style="height:150px">美食天地</div>
+                <div class="placeholder" style="height:130px">游玩推荐</div>
+                <div class="placeholder" style="height:120px">休闲娱乐</div>
+                <div class="placeholder" style="height:100px">联票</div>
             </div>
-        </a>
-        <div class="weui-grid js_grid zxbox">
-            <a href="list-ticket.html" class="bgcolor_zxgp">
+    </div> -->
+        <div class="weui-grids">
+            <a href="list.html" class="weui-grid js_grid bgcolor_newhd">
                 <h2 class="weui-grid__label">在线购票</h2>
-                <div class="weui-grid__icon" style="width:100px;height:100px;margin-top:10px;">
-                    <img src="static/images/icon_zxgp.png" alt="">
+                <div class="weui-grid__icon" style="margin-right:10px;">
+                <img src="static/images/icon_zxgp.png" alt="">
                 </div>
             </a>
-            <a href="list-qqjd.html" class="bgcolor_qqjd">
-                <h2 class="weui-grid__label">奇奇主题酒店</h2>
-                <div class="weui-grid__icon" style="width:100px;height:100px;margin-top:10px;">
-                <img src="static/images/icon_qqjd.png" alt="">
+            <a href="list-mstd.html" class="weui-grid js_grid bgcolor_mstd">
+                <h2 class="weui-grid__label">美食天地</h2>
+                <div class="weui-grid__icon">
+                <img src="static/images/icon_mstd.png" alt="">
+                </div>
+            </a>
+            <div class="weui-grid js_grid zxbox">
+                <a href="list-newhd.html" class="bgcolor_zxgp">
+                    <h2 class="weui-grid__label">最新活动</h2>
+                    <div class="weui-grid__icon">
+                        <img src="static/images/icon_newhd.png" alt="">
+                    </div>
+                </a>
+                <a href="list-qqjd.html" class="bgcolor_qqjd">
+                    <h2 class="weui-grid__label">奇奇主题酒店</h2>
+                    <div class="weui-grid__icon">
+                    <img src="static/images/icon_qqjd.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <a href="list-ywtj.html" class="weui-grid js_grid bgcolor_ywtj">
+                <h2 class="weui-grid__label">游玩推荐</h2>
+                <div class="weui-grid__icon">
+                <img src="static/images/icon_ywtj.png" alt="">
+                </div>
+            </a>
+            <a href="list-xxyl.html" class="weui-grid js_grid bgcolor_xxyl">
+                <h2 class="weui-grid__label">休闲娱乐</h2>
+                <div class="weui-grid__icon">
+                <img src="static/images/icon_xxyl.png" alt="">
+                </div>
+            </a>
+            <a href="list-lp.html" class="weui-grid js_grid bgcolor_lp">
+                <h2 class="weui-grid__label">年卡</h2>
+                <div class="weui-grid__icon">
+                <img src="static/images/icon_yearCard.png" alt="">
                 </div>
             </a>
         </div>
-        <a href="list-ywtj.html" class="weui-grid js_grid bgcolor_ywtj">
-            <h2 class="weui-grid__label">游玩推荐</h2>
-            <div class="weui-grid__icon">
-            <img src="static/images/icon_ywtj.png" alt="">
-            </div>
-        </a>
-        <a href="list-xxyl.html" class="weui-grid js_grid bgcolor_xxyl">
-            <h2 class="weui-grid__label">休闲娱乐</h2>
-            <div class="weui-grid__icon">
-            <img src="static/images/icon_xxyl.png" alt="">
-            </div>
-        </a>
-        <a href="list-lp.html" class="weui-grid js_grid bgcolor_lp">
-            <h2 class="weui-grid__label">联票</h2>
-            <div class="weui-grid__icon">
-            <img src="static/images/icon_lp.png" alt="">
-            </div>
-        </a>
     </div>
 </div>
 <!-- e 项目模块 -->
