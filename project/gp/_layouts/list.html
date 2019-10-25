@@ -17,8 +17,8 @@ title: 选择票种
 			</section>
 			</div> -->
 
-			<!-- 公告 -->
-			<!-- <ul>
+		<!-- 公告 -->
+		<!-- <ul>
 				<li class="m-1" style="width:auto!important">
 				  <div class="alert alert-warning p-2 mb-0" role="alert">
 					<h1 class="alert-heading text-center">特别公告 <img src="static/images/new.png" alt="" style="width:30px;vertical-align: middle;padding-bottom: 5px;"/></h1>
@@ -42,6 +42,7 @@ title: 选择票种
 			<div class="tab">
 				<a href="javascript:;" class="item cur">全部 </a>
 				<a href="javascript:;" class="item dropdown-toggle" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选票类型</a>
+				<div></div>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#">海洋世界</a>
 					<a class="dropdown-item" href="#">婚博中心</a>
@@ -63,7 +64,7 @@ title: 选择票种
 			<!-- start 开始 -->
 			<div class="ticket" id="ticket">
 				<div class="content">
-					<h3 class="pt-2 pl-2 pr-2"><strong>最新活动</strong></h3>
+					<h3 class="p-2"><strong>最新活动</strong></h3>
 					<ul class="lists">
 						{% for ticket in site.data.ticket3 %}
 						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
@@ -87,7 +88,7 @@ title: 选择票种
 						</li>
 						{% endfor %}
 					</ul>
-					<h3 class="pt-2 pl-2 pr-2"><strong>海洋世界</strong></h3>
+					<h3 class="p-2"><strong>海洋世界</strong></h3>
 					<ul class="lists">
 						{% for ticket in site.data.ticket1 %}
 						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
@@ -111,7 +112,7 @@ title: 选择票种
 						</li>
 						{% endfor %}
 					</ul>
-					<h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆</strong></h3>
+					<h3 class="p-2"><strong>卡丁车馆</strong></h3>
 					<ul class="lists">
 						{% for ticket in site.data.ticket2 %}
 						<li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">

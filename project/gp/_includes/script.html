@@ -9,7 +9,7 @@
 {% endif %}
 {% if page.layout == "list"%}
 {% include fastclickjs.html %}
-<script src="static/js/weui.min.js"></script>
+<!-- <script src="static/js/weui.min.js"></script>
 <script>
     document.querySelector('#pickerBtn').addEventListener('click', function () {
         weui.picker([{
@@ -44,6 +44,22 @@
                 console.log(result);
             },
             id: 'picker'
+        });
+    });
+</script> -->
+<script>
+    $(function() {
+        var hBanner = $('.topAd').innerHeight();
+        var cbHeight = hBanner - 50;
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= cbHeight) {
+                $(".tab").addClass('mod_pos_hig');
+                // $(".mod_pos_item_ind").attr('style','display:none');
+            }else{
+                $(".tab").removeClass('mod_pos_hig');
+                // $(".mod_pos_item_ind").removeAttr('style','display:none'); 
+            }
         });
     });
 </script>

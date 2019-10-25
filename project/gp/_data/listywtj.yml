@@ -1,0 +1,30 @@
+- GetImage: static/images/home1/gp3.png
+  GetTypeColor: primary
+  GetType:  儿童票
+  GetTitle: 海洋世界
+  GetPrick: 68.00
+  YuanPrick: 120.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 16点前来
+
+- GetImage: static/images/home1/gp3.png
+  GetTypeColor: primary
+  GetType:  成人票
+  GetTitle: 海洋世界
+  GetPrick: 78.00
+  YuanPrick: 120.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 20点前来
+
+- GetImage: static/images/home1/gp3.png
+  GetTypeColor: primary
+  GetType:  长者票
+  GetTitle: 海洋世界
+  GetPrick: 68.00
+  YuanPrick: 120.00
+  zType1: 身份证入园
+  zType2: 可订当日
+  zType3: 核验准考证
+  zType4: 6点前来

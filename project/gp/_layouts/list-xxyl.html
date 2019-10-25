@@ -8,27 +8,57 @@ title: 休闲娱乐
         <!-- E 轮播 -->
         
         <!-- start 休闲娱乐  -->
-        <div class="mstd">
-            <div class="weui-flex">
-                <div class="weui-flex__item ywbox">
-                    <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
-                    <div class="yw-con">【海洋世界】惠州海洋生物知识科普基地..</div>
+        <div class="ticket" id="ticket">
+          <div class="content">
+            <h3 class="p-2"><strong>休闲娱乐</strong></h3>
+            <ul class="lists">
+                {% for ticket in site.data.listxxyl %}
+                <li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
+                <div class="in_fl tic_img">
+                    <img src="{{ticket.GetImage}}" alt=" ">
                 </div>
-                <div class="weui-flex__item ywbox">
-                    <div class="yw-img"><img src="static/images/home1/kdc2.jpg" alt=""></div>
-                    <div class="yw-con">【卡丁车馆】惠州年轻人的轻奢竞技场...</div>
+                <div class="in_fr">
+                    <h2>
+                        <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
+                    </h2>
+                    <ul class="ticket_type">
+                        <li>{{ticket.zType1}}</li>
+                        <li>{{ticket.zType2}}</li>
+                        <li>{{ticket.zType3}}</li>
+                    </ul>
+                    <div class="ticket_price d-block">
+                        <span class="dol">¥<em>{{ticket.GetPrick}}</em></span>
+                        <span class="dor">¥{{ticket.YuanPrick}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="weui-flex">
-                <div class="weui-flex__item ywbox">
-                    <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
-                    <div class="yw-con">【海洋世界】惠州海洋生物知识科普基地..</div>
-                </div>
-                <div class="weui-flex__item ywbox">
-                    <div class="yw-img"><img src="static/images/home1/kdc2.jpg" alt=""></div>
-                    <div class="yw-con">【卡丁车馆】惠州年轻人的轻奢竞技场...</div>
-                </div>
-            </div>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
         </div>
+
+        <!-- <div class="mstd">
+            <div class="weui-flex">
+                <div class="weui-flex__item ywbox">
+                    <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
+                    <div class="yw-con">【海洋世界】惠州海洋生物知识科普基地..</div>
+                </div>
+                <div class="weui-flex__item ywbox">
+                    <div class="yw-img"><img src="static/images/home1/kdc2.jpg" alt=""></div>
+                    <div class="yw-con">【卡丁车馆】惠州年轻人的轻奢竞技场...</div>
+                </div>
+            </div>
+            <div class="weui-flex">
+                <div class="weui-flex__item ywbox">
+                    <div class="yw-img"><img src="static/images/home1/gp3.png" alt=""></div>
+                    <div class="yw-con">【海洋世界】惠州海洋生物知识科普基地..</div>
+                </div>
+                <div class="weui-flex__item ywbox">
+                    <div class="yw-img"><img src="static/images/home1/kdc2.jpg" alt=""></div>
+                    <div class="yw-con">【卡丁车馆】惠州年轻人的轻奢竞技场...</div>
+                </div>
+            </div>
+        </div> -->
+
         <!-- end  -->
     </div>

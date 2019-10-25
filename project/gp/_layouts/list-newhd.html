@@ -3,13 +3,13 @@ layout: default
 title: 选择票种
 ---
 <div class="index_all">
-        <!-- S 轮播 -->
-        {% include components/swiper/swiper.html %}
-        <!-- E 轮播 -->
-        
-        <!-- start 最新活动 -->
-        <div class="ticket" id="ticket">
-            <div class="content">
+    <!-- S 轮播 -->
+    {% include components/swiper/swiper.html %}
+    <!-- E 轮播 -->
+    
+    <!-- start 最新活动 -->
+    <div class="ticket" id="ticket">
+        <div class="content">
             <h3 class="pt-2 pl-2 pr-2"><strong>最新活动</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket3 %}
@@ -34,7 +34,7 @@ title: 选择票种
                 </li>
                 {% endfor %}
             </ul>
-            </div>
         </div>
-        <!-- end 结束 -->
-      </div>
+    </div>
+    <!-- end 结束 -->
+</div>
