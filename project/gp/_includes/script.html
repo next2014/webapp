@@ -49,16 +49,17 @@
 </script> -->
 <script>
     $(function() {
+        // 轮播图的高度
         var hBanner = $('.topAd').innerHeight();
-        var cbHeight = hBanner - 50;
+        // 筛选类型高度
+        var cbHeight = hBanner - 44;
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             if (scroll >= cbHeight) {
+                // 固定筛选栏置顶部
                 $(".tab").addClass('mod_pos_hig');
-                // $(".mod_pos_item_ind").attr('style','display:none');
             }else{
                 $(".tab").removeClass('mod_pos_hig');
-                // $(".mod_pos_item_ind").removeAttr('style','display:none'); 
             }
         });
     });
