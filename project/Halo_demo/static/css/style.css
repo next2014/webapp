@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body{font-family:'Open Sans',sans-serif;background:#fff;color:#76838f;overflow-x:hidden}
 [class*=mdi-],[class^=mdi-]{font-family:Ionicons}
 h1,h2,h3,h4,h5,h6{color:#37474f;text-shadow:rgba(0,0,0,.12) 0 0 1px;margin:10px 0}
@@ -145,9 +146,9 @@ footer.page-footer{margin-top:0}
 .side-nav .collapsible-body li a{margin:0 16px 0 22px}
 .sidenav-header{width:100%;position:relative;overflow:auto}
 .sidenav-header .nav-avatar{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
-.sidenav-header .avatar{margin:20px;height:64px;width:64px}
+.sidenav-header .avatar{margin:20px;height:44px;width:44px}
 .sidenav-header .avatar-body{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}
-.sidenav-header .avatar-body h3{color:#fff;margin:0}
+.sidenav-header .avatar-body h3{color:#fff;margin:0;font-size:16px}
 .sidenav-header .avatar-body p{color:#fff;opacity:.8;font-size:80%;margin:0}
 .sidenav-header .nav-social{padding:20px 20px 0 20px}
 .sidenav-header .nav-social i{font-size:16px;color:#fff;margin-right:18px}

@@ -24,11 +24,11 @@
     {% if page.layout == "pages/category" %}
         <span class="title">Category</span>
         {% else page.layout == "pages/chart" %}
-        <span class="title">Chart</span>
+        <span class="title">数据分析图</span>
         {% endif %}
-        <div class="open-right" id="open-right" data-activates="slide-out">
+        <!-- <div class="open-right" id="open-right" data-activates="slide-out">
             <i class="ion-android-person"></i>
-        </div>
+        </div> -->
 </div>
 {% endif %}
 <!-- Toolbar -->
@@ -151,12 +151,12 @@
 </div>
 {% endif %}
 {% if page.layout == "pages/right-sidebar" %}
-    <div id="toolbar" class="primary-color">
+<div id="toolbar" class="primary-color">
     <span class="title">Right Sidebar</span>
     <div class="open-right" id="open-right" data-activates="slide-out">
         <i class="ion-android-menu"></i>
     </div>
-    </div>
+</div>
 {% endif %}
 
 {% if page.layout == "pages/article" %}

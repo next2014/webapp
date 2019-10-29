@@ -279,12 +279,12 @@ function initiate_plugins() {
             highlightStroke: "rgba(41, 128, 185, 0)",
             data: [65, 59, 90, 56, 40]
         }, {
-                fillColor: "rgba(155, 89, 182, 0.5)",
-                strokeColor: "rgba(155, 89, 182, 0.6)",
-                highlightFill: "rgba(155, 89, 182, 0.9)",
-                highlightStroke: "rgba(231, 76, 60, 0)",
-                data: [28, 48, 19, 27, 90]
-            }]
+            fillColor: "rgba(155, 89, 182, 0.5)",
+            strokeColor: "rgba(155, 89, 182, 0.6)",
+            highlightFill: "rgba(155, 89, 182, 0.9)",
+            highlightStroke: "rgba(231, 76, 60, 0)",
+            data: [28, 48, 19, 27, 90]
+        }]
     }
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myLine = new Chart(ctx).Line(lineChartData, {
