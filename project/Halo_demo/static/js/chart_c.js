@@ -31,7 +31,7 @@ $(function () {
         color: "#BBDEFB",
         highlight: "#29b6f6",
         label: "New"
-    }, {
+        }, {
             value: 66,
             color: "#ffcc80",
             highlight: "#ffa726",
@@ -48,7 +48,7 @@ $(function () {
         color: "#BBDEFB",
         highlight: "#42a5f5",
         label: "Search"
-    }, {
+        }, {
             value: 70,
             color: "#EF9A9A",
             highlight: "#ef5350",
@@ -95,3 +95,4 @@ $(function () {
         responsive: true
     });
 });
+

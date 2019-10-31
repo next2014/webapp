@@ -2,6 +2,13 @@
 layout: pages
 title: 狮子城场馆数据表
 ---
+<style>
+    canvas {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+</style>
 <!-- Page Content -->
 <div id="content" class="grey-blue page">
     <!-- Sidebars -->
@@ -10,51 +17,17 @@ title: 狮子城场馆数据表
     {% include Components/toolbar.html %}
     
     <!-- Main Content -->
-    <div class="animated fadeinup">
+    <div class="">
 
-      <!-- 海洋世界 -->
-      <div id="line_chart" class="card animated fadeinup m-10 p-10">
-        <div class="legend">
-          <h5 class="uppercase">海洋世界</h5>
+        <div id="" style="width: 75%;">
+                <canvas id="canvas"></canvas>
         </div>
-
-        <div class="lineChartCont">
-          <canvas id="hysj"></canvas>
-        </div>
-      </div>
-
-      <!-- 格林披治卡丁车馆 -->
-      <div id="pie_chart" class="card animated fadeinup delay-1 m-10 p-10">
-        <div class="legend">
-          <h5 class="uppercase">格林披治卡丁车馆</h5>
-        </div>
-
-        <div class="pieChartCont">
-          <canvas id="kdc"></canvas>
-        </div>
-      </div>
-
-      <!-- 真人CS体验馆 -->
-      <div id="doughnut_chart" class="card animated fadeinup delay-2 m-10 p-10">
-        <div class="legend">
-          <h5 class="uppercase">真人CS体验馆</h5>
-        </div>
-
-        <div class="doughnutChartCont">
-          <canvas id="zrcs"></canvas>
-        </div>
-      </div>
-
-      <!-- 奇奇之家 -->
-      <div id="bar_chart" class="card animated fadeinup delay-3 m-10 p-10">
-        <div class="legend">
-          <h5 class="uppercase">奇奇之家</h5>
-        </div>
-
-        <div class="barChartCont">
-          <canvas id="qqzj"></canvas>
-        </div>
-      </div>
+        <button id="randomizeData">随机数据</button>
+        <button id="addDataset">添加数据集</button>
+        <button id="removeDataset">移除数据集</button>
+        <button id="addData">添加数据</button>
+        <button id="removeData">移除数据</button>
       
-      {% include footer.html %}
-  </div> 
+    </div>
+
+</div>

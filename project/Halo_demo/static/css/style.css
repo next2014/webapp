@@ -87,7 +87,7 @@ blockquote{font-size:1.5em;margin:30px 0;color:#444}
 .opacity-overlay-top{opacity:.7;position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0) -webkit-gradient(linear,left bottom,left top,color-stop(70%,rgba(0,0,0,0)),color-stop(95%,rgba(0,0,0,.75)),to(#333)) repeat scroll 0 0;background:rgba(0,0,0,0) -webkit-linear-gradient(bottom,rgba(0,0,0,0) 70%,rgba(0,0,0,.75) 95%,#333 100%) repeat scroll 0 0;background:rgba(0,0,0,0) -o-linear-gradient(bottom,rgba(0,0,0,0) 70%,rgba(0,0,0,.75) 95%,#333 100%) repeat scroll 0 0;background:rgba(0,0,0,0) linear-gradient(to top,rgba(0,0,0,0) 70%,rgba(0,0,0,.75) 95%,#333 100%) repeat scroll 0 0}
 .border-overlay{position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid #fff;background:rgba(0,0,0,.3)}
 .blank-layout,.fullscreen{width:100%;height:100vh}
-.page{margin-top:56px;overflow:auto}
+.page{margin-top:56px;overflow:auto;min-height:512px;padding-bottom:56px}
 .none{display:none}
 .h-banner{height:212px;position:relative;z-index:1}
 .h-banner .parallax{height:100%}
@@ -108,8 +108,10 @@ blockquote{font-size:1.5em;margin:30px 0;color:#444}
 .hero-header .hero-over{position:absolute;bottom:20px;left:20px;margin:0}
 .page-content{padding:30px 20px}
 #content{overflow:auto}
+.footer{text-align:center;padding:0!important;position:absolute;bottom:0;width:100%}
 footer.page-footer{margin-top:0}
 .footer-copyright .right>i{margin-left:10px;font-size:20px}
+body{position:relative}
 .m-scene .animated{-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-transition-timing-function:ease-in;-o-transition-timing-function:ease-in;transition-timing-function:ease-in;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .m-scene .fadein{-webkit-animation-name:fadeIn;animation-name:fadeIn;-webkit-animation-duration:.4s;animation-duration:.4s}
 .m-scene .fadeinup{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}

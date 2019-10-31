@@ -1,0 +1,200 @@
+<script src="../../static/js/jquery-2.1.0.min.js"></script>
+<script src="../../static/js/jquery.swipebox.min.js"></script>   
+<script src="../../static/js/jquery.smoothState.min.js"></script> 
+<script src="../../static/js/materialize.min.js"></script> 
+<script src="../../static/js/swiper.min.js"></script>  
+<script src="../../static/js/jquery.mixitup.min.js"></script>
+<script src="../../static/js/masonry.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!-- <script srt="../static/js/chart_c.js"></script> -->
+{% if page.layout == "pages/bar/bar_hysj" %}
+<script>
+// 海洋世界
+var hysjData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx = document.getElementById('hysj').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: hysjData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar/bar_kdc" %}
+<script>
+// 格林披治卡丁车馆
+var kdcData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx2 = document.getElementById('kdc').getContext('2d');
+var myChart = new Chart(ctx2, {
+    type: 'bar',
+    data: kdcData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar/bar_qqjd" %}
+<script>
+// 奇奇主题酒店
+var qqjdData ={
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx5 = document.getElementById('qqjd').getContext('2d');
+var myChart = new Chart(ctx5, {
+    type: 'bar',
+    data: qqjdData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar/bar_qqzj" %}
+<script>
+// 奇奇之家
+var qqzjData ={
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx4 = document.getElementById('qqzj').getContext('2d');
+var myChart = new Chart(ctx4, {
+    type: 'bar',
+    data: qqzjData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar/bar_zrcs" %}
+<script>
+// 真人CS体验馆
+var zrcsData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx3 = document.getElementById('zrcs').getContext('2d');
+var myChart = new Chart(ctx3, {
+    type: 'bar',
+    data: zrcsData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+<script src="../../static/js/functions.js"></script>

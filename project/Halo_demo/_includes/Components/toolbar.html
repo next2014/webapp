@@ -16,6 +16,18 @@
 </div>
 {% endif %}
 <!-- Toolbar -->
+{% if page.layout == "index" %}
+<div id="toolbar" class="primary-color">
+    <div class="open-left" id="open-left" data-activates="slide-out-left">
+        <i class="ion-android-menu"></i>
+    </div>
+    <span class="title">综合数据分析图</span>
+    <!-- <div class="open-right" id="open-right" data-activates="slide-out">
+        <i class="ion-android-person"></i>
+    </div> -->
+</div>
+{% endif %}
+<!-- Toolbar -->
 {% if page.layout == "pages/category" or page.layout == "pages/chart" %}
 <div id="toolbar" class="primary-color">
     <div class="open-left" id="open-left" data-activates="slide-out-left">
