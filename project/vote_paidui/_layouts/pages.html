@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+      <title>狮子城</title>
+      {% include head.html %}
+  </head>
+<body>
+<div class="votes">
+    <header>
+        <div>
+          <img src="assets/img/banner/6-1.png"  style="width:100%" />
+        </div>
+        {% include votesDate.html %}
+    </header>
+    {{ content }}
+    {% include menu.html %}
+</div>
+{% include script.html %}
+</body>
+</html>

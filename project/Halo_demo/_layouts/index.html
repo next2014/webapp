@@ -2,38 +2,34 @@
 layout: pages
 title: 各场馆数据分析
 ---
-<div class="m-scene" id="main">
-    <!-- Main Container -->
-    <!-- Sidebars -->
-    {% include left_Sidebars.html %}
-    <!-- Page Content -->
-    <div id="content">
-        <!-- Toolbar -->
-        <div id="toolbar" class="primary-color">
-            <div class="open-left" id="open-left" data-activates="slide-out-left">
-                <i class="ion-android-menu"></i>
-            </div>
-                <span class="title">综合数据分析图</span>
-                <!-- <div class="open-right" id="open-right" data-activates="slide-out">
-                <i class="ion-android-person"></i>
-                </div> -->
-        </div>        
-        
-        <!-- Main Content -->
-        <div class="animated fadeinup page">
-
-            <!-- 各场馆数据分析图 -->
-            <div id="line_chart" class="card m-10 p-10">
-                <!-- <div class="legend">
-                    <h5 class="uppercase">综合数据分析图</h5>
-                </div> -->
-
-                <div class="lineChartCont">
-                    <canvas id="zhsj"></canvas>
-                </div>
-            </div>
-            
+<!-- Sidebars -->
+{% include left_Sidebars.html %}
+<!-- Page Content -->
+<div id="content">
+    <!-- Toolbar -->
+    <div id="toolbar" class="primary-color">
+        <div class="open-left" id="open-left" data-activates="slide-out-left">
+            <i class="ion-android-menu"></i>
         </div>
-    </div>    
-    {% include footer.html %}
-</div>
+        <span class="title">综合数据分析图</span>
+        <!-- <div class="open-right" id="open-right" data-activates="slide-out">
+        <i class="ion-android-person"></i>
+        </div> -->
+    </div>        
+    
+    <!-- Main Content -->
+    <div class="page">
+
+        <!-- 各场馆数据分析图 -->
+        <div id="line_chart" class="card m-10 p-10">
+            <!-- <div class="legend">
+                <h5 class="uppercase">综合数据分析图</h5>
+            </div> -->
+
+            <div class="lineChartCont">
+                <canvas id="zhsj"></canvas>
+            </div>
+        </div>
+        
+    </div>
+</div>  

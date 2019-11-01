@@ -7,8 +7,8 @@
 .page {
   margin-top: 56px;
   overflow: auto;
-  min-height: 512px;
-  padding-bottom: 56px;
+  // min-height: 512px;
+  // padding-bottom: 56px;
 }
 
 .none {
@@ -122,9 +122,6 @@
 .footer{
   text-align: center;
   padding: 0!important;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 footer.page-footer {
@@ -135,6 +132,18 @@ footer.page-footer {
   font-size: 20px;
 }
 
-body{
-  position: relative;
+// ---------- Flexbox 布局将网页的页尾始终放置在窗口最底部 ------------------
+//   <header>…</header>
+//   <main class="Site-content">…</main>
+//   <footer>…</footer>
+// </body>
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
 }
