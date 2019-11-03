@@ -1,62 +1,14 @@
 <script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-function countTime() {
-    //获取当前时间  
-    var date = new Date();
-    var now = date.getTime();
-    //设置截止时间  
-    var str = "2019/10/25 18:00:00";
-    var endDate = new Date(str);
-    var end = endDate.getTime();
-    //时间差  
-    var leftTime = end - now;
-    //定义变量 d,h,m,s保存倒计时的时间  
-    var d, h, m, s;
-    if (leftTime >= 0) {
-        d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
-        h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
-        m = Math.floor(leftTime / 1000 / 60 % 60);
-        s = Math.floor(leftTime / 1000 % 60);
-    } else {
-        window.setTimeout(function(){
-            $('#myModal').modal('show')
-        },100)
-    }
-    //将倒计时赋值到div中
-    var dag = document.getElementById("_d");
-    var hour = document.getElementById('_h');
-    var mouse = document.getElementById('_m');
-    var soure = document. getElementById('_s');
-    if(d > 0){
-        dag.innerHTML = d + "天";
-    }else{
-        dag.innerHTML = 0 + "天";
-    }
-    
-    if(h > 0){
-        hour.innerHTML = h + "时";
-    }else{
-        hour.innerHTML = 0 + "时";
-    }
-
-    if(m > 0){
-        mouse.innerHTML = m + "分";
-    }else{
-        mouse.innerHTML = 0 + "分";
-    }
-
-    if(s > 0){
-        soure.innerHTML = s + "秒";
-    }else{
-        soure.innerHTML = 0 + "秒";
-    }
-    //递归每秒调用countTime方法，显示动态时间效果  
-    setTimeout(countTime, 1000);
+<script>
+function ch(){
+  var a=document.getElementsByName("s");
+    for(var i=0;i<a.length;i++){
+      if(a[i].checked==true||a[i].checked=="checked"){
+         if(i<3){
+            console.log(i)
+            alert("你成功配对");
+         }
+      }
+   }
 }
 </script>
-<!-- <script>
-    window.setTimeout(function(){
-        $('#myModal').modal('show')
-    },100)
-</script> -->

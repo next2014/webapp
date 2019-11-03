@@ -1,0 +1,320 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 15px;
+}
+
+ .user-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width:100%;
+}
+
+ .user-list .user {
+	background-color: #ffffff;
+	border:1px solid #eeeeee;
+	overflow: hidden;
+	width: 48%;
+	position: relative;
+	text-align:center;
+	margin-bottom: 15px;
+}
+
+ .user-list .user .link {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%
+}
+
+ .user-list .user a{
+   text-decoration: none;
+}
+
+ .user-list .user a:hover{
+   color:#333;
+}
+
+ .user-list .user .link .img {
+	box-sizing: border-box;
+}
+
+ .user-list .user .number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 14px;
+	padding: .06rem .35rem;
+	color: #ffffff;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-bottom-right-radius: 10px;
+}
+
+ .user-list .user .nameCoupon{
+	 width: 100%;
+	 overflow: hidden;
+	 display: flex;
+	 align-content: center;
+	 align-items: center;
+	 margin-top: .4rem;
+	 margin-bottom: .4rem;
+}
+
+ .user-list .user .name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	font-size: 14px;
+	word-break: break-all;
+	width: 48%;
+	box-sizing: border-box
+}
+
+ .user-list .user .vote-btn {
+	font-size: 14px;
+	background-color: #ffffff;
+	color: #000000;
+	width: 88%;
+	height: .8rem;
+	line-height: .8rem;
+	margin: 0 auto;
+	margin-bottom: .4rem;
+	text-align: center;
+}
+
+ .user-list .user .coupon {
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	width: 48%;
+}
+
+ .user-list .user .link .img {
+	width: 100%;
+	margin: 0;
+}
+
+ .user-list .user .name {
+	min-height: 16px
+}
+
+ .user-list .user .name .text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+ .user-list_bak {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 9rem
+}
+
+ .user-list_bak .user {
+	background-color: #f4ba1c;
+	border-radius: .1rem;
+	overflow: hidden;
+	width: 48%;
+	position: relative;
+	margin-bottom: .3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	box-shadow: 0 .05rem .05rem 0 rgba(0, 0, 0, 0.2)
+}
+
+ .user-list_bak .user .link {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: .1rem;
+	width: 100%;
+	height: 4.3rem
+}
+
+ .user-list_bak .user .link .img {
+	box-sizing: border-box;
+	max-width: 100%;
+	margin: 0
+}
+
+ .user-list_bak .user {
+	height: 7rem
+}
+
+ .user-list_bak .user .number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: .15rem;
+	border-radius: 0 0 .1rem 0;
+	color: #ffffff;
+	text-align: center
+}
+
+ .user-list_bak .user .name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	font-size: 14px;
+	margin-bottom: .1rem;
+	word-break: break-all;
+	box-sizing: border-box;
+}
+
+ .user-list_bak .user .name .iconfont {
+	margin-right: .1rem
+}
+
+ .user-list_bak .user .vote-btn {
+	font-size: 14px;
+	background-color: #ffffff;
+	color: #000000;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: .8rem;
+	line-height: .8rem;
+	border-radius: .1rem;
+	margin-bottom: .1rem
+}
+
+ .user-list_bak .user .vote-btn .iconfont {
+	font-size: 14px;
+	margin-right: .1rem;
+	margin-bottom: .04rem
+}
+
+ .user-list_bak .user .coupon {
+	font-size: 14px;
+	color: #ffffff;
+	margin-bottom: .1rem;
+	padding: 0 .3rem;
+}
+
+ .user-page {
+	margin-bottom: .3rem
+}
+
+/* ------  排行榜  ---------- */
+
+
+.sort-title {
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	background-color: #FF5722 !important;
+}
+
+.sort-title .icon {
+	position: absolute;
+	top: -18px;
+	left: -15px;
+	width: 30px;
+	height: 30px;
+	transform: rotateZ(-5deg)
+}
+
+.load-more-btn {
+	width: 9rem;
+	font-size: 12px;
+	color: #999;
+	height: 1.5rem;
+	border: 0;
+	outline: 0;
+	line-height: 1.75rem;
+	margin-top: -1px
+}
+
+.load-more-btn.no-more {
+	background-color: #fff !important;
+	border-color: #fff !important
+}
+
+.layui-table tr td .icon {
+	width: 35px;
+	height: 35px;
+	margin:0 auto;
+}
+
+.layui-table tr td{
+    padding:.2rem 0!important;
+}
+
+.layui-table tr td:nth-child(1){
+	text-align: center;
+}
+
+.layui-table tr td:nth-last-child(1){
+	text-align: center;
+}
+
+.layui-table tr td img{
+	height: 40px;
+	margin-right: .3rem;
+}
+
+.layui-table  tr td.user-name span{
+   padding:0 0.5rem;
+   display: block;
+}
+
+
+/* -------- 信息页面 --------- */
+
+.container .detail-panel {
+	width:100%;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container .detail-panel p{
+	line-height:30px;
+	width: 100%; 
+}
+
+.container .detail-panel img{
+    padding-top: 20px;
+}
+
+.container .detail-panel strong{
+	font-size:18px;
+	width: 100%; 
+	text-align: center;
+}
+
+.container .detail-panel img{
+	width: 60%;
+}
+
+
+/* -----------  -------------- */
