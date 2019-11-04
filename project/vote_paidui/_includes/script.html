@@ -1,14 +1,16 @@
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 <script>
-function ch(){
-  var a=document.getElementsByName("s");
-    for(var i=0;i<a.length;i++){
-      if(a[i].checked==true||a[i].checked=="checked"){
-         if(i<3){
-            console.log(i)
-            alert("你成功配对");
+function selectDx(){
+    var selectName=document.getElementsByName("bName");
+    for(var i=0;i<selectName.length;i++){
+      if(selectName[i].checked==true||selectName[i].checked=="checked"){
+         if(i<=3){
+             console.log(i)
+             alert("配对成功");
+         } else {
+             alert ("配对不成功");
          }
       }
-   }
+    }
 }
 </script>
