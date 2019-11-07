@@ -1,0 +1,79 @@
+---
+layout: pages1
+title: 各场馆数据分析
+---
+<!-- Sidebars -->
+{% include left_Sidebars.html %}
+<!-- Page Content -->
+<div id="content">
+    <!-- Toolbar -->
+    <div id="toolbar" class="primary-color">
+        <div class="open-left" id="open-left" data-activates="slide-out-left">
+            <i class="ion-android-menu"></i>
+        </div>
+        <span class="title">综合数据分析图</span>
+        <!-- <div class="open-right" id="open-right" data-activates="slide-out">
+        <i class="ion-android-person"></i>
+        </div> -->
+    </div>        
+    
+    <!-- Main Content -->
+    <div class="page">
+
+        <!-- 各场馆数据分析图 -->
+        <div id="line_chart" class="card m-10 p-10">
+            <!-- <div class="legend">
+                <h5 class="uppercase">综合数据分析图</h5>
+            </div> -->
+
+            <div class="lineChartCont">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+      
+     <script>
+            var lineChartData = {
+                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                datasets: [{
+                    label: '销售票数',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }, {
+                    label: '销售金额',
+                    data: [10, 14, 8, 9, 10, 7],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            }
+            var ctx = document.getElementById("canvas").getContext("2d");
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: lineChartData,
+                options: {
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    scales: {
+                        xAxes: [{
+                            stacked: true
+                        }],
+                        yAxes: [{
+                            stacked: true
+                        }]
+                    }
+                }
+            });
+     </script>
+
+        
+    </div>
+</div>  
