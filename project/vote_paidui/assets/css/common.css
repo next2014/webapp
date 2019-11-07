@@ -1,0 +1,200 @@
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center
+}
+
+header .marquee {
+	width: 100%;
+	overflow: hidden;
+	height: .8rem;
+	line-height: .8rem;
+	color: #fff;
+	z-index: 1000;
+	font-size: 14px;
+	background-color: #f4ba1c
+}
+
+header .marquee .iconfont {
+	margin-right: .1rem;
+	float: left
+}
+
+header .marquee .notice {
+	float: left
+}
+
+header .top-tools {
+	position: fixed;
+	top: .8rem;
+	left: 0;
+	z-index: 1000
+}
+
+header .top-tools .music-tool {
+	width: 1.2rem;
+	height: 1.2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	background-color: #f4ba1c;
+	border-radius: 50%;
+	position: absolute;
+	top: .2rem;
+	left: .2rem;
+	opacity: .8
+}
+
+header .top-tools .music-tool .iconfont {
+	font-size: 24px
+}
+
+header .top-tools .music-tool.music-play {
+	animation: play 3s infinite linear
+}
+
+header .swiper-container {
+	width: 100%
+}
+
+header .swiper-container .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff
+}
+
+header .swiper-container .swiper-slide .link {
+	width: 100%;
+	display: table
+}
+
+header .swiper-container .swiper-slide .link .img {
+	width: 100%
+}
+
+header .count-info {
+	margin-top: .32rem;
+	width: 92%;
+	height: 1.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f4ba1c;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15)
+}
+
+header .count-info .info {
+	flex: 1;
+	color: #ffffff;
+	text-align: center;
+	font-size: 14px
+}
+
+header .count-info .info .type {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: .2rem
+}
+
+header .count-info .info .type .iconfont {
+	font-size: 12px;
+	margin-right: .1rem
+}
+
+header .apply-btn {
+	width: 2.56rem;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: .53rem;
+	color: #fff
+}
+
+header .apply-btn .iconfont {
+	margin-right: .1rem
+}
+
+header .count-down {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	margin-bottom: .4rem;
+	margin-top: .4rem;
+	width: 92%;
+	height: 1.2rem;
+	background-color: #ffffff;
+	border:1px solid #dddddd;
+}
+
+header .count-down .iconfont {
+	margin-right: .1rem;
+	color: #FF5722;
+	line-height: 18px;
+}
+
+header .count-down .text {
+	color: #FF5722
+}
+
+
+
+.page{
+	padding-bottom: 50px;
+}
+
+.footer-navs {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1
+}
+
+.footer-navs a{
+    text-decoration: none;
+}
+
+.footer-navs .link {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #333333;
+	font-size: 14px;
+	border-top: 1px solid #f7f7f7
+}
+
+.footer-navs .link.active {
+	font-weight: 600;
+	color:rgb(255, 136, 0);
+}
+
+.footer-navs .link.active .iconfont {
+	font-weight: 500
+}
+
+.footer-navs .link .iconfont {
+	margin-top: .05rem;
+	margin-right: .15rem;
+}
+
+.footer-navs .link:hover {
+	font-size: 16px;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2)
+}
