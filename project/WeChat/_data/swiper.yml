@@ -1,4 +1,4 @@
-- category: 欧美城所有项目
+- category: 狮子城所有项目
   project:
     - number: 1
       src: assets/img/banner/01.jpg
@@ -24,7 +24,7 @@
     - number: 5
       src: 6
 
-- category: 格林披志卡丁车
+- category: 格林披治卡丁车
   glpzkdc:
     - number: 1
       src: 1

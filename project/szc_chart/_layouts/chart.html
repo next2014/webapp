@@ -1,0 +1,29 @@
+---
+layout: pages1
+title: 狮子城场馆数据表
+---
+<!-- Sidebars -->
+{% include left_Sidebars.html %}
+<!-- Page Content -->
+<div id="content">
+
+    <div id="toolbar" class="primary-color">
+        <div class="open-left" id="open-left" data-activates="slide-out-left">
+            <i class="ion-android-menu"></i>
+        </div>
+        <span class="title">场馆数据统计图</span>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="page">
+
+        <div class="wrapper"><canvas id="chart-0"></canvas></div>
+        <div class="toolbar">
+            <button onclick="randomize(this)">随机化</button>
+            <button onclick="addDataset(this)">添加数据集</button>
+            <button onclick="removeDataset(this)">移除数据集</button>
+        </div>
+
+    </div>
+
+</div>

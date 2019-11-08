@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>表格操作 - layui</title>
+  <link rel="stylesheet" href="src/css/layui.css">
+  <script src="src/layui.js"></script>
+  <style>
+    body {padding: 20px;
+      /*overflow-y: scroll;*/}
+  </style>
+</head>
+<body>
+    <div id="hidden1" lay-filter="hidden1" style="display: none">
+       <table id="department_result" lay-filter="department_result"></table>
+    </div>
+
+    <!-- 添加 弹出部门表格的 tool（里面的按钮） -->
+    <script type="text/html" id="hidden1-table-tool">
+       <a class="layui-btn layui-btn-xs" lay-event="select">选择</a>
+    </script>
+
+    <script>
+            // 定义全局变量. employee.js 中要用到
+            // var $, admin, table, layer, laydate, form; 
+            // var context_path = '/layui-curd';
+            
+            // layui.config({
+            //    base: context_path + '/layuiadmin/'
+            // }).extend({
+            //    index: 'lib/index'
+            // }).use([ 'table', 'layer', 'laydate', 'form' ], function() {
+            
+            //     // part 1: 为全局变量赋值
+            //     $ = layui.$, 
+            //     admin = layui.admin, 
+            //     table = layui.table, 
+            //     layer = layui.layer, 
+            //     laydate = layui.laydate, 
+            //     form = layui.form; 
+            var $, admin, table, layer, laydate, form; 
+            layui.use(['layer', 'form', 'table', 'laydate'], function(){
+                $ = layui.$, 
+                admin = layui.admin, 
+                table = layui.table, 
+                layer = layui.layer, 
+                laydate = layui.laydate, 
+                form = layui.form; 
+                
+                // part 2: 让layui渲染页面
+                table.render(department_result_table_options); // 渲染页面上的table. table中 的数据是通过 ajax 请求从后台获取。
+                
+                // part 3: 让 layui 为页面的元素绑定事件处理函数
+                table.on('tool(department_result)', department_tool_event_handler); // 为页面上的table上的tool绑定事件处理函数
+                
+                // part 4: 为输入框绑定光标聚焦事件的触发该函数，
+                $('#dname').focus(depart_input_focus_handler);
+
+
+                //页面上隐藏的用于弹层的所有客户的列表的相关设置
+                    var department_result_table_options = {
+                    elem: '#department_result'
+                    ,url: 'json/table/demo1.json'
+                    ,method : 'get'  
+                    ,response : {   
+                    statusName : 'code'  
+                    ,statusCode : 200
+                    ,msgName : 'msg'  
+                    ,countName : 'count' 
+                    ,dataName : 'data'
+                    }
+                    ,title : '部门列表'  
+                    ,cols : [[
+                        {type: 'checkbox', fixed: 'left'}
+                        ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计：'}
+                        ,{field:'username', title:'用户名', hide: true, width:120, edit: 'text', templet: '#usernameTpl'}
+                        ,{field:'email', title:'邮箱', hide: true, width:150, edit: 'text', templet: function(x){
+                            return '<em>'+ x.email +'</em>'
+                        }}
+                        ,{field:'sex', title:'性别', width:80, edit: 'text', sort: true}
+                        ,{field:'city', title:'城市', width:100}
+                        ,{field:'sign', title:'签名'}
+                        ,{field:'experience', title:'积分', width:80, sort: true, totalRow: true}
+                        ,{field:'ip', title:'IP', width:120}
+                        ,{field:'logins', title:'登入次数', width:100, sort: true, totalRow: true}
+                        ,{field:'joinTime', title:'加入时间', width:120}
+                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+                   ]]
+                };
+
+
+                // “客户”输入框的光标聚焦事件的触发函数， 弹出弹层，弹层上显示所有的客户，以供选择。
+                function depart_input_focus_handler() {
+                    layer.open({
+                    type : 1
+                    , area : [ '600px', '450px' ]
+                    , content : $('#hidden1')
+                    , success : function () {
+                        // 重新加载表格中的数据
+                        table.reload('department_result', department_result_table_options);
+                        $('#hidden1').css('display', 'block');
+                      }
+                    });
+                }
+
+                //点击弹出的“客户信息”弹层上的表格中“选中”按钮的触发函数
+                function department_tool_event_handler(obj) {
+                    console.info(obj);
+                    var data = obj.data;
+                    switch (obj.event) {
+                        case 'select':
+                        $('#dname').val(data.dname);
+                        layer.close(layer.index);
+                        break;
+                    }
+                }
+
+
+
+            });
+ 
+    </script>
+
+</body>
+
+</html>

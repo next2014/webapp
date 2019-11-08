@@ -1,0 +1,1291 @@
+﻿@charset "utf-8";
+
+/* ---------------------------------------public------------------------------------- */
+
+html,
+body,
+{
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	width: auto\9;
+	width: 100%;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: "微软雅黑";
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.btn_css .time_btn {
+	width: 80%;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	border-radius: 0.2rem;
+	margin: 2rem 10%;
+	font-size: 0.8rem;
+	border-color: #ff8400;
+	background-color: #ff8400;
+}
+
+.dol {
+	font-size: 0.8rem;
+	color: #ff3b44;
+}
+
+
+/* --------------------------------------public end---------------------------------------- */
+
+
+/* ----------------------------------------------index---------------------------------------------------- */
+
+.index_all {
+	width: 100%;
+	height: 100vh;
+	background: #f8fbff;
+}
+
+.index_all ul {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 0.4rem;
+	margin-bottom: 2.4rem;
+}
+
+.index_all ul li {
+	width: 94%;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+	margin: 6px auto;
+	border-radius: 0.2rem;
+	border: 1px solid #eeeeee;
+}
+
+
+/*----------新改的 5-29-----------*/
+
+.index_all ul li .inTop {
+	width: 100%;
+}
+
+.in_fl img {
+	width: 100%;
+	height: 100%;
+}
+
+.index_all .in_fr {
+	margin-top: 0.3rem;
+}
+
+.index_all .in_fr div {
+	/*margin-top: 0.3rem;*/
+}
+
+.index_all .in_fr .piao_type {
+	line-height: 1.5rem;
+	border-bottom: 0;
+}
+
+.index_all .in_fr .piao_type .del {
+	margin-left: 0.2rem;
+	color: #0077c8;
+}
+
+
+/*-------------------------------*/
+
+.in_fl {
+	width: 35%;
+	height: 4rem;
+	margin: 0.26rem;
+}
+
+.in_fr {
+	width: 58%;
+	height: auto;
+}
+
+.in_fr h2 {
+	font-size: 0.7rem;
+	color: #342c2a;
+	/*margin-top: 0.3rem;*/
+}
+
+.in_fr p {
+	width: 100%;
+	margin: 0.3rem 0;
+	font-size: 0.56rem;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.in_fr div {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+.in_fr div .Sold {
+	margin-right: 22%;
+	font-size: 0.5rem;
+	color: #666;
+	margin-top: 5%;
+}
+
+
+/* ----------in_btn-------- */
+
+.in_btn {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 99;
+}
+
+.in_btn .layui-btn-group {
+	z-index: 99;
+	width: 100%;
+}
+
+.layui-btn-group button {
+	height: 2rem;
+	width: 33.33%;
+	background: #dcdedd;
+	color: #333;
+	font-size: 0.6rem;
+	opacity: 1;
+}
+
+.layui-btn-group button a {
+	display: block;
+	color: #fff;
+}
+
+.layui-btn-group button.current {
+	background: #3fbbef;
+	color: #fff;
+}
+
+
+/* -------in_btn  end------- */
+
+
+/* ----------------------------------------------index end--------------------------------------------------- */
+
+
+/* ----------------------------------------------ticket_info----------------------------------------------------- */
+
+.ti_all {
+	width: 100%;
+	height: auto;
+	background: #f8fbff;
+}
+
+.ti_tu {
+	width: 100%;
+	height: 9rem;
+}
+
+.ti_tu img {
+	height: 9rem;
+}
+
+.ti_con {
+	width: 94%;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+	padding: 0 3%;
+	box-shadow: 0 1px 5px #ccc;
+}
+
+.ti_con .piao_type .Choice {
+	margin-top: 0.6rem;
+}
+
+.piao_type {
+	height: 2.2rem;
+	line-height: 2.2rem;
+	border-bottom: 1px solid #dedede;
+}
+
+.piao_type h3 {
+	font-size: 0.65rem;
+	color: #666;
+}
+
+.piao_type span {
+	font-size: 0.8rem;
+	color: #ff3b44;
+	margin-right: 2%;
+}
+
+.piao_type .time {
+	width: 65%;
+	height: 1.6rem;
+	margin-top: 0.1rem;
+	padding-right: 0.2rem;
+	text-align: right;
+}
+
+.piao_type .time input {
+	width: 55%;
+	background: #f7f7f7;
+	font-size: 0.8rem;
+	margin-top: 0.2rem;
+	height: 1.4rem;
+	border: 0;
+	color: #f73333;
+	padding-right: 0.4rem;
+	border-radius: 0.2rem;
+	text-align: right;
+}
+
+.piao_type .time i {
+	font-size: 0.8rem;
+	color: #ccc;
+}
+
+
+/* -------购买数量--------- */
+
+.ti_con .piao_01 {
+	border-bottom: 0 !important;
+}
+
+.piao_type .Choice {
+	height: 1.3rem;
+	margin-right: 0.2rem;
+	margin-top: 0.25rem;
+}
+
+.piao_type .Choice button {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	color: #666;
+	text-align: center;
+	list-style: none;
+	border: 0;
+	font-size: 1rem;
+	border: 1px solid #3fbbef;
+	border-radius: 4px;
+	background: #fff;
+	color: #3fbbef;
+	cursor: pointer;
+}
+
+.piao_type .Choice .current {
+	border: 1px solid #3fbbef;
+	background: #3fbbef;
+	color: #fff;
+}
+
+.piao_type .Choice input {
+	width: 36px;
+	height: 22px;
+	text-align: center;
+	list-style: none;
+	font-size: 0.6rem;
+	border: 1px solid #dedede;
+	color: #00c3ff;
+	margin: 0 0.1rem;
+	border-radius: 0.16rem;
+}
+
+
+/* -------ti_words--------- */
+
+.ti_words {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+
+/* -------w_up----------------- */
+
+.ti_words .w_up {
+	width: 100%;
+	height: 1.8rem;
+	background: #fff;
+	margin: 0.4rem 0;
+	box-shadow: 0 1px 5px #ccc;
+}
+
+.w_up div {
+	width: 100%;
+	height: 2rem;
+	display: inline-block;
+	line-height: 2rem;
+	font-size: 0.7rem;
+	position: relative;
+	color: #338dfc;
+}
+
+.w_up div span {
+	width: 50%;
+	display: block;
+	border-bottom: 2px solid #338dfc;
+	position: absolute;
+	left: 25%;
+	bottom: 0;
+}
+
+
+/* -------w_down----------------- */
+
+.w_down {
+	width: 94%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.w_down dl {
+	width: 94%;
+	height: auto;
+	margin: 0.4rem 0;
+}
+
+.w_down dl dt {
+	font-size: 0.7rem;
+	color: #00c3ff;
+}
+
+.w_down dl dd {
+	width: 98%;
+	margin: 0.4rem;
+	font-size: 0.6rem;
+	color: #666;
+}
+
+.w_down dl dd img {
+	border-radius: 0.3rem;
+	padding: 0.2rem;
+}
+
+.w_down dl dd p {
+	line-height: 1.2rem;
+}
+
+
+/* ---------------底部按钮------------- */
+
+.ti_btn .layui-btn-group .layui-btn {
+	width: 30%;
+	line-height: 0.8rem;
+	background: #3fbbef;
+	color: #fff;
+}
+
+.ti_btn .layui-btn-group .btn-1 {
+	background: #fff;
+	color: #999;
+	text-align: center;
+	border-right: 1px solid #b8b8b8;
+	width: 20%;
+	font-size: 0.5rem;
+	position: relative;
+}
+
+.ti_btn .layui-btn-group .btn-2 {
+	border-right: 0;
+}
+
+.ti_btn .layui-btn-group .btn-3 {
+	background: #dcdedd;
+	color: #333;
+}
+
+.ti_btn .layui-btn-group .btn-1 span {
+	width: 0.8rem;
+	height: 0.8rem;
+	display: block;
+	margin: 0.15rem auto;
+}
+
+.ti_btn .layui-btn-group .btn-1 i {
+	width: 0.6rem;
+	height: 0.6rem;
+	background: #f00;
+	text-align: center;
+	line-height: 0.6rem;
+	font-style: normal;
+	border-radius: 50%;
+	color: #fff;
+	position: absolute;
+	left: 55%;
+	top: 8%;
+}
+
+
+/* ---------ti_btn end--------- */
+
+
+/* ---------商品详情--------- */
+
+.ware dd .to_head {
+	width: 100%;
+	margin: 1.2rem auto 0.4rem;
+	text-align: center;
+}
+
+.ware dd .to_head span {
+	border-top: 1px solid #0288dd;
+	border-bottom: 2px solid #0288dd;
+	color: #0288dd;
+	padding: 0 0.5rem;
+	display: inline-block;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+}
+
+
+/*字体颜色*/
+
+.ware .wa_d1 span {
+	text-align: center;
+	display: block;
+	margin: 0.3rem 0;
+	color: #48c5f9;
+}
+
+.ware .wa_d2 span {
+	text-align: center;
+	display: block;
+	margin: 0.3rem 0;
+	color: #ff9f1f;
+}
+
+.ware .wa_d3 span {
+	text-align: center;
+	display: block;
+	margin: 0.4rem 0;
+}
+
+.wa_dd .wa_a {
+	box-shadow: 0 1px 3px #ccc;
+	background: #fff;
+	margin: 0.3rem 0;
+}
+
+.wa_dd .wa_a img {
+	width: 60%;
+}
+
+.wa_dd .wa_a p {
+	width: 80%;
+	margin: 0.3rem auto 0;
+}
+
+.wa_dd .wa_b {
+	padding: 0.3rem 0;
+}
+
+.wa_dd .wa_b p {
+	padding: 0.5rem 0.8rem;
+	margin: 0.3rem auto;
+	border-radius: 0.2rem;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+
+/* ----------------------------------------------ticket_info  end---------------------------------------------- */
+
+
+/* ----------------------------------------------ticket-confirm---------------------------------------------- */
+
+.ti_cof {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 8rem;
+}
+
+.ti_cof .ti_head {
+	width: 100%;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.7rem;
+	text-align: center;
+	background: #00c3ff;
+	color: #fff;
+}
+
+.ti_cof ul {
+	width: 94%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.ti_cof ul li {
+	width: 100%;
+	height: 5rem;
+	background: #fff;
+	margin-bottom: 0.2rem;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 0 2px #ccc;
+}
+
+.ti_cof li dl {
+	width: auto;
+	height: 4.2rem;
+	padding: 0.4rem;
+	margin-top: 0.3rem;
+}
+
+.ti_cof li dl dt {
+	width: 30%;
+	height: auto;
+}
+
+.ti_cof li dl dt img {
+	height: 4rem;
+}
+
+.ti_cof dd {
+	width: 62%;
+	height: 4.2rem;
+	margin-right: 1%;
+}
+
+.ti_cof dd h2 {
+	font-size: 0.7rem;
+}
+
+.ti_cof dd .l_time {
+	margin: 0.2rem 0;
+	color: #999;
+}
+
+.ti_cof dd .l_money {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: 0.3rem;
+}
+
+.ti_cof dd .l_money span {
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: #ff1b49;
+}
+
+.ti_cof dd .l_money i {
+	font-size: 0.6rem;
+	margin-right: 0.8rem;
+}
+
+
+/* ---------phone-------- */
+
+.phone {
+	width: 94%;
+	height: auto;
+	margin: 0.7rem auto 0;
+}
+
+.phone input {
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.6rem;
+	margin-bottom: 0.3rem;
+}
+
+.phone input.yan {
+	width: 58%;
+}
+
+.phone .oupu .layui-btn {
+	width: 40%;
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+
+
+/* ---------yh-------- */
+
+.yh {
+	width: 95%;
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.yh a {
+	font-size: 0.6rem;
+}
+
+.yh .layui-form-checkbox[lay-skin="primary"] i {
+	width: 0.7rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	font-size: 14px;
+}
+
+.yh .yh_sp {
+	color: #5FB878;
+	font-size: 0.7rem;
+}
+
+.yh_r .yh_rsp {
+	color: #f00;
+}
+
+.yh_r i {
+	padding-right: 0.2rem;
+	padding-left: 0.4rem;
+}
+
+.yh .layui-form-checkbox {
+	width: 1rem;
+	height: 1rem;
+	padding-right: 0;
+}
+
+.yh .layui-form-checkbox i {
+	font-size: 16px;
+	right: -5px;
+	top: -2px;
+}
+
+.yh .layui-form-radio {
+	margin: 0;
+}
+
+
+/* ---------ye--------- */
+
+.ye {
+	width: 100%;
+	border: 0;
+	padding: 0.2rem 0;
+}
+
+.ye li {
+	float: left;
+	width: 49%;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+.ye li span.bag {
+	font-weight: bold;
+	color: #ff1b49;
+}
+
+
+/* ---------按钮--------- */
+
+.co_btn {
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 1px 0 3px #999;
+}
+
+.co_btn .layui-btn-group {
+	/*position: absolute;
+	bottom: 0;*/
+	/*height: 2.4rem;*/
+}
+
+.co_btn button {
+	width: 47%;
+	border-radius: 0.1rem;
+	margin: 0.2rem;
+	background: #00c3ff;
+	border: 1px solid #00c3ff;
+	color: #fff;
+	cursor: pointer;
+}
+
+.co_btn .layui-btn-group .lb_next {
+	background: 0;
+	border: 1px solid #acacac;
+	color: #acacac;
+}
+
+.layui-btn-group .layui-btn:first-child {
+	border-left: 1px solid #acacac;
+}
+
+.oupu .layui-btn {
+	background-color: #00abe7;
+}
+
+
+/* --------------阅读须知弹出----------------- */
+
+#test {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	display: none;
+}
+
+#test .te_d {
+	width: 80%;
+	height: 60%;
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	background: #fff;
+	border-radius: 0.24rem;
+	overflow-y: scroll;
+}
+
+#test i {
+	font-size: 1.6rem;
+	color: #ff9f1f;
+	cursor: pointer;
+	position: absolute;
+	right: 8%;
+	top: 19%;
+	z-index: 1000;
+}
+
+#test p {
+	float: left;
+}
+
+
+/* ----------------------------------------------ticket-confirm  end---------------------------------------------- */
+
+
+/* ----------------------------------------------shopping---------------------------------------------- */
+
+.shop {
+	width: 100%;
+	height: 100vh;
+	background: #f8fbff;
+}
+
+.shop ul {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 0.8rem;
+	margin-bottom: 2rem;
+}
+
+.shop ul li {
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #dedede;
+	position: relative;
+	padding: 0.3rem;
+	margin: 6px auto;
+	border-top: 4px solid #f5c411;
+}
+
+.shop .del {
+	margin-top: 0.2rem;
+	font-size: 0.7rem;
+	color: #57beff;
+}
+
+
+/*.shop .in_fl img{
+	margin-top: 0.3rem;
+}*/
+
+.shop .Choice {
+	width: 50%;
+	margin-top: 0;
+}
+
+.shop .piao_type {
+	border-bottom: 0;
+}
+
+.shop .sh_num {
+	font-size: 1rem;
+}
+
+.index_all .shop_img {
+	margin: 0.8rem 0.3rem;
+}
+
+.index_all .shop_r h2 {
+	margin-top: 0.3rem;
+}
+
+.index_all .shop_r p {
+	margin: 0.1rem 0;
+}
+
+
+/* ----------------------------------------------shopping end---------------------------------------------- */
+
+
+/* ----------------------------------------------order---------------------------------------------- */
+
+
+/* -------切换样式------ */
+
+.order_all {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.order_all h1 {
+	width: 100%;
+	height: 1.8rem;
+	text-align: center;
+	box-shadow: 0 0 3px #ccc;
+}
+
+.order_all h1 span {
+	margin: 0;
+	padding: 0;
+	width: 24%;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	font-size: 0.7rem;
+	text-align: center;
+	display: inline-block;
+}
+
+.order_all h1 span.current {
+	background: #3fbbef;
+	color: #fff;
+}
+
+.order_all ul li {
+	display: none;
+	margin-top: 0.5rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+.order_all ul li.current {
+	display: block;
+}
+
+
+/* -------切换样式- end----- */
+
+.order_all li dl {
+	height: auto;
+	overflow: hidden;
+	padding: 0rem 0.4rem 0.3rem 0.4rem;
+	background: #fff;
+	box-shadow: 0 1px 3px #ccc;
+	margin: 0.4rem 0;
+}
+
+
+/* -------dt------ */
+
+.order_all dl dt {
+	width: 100%;
+	height: auto;
+	padding: 0.3rem 0;
+	font-size: 0.65rem;
+	color: #666;
+	border-bottom: 1px dashed #ccc;
+}
+
+.order_all dl dt .up {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.order_all dl dt .up i {
+	margin-right: 6%;
+	color: #ff3b44;
+	line-height: 1.4rem;
+}
+
+.order_all dt p {
+	line-height: 1.4rem;
+}
+
+.order_all dt p.p_main {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	line-height: 1.2rem;
+	font-size: 0.6rem;
+	margin-bottom: 0.2rem;
+	background: #fff5e6;
+}
+
+.order_all dt p.p_main span {
+	margin-left: 1rem;
+	float: left;
+}
+
+.order_all dt p.p_main i {
+	margin-right: 1rem;
+	float: right;
+}
+
+
+/* -------dd------ */
+
+.order_all dl dd {
+	width: 100%;
+	height: 1.4rem;
+	line-height: 1.4rem;
+	font-size: 0.58rem;
+}
+
+.order_all dl dd .fl {
+	margin: 0.2rem 0 0 0.4rem;
+}
+
+.order_all dl dd .fl span {
+	color: #ffa10d;
+	font-size: 0.8rem;
+}
+
+.order_all dd .fr a {
+	color: #00c3ff;
+	line-height: 1.4rem;
+	margin-right: 0.5rem;
+	display: inline-block;
+	margin-top: 0.24rem;
+}
+
+.order_all dd .fr button {
+	list-style: none;
+	border: 0;
+	background: #ffa10d;
+	color: #fff;
+	padding: 0.2rem 0.8rem;
+	border-radius: 0.1rem;
+	margin-top: 0.2rem;
+}
+
+
+/* ----------------------------------------------order end---------------------------------------------- */
+
+
+/* ----------------------------------------------ticket-out --------------------------------------------- */
+
+
+/* --------弹出的样式------- */
+
+.out {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+
+.out .te_d {
+	width: 80%;
+	height: auto;
+	position: absolute;
+	left: 10%;
+	top: 30%;
+	background: #fff;
+	border-radius: 0.24rem;
+}
+
+.out .te_d h1 {
+	font-size: 1rem;
+	color: #ffa10d;
+	width: 80%;
+	height: 3rem;
+	line-height: 3rem;
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 1px dashed #ccc;
+}
+
+.out .te_d .te_ioc {
+	width: 3.5rem;
+	margin: 0.7rem auto;
+}
+
+.out_succ .te_d h1 span {
+	width: 1.6rem;
+	height: 1.6rem;
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
+.out_succ .de_btn {
+	width: 80%;
+	height: 2rem;
+	margin: 1.6rem auto;
+}
+
+.de_btn button {
+	width: 46%;
+	height: 1.4rem;
+	line-height: 1.4rem;
+	font-size: 0.66rem;
+}
+
+.ti_cof .ti_time {
+	background: #fff;
+	color: #666;
+	border-bottom: 1px solid #ccc;
+}
+
+.ti_cof .ti_time span {
+	color: #1594ff;
+}
+
+.ti_cof .ti_main {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 0.2rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.ti_cof .ti_main .ddh {
+	width: 90%;
+}
+
+.ti_cof .ti_main h3 {
+	width: auto;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.66rem;
+	padding-left: 0.8rem;
+	margin: 0.4rem 0 0.2rem 0.5rem;
+	border-radius: 0.6rem;
+	background: #fde7d0;
+}
+
+.ti_out {
+	margin-bottom: 3.5rem;
+}
+
+.to_btn {
+	height: 3.5rem;
+}
+
+.to_btn button {
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+}
+
+
+/* -------------------------------------------ticket-out end------------------------------------------- */
+
+
+/* -------------------------------------------order-detail------------------------------------------- */
+
+.o_de {
+	width: 90%;
+	padding: 0.6rem 0.2rem;
+	background: #fff;
+	box-shadow: 0 0 3px #ccc;
+	border-radius: 0.2rem;
+	position: relative;
+	left: 3%;
+	top: 0.7rem;
+}
+
+.o_de .de_btn {
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.o_de ul li {
+	width: 80%;
+	padding: 0.5rem 0.34rem;
+	margin: 0 auto;
+	border-bottom: 1px solid #d5d5d5;
+	font-size: 0.6rem;
+}
+
+.o_de ul li span {
+	width: 30%;
+	color: #666;
+	display: inline-block;
+}
+
+.o_de ul li i {
+	font-style: normal;
+	color: #666;
+	width: 66%;
+}
+
+.o_de .o_con {
+	width: 90%;
+	background: #fff4e9;
+	margin: 0.6rem auto;
+	border-radius: 0.2rem;
+	border-bottom: 0;
+}
+
+.o_con .o_head {
+	padding: 0.1rem 0.5rem;
+	width: 50%;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #ff7f8e;
+	border-radius: 1rem;
+	color: #ff2a43;
+}
+
+.o_con .o_head i {
+	color: #ff2a43;
+}
+
+
+/*------列表----*/
+
+.o_con .layui-table tr {
+	background-color: #fff;
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+
+.o_con .layui-table th {
+	font-size: 0.6rem;
+}
+
+.o_con .layui-table td {
+	font-size: 0.56rem;
+	color: #ffa10d;
+}
+
+.o_de .no_bor {
+	color: #008fea;
+	padding: 0.1rem 0;
+	border-bottom: 0;
+}
+
+.o_de ul li.no_bor i {
+	color: #008fea;
+}
+
+
+/*------列表2----*/
+
+.o_de .d_con {
+	background: #fff;
+}
+
+.d_con .d_head {
+	width: 36%;
+	text-align: center;
+	background: #bd8438;
+	color: #fff;
+}
+
+.d_con .layui-table tr {
+	height: 1rem;
+	line-height: 1rem;
+}
+
+.o_de .last_btn {
+	width: 50%;
+	height: auto;
+	margin: 0.1rem auto;
+	overflow: hidden;
+}
+
+.o_de .last_btn button {
+	width: 100%;
+}
+
+
+/* -------------------------------------------remove------------------------------------------- */
+
+.return .te_d {
+	height: auto;
+	top: 18%;
+}
+
+.return .te_d .re_con {
+	width: 80%;
+	height: auto;
+	margin: 1rem auto;
+	font-size: 0.7rem;
+	color: #838383;
+}
+
+.return .re_con p {
+	line-height: 1.4rem;
+}
+
+.return .re_con p.plist {
+	line-height: 0.8rem;
+	color: #bababa;
+	margin: 0.5rem 0;
+	font-size: 0.6rem;
+}
+
+.return .te_d .re_con label {
+	margin-right: 0.4rem;
+}
+
+.return .te_d .de_btn {
+	width: 80%;
+	height: auto;
+	overflow: hidden;
+	margin: 1rem auto;
+}
+
+.return .te_d .de_btn button {
+	width: 47%;
+	font-size: 0.6rem;
+}
+
+
+/* -------------------------------------------remove end----------------------------------------- */
+
+
+/* --------------------------------------remove success----------------------------------------- */
+
+.out_si .de_btn {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.out_si .de_btn button {
+	width: 100%;
+	margin: 1rem auto;
+}
