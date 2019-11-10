@@ -1,0 +1,16 @@
+{
+    "status": 200
+    ,"message": ""
+    ,"total": 8
+    ,"rows": {
+      "item": [{
+        "deptno": "10001"
+        ,"dname": "网络部"
+        ,"loc": "惠州"
+      },{
+        "deptno": "10002"
+        ,"dname": "运营部"
+        ,"loc": "深圳"
+      }]
+    }
+  }  

@@ -23,30 +23,22 @@
 
     <script>
             // 定义全局变量. employee.js 中要用到
-            // var $, admin, table, layer, laydate, form; 
-            // var context_path = '/layui-curd';
-            
-            // layui.config({
-            //    base: context_path + '/layuiadmin/'
-            // }).extend({
-            //    index: 'lib/index'
-            // }).use([ 'table', 'layer', 'laydate', 'form' ], function() {
-            
-            //     // part 1: 为全局变量赋值
-            //     $ = layui.$, 
-            //     admin = layui.admin, 
-            //     table = layui.table, 
-            //     layer = layui.layer, 
-            //     laydate = layui.laydate, 
-            //     form = layui.form; 
             var $, admin, table, layer, laydate, form; 
-            layui.use(['layer', 'form', 'table', 'laydate'], function(){
+            var context_path = '/layui-curd';
+            
+            layui.config({
+               base: context_path + '/layuiadmin/'
+            }).extend({
+               index: 'lib/index'
+            }).use([ 'table', 'layer', 'laydate', 'form' ], function() {
+                // part 1: 为全局变量赋值
                 $ = layui.$, 
                 admin = layui.admin, 
                 table = layui.table, 
                 layer = layui.layer, 
                 laydate = layui.laydate, 
                 form = layui.form; 
+
                 
                 // part 2: 让layui渲染页面
                 table.render(department_result_table_options); // 渲染页面上的table. table中 的数据是通过 ajax 请求从后台获取。
@@ -57,34 +49,44 @@
                 // part 4: 为输入框绑定光标聚焦事件的触发该函数，
                 $('#dname').focus(depart_input_focus_handler);
 
+            });
 
                 //页面上隐藏的用于弹层的所有客户的列表的相关设置
-                    var department_result_table_options = {
+              var department_result_table_options = {
+                    //  elem: '#department_result'
+                    // ,url: context_path + '/api/department'
+                    // ,method : 'get'  
+                    //   ,response : {
+                    //     statusName : 'code'  
+                    //     ,statusCode : 200
+                    //     ,msgName : 'msg'  
+                    //     ,countName : 'count' 
+                    //     ,dataName : 'data'
+                    // }
                     elem: '#department_result'
-                    ,url: 'json/table/demo1.json'
-                    ,page: {}
-                    ,autoSort: false
-                    ,totalRow: true
-                    ,limit: 30
-                    ,title : '部门列表'  
-                    ,cols : [[
-                        {type: 'checkbox', fixed: 'left'}
-                        ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计：'}
-                        ,{field:'username', title:'用户名', hide: true, width:120, edit: 'text', templet: '#usernameTpl'}
-                        ,{field:'email', title:'邮箱', hide: true, width:150, edit: 'text', templet: function(x){
-                            return '<em>'+ x.email +'</em>'
-                        }}
-                        ,{field:'sex', title:'性别', width:80, edit: 'text', sort: true}
-                        ,{field:'city', title:'城市', width:100}
-                        ,{field:'sign', title:'签名'}
-                        ,{field:'experience', title:'积分', width:80, sort: true, totalRow: true}
-                        ,{field:'ip', title:'IP', width:120}
-                        ,{field:'logins', title:'登入次数', width:100, sort: true, totalRow: true}
-                        ,{field:'joinTime', title:'加入时间', width:120}
-                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
-                   ]]
+                    ,url:'/json/table/demo6.json'
+                    ,toolbar: true
+                    ,title: '用户数据表'
+                    ,totalRow: true 
+                    ,cols : [ [ 
+                     { field : 'deptno', title : '部门编号', width : 100}
+                     ,{ field : 'dname', title : '部门名称', width : 150 }
+                     ,{ field : 'loc', title : '所在地', width : 150 }
+                     ,{ fixed : 'right', title : '操作', toolbar : '#hidden1-table-tool', width : 80 }
+                    ]]
+                    ,page: true
+                    ,response: {
+                      statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
+                    }
+                    ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据
+                      return {
+                        "code": res.status, //解析接口状态
+                        "msg": res.message, //解析提示文本
+                        "count": res.total, //解析数据长度
+                        "data": res.rows.item //解析数据列表
+                      };
+                    }
                 };
-
 
                 // “客户”输入框的光标聚焦事件的触发函数， 弹出弹层，弹层上显示所有的客户，以供选择。
                 function depart_input_focus_handler() {
@@ -112,9 +114,6 @@
                     }
                 }
 
-
-
-            });
  
     </script>
 
