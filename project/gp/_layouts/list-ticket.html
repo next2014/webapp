@@ -12,7 +12,7 @@ title: 在线购票
           <h2>在线购票</h2>
         </div> -->
         <div class="content">
-            <h3 class="pt-2 pl-2 pr-2"><strong>海洋世界</strong></h3>
+            <h3 class="p-2"><strong>海洋世界</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket1 %}
                 <li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
@@ -20,7 +20,7 @@ title: 在线购票
                         <img src="{{ticket.GetImage}}" alt=" ">
                     </div>
                     <div class="in_fr tic_con">
-                        <h2>
+                        <h2 class="mb-2">
                             <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
                         </h2>
                         <ul class="ticket_type">
@@ -37,7 +37,7 @@ title: 在线购票
                 {% endfor %}
             </ul>
             
-            <h3 class="pt-2 pl-2 pr-2"><strong>卡丁车馆</strong></h3>
+            <h3 class="p-2"><strong>卡丁车馆</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket2 %}
                 <li onclick="javascript: window.location.href =&#39;ticketDetailsNew.html&#39;">

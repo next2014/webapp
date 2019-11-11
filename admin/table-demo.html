@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>layui</title>
+  <title>狮子城</title>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,18 +10,14 @@
 </head>
 
 <body>
-  <div style="padding:15px; overflow: hidden;">
+  <div style="padding:70px 15px 0 15px; overflow: hidden;width: 50%;margin:0 auto;">
       <form class="layui-form">
-          <div class="layui-form-item" style="display: flex;">
-              <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">部门</label>
-              <input type="text" value="" class="layui-input" id="dname">
-          </div>
-          <div class="layui-form-item" style="display: flex;">
-              <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">备注</label>
-              <textarea  class="layui-textarea"></textarea>
-          </div>
-      </form>
-    </div>
+        <div class="layui-form-item" style="display: flex;">
+            <label class="layui-form-label pt-2 pb-2 pl-0 pr-0">部门</label>
+            <input type="text" value="" class="layui-input" id="dname">
+        </div>
+    </form>
+  </div>
 
 <div id="hidden1" lay-filter="hidden1" style="display: none">
   <table class="layui-hide" id="test" lay-filter="test"></table>
@@ -38,31 +34,19 @@
 <script>
 var table, layer, form;
 var context_path = '/json/table/demo6.json';
+layui.use([ 'table', 'layer', 'form' ], function() {
+    // part 1: 为全局变量赋值
+    table = layui.table, 
+    layer = layui.layer, 
+    form = layui.form; 
 
-layui.config({
-    base: context_path
-}).use([ 'table', 'layer', 'form' ], function() {
-      // part 1: 为全局变量赋值
-      table = layui.table, 
-      layer = layui.layer, 
-      form = layui.form; 
-  
     // part 2: 让layui渲染页面
-    // table.render(department_result_table_options); // 渲染页面上的table. table中 的数据是通过 ajax 请求从后台获取。
-
-    // part 3: 让 layui 为页面的元素绑定事件处理函数
-    table.on('tool(test)', department_tool_event_handler); // 为页面上的table上的tool绑定事件处理函数
-
-    // part 4: 为输入框绑定光标聚焦事件的触发该函数，
-    $('#dname').focus(depart_input_focus_handler);
-
-    // part 5: 让layui渲染页面
-    //页面上隐藏的用于弹层的所有客户的列表的相关设置
+    // 页面上隐藏的用于弹层的所有客户的列表的相关设置
     table.render({
         elem: '#test'
         ,url: context_path
-        ,toolbar: true
-        ,title: '用户数据表'
+        ,toolbar: false
+        ,title: '数据表'
         ,totalRow: true
         ,cols: [[
           {field:'deptno', title:'部门编号', width:100, }
@@ -70,7 +54,6 @@ layui.config({
           ,{field:'loc', title:'所在地', width:150, }
           ,{fixed: 'right', title:'操作', toolbar: '#hidden1-table-tool', width:80}
         ]]
-        ,page: true
         ,response: {
           statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
         }
@@ -82,29 +65,64 @@ layui.config({
             "data": res.rows.item //解析数据列表
           };
         }
-      });
+     });
+
+    // part 3: 让 layui 为页面的元素绑定事件处理函数
+    table.on('tool(test)', department_tool_event_handler); // 为页面上的table上的tool绑定事件处理函数
+
+    // part 4: 为输入框绑定光标聚焦事件的触发该函数，
+    $('#dname').focus(depart_input_focus_handler);
 
     // “客户”输入框的光标聚焦事件的触发函数， 弹出弹层，弹层上显示所有的客户，以供选择。
     function depart_input_focus_handler() {
-          layer.open({
-          type : 1
-          , area : [ '600px', '500px' ]
-          , content : $('#hidden1')
+        layer.open({
+        type : 1
+        , area : [ '510px', '400px' ]
+        , content : $('#hidden1')
+        , shade:0
+        , success : function() {
+          // 重新加载表格中的数据
+          table.reload('test', {
+              elem: '#test'
+              ,url: context_path
+              ,toolbar: false
+              ,title: '数据表'
+              ,totalRow: true
+              ,cols: [[
+                {field:'deptno', title:'部门编号', width:100, }
+                ,{field:'dname', title:'部门名称', width:150, }
+                ,{field:'loc', title:'所在地', width:150, }
+                ,{fixed: 'right', title:'操作', toolbar: '#hidden1-table-tool', width:80}
+              ]]
+              ,response: {
+                statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
+              }
+              ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据
+                return {
+                  "code": res.status, //解析接口状态
+                  "msg": res.message, //解析提示文本
+                  "count": res.total, //解析数据长度
+                  "data": res.rows.item //解析数据列表
+                };
+              }
           });
-      }
-    
-      //点击弹出的“客户信息”弹层上的表格中“选中”按钮的触发函数
-      function department_tool_event_handler(obj) {
-            console.info(obj);
-            var data = obj.data;
-            switch (obj.event) {
-              case 'select':
-                $('#dname').val(data.deptno + data.dname + data.loc);
-                // layer.close(layer.index);
-                layer.closeAll();
-              break;
-            }
+          $('#hidden1').css('display', 'block');
+         }
+      });
+    }
+  
+    //点击弹出的“客户信息”弹层上的表格中“选中”按钮的触发函数
+    function department_tool_event_handler(obj) {
+        console.info(obj);
+        var data = obj.data;
+        switch (obj.event) {
+          case 'select':
+            $('#dname').val(' ' + data.dname + ' ');
+            // layer.close(layer.index);
+            layer.closeAll();
+          break;
         }
+    }
 
 });
 

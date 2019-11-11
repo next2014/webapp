@@ -68,7 +68,6 @@
             overflow: hidden;
             background:$white;
             margin:15px auto;
-            // border-bottom: 1px solid #e9ecef;
             display: flex;
             &:first-child{
               margin-top: 0;
@@ -81,10 +80,10 @@
             }
             .dol{
                 color:#dc3545;
-                font-size:$font-20;
+                font-size:$font-16;
                 font-weight: bold;
                 em{
-                    font-size:$font-24;
+                    font-size:$font-20;
                 }
             }
             .dor{
@@ -95,7 +94,7 @@
             .in_fl{
                 // width:32%;
                 width:100px;
-                height:100px;
+                // height:100px;
                 margin:0 rem(32.2);
                 img{
                   border-radius: 5px;
@@ -116,7 +115,7 @@
        width: 68%;
        height: auto;
        position: relative;
-       padding-right: 10px;
+    //    padding-right: 10px;
        .ticket_type{
          li{
            display: inline;
@@ -146,7 +145,7 @@
             // font-weight: bold;
             color:#342c2a;
             line-height: 20px;
-            margin-bottom: 10px;
+            // margin-bottom: 10px;
         }
         p{
             width: 100%;
@@ -172,7 +171,7 @@
 }
 .qqjdImg{
     width:32%!important;
-    height:90px!important;
+    // height:90px!important;
 }
 .table th, .table td{
     padding: 0.75rem 0.5rem!important;
@@ -186,6 +185,7 @@
     font-size: 14px;
     border-radius: 0!important;
     margin:0;
+    left: inherit;
  }
 .dropdown-item{
     padding-top:0!important;
@@ -244,3 +244,12 @@
         margin:20px 10px 0 0;
     }
 }
+
+
+.noMore{
+    text-align:center; 
+    display:block;
+    height:1.4rem; 
+    line-height:1.4rem; 
+    color:#999;
+  }

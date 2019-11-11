@@ -207,26 +207,26 @@ legend{color:#000}
 .index_all ul li:first-child{margin-top:0}
 .index_all ul li:last-child{border-bottom:0}
 .index_all ul li .inTop{width:100%}
-.index_all ul li .dol{color:#dc3545;font-size:1.00625rem;font-weight:700}
-.index_all ul li .dol em{font-size:1.2075rem}
+.index_all ul li .dol{color:#dc3545;font-size:.805rem;font-weight:700}
+.index_all ul li .dol em{font-size:1.00625rem}
 .index_all ul li .dor{color:#ccc;font-size:.805rem;text-decoration:line-through}
-.index_all ul li .in_fl{width:100px;height:100px;margin:0 .50313rem}
+.index_all ul li .in_fl{width:100px;margin:0 .50313rem}
 .index_all ul li .in_fl img{-webkit-border-radius:5px;border-radius:5px}
 .index_all .tic_con h2{overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;height:30px;line-height:30px!important}
-.index_all .in_fr{width:68%;height:auto;position:relative;padding-right:10px}
+.index_all .in_fr{width:68%;height:auto;position:relative}
 .index_all .in_fr .ticket_type li{display:inline;border:1px solid #F6AB00;color:#F6AB00;padding:2px;font-size:.50313rem}
 .index_all .in_fr .ticket_type li:last-child{margin-right:0}
 .index_all .in_fr .piao_type{line-height:1.5rem;border-bottom:0}
 .index_all .in_fr .piao_type .del{margin-left:.2rem;color:#0077c8}
 .index_all .in_fr img{width:100%;height:100%}
-.index_all .in_fr h2{font-size:.805rem;color:#342c2a;line-height:20px;margin-bottom:10px}
+.index_all .in_fr h2{font-size:.805rem;color:#342c2a;line-height:20px}
 .index_all .in_fr p{width:100%;margin:.3rem 0;font-size:.70437rem;color:#999;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}
 .index_all .in_fr div{width:auto;height:auto;overflow:hidden}
 .index_all .in_fr .Sold{margin-right:22%;font-size:.5rem;color:#666;margin-top:5%}
-.qqjdImg{width:32%!important;height:90px!important}
+.qqjdImg{width:32%!important}
 .table td,.table th{padding:.75rem .5rem!important}
 .btn-link.focus,.btn-link:focus{text-decoration:none}
-.dropdown-menu{right:0;top:95%!important;font-size:14px;-webkit-border-radius:0!important;border-radius:0!important;margin:0}
+.dropdown-menu{right:0;top:95%!important;font-size:14px;-webkit-border-radius:0!important;border-radius:0!important;margin:0;left:inherit}
 .dropdown-item{padding-top:0!important;padding-bottom:0!important}
 @media (min-width:320px){.topAd{width:100%;height:200px}
 }
@@ -240,6 +240,7 @@ legend{color:#000}
 .ywbox{margin:0 5px}
 .yw-con{padding:10px;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd}
 .zxbox .weui-grid__icon{width:70px;height:70px;margin:20px 10px 0 0}
+.noMore{text-align:center;display:block;height:1.4rem;line-height:1.4rem;color:#999}
 .ti_all{width:100%;height:auto;background:#F8F9FB}
 .ti_tu{width:100%;height:9rem}
 .ti_tu img{height:9rem}

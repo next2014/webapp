@@ -10,7 +10,7 @@ title: 选择票种
     <!-- start 最新活动 -->
     <div class="ticket" id="ticket">
         <div class="content">
-            <h3 class="pt-2 pl-2 pr-2"><strong>最新活动</strong></h3>
+            <h3 class="p-2"><strong>最新活动</strong></h3>
             <ul class="lists">
                 {% for ticket in site.data.ticket3 %}
                 <li onclick="javascript: window.location.href =&#39;ticketDetailsNew1.html&#39;">
@@ -18,7 +18,7 @@ title: 选择票种
                         <img src="{{ticket.GetImage}}" alt=" ">
                     </div>
                     <div class="in_fr">
-                        <h2>
+                        <h2 class="mb-2">
                             <a href="javascript:;" class="badge badge-{{ticket.GetTypeColor}} text-white mr-1">{{ticket.GetType}}</a>{{ticket.GetTitle}}
                         </h2>
                         <ul class="ticket_type">
