@@ -3,12 +3,13 @@
 	width: 100%;
 	height:auto;
 	overflow: hidden;
+	margin-top: 50px;
 	margin-bottom: rem(161);
 	.ti_head{
 		width: 100%;
 		height: 1.2rem;
 		line-height: 1.2rem;
-		font-size: 0.7rem;
+		font-size:$font-12;
 		text-align: center;
 		background: #00c3ff;
 		color:#fff;
@@ -38,11 +39,10 @@
 		}
 	}
 	dd{
-		width: 62%;
+		width: 66%;
 		height: 4.2rem;
-		margin-right: 1%;
 		h2{
-		  font-size: 0.7rem;
+		  font-size:$font-12;
 		}
 		.l_money{
 			width:100%;
@@ -96,17 +96,17 @@
 	padding:rem(32.2) 0;
 	overflow: hidden;
 	a{
-	  font-size: 0.6rem;
+		font-size:$font-12;
 	}
 	.layui-form-checkbox[lay-skin="primary"] i{
 		width: 0.7rem;
 		height: 0.7rem;
 		line-height: 0.7rem;
-		font-size: 14px;
+		font-size:$font-14;
 	}
 	.yh_sp{
 		color:#5FB878;
-		font-size: 0.7rem;
+		font-size:$font-12;
 	}
 	.yh_rsp{
 		color:#f00;
@@ -120,7 +120,7 @@
 		height: 1rem;
 		padding-right: 0;
 		i{
-			font-size: 16px;
+			font-size:$font-16;
 			right: -5px;
 			top: -2px;
 		}
@@ -137,7 +137,7 @@
 		float: left;
 		width:49%;
 		text-align:center;
-		font-size: 0.7rem;
+		font-size:$font-12;
 		span{
 		  &.bag{
 			font-weight:bold;
@@ -154,7 +154,8 @@
 	top:0; 
 	left:0; 
 	background:rgba(0,0,0,0.3);
-	z-index: 1000; display: none;
+	z-index: 1000; 
+	display: none;
 	.te_d{
 		width:80%; 
 		height:60%; 
@@ -166,7 +167,7 @@
 		overflow-y: scroll; 
 	}
 	i{
-		font-size: 1.6rem;
+		font-size:$font-18;
 		color: #ff9f1f;
 		cursor:pointer; 
 		position:absolute;

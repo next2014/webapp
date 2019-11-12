@@ -1,5 +1,10 @@
 .ticket-item{
-    padding: 10px;
+    padding: 0 10px;
     border:1px solid #ddd;
     overflow: hidden;
+    .down{
+       margin-bottom: 0;
+       height: 1.8rem!important;
+       line-height: 1.8rem!important;
+    }
 }

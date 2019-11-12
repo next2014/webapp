@@ -1,0 +1,367 @@
+<script src="../static/js/jquery-2.1.0.min.js"></script>
+<script src="../static/js/jquery.swipebox.min.js"></script>   
+<script src="../static/js/jquery.smoothState.min.js"></script> 
+<script src="../static/js/materialize.min.js"></script> 
+<script src="../static/js/swiper.min.js"></script>  
+<script src="../static/js/jquery.mixitup.min.js"></script>
+<script src="../static/js/masonry.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+<script src="../static/js/Chart1.min.js"></script>
+{% if page.layout == "pages/chart" %}
+<script srt="../static/js/utils.js"></script>
+<script>
+		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		var color = Chart.helpers.color;
+		var horizontalBarChartData = {
+			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+			datasets: [{
+				label: 'Dataset 1',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+				borderWidth: 1,
+				data: [
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor()
+				]
+			}, {
+				label: 'Dataset 2',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				data: [
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor()
+				]
+			}]
+
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myHorizontalBar = new Chart(ctx, {
+				type: 'horizontalBar',
+				data: horizontalBarChartData,
+				options: {
+					// Elements options apply to all of the options unless overridden in a dataset
+					// In this case, we are setting the border of each horizontal bar to be 2px wide
+					elements: {
+						rectangle: {
+							borderWidth: 2,
+						}
+					},
+					responsive: true,
+					legend: {
+						position: 'right',
+					},
+					title: {
+						display: true,
+						text: 'Chart.js Horizontal Bar Chart'
+					}
+				}
+			});
+
+		};
+
+		// 随机数据
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			var zero = Math.random() < 0.2 ? true : false;
+			horizontalBarChartData.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return zero ? 0.0 : randomScalingFactor();
+				});
+
+			});
+			window.myHorizontalBar.update();
+		});
+
+		var colorNames = Object.keys(window.chartColors);
+
+		// 添加数据集
+		document.getElementById('addDataset').addEventListener('click', function() {
+			var colorName = colorNames[horizontalBarChartData.datasets.length % colorNames.length];
+			var dsColor = window.chartColors[colorName];
+			var newDataset = {
+				label: 'Dataset ' + (horizontalBarChartData.datasets.length + 1),
+				backgroundColor: color(dsColor).alpha(0.5).rgbString(),
+				borderColor: dsColor,
+				data: []
+			};
+
+			for (var index = 0; index < horizontalBarChartData.labels.length; ++index) {
+				newDataset.data.push(randomScalingFactor());
+			}
+
+			horizontalBarChartData.datasets.push(newDataset);
+			window.myHorizontalBar.update();
+		});
+
+		// 添加数据
+		document.getElementById('addData').addEventListener('click', function() {
+			if (horizontalBarChartData.datasets.length > 0) {
+				var month = MONTHS[horizontalBarChartData.labels.length % MONTHS.length];
+				horizontalBarChartData.labels.push(month);
+
+				for (var index = 0; index < horizontalBarChartData.datasets.length; ++index) {
+					horizontalBarChartData.datasets[index].data.push(randomScalingFactor());
+				}
+
+				window.myHorizontalBar.update();
+			}
+		});
+
+		// 移除数据集
+		document.getElementById('removeDataset').addEventListener('click', function() {
+			horizontalBarChartData.datasets.pop();
+			window.myHorizontalBar.update();
+		});
+
+		// 移除数据
+		document.getElementById('removeData').addEventListener('click', function() {
+			horizontalBarChartData.labels.splice(-1, 1); // remove the label first
+
+			horizontalBarChartData.datasets.forEach(function(dataset) {
+				dataset.data.pop();
+			});
+
+			window.myHorizontalBar.update();
+		});
+</script>    
+{% endif  %}
+{% if page.layout == "index" %}
+<script>
+// 综合数据分析图
+var zhsjData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx = document.getElementById('zhsj').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: zhsjData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar_hysj" %}
+<script>
+// 海洋世界
+var hysjData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx = document.getElementById('hysj').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: hysjData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar_kdc" %}
+<script>
+// 格林披治卡丁车馆
+var kdcData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx2 = document.getElementById('kdc').getContext('2d');
+var myChart = new Chart(ctx2, {
+    type: 'bar',
+    data: kdcData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar_qqjd" %}
+<script>
+// 奇奇主题酒店
+var qqjdData ={
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx5 = document.getElementById('qqjd').getContext('2d');
+var myChart = new Chart(ctx5, {
+    type: 'bar',
+    data: qqjdData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar_qqzj" %}
+<script>
+// 奇奇之家
+var qqzjData ={
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx4 = document.getElementById('qqzj').getContext('2d');
+var myChart = new Chart(ctx4, {
+    type: 'bar',
+    data: qqzjData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+{% if page.layout == "pages/bar_zrcs" %}
+<script>
+// 真人CS体验馆
+var zrcsData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        label: '销售票数',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    },
+    {
+        label: '销售金额',
+        data: [10, 14, 8, 9, 10, 7],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+}
+var ctx3 = document.getElementById('zrcs').getContext('2d');
+var myChart = new Chart(ctx3, {
+    type: 'bar',
+    data: zrcsData,
+    options: {
+        elements: {
+            rectangle: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        legend: {
+            position: 'top',
+        }
+    }
+});
+</script>
+{% endif  %}
+<script src="../static/js/functions.js"></script>

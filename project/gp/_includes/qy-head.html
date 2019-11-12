@@ -12,12 +12,15 @@
 <link rel="stylesheet" href="../static/css/weui.css">
 <link rel="stylesheet" href="../static/css/jquery-weui.css">
 <link rel="stylesheet" href="../static/css/swiper.min.css">
-<!-- Select ticket type -->
 <link rel="stylesheet" href="../static/css/gp/layui.css">
+<!-- Select ticket type -->
+{% if page.layout == "ShoppingNew" %}
 <link id="layuicss-laydate" rel="stylesheet" href="../static/css/gp/laydate.css" media="all">
 <link id="layuicss-layer" rel="stylesheet" href="../static/css/gp/layer.css" media="all">
 <link id="layuicss-skincodecss" rel="stylesheet" href="../static/css/gp/code.css" media="all">
-{% if page.layout == "pages/ticketDetailsNew" or page.layout == "pages/ticketDetailsNew1" or page.layout == "pages/ticketDetailsNew2s" %}
+{% endif %}
+{% if page.layout == "pages/ticketDetailsNew" or page.layout == "pages/ticketDetailsNew1" or page.layout == "pages/ticketDetailsNew2" %}
+<!-- 日历模式 -->
 <link rel="stylesheet" href="../static/css/gp/mobiscroll.jquery.min.css">
 <link rel="stylesheet" href="../static/css/gp/Android-holo.css">
 <link rel="stylesheet" href="../static/css/gp/Validform.css">

@@ -24,100 +24,13 @@ title: 我的订单
         </div>
         <div class="weui-tab__bd">
             <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
-               <div class="ticket-item m-2">
-                  <dl><dt class="fl">
-                        <div class="up">
-                            <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已支付</i>
-                        </div>
-                        <p>订单信息：</p>
-                        <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                        <p>订单号：OE180825000345</p>
-                    </dt>
-                    <dd class="fr down">
-                        <div class="fl">订单总额：<span>¥100</span></div>
-                        <div class="fr"><a href="pages/OrderDetails.html">查看订单</a></div>
-                    </dd>
-                  </dl>
-               </div>
-               <div class="ticket-item m-2">
-                    <dl><dt class="fl">
-                          <div class="up">
-                              <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已出票</i>
-                          </div>
-                          <p>订单信息：</p>
-                          <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                          <p>订单号：OE180825000345</p>
-                      </dt>
-                      <dd class="fr down">
-                          <div class="fl">订单总额：<span>¥100</span></div>
-                          <div class="fr"><a href="pages/OrderDetails.html">查看订单</a></div>
-                      </dd>
-                    </dl>
-               </div>
+                {% include ticketList/ticket_01.html %}
             </div>
             <div id="tab2" class="weui-tab__bd-item">
-                <div class="ticket-item m-2">
-                    <dl><dt class="fl">
-                            <div class="up">
-                                <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已出票</i>
-                            </div>
-                            <p>订单信息：</p>
-                            <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                            <p>订单号：OE180825000345</p>
-                        </dt>
-                        <dd class="fr down">
-                            <div class="fl">订单总额：<span>¥100</span></div>
-                            <div class="fr"><a href="pages/OrderDetails.html">查看订单</a></div>
-                        </dd>
-                    </dl>
-                    </div>
-                    <div class="ticket-item m-2">
-                        <dl><dt class="fl">
-                            <div class="up">
-                                <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已出票</i>
-                            </div>
-                            <p>订单信息：</p>
-                            <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                            <p>订单号：OE180825000345</p>
-                        </dt>
-                        <dd class="fr down">
-                            <div class="fl">订单总额：<span>¥100</span></div>
-                            <div class="fr"><a href="pages/OrderDetails.html">查看订单</a></div>
-                        </dd>
-                        </dl>
-                    </div>
+                {% include ticketList/ticket_02.html %}
             </div>
             <div id="tab3" class="weui-tab__bd-item">
-                <div class="ticket-item m-2">
-                    <dl><dt class="fl">
-                            <div class="up">
-                                <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已出票</i>
-                            </div>
-                            <p>订单信息：</p>
-                            <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                            <p>订单号：OE180825000345</p>
-                        </dt>
-                        <dd class="fr down">
-                            <div class="fl">订单总额：<span>¥100</span></div>
-                            <div class="fr"><a href="pages/nowPlay.html" class="btn btn-warning text-white pt-0 pb-0 mr-0">立刻支付</a></div>
-                        </dd>
-                    </dl>
-                    </div>
-                    <div class="ticket-item m-2">
-                        <dl><dt class="fl">
-                            <div class="up">
-                                <p class="fl">购买时间：<span>2018-08-25 19:05:47</span> </p> <i class="fr">已出票</i>
-                            </div>
-                            <p>订单信息：</p>
-                            <p class="p_main"><span>入园消费50元抵用券</span><span>2018-08-25</span> <i>x2</i> </p>
-                            <p>订单号：OE180825000345</p>
-                        </dt>
-                        <dd class="fr down">
-                            <div class="fl">订单总额：<span>¥100</span></div>
-                            <div class="fr"><a href="pages/nowPlay.html" class="btn btn-warning text-white pt-0 pb-0 mr-0">立刻支付</a></div>
-                        </dd>
-                      </dl>
-                 </div>
+                {% include ticketList/ticket_03.html %}
             </div>
             <div id="tab4" class="weui-tab__bd-item">
                 {% include common/proInfo.html %}
