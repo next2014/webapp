@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1346,
+      "pid": 701,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "团体预约策略",
+      "url": "./page/clgl/clgl_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 701,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "散客售票策略",
+      "url": "./page/clgl/clgl_02.html"
+    },
+    {
+      "id": 1346,
+      "pid": 701,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "网上售票策略",
+      "url": "./page/clgl/clgl_03.html"
+    }
+  ]

@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "用户管理",
+      "url": "./page/xtwh/xtwh_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "组织架构管理",
+      "url": "./page/xtwh/xtwh_02.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "角色管理",
+      "url": "./page/xtwh/xtwh_03.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "修改密码",
+      "url": "./page/xtwh/xtwh_04.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "日志查询",
+      "url": "./page/xtwh/xtwh_05.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "设备管理",
+      "url": "./page/xtwh/xtwh_06.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "自助机状态",
+      "url": "./page/xtwh/xtwh_07.html"
+    },
+    {
+      "id": 1346,
+      "pid": 707,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "自助机广告",
+      "url": "./page/xtwh/xtwh_08.html"
+    }
+]

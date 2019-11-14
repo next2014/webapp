@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1346,
+    "pid": 700,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "票类管理",
+    "url": "./page/jbxx/jbxx_01.html"
+  },
+  {
+    "id": 1346,
+    "pid": 700,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "参数设置",
+    "url": "./page/jbxx/jbxx_02.html"
+  },
+  {
+    "id": 1346,
+    "pid": 700,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "票类分组管理",
+    "url": "./page/jbxx/jbxx_03.html"
+  },
+  {
+    "id": 1346,
+    "pid": 700,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "景区划分",
+    "url": "./page/jbxx/jbxx_04.html"
+  }
+]

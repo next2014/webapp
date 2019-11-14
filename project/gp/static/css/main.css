@@ -244,7 +244,7 @@ legend{color:#000}
 .ti_all{width:100%;height:auto;background:#F8F9FB}
 .ti_tu{width:100%;height:9rem}
 .ti_tu img{height:9rem}
-.ti_con{width:100%;height:auto;overflow:hidden;background:#fff;padding:0 3%;-webkit-box-shadow:0 1px 5px #ccc;box-shadow:0 1px 5px #ccc}
+.ti_con{width:100%;height:auto;overflow:hidden;background:#fff;padding:0 3%;border-bottom:5px solid #ccc}
 .piao_type{border-bottom:1px solid #dedede;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:10px 0 10px 0}
 .piao_type:last-child{border-bottom:0}
 .piao_type h3{font-size:.65rem;color:#666;width:70%;line-height:1.00625rem}
