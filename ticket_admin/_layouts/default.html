@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    {% include head.html  %}
+    {% include script.html %}
+    <style>
+            .nav-bar .nav-left {
+                width: 230px;
+                float: left;
+            }
+    
+            .nav-bar .nav-right {
+                width: 410px;
+                float: right;
+    
+            }
+    
+            .nav-bar .nav-center {
+                margin-left: 230px;
+                margin-right: 245px;
+                color: #fff;
+                text-align: center;
+                overflow: hidden;
+    
+            }
+    
+            .banner .nav-bar>div {
+                height: 50px;
+                line-height: 50px;
+            }
+    
+            .nav-center ul {
+                list-style-type: none;
+                white-space: nowrap;
+                overflow: hidden;
+                display: inline-block;
+                font-size: 0;
+                position: relative;
+                left: 0;
+                padding:0
+            }
+    
+            .nav-center ul li {
+                display: inline-block;
+                text-align: center;
+                margin: 0px;
+                padding: 0px 10px;
+                border: none;
+                list-style: none;
+                cursor: pointer;
+            }
+    
+            .nav-btn {
+                border-left: 1px #367fa9 solid;
+                display: inline-block;
+                width: 20px;
+                text-align: center;
+                line-height: 50px;
+                color: white;
+                font-size: 20px;
+            }
+    
+            .nav-group {
+                position: relative;
+                transition: all .3s;
+                padding: 0;
+            }
+    
+            .nav-group .bannerMenu {
+                padding: 5px 0;
+            }
+    
+            .hide {
+                display: none !important;
+            }
+      
+            @media (min-width: 700px) { 
+                .mainbox{
+                    display: flex; 
+                    height: 750px;
+                }
+            }
+            @media (min-width: 1220px) {
+                .mainbox{
+                    display: flex; 
+                    height: 680px;
+                }
+            }
+            @media (min-width: 1820px) {
+                .mainbox{
+                    display: flex; 
+                    height: 860px;
+                }
+            }
+            .l-btn-plain, .l-btn-plain:hover {
+                padding: 1px;
+                border: none;
+            }
+            .l-btn, .l-btn-plain:hover {
+                -moz-border-radius: 2px;
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+            }
+            .l-btn-plain {
+                background: 0 0;
+                filter: none;
+            }
+            .l-btn-text {
+                width: auto;
+                padding: 0;
+                margin: 0 6px;
+            }
+    </style>
+</head>
+
+<body>
+    {{ content }}
+</body>
+</html>

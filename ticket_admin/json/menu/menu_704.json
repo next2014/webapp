@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "团体管理",
+    "url": "./page/khgxgl/khgxgl_01.html"
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "会员管理",
+    "url": "./page/khgxgl/khgxgl_02.html"
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "年卡VIP管理",
+    "url": "./page/khgxgl/khgxgl_03.html"
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "检票员管理",
+    "url": "./page/khgxgl/khgxgl_04.html"
+  },
+  {
+    "id": 1346,
+    "pid": 704,
+    "state": "open",
+    "iconCls": "fa fa-file-text-o",
+    "text": "次卡VIP管理",
+    "url": "./page/khgxgl/khgxgl_05.html"
+  }
+]

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- 避免IE使用兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content='' />
+    <meta name="keywords" content='easyui,jui,jquery easyui,easyui demo,easyui中文' />
     <meta name="description" content='' />
     <title>狮子城票务管理系统</title>
     <!-- 浏览器标签图片 -->
@@ -26,8 +27,9 @@
     <script type="text/javascript" src="./topjui/js/locale/topjui.lang.zh_CN.js"></script>
     <!-- 首页js -->
     <script type="text/javascript" src="./static/public/js/topjui.index.js" charset="utf-8"></script>
-    <!-- easyui -->
+    
     <script type="text/javascript" src="./static/public/js/jquery.easyui.min.js"></script>
+
     <style>
         .nav-bar .nav-left {
             width: 230px;
@@ -35,12 +37,9 @@
         }
 
         .nav-bar .nav-right {
-            width: auto;
+            width: 410px;
             float: right;
-        }
 
-        .nav-bar .nav-right a{
-           text-decoration: none;
         }
 
         .nav-bar .nav-center {
@@ -49,6 +48,7 @@
             color: #fff;
             text-align: center;
             overflow: hidden;
+
         }
 
         .banner .nav-bar>div {
@@ -64,6 +64,7 @@
             font-size: 0;
             position: relative;
             left: 0;
+            padding:0
         }
 
         .nav-center ul li {
@@ -95,9 +96,11 @@
         .nav-group .bannerMenu {
             padding: 5px 0;
         }
+
         .hide {
             display: none !important;
         }
+  
         @media (min-width: 700px) { 
             .mainbox{
                 display: flex; 
@@ -138,7 +141,6 @@
 </head>
 
 <body>
-
     <div id="loading" class="loading-wrap">
         <div class="loading-content">
             <div class="loading-round"></div>
@@ -146,7 +148,7 @@
         </div>
     </div>
 
-    <div id="mm" class="submenubutton" style="width: 140px;">
+    <!-- <div id="mm" class="submenubutton" style="width: 140px;">
         <div id="mm-tabclose" name="6" iconCls="fa fa-refresh">刷新</div>
         <div class="menu-sep"></div>
         <div id="Div1" name="1" iconCls="fa fa-close">关闭</div>
@@ -157,11 +159,11 @@
         <div id="mm-tabcloseleft" name="5">关闭左侧标签</div>
         <div class="menu-sep"></div>
         <div id="mm-newwindow" name="7">新窗口中打开</div>
-    </div>
+        </div> -->
 
-    <div id="index_layout" data-toggle="topjui-layout">
-        <!-- 顶部导航 -->
-        <div id="north" class="banner" data-options="region:'north',border:false,split:false" style="height: 50px; padding:0;margin:0; overflow: hidden;">
+    <div id="index_layout" data-toggle="topjui-layout" class="easyui-layout" style="width:100%;height:950px;">
+        
+        <div id="north" class="banner" data-options="region:'north',border:false,split:false" style="height: 50px; padding:0;margin:0; overflow: hidden">
             <div class="nav-bar">
                 <div class="nav-left webname">
                     <span style="font-size:18px; padding-right:4px;"></span>狮子城票务管理系统
@@ -171,73 +173,75 @@
                 </div>
                 <div class="nav-right">
                     <span style="margin-top:2px;">
-                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:false"
-                           style="color:#fff; padding:0 10px;">
-                           <span class="fa fa-user"></span> 狮子人
-                        </a>|
-                        <a href="javascript:void(0)" id="mb3" data-toggle="topjui-menubutton" data-options="menu:'#mm3',iconCls:'fa fa-cog',hasDownArrow:true"
-                         style="color:#fff; padding:0 10px;">
-                            <span class="fa fa-cog"></span> 设置
-                        </a>
-                        <div id="mm3" style="width:74px;display: none">
+                        <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:true" style="color:#fff; padding:0 10px;">
+                            <span class="fa fa-user"></span> 狮子人</a>|
+                        <a href="javascript:void(0)" id="mb" class="easyui-menubutton" data-options="menu:'#mm',iconCls:'fa fa-cog',hasDownArrow:true" style="color:#fff; padding:0 10px;">设置</a>|
+                        <div id="mm" style="width:150px;">
                             <div data-options="iconCls:'fa fa-info-circle'" onclick="javascript:modifyPwd(0)">个人信息</div>
                             <div class="menu-sep"></div>
                             <div data-options="iconCls:'fa fa-key'" onclick="javascript:modifyPwd(0)">修改密码</div>
-                        </div>|
-                        <a href="javascript:void(0)" onclick="logout()" style="color:#fff; padding:0 10px;">
-                            <span class="fa fa-sign-out"></span> 注销</a>
+                        </div>
+                        <a href="javascript:void(0)" id="mb2" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'fa fa-tree',hasDownArrow:true" style="color:#fff; padding:0 10px;">主题</a>|
+                        <div id="mm2" style="width:150px;">
+                            <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">默认主题</div>
+                            <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('black')">黑色主题</div>
+                            <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('blacklight')">黑色主题-亮</div>
+                            <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('red')">红色主题</div>
+                            <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('redlight')">红色主题-亮</div>
+                            <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('green')">绿色主题</div>
+                            <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('greenlight')">绿色主题-亮</div>
+                            <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purple')">紫色主题</div>
+                            <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purplelight')">紫色主题-亮</div>
+                            <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">蓝色主题</div>
+                            <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('bluelight')">蓝色主题-亮</div>
+                            <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellow')">橙色主题</div>
+                            <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellowlight')">橙色主题-亮</div>
+                        </div>
+                        <a href="javascript:void(0)" data-options="iconCls:'fa fa-sign-out',hasDownArrow:true" onclick="logout()" style="color:#fff; padding:0 10px;">
+                            <span class="fa fa-sign-out"></span> 注销</a>|
                     </span>
                 </div>
-
                 <div class="nav-center">
-                    <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-                    <a class="nav-btn nav-right-btn topmenu" href="#" style="float: right;"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    <!-- <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                    <a class="nav-btn nav-right-btn topmenu" href="#" style="float: right;"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a> -->
                     <div style="overflow: hidden;position: relative;text-align: left">
                         <ul class="nav-group">
-                            <!-- <li id="1325" title="协同办公" class="topmenu">
-                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
-                                    <p>
-                                        <lable class="fa fa-suitcase"></lable>
-                                    </p>
-                                    <p><span style="white-space:nowrap;">协同办公</span></p>
-                                </a>
-                            </li> -->
                             <li id="70" title="基本信息" class="topmenu selected">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
-                                        <lable class="fa fa-dashboard"></lable>
+                                        <lable class="fa fa-inbox"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">基本信息</span></p>
                                 </a>
                             </li>
                             <li id="71" title="策略管理" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
-									<p>
-										<lable class="fa fa-suitcase"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">策略管理</span></p>
-								</a>
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-cog"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">策略管理</span></p>
+                                </a>
                             </li>
                             <li id="72" title="预约管理"" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
-									<p>
-										<lable class="fa fa-suitcase"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">预约管理</span></p>
-								</a>
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-history"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">预约管理</span></p>
+                                </a>
                             </li>
                             <li id="73" title="销售管理" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:void(0)">
-									<p>
-										<lable class="fa fa-home"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">销售管理</span></p>
-								</a>
+                                <a class="l-btn-text bannerMenu" href="javascript:void(0)">
+                                    <p>
+                                        <lable class="fa fa-book"></lable>
+                                    </p>
+                                    <p><span style="white-space:nowrap;">销售管理</span></p>
+                                </a>
                             </li>
                             <li id="74" title="客户关系管理"" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
-                                        <lable class="fa fa-home"></lable>
+                                        <lable class="fa fa-book"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">客户关系管理</span></p>
                                 </a>
@@ -245,7 +249,7 @@
                             <li id="75" title="财务管理" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
-                                        <lable class="fa fa-home"></lable>
+                                        <lable class="fa fa-book"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">财务管理</span></p>
                                 </a>
@@ -253,7 +257,7 @@
                             <li id="76" title="报表中心"" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
-                                        <lable class="fa fa-home"></lable>
+                                        <lable class="fa fa-book"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">报表中心</span></p>
                                 </a>
@@ -261,87 +265,47 @@
                             <li id="77" title="系统维护" class="topmenu">
                                 <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                     <p>
-                                        <lable class="fa fa-home"></lable>
+                                        <lable class="fa fa-book"></lable>
                                     </p>
                                     <p><span style="white-space:nowrap;">系统维护</span></p>
                                 </a>
                             </li>
-                            <!-- <li id="9000" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.zuoyour.com/emis.html" target="_blank">
-									<p>
-										<lable class="fa fa-leaf"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">动态演示</span></p>
-								</a>
-							</li>
-							<li id="9001" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.topjui.com" target="_blank">
-									<p>
-										<lable class="fa fa-home"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">官方网站</span></p>
-								</a>
-							</li>
-							<li id="9002" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://ask.topjui.com" target="_blank" >
-									<p>
-										<lable class="fa fa-wechat"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">交流社区</span></p>
-								</a>
-							</li>
-							<li id="9003" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="javascript:addParentTab({href:'http://www.topjui.com/compile',title:'在线编译'})" target="_blank" >
-									<p>
-										<lable class="fa fa-code"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">在线调试</span></p>
-								</a>
-							</li>
-							<li id="9004" class="topmenu">
-								<a class="l-btn-text bannerMenu" href="http://www.jeasyui.cn/" target="_blank" >
-									<p>
-										<lable class="fa fa-link"></lable>
-									</p>
-									<p><span style="white-space:nowrap;">EasyUI中文网</span></p>
-								</a>
-							</li> -->
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
-
-         <div class="mainbox">
-            <div id="west" data-options="region:'west',split:true,width:245,border:false,headerCls:'border_right',bodyCls:'border_right'" title="" iconCls="fa fa-dashboard" style="width:12.5%">
-                <div id="RightAccordion"></div>
-                <!-- <div id="menuTab" data-toggle="topjui-tabs" data-options="fit:true,border:false">
-                    <div title="导航菜单" data-options="iconCls:'fa fa-sitemap'" style="padding:0;">
-                        <div id="RightAccordion" class="topjui-accordion"></div>
-                    </div>
-                    <div title="常用链接" data-options="iconCls:'fa fa-star',closable:true">
-                        <ul id="channgyongLink"></ul>
-                    </div> 
-                </div> -->
-            </div>
-            <!-- 主要内容 -->
-            <div id="center" data-options="region:'center',border:false" style="overflow:hidden;width:87.5%;">
-                <div id="index_tabs" style="width:100%;height:100%">
-                    <div title="系统首页" iconCls="fa fa-home" data-options="border:true,iframe:true,content:'<iframe src=\'./html/portal/index.html\' scrolling=\'auto\' frameborder=\'0\' style=\'width:100%;height:100%;\'></iframe>'"></div>
+        
+        <div id="west" data-options="region:'west',border:false" iconCls="fa fa-dashboard" style="width:12.5%">
+            <div id="RightAccordion"></div>
+            <div id="menuTab" data-toggle="topjui-tabs" data-options="fit:true,border:false">
+                <div title="导航菜单" data-options="iconCls:'fa fa-sitemap'" style="padding:0;">
+                    <div id="RightAccordion" class="topjui-accordion"></div>
                 </div>
+                <div title="常用链接" data-options="iconCls:'fa fa-star',closable:true">
+                    <ul id="channgyongLink"></ul>
+                </div> 
+            </div>
+        </div>
+        
+        <div id="center" data-options="region:'center',border:false" style="width:87.5%;">
+            <div id="index_tabs" style="width:100%;height:100%">
+                <div title="系统首页" iconCls="fa fa-home" data-options="border:true,iframe:true,content:'<iframe src=\'./html/portal/index.html\' scrolling=\'auto\' frameborder=\'0\' style=\'width:100%;height:100%;\'></iframe>'"></div>
             </div>
         </div>
 
-        <!-- 底部版权 -->
-        <div data-options="region:'south',border:true" style="text-align:center;height:30px;line-height:30px;border-bottom:0;overflow:hidden;background-color: #3c8dbc;color:#ffffff;">
+        <div data-options="region:'south',border:false" style="text-align:center;height:30px;line-height:30px;border-bottom:0;overflow:hidden;background-color: #3c8dbc;color:#ffffff;">
             <span style="float:left;padding-left:5px;width:12.5%;text-align: left;">当前用户：狮子人</span>
-            <span style="padding-right:5px;width:57.5%;display: block">
-                版权所有 © 2019 <a href="" target="_blank" style="color:#ffffff;">深圳狮子城文化股份有限公司</a>
+            <span style="padding-right:5px;width:100%;display: block">
+                版权所有 © 2019 <a href="" target="_blank" style="color:#ffffff;">广东欧美城文化有限公司</a>
             </span>
             <span style="float:right;padding-right:5px;width:30%;text-align: right;"></span>
         </div>
+
+
     </div>
+
+
 
     <!--[if lte IE 8]>
 <div id="ie6-warning">

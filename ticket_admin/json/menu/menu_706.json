@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "财务报表",
+      "url": "./page/bbzx/bbzx_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "销售员报表",
+      "url": "./page/bbzx/bbzx_02.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "入闸记录",
+      "url": "./page/bbzx/bbzx_03.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票统计",
+      "url": "./page/bbzx/bbzx_04.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票日报表",
+      "url": "./page/bbzx/bbzx_05.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "支付明细表",
+      "url": "./page/bbzx/bbzx_06.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票月报表",
+      "url": "./page/bbzx/bbzx_07.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票年报表",
+      "url": "./page/bbzx/bbzx_08.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "VIP入闸查询",
+      "url": "./page/bbzx/bbzx_09.html"
+    },
+    {
+      "id": 1346,
+      "pid": 706,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "门票改期查询",
+      "url": "./page/bbzx/bbzx_10.html"
+    }
+]
