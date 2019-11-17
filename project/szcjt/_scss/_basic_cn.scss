@@ -2404,7 +2404,7 @@ a.tag:focus, a.tag:hover {
     position:relative;
     display:block;
     margin-bottom:-1px;
-    padding:.75rem 0;
+    padding:.75rem .5rem;
     border:1px solid transparent;
     background-color:#fff
 }
@@ -14436,8 +14436,8 @@ pre {
     }
 }
 .met-sidebar >:not(:first-child) {
-    margin:20px 0 0;
-    padding:20px 0 0;
+    margin:10px 0 0;
+    padding:10px 0 0;
     border-top:1px solid #f0f2f5
 }
 .leftsidebar {

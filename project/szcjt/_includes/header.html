@@ -1,3 +1,45 @@
 <header class="head_nav_met_11_5_1-header navbar-fixed-top" m-id="1" m-type="head_nav">
-    {% include nav_top1.html %}
+    <!-- nav_top1.html -->
+    <nav class="navbar navbar-default box-shadow-none head_nav_met_11_5_1">
+        <div class="container">
+            <div class="row">
+                <div class="" style="position: absolute;z-index: 1603;top:0;">
+                    <a href="" class="met-logo" title="">
+                        <div class="vertical-align-middle">
+                            <img src="../assets/img/szc_logo.png" style="height:35px;margin-top:12px;" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <button type="button" class="navbar-toggler hamburger hamburger-close collapsed  met-nav-toggler" data-target="#met-nav-collapse" data-toggle="collapse" style="position: absolute;z-index: 1603;top:0;right: 10px;">
+                    <span class="sr-only"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0 rightNav" id="met-nav-collapse">
+                        <ul class="nav navbar-nav navlist">
+                            <li class="nav-item">
+                                <a href="index.html" title="狮子城首页" class="nav-link {% if page.layout == "page/index" %} active {% endif %}">狮子城首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.html" title="关于狮子城" class="nav-link {% if page.layout == "page/about" %} active {% endif %}">关于狮子城</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="zhuti.html" title="文化主题项目" class="nav-link {% if page.layout == "page/zhuti" or page.layout == "page/zhuti-details" %} active {% endif %}">文化主题项目</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="news.html" title="狮子城新闻" class="nav-link {% if page.layout == "page/news" %} active {% endif %}">狮子城新闻</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://www.neeq.com.cn/disclosure/announcement.html?companyCode=430173" title="投掷者专栏" class="nav-link {% if page.layout == "page/szc" %} active {% endif %}" target="_blank">投掷者专栏</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="rczp.html" title="人才招聘" class="nav-link {% if page.layout == "page/rczp" %} active {% endif %}">人才招聘</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="content.html" title="联系我们" class="nav-link {% if page.layout == "page/content" %} active {% endif %}">联系我们</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>

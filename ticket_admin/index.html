@@ -33,34 +33,32 @@ title: 狮子城票务系统
                 </span>
             </div>
             <div class="nav-right">
-                <span style="margin-top:2px;">
-                    <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:true" style="color:#fff; padding:0 10px;">
-                        <span class="fa fa-user"></span> 狮子人</a>|
-                    <a href="javascript:void(0)" id="mb" class="easyui-menubutton" data-options="menu:'#mm',iconCls:'fa fa-cog',hasDownArrow:true" style="color:#fff; padding:0 10px;">设置</a>|
-                    <div id="mm" style="width:150px;">
-                        <div data-options="iconCls:'fa fa-info-circle'" onclick="javascript:modifyPwd(0)">个人信息</div>
-                        <div class="menu-sep"></div>
-                        <div data-options="iconCls:'fa fa-key'" onclick="javascript:modifyPwd(0)">修改密码</div>
-                    </div>
-                    <a href="javascript:void(0)" id="mb2" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'fa fa-tree',hasDownArrow:true" style="color:#fff; padding:0 10px;">主题</a>|
-                    <div id="mm2" style="width:150px;">
-                        <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">默认主题</div>
-                        <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('black')">黑色主题</div>
-                        <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('blacklight')">黑色主题-亮</div>
-                        <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('red')">红色主题</div>
-                        <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('redlight')">红色主题-亮</div>
-                        <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('green')">绿色主题</div>
-                        <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('greenlight')">绿色主题-亮</div>
-                        <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purple')">紫色主题</div>
-                        <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purplelight')">紫色主题-亮</div>
-                        <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">蓝色主题</div>
-                        <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('bluelight')">蓝色主题-亮</div>
-                        <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellow')">橙色主题</div>
-                        <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellowlight')">橙色主题-亮</div>
-                    </div>
-                    <a href="javascript:void(0)" data-options="iconCls:'fa fa-sign-out',hasDownArrow:true" onclick="logout()" style="color:#fff; padding:0 10px;">
-                        <span class="fa fa-sign-out"></span> 注销</a>|
-                </span>
+                <a href="javascript:void(0)" data-toggle="topjui-menubutton" data-options="iconCls:'fa fa-user',hasDownArrow:true">
+                    <span class="fa fa-user"></span> 狮子人</a>|
+                <a href="javascript:void(0)" id="mb" class="easyui-menubutton" data-options="menu:'#mm',iconCls:'fa fa-cog',hasDownArrow:true">设置</a>|
+                <div id="mm" style="width:150px;">
+                    <div data-options="iconCls:'fa fa-info-circle'" onclick="javascript:modifyPwd(0)">个人信息</div>
+                    <div class="menu-sep"></div>
+                    <div data-options="iconCls:'fa fa-key'" onclick="javascript:modifyPwd(0)">修改密码</div>
+                </div>
+                <a href="javascript:void(0)" id="mb2" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'fa fa-tree',hasDownArrow:true">主题</a>|
+                <div id="mm2" style="width:150px;">
+                    <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">默认主题</div>
+                    <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('black')">黑色主题</div>
+                    <div data-options="iconCls:'fa fa-tree'" onclick="changeTheme('blacklight')">黑色主题-亮</div>
+                    <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('red')">红色主题</div>
+                    <div data-options="iconCls:'fa fa-tree red'" onclick="changeTheme('redlight')">红色主题-亮</div>
+                    <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('green')">绿色主题</div>
+                    <div data-options="iconCls:'fa fa-tree green'" onclick="changeTheme('greenlight')">绿色主题-亮</div>
+                    <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purple')">紫色主题</div>
+                    <div data-options="iconCls:'fa fa-tree purple'" onclick="changeTheme('purplelight')">紫色主题-亮</div>
+                    <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('blue')">蓝色主题</div>
+                    <div data-options="iconCls:'fa fa-tree blue'" onclick="changeTheme('bluelight')">蓝色主题-亮</div>
+                    <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellow')">橙色主题</div>
+                    <div data-options="iconCls:'fa fa-tree orange'" onclick="changeTheme('yellowlight')">橙色主题-亮</div>
+                </div>
+                <a href="javascript:void(0)" data-options="iconCls:'fa fa-sign-out',hasDownArrow:true" onclick="logout()">
+                    <span class="fa fa-sign-out"></span> 注销</a>
             </div>
             <div class="nav-center">
                 <!-- <a class="nav-btn nav-left-btn topmenu " href="#" style="float: left;"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
@@ -94,7 +92,7 @@ title: 狮子城票务系统
                         <li id="73" title="销售管理" class="topmenu">
                             <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                 <p>
-                                    <lable class="fa fa-book"></lable>
+                                    <lable class="fa fa-cubes"></lable>
                                 </p>
                                 <p><span style="white-space:nowrap;">销售管理</span></p>
                             </a>
@@ -102,7 +100,7 @@ title: 狮子城票务系统
                         <li id="74" title="客户关系管理"" class="topmenu">
                             <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                 <p>
-                                    <lable class="fa fa-book"></lable>
+                                    <lable class="fa fa-group"></lable>
                                 </p>
                                 <p><span style="white-space:nowrap;">客户关系管理</span></p>
                             </a>
@@ -110,7 +108,7 @@ title: 狮子城票务系统
                         <li id="75" title="财务管理" class="topmenu">
                             <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                 <p>
-                                    <lable class="fa fa-book"></lable>
+                                    <lable class="fa fa-money"></lable>
                                 </p>
                                 <p><span style="white-space:nowrap;">财务管理</span></p>
                             </a>
@@ -118,7 +116,7 @@ title: 狮子城票务系统
                         <li id="76" title="报表中心"" class="topmenu">
                             <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                 <p>
-                                    <lable class="fa fa-book"></lable>
+                                    <lable class="fa fa-bar-chart-o"></lable>
                                 </p>
                                 <p><span style="white-space:nowrap;">报表中心</span></p>
                             </a>
@@ -126,7 +124,7 @@ title: 狮子城票务系统
                         <li id="77" title="系统维护" class="topmenu">
                             <a class="l-btn-text bannerMenu" href="javascript:void(0)">
                                 <p>
-                                    <lable class="fa fa-book"></lable>
+                                    <lable class="fa fa-cogs"></lable>
                                 </p>
                                 <p><span style="white-space:nowrap;">系统维护</span></p>
                             </a>
