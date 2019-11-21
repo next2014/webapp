@@ -20,20 +20,24 @@
       index: 5
       title: b10
       url: https://720yun.com/t/de7jrrtyrv9
-    - name: 美食天地全景图
+    - name: 大马戏全景图
       index: 6
+      title: g6
+      url: https://720yun.com/t/de7jrrtyrv9
+    - name: 美食天地全景图
+      index: 1
       title: b4
       url: https://720yun.com/t/839jrrmuvw9
     - name: 奇奇主题酒店全景图
-      index: 1
+      index: 2
       title: b6
       url: https://720yun.com/t/dbejrrhmey6
     - name: 蜡像馆全景图
-      index: 2
+      index: 3
       title: a6
       url: https://720yun.com/t/9edjrrsv5f3
     - name: 奇奇之家全景图
-      index: 3
+      index: 4
       title: b5
       url: https://720yun.com/t/a2vknyi75dm
 
@@ -42,41 +46,44 @@
     - name: 海洋世界介绍
       index: 1
       title: b1
-      url: ../ocean/index.html 
+      url: pages/ocean/index.html 
     - name: 婚博艺术中心介绍
       index: 2
       title: b2
-      url: ../Wedding/index.html
+      url: pages/Wedding/index.html
     - name: 卡丁车馆介绍
       index: 3
       title: b3
-      url: ../KARTING/index.html
+      url: pages/KARTING/index.html
     - name: 真人CS体验馆介绍
       index: 4
       title: b10
-      url: ../csPlay/index.html
-    - name: 美食天地介绍
+    - name: 大马戏介绍
       index: 5
+      title: g6
+      url: pages/detail_07.html
+    - name: 美食天地介绍
+      index: 6
       title: b4
       url: pages/detail_01.html
     - name: 奇奇之家介绍
-      index: 6
+      index: 1
       title: b5
       url: pages/detail_02.html
     - name: 奇奇主题酒店介绍
-      index: 1
+      index: 2
       title: b6
       url: pages/detail_03.html
     - name: 主题汇演
-      index: 2
+      index: 3
       title: b7
       url: pages/detail_04.html 
     - name: 嗨玩一条街
-      index: 3
+      index: 4
       title: b8
       url: pages/detail_05.html 
     - name: 户外电玩
-      index: 4
+      index: 5
       title: b9
       url: pages/detail_06.html
 
