@@ -240,3 +240,10 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 
 /*--------------------加载end--------------------*/
+
+
+
+/* 票类类型 */
+.chaxun{
+    padding:3px 5px!important;width:200px;text-align: left;
+}

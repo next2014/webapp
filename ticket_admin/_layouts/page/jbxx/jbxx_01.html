@@ -53,10 +53,15 @@ title: 基本信息-票类管理
               <button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe666;</i> 刷新</button>
             </div>
             <div style="margin-left: 10px;">
-                <input type="text" class="layui-form-label" placeholder="请输入编号或者名称进行查询" style="padding:3px 15px!important;width:200px;text-align: left;"/>
+                <input type="text" class="layui-form-label chaxun" placeholder="请输入编号或者名称进行查询" />
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4">查询</button> 
+                <input type="checkbox" name="" title="隐藏停售票类" lay-skin="primary" checked>隐藏停售票类
             </div>
         </div>
-        <table class="easyui-datagrid">
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="jbxx_01" lay-filter="test"></table>
+        </div>
+        <!-- <table class="easyui-datagrid">
             <thead>
                 <tr>
                     <th data-options="field:'编号',width:150">编号</th>
@@ -71,6 +76,6 @@ title: 基本信息-票类管理
                     <td>002</td><td>产品2</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
     </div>
 </div>

@@ -10,5 +10,9 @@
 </head>
 <body>
     {{ content }}
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    {% if page.layout == "page/jbxx/jbxx_01" %}
+        {% include script/jbxxJs.html %}
+    {% endif %}
 </body>
 </html>

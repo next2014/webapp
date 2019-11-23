@@ -1,0 +1,128 @@
+<script>
+    layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+          var laydate = layui.laydate
+          ,layer =layui.layer
+          ,from = layui.form
+          ,element = layui.element
+          ,table = layui.table;
+          
+            // 入住时间 star
+            laydate.render({
+              elem: '#CheckInStar'
+            });
+            // 入住时间 end
+            laydate.render({
+              elem: '#CheckInEnd'
+            });
+    
+            // 离开时间 star
+            laydate.render({
+              elem: '#leaveStar'
+            });
+    
+            // 离开时间 end
+            laydate.render({
+              elem: '#leaveEnd'
+            });
+    
+          // 高级查询
+          $('#gjchaxun').on('click', function () {
+              layer.open({
+                  type: 2,
+                  title: '高级查询',
+                  maxmin: true,
+                  shadeClose: false,
+                  area: ['800px', '340px'],
+                  content: 'add_dingdan.html',
+                  // content: $('#dingdan_content'),
+                  btn: ['取消', '搜索']
+              });
+          });
+          
+          // 票类管理
+          table.render({
+              elem: '#jbxx_01'
+              ,height: 525
+              ,title: '房间管理'
+              ,url: '../../json/table/jbxx_01.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'id', title:'票类编号', width:100}
+                ,{field:'ptname', title:'票类名称', width:180}
+                ,{field:'pttype', title:'票类类型',  width:110}
+                ,{field:'yzptm', title:'预制票条码前缀',  width:100}
+                ,{field:'xxtm', title:'线下条码前缀',  width:100}
+                ,{field:'xstm', title:'线上条码前缀',  width:100}
+                ,{field:'xxqy', title:'允许区域',  width:120}
+                ,{field:'pice', title:'单价',  width:80}
+                ,{field:'cpfz', title:'产品分组',  width:150}
+                ,{field:'spzt', title:'商品状态',  width:100}
+                ,{field:'zrcs', title:'准入次数',  width:80}
+                ,{field:'pmsm', title:'票面说明',  width:150}
+                ,{field:'px', title:'排序',  width:'15%'}
+              ]]
+            });
+      
+          //工具栏事件
+          table.on('toolbar(test)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+              case 'add':
+                layer.msg('添加');
+                break;
+              case 'edit':
+                layer.msg('编辑');
+                break;
+              case 'del':
+                layer.msg('删除');
+                break;
+              case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
+          });
+      
+          //监听单元格编辑
+          table.on('edit(test)', function (obj) {
+            var value = obj.value //得到修改后的值
+              , data = obj.data //得到所在行所有键值
+              , field = obj.field; //得到字段
+              console.log(obj)
+          });
+      
+          //监听行工具事件
+          table.on('tool(test)', function (obj) {
+            var data = obj.data;
+            //console.log(obj)
+            if (obj.event === 'del') {
+              layer.confirm('真的删除行么', function (index) {
+                obj.del();
+                layer.close(index);
+              });
+            } else if (obj.event === 'edit') {
+                //页面层-自定义
+                layer.open({
+                  type: 1,
+                  title: '修改房间信息',
+                  area: ['600px', '380px'],
+                  content: $('#fangjian_edit'),
+                  btn: ['提交', '取消']
+                });
+            }
+          });
+                            
+          $('i').on('click', function () {
+              var type = $(this).data('type');
+              active[type] ? active[type].call(this) : '';
+          });
+          $('.layui-btn').on('click', function () {
+              var type = $(this).data('type');
+              active[type] ? active[type].call(this) : '';
+          });
+      
+      });
+    </script>
