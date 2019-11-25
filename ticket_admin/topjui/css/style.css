@@ -244,6 +244,12 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 
 
 /* 票类类型 */
+.ticket h2{
+   font-size: 18px;
+   color:#999999;
+}
 .chaxun{
-    padding:3px 5px!important;width:200px;text-align: left;
+    padding:3px 5px!important;
+    width:200px;
+    text-align: left;
 }
