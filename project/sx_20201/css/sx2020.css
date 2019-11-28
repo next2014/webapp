@@ -1,0 +1,117 @@
+body {
+    background-color: #aa2135!important;
+    margin: 0;
+}
+
+.header .bg {
+    width: 100%;
+}
+.header .icon {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    width: 147px;
+    margin-left: -73px;
+}
+
+.taisui-card {
+    display: none;
+    position: relative;
+    margin: 30px 30px 0;
+    border: 2px solid #e6bc94;
+    display: block; transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);
+}
+.taisui-wrapper {
+    margin: 7px;
+    text-align: center;
+    border: 1px solid #e6bc94;
+}
+.taisui-wrapper img {
+    width: 85px;
+    margin-top: 20px
+}
+.taisui-wrapper p {
+    text-align: left;
+    font-size: 16px;
+    color: #f5c696;
+    margin: 5px 15px 20px;
+}
+
+.desc-card {
+    margin: 64px 15px 0;
+    border-radius: 6px;
+    box-shadow: 0px 2px 38px 0px rgba(185, 72, 59, 0.49);
+    padding: 4px 0;
+    background-color: #ffffff;
+    /* background: #fff url(img/res_desc_bg.jpg) no-repeat; */
+    background-size: 100%;
+    position: relative;
+}
+.desc-wrapper {
+    width:auto;
+    margin: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccb385;
+    text-align: center;
+    padding: 0 12px 25px 12px;
+    position: relative;
+}
+.desc-wrapper .title {
+    width: 111px;
+    margin-top: -50px;
+}
+.desc-wrapper p {
+    position: relative;
+    text-align: left;
+    font-size: 15px;
+    color: rgb(72, 72, 72);
+    line-height: 1.7;
+    margin:20px 0 0 0;
+}
+.desc-wrapper h3 {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 16px;
+    color: #aa2135;
+    /*font-weight: normal;*/
+}
+.desc-card .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 6px;
+}
+.desc-wrapper .end {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.pay-btn {
+    margin: 20px 30px 40px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.27);
+    color: rgb(170, 33, 53);
+    text-align: center;
+    background: #f5c696 url(img/pay_btn_bg.png);
+    background-size: 110%;
+    display: block; 
+    transform-origin: 0px 0px 0px; 
+    opacity: 1; 
+    transform: scale(1, 1);
+    height:50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.pay-btn h3 {
+    padding-top: 10px;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 25px;
+}
+.pay-btn p {
+    font-size: 13px;
+    text-decoration: line-through;
+}
