@@ -1,13 +1,65 @@
 ---
 layout: pages
-title: 基本信息
+title: 基本信息-票类分组信息
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                票类分组管理
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <div data-options="region:'west',border:false" style="width:15%;padding:10px">
+        <h2>检索</h2>
+        <!-- <ul class="easyui-tree" data-options="url:'../../json/table/tree_data.json',method:'get',animate:true,dnd:true"></ul> -->
+        <ul id="tt" class="easyui-tree">
+            <li>
+                <span>狮子城</span>
+                <ul>
+                   <li >
+                       <span>成人票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li>
+                       <span>儿童票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li><span>不分成人儿童</span></li>
+                   <li><span>年卡</span></li>
+                   <li><span>正价/半价票</span></li>
+                   <li><span>停售票</span></li>
+                   <li><span>套售票</span></li>
+                   <li><span>卡丁车票</span></li>
+                   <li><span>夏令海洋馆</span></li>
+                   <li>
+                       <span>奇奇之家</span>
+                       <ul>
+                          <li><span>奇奇套票</span></li>
+                          <li><span>游泳</span></li>
+                       </ul>
+                   </li>
+                   <li><span>大门票</span></li>
+                   <li><span>CS馆</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div data-options="region:'center',border:false" style="width:85%;padding:10px;background-color: #eeeeee;">
+        <h2>票类分组信息</h2>
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <div class="layui-btn-group">
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="order_add"><i class="layui-icon">&#xe608;</i> 新增</button>
+              <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i> 修改</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i> 删除</button>
             </div>
+            <div style="margin-left: 10px;">
+                <input type="text" class="layui-form-label chaxun" placeholder="请输入编号或者名称进行查询" />
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
+                <input type="checkbox" name="" title="隐藏停售票类" lay-skin="primary" checked>隐藏停售票类
+            </div>
+        </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="jbxx_03" lay-filter="test"></table>
         </div>
     </div>
 </div>

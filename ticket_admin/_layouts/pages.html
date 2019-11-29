@@ -12,7 +12,16 @@
     {{ content }}
     <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
     {% if page.layout == "page/jbxx/jbxx_01" %}
-        {% include script/jbxxJs.html %}
+        {% include script/jbxxJs_1.html %}
+    {% endif %}
+    {% if page.layout == "page/jbxx/jbxx_02" %}
+        {% include script/jbxxJs_2.html %}
+    {% endif %}
+    {% if page.layout == "page/jbxx/jbxx_03" %}
+        {% include script/jbxxJs_3.html %}
+    {% endif %}
+    {% if page.layout == "page/jbxx/jbxx_04" %}
+        {% include script/jbxxJs_4.html %}
     {% endif %}
 </body>
 </html>

@@ -1,0 +1,25 @@
+{
+    "code": 0
+    ,"msg": ""
+    ,"count": 30
+    ,"data": [{
+      "id": "A1"
+      ,"ptname": "产品1"
+    },
+    {
+      "id": "CZJ"
+      ,"ptname": "抵扣券"
+    },
+    {
+      "id": "group"
+      ,"ptname": "团体"
+    },
+    {
+      "id": "nk"
+      ,"ptname": "年卡"
+    },
+    {
+      "id": "in"
+      ,"ptname": "活动券"
+    }]
+}

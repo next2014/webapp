@@ -6,25 +6,16 @@
           ,element = layui.element
           ,table = layui.table;
           
-            // 入住时间 star
+            // 开始时间 star
             laydate.render({
               elem: '#CheckInStar'
             });
-            // 入住时间 end
-            laydate.render({
-              elem: '#CheckInEnd'
-            });
     
-            // 离开时间 star
+            // 结束时间 star
             laydate.render({
               elem: '#leaveStar'
             });
-    
-            // 离开时间 end
-            laydate.render({
-              elem: '#leaveEnd'
-            });
-    
+
           // 高级查询
           $('#gjchaxun').on('click', function () {
               layer.open({
@@ -39,30 +30,19 @@
               });
           });
           
-          // 票类管理
+          // 票类分组信息
           table.render({
-              elem: '#jbxx_01'
+              elem: '#jbxx_03'
               ,height: 525
-              ,title: '房间管理'
-              ,url: '../../json/table/jbxx_01.json'
+              ,title: '票类分组信息'
+              ,url: '../../json/table/jbxx_03.json'
               ,page: true
               ,autoSort: false
               ,toolbar: false
               // ,toolbar: '#toolbarDemo'
               ,cols: [[
-                {field:'id', title:'票类编号', width:100}
-                ,{field:'ptname', title:'票类名称', width:180}
-                ,{field:'pttype', title:'票类类型',  width:110}
-                ,{field:'yzptm', title:'预制票条码前缀',  width:100}
-                ,{field:'xxtm', title:'线下条码前缀',  width:100}
-                ,{field:'xstm', title:'线上条码前缀',  width:100}
-                ,{field:'xxqy', title:'允许区域',  width:120}
-                ,{field:'pice', title:'单价',  width:80}
-                ,{field:'cpfz', title:'产品分组',  width:150}
-                ,{field:'spzt', title:'商品状态',  width:100}
-                ,{field:'zrcs', title:'准入次数',  width:80}
-                ,{field:'pmsm', title:'票面说明',  width:150}
-                ,{field:'px', title:'排序',  width:'15%'}
+                {field:'id', title:'编号', width:100}
+                ,{field:'ptname', title:'功能名称', width:180}
               ]]
             });
       
@@ -107,9 +87,9 @@
                 //页面层-自定义
                 layer.open({
                   type: 1,
-                  title: '修改房间信息',
+                  title: '修改票类信息',
                   area: ['600px', '380px'],
-                  content: $('#fangjian_edit'),
+                  content: $('#jbxx3_edit'),
                   btn: ['提交', '取消']
                 });
             }
