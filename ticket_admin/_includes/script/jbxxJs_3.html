@@ -16,25 +16,25 @@
               elem: '#leaveStar'
             });
 
-          // 高级查询
-          $('#gjchaxun').on('click', function () {
+          // 票类分组管理
+          $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '高级查询',
+                  title: '票类分组管理',
                   maxmin: true,
                   shadeClose: false,
                   area: ['800px', '340px'],
-                  content: 'add_dingdan.html',
+                  content: 'add_jbxx3.html',
                   // content: $('#dingdan_content'),
                   btn: ['取消', '搜索']
               });
           });
           
-          // 票类分组信息
+          // 票类分组管理
           table.render({
               elem: '#jbxx_03'
               ,height: 525
-              ,title: '票类分组信息'
+              ,title: '票类分组管理'
               ,url: '../../json/table/jbxx_03.json'
               ,page: true
               ,autoSort: false

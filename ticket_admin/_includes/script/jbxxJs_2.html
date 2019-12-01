@@ -16,25 +16,25 @@
               elem: '#leaveStar'
             });
 
-          // 高级查询
-          $('#gjchaxun').on('click', function () {
+          // 参数设置
+          $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '高级查询',
+                  title: '参数设置',
                   maxmin: true,
                   shadeClose: false,
                   area: ['800px', '340px'],
-                  content: 'add_dingdan.html',
+                  content: 'add_jbxx2.html',
                   // content: $('#dingdan_content'),
                   btn: ['取消', '搜索']
               });
           });
           
-          // 票类管理
+          // 参数设置
           table.render({
               elem: '#jbxx_02'
               ,height: 525
-              ,title: '票类管理'
+              ,title: '参数设置'
               ,url: '../../json/table/jbxx_02.json'
               ,page: true
               ,autoSort: false

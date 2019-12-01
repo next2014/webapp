@@ -1,3 +1,5 @@
+<!-- <link rel="stylesheet" type="text/css" href="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.css" />
+<script src="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.min.js" type="text/javascript" charset="utf-8"></script> -->
 <script>
     layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
           var laydate = layui.laydate
@@ -16,20 +18,23 @@
               elem: '#leaveStar'
             });
 
-          // 高级查询
+          // 票类新增
           $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '高级查询',
+                  title: '票类新增',
                   maxmin: true,
                   shadeClose: false,
-                  area: ['800px', '340px'],
+                  area: ['800px', '600px'],
                   content: 'add_jbxx1.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
               });
           });
-          
+
+          // 下拉多选
+
+
           // 票类管理
           table.render({
               elem: '#jbxx_01'
@@ -106,14 +111,14 @@
             }
           });
                             
-          $('i').on('click', function () {
-              var type = $(this).data('type');
-              active[type] ? active[type].call(this) : '';
-          });
-          $('.layui-btn').on('click', function () {
-              var type = $(this).data('type');
-              active[type] ? active[type].call(this) : '';
-          });
+          // $('i').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+          // $('.layui-btn').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
       
       });
-    </script>
+</script>
