@@ -15,7 +15,8 @@ title: 门票预订
             <div class="piao_type" id="tourDate_id">
                 <h3 class="fl">游玩日期</h3>
                 <div class="fr time" style="position: relative;">
-                    <a href="calendar.html" style="display:block;width:200px;height:40px;position:absolute;right:30px;top:-2px;"></a>
+                    <!-- S 日历模式 -->
+                    <a href="calendar.html" class="calendar" style="display:block;width:200px;height:40px;position:absolute;right:30px;top:-2px;"></a>
                     <input datatype="*" id="TourDate" nullmsg="请选择游玩日期！" name="TourDate" size="16" type="text" value="" class="mbsc-comp" readonly="">
                     <i class="layui-icon layui-icon-date" id="TourDateIcon"></i>
                 </div>
@@ -33,7 +34,7 @@ title: 门票预订
                     <div class="Choice">
                         <button class="" type="button" id="reduce" style="float:left;">-</button>
                         <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
-                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                        <button class="" type="button" id="add" style="float:left;">+</button>
                     </div>
                 </div>
             </div>
@@ -59,7 +60,7 @@ title: 门票预订
                     {% include ticketDetailsNew/mod_pos1.html %}
                     </div>
                     <div id="tab2" class="weui-tab__bd-item weui-tab__bd-item--active">
-                    {% include ticketDetailsNew/mod_pos26.html %}
+                    {% include ticketDetailsNew/mod_pos29.html %}
                     </div>
                     <div id="tab3" class="weui-tab__bd-item">
                     {% include ticketDetailsNew/mod_pos3-1.html %}

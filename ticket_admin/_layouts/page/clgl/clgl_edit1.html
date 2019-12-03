@@ -1,0 +1,74 @@
+---
+layout: pages
+title: 基本信息
+---
+<div class="page-content" style="overflow: hidden;padding: 10px;">
+    <form action="">
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">票类名称:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" value="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">优先级:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" value="" class="text_add" style="margin-right: 10px;"> 提示：当多个策略优惠区间重叠时，使用优先级排序靠前的策略！
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">可下单日期:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" value="" lay-skin="primary" id="mr" checked> <label for="mr">每日</label> 
+                <input type="checkbox" name="" value="" lay-skin="primary" id="zdrq" style="margin-left:5px;"> <label for="zdrq">指定日期</label>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">可预订日期:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" value="" lay-skin="primary" id="szqj" checked> <label for="szqj">数字区间</label> 
+                <input type="checkbox" name="" value="" lay-skin="primary" id="rqqj" style="margin-left:5px;"> <label for="rqqj">日期区间</label>
+                从<input type="text" name="" value="" class="text_add" id="starDate" style="margin:0 10px;width:15%;">天至第<input type="text" name="" value="" class="text_add" id="endDate" style="margin:0 10px;width:15%;">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">单位类别:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" lay-skin="primary" id="zc"> <label for="zc">全选</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="ts" style="margin-left:5px;"> <label for="ts">学校</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="tt" style="margin-left:5px;"> <label for="tt">企业</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="nz" style="margin-left:5px;"> <label for="nz">机关团体</label>
+                <input type="checkbox" name="" lay-skin="primary" id="ts" style="margin-left:5px;"> <label for="ts">媒体</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="tt" style="margin-left:5px;"> <label for="tt">医院</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="nz" style="margin-left:5px;"> <label for="nz">旅行社</label>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">备注:</label>
+            <div class="layui-input-block">
+                <input name="" type="text" value="" class="text_add" style="width: 80%;">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <div class="layui-input-block" style="margin: 0;">
+                <input name="" type="text" value="" class="text_add" style="margin-right: 10px;">
+                <button type="button" class="layui-btn layui-btn-sm"> 选择票类</button>
+                <button type="button" class="layui-btn layui-btn-sm"> 全选</button>
+                <button type="button" class="layui-btn layui-btn-sm"> 反选</button>
+                <label class="layui-form-label">计价方式:</label>
+                <select name="city" xm-select="example4" style="margin-right: 10px;">
+                  <option value="1">指定价格</option>
+                  <option value="2">折扣</option>
+                </select>
+                <button type="button" class="layui-btn layui-btn-sm"> 设定</button>
+            </div>
+        </div>
+        <table class="layui-hide" id="clgl_edit1" lay-filter="test"></table>
+        <!-- <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div> -->
+    </form>
+</div>

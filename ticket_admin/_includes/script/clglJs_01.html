@@ -8,45 +8,50 @@
           
             // 开始时间 star
             laydate.render({
-              elem: '#CheckInStar'
+              elem: '#starDate'
             });
     
             // 结束时间 star
             laydate.render({
-              elem: '#leaveStar'
+              elem: '#endDate'
             });
 
-          // 景区划分
+          // 门票预约策略
           $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '景区划分',
+                  title: '门票预约策略-新增',
                   maxmin: true,
                   shadeClose: false,
-                  area: ['500px', '400px'],
-                  content: 'add_jbxx4.html',
+                  area: ['800px', '600px'],
+                  content: 'add_clgl1.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
               });
           });
-          
-          // 景区划分
+
+          // 票类管理
           table.render({
-              elem: '#jbxx_04'
-              ,height: 525
-              ,title: '景区划分'
-              ,url: '../../json/table/jbxx_04.json'
+              elem: '#clgl_01'
+              ,height: 700
+              ,title: '票类管理'
+              ,url: '../../json/table/clgl_01.json'
               ,page: true
               ,autoSort: false
               ,toolbar: false
               // ,toolbar: '#toolbarDemo'
               ,cols: [[
-                {field:'id', title:'景区编号', width:100}
-                ,{field:'ptname', title:'名称', width:180}
-                ,{field:'pttype', title:'区号',  width:110}
-                ,{field:'yzptm', title:'区名',  width:100}
-                ,{field:'xxtm', title:'区域扣费',  width:100}
-                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+                {field:'clname', title:'策略名称', width:150}
+                ,{field:'yxj', title:'优先级', width:80}
+                ,{field:'kxdate', title:'可下单日期',  width:150}
+                ,{field:'kydate', title:'可预订日期',  width:150}
+                ,{field:'bz', title:'备注',  width:200}
+                ,{field:'cjr', title:'创建人',  width:120}
+                ,{field:'cjdate', title:'创建日期',  width:150}
+                ,{field:'xgr', title:'修改人',  width:150}
+                ,{field:'xgdate', title:'修改日期',  width:150}
+                ,{field:'plsl', title:'票类数量',  width:100}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
               ]]
             });
       
@@ -91,23 +96,23 @@
                 //页面层-自定义
                 layer.open({
                   type: 2,
-                  title: '修改景区信息',
-                  area: ['500px', '400px'],
-                  // content: $('#jbxx4_edit'),
-                  content: 'jbxx_edit4.html',
+                  title: '团体预约策略-修改',
+                  area: ['850px', '600px'],
+                  // content: $('#jbxx1_edit'),
+                  content: 'clgl_edit1.html',
                   btn: ['提交', '取消']
                 });
             }
           });
                             
-          $('i').on('click', function () {
-              var type = $(this).data('type');
-              active[type] ? active[type].call(this) : '';
-          });
-          $('.layui-btn').on('click', function () {
-              var type = $(this).data('type');
-              active[type] ? active[type].call(this) : '';
-          });
+          // $('i').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+          // $('.layui-btn').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
       
       });
-    </script>
+</script>

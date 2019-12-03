@@ -16,8 +16,10 @@ title: 基本信息-景区划分
         <div class="allBtn" style="display: flex;margin:10px 0;">
             <div class="layui-btn-group">
               <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 新增</button>
-              <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i> 修改</button>
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i> 删除</button>
+              <!-- <script type="text/html" id="barDemo">
+                <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i> 修改</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i> 删除</button>
+              </script> -->
               <button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe666;</i> 刷新</button>
             </div>
             <div style="margin-left: 10px;">
@@ -28,6 +30,10 @@ title: 基本信息-景区划分
         </div>
         <div style="background-color: #ffffff;">
             <table class="layui-hide" id="jbxx_04" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
         </div>
     </div>
 </div>

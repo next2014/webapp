@@ -44,7 +44,7 @@ $('#remove').click(function () {
 </script>
 {% endif %}
 {% if page.layout == "pages/eTicket" %}
-<!-- <script src="../static/js/main.js"></script>
+<script src="../static/js/main.js"></script>
 <script>
         var page = 1, pagesum = 2;
         $(function () {
@@ -84,7 +84,7 @@ $('#remove').click(function () {
             }
             $('#Previous').attr("disabled", false);
         })
-</script> -->
+</script>
 {% endif %}
 {% if page.layout == "pages/ticketDetailsNew" or page.layout == "pages/ticketDetailsNew1" or page.layout == "pages/ticketDetailsNew2" %}
 <script src="../static/js/Validform_v5.3.2_min.js"></script>
@@ -210,6 +210,7 @@ $('#remove').click(function () {
         $.get('/Wx/Ticket/AddShopping', { TourDate: TourDate, TicketId: 96, Qty: $('#Qty').val() }, function (data) {
             if (data.state == 1) {
                 $('#count').html(data.msg);
+                alert("已加入购物车");
             } else {
                 alert('添加购物车失败！');
             }

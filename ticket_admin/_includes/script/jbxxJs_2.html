@@ -20,13 +20,13 @@
           $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '参数设置',
+                  title: '产品分组-新增',
                   maxmin: true,
                   shadeClose: false,
-                  area: ['800px', '340px'],
+                  area: ['500px', '300px'],
                   content: 'add_jbxx2.html',
                   // content: $('#dingdan_content'),
-                  btn: ['取消', '搜索']
+                  btn: ['保存', '取消']
               });
           });
           
@@ -43,6 +43,7 @@
               ,cols: [[
                 {field:'id', title:'编号', width:100}
                 ,{field:'ptname', title:'名称', width:180}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
               ]]
             });
       
@@ -86,10 +87,11 @@
             } else if (obj.event === 'edit') {
                 //页面层-自定义
                 layer.open({
-                  type: 1,
+                  type: 2,
                   title: '修改票类信息',
-                  area: ['600px', '380px'],
-                  content: $('#jbxx2_edit'),
+                  area: ['500px', '300px'],
+                  // content: $('#jbxx2_edit'),
+                  content: 'jbxx_edit2.html',
                   btn: ['提交', '取消']
                 });
             }

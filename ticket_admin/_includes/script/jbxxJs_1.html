@@ -38,7 +38,7 @@
           // 票类管理
           table.render({
               elem: '#jbxx_01'
-              ,height: 525
+              ,height: 700
               ,title: '票类管理'
               ,url: '../../json/table/jbxx_01.json'
               ,page: true
@@ -59,6 +59,7 @@
                 ,{field:'zrcs', title:'准入次数',  width:80}
                 ,{field:'pmsm', title:'票面说明',  width:150}
                 ,{field:'px', title:'排序',  width:'15%'}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
               ]]
             });
       
@@ -102,10 +103,11 @@
             } else if (obj.event === 'edit') {
                 //页面层-自定义
                 layer.open({
-                  type: 1,
+                  type: 2,
                   title: '修改票类信息',
-                  area: ['600px', '380px'],
-                  content: $('#jbxx1_edit'),
+                  area: ['800px', '600px'],
+                  // content: $('#jbxx1_edit'),
+                  content: 'jbxx_edit1.html',
                   btn: ['提交', '取消']
                 });
             }
