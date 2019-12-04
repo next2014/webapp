@@ -16,7 +16,7 @@
               elem: '#leaveStar'
             });
 
-          // 票类新增
+          // 散客售票策略
           $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
@@ -33,31 +33,28 @@
           // 下拉多选
 
 
-          // 票类管理
+          // 散客售票策略
           table.render({
-              elem: '#jbxx_01'
+              elem: '#clgl_02'
               ,height: 700
-              ,title: '票类管理'
-              ,url: '../../json/table/jbxx_01.json'
+              ,title: '散客售票策略'
+              ,url: '../../json/table/clgl_02.json'
               ,page: true
               ,autoSort: false
               ,toolbar: false
               // ,toolbar: '#toolbarDemo'
               ,cols: [[
-                {field:'id', title:'票类编号', width:100}
-                ,{field:'ptname', title:'票类名称', width:180}
-                ,{field:'pttype', title:'票类类型',  width:110}
-                ,{field:'yzptm', title:'预制票条码前缀',  width:100}
-                ,{field:'xxtm', title:'线下条码前缀',  width:100}
-                ,{field:'xstm', title:'线上条码前缀',  width:100}
-                ,{field:'xxqy', title:'允许区域',  width:120}
-                ,{field:'pice', title:'单价',  width:80}
-                ,{field:'cpfz', title:'产品分组',  width:150}
-                ,{field:'spzt', title:'商品状态',  width:100}
-                ,{field:'zrcs', title:'准入次数',  width:80}
-                ,{field:'pmsm', title:'票面说明',  width:150}
-                ,{field:'px', title:'排序',  width:'15%'}
-                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+                {field:'clname', title:'策略名称', width:150}
+                ,{field:'yxj', title:'优先级', width:80}
+                ,{field:'kxdate', title:'可下单日期',  width:150}
+                ,{field:'kydate', title:'可预订日期',  width:150}
+                ,{field:'bz', title:'备注',  width:200}
+                ,{field:'cjr', title:'创建人',  width:120}
+                ,{field:'cjdate', title:'创建日期',  width:150}
+                ,{field:'xgr', title:'修改人',  width:150}
+                ,{field:'xgdate', title:'修改日期',  width:150}
+                ,{field:'plsl', title:'票类数量',  width:100}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
               ]]
             });
       
