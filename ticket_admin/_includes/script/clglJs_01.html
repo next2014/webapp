@@ -23,7 +23,7 @@
                   title: '门票预约策略-新增',
                   maxmin: true,
                   shadeClose: false,
-                  area: ['800px', '600px'],
+                  area: ['800px', '700px'],
                   content: 'add_clgl1.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
@@ -52,6 +52,29 @@
                 ,{field:'xgdate', title:'修改日期',  width:150}
                 ,{field:'plsl', title:'票类数量',  width:100}
                 ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
+              ]]
+            });
+
+          // 门票预约策略-新增
+          table.render({
+              elem: '#clgl_add1'
+              ,width: 770
+              ,height: 250
+              ,title: '门票预约策略-新增'
+              ,url: '../../json/table/clgl_add1.json'
+              ,page: false
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field:'plbh', title:'票类编号', width:100}
+                ,{field:'plmc', title:'票类名称',  width:150}
+                ,{field:'yj', title:'原价',  width:80}
+                ,{field:'jjfs', title:'计价方式',  width:100}
+                ,{field:'jjxs', title:'计价系数',  width:100}
+                ,{field:'zhj', title:'折后价',  width:80}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
               ]]
             });
       

@@ -24,7 +24,7 @@
                   maxmin: true,
                   shadeClose: false,
                   area: ['800px', '600px'],
-                  content: 'add_jbxx1.html',
+                  content: 'add_clgl3.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
               });
@@ -57,6 +57,30 @@
                 ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
               ]]
             });
+
+
+          // 网上售票策略-新增
+          table.render({
+              elem: '#clgl_add2'
+              ,width: 770
+              ,height: 250
+              ,title: '网上售票策略-新增'
+              ,url: '../../json/table/clgl_add3.json'
+              ,page: false
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field:'plbh', title:'票类编号', width:100}
+                ,{field:'plmc', title:'票类名称',  width:150}
+                ,{field:'yj', title:'原价',  width:80}
+                ,{field:'jjfs', title:'计价方式',  width:100}
+                ,{field:'jjxs', title:'计价系数',  width:100}
+                ,{field:'zhj', title:'折后价',  width:80}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
+              ]]
+          });
       
           //工具栏事件
           table.on('toolbar(test)', function (obj) {
