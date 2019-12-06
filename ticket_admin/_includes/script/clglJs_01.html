@@ -55,7 +55,7 @@
               ]]
             });
 
-          // 门票预约策略-新增
+          //门票预约策略-新增
           table.render({
               elem: '#clgl_add1'
               ,width: 770
@@ -76,7 +76,30 @@
                 ,{field:'zhj', title:'折后价',  width:80}
                 ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
               ]]
-            });
+          });
+
+          //门票预约策略-编辑
+          table.render({
+              elem: '#clgl_edit1'
+              ,width: 770
+              ,height: 250
+              ,title: '门票预约策略-新增'
+              ,url: '../../json/table/clgl_edit1.json'
+              ,page: false
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field:'plbh', title:'票类编号', width:100}
+                ,{field:'plmc', title:'票类名称',  width:150}
+                ,{field:'yj', title:'原价',  width:80}
+                ,{field:'jjfs', title:'计价方式',  width:100}
+                ,{field:'jjxs', title:'计价系数',  width:100}
+                ,{field:'zhj', title:'折后价',  width:80}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
+              ]]
+          });
       
           //工具栏事件
           table.on('toolbar(test)', function (obj) {
@@ -120,10 +143,10 @@
                 layer.open({
                   type: 2,
                   title: '团体预约策略-修改',
-                  area: ['850px', '600px'],
+                  area: ['800px', '700px'],
                   // content: $('#jbxx1_edit'),
                   content: 'clgl_edit1.html',
-                  btn: ['提交', '取消']
+                  btn: ['保存', '取消']
                 });
             }
           });

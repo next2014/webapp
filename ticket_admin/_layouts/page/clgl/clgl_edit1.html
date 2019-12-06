@@ -1,9 +1,8 @@
 ---
 layout: pages
-title: 基本信息
+title: 策略管理
 ---
-<div class="page-content" style="overflow: hidden;padding: 10px;">
-    <form action="">
+<div class="page-content" style="overflow: hidden;padding: 10px 10px 0 10px;">
         <div class="layui-form-item mb-2" style="width:99%">
             <label class="layui-form-label layui-title">票类名称:</label>
             <div class="layui-input-block">
@@ -43,32 +42,32 @@ title: 基本信息
                 <input type="checkbox" name="" lay-skin="primary" id="nz" style="margin-left:5px;"> <label for="nz">旅行社</label>
             </div>
         </div>
-        <div class="layui-form-item mb-2" style="width:99%">
+        <div class="layui-form-item" style="width:99%;margin-bottom: 0;">
             <label class="layui-form-label layui-title">备注:</label>
             <div class="layui-input-block">
                 <input name="" type="text" value="" class="text_add" style="width: 80%;">
             </div>
         </div>
-        <div class="layui-form-item mb-2" style="width:99%">
-            <div class="layui-input-block" style="margin: 0;">
-                <input name="" type="text" value="" class="text_add" style="margin-right: 10px;">
-                <button type="button" class="layui-btn layui-btn-sm"> 选择票类</button>
-                <button type="button" class="layui-btn layui-btn-sm"> 全选</button>
-                <button type="button" class="layui-btn layui-btn-sm"> 反选</button>
-                <label class="layui-form-label">计价方式:</label>
-                <select name="city" xm-select="example4" style="margin-right: 10px;">
-                  <option value="1">指定价格</option>
-                  <option value="2">折扣</option>
-                </select>
-                <button type="button" class="layui-btn layui-btn-sm"> 设定</button>
-            </div>
+</div>
+<div style="padding:0 10px;">
+    <div class="allBtn" style="display: flex;margin:10px 0;">
+        <div class="layui-btn-group">
+            <input type="text" class="text_add" style="margin-right:5px;">
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">选择票类</button>
+            <button type="button" class="layui-btn layui-btn-sm" lay-event="">全选</button>
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="">反选</button>
         </div>
-        <table class="layui-hide" id="clgl_edit1" lay-filter="test"></table>
-        <!-- <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
-                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-            </div>
-        </div> -->
-    </form>
+        <div class="layui-input-block" style="margin:0 0 0 5px;">
+            <select lay-filter="aihao" style="margin-right:5px;">
+                <option value="1">指定价格</option>
+                <option value="2">折扣</option>
+            </select>
+            <input type="text" class="text_add" style="margin-right:5px; width: 18%;">
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">设定</button> 
+        </div>
+    </div>
+    <table class="layui-hide" id="clgl_edit1" lay-filter="test"></table>
+    <script type="text/html" id="barDemo1">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
 </div>
