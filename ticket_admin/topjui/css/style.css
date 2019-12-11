@@ -253,6 +253,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     margin-left: 120px;
     display: flex;
     align-items: center;
+    min-height: 30px!important;
 }
 
 .layui-input-block select {

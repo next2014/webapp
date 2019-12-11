@@ -33,7 +33,7 @@
           // 门票预约策略
           table.render({
               elem: '#clgl_01'
-              ,height: 700
+              ,height: 450
               ,title: '门票预约策略'
               ,url: '../../json/table/clgl_01.json'
               ,page: true
@@ -54,6 +54,26 @@
                 ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
               ]]
             });
+
+          // 票类明细
+          table.render({
+              elem: '#clgl_01'
+              ,height: 450
+              ,title: '票类明细'
+              ,url: '../../json/table/clgl_mx_01.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'clname', title:'票类编号', width:150}
+                ,{field:'yxj', title:'票类名称', width:80}
+                ,{field:'kxdate', title:'原价',  width:150}
+                ,{field:'kydate', title:'计价方式',  width:150}
+                ,{field:'bz', title:'计价系数',  width:200}
+                ,{field:'cjr', title:'折后价',  width:120}
+              ]]
+          });
 
           //门票预约策略-新增
           table.render({
