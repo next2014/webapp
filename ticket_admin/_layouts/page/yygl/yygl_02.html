@@ -1,13 +1,65 @@
 ---
-layout: default
+layout: pages
 title: 预约管理
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                    查询预约单
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <div data-options="region:'west',border:false" class="leftChaXun" style="width:18%;padding:10px">
+         <h2>按以下条件进行查询</h2>
+         <ul>
+            <li><span>下单日期:</span><input type="text" class="text_add" id="xdDate"></li>
+            <li><span>至:</span><input type="text" class="text_add" id="xdEndDate"></li>
+            <li><span>游览日期:</span><input type="text" class="text_add" id="ylDate"></li>
+            <li><span>至:</span><input type="text" class="text_add" id="ylEndDate"></li>
+            <li><span>订单状态:</span>
+             <div class="layui-input-block" style="width: 142px;margin-left:100px;">
+                <select lay-filter="aihao">
+                    <option value="1">未付款</option>
+                    <option value="2">已支付</option>
+                    <option value="3">已出票</option>
+                    <option value="4">已取消</option>
+                    <option value="5">已退票</option>
+                    <option value="6">已销账</option>
+                </select>
+              </div>
+            </li>
+            <li><span>是否需要导览:</span>
+              <div class="layui-input-block" style="width: 142px;margin-left:100px;">
+                <select lay-filter="aihao">
+                  <option value="1">需要</option>
+                  <option value="2">不需要</option>
+                </select>
+              </div>
+            </li>
+            <li><span>团体名称:</span><input type="text" class="text_add"></li>
+            <li><span>导游电话:</span><input type="text" class="text_add"></li>
+            <li><hr></li>
+            <li><span>订单号:</span><input type="text" class="text_add"></li>
+            <li style="text-align: center;display: flex;justify-content: center;align-items: center; padding-top:10px;">
+                <input type="checkbox" lay-skin="primary" id="yyd" style="margin-right:5px"> <label for="yyd">处理未结挂账预约单</label>
+            </li>
+            <li style="text-align: center;">
+                <button type="button" class="layui-btn layui-btn-sm">重置</button> <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查询</button>
+            </li>
+        </ul>
+    </div>
+    <div data-options="region:'center',border:false" style="width:82%;padding:10px;background-color: #eeeeee;">
+        <h2>订单信息</h2>
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <div class="">
+              <button type="button" class="layui-btn layui-btn-sm">全选</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 创建订单</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">订单详情</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">修改订单</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">取消订单</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">销账</button>
             </div>
+        </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="yygl_02" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
         </div>
     </div>
 </div>

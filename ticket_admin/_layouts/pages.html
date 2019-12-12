@@ -23,7 +23,7 @@
     {% if page.layout == "page/jbxx/jbxx_04" %}
         {% include script/jbxxJs_4.html %}
     {% endif %}
-<!-- 团体预约策略 -->
+    <!-- 团体预约策略 -->
     {% if page.layout == "page/clgl/clgl_01" or page.layout == "page/clgl/add_clgl1" %}
         {% include script/clglJs_01.html %}
     {% endif %}
@@ -41,6 +41,10 @@
     {% endif %}
     {% if page.layout == "page/clgl/clgl_edit3" %}
         {% include script/clglJs_03.html %}
+    {% endif %}
+    <!-- 预约管理 -->
+    {% if page.layout == "page/yygl/yygl_02" %}
+        {% include script/yyglJs_02.html %}
     {% endif %}
 </body>
 </html>

@@ -1,226 +1,261 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-		<meta name="robots" content="all" />
-		<meta http-equiv="imagetoolbar" content="no" />
-		<meta http-equiv="pragma" content="no-cach" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<meta name="format-detection" content="telephone=no" />
-		<meta http-equiv="keywords" content="" />
-		<meta name="author" content="" />
-		<meta name="copyright" content="" />
-		<meta name="description" content="" />
-		<meta name="HandheldFriendly" content="true" />
-
-		<title>选择票种</title>
-		<link type="text/css" rel="stylesheet" href="css/cssreset.css" />
-		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		<link type="text/css" rel="stylesheet" href="css/layui.css" />
-		<!-- 自定义样式 -->
-		<style>
-		  .in_fr h2{
-			 /* text-overflow: ellipsis;
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="all" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="pragma" content="no-cach" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="" />
+	<meta name="HandheldFriendly" content="true" />
+	<title>选择票种</title>
+	<link type="text/css" rel="stylesheet" href="css/cssreset.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/layui.css" />
+	<link href="https://cdn.bootcss.com/Swiper/4.2.2/css/swiper.min.css" rel="stylesheet">
+	<!-- 自定义样式 -->
+	<style>
+		.in_fr h2 {
+			/* text-overflow: ellipsis;
 			 white-space: nowrap;
 			 overflow: hidden; */
-			 font-size: 0.6rem;
-		  }
-		</style>
-	</head>
+			font-size: 0.6rem;
+		}
+		.border-bottom {
+			border-bottom: 1px solid #dee2e6!important;
+		}
+		.announcement{overflow:hidden;height:2.0125rem}
+        .announcement a{
+			color:#294c7f;text-decoration:none;
+			display:block;line-height:2.0125rem;
+			height:2.0125rem;text-indent:.5em;
+			overflow:hidden;font-size:.50437rem;
+			padding:0 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="index_all">
+		<div>
+			<img src="img/22.png" />
+		</div>
+		
+		<!-- <span style="padding:10px 10px 5px 15px; float:left; color:red;line-height:24px; background:#fff;">
+			温馨提醒：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。
+		</span> -->
 
-	<body>
-
-		<div class="index_all">
-			<div>
-				<img src="img/22.png" />
-			</div>
-			<ul id="ticket" style="padding-bottom: 45px;">
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/1.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>狮子城园区套票【成人】-平日</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥148.00</span>
+        <!-- 公告 -->
+        <div class="mod_bbs border-bottom" style="display:flex;">
+			<section class="mod_bbs_msg">
+				<div class="swiper-container1 announcement">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="infoTer.html">1.温馨提醒：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="infoTer.html">2.特别通知：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="infoTer.html">3.特别通知：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
 						</div>
 					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/1.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>狮子城园区套票【成人】-周末</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥168.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/1.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>狮子城园区套票【成人】-平日</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥128.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/1.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>狮子城园区套票【儿童】-周末</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥148.00</span>
-						</div>
-					</div>
-				</li>
-
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/2.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>万圣节鬼屋【通票】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥35.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/3.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>奇奇之家儿童体验套票</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">49.9</span>
-						</div>
-					</div>
-				</li>
-
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/4.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【一大一小】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥138.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/4.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【两大一小】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥198.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/4.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【两大两小】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥238.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/4.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【成人票】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥88.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/4.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【儿童票】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥68.00</span>
-						</div>
-					</div>
-				</li>
-
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/5.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【成人票】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥88.00</span>
-						</div>
-					</div>
-				</li>
-				<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
-					<div class="in_fl fl tic_img">
-						<img src="img/home/5.png" alt=" " />
-					</div>
-					<div class="in_fr fr">
-						<h2>大马戏亲子套票【儿童票】</h2>
-						<p></p>
-						<div>
-							<span class="fl dol">¥68.00</span>
-						</div>
-					</div>
-				</li>
-
-				
-			</ul>
+				</div>
+			</section>
 		</div>
 
-		<div class="in_btn">
-			<div class="layui-btn-group">
-				<button class="layui-btn current" onclick="javascript: window.location.href = '#'">首 页</button>
-				<button class="layui-btn" onclick="javascript: window.location.href = 'ShoppingNew.html'">购物车</button>
-				<button class="layui-btn" onclick="javascript: window.location.href = 'TicketList.html'">我的订单</button>
-			</div>
-		</div>     
-		<script src="js/jquery.min.js"></script>
-		<script src="js/political_WeCall.js"></script>
-		<script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
-		<script>
-			$(function() {
+		<ul id="ticket" style="">
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/1.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>狮子城园区套票【成人】-平日</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥148.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/1.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>狮子城园区套票【成人】-周末</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥168.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/1.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>狮子城园区套票【成人】-平日</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥128.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/1.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>狮子城园区套票【儿童】-周末</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥148.00</span>
+					</div>
+				</div>
+			</li>
 
-				/*------------------------------------index 底部按钮的切换-----------------------------*/
-				$('.in_btn button').click(function(e) {
-					$(this).addClass('current').siblings().removeClass('current');
-				});
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/2.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>万圣节鬼屋【通票】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥35.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/3.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>奇奇之家儿童体验套票</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">49.9</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/4.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【一大一小】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥138.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/4.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【两大一小】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥198.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/4.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【两大两小】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥238.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/4.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【成人票】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥88.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/4.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【儿童票】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥68.00</span>
+					</div>
+				</div>
+			</li>
 
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/5.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【成人票】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥88.00</span>
+					</div>
+				</div>
+			</li>
+			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
+				<div class="in_fl fl tic_img">
+					<img src="img/home/5.png" alt=" " />
+				</div>
+				<div class="in_fr fr">
+					<h2>大马戏亲子套票【儿童票】</h2>
+					<p></p>
+					<div>
+						<span class="fl dol">¥68.00</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="in_btn">
+		<div class="layui-btn-group">
+			<button class="layui-btn current" onclick="javascript: window.location.href = '#'">首 页</button>
+			<button class="layui-btn" onclick="javascript: window.location.href = 'ShoppingNew.html'">购物车</button>
+			<button class="layui-btn" onclick="javascript: window.location.href = 'TicketList.html'">我的订单</button>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/political_WeCall.js"></script>
+	<script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/Swiper/4.2.2/js/swiper.min.js"></script>
+	<script>
+		$(function () {
+			/*------------------------------------index 底部按钮的切换-----------------------------*/
+			$('.in_btn button').click(function (e) {
+				$(this).addClass('current').siblings().removeClass('current');
 			});
-		</script>
-	</body>
-
+		});
+	</script>
+	<script type="text/javascript">
+		var announcementSwiper = new Swiper('.swiper-container1', {
+			direction: 'vertical',
+			loop: true,
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: false,
+			}
+		})
+	</script>
+</body>
 </html>

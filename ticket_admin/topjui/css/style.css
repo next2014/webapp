@@ -291,3 +291,24 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     width: 150px;
     border: 1px solid #D5D5D5;
 }
+
+
+/* 查询预约 */
+.leftChaXun ul {
+    margin:10px 0;
+}
+.leftChaXun li {
+    margin-bottom: 10px;
+}
+.leftChaXun li span{
+    display: block;
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.leftChaXun .text_add{
+    width: 130px;
+}

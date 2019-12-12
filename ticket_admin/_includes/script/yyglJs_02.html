@@ -1,0 +1,120 @@
+<script>
+ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+        var laydate = layui.laydate
+        ,layer =layui.layer
+        ,from = layui.form
+        ,element = layui.element
+        ,table = layui.table;
+        
+        // 开始时间 star
+        laydate.render({
+            elem: '#CheckInStar'
+        });
+
+        // 结束时间 star
+        laydate.render({
+            elem: '#leaveStar'
+        });
+
+        // 预约管理
+        $('#piaolei_add').on('click', function () {
+            layer.open({
+                type: 2,
+                title: '预约单-创建',
+                maxmin: true,
+                shadeClose: false,
+                area: ['900px', '600px'],
+                content: 'add_yygl.html',
+                // content: $('#dingdan_content'),
+                btn: ['保存', '取消']
+            });
+        });
+        
+        // 预约管理
+        table.render({
+            elem: '#yygl_02'
+            ,height: 700
+            ,title: '订单信息'
+            ,url: '../../json/table/yygl_02.json'
+            ,page: true
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {type: 'checkbox', title:'选择', fixed: 'left'}
+            ,{field:'ddh', title:'订单号', width:150}
+            ,{field:'ttmc', title:'团体名称', width:120}
+            ,{field:'sl', title:'数量', width:60}
+            ,{field:'ddje', title:'订单金额', width:100}
+            ,{field:'lxr', title:'联系人', width:80}
+            ,{field:'dh', title:'电话', width:120}
+            ,{field:'yldeta', title:'游览起止日期', width:200}
+            ,{field:'ddzt', title:'订单状态', width:100}
+            ,{field:'cjr', title:'创建人', width:80}
+            ,{field:'qcrq', title:'创建日期', width:120}
+            ,{field:'fkfs', title:'付款方式', width:100}
+            ,{field:'ydy', title:'预订员', width:80}
+            ]]
+        });
+    
+        //工具栏事件
+        table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+            case 'add':
+            layer.msg('添加');
+            break;
+            case 'edit':
+            layer.msg('编辑');
+            break;
+            case 'del':
+            layer.msg('删除');
+            break;
+            case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+        });
+    
+        //监听单元格编辑
+        table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+            , data = obj.data //得到所在行所有键值
+            , field = obj.field; //得到字段
+            console.log(obj)
+        });
+    
+        //监听行工具事件
+        table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+            layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+            });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+                type: 2,
+                title: '修改景区信息',
+                area: ['500px', '400px'],
+                // content: $('#jbxx4_edit'),
+                content: 'yygl_edit.html',
+                btn: ['提交', '取消']
+            });
+        }
+        });
+                        
+        // $('i').on('click', function () {
+        //     var type = $(this).data('type');
+        //     active[type] ? active[type].call(this) : '';
+        // });
+        // $('.layui-btn').on('click', function () {
+        //     var type = $(this).data('type');
+        //     active[type] ? active[type].call(this) : '';
+        // });
+    
+    });
+</script>
