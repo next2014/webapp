@@ -16,7 +16,6 @@
 	<link type="text/css" rel="stylesheet" href="css/cssreset.css" />
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<link type="text/css" rel="stylesheet" href="css/layui.css" />
-	<link href="https://cdn.bootcss.com/Swiper/4.2.2/css/swiper.min.css" rel="stylesheet">
 	<!-- 自定义样式 -->
 	<style>
 		.in_fr h2 {
@@ -27,14 +26,6 @@
 		}
 		.border-bottom {
 			border-bottom: 1px solid #dee2e6!important;
-		}
-		.announcement{overflow:hidden;height:2.0125rem}
-        .announcement a{
-			color:#294c7f;text-decoration:none;
-			display:block;line-height:2.0125rem;
-			height:2.0125rem;text-indent:.5em;
-			overflow:hidden;font-size:.50437rem;
-			padding:0 10px;
 		}
 	</style>
 </head>
@@ -49,7 +40,7 @@
 		</span> -->
 
 		<!-- 公告 -->
-		<iframe src="gonggao.html" frameborder="0"></iframe>
+		<iframe id="headerIframe" src="gonggao.html" frameborder="0" style="width:100%;height:50px;"></iframe>
         
 		<ul id="ticket" style="">
 			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
@@ -219,9 +210,31 @@
 			<button class="layui-btn" onclick="javascript: window.location.href = 'TicketList.html'">我的订单</button>
 		</div>
 	</div>
+
+	 <!-- 弹窗公告内容 -->
+	 <div class="modal fade" id="gonggao1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalScrollableTitle">温馨提醒</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p class="text-justify">
+						   <span class="pb-1">亲爱的游客朋友们：</span><br/>　因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/political_WeCall.js"></script>
-	<script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
 	<script src="https://cdn.bootcss.com/Swiper/4.2.2/js/swiper.min.js"></script>
 	<script>
 		$(function () {
@@ -240,6 +253,14 @@
 				disableOnInteraction: false,
 			}
 		})
+	</script>
+	<script type="text/javascript">    
+		$('#headerIframe').on('load',function(event){
+		  $('#headerIframe').contents().find('a.item').on('click',function(){
+		//     console.log('子页面的索引是: '+$(this).index());
+		       window.location.href = 'www.baidu.com';
+		  });
+		}); 
 	</script>
 </body>
 </html>

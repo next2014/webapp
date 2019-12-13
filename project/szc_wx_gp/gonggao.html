@@ -5,24 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Swiper/4.2.2/css/swiper.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin:0;
+        }
+      	.announcement{
+              overflow:hidden;
+              height:50px;
+              background:#FFFFFF;
+              border-bottom:1px solid #eeeeee;
+              overflow: hidden;
+        }
+        .announcement a{
+            color:#294c7f;
+            text-decoration:none;
+			display:block;
+            height:50px;
+            overflow:hidden;
+            font-size:.85rem;
+            padding:5px 10px;
+            color:red;
+		}
+    </style>
 </head>
 <body>
-    <div class="mod_bbs border-bottom" style="display:flex;">
-        <section class="mod_bbs_msg">
-            <div class="swiper-container1 announcement">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="infoTer.html">1.温馨提醒：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="infoTer.html">2.特别通知：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="infoTer.html">3.特别通知：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
-                    </div>
-                </div>
+    <div class="swiper-container1 announcement">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;" class="item">温馨提醒：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
             </div>
-        </section>
+            <div class="swiper-slide" class="item">
+                <a href="javascript:;">通知：因惠州供电局电力施工。</a>
+            </div>
+            <div class="swiper-slide" class="item">
+                <a href="javascript:;">特别公告：因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解。</a>
+            </div> 
+        </div>
     </div>
+     
+	
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/4.2.2/js/swiper.min.js"></script>
+    <script type="text/javascript">
+      var announcementSwiper = new Swiper('.swiper-container1', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        }
+      })
+	</script>
 </body>
 </html>
