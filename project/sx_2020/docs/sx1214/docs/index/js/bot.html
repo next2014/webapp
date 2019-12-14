@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!-- saved from url=(0042)https://wap.azg168.cn/2013/images/bot.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script type="text/javascript" src="./jquery-1.4.1.min.js"></script>
+<style>
+html, body, div, p{ margin:0 auto; padding:0; font-size:14px; font-family:"宋体";}
+img{border:0 none; vertical-align:top;}
+
+.bot{background:#ededed; padding-bottom:30px;}
+	.bot_top{height:6px; margin-bottom:12px; background:#ffffff; box-shadow:0 4px 6px #cbcbcb;}
+	.bot p{margin-top:4px; text-align:center; font-size:12px; color:#5c5c5c;}
+</style>
+</head>
+
+<body marginheight="0">
+    <form id="form1" runat="server">
+        <div class="bot">
+            <div class="bot_top"></div>
+            <p>版权所有：祥安阁@<a id="banquan">广州开运文化交流活动策划有限公司</a> [佛文化领导品牌]</p>
+            <p>客服热线：<a class="400telNumber">400-699-2902</a>[免费电话]</p>
+            <p>热爱伟大祖国 卐 维护民族团结</p>
+            <p>弘扬传统文化 卐 促进社会和谐</p>
+        </div>
+    </form>
+    <script>
+    var moretelnum = $(".400telNumber");
+    if ($(".400telNumber")) {
+        moretelnum.each(function () {
+            $(this).html(window.parent.showtelnumber);
+        });
+    }
+
+    if ($("#banquan")) {
+        $("#banquan").html(window.parent.banquan);
+    }
+    </script>
+
+
+
+
+</body></html>

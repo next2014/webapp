@@ -16,13 +16,59 @@
 	<link type="text/css" rel="stylesheet" href="css/cssreset.css" />
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<link type="text/css" rel="stylesheet" href="css/layui.css" />
+	<!-- Star 公告需要样式 -->
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Swiper/4.2.2/css/swiper.min.css" rel="stylesheet">
+    <style>
+      	.announcement{
+			/* height:50px; */
+			height:92px;
+			background:#FFFFFF;
+			/* border-bottom:1px solid #eeeeee; */
+			overflow: hidden;
+        }
+        .announcement a{
+			/* height:50px; */
+			height:92px;
+            text-decoration:none;
+			display:block;
+            overflow:hidden;
+            font-size:.55rem;
+            padding:5px 10px;
+			color:red;
+			text-align: justify!important;
+		}
+		.announcement strong{
+			color:#666;
+		}
+		h5,.modal-footer .btn{
+			font-size:.6rem;
+		}
+		.close{
+			padding:.8rem 1.4rem!important;
+			font-size:1.2rem;
+		}
+		.modal-header,.modal-body,.modal-footer{
+			font-size:.6rem;
+			padding:.6rem;
+		}
+		.modal-body p{
+			margin-bottom: 0;
+			text-indent: 2em;
+		}
+		.modal-footer{
+			font-size:.6rem;
+			padding:.3rem .6rem;
+		}
+	</style>
+	<!-- end 公告需要样式 -->
 	<!-- 自定义样式 -->
 	<style>
 		.in_fr h2 {
 			/* text-overflow: ellipsis;
 			 white-space: nowrap;
 			 overflow: hidden; */
-			font-size: 0.6rem;
+			font-size: 0.65rem;
 		}
 		.border-bottom {
 			border-bottom: 1px solid #dee2e6!important;
@@ -40,7 +86,20 @@
 		</span> -->
 
 		<!-- 公告 -->
-		<iframe id="headerIframe" src="gonggao.html" frameborder="0" style="width:100%;height:50px;"></iframe>
+		<!-- <iframe id="headerIframe" src="gonggao.html" frameborder="0" style="width:100%;height:50px;"></iframe> -->
+		<div class="swiper-container1 announcement">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="javascript:;" class="item" data-toggle="modal" data-target="#gonggao1"><strong>温馨提醒：</strong>因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解。</a>
+				</div>
+				<div class="swiper-slide" class="item" data-toggle="modal" data-target="#gonggao1">
+					<a href="javascript:;"><strong>温馨提醒：</strong>因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。</a>
+				</div>
+				<div class="swiper-slide" class="item" data-toggle="modal" data-target="#gonggao1">
+					<a href="javascript:;"><strong>温馨提醒：</strong>因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解，如对您造成不便，敬请谅解</a>
+				</div> 
+			</div>
+		</div>
         
 		<ul id="ticket" style="">
 			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
@@ -211,31 +270,48 @@
 		</div>
 	</div>
 
-	 <!-- 弹窗公告内容 -->
-	 <div class="modal fade" id="gonggao1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-scrollable" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalScrollableTitle">温馨提醒</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<p class="text-justify">
-						   <span class="pb-1">亲爱的游客朋友们：</span><br/>　因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
-					</div>
+	<!-- star 弹窗公告内容 -->
+	<div class="modal fade" id="gonggao1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">温馨提醒</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="text-justify">
+					  因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解, 因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解,
+					  因惠州供电局电力施工，12月18日当天大马戏表演场次暂停，如对您造成不便，敬请谅解。
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
 				</div>
 			</div>
 		</div>
-	<script src="js/jquery.min.js"></script>
+	</div>
+	<!-- end 弹窗公告内容 -->
+
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/political_WeCall.js"></script>
-	<!-- <script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Star 公告需要用脚本 -->
 	<script src="https://cdn.bootcss.com/Swiper/4.2.2/js/swiper.min.js"></script>
+	<script src="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	  var announcementSwiper = new Swiper('.swiper-container1', {
+		direction: 'vertical',
+		loop: true,
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+	 	}
+	  })
+	</script>
+	<!-- End 公告需要用脚本 -->
 	<script>
 		$(function () {
 			/*------------------------------------index 底部按钮的切换-----------------------------*/
@@ -243,24 +319,6 @@
 				$(this).addClass('current').siblings().removeClass('current');
 			});
 		});
-	</script>
-	<script type="text/javascript">
-		var announcementSwiper = new Swiper('.swiper-container1', {
-			direction: 'vertical',
-			loop: true,
-			autoplay: {
-				delay: 1000,
-				disableOnInteraction: false,
-			}
-		})
-	</script>
-	<script type="text/javascript">    
-		$('#headerIframe').on('load',function(event){
-		  $('#headerIframe').contents().find('a.item').on('click',function(){
-		//     console.log('子页面的索引是: '+$(this).index());
-		       window.location.href = 'www.baidu.com';
-		  });
-		}); 
 	</script>
 </body>
 </html>

@@ -293,7 +293,7 @@ body {
 	text-align: center;
 	list-style: none;
 	border: 0;
-	font-size: 1rem;
+	font-size: .6rem;
 	border: 1px solid #3fbbef;
 	border-radius: 4px;
 	background: #fff;
@@ -834,7 +834,7 @@ body {
 }
 
 .shop .sh_num {
-	font-size: 1rem;
+	font-size: .6rem;
 }
 
 .index_all .shop_img {
@@ -1025,7 +1025,7 @@ body {
 }
 
 .out .te_d h1 {
-	font-size: 1rem;
+	font-size: .6rem;
 	color: #ffa10d;
 	width: 80%;
 	height: 3rem;
