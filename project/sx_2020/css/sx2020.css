@@ -1,16 +1,18 @@
 body {
     margin: 0;
 }
-
+.header{
+    height: 240px;
+}
 .header .bg {
     width: 100%;
 }
 .header .icon {
     position: absolute;
-    left: 50%;
-    top: 6%;
-    width: 147px;
-    margin-left: -73px;
+    left: 60%;
+    top: 15%;
+    width: 75px;
+    margin-left: -73px
 }
 
 .taisui-card {
@@ -86,10 +88,10 @@ body {
    height: 60px!important;
 }
 .desc-card {
-    margin: 64px 15px 0;
-    border-radius: 6px;
-    box-shadow: 0px 2px 38px 0px rgba(185, 72, 59, 0.49);
-    padding: 8px 0;
+    margin: 64px 0 0;
+    /* border-radius: 6px; */
+    /* box-shadow: 0px 2px 38px 0px rgba(185, 72, 59, 0.49); */
+    /* padding: 8px 0; */
     background-color: #F9E9CF;
     /* background: #fff url(img/res_desc_bg.jpg) no-repeat; */
     background-size: 100%;
@@ -98,14 +100,31 @@ body {
 
 .desc-wrapper {
     width:auto;
-    margin: 0 8px;
-    border-radius: 6px;
-    border: 1px solid #ccb385;
-    text-align: center;
-    padding: 0 0 25px 0;
+    /* margin: 0 8px; */
+    /* border-radius: 6px;
+    border: 1px solid #ccb385; */
+    /* text-align: center; */
+    padding: 0 0 5px 0;
     position: relative;
-    background: url(../img/bgTu.jpg) no-repeat 0 0;
-    background-size: 100%;
+    /* background: url(../img/bgTu.jpg) no-repeat 0 0;
+    background-size: 100%; */
+}
+
+.desc-wrapper .sdys{
+    padding:0 12px;
+    margin-bottom: 20px;
+}
+
+.desc-wrapper .sdys h6 {
+    font-size: 0.975em;
+    color: #FF7E00;
+    font-weight: normal;
+    margin: 10px auto 10px;
+    text-align: center;
+}
+
+.red{
+   color: #F00;
 }
 /* .desc-wrapper strong{
     height: 40px;
@@ -118,7 +137,7 @@ body {
 }
 
 .desc-wrapper .title1 {
-    margin: 0 auto 15px;
+    margin: 0 auto 25px;
     line-height: 36px;
     font-size: 1.125em;
     text-align: center;
@@ -137,14 +156,24 @@ body {
     font-family: "Microsoft YaHei";
 }
 
+.desc-wrapper .title2 span{
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #9c0d0d;
+    color: #f6e7ca;
+}
+
 .desc-wrapper p {
     position: relative;
     text-align: left;
-    font-size: 15px;
-    color: rgb(72, 72, 72);
+    font-size: 14px;
+    color: #856a51;
     line-height: 1.7;
-    margin:0 0 20px 0;
-    padding:0 12px;
+    /* margin:0 0 20px 0; */
+    margin:0;
+    text-indent: 2em;
 }
 .desc-wrapper p img{
     margin-left: 13%;
@@ -155,10 +184,12 @@ body {
 }
 
 .desc-wrapper h3 {
-    margin-top: 30px;
     text-align: left;
-    font-size: 16px;
-    color: #aa2135;
+    font-size: 14px;
+    color:#856a51;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-indent: 2em;
     /*font-weight: normal;*/
 }
 .desc-card .footer {
