@@ -11,8 +11,8 @@ body {
     position: absolute;
     left: 60%;
     top: 15%;
-    width: 75px;
-    margin-left: -73px
+    width: 95px;
+    margin-left: -85px;
 }
 
 .taisui-card {
@@ -112,7 +112,16 @@ body {
 
 .desc-wrapper .sdys{
     padding:0 12px;
+}
+
+.sdys2020 .sdys{
+    border-bottom: 1px solid #d5c7a3;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.sdys2020 .sdys:last-child{
+    border-bottom: 0;
+    margin-bottom: 0;
 }
 
 .desc-wrapper .sdys h6 {
@@ -131,13 +140,17 @@ body {
     line-height: 40px;
 } */
 
+.desc-wrapper .xj{
+    margin-bottom: 20px;
+}
+
 .desc-wrapper .title {
     width: 111px;
     margin-top: -50px;
 }
 
 .desc-wrapper .title1 {
-    margin: 0 auto 25px;
+    margin: 0 auto 15px;
     line-height: 36px;
     font-size: 1.125em;
     text-align: center;
@@ -154,6 +167,7 @@ body {
     font-size: 1.5em;
     text-align: center;
     font-family: "Microsoft YaHei";
+    font-weight: bold;
 }
 
 .desc-wrapper .title2 span{
@@ -168,9 +182,8 @@ body {
 .desc-wrapper p {
     position: relative;
     text-align: left;
-    font-size: 14px;
     color: #856a51;
-    line-height: 1.7;
+    font:0.95em/1.6em "宋体" !important;
     /* margin:0 0 20px 0; */
     margin:0;
     text-indent: 2em;
@@ -185,11 +198,13 @@ body {
 
 .desc-wrapper h3 {
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     color:#856a51;
     font-weight: bold;
     margin-bottom: 0;
     text-indent: 2em;
+    height: 50px;
+    line-height: 50px;
     /*font-weight: normal;*/
 }
 .desc-card .footer {
