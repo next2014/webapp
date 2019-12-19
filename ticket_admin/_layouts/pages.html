@@ -43,9 +43,11 @@
         {% include script/clglJs_03.html %}
     {% endif %}
     <!-- 预约管理 -->
-    {% if page.layout == "page/yygl/yygl_02" %}
+    {% if page.layout == "page/yygl/yygl_02" or page.layout == "page/yygl/yygl_01" %}
+        {% include script/yyglJs_02.html %}
+    {% endif %}
+    {% if page.layout == "page/yygl/add_yygl" %}
         {% include script/yyglJs_02.html %}
     {% endif %}
 </body>
 </html>
-

@@ -56,6 +56,26 @@
             ,{field:'ydy', title:'预订员', width:80}
             ]]
         });
+
+        // 预约单创建
+        table.render({
+            elem: '#yygl_add1'
+            ,height: 300
+            ,title: '预约单-创建'
+            ,url: '../../json/table/yygl_add02.json'
+            ,page: true
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {type: 'checkbox', title:'状态', fixed: 'left'}
+            ,{field:'plname', title:'票类名称', width:200}
+            ,{field:'shuliang', title:'数量', width:80}
+            ,{field:'yuanjia', title:'原价', width:100}
+            ,{field:'yhj', title:'优惠价', width:80}
+            ,{field:'xj', title:'小计', width:80}
+            ]]
+        });
     
         //工具栏事件
         table.on('toolbar(test)', function (obj) {
