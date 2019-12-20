@@ -241,12 +241,16 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 
 /*--------------------加载end--------------------*/
 
+ .mb-2{
+    margin-bottom: 10px!important;
+ }
+
 /* 自定义样式 */
 .layui-form-item{
     float: left;
     clear: initial;
     width:100%;
-    margin: 0 0 10px 0;
+    margin-bottom: 0;
 }
 
 .layui-input-block{
@@ -279,6 +283,10 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
    font-size: 18px;
    color:#999999;
 }
+.ticket h3{
+    font-size: 14px;
+    color:#999999;
+ }
 .chaxun{
     padding:3px 5px!important;
     width:200px;
@@ -286,8 +294,13 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 .text_add{
 	padding: 0 5px;
-    /* margin-left: 5px; */
 	height: 28px;
+    width: 150px;
+    border: 1px solid #D5D5D5;
+}
+.text_add1{
+	padding: 0 5px;
+    height: 22px;
     width: 150px;
     border: 1px solid #D5D5D5;
 }
@@ -311,4 +324,40 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 .leftChaXun .text_add{
     width: 130px;
+}
+.layui-table-view{
+    margin-bottom: 0!important;
+}
+
+/* 创建预约 */
+.dataList{
+    margin:10px 5px 0 0;
+    padding:10px 5px;
+    border:1px solid #999999;
+    height:230px;
+}
+
+.dingwei button{
+    width: 30%;
+    height:24px;
+    line-height:22px;
+}
+
+.dingwei input{
+    width:60%;
+    margin-right:5px;
+}
+
+/* 预约单-查看详情 */
+.dingdan_content li{
+    width: 50%;
+    float: left;
+}
+.mx_content{
+    overflow: hidden;
+}
+.mx_content li{
+    width: 25%;
+    float: left;
+
 }

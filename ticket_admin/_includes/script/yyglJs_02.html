@@ -1,9 +1,8 @@
 <script>
- layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+ layui.use(['laydate','layer', 'form', 'table'], function(){
         var laydate = layui.laydate
         ,layer =layui.layer
         ,from = layui.form
-        ,element = layui.element
         ,table = layui.table;
         
         // 开始时间 star
@@ -22,11 +21,25 @@
                 type: 2,
                 title: '预约单-创建',
                 maxmin: true,
-                shadeClose: false,
+                shadeClose: true,
                 area: ['900px', '600px'],
                 content: 'add_yygl.html',
                 // content: $('#dingdan_content'),
                 btn: ['保存', '取消']
+            });
+        });
+
+        // 预约单查看详情
+        $('#piaolei_add1').on('click', function () {
+            layer.open({
+                type: 2,
+                title: '预约单-查看详情',
+                maxmin: true,
+                shadeClose: true,
+                area: ['900px', '600px'],
+                content: 'content_yygl.html',
+                // content: $('#dingdan_content'),
+                // btn: ['保存', '取消']
             });
         });
         
@@ -54,16 +67,17 @@
             ,{field:'qcrq', title:'创建日期', width:120}
             ,{field:'fkfs', title:'付款方式', width:100}
             ,{field:'ydy', title:'预订员', width:80}
+            // ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:100}
             ]]
         });
 
         // 预约单创建
         table.render({
             elem: '#yygl_add1'
-            ,height: 300
+            ,height: 245
             ,title: '预约单-创建'
             ,url: '../../json/table/yygl_add02.json'
-            ,page: true
+            ,page: false
             ,autoSort: false
             ,toolbar: false
             // ,toolbar: '#toolbarDemo'
@@ -76,25 +90,61 @@
             ,{field:'xj', title:'小计', width:80}
             ]]
         });
+
+        // 订单跟踪信息
+        table.render({
+            elem: '#yygl_ddgzxx'
+            ,height: 200
+            ,title: '订单跟踪信息'
+            ,url: '../../json/table/yygl_ddgzxx.json'
+            ,page: false
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {field:'cztime', title:'操作时间', width:150}
+            ,{field:'plname', title:'处理信息', width:150}
+            ,{field:'shuliang', title:'操作人', width:150}
+            ]]
+        });
+
+        // 订单明细
+        table.render({
+            elem: '#yygl_ddmx'
+            ,height: 200
+            ,title: '订单明细'
+            ,url: '../../json/table/yygl_ddmx.json'
+            ,page: false
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {field:'mpname', title:'门票名称', width:200}
+            ,{field:'yuanjia', title:'原价', width:100}
+            ,{field:'ssj', title:'实售价', width:80}
+            ,{field:'shuliang', title:'数量', width:80}
+            ,{field:'xj', title:'小计', width:80}
+            ]]
+        });
     
         //工具栏事件
         table.on('toolbar(test)', function (obj) {
         var checkStatus = table.checkStatus(obj.config.id);
-        switch (obj.event) {
-            case 'add':
-            layer.msg('添加');
-            break;
-            case 'edit':
-            layer.msg('编辑');
-            break;
-            case 'del':
-            layer.msg('删除');
-            break;
-            case 'lf_zhengjia':
-            var data = checkStatus.data;
-            layer.alert(JSON.stringify(data));
-            break;
-        };
+            switch (obj.event) {
+                case 'add':
+                layer.msg('添加');
+                break;
+                case 'edit':
+                layer.msg('编辑');
+                break;
+                case 'del':
+                layer.msg('删除');
+                break;
+                case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
         });
     
         //监听单元格编辑
