@@ -349,15 +349,121 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 
 /* 预约单-查看详情 */
+.dingdan_content{
+    border:1px solid #dddddd;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding:5px;
+}
+.dingdan_content strong{
+    color:#FFB42B;
+}
+.dingdan_content li{
+    line-height: 28px;
+}
 .dingdan_content li{
     width: 50%;
     float: left;
 }
+.dingdan_list{
+    background-color: #ffffff;
+    border:1px solid #dddddd;
+    padding:5px;
+    margin-bottom: 5px;
+}
+.dingdan_list h2{
+    font-size: 16px;
+    color: #999999;
+}
 .mx_content{
+    border:1px solid #dddddd;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding:5px;
+}
+.mx_content h2{
+    font-size: 16px;
+    color: #999999;
+}
+.mx_content ul{
     overflow: hidden;
 }
 .mx_content li{
     width: 25%;
     float: left;
+    line-height: 28px;
+}
+.mx_content .layui-table-view{
+    margin: 0!important;
+}
 
+/* 散客票售票 */
+.xpck{
+    display: flex;
+    overflow: hidden;
+    width:85%;
+    padding:10px;
+    background-color: #ffffff;
+}
+.pljs{
+    width:15%;
+    padding:10px;
+    background-color: #eeeeee;
+    border:1px solid #eeeeee; 
+}
+
+.fr {
+    float: right;
+}
+.Choice {
+    margin-right: 0.5rem;
+}
+.Choice .current {
+    border: 1px solid #3fbbef;
+    background: #3fbbef;
+    color: #fff;
+}
+.Choice button {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    text-align: center;
+    list-style: none;
+    border: 0;
+    font-size: .6rem;
+    border: 1px solid #3fbbef;
+    border-radius: 4px;
+    background: #fff;
+    color: #3fbbef;
+    cursor: pointer;
+}
+.Choice input {
+    width: 36px;
+    height: 22px;
+    text-align: center;
+    list-style: none;
+    font-size: 0.6rem;
+    border: 1px solid #dedede;
+    color: #00c3ff;
+    margin: 0 0.1rem;
+    border-radius: 0.16rem;
+}
+.xpck_left_group{
+    padding:10px 5px;
+    border-bottom:1px solid #dddddd;
+}
+.xpck_lg_top{
+    display: flex;justify-content:space-between;padding-bottom:10px;
+}
+.xpck_lg_down{
+    display: flex;
+}
+.xpck_lg_down .layui-input-block{
+    margin-left: 0;
+    width: 100px;
+}
+
+.xpck_left_group .title{
+    font-size: 16px;
 }
