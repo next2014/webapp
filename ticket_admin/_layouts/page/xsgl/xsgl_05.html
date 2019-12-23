@@ -1,13 +1,31 @@
 ---
-layout: default
-title: 销售管理
+layout: pages1
+title: 销售管理-零售
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                零售
-            </div>
-        </div>
+<!-- 零售 -->
+<div class="page-content" style="padding:10px;">
+    <div class="dingdan_content">
+      <h2>商户收款</h2>
+      <div class="layui-input-block" style="margin-left:0;padding:10px 0">
+          <div style="display: flex;">
+            <input type="text" class="text_add" placeholder="请输入券码进行查询" />
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
+          </div>
+          <div style="display: flex;align-items: center;margin-left:10px">
+            <label>充值金额:</label>
+            <input type="text" class="text_add" value="0" style="margin-left:10px"/>
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">充值</button>
+          </div>
+      </div>
+      <ul>
+        <li><span>券名:</span>BK191220000011</li>
+        <li><span>券码:</span>已出票</li>
+        <li><span>有效期:</span>210元</li>
+        <li><span>充值总金额:</span>210元</li>
+        <li><span>余额:</span>38元</li>
+      </ul>
+    </div>
+    <div class="dingdan_list">
+       <table class="layui-hide" id="xsgl_02" lay-filter="test"></table>
     </div>
 </div>

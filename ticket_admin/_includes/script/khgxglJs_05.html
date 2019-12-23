@@ -15,41 +15,41 @@
               elem: '#leaveStar'
             });
 
-          // 票类新增
+          // 次卡VIP管理
           $('#piaolei_add').on('click', function () {
               layer.open({
                   type: 2,
-                  title: '票类新增',
+                  title: '次卡VIP管理',
                   maxmin: true,
                   shadeClose: true,
-                  area: ['800px', '600px'],
-                  content: 'add_jbxx1.html',
+                  area: ['500px', '400px'],
+                  content: 'add_jbxx4.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
               });
           });
-
-          // 票类管理
+          
+          // 次卡VIP管理
           table.render({
-              elem: '#xsgl_01'
-              ,height: 700
-              ,title: '票类管理'
-              ,url: '../../json/table/xsgl_01.json'
+              elem: '#khgxgl_05'
+              ,height: 525
+              ,title: '次卡VIP管理'
+              ,url: '../../json/table/khgxgl_05.json'
               ,page: true
               ,autoSort: false
               ,toolbar: false
               // ,toolbar: '#toolbarDemo'
               ,cols: [[
-                {field:'mptm', title:'门票条码', width:150}
-                ,{field:'mpmc', title:'门票名称', width:150}
-                ,{field:'mplx', title:'门票类型',  width:100}
-                ,{field:'ydj', title:'原单价',  width:100}
-                ,{field:'ssj', title:'实售价',  width:100}
-                ,{field:'ykzjh', title:'游客证件号',  width:100}
-                ,{field:'zjbz', title:'证件备注',  width:100}
-                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+                {field:'hykh', title:'会员卡号', width:220}
+                ,{field:'hylx', title:'会员姓名', width:120}
+                ,{field:'rskcs', title:'日刷卡次数', width:100}
+                ,{field:'lxdh', title:'联系电话', width:150}
+                ,{field:'cgfw', title:'场馆范围', width:200}
+                ,{field:'hyyxq', title:'会员有效期', width:180}
+                ,{field:'latetime', title:'最后操作时间', width:150}
+                // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:180}
               ]]
-            });
+          });
       
           //工具栏事件
           table.on('toolbar(test)', function (obj) {
@@ -92,52 +92,23 @@
                 //页面层-自定义
                 layer.open({
                   type: 2,
-                  title: '修改票类信息',
-                  area: ['800px', '600px'],
-                  // content: $('#jbxx1_edit'),
-                  content: 'jbxx_edit1.html',
+                  title: '修改景区信息',
+                  area: ['500px', '400px'],
+                  // content: $('#jbxx4_edit'),
+                  content: 'jbxx_edit4.html',
                   btn: ['提交', '取消']
                 });
             }
           });
                             
-          // $('i').on('click', function () {
-          //     var type = $(this).data('type');
-          //     active[type] ? active[type].call(this) : '';
-          // });
-          // $('.layui-btn').on('click', function () {
-          //     var type = $(this).data('type');
-          //     active[type] ? active[type].call(this) : '';
-          // });
+        //   $('i').on('click', function () {
+        //       var type = $(this).data('type');
+        //       active[type] ? active[type].call(this) : '';
+        //   });
+        //   $('.layui-btn').on('click', function () {
+        //       var type = $(this).data('type');
+        //       active[type] ? active[type].call(this) : '';
+        //   });
       
       });
-</script>
-<script>
-$('#reduce').click(function () {
-    var k = parseInt($('#Qty').val());
-    if (k > 1) {
-        $('#Qty').val(k - 1);
-        k = k - 1;
-    }
-    if (k <= 1) {
-        $('#reduce').attr('class', '');
-    }
-    if (k < 50) {
-        $('#add').attr('class', 'current');
-    }
-})
-$('#add').click(function () {
-    var k = parseInt($('#Qty').val());
-    if (k < 50)
-        $('#Qty').val(k + 1);
-    k = k + 1;
-    //else
-    //    alert('每单限购50张，超出部分请另外下单！');
-    if (k > 1) {
-        $('#reduce').attr('class', 'current');
-    }
-    if (k >= 50) {
-        $('#add').attr('class', '');
-    }
-})
 </script>

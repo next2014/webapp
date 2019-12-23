@@ -49,9 +49,21 @@
     {% if page.layout == "page/yygl/add_yygl" or page.layout == "page/yygl/content_yygl" %}
         {% include script/yyglJs_02.html %}
     {% endif %}
-    <!-- 售票管理 -->
-    {% if page.layout == "page/xsgl/xsgl_01" %}
-        {% include script/xsglJs_01.html %}
+    <!-- 客户关系管理 -->
+    {% if page.layout == "page/khgxgl/khgxgl_01" %}
+        {% include script/khgxglJs_01.html %}
+    {% endif %}
+    {% if page.layout == "page/khgxgl/khgxgl_02" %}
+        {% include script/khgxglJs_02.html %}
+    {% endif %}
+    {% if page.layout == "page/khgxgl/khgxgl_03" %}
+        {% include script/khgxglJs_03.html %}
+    {% endif %}
+    {% if page.layout == "page/khgxgl/khgxgl_04" %}
+        {% include script/khgxglJs_04.html %}
+    {% endif %}
+    {% if page.layout == "page/khgxgl/khgxgl_05" %}
+        {% include script/khgxglJs_05.html %}
     {% endif %}
 </body>
 </html>

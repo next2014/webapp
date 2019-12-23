@@ -1,13 +1,39 @@
 ---
-layout: detault
-title: 客户关系管理
+layout: pages
+title: 客户关系管理-团体管理
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                团体管理
+<!-- 团体管理 -->
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <div data-options="region:'center',border:false" style="width:100%;padding:10px;background-color: #eeeeee;">
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <div class="layui-btn-group">
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i>新增</button>
+              <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i>修改</button>
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</button>
+            </div>
+            <div class="layui-input-block" style="margin-left:10px;">
+                <label>客户类型</label>
+                <select lay-filter="aihao" style="width:100px; margin-left:10px;">
+                    <option value="0">全部</option>
+                    <option value="1">学校</option>
+                    <option value="2">企业</option>
+                    <option value="3">机关团体</option>
+                    <option value="4">媒体</option>
+                    <option value="5">医院</option>
+                    <option value="6">旅行社</option>
+                </select>
+                <input type="text" class="layui-form-label chaxun" placeholder="请输入客户编号或者客户名称进行查询" style="width:250px;margin-left:10px;"/>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">查询</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">导出</button> 
             </div>
         </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="khgxgl_01" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">设置优惠</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">查看</a>
+            </script>
+        </div>
+
     </div>
 </div>

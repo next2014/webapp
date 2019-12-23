@@ -271,6 +271,10 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     border: 1px solid #D5D5D5;
 }
 
+.layui-table-cell a{
+    text-decoration: none;
+}
+
 .layui-title{
     width: 110px!important;
     padding:0!important;
@@ -398,25 +402,22 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 
 /* 散客票售票 */
-.xpck{
+.ticket_right{
     display: flex;
     overflow: hidden;
-    width:85%;
+    width:87%;
     padding:10px;
     background-color: #ffffff;
 }
-.pljs{
-    width:15%;
+.ticket_left{
+    width:12%;
     padding:10px;
     background-color: #eeeeee;
     border:1px solid #eeeeee; 
 }
-
-.fr {
-    float: right;
-}
 .Choice {
     margin-right: 0.5rem;
+    float: right;
 }
 .Choice .current {
     border: 1px solid #3fbbef;
@@ -448,10 +449,19 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     color: #00c3ff;
     margin: 0 0.1rem;
     border-radius: 0.16rem;
+    float:left;
+}
+.xpck_left{
+    width:24.5%;
+    border: 1px solid #dddddd;
+    margin-right:0.5%;
 }
 .xpck_left_group{
     padding:10px 5px;
     border-bottom:1px solid #dddddd;
+}
+.xpck_right{
+    width: 75%;
 }
 .xpck_lg_top{
     display: flex;justify-content:space-between;padding-bottom:10px;
@@ -466,4 +476,17 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 
 .xpck_left_group .title{
     font-size: 16px;
+}
+
+.xpck_right .layui-table-view{
+  margin-top: 0!important;
+}
+
+/* 销售管理 */
+.dingdan_list .layui-table-view{
+   margin-top: 0!important;
+}
+.dingdan_content h2{
+   font-size: 18px;
+   color: #338ED1;
 }

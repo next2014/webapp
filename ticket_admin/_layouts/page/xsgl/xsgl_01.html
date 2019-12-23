@@ -1,11 +1,11 @@
 ---
-layout: pages
+layout: pages1
 title: 销售管理-散客销售票
 ---
 <!-- 散客销售票 -->
 <div class="easyui-layout ticket" style="width:100%;height:950px;">
      <!-- 票类检索 -->
-    <div class="pljs" data-options="region:'west',border:false">
+    <div class="pljs ticket_left" data-options="region:'west',border:false">
         <h2>检索</h2>
         <!-- <ul class="easyui-tree" data-options="url:'../../json/table/tree_data.json',method:'get',animate:true,dnd:true"></ul> -->
         <ul id="tt" class="easyui-tree">
@@ -48,16 +48,15 @@ title: 销售管理-散客销售票
     </div>
     
     <!-- 售票窗口 -->
-    <div class="xpck" data-options="region:'center',border:false">
-        <div class="xpck_left" style="width:24.5%;border: 1px solid #dddddd;margin-right:0.5%;">
-
-             <div class="xpck_left_group">
+    <div class="xpck ticket_right" data-options="region:'center',border:false">
+        <div class="xpck_left">
+            <div class="xpck_left_group">
                  <div class="xpck_lg_top">
                     <label class="title">海洋世界(成人)</label>
                     <!-- 增加数量 -->
-                    <div class="fr Choice">
+                    <div class="Choice">
                       <button class="" type="button" id="reduce" style="float:left;">-</button>
-                      <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                      <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1">
                       <button class="current" type="button" id="add" style="float:left;">+</button>
                     </div>
                  </div>
@@ -71,11 +70,10 @@ title: 销售管理-散客销售票
                           </select>
                       </div>
                       <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                      <button class="layui-btn layui-btn-sm layui-btn-primary" type="button">选择</button>
+                      <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
                  </div>
-             </div>
-
-             <div class="xpck_left_group">
+            </div>
+            <div class="xpck_left_group">
                 <div class="xpck_lg_top">
                    <label class="title">海洋世界(成人)</label>
                    <!-- 增加数量 -->
@@ -95,10 +93,9 @@ title: 销售管理-散客销售票
                       </select>
                      </div>
                      <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                     <button class="layui-btn layui-btn-sm layui-btn-primary" type="button">选择</button>
+                     <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
                 </div>
             </div>
-
             <div class="xpck_left_group">
                 <div class="xpck_lg_top">
                    <label class="title">海洋世界(成人)</label>
@@ -119,19 +116,18 @@ title: 销售管理-散客销售票
                         </select>
                     </div>
                     <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                    <button class="layui-btn layui-btn-sm layui-btn-primary" type="button">选择</button>
+                    <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
                </div>
             </div>
-
         </div>
-        <div class="xpck_right" style="width: 75%;">
-            <div class="allBtn" style="display: flex;margin:0 0 10px 0;">
+        <div class="xpck_right">
+            <!-- <div class="allBtn" style="display: flex;margin:0 0 10px 0;margin-bottom:10px">
                 <div class="layui-btn-group">
                   <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 新增</button>
-                  <!-- <script type="text/html" id="barDemo">
+                  <script type="text/html" id="barDemo">
                     <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i> 修改</button>
                     <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i> 删除</button>
-                  </script> -->
+                  </script>
                   <button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe666;</i> 刷新</button>
                 </div>
                 <div style="margin-left: 10px;">
@@ -139,7 +135,7 @@ title: 销售管理-散客销售票
                     <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
                     <input type="checkbox" name="" title="隐藏停售票类" lay-skin="primary" checked>隐藏停售票类
                 </div>
-            </div>
+            </div> -->
             <div style="background-color: #ffffff;">
                 <table class="layui-hide" id="xsgl_01" lay-filter="test"></table>
                 <script type="text/html" id="barDemo">
@@ -148,6 +144,5 @@ title: 销售管理-散客销售票
                 </script>
             </div>  
         </div>
-
     </div>
 </div>
