@@ -7,14 +7,21 @@ title: 销售管理-零售
     <div class="dingdan_content">
       <h2>商户收款</h2>
       <div class="layui-input-block" style="margin-left:0;padding:10px 0">
-          <div style="display: flex;">
-            <input type="text" class="text_add" placeholder="请输入券码进行查询" />
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
+          <div>
+            <label>商户:</label>
+            <select name="city" style="margin-left:10px">
+              <option value="1">欧美城</option>
+              <option value="2">海洋馆</option>
+              <option value="3">收银部</option>
+              <option value="4">财务部</option>
+              <option value="5">运营部</option>
+            </select>
           </div>
           <div style="display: flex;align-items: center;margin-left:10px">
-            <label>充值金额:</label>
+            <label>金额:</label>
             <input type="text" class="text_add" value="0" style="margin-left:10px"/>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">充值</button>
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">新增</button>
+            <strong style="margin-left:10px">总金额:￥0</strong>
           </div>
       </div>
       <ul>
@@ -26,6 +33,10 @@ title: 销售管理-零售
       </ul>
     </div>
     <div class="dingdan_list">
-       <table class="layui-hide" id="xsgl_02" lay-filter="test"></table>
+       <table class="layui-hide" id="xsgl_05" lay-filter="test"></table>
+       <script type="text/html" id="barDemo">
+          <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+          <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+      </script>
     </div>
 </div>

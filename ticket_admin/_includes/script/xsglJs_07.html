@@ -1,0 +1,114 @@
+<script>
+layui.use(['laydate','layer', 'form', 'table'], function(){
+      var laydate = layui.laydate
+      ,layer =layui.layer
+      ,from = layui.form
+      ,table = layui.table;
+      
+        // 开始时间 star
+        laydate.render({
+          elem: '#CheckInStar'
+        });
+
+        // 结束时间 star
+        laydate.render({
+          elem: '#leaveStar'
+        });
+
+      // 门票改期
+      $('#piaolei_add').on('click', function () {
+          layer.open({
+              type: 2,
+              title: '门票改期',
+              maxmin: true,
+              shadeClose: true,
+              area: ['800px', '600px'],
+              content: 'add_jbxx1.html',
+              // content: $('#dingdan_content'),
+              btn: ['保存', '取消']
+          });
+      });
+
+      // 门票改期
+      table.render({
+          elem: '#xsgl_07'
+          ,height: 700
+          ,title: '门票改期'
+          ,url: '../../json/table/xsgl_07.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'czr', title:'操作人',  width:180}
+            ,{field:'mptm', title:'门票条码', width:150}
+            ,{field:'plbh', title:'票类编号', width:150}
+            ,{field:'plmc', title:'票类名称',  width:180}
+            ,{field:'yqqyxq', title:'延期前有效期',  width:160}
+            ,{field:'yqhyxq', title:'延期后有效期',  width:160}
+            ,{field:'czsj', title:'操作时间',  width:180}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+          ]]
+        });
+  
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'edit':
+            layer.msg('编辑');
+            break;
+          case 'del':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+  
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+          console.log(obj)
+      });
+  
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 2,
+              title: '修改票类信息',
+              area: ['800px', '600px'],
+              // content: $('#jbxx1_edit'),
+              content: 'jbxx_edit1.html',
+              btn: ['提交', '取消']
+            });
+        }
+      });
+                        
+      // $('i').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      // $('.layui-btn').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      
+});
+</script>

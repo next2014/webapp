@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+<link href="../Css/css.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../data/layui.css" />
+<style type="text/css">
+<!--
+#txt {
+	line-height:26px;
+	border:#CCC dotted 1px;
+	background-color: #E8E8E8;
+	height: 26px;
+	padding-top: 2px;
+}
+#txt a{
+	line-height:18px;
+}
+.count{
+	color:#2F7EAE;
+}
+#AspNetPager1 a {
+	border: 1px solid #CCC;
+	padding-right: 6px;
+	padding-left: 6px;
+	color:#000;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#AspNetPager1 a:hover {
+	color:#F00;
+	background-color:#E2E2E2;
+}
+#LinkButton2,#LinkButton4
+{
+float:right;
+margin:0 -2px 0 5px;
+line-height: 24px;
+border: 1px solid #D4D4D4;
+font-family: "微软雅黑";
+font-size: 12px;
+background-color:#E2E2E2;
+text-align:center;
+vertical-align:middle;
+color:#333;
+padding:0 10px;
+}
+#GridView1 td img
+{
+    /*width:15px;
+    padding-right:1px;
+    padding-bottom:2px;*/
+}
+.th-count
+{
+    float:right;font-weight:normal;color:red;line-height:10px;padding-top:5px;
+}
+    #AspNetPager1_input
+    {
+        padding:3px;
+    }
+-->
+</style>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {	
+	$("#checkall").click(function() {
+		$('input[name="checkname[]"]').each(function() {  
+            $(this).attr("checked", true); 
+    	});
+	});
+    $("#delcheckall").click(function() {  
+        $('input[name="checkname[]"]').each(function() {  
+            $(this).attr("checked", false); 
+        });
+    }); 
+});
+</script>
+<link rel="stylesheet" href="../js/combo.select.css" />
+<script type="text/javascript" src="../js/jquery.combo.select.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#ddl_guanqu').comboSelect();
+    $("#Button1").click(function () {
+        if ($("#TextBox6").val() == "") {
+            alert("条/页不能为空！");
+            return false;
+        }
+    })
+})
+</script>
+</head>
+<body style="padding:2px; font-family:'微软雅黑'">
+    <form id="form1" runat="server">
+      <div style="padding:0px 2px 2px 0px;">
+          <div class="combo-select">
+			  <select name="ddl_guanqu" id="ddl_guanqu" class="select" tabindex="-1">
+			  	 <option selected="selected" value>选择馆区</option>
+			  </select>
+		  </div>
+		  <select name="ddl_class" id="ddl_class" class="select">
+		  	 <option value="商品类">商品类</option>
+		  </select>
+		  <input name="TextBox2" type="text" id="TextBox2" class="input" placeholder="选择日期" style="width:73px;">
+		  <span style="padding-right:1px">-</span>
+		  <input name="TextBox4" type="text" id="TextBox4" placeholder="选择日期" style="width:73px;" />
+		  <input name="TextBox1" type="text" id="TextBox1" placeholder="商品编号" style="width:100px;" />
+		  <input name="TextBox5" type="text" id="TextBox5" placeholder="商品名称" style="width:100px;" />
+		  <select name="ddl_author" id="ddl_author" class="select" style="width:90px;">
+			   <option selected="selected" value>选择登记员</option>
+			   <option value="138">邱赤珠</option>
+		  </select>
+		  <input type="submit" name="Button1" id="Button1" value="查 询" class="chaxun" style="width:60px;" />
+		  <a id="LinkButton4" href="javascript:__doPostBack('LinkButton4','')">导出Excel表</a>
+		  <a id="LinkButton2" href="javascript:__doPostBack('LinkButton2','')">增  加</a>
+       </div>
+	   <div>
+		  <table border="1" cellspacing="0" rules="all" id="GridView1" style="width:100%;border-collapse:collapse;">
+			  <tbody>
+			  	<tr class="t1">
+					<th scope="col" style="width:55px;" >所在馆区</th>
+					<th scope="col" style="width:76px;" >所属分类</th>
+					<th scope="col" style="width:80px;" >商品图片</th>
+					<th scope="col" style="width:100px;" >商品编号</th>
+					<th scope="col" >商品名称</th>
+					<th scope="col" >商品规格</th>
+					<th scope="col" style="width:66px;" >商品单价</th>
+					<th scope="col" style="width:66px;" >入库数量</th>
+					<th scope="col" style="width:66px;" >搭赠数量</th>
+					<th scope="col" style="width:66px;" >出库数量</th>
+					<th scope="col" style="width:66px;" >库存数量</th>
+					<th scope="col" style="width:55px;" >登记员</th>
+					<th scope="col" style="width:70px;" >登记时间</th>
+					<!-- <th class="noprint" scope="col" style="width:86px;" >操作</th> -->
+				</tr>
+			  	<tr align="center" class="t2"  onclick="member_edit('1')">
+					<td>四号馆</td>
+					<td>固定资产</td>
+					<td>
+						<img src="../../upload/20190926192314_0789.jpg" name="spic" style="width:60px; height:44px;">
+					</td>
+					<td>191014183707121</td>
+					<td>11</td>
+					<td></td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td align="center">邱赤珠</td>
+					<td>2019-10-14</td>
+					<!-- <td align="right">
+					   <span id="GridView1_Span2_0">
+						   <a id="GridView1_HyperLink2_0" class="link_btn" href="edit.aspx?id=637">编辑</a>
+					   </span>
+					   <a onclick="if (!confirm("确定要删除[　编号：20191014183707121　]吗？")) return false;" id="GridView1_LinkButton1_0" class="link_btn" href="javascript:__doPostBack('GridView1$ctl02$LinkButton1','')">删除</a>
+					</td> -->
+				</tr>
+			  </tbody>
+		  </table> 
+	   </div>
+	    
+      <!-- <div style="margin-top:2px; float:left; display:none" runat="server" id="shenhe">
+		  <a id="checkall" href="javascript:;" class="link_btn">全选</a>
+		  <a id="delcheckall" href="javascript:;" class="link_btn">取消</a>
+	   </div> -->
+    </form>
+	
+</body>
+</html>
+<!-- GridView1数据列表js鼠标效果 -->
+<script type="text/javascript">
+$(function() {
+     for (i=1;i<tbl_tr.length+1;i++) {   
+     tbl_tr[i-1].className = (i%2>0)?"t1":"t2";   
+     }  
+});
+var tbl_tr=document.getElementById("GridView1").getElementsByTagName("tr");
+window.onload=$;  
+for(var i=0;i<tbl_tr.length;i++) {
+     tbl_tr[i].onmouseover=function(){
+     this.tmpClass=this.className;
+     this.className = "t3";
+     };
+     tbl_tr[i].onmouseout=function(){
+     this.className=this.tmpClass;
+     };
+}
+</script>
+<script type="text/javascript" src="../date/layer/layer.js"></script>
+<!-- 日期插件 -->
+<script type="text/javascript" src="../date/laydate.dev.js"></script>
+<script type="text/javascript">
+    laydate({
+        elem: '#TextBox2'
+    });
+    laydate({
+        elem: '#TextBox4'
+    });
+</script>
+<script type="text/javascript">
+	
+	$('#layui-layer-shade1').on('click', function () {
+         layer.closeAll(); 
+     });
+
+	/*商品编辑*/
+	function member_edit(id) {
+		layer.open({
+			type: 2,
+			title: '商品编辑',
+			maxmin: true,
+			shadeClose: true,
+			offset: ['80px', '50px'],
+			area: ['1200px', '500px'],
+			content: 'edit.html',
+			btn: ['提交', '取消'],
+		});
+	}
+	laydate({
+		elem: '#start',
+		event: 'focus'
+	});
+	laydate({
+		elem: '#end',
+		event: 'focus'
+	});
+</script>
