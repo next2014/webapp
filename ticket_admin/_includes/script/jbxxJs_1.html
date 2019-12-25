@@ -1,11 +1,10 @@
 <!-- <link rel="stylesheet" type="text/css" href="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.css" />
 <script src="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.min.js" type="text/javascript" charset="utf-8"></script> -->
 <script>
-    layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+    layui.use(['laydate','layer', 'form', 'table'], function(){
           var laydate = layui.laydate
           ,layer =layui.layer
           ,from = layui.form
-          ,element = layui.element
           ,table = layui.table;
           
             // 开始时间 star
@@ -25,7 +24,7 @@
                   title: '票类新增',
                   maxmin: true,
                   shadeClose: true,
-                  area: ['800px', '600px'],
+                  area: ['800px', '650px'],
                   content: 'add_jbxx1.html',
                   // content: $('#dingdan_content'),
                   btn: ['保存', '取消']
@@ -58,7 +57,7 @@
                 ,{field:'spzt', title:'商品状态',  width:100}
                 ,{field:'zrcs', title:'准入次数',  width:80}
                 ,{field:'pmsm', title:'票面说明',  width:150}
-                ,{field:'px', title:'排序',  width:'15%'}
+                ,{field:'px', title:'排序',  width:80}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
               ]]
             });
