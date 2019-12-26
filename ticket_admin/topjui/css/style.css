@@ -482,7 +482,25 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
   margin-top: 0!important;
 }
 
-/* 销售管理 */
+.xpck_right_btn button{
+    width:80px;
+    margin-left:10px
+}
+
+.xpck_right_btn button:first-child{
+    margin-left:0;
+}
+.xpck_right_btn strong{
+    font-weight: normal;
+}
+.xpck_right_btn label{
+    color: #FFB42B;
+    font-size: 18px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* 售票管理 */
 .dingdan_list .layui-table-view{
    margin-top: 0!important;
 }
@@ -491,8 +509,14 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
    color: #338ED1;
 }
 
+.dingdan_content h3{
+    font-size:14px;
+    color: #666666;
+    margin-bottom: 10px;
+ }
+
 .xpck_left1{
-    width:16%;
+    width:18%;
     border: 1px solid #dddddd;
     margin-right:0.5%;
     padding:10px
@@ -514,7 +538,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 
 .xpck_right1{
-    width:84%;
+    width:82%;
 }
 
 .dingdan_content1{
@@ -539,4 +563,33 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 .ddmx h3{
     font-size:18px;;
+}
+
+.find_smtm{
+    margin-left:0;
+    padding:10px 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.find_smtm button{
+    width:80px;
+    margin-left:10px
+}
+
+.add_xsgl .date{
+    width: 100%!important;
+}
+
+.add_xsgl span{
+    width:70px!important;
+    text-align:right;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.add_xsgl li{
+    margin-bottom: 5px;
+    display: flex;
 }

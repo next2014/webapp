@@ -15,11 +15,11 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           elem: '#leaveStar'
         });
 
-      // 门票改期
+      // 网上购票订单查询
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '门票改期',
+              title: '网上购票订单查询',
               maxmin: true,
               shadeClose: true,
               area: ['500px', '350px'],
@@ -29,25 +29,29 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           });
       });
 
-      // 门票改期
+      // 网上购票订单查询
       table.render({
-          elem: '#xsgl_07'
+          elem: '#xsgl_09'
           ,height: 700
-          ,title: '门票改期'
-          ,url: '../../json/table/xsgl_07.json'
+          ,title: '网上购票订单查询'
+          ,url: '../../json/table/xsgl_09.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false
           // ,toolbar: '#toolbarDemo'
           ,cols: [[
-            {field:'czr', title:'操作人',  width:180}
-            ,{field:'mptm', title:'门票条码', width:150}
-            ,{field:'plbh', title:'票类编号', width:150}
-            ,{field:'plmc', title:'票类名称',  width:180}
-            ,{field:'yqqyxq', title:'延期前有效期',  width:160}
-            ,{field:'yqhyxq', title:'延期后有效期',  width:160}
-            ,{field:'czsj', title:'操作时间',  width:180}
-            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+            {field:'xdrq', title:'下单日期',  width:180}
+            ,{field:'ddh', title:'订单号', width:180}
+            ,{field:'ddlx', title:'订单类型', width:150}
+            ,{field:'dh', title:'电话',  width:150}
+            ,{field:'yzm', title:'验证码',  width:100}
+            ,{field:'je', title:'金额',  width:150}
+            ,{field:'sl', title:'数量',  width:100}
+            ,{field:'zt', title:'状态',  width:100}
+            ,{field:'fkfs', title:'付款方式',  width:150}
+            ,{field:'jypz', title:'交易凭证',  width:150}
+            ,{field:'fkrq', title:'付款日期',  width:150}
+            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
           ]]
         });
   

@@ -15,25 +15,25 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           elem: '#leaveStar'
         });
 
-      // 兑票
+      // 退票处理
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '兑票',
+              title: '退票处理',
               maxmin: true,
               shadeClose: true,
-              area: ['800px', '600px'],
-              content: 'add_jbxx1.html',
+              area: ['515px', '430px'],
+              content: 'add_xsgl6.html',
               // content: $('#dingdan_content'),
-              btn: ['保存', '取消']
+              btn: ['退票', '取消']
           });
       });
 
-      // 兑票
+      // 退票处理
       table.render({
           elem: '#xsgl_06'
           ,height: 700
-          ,title: '兑票'
+          ,title: '退票处理'
           ,url: '../../json/table/xsgl_06.json'
           ,page: true
           ,autoSort: false
