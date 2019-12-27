@@ -50,75 +50,77 @@ title: 销售管理-散客销售票
     <!-- 售票窗口 -->
     <div class="xpck ticket_right" data-options="region:'center',border:false">
         <div class="xpck_left">
-            <div class="xpck_left_group">
-                 <div class="xpck_lg_top">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
+                        <label class="title">海洋世界(成人)</label>
+                        <!-- 增加数量 -->
+                        <div class="Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                        </div>
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
+                            <select name="" lay-filter="aihao" style="margin-right:10px;">
+                                <option value="0">全票</option>
+                                <option value="1">半价票</option>
+                                <option value="2">免费票</option>
+                                <option value="3">自定义折扣</option>
+                            </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
+                    </div>
+                </div>
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
                     <label class="title">海洋世界(成人)</label>
                     <!-- 增加数量 -->
-                    <div class="Choice">
-                      <button class="" type="button" id="reduce" style="float:left;">-</button>
-                      <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1">
-                      <button class="current" type="button" id="add" style="float:left;">+</button>
+                    <div class="fr Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
                     </div>
-                 </div>
-                 <div class="xpck_lg_down">
-                      <div class="layui-input-block">
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
                         <select name="" lay-filter="aihao" style="margin-right:10px;">
                             <option value="0">全票</option>
                             <option value="1">半价票</option>
                             <option value="2">免费票</option>
                             <option value="3">自定义折扣</option>
-                          </select>
-                      </div>
-                      <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                      <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
-                 </div>
-            </div>
-            <div class="xpck_left_group">
-                <div class="xpck_lg_top">
-                   <label class="title">海洋世界(成人)</label>
-                   <!-- 增加数量 -->
-                   <div class="fr Choice">
-                     <button class="" type="button" id="reduce" style="float:left;">-</button>
-                     <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
-                     <button class="current" type="button" id="add" style="float:left;">+</button>
-                   </div>
-                </div>
-                <div class="xpck_lg_down">
-                    <div class="layui-input-block">
-                      <select name="" lay-filter="aihao" style="margin-right:10px;">
-                        <option value="0">全票</option>
-                        <option value="1">半价票</option>
-                        <option value="2">免费票</option>
-                        <option value="3">自定义折扣</option>
-                      </select>
-                     </div>
-                     <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                     <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
-                </div>
-            </div>
-            <div class="xpck_left_group">
-                <div class="xpck_lg_top">
-                   <label class="title">海洋世界(成人)</label>
-                   <!-- 增加数量 -->
-                   <div class="fr Choice">
-                     <button class="" type="button" id="reduce" style="float:left;">-</button>
-                     <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
-                     <button class="current" type="button" id="add" style="float:left;">+</button>
-                   </div>
-                </div>
-                <div class="xpck_lg_down">
-                    <div class="layui-input-block">
-                      <select name="" lay-filter="aihao" style="margin-right:10px;">
-                          <option value="0">全票</option>
-                          <option value="1">半价票</option>
-                          <option value="2">免费票</option>
-                          <option value="3">自定义折扣</option>
                         </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
                     </div>
-                    <input type="text" name="" value="0.00" class="text_add" style="width:100px;margin-right: 10px;">
-                    <button class="layui-btn layui-btn-sm layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
-               </div>
-            </div>
+                </div>
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
+                    <label class="title">海洋世界(成人)</label>
+                    <!-- 增加数量 -->
+                    <div class="fr Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                    </div>
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
+                        <select name="" lay-filter="aihao" style="margin-right:10px;">
+                            <option value="0">全票</option>
+                            <option value="1">半价票</option>
+                            <option value="2">免费票</option>
+                            <option value="3">自定义折扣</option>
+                            </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
+                </div>
+                </div>
+            </form>
         </div>
         <div class="xpck_right">
             <div class="layui-input-block" style="margin-left:0;padding-bottom:10px;">

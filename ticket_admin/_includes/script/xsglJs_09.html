@@ -7,12 +7,12 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       
         // 开始时间 star
         laydate.render({
-          elem: '#CheckInStar'
+          elem: '#ylDate'
         });
 
         // 结束时间 star
         laydate.render({
-          elem: '#leaveStar'
+          elem: '#ylEndDate'
         });
 
       // 网上购票订单查询
@@ -115,4 +115,99 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       // });
       
 });
+</script>
+
+<script>
+  layui.config({
+    base: '../../static/plugins/selectPlus/'
+  }).extend({
+    test: 'selectPlus'
+  }).use(['selectPlus', 'jquery'], function () {
+    var $ = layui.$,
+      selectPlus = layui.selectPlus;
+
+     // 单选
+     selectPlus.render({
+        el: '#test2',
+        data: [{
+          "name": "现金",
+          "id": 1,
+          "text": "现金"
+        }, {
+          "name": "刷卡",
+          "id": 2,
+          "text": "刷卡"
+        }, {
+          "name": "抵扣券",
+          "id": 3,
+          "text": "抵扣券"
+        }, {
+          "name": "混合支付",
+          "id": 4,
+          "text": "混合支付"
+        }, {
+          "name": "预存款",
+          "id": 5,
+          "text": "预存款"
+        }, {
+          "name": "信用额度付款",
+          "id": 6,
+          "text": "信用额度付款"
+        }, {
+          "name": "微信付款",
+          "id": 7,
+          "text": "微信付款"
+        }, {
+          "name": "支付宝付款",
+          "id": 8,
+          "text": "支付宝付款"
+        }, {
+          "name": "银联聚合支付",
+          "id": 9,
+          "text": "银联聚合支付"
+        }],
+        type: "radio",
+        valueName: "text",
+        label: ["name"],
+        values: '微信付款'
+      });
+
+    // 多选
+    var test = selectPlus.render({
+      el: '#test',
+      data: [{
+        "id": 1,
+        "name": "现金"
+      }, {
+        "id": 2,
+        "name": "刷卡"
+      }, {
+        "id": 3,
+        "name": "抵扣券"
+      }, {
+        "id": 4,
+        "name": "混合支付"
+      }, {
+        "id": 5,
+        "name": "预存款"
+      },{
+        "id": 6,
+        "name": "信用额度付款"
+      },{
+        "id": 7,
+        "name": "微信付款"
+      },{
+        "id": 8,
+        "name": "支付宝付款"
+      },{
+        "id": 9,
+        "name": "银联聚合支付"
+      }],
+      valueName: "name",
+      values: ['微信付款', '支付宝付款'],
+      valueSeparator: " , "
+    });
+    var obj = test.getChecked();
+    console.log(obj);
+  })
 </script>
