@@ -311,7 +311,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 .text_add2{
 	padding: 0 5px;
     height: 36px;
-    width: 175px;
+    width: 173px;
     border: 1px solid #D5D5D5;
 }
 
@@ -361,7 +361,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 .dingdan_content{
     border:1px solid #dddddd;
     margin-bottom: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding:5px;
 }
 .dingdan_content strong{
@@ -564,7 +564,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 .dingdan_content1{
     border:1px solid #dddddd;
     margin-bottom: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding:5px;
 }
 

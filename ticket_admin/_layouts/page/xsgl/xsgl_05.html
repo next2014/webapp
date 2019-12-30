@@ -6,10 +6,11 @@ title: 销售管理-零售
 <div class="page-content" style="padding:10px;">
     <div class="dingdan_content">
       <h2>商户收款</h2>
-      <div class="layui-input-block" style="margin-left:0;padding:10px 0">
-          <div>
-            <label>商户:</label>
-            <select name="city" style="margin-left:10px">
+      <form class="layui-form layui-form-pane" action="">
+      <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
+          <label>商户:</label>
+          <div class="layui-input-block" style="margin:0 10px;">
+            <select name="city">
               <option value="1">欧美城</option>
               <option value="2">海洋馆</option>
               <option value="3">收银部</option>
@@ -17,13 +18,11 @@ title: 销售管理-零售
               <option value="5">运营部</option>
             </select>
           </div>
-          <div style="display: flex;align-items: center;margin-left:10px">
-            <label>金额:</label>
-            <input type="text" class="text_add" value="0" style="margin-left:10px"/>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">新增</button>
-            <strong style="margin-left:10px">总金额:￥0</strong>
-          </div>
-      </div>
+          <label>金额:</label>
+          <input type="text" class="text_add" value="0" style="margin-left:10px"/>
+          <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">新增</button>
+          <strong style="margin-left:10px">总金额:￥0</strong>
+      </div></form>
       <ul>
         <li><span>券名:</span>BK191220000011</li>
         <li><span>券码:</span>已出票</li>
@@ -31,6 +30,7 @@ title: 销售管理-零售
         <li><span>充值总金额:</span>210元</li>
         <li><span>余额:</span>38元</li>
       </ul>
+      <div style="clear: both;"></div>
     </div>
     <div class="dingdan_list">
        <table class="layui-hide" id="xsgl_05" lay-filter="test"></table>
