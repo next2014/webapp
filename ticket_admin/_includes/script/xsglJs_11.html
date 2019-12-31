@@ -31,26 +31,45 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
 
       // 网上购票订单查询
       table.render({
-          elem: '#xsgl_09'
-          ,height: 700
+          elem: '#xsgl_11'
+          ,height: 350
           ,title: '网上购票订单查询'
-          ,url: '../../json/table/xsgl_09.json'
+          ,url: '../../json/table/xsgl_11.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false
           // ,toolbar: '#toolbarDemo'
           ,cols: [[
-            {field:'xdrq', title:'下单日期',  width:180}
-            ,{field:'ddh', title:'订单号', width:180}
-            ,{field:'ddlx', title:'订单类型', width:150}
-            ,{field:'dh', title:'电话',  width:150}
-            ,{field:'yzm', title:'验证码',  width:100}
-            ,{field:'je', title:'金额',  width:100}
-            ,{field:'sl', title:'数量',  width:100}
-            ,{field:'zt', title:'状态',  width:100}
-            ,{field:'fkfs', title:'付款方式',  width:150}
-            ,{field:'jypz', title:'交易凭证',  width:150}
-            ,{field:'fkrq', title:'付款日期',  width:150}
+            {field:'spjbh', title:'售票机编号',  width:180}
+            ,{field:'gpsj', title:'购票时间', width:180}
+            ,{field:'jydh', title:'交易单号', width:150}
+            ,{field:'zffs', title:'支付方式',  width:100}
+            ,{field:'zfusj', title:'支付时间',  width:180}
+            ,{field:'gpsl', title:'购票数量',  width:100}
+            ,{field:'zje', title:'总金额',  width:100}
+            ,{field:'bz', title:'备注',  width:100}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+          ]]
+        });
+
+      // 网上购票订单明细
+      table.render({
+          elem: '#xsgl_mx_11'
+          ,height: 350
+          ,title: '网上购票订单明细'
+          ,url: '../../json/table/xsgl_mx_11.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'plbh', title:'票类编号',  width:180}
+            ,{field:'plmc', title:'票类名称', width:180}
+            ,{field:'tm', title:'条码', width:150}
+            ,{field:'price', title:'价格',  width:100}
+            ,{field:'dyzt', title:'打印状态',  width:180}
+            ,{field:'dysj', title:'打印时间',  width:100}
+            ,{field:'bz', title:'备注',  width:100}
             ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
           ]]
         });

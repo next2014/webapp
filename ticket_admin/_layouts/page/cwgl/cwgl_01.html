@@ -1,13 +1,45 @@
 ---
-layout: default
-title: 财务管理
+layout: pages2
+title: 财务管理-客户账户管理
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                    客户账户管理
+<!--客户账户管理  -->
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <!-- <div data-options="region:'west',border:false" class="leftChaXun" style="width:15%;border:1px solid #dddddd;">
+    </div> -->
+    <div class="xpck ticket_right" data-options="region:'center',border:false">
+      <div class="xpck_left1" style="width:16%">
+        <form class="layui-form layui-form-pane" action="">
+          <h2>选择客户</h2>
+          <div style="display: flex;">
+              <input type="text" class="text_add2" placeholder="请输入客户名称和进行查询" style="margin-right:10px;">
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="height:38px;">搜索</button>
+          </div>
+        </form>
+      </div>
+      <div class="xpck_right1" style="width:84%;">
+         <div class="dingdan_content1">
+            <h2>客户详情</h2>
+            <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">充值</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="margin-left:10px">导出</button>
             </div>
-        </div>
-    </div>
+            <ul>
+                <li><span>客户编号:</span>10056</li>
+                <li><span>联系人:</span>许少峰</li>
+                <li><span>客户名称:</span>惠州美城互动</li>
+                <li><span>联系电话:</span>13400000000</li>
+                <li><span>客户类型:</span>媒体</li>
+                <li><span>预存余额:</span>￥0.00</li>
+            </ul>
+            <div style="clear: both;"></div>
+            <div class="layui-input-block" style="padding:10px 0 0 0;display: flex;align-items: center;margin-left:0;">
+                <label style="margin-left:10px">日期</label>
+                <input type="text" class="text_add" id="ylDate" style="margin-left:10px"/>
+                <label style="margin-left:10px">至</label>
+                <input type="text" class="text_add" id="ylEndDate" style="margin-left:10px"/>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="margin-left:10px">过滤</button>
+            </div>
+            <table class="layui-hide" id="cwgl_01" lay-filter="test"></table>
+         </div>
+      </div>
 </div>

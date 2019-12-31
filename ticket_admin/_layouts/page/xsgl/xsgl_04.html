@@ -24,14 +24,16 @@ title: 销售管理-团体票售票
       <div class="xpck_right1">
         <div class="dingdan_content1">
           <form class="layui-form layui-form-pane" action="">
-            <label>打印方式:</label>
-            <div class="layui-input-block" style="margin-left: 0;">
-              <select name="city" style="height:30px;">
-                <option value="1">聚合打印</option>
-                <option value="2">逐个打印</option>
-              </select>
+            <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
+              <label>打印方式:</label>
+              <div class="layui-input-block" style="margin-left:10px;">
+                <select name="city">
+                  <option value="1">聚合打印</option>
+                  <option value="2">逐个打印</option>
+                </select>
+              </div>
+              <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">结算[F5]</button>
             </div>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">结算[F5]</button>
           </form>
           <div style="clear: both;"></div>
         </div>
