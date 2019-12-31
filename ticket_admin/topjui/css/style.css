@@ -613,3 +613,15 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     margin-bottom: 5px;
     display: flex;
 }
+
+
+/* 选择客户 */
+.xz_kehu{
+  padding:5px;
+}
+.xz_kehu li{
+   font-size:14px;
+}
+.xz_kehu li:last-child{
+  margin-bottom: 0;
+}
