@@ -188,3 +188,41 @@
     
     });
 </script>
+<script>
+    layui.config({
+      base: '../../static/plugins/selectPlus/'
+    }).extend({
+      test: 'selectPlus'
+    }).use(['selectPlus', 'jquery'], function () {
+      var $ = layui.$,
+        selectPlus = layui.selectPlus;
+      
+      // 是否需要导览
+      var test = selectPlus.render({
+        el: '#daolan',
+        url: '../../json/selectplus/daolan.json',
+        parseData: function (res) {
+          return res.data;
+        },
+        valueName: "name",
+        values: ['', ''],
+        valueSeparator: " , "
+      });
+
+      // 订单状态
+      var test1 = selectPlus.render({
+        el: '#ddzt',
+        url: '../../json/selectplus/ddzt.json',
+        parseData: function (res) {
+            return res.data;
+        },
+        valueName: "name",
+        values: ['', ''],
+        valueSeparator: " , "
+      });
+  
+      var obj = test.getChecked();
+      var obj1 = test1.getChecked();
+      console.log(obj);
+    })
+  </script>

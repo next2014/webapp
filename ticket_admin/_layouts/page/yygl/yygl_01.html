@@ -4,44 +4,34 @@ title: 预约管理
 ---
 <div class="easyui-layout ticket" style="width:100%;height:950px;">
     <div data-options="region:'west',border:false" class="leftChaXun" style="width:18%;padding:10px">
+       <form class="layui-form layui-form-pane" action="">
          <h2>按以下条件进行查询</h2>
          <ul>
-            <li><span>下单日期:</span><input type="text" class="text_add" id="xdDate"></li>
-            <li><span>至:</span><input type="text" class="text_add" id="xdEndDate"></li>
-            <li><span>游览日期:</span><input type="text" class="text_add" id="ylDate"></li>
-            <li><span>至:</span><input type="text" class="text_add" id="ylEndDate"></li>
-            <li><span>订单状态:</span>
-             <div class="layui-input-block" style="width: 142px;margin-left:100px;">
-                <select lay-filter="aihao">
-                    <option value="1">未付款</option>
-                    <option value="2">已支付</option>
-                    <option value="3">已出票</option>
-                    <option value="4">已取消</option>
-                    <option value="5">已退票</option>
-                    <option value="6">已销账</option>
-                </select>
-              </div>
+            <li><label>下单日期:</label><input type="text" class="text_add4" id="xdDate"></li>
+            <li><label>至:</label><input type="text" class="text_add4" id="xdEndDate"></li>
+            <li><label>游览日期:</label><input type="text" class="text_add4" id="ylDate"></li>
+            <li><label>至:</label><input type="text" class="text_add4" id="ylEndDate"></li>
+            <li>
+              <label>订单状态:</label>
+              <div class="layui-input-block" id="ddzt" lay-filter="ddzt" style="margin-left:0;"></div>
             </li>
-            <li><span>是否需要导览:</span>
-              <div class="layui-input-block" style="width: 142px;margin-left:100px;">
-                <select lay-filter="aihao">
-                  <option value="1">需要</option>
-                  <option value="2">不需要</option>
-                </select>
-              </div>
+            <li>
+              <label>是否需要导览:</label>
+              <div class="layui-input-block" id="daolan" lay-filter="daolan" style="margin-left:0;"></div>
             </li>
-            <li><span>团体名称:</span><input type="text" class="text_add"></li>
-            <li><span>导游电话:</span><input type="text" class="text_add"></li>
+            <li><label>团体名称:</label><input type="text" class="text_add4"></li>
+            <li><label>导游电话:</label><input type="text" class="text_add4"></li>
             <li><hr></li>
-            <li><span>订单号:</span><input type="text" class="text_add"></li>
-            <li style="text-align: center;display: flex;justify-content: center;align-items: center; padding-top:10px;">
-                <input type="checkbox" lay-skin="primary" id="yyd" style="margin-right:5px"> <label for="yyd">处理未结挂账预约单</label>
+            <li><label>订单号:</label><input type="text" class="text_add4"></li>
+            <li style="text-align: center;display: flex;justify-content: center;align-items: center;">
+                <input type="checkbox" lay-skin="primary" id="yyd"> <label for="yyd" style="text-align:left;width:50%;">处理未结挂账预约单</label>
             </li>
             <li style="text-align: center;">
-                <button type="button" class="layui-btn layui-btn-sm">重置</button> <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查询</button>
+                <button type="button" class="layui-btn">重置</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
             </li>
         </ul>
-    </div>
+       </form>
+      </div>
     <div data-options="region:'center',border:false" style="width:82%;padding:10px;background-color: #eeeeee;">
         <h2>订单信息</h2>
         <div class="allBtn" style="display: flex;margin:10px 0;">

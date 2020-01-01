@@ -5,53 +5,60 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       ,from = layui.form
       ,table = layui.table;
       
-        // 开始时间 star
+        // 售票日期 star
+        laydate.render({
+          elem: '#xdDate'
+        });
+
+        // 至 star
+        laydate.render({
+          elem: '#xdEndDate'
+        });
+
+        // 预约参观日期 star
         laydate.render({
           elem: '#ylDate'
         });
 
-        // 结束时间 star
+        // 至 star
         laydate.render({
           elem: '#ylEndDate'
         });
 
-      // 网上购票订单查询
+      // 售票员缴款查询
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '网上购票订单查询',
+              title: '售票员缴款查询',
               maxmin: true,
               shadeClose: true,
-              area: ['500px', '350px'],
-              content: 'add_xsgl7.html',
+              area: ['800px', '600px'],
+              content: 'add_jbxx1.html',
               // content: $('#dingdan_content'),
-              btn: ['确定', '取消']
+              btn: ['保存', '取消']
           });
       });
 
-      // 网上购票订单查询
+      // 售票员缴款查询
       table.render({
-          elem: '#xsgl_09'
+          elem: '#bbzx_01'
           ,height: 700
-          ,title: '网上购票订单查询'
-          ,url: '../../json/table/xsgl_09.json'
+          ,title: '售票员缴款查询'
+          ,url: '../../json/table/bbzx_01.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false
           // ,toolbar: '#toolbarDemo'
           ,cols: [[
-            {field:'xdrq', title:'下单日期',  width:180}
-            ,{field:'ddh', title:'订单号', width:180}
-            ,{field:'ddlx', title:'订单类型', width:150}
-            ,{field:'dh', title:'电话',  width:150}
-            ,{field:'yzm', title:'验证码',  width:100}
-            ,{field:'je', title:'金额',  width:100}
-            ,{field:'sl', title:'数量',  width:100}
-            ,{field:'zt', title:'状态',  width:100}
+            {field:'sprq', title:'售票日期', width:150}
+            ,{field:'yycgrq', title:'预约参观日期',  width:150}
+            ,{field:'tpsj', title:'退票时间',  width:150}
+            ,{field:'xslx', title:'销售类型',  width:150}
+            ,{field:'rs', title:'人数',  width:150}
+            ,{field:'zhjg', title:'折后价格',  width:150}
             ,{field:'fkfs', title:'付款方式',  width:150}
-            ,{field:'jypz', title:'交易凭证',  width:150}
-            ,{field:'fkrq', title:'付款日期',  width:150}
-            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+            ,{field:'shddh', title:'商户订单号',  width:150}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
           ]]
         });
   
@@ -116,7 +123,6 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       
 });
 </script>
-
 <script>
   layui.config({
     base: '../../static/plugins/selectPlus/'
@@ -125,19 +131,6 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
   }).use(['selectPlus', 'jquery'], function () {
     var $ = layui.$,
       selectPlus = layui.selectPlus;
-
-     // 单选案例
-     selectPlus.render({
-        el: '#test',
-        url: '../../json/selectplus/xsgl_09.json',
-        parseData: function (res) {
-          return res.data;
-        },
-        type: "radio",
-        valueName: "text",
-        label: ["name"],
-        values: '微信付款'
-      });
 
     // 付款方式多选
     var test = selectPlus.render({
@@ -175,10 +168,10 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       valueSeparator: " , "
     });
     
-    // 订单状态
+    // 状态
     var test3 = selectPlus.render({
-      el: '#ddzt',
-      url: '../../json/selectplus/ddzt.json',
+      el: '#zt',
+      url: '../../json/selectplus/zt.json',
       parseData: function (res) {
         return res.data;
       },
@@ -188,9 +181,9 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
     });
 
     var obj = test.getChecked();
-    var obj = test1.getChecked();
-    var obj = test2.getChecked();
-    var obj = test3.getChecked();
+    var obj1 = test1.getChecked();
+    var obj2 = test2.getChecked();
+    var obj3 = test3.getChecked();
     console.log(obj);
   })
 </script>

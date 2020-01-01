@@ -16,7 +16,7 @@ title: 财务管理-售票员缴款查询
             <li><label>上缴人:</label><input type="text" class="text_add2"></li>
             <li><label>收款人:</label><input type="text" class="text_add2"></li>
             <li style="text-align: center;">
-                <button type="button" class="layui-btn layui-btn-sm">重置</button> <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查询</button>
+                <button type="button" class="layui-btn">重置</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
             </li>
          </ul>
         </form>
@@ -25,25 +25,17 @@ title: 财务管理-售票员缴款查询
          <div class="dingdan_content1">
             <h2>缴款记录</h2>
             <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">充值</button>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="margin-left:10px">导出</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查看详情</button>
             </div>
-            <ul>
+            <!-- <ul>
                 <li><span>客户编号:</span>10056</li>
                 <li><span>联系人:</span>许少峰</li>
                 <li><span>客户名称:</span>惠州美城互动</li>
                 <li><span>联系电话:</span>13400000000</li>
                 <li><span>客户类型:</span>媒体</li>
                 <li><span>预存余额:</span>￥0.00</li>
-            </ul>
+            </ul> -->
             <div style="clear: both;"></div>
-            <div class="layui-input-block" style="padding:10px 0 0 0;display: flex;align-items: center;margin-left:0;">
-                <label style="margin-left:10px">日期</label>
-                <input type="text" class="text_add" id="ylDate" style="margin-left:10px"/>
-                <label style="margin-left:10px">至</label>
-                <input type="text" class="text_add" id="ylEndDate" style="margin-left:10px"/>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="margin-left:10px">过滤</button>
-            </div>
             <table class="layui-hide" id="cwgl_03" lay-filter="test"></table>
 
          </div>

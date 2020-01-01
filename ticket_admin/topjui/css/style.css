@@ -314,6 +314,18 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     width: 173px;
     border: 1px solid #D5D5D5;
 }
+.text_add3{
+	padding: 0 5px;
+    height: 36px;
+    width: 137px;
+    border: 1px solid #D5D5D5;
+}
+.text_add4{
+	padding: 0 5px;
+    height: 36px;
+    width: 160px;
+    border: 1px solid #D5D5D5;
+}
 
 /* 查询预约 */
 .leftChaXun ul {
@@ -325,11 +337,20 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 .leftChaXun li span{
     display: block;
     float: left;
-    width: 100px;
-    text-align: right;
+    width: 90px;
+    /* text-align: right; */
     padding-right: 10px;
     height: 30px;
     line-height: 30px;
+}
+.leftChaXun li label{
+    display: block;
+    float: left;
+    width: 90px;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
 }
 .leftChaXun .text_add{
     width: 130px;
