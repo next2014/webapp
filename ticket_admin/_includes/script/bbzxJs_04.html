@@ -25,11 +25,11 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           elem: '#ylEndDate'
         });
 
-      // 售票员报表
+      // 售票员缴款查询
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '售票员报表',
+              title: '售票员缴款查询',
               maxmin: true,
               shadeClose: true,
               area: ['800px', '600px'],
@@ -39,12 +39,12 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           });
       });
 
-      // 售票员报表
+      // 售票员缴款查询
       table.render({
-          elem: '#bbzx_02'
+          elem: '#bbzx_04'
           ,height: 700
-          ,title: '售票员报表'
-          ,url: '../../json/table/bbzx_02.json'
+          ,title: '售票员缴款查询'
+          ,url: '../../json/table/bbzx_04.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false

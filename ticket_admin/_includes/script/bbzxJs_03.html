@@ -1,52 +1,51 @@
 <script>
-layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+layui.use(['laydate','layer', 'form', 'table'], function(){
       var laydate = layui.laydate
       ,layer =layui.layer
       ,from = layui.form
-      ,element = layui.element
       ,table = layui.table;
-      
-        // 开始时间 star
+
+        // 日期 star
         laydate.render({
-          elem: '#CheckInStar'
+          elem: '#ylDate'
         });
 
-        // 结束时间 star
+        // 至 star
         laydate.render({
-          elem: '#leaveStar'
+          elem: '#ylEndDate'
         });
 
-      // 景区划分
+      // 入闸记录
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '景区划分',
+              title: '入闸记录',
               maxmin: true,
               shadeClose: true,
-              area: ['500px', '400px'],
-              content: 'add_jbxx4.html',
+              area: ['800px', '600px'],
+              content: 'add_jbxx1.html',
               // content: $('#dingdan_content'),
               btn: ['保存', '取消']
           });
       });
-      
-      // 景区划分
+
+      // 入闸记录
       table.render({
-          elem: '#jbxx_04'
-          ,height: 525
-          ,title: '景区划分'
-          ,url: '../../json/table/jbxx_04.json'
+          elem: '#bbzx_03'
+          ,height: 700
+          ,title: '入闸记录'
+          ,url: '../../json/table/bbzx_03.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false
           // ,toolbar: '#toolbarDemo'
           ,cols: [[
-            {field:'id', title:'景区编号', width:100}
-            ,{field:'ptname', title:'名称', width:180}
-            ,{field:'pttype', title:'区号',  width:110}
-            ,{field:'yzptm', title:'区名',  width:100}
-            ,{field:'xxtm', title:'区域扣费',  width:100}
-            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+            {field:'rq', title:'日期', width:150}
+            ,{field:'tm', title:'条码',  width:150}
+            ,{field:'pm', title:'票名',  width:150}
+            ,{field:'jpzj', title:'检票闸机',  width:150}
+            ,{field:'qy', title:'区域',  width:150}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
           ]]
         });
   
@@ -91,10 +90,10 @@ layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
             //页面层-自定义
             layer.open({
               type: 2,
-              title: '修改景区信息',
-              area: ['500px', '400px'],
-              // content: $('#jbxx4_edit'),
-              content: 'jbxx_edit4.html',
+              title: '修改票类信息',
+              area: ['800px', '600px'],
+              // content: $('#jbxx1_edit'),
+              content: 'jbxx_edit1.html',
               btn: ['提交', '取消']
             });
         }

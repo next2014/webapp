@@ -1,13 +1,62 @@
 ---
-layout: default
-title: 报表中心
+layout: pages3
+title: 报表中心-售票统计
 ---
-<div class="topjui-container" style="padding: 20px!important;width: 100%!important;">
-    <div class="topjui-row">
-        <div class="topjui-col-sm12 " >
-            <div id="aa" data-toggle="topjui-accordion" style="width:400px;height:500px;">
-                售票统计
+<!-- 售票统计  -->
+<div class="easyui-layout ticket" style="width:100%;height:930px;">
+    <div data-options="region:'west',border:false" class="leftChaXun" style="width:18%;padding:10px;">
+        <form class="layui-form layui-form-pane" action="">
+            <h2>检索</h2>
+            <div style="padding:10px;border:1px solid #eeeeee;margin-top: 10px;">
+               <h3>按条件查询</h3>
+               <div class="sjd" style="text-align: center;padding:10px 0 0 0;color:#49B4E8;">
+                    <a href="">[近3天]</a>
+                    <a href="">[近7天]</a>
+                    <a href="">[近30天]</a>
+                </div>
+               <ul>
+                  <li><label>售票日期:</label><input type="text" class="text_add3" id="xdDate"></li>
+                  <li><label>至:</label><input type="text" class="text_add3" id="xdEndDate"></li>
+                  <li><label>景区:</label>
+                    <div class="layui-input-block" id="jingqu" lay-filter="paymet" style="margin-left:0;"></div></li>
+                  <li><label>票类编号:</label><input type="text" class="text_add3"></li>
+                  <li><label>销售员:</label><input type="text" class="text_add3"></li>
+                  <li><label>付款方式:</label>
+                    <div class="layui-input-block" id="paymet" lay-filter="paymet" style="margin-left:0;"></div>
+                  </li>
+                  <li><label>销售类型:</label>
+                    <div class="layui-input-block" id="xstype" lay-filter="xstype" style="margin-left:0;"></div>
+                  </li>
+                  <li><label>状态:</label>
+                    <div class="layui-input-block" id="zt" lay-filter="zt" style="margin-left:0;"></div>
+                  </li>
+                  <li><label>游览日期:</label><input type="text" class="text_add3" id="ylDate"></li>
+                  <li><label>至:</label><input type="text" class="text_add3" id="ylEndDate"></li>
+              </ul>
             </div>
+            <div style="padding:10px;border:1px solid #eeeeee;margin-top: 10px;">
+               <h3>按条码查询</h3>
+               <ul>
+                   <li><label>门票条码:</label><input type="text" class="text_add3"></li>
+                   <li style="text-align: center;margin-top:20px;margin-bottom: 0;">
+                       <button type="button" class="layui-btn">清空</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
+                   </li>
+               </ul>
+               <p>注：景区、付款方式和销售类型可多选</p>
+            </div>
+        </form>
+    </div>
+    <div data-options="region:'center',border:false" class="" style="width:82%;padding:10px 0;">
+        <h2>售票信息</h2>
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <button type="button" class="layui-btn layui-btn-primary"">开票</button>
+        </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="bbzx_04" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
         </div>
     </div>
 </div>

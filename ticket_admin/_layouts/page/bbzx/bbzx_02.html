@@ -9,6 +9,11 @@ title: 报表中心-销售员报表
             <h2>检索</h2>
             <div style="padding:10px;border:1px solid #eeeeee;margin-top: 10px;">
                <h3>按条件查询</h3>
+               <div class="sjd" style="text-align: center;padding:10px 0 0 0;color:#49B4E8;">
+                    <a href="">[近3天]</a>
+                    <a href="">[近7天]</a>
+                    <a href="">[近30天]</a>
+               </div>
                <ul>
                   <li><label>售票日期:</label><input type="text" class="text_add3" id="xdDate"></li>
                   <li><label>至:</label><input type="text" class="text_add3" id="xdEndDate"></li>
@@ -43,10 +48,10 @@ title: 报表中心-销售员报表
     <div data-options="region:'center',border:false" class="" style="width:82%;padding:10px 0;">
         <h2>售票信息</h2>
         <div class="allBtn" style="display: flex;margin:10px 0;">
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">导出</button>
+            <button type="button" class="layui-btn layui-btn-primary"">导出</button>
         </div>
         <div style="background-color: #ffffff;">
-            <table class="layui-hide" id="bbzx_01" lay-filter="test"></table>
+            <table class="layui-hide" id="bbzx_02" lay-filter="test"></table>
             <script type="text/html" id="barDemo">
                 <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>

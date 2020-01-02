@@ -348,8 +348,8 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     float: left;
     width: 90px;
     padding-right: 10px;
-    height: 30px;
-    line-height: 30px;
+    height: 38px;
+    line-height: 38px;
     text-align: right;
 }
 .leftChaXun .text_add{
@@ -645,4 +645,9 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 .xz_kehu li:last-child{
   margin-bottom: 0;
+}
+
+/* 自动机状态 */
+.layui-form-checkbox i{
+    border-left:1px solid #d2d2d2!important;
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    {% include qy-head.html  %}
+    {% include qy-script.html %}
+</head>
+<body>
+    {{ content }}
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    <!-- 报表中心 -->
+    {% if page.layout == "page/xtwh/xtwh_01" %}
+        {% include script/xtwhJs_1.html %}
+    {% endif %}
+    {% if page.layout == "page/xtwh/xtwh_02" %}
+        {% include script/xtwhJs_2.html %}
+    {% endif %}
+    {% if page.layout == "page/xtwh/xtwh_03" %}
+        {% include script/xtwhJs_3.html %}
+    {% endif %}
+    {% if page.layout == "page/xtwh/xtwh_05" %}
+        {% include script/xtwhJs_5.html %}
+    {% endif %}
+    {% if page.layout == "page/xtwh/xtwh_06" %}
+        {% include script/xtwhJs_6.html %}
+    {% endif %}
+    {% if page.layout == "page/xtwh/xtwh_07" %}
+        {% include script/xtwhJs_7.html %}
+    {% endif %}
+</body>
+</html>

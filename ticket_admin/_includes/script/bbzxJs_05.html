@@ -5,17 +5,7 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
       ,from = layui.form
       ,table = layui.table;
       
-        // 售票日期 star
-        laydate.render({
-          elem: '#xdDate'
-        });
-
-        // 至 star
-        laydate.render({
-          elem: '#xdEndDate'
-        });
-
-        // 预约参观日期 star
+        // 日期 star
         laydate.render({
           elem: '#ylDate'
         });
@@ -25,11 +15,11 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           elem: '#ylEndDate'
         });
 
-      // 售票员报表
+      // 售票日报表
       $('#piaolei_add').on('click', function () {
           layer.open({
               type: 2,
-              title: '售票员报表',
+              title: '售票日报表',
               maxmin: true,
               shadeClose: true,
               area: ['800px', '600px'],
@@ -39,43 +29,26 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
           });
       });
 
-      // 售票员报表
+      // 售票日报表
       table.render({
-          elem: '#bbzx_02'
+          elem: '#bbzx_05'
           ,height: 700
-          ,title: '售票员报表'
-          ,url: '../../json/table/bbzx_02.json'
+          ,title: '售票日报表'
+          ,url: '../../json/table/bbzx_05.json'
           ,page: true
           ,autoSort: false
           ,toolbar: false
           // ,toolbar: '#toolbarDemo'
           ,cols: [[
-            {field:'sprq', title:'售票日期', width:150}
-            ,{field:'xslx', title:'销售类型',  width:150}
-            ,{field:'mptm', title:'门票条码',  width:150}
+            {field:'rq', title:'日期', width:150}
             ,{field:'plbh', title:'票类编号',  width:150}
             ,{field:'plmc', title:'票类名称',  width:150}
-            ,{field:'ttmc', title:'团体名称',  width:150}
-            ,{field:'dingdan', title:'订单',  width:150}
-            ,{field:'jingqu', title:'景区',  width:150}
-            ,{field:'danjia', title:'单价',  width:150}
-            ,{field:'zhjg', title:'折后价格',  width:150}
-            ,{field:'rxcs', title:'允许次数',  width:150}
-            ,{field:'zt', title:'状态',  width:150}
-            ,{field:'mplx', title:'门票类型',  width:150}
-            ,{field:'gprzjh', title:'购票人证件号',  width:150}
-            ,{field:'gprzjxx', title:'购票人证件信息',  width:150}
-            ,{field:'fkfs', title:'付款方式',  width:150}
-            ,{field:'sxsj', title:'失效时间',  width:150}
-            ,{field:'spr', title:'售票人',  width:150}
-            ,{field:'dpr', title:'兑票人',  width:150}
-            ,{field:'tpsj', title:'退票时间',  width:150}
-            ,{field:'tpr', title:'退票人',  width:150}
-            ,{field:'gqsxsj', title:'改前失效时间',  width:150}
-            ,{field:'gqr', title:'改期人',  width:150}
-            ,{field:'gqsj', title:'改期时间',  width:150}
-            ,{field:'rs', title:'人数',  width:150}
-            ,{field:'spzs', title:'售票张数',  width:150}
+            ,{field:'spzs', title:'售票张数',  width:100}
+            ,{field:'spje', title:'售票金额',  width:100}
+            ,{field:'tpzs', title:'退票张数',  width:100}
+            ,{field:'tpje', title:'退票金额',  width:100}
+            ,{field:'xj', title:'小计',  width:100}
+            ,{field:'jq', title:'景区',  width:150}
             // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
           ]]
         });
@@ -149,57 +122,9 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
   }).use(['selectPlus', 'jquery'], function () {
     var $ = layui.$,
       selectPlus = layui.selectPlus;
-      
-    // 付款方式多选
-    var test = selectPlus.render({
-      el: '#paymet',
-      url: '../../json/selectplus/pay_met.json',
-      parseData: function (res) {
-        return res.data;
-      },
-      valueName: "name",
-      values: ['微信付款', '支付宝付款'],
-      valueSeparator: " , "
-    });
-
-    // 销售类型
-    var test1 = selectPlus.render({
-      el: '#xstype',
-      url: '../../json/selectplus/xs_type.json',
-      parseData: function (res) {
-        return res.data;
-      },
-      valueName: "name",
-      values: ['', ''],
-      valueSeparator: " , "
-    });
-    
-    // 是否需要导览
-    var test2 = selectPlus.render({
-      el: '#daolan',
-      url: '../../json/selectplus/daolan.json',
-      parseData: function (res) {
-        return res.data;
-      },
-      valueName: "name",
-      values: ['', ''],
-      valueSeparator: " , "
-    });
-    
-    // 状态
-    var test3 = selectPlus.render({
-      el: '#zt',
-      url: '../../json/selectplus/zt.json',
-      parseData: function (res) {
-        return res.data;
-      },
-      valueName: "name",
-      values: ['', ''],
-      valueSeparator: " , "
-    });
 
     // 景区
-    var test3 = selectPlus.render({
+    var test = selectPlus.render({
       el: '#jingqu',
       url: '../../json/selectplus/jingqu.json',
       parseData: function (res) {
@@ -211,9 +136,6 @@ layui.use(['laydate','layer', 'form', 'table'], function(){
     });
 
     var obj = test.getChecked();
-    var obj1 = test1.getChecked();
-    var obj2 = test2.getChecked();
-    var obj3 = test3.getChecked();
     console.log(obj);
   })
 </script>
