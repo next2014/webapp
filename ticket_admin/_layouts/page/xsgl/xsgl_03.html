@@ -13,26 +13,24 @@ title: 销售管理-兑票
           <ul>
               <li><label>手机号码:</label><input type="text" class="text_add2"></li>
               <li><label>验证码:</label><input type="text" class="text_add2"></li>
-              <li style="text-align: center;">
-                  <button type="button" class="layui-btn layui-btn-sm">清空</button> <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查询</button>
+              <li style="text-align: center;margin-top: 10px;">
+                  <button type="button" class="layui-btn">清空</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
               </li>
           </ul>
         </form>
       </div>
       <div class="xpck_right1">
         <div class="dingdan_content1">
-            <div class="layui-input-block" style="margin-left:0;padding:10px 0;display: flex;align-items: center;">
-                <div style="margin-right:10px;display: flex;align-items: center;">
-                   <input type="checkbox" name="" lay-skin="primary" checked> 连续
-                </div>
-                <div style="margin-right: 10px;">
-                    <label>起始条码:</label>
-                    <input type="text" class="text_add" placeholder="请输入券码进行查询" />    
-                </div>
-                <label>终止条码:</label>
-                <input type="text" class="text_add" placeholder="" style="margin-left:10px"/>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">确定</button>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">兑换[F5]</button> 
+            <div class="layui-input-block" style="margin-left:0;padding:10px 0;">
+              <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+                <input type="checkbox" name="" lay-skin="primary" checked>连续
+                <label style="margin-left:10px">起始条码:</label>
+                <input type="text" class="text_add3" placeholder="请输入券码进行查询" /> 
+                <label style="margin-left:10px">终止条码:</label>
+                <input type="text" class="text_add3" placeholder=""/>
+                <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">确定</button>
+                <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">兑换[F5]</button>
+              </form>
             </div>
             <div style="clear:both"></div>
         </div>

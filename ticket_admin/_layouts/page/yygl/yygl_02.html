@@ -34,15 +34,15 @@ title: 预约管理
     </div>
   <div data-options="region:'center',border:false" style="width:82%;padding:10px;background-color: #eeeeee;">
       <h2>订单信息</h2>
-      <div class="allBtn" style="display: flex;margin:10px 0;">
-          <div class="">
-            <button type="button" class="layui-btn layui-btn-sm">全选</button>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 创建订单</button>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">订单详情</button>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">修改订单</button>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">取消订单</button>
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary"">销账</button>
-          </div>
+      <div class="allBtn" style="margin:10px 0;">
+          <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+            <button type="button" class="layui-btn ">全选</button>
+            <button type="button" class="layui-btn layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 创建订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">订单详情</button>
+            <button type="button" class="layui-btn layui-btn-primary">修改订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">取消订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">销账</button>
+          </form>
       </div>
       <div style="background-color: #ffffff;">
           <table class="layui-hide" id="yygl_02" lay-filter="test"></table>

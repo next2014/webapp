@@ -6,23 +6,24 @@ title: 销售管理-零售
 <div class="page-content" style="padding:10px;">
     <div class="dingdan_content">
       <h2>商户收款</h2>
-      <form class="layui-form layui-form-pane" action="">
       <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
-          <label>商户:</label>
+        <form class="layui-form layui-form-pane" action="">
           <div class="layui-input-block" style="margin:0 10px;">
-            <select name="city">
+            <label>商户:</label>
+            <select name="city" style="margin-left:10px">
               <option value="1">欧美城</option>
               <option value="2">海洋馆</option>
               <option value="3">收银部</option>
               <option value="4">财务部</option>
               <option value="5">运营部</option>
             </select>
+            <label style="margin-left:10px">金额:</label>
+            <input type="text" class="text_add3" value="0" style="margin-left:10px"/>
+            <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">新增</button>
+            <strong style="margin-left:10px">总金额:￥0</strong>
           </div>
-          <label>金额:</label>
-          <input type="text" class="text_add" value="0" style="margin-left:10px"/>
-          <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">新增</button>
-          <strong style="margin-left:10px">总金额:￥0</strong>
-      </div></form>
+         </form>
+      </div>
       <ul>
         <li><span>券名:</span>BK191220000011</li>
         <li><span>券码:</span>已出票</li>

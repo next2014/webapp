@@ -7,16 +7,16 @@ title: 销售管理-折扣券
     <div class="dingdan_content">
         <h2>抵扣券详情</h2>
         <div class="layui-input-block" style="margin-left:0;padding:10px 0">
-            <div style="display: flex;">
-              <input type="text" class="text_add" placeholder="请输入券码进行查询" />
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
-            </div>
-            <div style="display: flex;align-items: center;margin-left:10px">
-              <label>充值金额:</label>
-              <input type="text" class="text_add" value="0" style="margin-left:10px"/>
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">充值</button>
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">导出</button> 
-            </div>
+          <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+            <input type="text" class="text_add3" placeholder="请输入券码进行查询" />
+            <button type="button" class="layui-btn layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button>
+          </form>
+          <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+            <label style="margin-left: 10px;">充值金额:</label>
+            <input type="text" class="text_add3" value="0"/>
+            <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">充值</button>
+            <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">导出</button> 
+          </form>
         </div>
         <ul class="dkq_content">
           <li><span>券名:</span>BK191220000011</li>
