@@ -7,6 +7,27 @@
         {{ page.title | smartify }} · 狮子城
     </title>
     {% include head.html %}
+    <style>
+        h5,.modal-footer .btn{
+            font-size:.6rem;
+        }
+        .close{
+            padding:.8rem 1.4rem!important;
+            font-size:1.2rem;
+        }
+        .modal-header,.modal-body,.modal-footer{
+            font-size:.6rem;
+            padding:.6rem;
+        }
+        .modal-body p{
+            margin-bottom: 0;
+            text-indent: 2em;
+        }
+        .modal-footer{
+            font-size:.6rem;
+            padding:.3rem .6rem;
+        }
+    </style>
 </head>
 <body>
     {% include common/header.html %}

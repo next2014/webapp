@@ -7,6 +7,28 @@
     <script src="static/js/swiper.js"></script>
     {% include components/swiper/swiperjs.html %}
 {% endif %}
+{% if page.layout == "index" %}
+    <script>
+        window.onload = function () {  
+            //================  
+            var s = document.cookie;  
+            if (s.indexOf('myad=1') != -1) return; //存在cookie退出下面代码的执行  
+            var d = new Date();  
+            d.setHours(d.getHours() + 24); //有效期24小时  
+            document.cookie = 'myad=1;expires='+d.toGMTString();//设置cookie  
+            //================  
+            /*弹窗代码*/
+            layer.open({
+                type: 2,
+                title: '特别公告',
+                maxmin: true,
+                area: ['500px', '750px'],
+                shadeClose: true,
+                content: 'tcAd.html'
+            });
+        }  
+    </script>
+{% endif %}
 {% if page.layout == "list"%}
 {% include fastclickjs.html %}
 <!-- <script src="static/js/weui.min.js"></script>

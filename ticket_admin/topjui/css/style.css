@@ -519,7 +519,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
 }
 
 .xpck_right_btn button{
-    width:80px;
+    /* width:80px; */
     margin-left:10px
 }
 
@@ -638,7 +638,7 @@ a.viewBtn:hover{border:1px solid #ddd;background:#3c8dbc; color:#fff;border-radi
     text-align:right;
     display: block;
     float: left;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 .add_xsgl li{
     margin-bottom: 5px;
