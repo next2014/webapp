@@ -4,16 +4,12 @@ title: 客户关系管理-团体管理
 ---
 <!-- 团体管理 -->
 <div class="easyui-layout ticket" style="width:100%;height:950px;">
-    <div data-options="region:'center',border:false" style="width:100%;padding:10px;background-color: #eeeeee;">
-        <div class="allBtn" style="display: flex;margin:10px 0;">
-            <div class="layui-btn-group">
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i>新增</button>
-              <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i>修改</button>
-              <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</button>
-            </div>
-            <div class="layui-input-block" style="margin-left:10px;">
-                <label>客户类型</label>
-                <select lay-filter="aihao" style="width:100px; margin-left:10px;">
+    <div data-options="region:'center',border:false" style="padding:10px;">
+        <div class="allBtn">
+            <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+                <button type="button" class="layui-btn layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 新增</button>
+                <label style="margin:0 10px;">客户类型</label>
+                <select lay-filter="aihao">
                     <option value="0">全部</option>
                     <option value="1">学校</option>
                     <option value="2">企业</option>
@@ -22,10 +18,10 @@ title: 客户关系管理-团体管理
                     <option value="5">医院</option>
                     <option value="6">旅行社</option>
                 </select>
-                <input type="text" class="layui-form-label chaxun" placeholder="请输入客户编号或者客户名称进行查询" style="width:250px;margin-left:10px;"/>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">查询</button>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary" style="width:80px;margin-left:10px">导出</button> 
-            </div>
+                <input type="text" class="text_add2" placeholder="请输入客户编号或者客户名称进行查询" style="width:250px;margin-left:10px;"/>
+                <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">查询</button>
+                <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">导出</button>
+            </form>
         </div>
         <div style="background-color: #ffffff;">
             <table class="layui-hide" id="khgxgl_01" lay-filter="test"></table>
