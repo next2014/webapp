@@ -1,8 +1,0 @@
-/* === Grid === */
-.weui-row > [class*="col-"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.weui-row .col-auto {
-  width: 100%;
-}
