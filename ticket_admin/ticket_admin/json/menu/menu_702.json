@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1346,
+      "pid": 702,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "添加预约单",
+      "url": "./page/yygl/yygl_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 702,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "查询预约单",
+      "url": "./page/yygl/yygl_02.html"
+    }
+  ]

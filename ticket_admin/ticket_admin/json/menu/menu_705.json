@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1346,
+      "pid": 705,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "客户账户管理",
+      "url": "./page/cwgl/cwgl_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 705,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票员缴款",
+      "url": "./page/cwgl/cwgl_02.html"
+    },
+    {
+      "id": 1346,
+      "pid": 705,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "售票员缴款查询",
+      "url": "./page/cwgl/cwgl_03.html"
+    }
+  ]

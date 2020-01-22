@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="layui/css/layui.css" media="all">
+</head>
+
+<body>
+  <form class="layui-form layui-form-pane" action="">
+    <div class="layui-form-item">
+      <!-- <label class="layui-form-label">多选下拉框</label> -->
+      <div class="layui-input-block" id="test" lay-filter="test">
+
+      </div>
+    </div>
+  </form>
+
+  <script src="layui/layui.js"></script>
+  <script>
+    // document.
+    layui.config({
+      base: 'selectPlus/'
+    }).extend({
+      test: 'selectPlus'
+    }).use(['selectPlus', 'jquery'], function () {
+      var $ = layui.$,
+        selectPlus = layui.selectPlus;
+
+      // 多选
+      var test = selectPlus.render({
+        el: '#test',
+        data: [{
+          "id": 1,
+          "name": "幼儿园"
+        }, {
+          "id": 2,
+          "name": "小学"
+        }, {
+          "id": 3,
+          "name": "初中"
+        }, {
+          "id": 4,
+          "name": "高中"
+        }, {
+          "id": 5,
+          "name": "大学"
+        }],
+        valueName: "name",
+        values: ['幼儿园', '小学'],
+        valueSeparator: " , "
+      });
+      var obj = test.getChecked();
+      console.log(obj);
+    })
+  </script>
+</body>
+
+</html>

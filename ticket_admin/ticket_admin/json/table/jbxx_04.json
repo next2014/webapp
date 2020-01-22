@@ -1,0 +1,33 @@
+{
+    "code": 0
+    ,"msg": ""
+    ,"count": 30
+    ,"data": [{
+      "id": "001"
+      ,"ptname": "海洋馆入口"
+      ,"pttype": "A"
+      ,"yzptm": "海洋馆"
+      ,"xxtm": "0"
+    },
+    {
+      "id": "002"
+      ,"ptname": "海洋馆出口"
+      ,"pttype": "A"
+      ,"yzptm": "海洋馆"
+      ,"xxtm": "0"
+    },
+    {
+      "id": "003"
+      ,"ptname": "西门入口"
+      ,"pttype": "B"
+      ,"yzptm": "西门"
+      ,"xxtm": "10000.00"
+    },
+    {
+      "id": "004"
+      ,"ptname": "西门出口"
+      ,"pttype": "B"
+      ,"yzptm": "西门"
+      ,"xxtm": "0"
+    }]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城票务系统</title>
+        <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- layui框架样式 -->
+    <!-- <link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/> -->
+     <!-- jQuery相关引用 -->
+ <script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+ <script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+ <!-- TopJUI框架配置 -->
+ <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+ <!-- TopJUI框架核心-->
+ <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+ <!-- TopJUI中文支持 -->
+ <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- 首页js -->
+<script type="text/javascript" src="../../static/public/js/topjui.index.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+    <style>
+        .nav-bar .nav-left {
+            width: 230px;
+            float: left;
+        }
+
+        .nav-bar .nav-right {
+            float: right;
+
+        }
+
+        .nav-bar .nav-right a{
+           text-decoration: none;
+           color:#fff; 
+           padding:0 10px;
+        }
+
+        .nav-bar .nav-center {
+            margin-left: 230px;
+            margin-right: 245px;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .banner{
+            height: 50px; padding:0;margin:0; overflow: hidden
+        }
+
+        .banner .nav-bar>div {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .nav-center ul {
+            list-style-type: none;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            font-size: 0;
+            position: relative;
+            left: 0;
+            padding:0
+        }
+
+        .nav-center ul li {
+            display: inline-block;
+            text-align: center;
+            margin: 0px;
+            padding: 0px 10px;
+            border: none;
+            list-style: none;
+            cursor: pointer;
+        }
+        .nav-center ul li a{
+            text-decoration: none;
+        }
+        .nav-center ul li a:hover{
+            color:#ffffff!important;
+        }
+
+        .nav-btn {
+            border-left: 1px #367fa9 solid;
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-group {
+            position: relative;
+            transition: all .3s;
+            padding: 0;
+        }
+
+        .nav-group .bannerMenu {
+            padding: 5px 0;
+        }
+
+        .hide {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="cc" class="easyui-layout" style="width:600px;height:400px;">
+    <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+    <div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+</div>
+</body>
+</html>

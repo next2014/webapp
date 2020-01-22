@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <div class="page-content" style="overflow: hidden;padding: 10px;">
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">票类编号:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" placeholder="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">单价:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" placeholder="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">票类名称:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" placeholder="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">准入次数:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" placeholder="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">允许区域:</label>
+            <div class="layui-input-block">
+                <select name="city" xm-select="example4" xm-select-search="">
+                    <option value="1">海洋馆入口</option>
+                    <option value="2">海洋馆出口</option>
+                    <option value="3">西门入口</option>
+                    <option value="4">西门出口</option>
+                    <option value="5">南门入口</option>
+                    <option value="6">南门出口</option>
+                    <option value="7">海洋馆内门入口</option>
+                    <option value="8">海洋馆内门出口</option>
+                    <option value="9">婚博馆入口</option>
+                    <option value="10">婚博馆出口</option>
+                </select>
+                <!-- <select name="" lay-filter="aihao">
+                    <option value="0"></option>
+                    <option value="1"></option>
+                </select> -->
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">排序:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" placeholder="" class="text_add ml-0">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">预制票务码前缀:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" value="EJN" class="text_add ml-0" checked="checked">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">产品分组:</label>
+            <div class="layui-input-block">
+                <select name="" lay-filter="aihao">
+                    <option value="0">全部</option>
+                    <option value="1">产品1</option>
+                    <option value="2">抵扣券</option>
+                    <option value="3">团体</option>
+                    <option value="4">年卡</option>
+                    <option value="5">活动券</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">线下条码前缀:</label>
+            <div class="layui-input-block">
+                <input type="text" name="" value="OBR" class="text_add ml-0" checked="checked">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">商品状态:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" lay-skin="primary" id="zc"> <label for="zc">正常</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="ts" style="margin-left:5px;"> <label for="ts">停售</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="tt" style="margin-left:5px;">  <label for="tt">淘汰</label> 
+                <input type="checkbox" name="" lay-skin="primary" id="xtnz" style="margin-left:5px;"> <label for="xtnz">系统内置票类</label>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">线上条码前缀:</label>
+            <div class="layui-input-block">
+                <input name="" type="text" value="XUW" class="text_add ml-0" checked="checked">
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">是否发布:</label>
+            <div class="layui-input-block">
+                <select name="city" xm-select="example4" xm-select-search="">
+                    <option value="0">全部</option>
+                    <option value="1">自助机</option>
+                    <option value="2">微信</option>
+                    <option value="3">门店</option>
+                    <option value="4">团体</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">类型:</label>
+            <div class="layui-input-block">
+                <select name="city" xm-select="example4" xm-select-search="">
+                    <option value="0">全部</option>
+                    <option value="1">老人票</option>
+                    <option value="2">成人票</option>
+                    <option value="3">儿童票</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">有效时间段:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" lay-skin="primary" id="qy" checked> <label for="qy">启用</label>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">有效日期段:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" lay-skin="primary" id="qy1" checked> <label for="qy1">启用</label>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:99%">
+            <label class="layui-form-label layui-title">票面说明:</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" style="width: 92%;"></textarea>
+                <!-- <input name="" type="text" class="text_add ml-0" id="leaveEnd"> -->
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">所属机构:</label>
+            <div class="layui-input-block">
+                <select name="city" xm-select="example4" xm-select-search="">
+                    <option value="1">海洋馆</option>
+                    <option value="2">婚博馆</option>
+                    <option value="3">卡丁车馆</option>
+                    <option value="4">儿童馆</option>
+                    <option value="5">奇奇之家</option>
+                    <option value="6">真人CS馆</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">票类分组:</label>
+            <div class="layui-input-block">
+                <select name="city" xm-select="example4" xm-select-search="">
+                    <option value="1">成人票</option>
+                    <option value="2">儿童票</option>
+                    <option value="3">不分成人儿童</option>
+                    <option value="4">年卡</option>
+                    <option value="5">正价/半价票</option>
+                    <option value="6">停售票</option>
+                    <option value="7">套餐票</option>
+                    <option value="8">卡丁车票</option>
+                    <option value="9">夏令海洋馆</option>
+                    <option value="10">奇奇之家</option>
+                    <option value="11">大门票</option>
+                    <option value="12">真人CS馆</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item mb-2" style="width:49.5%">
+            <label class="layui-form-label layui-title">退票功能:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" lay-skin="primary" style="margin-right:10px;" id="qy2" checked> <label for="qy2">启用</label>
+            </div>
+        </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    
+    
+    
+    
+    <!-- 团体预约策略 -->
+    
+    
+    
+    
+    
+    
+    <!-- 预约管理 -->
+    
+    
+    <!-- 客户关系管理 -->
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <div class="pljs ticket_left" data-options="region:'west',border:false">
+        <h2>检索</h2>
+        <!-- <span>狮子城</span> -->
+        <ul class="easyui-tree" data-options="url:'../../json/left_menu/jbxx_menu.json',method:'get',animate:false,dnd:false"></ul>
+        <!-- <ul id="tt" class="easyui-tree">
+            <li>
+                <span>狮子城</span>
+                <ul>
+                   <li >
+                       <span>成人票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li>
+                       <span>儿童票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li><span>不分成人儿童</span></li>
+                   <li><span>年卡</span></li>
+                   <li><span>正价/半价票</span></li>
+                   <li><span>停售票</span></li>
+                   <li><span>套售票</span></li>
+                   <li><span>卡丁车票</span></li>
+                   <li><span>夏令海洋馆</span></li>
+                   <li>
+                       <span>奇奇之家</span>
+                       <ul>
+                          <li><span>奇奇套票</span></li>
+                          <li><span>游泳</span></li>
+                       </ul>
+                   </li>
+                   <li><span>大门票</span></li>
+                   <li><span>CS馆</span></li>
+                </ul>
+            </li>
+        </ul> -->
+    </div>
+    <div class="xpck" data-options="region:'center',border:false" style="padding: 10px;">
+        <h2>票类信息</h2>
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <div class="layui-btn-group">
+              <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 新增</button>
+              <!-- <script type="text/html" id="barDemo">
+                <button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i> 修改</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i> 删除</button>
+              </script> -->
+              <button type="button" class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe666;</i> 刷新</button>
+            </div>
+            <div style="margin-left: 10px;">
+                <input type="text" class="layui-form-label chaxun" placeholder="请输入编号或者名称进行查询" />
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary mr-4" style="width:80px;margin-left:10px">查询</button> 
+                <input type="checkbox" name="" title="隐藏停售票类" lay-skin="primary" checked>隐藏停售票类
+            </div>
+        </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="jbxx_01" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    
+        <!-- <link rel="stylesheet" type="text/css" href="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.css" />
+<script src="https://raw.githack.com/hnzzmsf/layui-formSelects/master/dist/formSelects-v4.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script>
+    layui.use(['laydate','layer', 'form', 'table'], function(){
+          var laydate = layui.laydate
+          ,layer =layui.layer
+          ,from = layui.form
+          ,table = layui.table;
+          
+            // 开始时间 star
+            laydate.render({
+              elem: '#CheckInStar'
+            });
+    
+            // 结束时间 star
+            laydate.render({
+              elem: '#leaveStar'
+            });
+
+          // 票类新增
+          $('#piaolei_add').on('click', function () {
+              layer.open({
+                  type: 2,
+                  title: '票类新增',
+                  maxmin: true,
+                  shadeClose: true,
+                  area: ['800px', '650px'],
+                  content: 'add_jbxx1.html',
+                  // content: $('#dingdan_content'),
+                  btn: ['保存', '取消']
+              });
+          });
+
+          // 下拉多选
+
+
+          // 票类管理
+          table.render({
+              elem: '#jbxx_01'
+              ,height: 700
+              ,title: '票类管理'
+              ,url: '../../json/table/jbxx_01.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'id', title:'票类编号', width:100}
+                ,{field:'ptname', title:'票类名称', width:150}
+                ,{field:'pttype', title:'票类类型',  width:110}
+                ,{field:'yzptm', title:'预制票条码前缀',  width:150}
+                ,{field:'xxtm', title:'线下条码前缀',  width:150}
+                ,{field:'xstm', title:'线上条码前缀',  width:150}
+                ,{field:'xxqy', title:'允许区域',  width:120}
+                ,{field:'pice', title:'单价',  width:80}
+                ,{field:'cpfz', title:'产品分组',  width:80}
+                ,{field:'spzt', title:'商品状态',  width:80}
+                ,{field:'zrcs', title:'准入次数',  width:80}
+                ,{field:'pmsm', title:'票面说明',  width:180}
+                ,{field:'px', title:'排序',  width:80}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+              ]]
+            });
+      
+          //工具栏事件
+          table.on('toolbar(test)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+              case 'add':
+                layer.msg('添加');
+                break;
+              case 'edit':
+                layer.msg('编辑');
+                break;
+              case 'del':
+                layer.msg('删除');
+                break;
+              case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
+          });
+      
+          //监听单元格编辑
+          table.on('edit(test)', function (obj) {
+            var value = obj.value //得到修改后的值
+              , data = obj.data //得到所在行所有键值
+              , field = obj.field; //得到字段
+              console.log(obj)
+          });
+      
+          //监听行工具事件
+          table.on('tool(test)', function (obj) {
+            var data = obj.data;
+            //console.log(obj)
+            if (obj.event === 'del') {
+              layer.confirm('真的删除行么', function (index) {
+                obj.del();
+                layer.close(index);
+              });
+            } else if (obj.event === 'edit') {
+                //页面层-自定义
+                layer.open({
+                  type: 2,
+                  title: '修改票类信息',
+                  area: ['800px', '600px'],
+                  // content: $('#jbxx1_edit'),
+                  content: 'jbxx_edit1.html',
+                  btn: ['提交', '取消']
+                });
+            }
+          });
+                            
+          // $('i').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+          // $('.layui-btn').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+      
+      });
+</script>
+    
+    
+    
+    
+    <!-- 团体预约策略 -->
+    
+    
+    
+    
+    
+    
+    <!-- 预约管理 -->
+    
+    
+    <!-- 客户关系管理 -->
+    
+    
+    
+    
+    
+</body>
+</html>

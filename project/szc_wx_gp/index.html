@@ -77,7 +77,7 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="countTime()">
 	<div class="index_all">
 		<div>
 			<img src="img/22.png" />
@@ -102,8 +102,8 @@
 				</div> 
 			</div>
 		</div>
-        
-		<ul id="ticket" style="">
+
+		<ul id="ticket">
 			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
 				<div class="in_fl fl tic_img">
 					<img src="img/home/1.png" alt=" " />
@@ -152,7 +152,6 @@
 					</div>
 				</div>
 			</li>
-
 			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
 				<div class="in_fl fl tic_img">
 					<img src="img/home/2.png" alt=" " />
@@ -237,7 +236,6 @@
 					</div>
 				</div>
 			</li>
-
 			<li onclick="javascript: window.location.href ='TicketDetailsNew.html'">
 				<div class="in_fl fl tic_img">
 					<img src="img/home/5.png" alt=" " />
@@ -263,7 +261,10 @@
 				</div>
 			</li>
 		</ul>
+		
+		<div class="noticket" style="font-size: 18px;width: 100%;height:250px;text-align: center;line-height:250px;color: #666;">暂停售票</div>
 	</div>
+
 	<div class="in_btn">
 		<div class="layui-btn-group">
 			<button class="layui-btn current" onclick="javascript: window.location.href = '#'">首 页</button>
@@ -296,6 +297,24 @@
 	</div>
 	<!-- end 弹窗公告内容 -->
 
+	<!-- str 24号停止销售门票公告 -->
+	<div class="modal fade" id="myModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalCenterTitle">特别公告</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p style="font-size:14px;color:red;">恭贺新禧！惠州狮子城1月24日将暂停对外开放，大年初一（1月25日）起将恢复正常营业时间，欢迎广大游客届时前来游玩。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end 24号停止销售门票公告 -->
+
 	<!-- <script src="js/jquery.min.js"></script> -->
 	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/political_WeCall.js"></script>
@@ -321,6 +340,22 @@
 				$(this).addClass('current').siblings().removeClass('current');
 			});
 		});
+	</script>
+	<script type="text/javascript">
+		function countTime() {
+			var str = "2020/01/22 23:59:59";
+			if (new Date(str).toDateString() === new Date().toDateString()) {//今天
+				window.setTimeout(function(){
+					$('.announcement').css('display','none');
+					$('#ticket').css('display','none');
+					$('#myModal').modal('show')
+				},100)
+			} else if (new Date(str) < new Date()){//前天
+				$('.noticket').css('display','none');
+			} else if (new Date(str) > new Date()){//后天
+				$('.noticket').css('display','none');
+			}
+		}
 	</script>
 </body>
 </html>

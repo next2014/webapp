@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <!-- 网上购票订单查询 -->
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <div class="xpck ticket_right" data-options="region:'center',border:false">
+      <div class="xpck_left1">
+        <form class="layui-form layui-form-pane" action="">
+          <h2>检索</h2>
+          <ul> 
+            <li><label>退款日期:</label><input type="text" class="layui-input text_add2" id="ylDate"></li>
+            <li><label>至:</label><input type="text" class="layui-input text_add2" id="ylEndDate"></li>
+            <li><label>手机号码:</label><input type="text" class="layui-input text_add2"></li>
+            <li><label>订单编号:</label><input type="text" class="layui-input text_add2"></li>
+            <li>
+                <label>付款方式:</label>
+                <div class="layui-input-block" id="paymet" lay-filter="paymet" style="margin-left:0;"></div>
+            </li>
+            <li>
+                <label>销售类型:</label>
+                <div class="layui-input-block" id="xstype" lay-filter="xstype" style="margin-left:0;"></div>
+            </li>
+            <li>
+                <label>是否需要导览:</label>
+                <div class="layui-input-block" id="daolan" lay-filter="daolan" style="margin-left:0;"></div>
+            </li>
+            <li>
+                <label>订单状态:</label>
+                <div class="layui-input-block" id="ddzt" lay-filter="ddzt" style="margin-left:0;"></div>
+            </li>
+            <li style="text-align: center;">
+                <button type="button" class="layui-btn">清空</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
+            </li>
+          </ul>
+        </form>
+        <p>注：付款方式和销售类型可多选</p>
+      </div>
+      <div class="xpck_right1">
+        <div class="dingdan_content1">
+            <h2>订单信息</h2>
+            <div class="layui-input-block" style="margin-left:0;padding:10px 0;">
+              <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+                <label>取票号:</label>
+                <input type="text" class="text_add3" placeholder="" />    
+                <button type="button" class="layui-btn layui-btn-primary" style="margin-left:10px">查询</button>
+              </form>
+            </div>
+        </div>
+        <table class="layui-hide" id="xsgl_09" lay-filter="test"></table>
+        <script type="text/html" id="barDemo">
+            <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+      </div>
+    </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    <!-- 售票管理 -->
+    
+    
+    
+    
+    
+    
+    
+    
+        <script>
+layui.use(['laydate','layer', 'form', 'table'], function(){
+      var laydate = layui.laydate
+      ,layer =layui.layer
+      ,from = layui.form
+      ,table = layui.table;
+      
+        // 开始时间 star
+        laydate.render({
+          elem: '#ylDate'
+        });
+
+        // 结束时间 star
+        laydate.render({
+          elem: '#ylEndDate'
+        });
+
+      // 网上购票订单查询
+      $('#piaolei_add').on('click', function () {
+          layer.open({
+              type: 2,
+              title: '网上购票订单查询',
+              maxmin: true,
+              shadeClose: true,
+              area: ['500px', '350px'],
+              content: 'add_xsgl7.html',
+              // content: $('#dingdan_content'),
+              btn: ['确定', '取消']
+          });
+      });
+
+      // 网上购票订单查询
+      table.render({
+          elem: '#xsgl_09'
+          ,height: 700
+          ,title: '网上购票订单查询'
+          ,url: '../../json/table/xsgl_09.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'xdrq', title:'下单日期',  width:180}
+            ,{field:'ddh', title:'订单号', width:180}
+            ,{field:'ddlx', title:'订单类型', width:150}
+            ,{field:'dh', title:'电话',  width:150}
+            ,{field:'yzm', title:'验证码',  width:100}
+            ,{field:'je', title:'金额',  width:100}
+            ,{field:'sl', title:'数量',  width:100}
+            ,{field:'zt', title:'状态',  width:100}
+            ,{field:'fkfs', title:'付款方式',  width:150}
+            ,{field:'jypz', title:'交易凭证',  width:150}
+            ,{field:'fkrq', title:'付款日期',  width:150}
+            ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+          ]]
+        });
+  
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'edit':
+            layer.msg('编辑');
+            break;
+          case 'del':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+  
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+          console.log(obj)
+      });
+  
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 2,
+              title: '修改票类信息',
+              area: ['800px', '600px'],
+              // content: $('#jbxx1_edit'),
+              content: 'jbxx_edit1.html',
+              btn: ['提交', '取消']
+            });
+        }
+      });
+                        
+      // $('i').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      // $('.layui-btn').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      
+});
+</script>
+
+<script>
+  layui.config({
+    base: '../../static/plugins/selectPlus/'
+  }).extend({
+    test: 'selectPlus'
+  }).use(['selectPlus', 'jquery'], function () {
+    var $ = layui.$,
+      selectPlus = layui.selectPlus;
+
+     // 单选案例
+     selectPlus.render({
+        el: '#test',
+        url: '../../json/selectplus/xsgl_09.json',
+        parseData: function (res) {
+          return res.data;
+        },
+        type: "radio",
+        valueName: "text",
+        label: ["name"],
+        values: '微信付款'
+      });
+
+    // 付款方式多选
+    var test = selectPlus.render({
+      el: '#paymet',
+      url: '../../json/selectplus/pay_met.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['微信付款', '支付宝付款'],
+      valueSeparator: " , "
+    });
+
+    // 销售类型
+    var test1 = selectPlus.render({
+      el: '#xstype',
+      url: '../../json/selectplus/xs_type.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+    
+    // 是否需要导览
+    var test2 = selectPlus.render({
+      el: '#daolan',
+      url: '../../json/selectplus/daolan.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+    
+    // 订单状态
+    var test3 = selectPlus.render({
+      el: '#ddzt',
+      url: '../../json/selectplus/ddzt.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+
+    var obj = test.getChecked();
+    var obj = test1.getChecked();
+    var obj = test2.getChecked();
+    var obj = test3.getChecked();
+    console.log(obj);
+  })
+</script>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <!-- 散客销售票 -->
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+     <!-- 票类检索 -->
+    <div class="pljs ticket_left" data-options="region:'west',border:false">
+        <h2>检索</h2>
+        <ul class="easyui-tree" data-options="url:'../../json/left_menu/jbxx_menu.json',method:'get',animate:true,dnd:true"></ul>
+        <!-- <ul id="tt" class="easyui-tree">
+            <li>
+                <span>狮子城</span>
+                <ul>
+                   <li >
+                       <span>成人票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li>
+                       <span>儿童票</span>
+                       <ul>
+                           <li>平日票</li>
+                           <li>周末/节假票</li>
+                       </ul>
+                   </li>
+                   <li><span>不分成人儿童</span></li>
+                   <li><span>年卡</span></li>
+                   <li><span>正价/半价票</span></li>
+                   <li><span>停售票</span></li>
+                   <li><span>套售票</span></li>
+                   <li><span>卡丁车票</span></li>
+                   <li><span>夏令海洋馆</span></li>
+                   <li>
+                       <span>奇奇之家</span>
+                       <ul>
+                          <li><span>奇奇套票</span></li>
+                          <li><span>游泳</span></li>
+                       </ul>
+                   </li>
+                   <li><span>大门票</span></li>
+                   <li><span>CS馆</span></li>
+                </ul>
+            </li>
+        </ul> -->
+    </div>
+    
+    <!-- 售票窗口 -->
+    <div class="xpck ticket_right" data-options="region:'center',border:false">
+        <div class="xpck_left">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
+                        <label class="title">海洋世界(成人)</label>
+                        <!-- 增加数量 -->
+                        <div class="Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                        </div>
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
+                            <select name="" lay-filter="aihao" style="margin-right:10px;">
+                                <option value="0">全票</option>
+                                <option value="1">半价票</option>
+                                <option value="2">免费票</option>
+                                <option value="3">自定义折扣</option>
+                            </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
+                    </div>
+                </div>
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
+                    <label class="title">海洋世界(成人)</label>
+                    <!-- 增加数量 -->
+                    <div class="fr Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                    </div>
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
+                        <select name="" lay-filter="aihao" style="margin-right:10px;">
+                            <option value="0">全票</option>
+                            <option value="1">半价票</option>
+                            <option value="2">免费票</option>
+                            <option value="3">自定义折扣</option>
+                        </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
+                    </div>
+                </div>
+                <div class="xpck_left_group">
+                    <div class="xpck_lg_top">
+                    <label class="title">海洋世界(成人)</label>
+                    <!-- 增加数量 -->
+                    <div class="fr Choice">
+                        <button class="" type="button" id="reduce" style="float:left;">-</button>
+                        <input class="" type="text" id="Qty" readonly="readonly" name="Qty" value="1" style="float:left;">
+                        <button class="current" type="button" id="add" style="float:left;">+</button>
+                    </div>
+                    </div>
+                    <div class="xpck_lg_down">
+                        <div class="layui-input-block">
+                        <select name="" lay-filter="aihao" style="margin-right:10px;">
+                            <option value="0">全票</option>
+                            <option value="1">半价票</option>
+                            <option value="2">免费票</option>
+                            <option value="3">自定义折扣</option>
+                            </select>
+                        </div>
+                        <input type="text" name="" value="0.00" class="text_add2" style="width:100px;margin:0 5px;">
+                        <button class="layui-btn layui-btn-primary" type="button" style="width: 100px;">选择门票</button>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="xpck_right">
+            <div class="layui-input-block" style="margin-left:0;padding-bottom:10px;">
+                <div class="xpck_right_btn" style="display: flex;align-items: center;">
+                  <button type="button" class="layui-btn layui-btn-primary">挂单[F2]</button>
+                  <button type="button" class="layui-btn layui-btn-primary">取单[F3]</button>
+                  <button type="button" class="layui-btn layui-btn-primary">清空[F9]</button>
+                  <button type="button" class="layui-btn layui-btn-primary">结算[F5]</button>
+                  <button type="button" class="layui-btn layui-btn-primary">混合[F6]</button>
+                  <button type="button" class="layui-btn layui-btn-primary">上一单[F8]</button>
+                  <strong style="margin-left:10px">挂单数:<label>0</label></strong>
+                  <strong style="margin-left:10px">票数:<label>0</label></strong>
+                </div>
+            </div>
+            <div style="background-color: #ffffff;">
+                <table class="layui-hide" id="xsgl_01" lay-filter="test"></table>
+                <script type="text/html" id="barDemo">
+                    <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                </script>
+            </div>  
+        </div>
+    </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    <!-- 售票管理 -->
+    
+        <script>
+    layui.use(['laydate','layer', 'form', 'table'], function(){
+          var laydate = layui.laydate
+          ,layer =layui.layer
+          ,from = layui.form
+          ,table = layui.table;
+          
+            // 开始时间 star
+            laydate.render({
+              elem: '#CheckInStar'
+            });
+    
+            // 结束时间 star
+            laydate.render({
+              elem: '#leaveStar'
+            });
+
+          // 票类新增
+          $('#piaolei_add').on('click', function () {
+              layer.open({
+                  type: 2,
+                  title: '票类新增',
+                  maxmin: true,
+                  shadeClose: true,
+                  area: ['800px', '600px'],
+                  content: 'add_jbxx1.html',
+                  // content: $('#dingdan_content'),
+                  btn: ['保存', '取消']
+              });
+          });
+
+          // 票类管理
+          table.render({
+              elem: '#xsgl_01'
+              ,height: 700
+              ,title: '票类管理'
+              ,url: '../../json/table/xsgl_01.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'mptm', title:'门票条码', width:150}
+                ,{field:'mpmc', title:'门票名称', width:150}
+                ,{field:'mplx', title:'门票类型',  width:100}
+                ,{field:'ydj', title:'原单价',  width:100}
+                ,{field:'ssj', title:'实售价',  width:100}
+                ,{field:'ykzjh', title:'游客证件号',  width:100}
+                ,{field:'zjbz', title:'证件备注',  width:100}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+              ]]
+            });
+      
+          //工具栏事件
+          table.on('toolbar(test)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+              case 'add':
+                layer.msg('添加');
+                break;
+              case 'edit':
+                layer.msg('编辑');
+                break;
+              case 'del':
+                layer.msg('删除');
+                break;
+              case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
+          });
+      
+          //监听单元格编辑
+          table.on('edit(test)', function (obj) {
+            var value = obj.value //得到修改后的值
+              , data = obj.data //得到所在行所有键值
+              , field = obj.field; //得到字段
+              console.log(obj)
+          });
+      
+          //监听行工具事件
+          table.on('tool(test)', function (obj) {
+            var data = obj.data;
+            //console.log(obj)
+            if (obj.event === 'del') {
+              layer.confirm('真的删除行么', function (index) {
+                obj.del();
+                layer.close(index);
+              });
+            } else if (obj.event === 'edit') {
+                //页面层-自定义
+                layer.open({
+                  type: 2,
+                  title: '修改票类信息',
+                  area: ['800px', '600px'],
+                  // content: $('#jbxx1_edit'),
+                  content: 'jbxx_edit1.html',
+                  btn: ['提交', '取消']
+                });
+            }
+          });
+                            
+          // $('i').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+          // $('.layui-btn').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+      
+      });
+</script>
+<script>
+$('#reduce').click(function () {
+    var k = parseInt($('#Qty').val());
+    if (k > 1) {
+        $('#Qty').val(k - 1);
+        k = k - 1;
+    }
+    if (k <= 1) {
+        $('#reduce').attr('class', '');
+    }
+    if (k < 50) {
+        $('#add').attr('class', 'current');
+    }
+})
+$('#add').click(function () {
+    var k = parseInt($('#Qty').val());
+    if (k < 50)
+        $('#Qty').val(k + 1);
+    k = k + 1;
+    //else
+    //    alert('每单限购50张，超出部分请另外下单！');
+    if (k > 1) {
+        $('#reduce').attr('class', 'current');
+    }
+    if (k >= 50) {
+        $('#add').attr('class', '');
+    }
+})
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

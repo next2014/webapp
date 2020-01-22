@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <!-- VIP入闸查询 -->
+<div class="easyui-layout ticket" style="width:100%;height:930px;">
+    <div data-options="region:'west',border:false" class="leftChaXun" style="width:18%;padding:10px;">
+        <form class="layui-form layui-form-pane" action="">
+            <div style="padding:10px;border:1px solid #eeeeee;">
+               <h2>VIP信息查询</h2>
+               <ul>
+                  <li><label>有效日期:</label><input type="text" class="text_add3" id="ylDate"></li>
+                  <li><label>至:</label><input type="text" class="text_add3" id="ylEndDate"></li>
+                  <li><label>模糊查询:</label><input type="text" class="text_add3"></li>
+                  <li style="text-align: center;margin-top:20px;margin-bottom: 0;">
+                      <button type="button" class="layui-btn">重置</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
+                  </li>
+              </ul>
+            </div>
+        </form>
+    </div>
+    <div data-options="region:'center',border:false" class="" style="width:82%;padding:20px 0 0 0;">
+        <h2>售票信息</h2>
+        <div class="allBtn" style="display: flex;margin:10px 0;">
+            <button type="button" class="layui-btn layui-btn-primary"">导出</button>
+        </div>
+        <div style="background-color: #ffffff;">
+            <table class="layui-hide" id="bbzx_09" lay-filter="test"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    <!-- 报表中心 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <script>
+layui.use(['laydate','layer', 'form', 'table'], function(){
+      var laydate = layui.laydate
+      ,layer =layui.layer
+      ,from = layui.form
+      ,table = layui.table;
+      
+        // 日期 star
+        laydate.render({
+          elem: '#ylDate'
+        });
+
+        // 至 star
+        laydate.render({
+          elem: '#ylEndDate'
+        });
+
+      // VIP入闸查询
+      $('#piaolei_add').on('click', function () {
+          layer.open({
+              type: 2,
+              title: 'VIP入闸查询',
+              maxmin: true,
+              shadeClose: true,
+              area: ['800px', '600px'],
+              content: 'add_jbxx1.html',
+              // content: $('#dingdan_content'),
+              btn: ['保存', '取消']
+          });
+      });
+
+      // VIP入闸查询
+      table.render({
+          elem: '#bbzx_09'
+          ,height: 700
+          ,title: 'VIP入闸查询'
+          ,url: '../../json/table/bbzx_09.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'mc', title:'姓名', width:100}
+            ,{field:'xb', title:'性别',  width:100}
+            ,{field:'kh', title:'卡号',  width:150}
+            ,{field:'sfzh', title:'身份证号',  width:180}
+            ,{field:'rzsj', title:'入闸时间',  width:150}
+            ,{field:'szqy', title:'所在区域',  width:150}
+            ,{field:'zjmc', title:'闸机名称',  width:150}
+            ,{field:'qyljs', title:'当天此区域累计数',  width:150}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+          ]]
+        });
+  
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'edit':
+            layer.msg('编辑');
+            break;
+          case 'del':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+  
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+          console.log(obj)
+      });
+  
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 2,
+              title: '修改票类信息',
+              area: ['800px', '600px'],
+              // content: $('#jbxx1_edit'),
+              content: 'jbxx_edit1.html',
+              btn: ['提交', '取消']
+            });
+        }
+      });
+                        
+      // $('i').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      // $('.layui-btn').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      
+});
+</script>
+<script>
+  layui.config({
+    base: '../../static/plugins/selectPlus/'
+  }).extend({
+    test: 'selectPlus'
+  }).use(['selectPlus', 'jquery'], function () {
+    var $ = layui.$,
+      selectPlus = layui.selectPlus;
+      
+    // 付款方式多选
+    var test = selectPlus.render({
+      el: '#paymet',
+      url: '../../json/selectplus/pay_met.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['微信付款', '支付宝付款'],
+      valueSeparator: " , "
+    });
+
+    // 销售类型
+    var test1 = selectPlus.render({
+      el: '#xstype',
+      url: '../../json/selectplus/xs_type.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+    
+    // 是否需要导览
+    var test2 = selectPlus.render({
+      el: '#daolan',
+      url: '../../json/selectplus/daolan.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+    
+    // 状态
+    var test3 = selectPlus.render({
+      el: '#zt',
+      url: '../../json/selectplus/zt.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+
+    // 景区
+    var test3 = selectPlus.render({
+      el: '#jingqu',
+      url: '../../json/selectplus/jingqu.json',
+      parseData: function (res) {
+        return res.data;
+      },
+      valueName: "name",
+      values: ['', ''],
+      valueSeparator: " , "
+    });
+
+    var obj = test.getChecked();
+    var obj1 = test1.getChecked();
+    var obj2 = test2.getChecked();
+    var obj3 = test3.getChecked();
+    console.log(obj);
+  })
+</script>
+    
+    
+</body>
+</html>

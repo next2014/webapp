@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <!-- 售票员缴款查询 -->
+<div class="easyui-layout ticket" style="width:100%;height:950px;">
+    <!-- <div data-options="region:'west',border:false" class="leftChaXun" style="width:15%;border:1px solid #dddddd;">
+    </div> -->
+    <div class="xpck ticket_right" data-options="region:'center',border:false">
+      <div class="xpck_left1">
+        <form class="layui-form layui-form-pane" action="">
+         <h2>按以下条件进行查询</h2>
+         <ul>
+            <li><label>退款日期:</label><input type="text" class="text_add2" id="ylDate"></li>
+            <li><label>至:</label><input type="text" class="text_add2" id="ylEndDate"></li>
+            <li><label>上缴人:</label><input type="text" class="text_add2"></li>
+            <li><label>收款人:</label><input type="text" class="text_add2"></li>
+            <li style="text-align: center;">
+                <button type="button" class="layui-btn">重置</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
+            </li>
+         </ul>
+        </form>
+      </div>
+      <div class="xpck_right1">
+         <div class="dingdan_content1">
+            <h2>缴款记录</h2>
+            <div style="display: flex;align-items: center;margin-left:0;padding:10px 0">
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">查看详情</button>
+            </div>
+            <!-- <ul>
+                <li><span>客户编号:</span>10056</li>
+                <li><span>联系人:</span>许少峰</li>
+                <li><span>客户名称:</span>惠州美城互动</li>
+                <li><span>联系电话:</span>13400000000</li>
+                <li><span>客户类型:</span>媒体</li>
+                <li><span>预存余额:</span>￥0.00</li>
+            </ul> -->
+            <div style="clear: both;"></div>
+            <table class="layui-hide" id="cwgl_03" lay-filter="test"></table>
+
+         </div>
+      </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    <!-- 售票管理 -->
+    
+    
+    
+        <script>
+layui.use(['laydate','layer', 'form', 'table'], function(){
+      var laydate = layui.laydate
+      ,layer =layui.layer
+      ,from = layui.form
+      ,table = layui.table;
+      
+        // 开始时间 star
+        laydate.render({
+          elem: '#ylDate'
+        });
+
+        // 结束时间 star
+        laydate.render({
+          elem: '#ylEndDate'
+        });
+
+
+      // 售票员缴款查询
+      $('#piaolei_add').on('click', function () {
+          layer.open({
+              type: 2,
+              title: '售票员缴款查询',
+              maxmin: true,
+              shadeClose: true,
+              area: ['800px', '600px'],
+              content: 'add_jbxx1.html',
+              // content: $('#dingdan_content'),
+              btn: ['保存', '取消']
+          });
+      });
+
+      // 售票员缴款查询
+      table.render({
+          elem: '#cwgl_03'
+          ,height: 700
+          ,title: '售票员缴款查询'
+          ,url: '../../json/table/cwgl_03.json'
+          ,page: true
+          ,autoSort: false
+          ,toolbar: false
+          // ,toolbar: '#toolbarDemo'
+          ,cols: [[
+            {field:'sjr', title:'上缴人', width:150}
+            ,{field:'rjrq', title:'日结日期',  width:180}
+            ,{field:'ze', title:'总额',  width:150}
+            ,{field:'skrq', title:'收款日期',  width:180}
+            ,{field:'skr', title:'收款人',  width:150}
+            // ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
+          ]]
+        });
+  
+      //工具栏事件
+      table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+          case 'add':
+            layer.msg('添加');
+            break;
+          case 'edit':
+            layer.msg('编辑');
+            break;
+          case 'del':
+            layer.msg('删除');
+            break;
+          case 'lf_zhengjia':
+            var data = checkStatus.data;
+            layer.alert(JSON.stringify(data));
+            break;
+        };
+      });
+  
+      //监听单元格编辑
+      table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+          , data = obj.data //得到所在行所有键值
+          , field = obj.field; //得到字段
+          console.log(obj)
+      });
+  
+      //监听行工具事件
+      table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+          layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+          });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+              type: 2,
+              title: '修改票类信息',
+              area: ['800px', '600px'],
+              // content: $('#jbxx1_edit'),
+              content: 'jbxx_edit1.html',
+              btn: ['提交', '取消']
+            });
+        }
+      });
+                        
+      // $('i').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      // $('.layui-btn').on('click', function () {
+      //     var type = $(this).data('type');
+      //     active[type] ? active[type].call(this) : '';
+      // });
+      
+});
+</script>
+    
+</body>
+</html>

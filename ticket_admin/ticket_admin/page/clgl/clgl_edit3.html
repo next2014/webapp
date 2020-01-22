@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <div class="page-content" style="overflow: hidden;padding: 10px 10px 0 10px;">
+    <div class="layui-form-item mb-2" style="width:99%">
+        <label class="layui-form-label layui-title">策略名称:</label>
+        <div class="layui-input-block">
+            <input type="text" name="" value="抵扣券限量" class="text_add ml-0">
+        </div>
+    </div>
+    <div class="layui-form-item mb-2" style="width:99%">
+        <label class="layui-form-label layui-title">优先级:</label>
+        <div class="layui-input-block">
+            <input type="text" name="" value="3" class="text_add" style="margin-right: 10px;"> <small>提示:当多个策略优惠区间重叠时，使用优先级排序靠前的策略！</small>
+        </div>
+    </div>
+    <div class="layui-form-item mb-2" style="width:99%">
+        <label class="layui-form-label layui-title">可下单日期:</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="" lay-skin="primary" id="mr" checked> <label for="mr">每日</label> 
+            <input type="checkbox" name="" lay-skin="primary" id="zdrq" style="margin-left:5px;"> <label for="zdrq">指定日期</label>
+        </div>
+    </div>
+    <div class="layui-form-item mb-2" style="width:99%">
+        <label class="layui-form-label layui-title">可预订日期:</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="" lay-skin="primary" id="szqj" checked> <label for="szqj">数字区间</label> 
+            <input type="checkbox" name="" lay-skin="primary" id="rqqj"> <label for="rqqj">日期区间</label>
+            <input type="checkbox" name="" lay-skin="primary" id="xqqj"> <label for="xqqj">星期区间</label>
+            <input type="text" name="" class="text_add" id="starDate" style="margin:0 10px;width:15%;">天至第<input type="text" name="" class="text_add" id="endDate" style="margin:0 10px;width:15%;">
+        </div>
+    </div>
+    <div class="layui-form-item mb-2" style="width:99%">
+        <label class="layui-form-label layui-title">每日可售量</label>
+        <div class="layui-input-block">
+            <input type="text" class="text_add" style="margin-right: 10px;">
+            <input type="checkbox" value="1500" lay-skin="primary" id="xsxl"> <label for="xsxl">是否显示可售量</label>
+        </div>
+    </div>
+    <div class="layui-form-item" style="width:99%;margin-bottom: 0;">
+        <label class="layui-form-label layui-title">备注:</label>
+        <div class="layui-input-block">
+            <input type="text" class="text_add" style="width: 75%;">
+        </div>
+    </div>
+</div>
+<div style="padding:0 10px;">
+    <div class="allBtn" style="display: flex;margin:10px 0;">
+        <input type="text" class="text_add" style="margin-right:5px;">
+        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">选择票类</button>
+        <button type="button" class="layui-btn layui-btn-sm" lay-event="">全选</button>
+        <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" lay-event="">反选</button>
+        <div class="layui-input-block" style="margin:0 0 0 10px;">
+            <label for="">计价方式：</label>
+            <select lay-filter="aihao" style="margin-right:5px;">
+                <option value="1">指定价格</option>
+                <option value="2">折扣</option>
+            </select>
+            <input type="text" class="text_add" style="margin-right:5px; width: 18%;">
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">设定</button> 
+        </div>
+    </div>
+    <table class="layui-hide" id="clgl_edit3" lay-filter="test"></table>
+    <script type="text/html" id="barDemo1">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    
+    
+    
+    
+    <!-- 团体预约策略 -->
+    
+    
+    
+    
+    
+    
+        <script>
+    layui.use(['laydate','layer', 'form', 'element', 'table'], function(){
+          var laydate = layui.laydate
+          ,layer =layui.layer
+          ,from = layui.form
+          ,element = layui.element
+          ,table = layui.table;
+          
+            // 开始时间 star
+            laydate.render({
+              elem: '#starDate'
+            });
+    
+            // 结束时间 star
+            laydate.render({
+              elem: '#endDate'
+            });
+
+          // 网上售票策略
+          $('#piaolei_add').on('click', function () {
+              layer.open({
+                  type: 2,
+                  title: '网上售票策略-新增',
+                  maxmin: true,
+                  shadeClose: true,
+                  area: ['800px', '750px'],
+                  content: 'add_clgl3.html',
+                  // content: $('#dingdan_content'),
+                  btn: ['保存', '取消']
+              });
+          });
+
+          // 网上售票策略
+          table.render({
+              elem: '#clgl_03'
+              ,height: 450
+              ,title: '网上售票策略'
+              ,url: '../../json/table/clgl_03.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'clname', title:'策略名称', width:150}
+                ,{field:'yxj', title:'优先级', width:80}
+                ,{field:'kxdate', title:'可下单日期',  width:150}
+                ,{field:'kydate', title:'可预订日期',  width:150}
+                ,{field:'bz', title:'备注',  width:200}
+                ,{field:'cjr', title:'创建人',  width:120}
+                ,{field:'cjdate', title:'创建日期',  width:150}
+                ,{field:'xgr', title:'修改人',  width:150}
+                ,{field:'xgdate', title:'修改日期',  width:150}
+                ,{field:'plsl', title:'票类数量',  width:100}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:150}
+              ]]
+            });
+
+            // 票类明细
+          table.render({
+              elem: '#clgl_mx_01'
+              ,height: 450
+              ,title: '票类明细'
+              ,url: '../../json/table/clgl_mx_01.json'
+              ,page: true
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {field:'plbh', title:'票类编号', width:150}
+                ,{field:'plmc', title:'票类名称', width:80}
+                ,{field:'yj', title:'原价',  width:150}
+                ,{field:'jjfs', title:'计价方式',  width:150}
+                ,{field:'jjxs', title:'计价系数',  width:200}
+                ,{field:'zhj', title:'折后价',  width:120}
+              ]]
+          });
+
+          // 网上售票策略-新增
+          table.render({
+              elem: '#clgl_add3'
+              ,width: 770
+              ,height: 250
+              ,title: '网上售票策略-新增'
+              ,url: '../../json/table/clgl_add3.json'
+              ,page: false
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field:'plbh', title:'票类编号', width:100}
+                ,{field:'plmc', title:'票类名称',  width:150}
+                ,{field:'yj', title:'原价',  width:80}
+                ,{field:'jjfs', title:'计价方式',  width:100}
+                ,{field:'jjxs', title:'计价系数',  width:100}
+                ,{field:'zhj', title:'折后价',  width:80}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
+              ]]
+          });
+
+          // 网上售票策略-修改
+          table.render({
+              elem: '#clgl_edit3'
+              ,width: 770
+              ,height: 250
+              ,title: '网上售票策略-修改'
+              ,url: '../../json/table/clgl_edit3.json'
+              ,page: false
+              ,autoSort: false
+              ,toolbar: false
+              // ,toolbar: '#toolbarDemo'
+              ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field:'plbh', title:'票类编号', width:100}
+                ,{field:'plmc', title:'票类名称',  width:150}
+                ,{field:'yj', title:'原价',  width:80}
+                ,{field:'jjfs', title:'计价方式',  width:100}
+                ,{field:'jjxs', title:'计价系数',  width:100}
+                ,{field:'zhj', title:'折后价',  width:80}
+                ,{fixed:'right', title:'操作', toolbar: '#barDemo1', width:80}
+              ]]
+          });
+
+          //工具栏事件
+          table.on('toolbar(test)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+              case 'add':
+                layer.msg('添加');
+                break;
+              case 'edit':
+                layer.msg('编辑');
+                break;
+              case 'del':
+                layer.msg('删除');
+                break;
+              case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
+          });
+      
+          //监听单元格编辑
+          table.on('edit(test)', function (obj) {
+            var value = obj.value //得到修改后的值
+              , data = obj.data //得到所在行所有键值
+              , field = obj.field; //得到字段
+              console.log(obj)
+          });
+      
+          //监听行工具事件
+          table.on('tool(test)', function (obj) {
+            var data = obj.data;
+            //console.log(obj)
+            if (obj.event === 'del') {
+              layer.confirm('真的删除行么', function (index) {
+                obj.del();
+                layer.close(index);
+              });
+            } else if (obj.event === 'edit') {
+                //页面层-自定义
+                layer.open({
+                  type: 2,
+                  title: '修改票类信息',
+                  area: ['800px', '700px'],
+                  // content: $('#jbxx1_edit'),
+                  content: 'clgl_edit3.html',
+                  btn: ['提交', '取消']
+                });
+            }
+          });
+                            
+          // $('i').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+          // $('.layui-btn').on('click', function () {
+          //     var type = $(this).data('type');
+          //     active[type] ? active[type].call(this) : '';
+          // });
+      
+      });
+</script>
+    
+    <!-- 预约管理 -->
+    
+    
+    <!-- 客户关系管理 -->
+    
+    
+    
+    
+    
+</body>
+</html>

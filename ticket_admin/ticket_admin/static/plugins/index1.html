@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="layui/css/layui.css" media="all">
+</head>
+
+<body>
+  <form class="layui-form layui-form-pane" action="">
+    <div class="layui-form-item">
+      <label class="layui-form-label">多选下拉框</label>
+      <div class="layui-input-block" id="test" lay-filter="test">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">单选下拉框</label>
+      <div class="layui-input-block" id="test1" lay-filter="test1">
+      </div>
+    </div>
+  </form>
+
+  <script src="layui/layui.js"></script>
+  <script>
+   layui.config({
+      base: 'selectPlus/'
+    }).extend({
+      test: 'selectPlus'
+    }).use(['selectPlus', 'jquery'], function () {
+      var $ = layui.$,
+        selectPlus = layui.selectPlus;
+
+
+      // 单选
+      var a = selectPlus.render({
+        el: '#test1',
+        url: "data.json",
+        parseData: function (res) {
+          return res.data;
+        },
+        type: "radio",
+        valueName: "text",
+        label: ["name", "id"],
+        values: 'hello layui'
+      });
+
+      // 多选
+      selectPlus.render({
+        el: '#test',
+        url: "data2.json",
+        parseData: function (res){
+          return res.data;
+        },
+        valueName: "name",
+        values: ['bootstrap', 'element'],
+        valueSeparator: " --- "
+      });
+    })
+  </script>
+</body>
+
+</html>

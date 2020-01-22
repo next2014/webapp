@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>狮子城-票务系统</title>
+    <!-- TopJUI框架样式 -->
+<link type="text/css" href="../../topjui/themes/default/topjui.core.min.css" rel="stylesheet">
+<link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+<!-- FontAwesome字体图标 -->
+<link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- layui框架样式 -->
+<link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+<link type="text/css" href="../../topjui/css/style.css" rel="stylesheet">
+<link type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- jQuery相关引用 -->
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+<!-- TopJUI框架配置 -->
+<script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+<!-- TopJUI框架核心-->
+<script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+<!-- TopJUI中文支持 -->
+<script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+<!-- layui框架js -->
+<script type="text/javascript" src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/public/js/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <div class="easyui-layout ticket" style="width:100%;height:950px;">
+  <div data-options="region:'west',border:false" class="leftChaXun" style="width:18%;padding:10px">
+     <form class="layui-form layui-form-pane" action="">
+       <h2>按以下条件进行查询</h2>
+       <ul>
+          <li><label>下单日期:</label><input type="text" class="text_add4" id="xdDate"></li>
+          <li><label>至:</label><input type="text" class="text_add4" id="xdEndDate"></li>
+          <li><label>游览日期:</label><input type="text" class="text_add4" id="ylDate"></li>
+          <li><label>至:</label><input type="text" class="text_add4" id="ylEndDate"></li>
+          <li>
+            <label>订单状态:</label>
+            <div class="layui-input-block" id="ddzt" lay-filter="ddzt" style="margin-left:0;"></div>
+          </li>
+          <li>
+            <label>是否需要导览:</label>
+            <div class="layui-input-block" id="daolan" lay-filter="daolan" style="margin-left:0;"></div>
+          </li>
+          <li><label>团体名称:</label><input type="text" class="text_add4"></li>
+          <li><label>导游电话:</label><input type="text" class="text_add4"></li>
+          <li><hr></li>
+          <li><label>订单号:</label><input type="text" class="text_add4"></li>
+          <li style="text-align: center;display: flex;justify-content: center;align-items: center;">
+              <input type="checkbox" lay-skin="primary" id="yyd"> <label for="yyd" style="text-align:left;width:50%;">处理未结挂账预约单</label>
+          </li>
+          <li style="text-align: center;">
+              <button type="button" class="layui-btn">重置</button> <button type="button" class="layui-btn layui-btn-primary">查询</button>
+          </li>
+      </ul>
+     </form>
+    </div>
+  <div data-options="region:'center',border:false" style="width:82%;padding:10px;background-color: #eeeeee;">
+      <h2>订单信息</h2>
+      <div class="allBtn" style="margin:10px 0;">
+          <form class="layui-form layui-form-pane" action="" style="display: flex;align-items: center;">
+            <button type="button" class="layui-btn ">全选</button>
+            <button type="button" class="layui-btn layui-btn-normal" id="piaolei_add"><i class="layui-icon">&#xe608;</i> 创建订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">订单详情</button>
+            <button type="button" class="layui-btn layui-btn-primary">修改订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">取消订单</button>
+            <button type="button" class="layui-btn layui-btn-primary">销账</button>
+          </form>
+      </div>
+      <div style="background-color: #ffffff;">
+          <table class="layui-hide" id="yygl_02" lay-filter="test"></table>
+          <script type="text/html" id="barDemo">
+              <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+              <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+          </script>
+      </div>
+  </div>
+</div>
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+    
+    
+    
+    
+    <!-- 团体预约策略 -->
+    
+    
+    
+    
+    
+    
+    <!-- 预约管理 -->
+    
+        <script>
+ layui.use(['laydate','layer', 'form', 'table'], function(){
+        var laydate = layui.laydate
+        ,layer =layui.layer
+        ,from = layui.form
+        ,table = layui.table;
+        
+        // 开始时间 star
+        laydate.render({
+            elem: '#CheckInStar'
+        });
+
+        // 结束时间 star
+        laydate.render({
+            elem: '#leaveStar'
+        });
+
+        // 预约管理
+        $('#piaolei_add').on('click', function () {
+            layer.open({
+                type: 2,
+                title: '预约单-创建',
+                maxmin: true,
+                shadeClose: true,
+                area: ['900px', '600px'],
+                content: 'add_yygl.html',
+                // content: $('#dingdan_content'),
+                btn: ['保存', '取消']
+            });
+        });
+
+        // 预约单查看详情
+        $('#piaolei_add1').on('click', function () {
+            layer.open({
+                type: 2,
+                title: '预约单-查看详情',
+                maxmin: true,
+                shadeClose: true,
+                area: ['900px', '600px'],
+                content: 'content_yygl.html',
+                // content: $('#dingdan_content'),
+                // btn: ['保存', '取消']
+            });
+        });
+        
+        // 预约管理
+        table.render({
+            elem: '#yygl_02'
+            ,height: 700
+            ,title: '订单信息'
+            ,url: '../../json/table/yygl_02.json'
+            ,page: true
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {type: 'checkbox', title:'选择', fixed: 'left'}
+            ,{field:'ddh', title:'订单号', width:150}
+            ,{field:'ttmc', title:'团体名称', width:120}
+            ,{field:'sl', title:'数量', width:60}
+            ,{field:'ddje', title:'订单金额', width:100}
+            ,{field:'lxr', title:'联系人', width:80}
+            ,{field:'dh', title:'电话', width:120}
+            ,{field:'yldeta', title:'游览起止日期', width:200}
+            ,{field:'ddzt', title:'订单状态', width:100}
+            ,{field:'cjr', title:'创建人', width:80}
+            ,{field:'qcrq', title:'创建日期', width:120}
+            ,{field:'fkfs', title:'付款方式', width:100}
+            ,{field:'ydy', title:'预订员', width:80}
+            // ,{fixed:'right', title:'操作', toolbar: '#barDemo', width:100}
+            ]]
+        });
+
+        // 预约单创建
+        table.render({
+            elem: '#yygl_add1'
+            ,height: 245
+            ,title: '预约单-创建'
+            ,url: '../../json/table/yygl_add02.json'
+            ,page: false
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {type: 'checkbox', title:'状态', fixed: 'left'}
+            ,{field:'plname', title:'票类名称', width:200}
+            ,{field:'shuliang', title:'数量', width:80}
+            ,{field:'yuanjia', title:'原价', width:100}
+            ,{field:'yhj', title:'优惠价', width:80}
+            ,{field:'xj', title:'小计', width:80}
+            ]]
+        });
+
+        // 订单跟踪信息
+        table.render({
+            elem: '#yygl_ddgzxx'
+            ,height: 150
+            ,title: '订单跟踪信息'
+            ,url: '../../json/table/yygl_ddgzxx.json'
+            ,page: false
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {field:'cztime', title:'操作时间', width:150}
+            ,{field:'plname', title:'处理信息', width:150}
+            ,{field:'shuliang', title:'操作人', width:150}
+            ]]
+        });
+
+        // 订单明细
+        table.render({
+            elem: '#yygl_ddmx'
+            ,height: 150
+            ,title: '订单明细'
+            ,url: '../../json/table/yygl_ddmx.json'
+            ,page: false
+            ,autoSort: false
+            ,toolbar: false
+            // ,toolbar: '#toolbarDemo'
+            ,cols: [[
+            {field:'mpname', title:'门票名称', width:200}
+            ,{field:'yuanjia', title:'原价', width:100}
+            ,{field:'ssj', title:'实售价', width:100}
+            ,{field:'shuliang', title:'数量', width:100}
+            ,{field:'xj', title:'小计', width:100}
+            ]]
+        });
+    
+        //工具栏事件
+        table.on('toolbar(test)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'add':
+                layer.msg('添加');
+                break;
+                case 'edit':
+                layer.msg('编辑');
+                break;
+                case 'del':
+                layer.msg('删除');
+                break;
+                case 'lf_zhengjia':
+                var data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+                break;
+            };
+        });
+    
+        //监听单元格编辑
+        table.on('edit(test)', function (obj) {
+        var value = obj.value //得到修改后的值
+            , data = obj.data //得到所在行所有键值
+            , field = obj.field; //得到字段
+            console.log(obj)
+        });
+    
+        //监听行工具事件
+        table.on('tool(test)', function (obj) {
+        var data = obj.data;
+        //console.log(obj)
+        if (obj.event === 'del') {
+            layer.confirm('真的删除行么', function (index) {
+            obj.del();
+            layer.close(index);
+            });
+        } else if (obj.event === 'edit') {
+            //页面层-自定义
+            layer.open({
+                type: 2,
+                title: '修改景区信息',
+                area: ['500px', '400px'],
+                // content: $('#jbxx4_edit'),
+                content: 'yygl_edit.html',
+                btn: ['提交', '取消']
+            });
+        }
+        });
+                        
+        // $('i').on('click', function () {
+        //     var type = $(this).data('type');
+        //     active[type] ? active[type].call(this) : '';
+        // });
+        // $('.layui-btn').on('click', function () {
+        //     var type = $(this).data('type');
+        //     active[type] ? active[type].call(this) : '';
+        // });
+    
+    });
+</script>
+<script>
+    layui.config({
+      base: '../../static/plugins/selectPlus/'
+    }).extend({
+      test: 'selectPlus'
+    }).use(['selectPlus', 'jquery'], function () {
+      var $ = layui.$,
+        selectPlus = layui.selectPlus;
+      
+      // 是否需要导览
+      var test = selectPlus.render({
+        el: '#daolan',
+        url: '../../json/selectplus/daolan.json',
+        parseData: function (res) {
+          return res.data;
+        },
+        valueName: "name",
+        values: ['', ''],
+        valueSeparator: " , "
+      });
+
+      // 订单状态
+      var test1 = selectPlus.render({
+        el: '#ddzt',
+        url: '../../json/selectplus/ddzt.json',
+        parseData: function (res) {
+            return res.data;
+        },
+        valueName: "name",
+        values: ['', ''],
+        valueSeparator: " , "
+      });
+  
+      var obj = test.getChecked();
+      var obj1 = test1.getChecked();
+      console.log(obj);
+    })
+  </script>
+    
+    
+    <!-- 客户关系管理 -->
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "散客销售票",
+      "url": "./page/xsgl/xsgl_01.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "折扣券",
+      "url": "./page/xsgl/xsgl_02.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "兑票",
+      "url": "./page/xsgl/xsgl_03.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "团体票售票",
+      "url": "./page/xsgl/xsgl_04.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "零售",
+      "url": "./page/xsgl/xsgl_05.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "退票处理",
+      "url": "./page/xsgl/xsgl_06.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "门票改期",
+      "url": "./page/xsgl/xsgl_07.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "销售换班",
+      "url": "./page/xsgl/xsgl_08.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "网上购票订单查询",
+      "url": "./page/xsgl/xsgl_09.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "票付通订单查询",
+      "url": "./page/xsgl/xsgl_10.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "自助机售票",
+      "url": "./page/xsgl/xsgl_11.html"
+    },
+    {
+      "id": 1346,
+      "pid": 703,
+      "state": "open",
+      "iconCls": "fa fa-file-text-o",
+      "text": "自助机取票",
+      "url": "./page/xsgl/xsgl_12.html"
+    }
+  ]
